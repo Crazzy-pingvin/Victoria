@@ -665,7 +665,6 @@
 - type: entity
   parent: WallReinforced
   id: WallReinforcedRust
-  name: reinforced wall
   suffix: rusted
   components:
   - type: Sprite
@@ -681,6 +680,28 @@
     base: reinf_over
   - type: RadiationBlocker
     resistance: 0.4
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -1135,7 +1156,6 @@
 - type: entity
   parent: WallSolid
   id: WallSolidRust
-  name: solid wall
   suffix: rusted
   components:
   - type: Sprite
@@ -1158,6 +1178,28 @@
   - type: NpcFactionMember
     factions:
     - DefenseStructure
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   parent: BaseWall
