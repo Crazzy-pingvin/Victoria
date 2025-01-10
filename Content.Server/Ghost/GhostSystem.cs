@@ -145,6 +145,9 @@ namespace Content.Server.Ghost
                     break;
             }
 
+            if (booCounter == 0)
+                _popup.PopupEntity(Loc.GetString("ghost-component-boo-action-failed"), uid, uid);
+
             args.Handled = true;
         }
 
