@@ -81,7 +81,6 @@
     dest: cargo-gift-dest-eng
     gifts:
       EngineeringCableBulk: 1
-      AirlockKit: 1
       MaterialSteel: 1
       MaterialPlasteel: 1
       MaterialGlass: 1
@@ -139,8 +138,6 @@
     gifts:
       MedicalSupplies: 1
       MedicalChemistrySupplies: 1
-      EmergencyBruteKit: 1
-      EmergencyAdvancedKit: 1
       MedicalBiosuit: 1
 
 - type: entity
@@ -156,11 +153,8 @@
     description: cargo-gift-space-protection
     dest: cargo-gift-dest-supp
     gifts:
-      EmergencyInternalsLarge: 2
       EmergencyInflatablewall: 1
-      EmergencyAdvancedKit: 1
-      MedicalBiosuit: 1
-      EmergencyO2Kit: 1
+      MedicalBiosuit: 11
 
 - type: entity
   id: GiftsFireProtection
@@ -176,8 +170,6 @@
     dest: cargo-gift-dest-supp
     gifts:
       EmergencyFire: 2
-      EmergencyBurnKit: 1
-      EmergencyBruteKit: 1
 
 - type: entity
   id: GiftsSecurityGuns

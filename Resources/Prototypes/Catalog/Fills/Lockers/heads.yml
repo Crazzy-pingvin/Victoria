@@ -52,10 +52,10 @@
     - id: SpaceCash1000
     - id: WeaponDisabler
     - id: ClothingEyesGlassesCommand
-    # Corvax-Resprite-Start
     - id: ClothingHeadCaptainHat
     - id: ClothingOuterCoatCaptain
-    # Corvax-Resprite-End
+    - id: BoxSrochRubberStamp
+    - id: BoxChipLoyalty
 
 # No laser table + Laser table
 - type: entityTable

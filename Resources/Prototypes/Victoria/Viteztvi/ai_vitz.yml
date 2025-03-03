@@ -135,18 +135,125 @@
   values:
     prefix: advertisement-bot-mrhill-
     count: 6 
-#---------------------------------------Список товаров------------------------------------  
-- type: vendingMachineInventory
-  id: MrHillInventory
-  startingInventory:
-    ReinforcementRadioVitzEfreitor: 4
-    ReinforcementRadioVitzStarshina: 1    
+#---------------------------------------Магаз------------------------------------  
+#-----------------категории в магазе------------
+- type: storeCategory
+  id: VitzMrHillShopSolders
+  name: Личный состав
+  priority: 0
+
+- type: storeCategory
+  id: VitzMrHillShopWeaponry
+  name: Вооружение
+  priority: 1
+
+- type: storeCategory
+  id: VitzMrHillShopAmmo
+  name: Боезапас
+  priority: 2
+#-----------------листинг покупок------------
+#------категория личный состав----------
+- type: listing
+  id: ReinforcementRadioVitzEfreitor
+  name: Система призыва пехотинца Витезтви
+  description: Система дальней связи для развёртывания бойца пехотного соединения корпорации Витезтви.
+  productEntity: ReinforcementRadioVitzEfreitor
+  cost:
+    VitzChip_currency: 2
+  categories:
+  - VitzMrHillShopSolders
+  
+- type: listing
+  id: ReinforcementRadioVitzStarshina
+  name: Система призыва старшины Витезтви
+  description: Система дальней связи для развёртывания старшины пехотного соединения корпорации Витезтви.
+  productEntity: ReinforcementRadioVitzStarshina
+  cost:
+    VitzChip_currency: 3
+  categories:
+  - VitzMrHillShopSolders
+#------категория вооружиение----------
+- type: listing
+  id: VitzCrateWeaponsBase
+  name: Ящик стандартного пехотного оружия
+  description: По 4 "Лектера", "Силовика" и Лазерных карабинов.
+  productEntity: VitzCrateWeaponsBase
+  cost:
+    VitzChip_currency: 2
+  categories:
+  - VitzMrHillShopWeaponry
+  
+- type: listing
+  id: VitzCrateWeaponsHelp
+  name: Ящик вспомогательного пехотного оружия
+  description: По 3 Христова и Пулемёта L6
+  productEntity: VitzCrateWeaponsHelp
+  cost:
+    VitzChip_currency: 4
+  categories:
+  - VitzMrHillShopWeaponry 
+
+- type: listing
+  id: VitzCrateWeaponsLight
+  name: Ящик лёгкого оружия
+  description: 4 пистолета МК58, 3 ПП "Орлик", 2 револьвера "Инспектор" и 1 револьвер "Матеба".
+  productEntity: VitzCrateWeaponsLight
+  cost:
+    VitzChip_currency: 3
+  categories:
+  - VitzMrHillShopWeaponry 
+#------категория боезапас----------
+- type: listing
+  id: VitzCrateAmmoBase
+  name: Ящик боеприпасов основного пехотного оружия
+  description: 5 коробок винтовочных патронов, 4 коробки ружейных потронов.
+  productEntity: VitzCrateAmmoBase
+  cost:
+    VitzChip_currency: 3
+  categories:
+  - VitzMrHillShopAmmo 
+
+- type: listing
+  id: VitzCrateAmmoHelp
+  name: Ящик боеприпасов вспомогательного пехотного оружия
+  description: 2 коробки снайперских патронов и ц здоровых цинка к пулемёту.
+  productEntity: VitzCrateAmmoHelp
+  cost:
+    VitzChip_currency: 2
+  categories:
+  - VitzMrHillShopAmmo
+
+- type: listing
+  id: VitzCrateAmmoLight
+  name: Ящик боеприпасов лёгкого оружия
+  description: 6 коробок пистолетных патронов и 3 коробки патронов Магнума.
+  productEntity: VitzCrateAmmoLight
+  cost:
+    VitzChip_currency: 2
+  categories:
+  - VitzMrHillShopAmmo
+#-----------------пресет категорий в магазе------------
+- type: entity
+  id: StorePresetVitzMrHillShop
+  abstract: true
+  components:
+  - type: Store
+    name: Vitz-Category
+    categories:
+    - VitzMrHillShopSolders
+    - VitzMrHillShopWeaponry
+    - VitzMrHillShopAmmo
+    currencyWhitelist:
+    - VitzChip_currency
+    balance:
+      VitzChip_currency: 0  
 #---------------------------------------Сами боты----------------------------------------
 #-------------------------------Мистер Хилл----------------------
 #-------------Вооружён стоит---------------  
 - type: entity
-  suffix: Бот, Витезтви, друж, стоп
-  parent: BaseMobHuman
+  name: Бот-шоп Мистер Хилл
+  suffix: Бот, Витезтви, Шоп, друж, стоп
+  parent: [BaseMobHuman, StorePresetVitzMrHillShop]
   id: MobVitzMrHill
   components:
   - type: Advertise
@@ -196,20 +303,26 @@
     count: 6
   - type: Gun
     showExamineText: false
-    fireRate: 5
+    fireRate: 2
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
-  - type: VendingMachine
-    pack: MrHillInventory
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: AccessReader
+    access: [[ "Command" ]]
 #---------------------------------------Спавнеры ботов-------------------      
 #-------------------------------Солдат----------------------
 #-------------Без оружия бегающий---------------
 - type: entity
-  name: Спавнер бота Мистерр Хилл
-  suffix: Бот, Витезтви, друж, стоп
+  name: Спавнер бот-шопа Мистерр Хилл
+  suffix: Бот, Витезтви, Шоп, друж, стоп
   id: SpawnMobVitzMrHill
   parent: MarkerBase
   components:

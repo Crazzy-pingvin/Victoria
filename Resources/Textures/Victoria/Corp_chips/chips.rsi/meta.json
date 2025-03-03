@@ -1,0 +1,40 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Sprite created by crazzy_pingvin",
+    "states": [
+        {
+            "name": "nt_chip"
+        },
+		{
+            "name": "ne_chip"
+        },
+		{
+            "name": "gf_chip"
+        },
+		{
+            "name": "kmlg_chip"
+        },
+		{
+            "name": "vitz_chip"
+        },
+		{
+            "name": "sb_chip"
+        },
+		{
+            "name": "gd_chip"
+        },
+		{
+		  "name": "inhand-left",
+		  "directions": 4
+		},
+		{
+		  "name": "inhand-right",
+		  "directions": 4
+		}
+    ]
+}

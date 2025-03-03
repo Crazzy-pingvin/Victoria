@@ -1,0 +1,1287 @@
+#------------------------------------------------------чипы лояльности----------------------
+#--------------------------------------НТ--------------------------------
+- type: entity
+  parent: BaseItem
+  id: NTChip
+  name: Чип лояльности НТ
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации НаноТрейзен и гарант некотрых привелегий со стороны всегалактически известного Центком.
+  components:
+  - type: Cash
+  - type: Item
+    shape:
+    - 0,0,0,0
+    storedOffset: 0,-2
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      NTChip_material: 1
+  - type: Stack
+    stackType: NTChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: nt_chip
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        density: 30
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.2,0.25,0.1"
+        mask:
+        - ItemMask
+  - type: Appearance
+  - type: Currency
+    price:
+      NTChip_currency: 1
+
+- type: entity
+  parent: NTChip
+  id: NTChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2  
+  
+- type: material
+  id: NTChip_material
+  name: Чип лояльности НТ
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: nt_chip }
+  price: 5
+
+- type: stack
+  id: NTChip_stack
+  name: Чип лояльности НТ
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: nt_chip }
+  spawn: NTChip
+  maxCount: 20
+  
+- type: currency
+  id: NTChip_currency
+  displayName: Чип лояльности НТ
+  cash:
+    1: NTChip
+  canWithdraw: true
+#--------------------------------------Витезтви--------------------------------
+- type: entity
+  parent: NTChip
+  id: VitzChip
+  name: Чип лояльности Витезтви
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Витезтви и гарант некотрых привелегий со стороны всегалактически известного Штаба Операций.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      VitzChip_material: 1
+  - type: Stack
+    stackType: VitzChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: vitz_chip
+  - type: Currency
+    price:
+      VitzChip_currency: 1
+
+- type: entity
+  parent: VitzChip
+  id: VitzChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2
+
+- type: material
+  id: VitzChip_material
+  name: Чип лояльности Витезтви
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: vitz_chip }
+  price: 5
+
+- type: stack
+  id: VitzChip_stack
+  name: Чип лояльности Витезтви
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: vitz_chip }
+  spawn: VitzChip
+  maxCount: 20
+  
+- type: currency
+  id: VitzChip_currency
+  displayName: Чип лояльности Витезтви
+  cash:
+    1: VitzChip
+  canWithdraw: true 
+#--------------------------------------Космологистика--------------------------------
+- type: entity
+  parent: NTChip
+  id: KMLGChip
+  name: Чип лояльности Космологистики
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Космологистики и гарант некотрых привелегий со стороны всегалактически известного Центра Союза Космоческой Логистики.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      KMLGChip_material: 1
+  - type: Stack
+    stackType: KMLGChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: kmlg_chip
+  - type: Currency
+    price:
+      KMLGChip_currency: 1
+
+- type: entity
+  parent: KMLGChip
+  id: KMLGChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2
+
+- type: material
+  id: KMLGChip_material
+  name: Чип лояльности Космологистики
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: kmlg_chip }
+  price: 5
+
+- type: stack
+  id: KMLGChip_stack
+  name: Чип лояльности Космологистики
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: kmlg_chip }
+  spawn: KMLGChip
+  maxCount: 20
+  
+- type: currency
+  id: KMLGChip_currency
+  displayName: Чип лояльности Космологистики
+  cash:
+    1: KMLGChip
+  canWithdraw: true 
+#--------------------------------------Накамура--------------------------------
+- type: entity
+  parent: NTChip
+  id: NEChip
+  name: Чип лояльности Накамура Инжениринг
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Накамура Инжениринг и гарант некотрых привелегий со стороны всегалактически известного Совета Производства.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      NEChip_material: 1
+  - type: Stack
+    stackType: NEChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: ne_chip
+  - type: Currency
+    price:
+      NEChip_currency: 1
+
+- type: entity
+  parent: NEChip
+  id: NEChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2
+
+- type: material
+  id: NEChip_material
+  name: Чип лояльности Накамура Инжениринг
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: ne_chip }
+  price: 5
+
+- type: stack
+  id: NEChip_stack
+  name: Чип лояльности Накамура Инжениринг
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: ne_chip }
+  spawn: NEChip
+  maxCount: 20
+  
+- type: currency
+  id: NEChip_currency
+  displayName: Чип лояльности Накамура Инжениринг
+  cash:
+    1: NEChip
+  canWithdraw: true 
+#--------------------------------------Гефест--------------------------------
+- type: entity
+  parent: NTChip
+  id: GFChip
+  name: Чип лояльности Гефест
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Гефест и гарант некотрых привелегий со стороны всегалактически известной Группы Управления.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      GFChip_material: 1
+  - type: Stack
+    stackType: GFChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: gf_chip
+  - type: Currency
+    price:
+      GFChip_currency: 1
+
+- type: entity
+  parent: GFChip
+  id: GFChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2
+
+- type: material
+  id: GFChip_material
+  name: Чип лояльности Гефест
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: gf_chip }
+  price: 5
+
+- type: stack
+  id: GFChip_stack
+  name: Чип лояльности Гефест
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: gf_chip }
+  spawn: GFChip
+  maxCount: 20
+  
+- type: currency
+  id: GFChip_currency
+  displayName: Чип лояльности Гефест
+  cash:
+    1: GFChip
+  canWithdraw: true 
+#--------------------------------------Саибасан--------------------------------
+- type: entity
+  parent: NTChip
+  id: SbChip
+  name: Чип лояльности Саибасан
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Саибасан и гарант некотрых привелегий со стороны Совета Акционеров.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      SbChip_material: 1
+  - type: Stack
+    stackType: SbChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: sb_chip
+  - type: Currency
+    price:
+      SbChip_currency: 1
+
+- type: entity
+  parent: SbChip
+  id: SbChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2
+
+- type: material
+  id: SbChip_material
+  name: Чип лояльности Саибасан
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: sb_chip }
+  price: 5
+
+- type: stack
+  id: SbChip_stack
+  name: Чип лояльности Саибасан
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: sb_chip }
+  spawn: SbChip
+  maxCount: 20
+  
+- type: currency
+  id: SbChip_currency
+  displayName: Чип лояльности Саибасан
+  cash:
+    1: SbChip
+  canWithdraw: true 
+#--------------------------------------ГасДеф--------------------------------
+- type: entity
+  parent: NTChip
+  id: GDChip
+  name: Чип лояльности ГасДеф
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации ГасДеф и гарант некотрых привелегий со стороны Совета Директоров.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      GDChip_material: 1
+  - type: Stack
+    stackType: GDChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: gd_chip
+  - type: Currency
+    price:
+      GDChip_currency: 1
+
+- type: entity
+  parent: GDChip
+  id: GDChip2
+  suffix: х2
+  components:
+  - type: Stack
+    count: 2
+
+- type: material
+  id: GDChip_material
+  name: Чип лояльности ГасДеф
+  stackEntity: SpaceCash
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: gd_chip }
+  price: 5
+
+- type: stack
+  id: GDChip_stack
+  name: Чип лояльности ГасДеф
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: gd_chip }
+  spawn: GDChip
+  maxCount: 20
+  
+- type: currency
+  id: GDChip_currency
+  displayName: Чип лояльности ГасДеф
+  cash:
+    1: GDChip
+  canWithdraw: true 
+#------------------------------------------------------ящик чипов лояльности----------------------
+#-------------------------------ящик----------------------
+- type: entity
+  parent: CrateCommandSecure
+  id: CrateChipLoyalty
+  name: Ящик чипов лояльности
+  description: Ящик с чипами лояльности, которые остались или накопились за прошлую смену станции.
+  components:
+  - type: StorageFill
+    contents:
+      - id: NTChip
+        amount: 1
+        prob: 0.33
+      - id: NTChip2
+        amount: 1
+        prob: 0.33
+      - id: VitzChip
+        amount: 1
+        prob: 0.33
+      - id: VitzChip2
+        amount: 1
+        prob: 0.33
+      - id: KMLGChip
+        amount: 1
+        prob: 0.33
+      - id: KMLGChip2
+        amount: 1
+        prob: 0.33
+      - id: NEChip
+        amount: 1
+        prob: 0.33
+      - id: NEChip2
+        amount: 1
+        prob: 0.33
+      - id: GFChip
+        amount: 1
+        prob: 0.33
+      - id: GFChip2
+        amount: 1
+        prob: 0.33
+      - id: SbChip
+        amount: 1
+        prob: 0.33
+      - id: SbChip2
+        amount: 1
+        prob: 0.33
+      - id: GDChip
+        amount: 1
+        prob: 0.33
+      - id: GDChip2
+        amount: 1
+        prob: 0.33
+#-------------------------------коробка----------------------        
+- type: entity
+  name: Коробка чипов лояльности
+  parent: BoxCardboard
+  id: BoxChipLoyalty
+  description: Коробка с чипами лояльности, которые остались или накопились за прошлую смену станции.
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,3,3
+  - type: StorageFill
+    contents:
+      - id: NTChip
+        amount: 1
+        prob: 0.33
+      - id: NTChip2
+        amount: 1
+        prob: 0.33
+      - id: VitzChip
+        amount: 1
+        prob: 0.33
+      - id: VitzChip2
+        amount: 1
+        prob: 0.33
+      - id: KMLGChip
+        amount: 1
+        prob: 0.33
+      - id: KMLGChip2
+        amount: 1
+        prob: 0.33
+      - id: NEChip
+        amount: 1
+        prob: 0.33
+      - id: NEChip2
+        amount: 1
+        prob: 0.33
+      - id: GFChip
+        amount: 1
+        prob: 0.33
+      - id: GFChip2
+        amount: 1
+        prob: 0.33
+      - id: SbChip
+        amount: 1
+        prob: 0.33
+      - id: SbChip2
+        amount: 1
+        prob: 0.33
+      - id: GDChip
+        amount: 1
+        prob: 0.33
+      - id: GDChip2
+        amount: 1
+        prob: 0.33
+  - type: Sprite
+    layers:
+      - state: box_medical
+#------------------------------------------------------Консоль магазина----------------------  
+- type: entity
+  id: CorpShopMachineMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Плата консоли корпоративных поставок
+  description: Электронная плата, необходимая для работы системы корпоративного сотрудничества
+  components:
+    - type: MachineBoard
+      prototype: ComputerCorpShop
+      stackRequirements:
+        Capacitor: 10
+        BSModuleStack: 3
+      tagRequirements:
+        GlassBeaker:
+          amount: 10
+          defaultPrototype: Beaker
+
+- type: entity
+  id: ComputerCorpShop
+  parent: [BaseComputerAiAccess, StorePresetCorpShop]
+  name: Консоль корпоративных поставок
+  description: Это система, которая служит для обмены чипов лояльности разных корпораций на товары этих компаний.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: supply
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: CorpShopMachineMachineCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: AccessReader
+    access: [[ "Command" ]]
+#------------------------------------------------------Товары---------------------- 
+#------------------------------НТ----------
+- type: entity
+  parent: CrateCommandSecure
+  id: CrateCaptainIDCard
+  name: Ящик с картой капитана
+  description: Хранилище для столько маленькой, но столь ценной вещи - карты с полным доступом ко всем помещениям станции.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CaptainIDCard
+      
+- type: entity
+  parent: CrateCommandSecure
+  id: CrateTransmutatorMachineCircuitboard
+  name: Ящик с платой Трансмутатора
+  description: В этом ящике можно найти нечто весьма ценное для очень многих компаний в галактике. Нечто, что НТ бережёт и охраняет от чужих пытливых умов.
+  components:
+  - type: StorageFill
+    contents:
+      - id: TransmutatorMachineCircuitboard
+#------------------------------Космологистика----------
+- type: entity
+  parent: CrateEngineering
+  id: CrateComputerShuttle
+  name: Ящик с консолью управления
+  description: Ящик с компьютером контроля и управления шаттлом производства корпорации Космологистика.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ComputerShuttle
+      
+- type: entity
+  parent: CrateEngineering
+  id: CrateGravityGeneratorMini
+  name: Ящик с минигенератором гравитации
+  description: В этом ящике можно найти генератор гравитации корпорации Космологистики предназначенный для небольших аванпостов и космических судов.
+  components:
+  - type: StorageFill
+    contents:
+      - id: GravityGeneratorMini
+#------------------------------Накамура Инжениринг----------
+- type: entity
+  parent: CrateEngineering
+  id: CrateEngineeringSolarX2
+  name: Ящик солнечных панелей (большой)
+  description: Удвоенный ящик солнечных паннелей для самых близких партнёров корпорации Накамура Инжениринг.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SolarAssemblyFlatpack
+        amount: 20
+      - id: SheetGlass10
+        amount: 4
+        
+- type: entity
+  parent: CrateEngineering
+  id: CrateEngineeringEquipment
+  name: Ящик экипировки инженера
+  description: Ящик инженерного снаряжения производства Накамура Инжениринг.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsGlovesColorYellow
+        amount: 4
+      - id: ClothingEyesGlassesMeson
+        amount: 4
+      - id: ClothingShoesBootsMag
+        amount: 4
+      - id: ClothingBeltUtilityEngineering
+        amount: 4
+      - id: ClothingHeadHatHardhatYellow
+        amount: 4
+#------------------------------Гефест----------
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateSteelOre
+  name: Ящик железной руды
+  description: Ящик железной, подходящей для выплавки стали, руды добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SteelOre
+        amount: 3
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CratePlasmaOre
+  name: Ящик плазмовой руды
+  description: Ящик плазмовой руды добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PlasmaOre
+        amount: 3
+        
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateSilverOre
+  name: Ящик серебрянной руды
+  description: Ящик серебрянной руды добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SilverOre
+        amount: 2
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateCoal
+  name: Ящик угля
+  description: Ящик угля, пригодного для выплавки различных металлов, в том числе и стали, добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Coal
+        amount: 4
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateGoldOre
+  name: Ящик золотой руды
+  description: Ящик золотой руды добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: GoldOre
+        amount: 2
+        
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateOrePlumbum
+  name: Ящик свинцовой руды
+  description: Ящик свинцовой руды добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: OrePlumbum
+        amount: 3
+
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateOreCooper
+  name: Ящик медной руды
+  description: Ящик медной, пригодной для производства электроники, руды добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: OreCooper
+        amount: 3
+        
+- type: entity
+  parent: CrateGenericSteel
+  id: CrateOreAluminium
+  name: Ящик алюминевой руды
+  description: Ящик алюминевой, пригодной для производства электроники, добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: OreAluminium
+        amount: 3
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateSpaceCosmCrystall
+  name: Ящик космециевых кристаллов
+  description: Ящик космециевых кристаллов добычи корпорации Гефест.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SpaceCosmCrystall
+        amount: 1
+#------------------------------Саибасан----------
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateСeramicsCrystall
+  name: Ящик керамических пластин
+  description: Ящик керамического сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: СeramicsCrystall
+        amount: 2
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateSapphireCrystall
+  name: Ящик сапфиров
+  description: Ящик сапфирового сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SapphireCrystall
+        amount: 1
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateSiCrystall
+  name: Ящик кремниевых булек
+  description: Ящик кремниевого сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SiCrystall
+        amount: 2
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CratePlazСeramicsCrystall
+  name: Ящик плазкерамовых пластин
+  description: Ящик плазкерамового сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PlazСeramicsCrystall
+        amount: 2
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateSiСeramicsCrystall
+  name: Ящик кремнекерамовых пластин
+  description: Ящик кремнекерамового сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SiСeramicsCrystall
+        amount: 2
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateFiberglass
+  name: Ящик стеклотекстолитовых пластин
+  description: Ящик стеклотекстолитового сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Fiberglass
+        amount: 2
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateGethinax
+  name: Ящик гетинаксовых пластин
+  description: Ящик гетинаксового сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: Gethinax
+        amount: 2
+        
+- type: entity
+  parent: CrateScienceSecure
+  id: CrateSiPlazCrystall
+  name: Ящик кремнеплазовых пластин
+  description: Ящик кремнеплазового сырья для электроники производства компании Саибасан.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SiPlazCrystall
+        amount: 2
+#------------------------------ГасДеф----------
+- type: entity
+  parent: CrateEngineering
+  id: CrateAxeCrowbarWelder
+  name: Ящик аварийных инструментов
+  description: В этом ящике хранятся аварийные инструменты производства компании ИнструментНад, дочки корпорации ГасДеф.
+  components:
+  - type: StorageFill
+    contents:
+      - id: FireAxe
+      - id: FireAxe
+      - id: FireAxe
+      - id: CrowbarRed
+      - id: CrowbarRed
+      - id: CrowbarRed
+      - id: WelderMini
+      - id: WelderMini
+      - id: WelderMini
+#-----------------категории в магазе------------
+- type: storeCategory
+  id: CorpShopChip
+  name: Чипы
+  priority: 0
+
+- type: storeCategory
+  id: CorpShopNT
+  name: Центком НТ
+  priority: 1
+
+- type: storeCategory
+  id: CorpShopKMLG
+  name: Космологистика
+  priority: 2
+
+- type: storeCategory
+  id: CorpShopNE
+  name: Накамура Инжениринг
+  priority: 3
+  
+- type: storeCategory
+  id: CorpShopGF
+  name: Гефест
+  priority: 4
+  
+- type: storeCategory
+  id: CorpShopSb
+  name: Саибасан
+  priority: 5
+  
+- type: storeCategory
+  id: CorpShopGD
+  name: ГасДеф
+  priority: 6
+#-----------------листинг покупок------------
+#------категория чипы----------
+- type: listing
+  id: GFChip
+  name: Чип лояльности Гефест
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Гефест и гарант некотрых привелегий со стороны всегалактически известной Группы Управления.
+  productEntity: GFChip
+  cost:
+    NTChip_currency: 1
+  categories:
+  - CorpShopChip
+  
+- type: listing
+  id: NEChip
+  name: Чип лояльности Накмура Инжениринг
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Накамура Инжениринг и гарант некотрых привелегий со стороны всегалактически известного Совета Производства.
+  productEntity: NEChip
+  cost:
+    NTChip_currency: 1
+  categories:
+  - CorpShopChip
+
+- type: listing
+  id: SbChip
+  name: Чип лояльности Саибасан
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации Саибасан и гарант некотрых привелегий со стороны Совета Акционеров.
+  productEntity: SbChip
+  cost:
+    NTChip_currency: 1
+  categories:
+  - CorpShopChip
+
+- type: listing
+  id: GDChip
+  name: Чип лояльности ГасДеф
+  description: Неее! Это не из чьей-то головы! Это чип, подтверждающий лояльность корпорации ГасДеф и гарант некотрых привелегий со стороны Совета Директоров.
+  productEntity: GDChip
+  cost:
+    NTChip_currency: 1
+  categories:
+  - CorpShopChip
+#------категория НТ----------
+- type: listing
+  id: CrateMindShieldImplants
+  name: Ящик имплантов защиты разума
+  description: Легендарные "Майншилды" НТ прямо из коробочки. 
+  productEntity: CrateMindShieldImplants
+  cost:
+    NTChip_currency: 2
+  categories:
+  - CorpShopNT
+  
+- type: listing
+  id: CrateServiceFaxMachine
+  name: Ящик с Факсом
+  description: Факс для общения по системе дальней связи 
+  productEntity: CrateServiceFaxMachine
+  cost:
+    NTChip_currency: 1
+  categories:
+  - CorpShopNT
+  
+- type: listing
+  id: CrateCaptainIDCard
+  name: Ящик с картой капитана
+  description: Карта с полным доступом ко всем помещениям станции.
+  productEntity: CrateCaptainIDCard
+  cost:
+    NTChip_currency: 3
+  categories:
+  - CorpShopNT
+  
+- type: listing
+  id: CrateTransmutatorMachineCircuitboard
+  name: Ящик с платой Трансмутатора
+  description: Плата управления Трансмутатором, одной из самых значимых для превосходства НТ аппаратов.
+  productEntity: CrateTransmutatorMachineCircuitboard
+  cost:
+    NTChip_currency: 3
+  categories:
+  - CorpShopNT
+#------категория Космологистика----------
+- type: listing
+  id: CrateEngineeringThruster
+  name: Ящик с двигателем
+  description: Двигатель с БС-модулем для шаттлов производства корпорации Космологистика.
+  productEntity: CrateEngineeringThruster
+  cost:
+    KMLGChip_currency: 1
+  categories:
+  - CorpShopKMLG
+  
+- type: listing
+  id: CrateEngineeringGyroscope
+  name: Ящик с гироскопом
+  description: Гироскоп для космоческих судов производства корпорации Космологистика.
+  productEntity: CrateEngineeringGyroscope
+  cost:
+    KMLGChip_currency: 3
+  categories:
+  - CorpShopKMLG
+  
+- type: listing
+  id: CrateComputerShuttle
+  name: Ящик с консолью управления
+  description: Консоль контроля и управления производства корпорации Космологистика для шаттлов.
+  productEntity: CrateComputerShuttle
+  cost:
+    KMLGChip_currency: 2
+  categories:
+  - CorpShopKMLG
+  
+- type: listing
+  id: CrateGravityGeneratorMini
+  name: Ящик с минигенератором гравитации
+  description: Малый генератор гравитации производства корпорации Космологистика.
+  productEntity: CrateGravityGeneratorMini
+  cost:
+    KMLGChip_currency: 3
+  categories:
+  - CorpShopKMLG
+#------категория Накамура Инжениринг----------
+- type: listing
+  id: CrateEngineeringAMEShielding
+  name: Ящик с компонентами ДАМ
+  description: Детали для сборки Двигателя Антиматерии в станционных условиях производства корпорации Накамура Инжениринг.
+  productEntity: CrateEngineeringAMEShielding
+  cost:
+    NEChip_currency: 1
+  categories:
+  - CorpShopNE
+  
+- type: listing
+  id: CrateEngineeringAMEControl
+  name: Ящик с контроллером ДАМ
+  description: Система управления и контроля Двигателя Антиматерии производства корпорации Накамура Инжениринг. 
+  productEntity: CrateEngineeringAMEControl
+  cost:
+    NEChip_currency: 2
+  categories:
+  - CorpShopNE
+  
+- type: listing
+  id: CrateEngineeringEquipment
+  name: Ящик экипировки инженера
+  description: Ящик инженерного снаряжения производства Накамура Инжениринг.
+  productEntity: CrateEngineeringEquipment
+  cost:
+    NEChip_currency: 1
+  categories:
+  - CorpShopNE
+  
+- type: listing
+  id: CrateEngineeringSolarX2
+  name: Ящик солнечных панелей (большой)
+  description: Удвоенный ящик солнечных паннелей для самых близких партнёров корпорации Накамура Инжениринг. 
+  productEntity: CrateEngineeringSolarX2
+  cost:
+    NEChip_currency: 2
+  categories:
+  - CorpShopNE
+#------категория Гефест----------
+- type: listing
+  id: CrateSteelOre
+  name: Ящик железной руды
+  description: Ящик железной, подходящей для выплавки стали, руды добычи корпорации Гефест.
+  productEntity: CrateSteelOre
+  cost:
+    GFChip_currency: 1
+  categories:
+  - CorpShopGF
+  
+- type: listing
+  id: CratePlasmaOre
+  name: Ящик плазмовой руды
+  description: Ящик плазмовой руды добычи корпорации Гефест.
+  productEntity: CratePlasmaOre
+  cost:
+    GFChip_currency: 2
+  categories:
+  - CorpShopGF
+
+- type: listing
+  id: CrateSilverOre
+  name: Ящик серебрянной руды
+  description: Ящик серебрянной руды добычи корпорации Гефест. 
+  productEntity: CrateSilverOre
+  cost:
+    GFChip_currency: 3
+  categories:
+  - CorpShopGF
+  
+- type: listing
+  id: CrateCoal
+  name: Ящик угля
+  description: Ящик угля, пригодного для выплавки различных металлов, в том числе и стали, добычи корпорации Гефест. 
+  productEntity: CrateCoal
+  cost:
+    GFChip_currency: 1
+  categories:
+  - CorpShopGF
+  
+- type: listing
+  id: CrateGoldOre
+  name: Ящик золотой руды
+  description: Ящик золотой руды добычи корпорации Гефест. 
+  productEntity: CrateGoldOre
+  cost:
+    GFChip_currency: 3
+  categories:
+  - CorpShopGF
+  
+- type: listing
+  id: CrateOrePlumbum
+  name: Ящик свинцовой руды
+  description: Ящик свинцовой руды добычи корпорации Гефест. 
+  productEntity: CrateOrePlumbum
+  cost:
+    GFChip_currency: 2
+  categories:
+  - CorpShopGF
+  
+- type: listing
+  id: CrateOreCooper
+  name: Ящик медной руды
+  description: Ящик медной, пригодной для производства электроники, руды добычи корпорации Гефест. 
+  productEntity: CrateOreCooper
+  cost:
+    GFChip_currency: 2
+  categories:
+  - CorpShopGF
+
+- type: listing
+  id: CrateOreAluminium
+  name: Ящик алюминевой руды
+  description: Ящик алюминевой, пригодной для производства электроники, добычи корпорации Гефест.
+  productEntity: CrateOreAluminium
+  cost:
+    GFChip_currency: 2
+  categories:
+  - CorpShopGF
+  
+- type: listing
+  id: CrateSpaceCosmCrystall
+  name: Ящик космециевых кристаллов
+  description: Ящик космециевых кристаллов добычи корпорации Гефест.
+  productEntity: CrateSpaceCosmCrystall
+  cost:
+    GFChip_currency: 2
+  categories:
+  - CorpShopGF
+#------категория Саибасан----------
+- type: listing
+  id: CrateСeramicsCrystall
+  name: Ящик керамических пластин
+  description: Ящик керамического сырья для электроники производства компании Саибасан.
+  productEntity: CrateСeramicsCrystall
+  cost:
+    SbChip_currency: 1
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CrateSapphireCrystall
+  name: Ящик сапфиров
+  description: Ящик сапфирового сырья для электроники производства компании Саибасан.
+  productEntity: CrateSapphireCrystall
+  cost:
+    SbChip_currency: 3
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CrateSiCrystall
+  name: Ящик кремниевых булек
+  description: Ящик кремниевого сырья для электроники производства компании Саибасан.
+  productEntity: CrateSiCrystall
+  cost:
+    SbChip_currency: 1
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CratePlazСeramicsCrystall
+  name: Ящик плазкерамовых пластин
+  description: Ящик плазкерамового сырья для электроники производства компании Саибасан.
+  productEntity: CratePlazСeramicsCrystall
+  cost:
+    SbChip_currency: 2
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CrateSiСeramicsCrystall
+  name: Ящик кремнекерамовых пластин
+  description: Ящик кремнекерамового сырья для электроники производства компании Саибасан.
+  productEntity: CrateSiСeramicsCrystall
+  cost:
+    SbChip_currency: 2
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CrateFiberglass
+  name: Ящик стеклотекстолитовых пластин
+  description: Ящик стеклотекстолитового сырья для электроники производства компании Саибасан.
+  productEntity: CrateFiberglass
+  cost:
+    SbChip_currency: 1
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CrateGethinax
+  name: Ящик гетинаксовых пластин
+  description: Ящик гетинаксового сырья для электроники производства компании Саибасан.
+  productEntity: CrateGethinax
+  cost:
+    SbChip_currency: 1
+  categories:
+  - CorpShopSb
+  
+- type: listing
+  id: CrateSiPlazCrystall
+  name: Ящик кремнеплазовых пластин
+  description: Ящик кремнеплазового сырья для электроники производства компании Саибасан.
+  productEntity: CrateSiPlazCrystall
+  cost:
+    SbChip_currency: 2
+  categories:
+  - CorpShopSb
+#------категория ГасДеф----------
+- type: listing
+  id: CrateEmergencyBurnKit
+  name: Ящик наборов лечения ожогов
+  description: Аварийные аптечки с противоожоговыми средствами производства компании СкороМед, что является дочерней у корпорации ГасДеф.
+  productEntity: CrateEmergencyBurnKit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyToxinKit
+  name: Ящик наборов лечения токсинов
+  description: Аварийные аптечки с антидотами производства компании СкороМед, что является дочерней у корпорации ГасДеф.
+  productEntity: CrateEmergencyToxinKit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyBruteKit
+  name: Ящик наборов лечения механических повреждений
+  description: Аварийные аптечки с кровоостанавливающими, заживляющими и перевязочными средствами производства компании СкороМед, что является дочерней у корпорации ГасДеф.
+  productEntity: CrateEmergencyBruteKit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyO2Kit
+  name: Ящик наборов лечения гипоксии
+  description: Аварийные аптечки с антигипоксийными средствами производства компании СкороМед, что является дочерней у корпорации ГасДеф.
+  productEntity: CrateEmergencyO2Kit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyAdvancedKit
+  name: Ящик наборов расширенных лечения
+  description: Аварийные аптечки компании СкороМед, что является дочерней у корпорации ГасДеф.
+  productEntity: CrateEmergencyAdvancedKit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyRadiationKit
+  name: Ящик наборов лечения радиации
+  description: Аварийные аптечки с антирадиационными средствами производства компании СкороМед, что является дочерней у корпорации ГасДеф.
+  productEntity: CrateEmergencyRadiationKit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyInternals
+  name: Ящик аварийного снаряжения
+  description: Аварийные скафандры газовые баллоны и маски корпорации ГасДеф. На 3 персон.
+  productEntity: CrateEmergencyInternals
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateEmergencyInternalsLarge
+  name: Ящик аварийного снаряжения (большой)
+  description: Аварийные скафандры газовые баллоны и маски корпорации ГасДеф. На 6 персон.
+  productEntity: CrateEmergencyInternalsLarge
+  cost:
+    GDChip_currency: 2
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateGenericBiosuit
+  name: Ящик аварийных биозащитных костюмов
+  description: Аварийные биозащитные костюмы и противогазы корпорации ГасДеф. На 2 персон.
+  productEntity: CrateGenericBiosuit
+  cost:
+    GDChip_currency: 1
+  categories:
+  - CorpShopGD
+  
+- type: listing
+  id: CrateAxeCrowbarWelder
+  name: Ящик аварийных инструментов
+  description: В этом ящике хранятся аварийные инструменты производства компании ИнструментНад, дочки корпорации ГасДеф. По 3 топора, лома и сварочных аппарата.
+  productEntity: CrateAxeCrowbarWelder
+  cost:
+    GDChip_currency: 2
+  categories:
+  - CorpShopGD
+#-----------------пресет категорий в магазе------------
+- type: entity
+  id: StorePresetCorpShop
+  abstract: true
+  components:
+  - type: Store
+    name: Corp-Shop
+    categories:
+    - CorpShopChip
+    - CorpShopNT
+    - CorpShopKMLG
+    - CorpShopNE
+    - CorpShopGF
+    - CorpShopSb
+    - CorpShopGD
+    currencyWhitelist:
+    - NTChip_currency
+    - KMLGChip_currency
+    - NEChip_currency
+    - GFChip_currency
+    - SbChip_currency
+    - GDChip_currency
+    balance:
+      NTChip_currency: 0
+      KMLGChip_currency: 0
+      NEChip_currency: 0
+      GFChip_currency: 0
+      SbChip_currency: 0
+      GDChip_currency: 0

@@ -389,42 +389,42 @@
   stackEntity: SpaceBSCrystall1
   name: бс-кристаллы
   icon: { sprite: Victoria/Special_crystals/bs_crystal.rsi, state: bs_crystal }
-  price: 10
+  price: 0.5
 #----------------------------------РС--------------------------------
 - type: material
   id: RSCrystalMaterial
   stackEntity: Telecrystal1
   name: редспейс-кристаллы
   icon: { sprite: Objects/Specific/Syndicate/telecrystal.rsi, state: telecrystal }
-  price: 12
+  price: 0.7
 #----------------------------------Космеций--------------------------------
 - type: material
   id: CosmCrystalMaterial
   stackEntity: SpaceCosmCrystall1
   name: космеций
   icon: { sprite: Victoria/Special_crystals/cosm_crystal.rsi, state: cosm_crystal }
-  price: 5
+  price: 0.4
 #----------------------------------сапфир----------------------------------
 - type: material
   id: SapphireMaterial
   stackEntity: SapphireCrystall1
   name: сапфир
   icon: { sprite: Victoria/Special_crystals/sap_crystal.rsi, state: sap_crystal }
-  price: 5
+  price: 0.3
 #----------------------------------хром----------------------------------
 - type: material
   id: СhromeMaterial
   stackEntity: СhromeCrystall1
   name: хром
   icon: { sprite: Victoria/Special_crystals/chrome_crystal.rsi, state: chrome_crystal }
-  price: 2
+  price: 0.1
 #----------------------------------кремний----------------------------------
 - type: material
   id: SiMaterial
   stackEntity: SiCrystall1
   name: кремний
   icon: { sprite: Victoria/Special_crystals/si_crystal.rsi, state: si_crystal }
-  price: 0.1
+  price: 0.01
 #-----------------------------------------------------Трансмутатор--------------------------------
 #----------------------------Рецепт--------------------------------
 - type: latheRecipe

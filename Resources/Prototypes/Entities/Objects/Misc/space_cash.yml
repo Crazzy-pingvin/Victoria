@@ -44,6 +44,9 @@
         mask:
         - ItemMask
   - type: Appearance
+  - type: Currency
+    price:
+      Credit: 1
 
 - type: material
   id: Credit
@@ -58,6 +61,13 @@
   name: speso
   icon: { sprite: /Textures/Objects/Economy/cash.rsi, state: cash }
   spawn: SpaceCash
+
+- type: currency
+  id: Credit
+  displayName: Кредит
+  cash:
+    1: SpaceCash
+  canWithdraw: true
 
 - type: entity
   parent: SpaceCash

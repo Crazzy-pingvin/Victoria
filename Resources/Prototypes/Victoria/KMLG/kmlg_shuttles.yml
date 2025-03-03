@@ -1,0 +1,11 @@
+- type: preloadedGrid
+  id: ShuttleKMLGLost
+  path: /Maps/Shuttles/ShuttleEvent/kmlg_shuttle_lost.yml
+  copies: 1
+
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleKMLGLost
+  components:
+  - type: LoadMapRule
+    preloadedGrid: ShuttleKMLGLost
