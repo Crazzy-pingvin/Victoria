@@ -821,7 +821,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 10
+              doAfter: 5
               
 - type: construction
   name: wirefence
