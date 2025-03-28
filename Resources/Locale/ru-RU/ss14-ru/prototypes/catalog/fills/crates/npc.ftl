@@ -1,3 +1,5 @@
+ent-CrateNPCBeaver = ящик с бобром
+    .desc = Ящик, содержащий одного бобра.
 ent-CrateNPCBee = ящик с пчёлами
     .desc = Ящик, содержащий рой из восьми пчёл.
 ent-CrateNPCButterflies = ящик с бабочками

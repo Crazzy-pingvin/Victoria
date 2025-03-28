@@ -1,3 +1,5 @@
+ent-CrateNPCBeaver = beaver crate
+    .desc = A crate containing a single beaver.
 ent-CrateNPCBee = crate of bees
     .desc = A crate containing a swarm of eight bees.
 ent-CrateNPCButterflies = crate of butterflies

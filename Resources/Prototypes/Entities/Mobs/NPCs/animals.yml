@@ -86,9 +86,9 @@
           radius: 0.25
         density: 10
         mask:
-        - SmallMobMask
+        - MobMask
         layer:
-        - SmallMobLayer
+        - MobLayer
   - type: DamageStateVisuals
     states:
       Alive:

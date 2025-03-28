@@ -1,4 +1,14 @@
 - type: cargoProduct
+  id: LivestockBeaver
+  icon:
+    sprite: Mobs/Animals/beaver.rsi
+    state: beaver
+  product: CrateNPCBeaver
+  cost: 1200
+  category: cargoproduct-category-name-livestock
+  group: market
+
+- type: cargoProduct
   id: LivestockBee
   icon:
     sprite: Mobs/Animals/bee.rsi
@@ -25,6 +35,16 @@
     state: cat
   product: CrateNPCCat
   cost: 1200
+  category: cargoproduct-category-name-livestock
+  group: market
+
+- type: cargoProduct
+  id: LivestockChicken
+  icon:
+    sprite: Mobs/Animals/chicken.rsi
+    state: icon-1
+  product: CrateNPCChicken
+  cost: 4000
   category: cargoproduct-category-name-livestock
   group: market
 

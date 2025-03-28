@@ -1,4 +1,14 @@
 - type: entity
+  id: CrateNPCBeaver
+  parent: CrateLivestock
+  name: beaver crate
+  description: A crate containing a single beaver.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MobBeaver
+
+- type: entity
   id: CrateNPCBee
   parent: CrateLivestock
   name: crate of bees
