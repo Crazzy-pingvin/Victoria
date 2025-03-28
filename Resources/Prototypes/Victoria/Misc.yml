@@ -10,7 +10,7 @@
 - type: entity
   parent: EncryptionKeySecurity
   id: SecurityReservEncryptionKey
-  name: резервный ключ шифрования Службы Безопасности
+  name: резервный ключ шифрования СБ
   description: Как и обычный ключ. Но резервный.
   components:
   - type: EncryptionKey
@@ -26,7 +26,7 @@
   name: коробка резревного шифрования
   parent: BoxCardboard
   id: BoxSecurityReservRadio
-  description: Коробка с ключами шифрования резервной частоты СБ
+  description: коробка с ключами шифрования резервной частоты СБ
   components:
   - type: Storage
     maxItemSize: Small

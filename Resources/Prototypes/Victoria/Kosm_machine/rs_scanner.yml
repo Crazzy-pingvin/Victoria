@@ -4,7 +4,7 @@
 
 - type: stack
   id: MachineCircuitboardCosmScannerStack
-  name: плата редспейс-сканера
+  name: плата редспейс сканера
   icon: { sprite: Objects/Misc/module.rsi, state: science }
   spawn: MachineCircuitboardCosmScanner
   maxCount: 1
@@ -12,14 +12,14 @@
 - type: material
   id: MachineCircuitboardCosmScannerMaterial
   stackEntity: MachineCircuitboardCosmScanner
-  name: плата редспейс-сканера
+  name: плата редспейс сканера
   icon: { sprite: Objects/Misc/module.rsi, state: science }
   price: 1 
 
 - type: entity
   id: MachineCircuitboardCosmScanner
   parent: CrystalOreBase
-  name: плата редспейс-сканера
+  name: плата редспейс сканера
   description: Электронная плата для системы управления космециевым сканнером.
   suffix: Космециевая машина
   components:
@@ -42,7 +42,7 @@
 - type: entity
   id: CosmScannerBase
   parent: BaseStructureDynamic
-  name: основа редспейс-сканера
+  name: основа редспейс сканера
   description: Все основные системы космециевого сканера распологаются тут, но не хватает верхнего силового модуля.
   suffix: Не маппить!, Космециевая машина
   categories: [ HideSpawnMenu ]
@@ -99,7 +99,7 @@
 - type: entity
   id: CosmScanner
   parent: BaseMachine
-  name: редспейс-сканер
+  name: редспейс сканер
   description: Крупный сканер разработанный NanoTrasen, который используется для накопление существенного количества энергии в космециевых ядрах.
   suffix: Не маппить!, Космециевая машина
   components:

@@ -61,11 +61,11 @@
     sprite: Structures/Doors/Airlocks/Glass/cargo.rsi
   - type: PaintableAirlock
     group: Glass  
-#-------------------------ID-Карта--------------
+#-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
   id: CargoTeacherIDCard
-  name: ID-карта бригадира
+  name: ID карта бригадира
   description: Даёт доступы в отдел снабжения и утилизации, а также к помещениям наставников
   suffix: Наставники
   components:
@@ -178,11 +178,11 @@
     sprite: Structures/Doors/Airlocks/Glass/engineering.rsi
   - type: PaintableAirlock
     group: Glass 
-#-------------------------ID-Карта--------------
+#-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
   id: EngTeacherIDCard
-  name: ID-карта ведущего инженера
+  name: ID карта ведущего инженера
   description: Даёт доступы в инженерный отдел и атмос, а также к помещениям наставников
   suffix: Наставники
   components:
@@ -275,7 +275,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SecTeacherUniform
-  name: форма инструктора СБ
+  name: комбинезон инструктора СБ
   suffix: Наставники
   description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет боятся кадетов
   components:
@@ -312,11 +312,11 @@
     sprite: Structures/Doors/Airlocks/Glass/security.rsi
   - type: PaintableAirlock
     group: Glass 
-#-------------------------ID-Карта--------------
+#-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
   id: SecTeacherIDCard
-  name: ID-карта инструктора СБ
+  name: ID карта инструктора СБ
   description: Даёт доступ в бриг и отдел службы безопасности, а также в помещения наставников
   suffix: Наставники
   components:
@@ -418,7 +418,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SciTeacherUniform
-  name: форма инструктора СБ
+  name: комбинезон доцента
   suffix: Наставники
   description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет боятся кадетов
   components:
@@ -455,11 +455,11 @@
     sprite: Structures/Doors/Airlocks/Glass/science.rsi
   - type: PaintableAirlock
     group: Glass
-#-------------------------ID-Карта--------------
+#-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
   id: SciTeacherIDCard
-  name: ID-карта доцента
+  name: ID карта доцента
   description: Даёт доступы в отдел Департамента Науки и Разработки, а так же к помещениям наставников
   suffix: Наставники
   components:
@@ -476,7 +476,7 @@
   id: PDASciTeacher
   name: КПК доцента
   suffix: Ведущий
-  description: Статусный и весьма себе замечательный КПК, который так и жаждет поделиться информацией
+  description: Статусный и весьма себе замечательный КПК, который так и жаждет поделиться инкомбинезонцией
   components:
     - type: Sprite
       sprite: Victoria/Teach/pda_teacher.rsi
@@ -543,7 +543,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MedTeacherUniform
-  name: форма мед. консультанта
+  name: комбинезон медицинского консультанта
   suffix: Наставники
   description: Очень чистая и почти стерильная. От неё так и веет здоровьем вперемешку с цинизмом
   components:
@@ -579,11 +579,11 @@
     sprite: Structures/Doors/Airlocks/Glass/medical.rsi
   - type: PaintableAirlock
     group: Glass
-#-------------------------ID-Карта--------------
+#-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
   id: MedTeacherIDCard
-  name: ID-карта мед. консультанта
+  name: ID карта медицинского консультанта
   description: Дает доступы в медицинский отдел, морг и лабораторию химии, а также к помещениям наставников
   suffix: Наставники
   components:
@@ -598,7 +598,7 @@
 - type: entity
   parent: BaseMedicalPDA
   id: PDAMedTeacher
-  name: КПК мед. консультанта
+  name: КПК медицинского консультанта
   suffix: Ведущий
   description: Очень много знащий и очень циничный КПК
   components:
@@ -632,11 +632,11 @@
   icon:
     sprite: /Textures/Victoria/Teach/job_icons_teacher.rsi
     state: TeacherMed
-  jobName: врач-наставник
+  jobName: медицинский консультант
 #-------------------------Роль--------------
 - type: job
   id: MedTeacher
-  name: мед. консультант
+  name: медицинский консультант
   description: Профессиональный врач, занимающийся бумажной работой и наставлением менее опытных сотрудников
   playTimeTracker: JobMedTeacher
   requirements:

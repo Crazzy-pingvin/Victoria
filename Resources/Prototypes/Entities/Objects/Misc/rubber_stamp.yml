@@ -1,3 +1,6 @@
+- type: Tag
+  id: Stamp
+
 - type: entity
   name: generic rubber stamp
   parent: BaseItem
@@ -21,6 +24,9 @@
     size: Tiny
   - type: StealTarget
     stealGroup: Stamp
+  - type: Tag
+    tags:
+      - Stamp
 
 - type: entity
   name: alternate rubber stamp

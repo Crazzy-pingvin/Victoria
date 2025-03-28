@@ -1,13 +1,13 @@
 Corp-Shop = Корпоративные поставки
 
 name-ammonium-nitrate = амиачная селитра
-desc-ammonium-nitrate = Её лиюбят растения и поклоники Альфреда Нобеля.
-phy-desc-ammonium-nitrate = Белая и шершавая
+desc-ammonium-nitrate = Её любят растения и поклоники Альфреда Нобеля.
+phy-desc-ammonium-nitrate = белая и шершавая
 fla-ammonium-nitrate = кислый и удушающий
 
 name-sensitizer = сенсибилизатор
 desc-sensitizer = Чувствительная штука. Или чувственная... Нет. Всё же чувствительная.
-phy-desc-sensitizer = Серая и вязкая
+phy-desc-sensitizer = серая и вязкая
 fla-sensitizer = горьковатый
 
 name-plastidin = пластидин

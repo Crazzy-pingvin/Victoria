@@ -66,7 +66,7 @@
       raffle:
         settings: short
     - type: Loadout
-      prototypes: [ NoocSrGear, NoocSrMedGear, NoocNizGear]
+      prototypes: [ NoocSrGear, NoocSrMedGear, NoocNizGear, NoocSrDozGear, NoocSrScoGear, NoocSrTechGear]
 
 - type: entity
   name: Спавнер Ноократа-делегата
