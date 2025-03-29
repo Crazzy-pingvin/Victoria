@@ -26,6 +26,17 @@
         maxDistance: 2
   - type: UseDelay
     delay: 1.5
+  - type: Material
+  - type: Stack
+    stackType: Pen
+    count: 1
+
+- type: stack
+  id: Pen
+  name: ручка
+  icon: { sprite: Objects/Misc/pens.rsi, state: pen }
+  spawn: Pen
+  maxCount: 1
 
 - type: entity
   parent: Pen

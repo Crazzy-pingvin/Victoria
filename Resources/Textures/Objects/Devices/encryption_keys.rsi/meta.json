@@ -33,6 +33,7 @@
     {"name": "robotics_label"},
     {"name": "sci_label"},
     {"name": "sec_label"},
+	{"name": "sec_label_reserv"},
     {"name": "service_label"},
     {"name": "synd_label"},
     {"name": "borg_label"},

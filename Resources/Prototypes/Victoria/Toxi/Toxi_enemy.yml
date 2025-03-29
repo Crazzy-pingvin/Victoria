@@ -537,7 +537,7 @@
 - type: listing
   id: UplinkToxineSM1BeakerSmall
   name: токсин СМ-1
-  description: Синтетический-молекулярный подтипа альфа. Усваивается не слишком быстро, но серьёзно травит жертву.
+  description: Синтетический-молекулярный токсин подтипа альфа. Усваивается не слишком быстро, но серьёзно травит жертву.
   productEntity: ToxineSM1BeakerSmall
   discountCategory: usualDiscounts
   discountDownTo:

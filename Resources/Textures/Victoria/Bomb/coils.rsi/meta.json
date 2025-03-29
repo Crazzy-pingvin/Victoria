@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprite created by crazzy_pingvin",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "coilcord-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "coilcord-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "coilwire-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "coilwire-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "coilcord-30"
+    },
+    {
+      "name": "coilcord-20"
+    },
+    {
+      "name": "coilcord-10"
+    },
+    {
+      "name": "coilwire-30"
+    },
+    {
+      "name": "coilwire-20"
+    },
+    {
+      "name": "coilwire-10"
+    },
+    {
+      "name": "coilwire-equipped-BELT",
+      "directions": 4
+    },
+    {
+      "name": "coilcord-equipped-BELT",
+      "directions": 4
+    }
+  ]
+}

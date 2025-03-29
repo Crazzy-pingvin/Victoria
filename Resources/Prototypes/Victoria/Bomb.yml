@@ -1,0 +1,1365 @@
+#----------------------------------------------------материалы----------------------------------
+#-----------------------------------------проволока-------------------------------
+- type: entity
+  parent: CableStack
+  id: CableWireStack
+  name: стальная проволока
+  description: Длинная сталь. Не путать с плоской сталью и палко-сталью. Длинная сталь, да-да, именно так!
+  suffix: Full
+  components:
+  - type: Sprite
+    sprite: Victoria/Bomb/coils.rsi
+    state: coilwire-30
+    layers:
+    - state: coilwire-30
+      map: ["base"]
+  - type: Item
+    sprite: Victoria/Bomb/coils.rsi
+    heldPrefix: coilwire
+  - type: Stack
+    baseLayer: base
+    layerStates:
+    - coilwire-10
+    - coilwire-20
+    - coilwire-30
+    stackType: Wire
+  - type: CablePlacer
+    cablePrototypeID: CableWireExtension
+    blockingWireType: Apc
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: cablewire
+  - type: SolutionContainerManager
+    solutions:
+      cablewire:
+        reagents:
+        - ReagentId: Iron
+          Quantity: 4
+  - type: Construction
+    graph: SteelWire
+    node: SteelWire
+  - type: Material
+    
+- type: entity
+  parent: CableWireStack
+  id: CableWireStack10
+  suffix: 10
+  components:
+    - type: Sprite
+      state: coilwire-10
+    - type: Stack
+      count: 10
+
+- type: entity
+  parent: CableWireStack
+  id: CableWireStack1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: coilwire-10
+  - type: Stack
+    count: 1
+    
+- type: stack
+  id: Wire
+  name: стальная проволока
+  icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilwire-30 }
+  spawn: CableWireStack1
+  maxCount: 30
+  
+# - type: material
+  # id: CableWireMaterial
+  # stackEntity: Wire
+  # name: стальная проволока
+  # icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilwire-30 }
+  # price: 0.05
+#-------------------------------крафт------------------------------------    
+#---------------------руками----------------------------
+- type: constructionGraph
+  id: SteelWire
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: SteelWire
+          completed:
+            - !type:SetStackCount
+              amount: 4
+          steps:
+            - material: Steel
+              amount: 1
+
+    - node: SteelWire
+      entity: CableWireStack1
+
+- type: construction
+  name: steel wire
+  id: SteelWire
+  graph: SteelWire
+  startNode: start
+  targetNode: SteelWire
+  category: construction-category-materials
+  description: Длинная сталь. Не путать с плоской сталью и палко-сталью. Длинная сталь, да-да, именно так!
+  icon: { sprite: Victoria/Bomb/coils.rsi, state: coilwire-20 }
+  objectType: Item
+#---------------------лат-------------------------------
+- type: latheRecipe
+  id: RecipeSteelWire
+  result: CableWireStack1
+  completetime: 0.2
+  materials:
+    Steel: 120
+#-----------------------------------------шнур------------------------------------
+- type: entity
+  parent: CableStack
+  id: CordStack
+  name: шнур
+  description: Хороший и прочный шнур. Внимание, производитель не несёт ответсвенности за отсутвие табурета и мыла!
+  suffix: Full
+  components:
+  - type: Sprite
+    sprite: Victoria/Bomb/coils.rsi
+    state: coilcord-30
+    layers:
+    - state: coilcord-30
+      map: ["base"]
+  - type: Item
+    sprite: Victoria/Bomb/coils.rsi
+    heldPrefix: coilcord
+  - type: Stack
+    baseLayer: base
+    layerStates:
+    - coilcord-10
+    - coilcord-20
+    - coilcord-30
+    stackType: Cord
+  - type: Appearance
+  - type: Construction
+    graph: Cord
+    node: Cord
+  - type: StackPrice
+    price: 0.25
+  - type: Material
+          
+- type: entity
+  parent: CordStack
+  id: CordStack10
+  suffix: 10
+  components:
+    - type: Sprite
+      state: coilcord-10
+    - type: Stack
+      count: 10
+
+- type: entity
+  parent: CordStack
+  id: CordStack1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: coilcord-10
+  - type: Stack
+    count: 1
+    
+- type: stack
+  id: Cord
+  name: шнур
+  icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilcord-30 }
+  spawn: CordStack1
+  maxCount: 30
+  
+- type: material
+  id: CordMaterial
+  stackEntity: CordStack1
+  name: шнур
+  icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilcord-30 }
+  price: 0.05
+#-------------------------------крафт------------------------------------    
+#---------------------руками----------------------------
+- type: constructionGraph
+  id: Cord
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: Cord
+          completed:
+            - !type:SetStackCount
+              amount: 3
+          steps:
+            - material: Cloth
+              amount: 1
+
+    - node: Cord
+      entity: CordStack1
+
+- type: construction
+  name: cord
+  id: Cord
+  graph: Cord
+  startNode: start
+  targetNode: Cord
+  category: construction-category-materials
+  description: Хороший и прочный шнур.
+  icon: { sprite: Victoria/Bomb/coils.rsi, state: coilcord-20 }
+  objectType: Item
+#---------------------лат-------------------------------
+- type: latheRecipe
+  id: RecipeCord
+  result: CordStack1
+  completetime: 0.2
+  materials:
+    Cloth: 120
+#-----------------------------------------улучшение гранаты---------------------------------
+- type: stack
+  id: ExGrenade
+  name: разрывная граната
+  icon: { sprite: "/Textures/Objects/Weapons/Grenades/grenade.rsi", state: icon }
+  spawn: ExGrenade
+  maxCount: 1
+
+- type: material
+  id: ExGrenade
+  stackEntity: ExGrenade
+  name: разрывная граната
+  icon: { sprite: "/Textures/Objects/Weapons/Grenades/grenade.rsi", state: icon }
+  price: 0.1
+#-----------------------------------------реагенты-------------------------
+#-------------------------------амиачная селитра-----------------------
+- type: flavor
+  id: AmmoniumNitrate
+  flavorType: Complex
+  description: fla-ammonium-nitrate
+
+- type: reagent
+  id: AmmoniumNitrate
+  name: name-ammonium-nitrate
+  group: Botanical
+  desc: desc-ammonium-nitrate
+  physicalDesc: phy-desc-ammonium-nitrate
+  flavor: AmmoniumNitrate
+  color: "#ffffff"
+  meltingPoint: -101.5
+  boilingPoint: -34.04
+  plantMetabolism:
+    - !type:PlantAdjustNutrition
+      amount: 2
+    - !type:PlantAdjustHealth
+      amount: 1
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: 2
+
+- type: reaction
+  id: AmmoniumNitrate
+  reactants:
+    Oxygen:
+      amount: 3
+    Nitrogen:
+      amount: 1
+    Ammonia:
+      amount: 1  
+  products:
+    AmmoniumNitrate: 5
+#-------------------------------сенсибилизатор-------------------------
+- type: flavor
+  id: Sensitizer
+  flavorType: Complex
+  description: fla-sensitizer
+
+- type: reagent
+  id: Sensitizer
+  name: name-sensitizer
+  group: Botanical
+  desc: desc-sensitizer
+  physicalDesc: phy-desc-sensitizer
+  flavor: Sensitizer
+  color: "#424242"
+  meltingPoint: -101.5
+  boilingPoint: -34.04
+
+- type: entity
+  suffix: Сенсибилизатор
+  parent: Beaker
+  name: мензурка
+  description: Используется для хранения среднего количества химикатов или растворов
+  id: SensitizerBeakerSmall
+  components:
+  - type: Label
+    currentLabel: Сенсибилизатор
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 50
+        reagents:
+        - ReagentId: Sensitizer
+          Quantity: 50
+            
+- type: entity
+  id: CrateSensitizer
+  parent: CrateGenericSteel
+  name: ящик с сенсибилизатором
+  description: Ну, само по себе оно безавредно, конечно... Потому ящик и без доступа.
+  components:
+    - type: StorageFill
+      contents:
+      - id: SensitizerBeakerSmall
+      - id: SensitizerBeakerSmall
+
+- type: cargoProduct
+  id: CrateSensitizer
+  name: ящик с сенсибилизатором
+  description: Ну, само по себе оно безавредно, конечно... Потому ящик и без доступа.
+  icon:
+    sprite: Structures/Wallmounts/signs.rsi
+    state: explosives
+  product: CrateSensitizer
+  cost: 1500
+  category: cargoproduct-category-name-security
+  group: market           
+#-------------------------------пластидин------------------------------
+- type: flavor
+  id: Plastidin
+  flavorType: Complex
+  description: fla-plastidin
+
+- type: reagent
+  id: Plastidin
+  name: name-plastidin
+  group: Botanical
+  desc: desc-plastidin
+  physicalDesc: phy-desc-plastidin
+  flavor: Plastidin
+  color: "#8a6f30"
+  meltingPoint: -101.5
+  boilingPoint: -34.04
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+        
+- type: reaction
+  id: Plastidin
+  reactants:
+    WeldingFuel:
+      amount: 1
+    AmmoniumNitrate:
+      amount: 1
+    Sensitizer:
+      amount: 1  
+  products:
+    Plastidin: 3
+    
+- type: reaction
+  id: PlastidinExplosion
+  impact: High
+  quantized: true
+  minTemp: 350
+  reactants:
+    Plastidin:
+      amount: 1
+  effects:
+    - !type:ExplosionReactionEffect
+      explosionType: Default
+      maxIntensity: 100
+      intensityPerUnit: 2
+      intensitySlope: 5
+      maxTotalIntensity: 180
+#-----------------------------------------пластид------------------------------------
+- type: Tag
+  id: BombPart
+#-------------------------------сам пластид------------------------------------
+- type: reaction
+  id: Plastid
+  reactants:
+    Plastidin:
+      amount: 6
+    Iron:
+      amount: 1 
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: Plastid
+      
+- type: entity
+  parent: CrystalOreBase
+  id: Plastid
+  name: пластид
+  description: Мягкая субстанция палевого или зеленоватого цвета. Можно спутать с хлебным мякишом или солёным тестом. НЕ ЖРАТЬ! НЕ РОНЯТЬ! НЕ ГРЕТЬ!
+  components:
+  - type: Item
+    size: Small
+  - type: Stack
+    stackType: Plastid
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Bomb/plastid.rsi
+    state: plastid
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      PlastidMaterial: 100
+  - type: Tag
+    tags:
+    - BombPart
+  - type: SliceableFood
+    count: 3
+    slice: PicePlastid
+
+- type: stack
+  id: Plastid
+  name: пластид
+  icon: { sprite: Victoria/Bomb/plastid.rsi, state: plastid }
+  spawn: Plastid
+  maxCount: 1
+  
+- type: material
+  id: PlastidMaterial
+  stackEntity: Plastid
+  name: пластид
+  icon: { sprite: Victoria/Bomb/plastid.rsi, state: plastid }
+  price: 0.1 
+#-------------------------------кусочек пластида------------------------------------
+- type: entity
+  parent: CrystalOreBase
+  id: PicePlastid
+  name: кусочек пластида
+  description: Кусочек мягкой субстанции палевого или зеленоватого цвета. Можно спутать с хлебным мякишом или солёным тестом. НЕ ЖРАТЬ! НЕ РОНЯТЬ! НЕ ГРЕТЬ!
+  components:
+  - type: Item
+    size: Tiny
+  - type: Stack
+    stackType: PicePlastid
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Bomb/plastid.rsi
+    state: pice
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      PlastidMaterial: 30
+  - type: Tag
+    tags:
+    - BombPart
+
+- type: stack
+  id: PicePlastid
+  name: кусочек пластида
+  icon: { sprite: Victoria/Bomb/plastid.rsi, state: pice }
+  spawn: PicePlastid
+  maxCount: 3 
+#-----------------------------------------разрывная основа-------------------------
+- type: entity
+  parent: CrystalOreBase
+  id: ExplosiveMineBase
+  name: основа разрывной мины
+  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрывателя. Можно даже ронять. НЕ КОЛИТЕ ИМ, ЧЕРТ ВОЗЬМИ, ОРЕХИ!
+  components:
+  - type: Item
+    size: Small
+  - type: Stack
+    stackType: ExplosiveMineBase
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Bomb/part_mine.rsi
+    state: explosive_base
+  - type: Material
+  - type: Tag
+    tags:
+    - BombPart
+  - type: Construction
+    graph: ExplosiveMineBase
+    node: ExplosiveMineBase
+
+- type: stack
+  id: ExplosiveMineBase
+  name: основа разрывной мины
+  icon: { sprite: Victoria/Bomb/part_mine.rsi, state: explosive_base }
+  spawn: ExplosiveMineBase
+  maxCount: 1
+#-------------------------------крафт------------------------------------
+#---------------------руками----------------------------
+- type: constructionGraph
+  id: ExplosiveMineBase
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: ExplosiveMineBase
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: Steel
+              amount: 1
+            - material: Plastid
+              amount: 1
+
+    - node: ExplosiveMineBase
+      entity: ExplosiveMineBase
+
+- type: construction
+  name: base of explosive mine
+  id: ExplosiveMineBase
+  graph: ExplosiveMineBase
+  startNode: start
+  targetNode: ExplosiveMineBase
+  category: construction-category-materials
+  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрывателя. Можно даже ронять. НЕ КОЛИТЕ ИМ, ЧЕРТ ВОЗЬМИ, ОРЕХИ!
+  icon: { sprite: Victoria/Bomb/part_mine.rsi, state: explosive_base }
+  objectType: Item
+#---------------------лат-------------------------------
+- type: latheRecipe
+  id: ExplosiveMineBase
+  result: ExplosiveMineBase
+  completetime: 0.4
+  materials:
+    Steel: 500
+    PlastidMaterial: 100
+#-----------------------------------------осколочная основа------------------------
+- type: entity
+  parent: CrystalOreBase
+  id: FragmentationMineBase
+  name: основа осколочной мины
+  description: Округлый корпус начинённый взрывчаткой и шрапнелью. Безопасный без взрывателя. Можно даже ронять. НЕ КОЛИТЕ ИМ, ЧЕРТ ВОЗЬМИ, ОРЕХИ!
+  components:
+  - type: Item
+    size: Small
+  - type: Stack
+    stackType: FragmentationMineBase
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Bomb/part_mine.rsi
+    state: fragmentation_base
+  - type: Material
+  - type: Tag
+    tags:
+    - BombPart
+  - type: Construction
+    graph: FragmentationMineBase
+    node: FragmentationMineBase
+
+- type: stack
+  id: FragmentationMineBase
+  name: основа разрывной мины
+  icon: { sprite: Victoria/Bomb/part_mine.rsi, state: fragmentation_base }
+  spawn: FragmentationMineBase
+  maxCount: 1
+#-------------------------------крафт------------------------------------
+#---------------------руками----------------------------
+- type: constructionGraph
+  id: FragmentationMineBase
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: FragmentationMineBase
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: Steel
+              amount: 2
+            - material: Plastid
+              amount: 1
+
+    - node: FragmentationMineBase
+      entity: FragmentationMineBase
+
+- type: construction
+  name: base of fragmentation mine
+  id: FragmentationMineBase
+  graph: FragmentationMineBase
+  startNode: start
+  targetNode: FragmentationMineBase
+  category: construction-category-materials
+  description: Округлый корпус начинённый взрывчаткой и шрапнелью. Безопасный без взрывателя. Можно даже ронять. НЕ ИСПОЛЬЗОВАТЬ ДЛЯ ГЕНДЕР-ПАТИ!
+  icon: { sprite: Victoria/Bomb/part_mine.rsi, state: fragmentation_base }
+  objectType: Item
+#---------------------лат-------------------------------
+- type: latheRecipe
+  id: FragmentationMineBase
+  result: FragmentationMineBase
+  completetime: 0.4
+  materials:
+    Steel: 1000
+    PlastidMaterial: 100
+#-----------------------------------------взрыватель-------------------------------
+- type: entity
+  parent: CrystalOreBase
+  id: FuseMine
+  name: взрыватель мины
+  suffix: Полный
+  description: Небольшой цилиндр с проводочками и датчиком давления. Сам по себе не представляет угрозы.
+  components:
+  - type: Item
+    size: Small
+  - type: Stack
+    stackType: FuseMine
+    count: 3
+  - type: Sprite
+    sprite: Victoria/Bomb/part_mine.rsi
+    state: fuse
+  - type: Material
+  - type: Tag
+    tags:
+    - BombPart
+  - type: Construction
+    graph: FuseMine
+    node: FuseMine  
+
+- type: entity
+  parent: FuseMine
+  id: FuseMine1
+  suffix: Один
+  components:
+  - type: Stack
+    stackType: FuseMine
+    count: 1
+    
+- type: stack
+  id: FuseMine
+  name: взрыватель мины
+  icon: { sprite: Victoria/Bomb/part_mine.rsi, state: fuse }
+  spawn: FuseMine1
+  maxCount: 3
+#-------------------------------крафт------------------------------------
+#---------------------руками----------------------------
+- type: constructionGraph
+  id: FuseMine
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: FuseMine
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: Steel
+              amount: 1
+            - material: Cable
+              amount: 2
+
+    - node: FuseMine
+      entity: FuseMine
+
+- type: construction
+  name: fuse for mine
+  id: FuseMine
+  graph: FuseMine
+  startNode: start
+  targetNode: FuseMine
+  category: construction-category-materials
+  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрыватель. Можно даже ронять. НЕ КОЛОТЬ ОРЕХИ!
+  icon: { sprite: Victoria/Bomb/part_mine.rsi, state: fuse }
+  objectType: Item
+#---------------------лат-------------------------------
+- type: latheRecipe
+  id: FuseMine
+  result: FuseMine
+  completetime: 0.2
+  materials:
+    Steel: 1000
+#-----------------------------------------микробомба------------------------
+- type: entity
+  name: микробомба
+  description: Маленькая бомба. Ну, или большая петарда. Короче, не кидать в мусоропровод и не давать дурным детям!
+  parent: [GrenadeBase, BaseSyndicateContraband]
+  id: MicroBomb
+  components:
+  - type: Sprite
+    sprite: Victoria/Bomb/microbomb.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria/Bomb/microbomb.rsi
+    size: Tiny
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4
+    intensitySlope: 4
+    totalIntensity: 30 
+    canCreateVacuum: false
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/Effects/beep1.ogg"
+      params:
+        volume: 3
+    initialBeepDelay: 0
+    beepInterval: 1
+  - type: Material
+  - type: Stack
+    stackType: MicroBomb
+    count: 1
+  - type: Construction
+    graph: MicroBomb
+    node: MicroBomb
+    
+- type: stack
+  id: MicroBomb
+  name: микробомба
+  icon: { sprite: Victoria/Bomb/microbomb.rsi, state: icon }
+  spawn: MicroBomb
+  maxCount: 1
+#-------------------------------крафт------------------------------------
+- type: constructionGraph
+  id: MicroBomb
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MicroBomb
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: Steel
+              amount: 1
+            - material: PicePlastid
+              amount: 1
+
+    - node: MicroBomb
+      entity: MicroBomb
+      
+- type: construction
+  name: micro bomb
+  id: MicroBomb
+  graph: MicroBomb
+  startNode: start
+  targetNode: MicroBomb
+  category: construction-category-materials
+  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрыватель. Можно даже ронять. НЕ КОЛИТЕ ИМ, ЧЕРТ ВОЗЬМИ, ОРЕХИ!
+  icon: { sprite: Victoria/Bomb/microbomb.rsi, state: icon }
+  objectType: Item
+#----------------------------------------------------структуры-------------------------------------
+#-----------------------------------------колючая проволока-------------------------------
+- type: entity
+  id: Wirefence
+  parent: BaseStructure
+  name: колючая проволока
+  description: Более чем тысячелетнее изобретение, что всё так же успешно портит жизнь простым пехотинцам.
+  components:
+  - type: Anchorable
+  - type: Sprite
+    sprite: Victoria/Bomb/fence.rsi
+    state: wirefence
+  - type: Icon
+    sprite: Victoria/Bomb/fence.rsi
+    state: wirefence
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.4,0.5,-0.3"
+        mask:
+        - FullTileMask
+        layer:
+        - MidImpassable
+  - type: Physics
+    bodyType: Static
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: FlimsyMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: Wirefence
+    node: Wirefence
+    deconstructionTarget: start
+  - type: StaminaDamageOnCollide
+    damage: 30
+  - type: DamageContacts
+    damage:
+      types:
+        Piercing: 8
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.15
+    sprintSpeedModifier: 0.15
+#-------------------------------сборка------------------------------------
+- type: constructionGraph
+  id: Wirefence
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: Wirefence
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          steps:
+            - material: WoodPlank
+              amount: 1
+              doAfter: 1
+            - material: Wire
+              amount: 8
+              doAfter: 4
+
+    - node: Wirefence
+      entity: Wirefence
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Колючка была разрезана"
+            - !type:SpawnPrototype
+              prototype: CableWireStack1
+              amount: 3 
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 5
+              
+- type: construction
+  name: wirefence
+  id: Wirefence
+  graph: Wirefence
+  startNode: start
+  targetNode: Wirefence
+  category: construction-category-structures
+  description: Более чем тысячелетнее изобретение, что всё так же успешно портит жизнь простым пехотинцам.
+  icon:
+    sprite: /Textures/Victoria/Bomb/fence.rsi
+    state: wirefence
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+#-----------------------------------------спотыкач----------------------------------------
+- type: entity
+  id: Stumble
+  parent: BaseStructure
+  name: спотыкач
+  description: В атаку бежишь? Ну беги, упырь, беги!
+  components:
+  - type: Anchorable
+  - type: Sprite
+    sprite: Victoria/Bomb/fence.rsi
+    state: stumble
+  - type: Icon
+    sprite: Victoria/Bomb/fence.rsi
+    state: stumble
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 60
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Construction
+    graph: Stumble
+    node: Stumble
+    deconstructionTarget: start
+  - type: DamageContacts
+    damage:
+      types:
+        Piercing: 4
+  - type: StaminaDamageOnCollide
+    damage: 20
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: TriggerOnStepTrigger
+  - type: PreventableStepTrigger
+  - type: Slippery
+    slipSound:
+      path: /Audio/Effects/fence_rattle2.ogg
+    launchForwardsMultiplier: 0
+  - type: DamageUserOnTrigger
+    damage:
+      types:
+        Piercing: 5
+#-------------------------------сборка------------------------------------
+- type: constructionGraph
+  id: Stumble
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: Stumble
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: Wire
+              amount: 3
+              doAfter: 2
+
+    - node: Stumble
+      entity: Stumble
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Спотыкач был разрезан"
+            - !type:SpawnPrototype
+              prototype: CableWireStack1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 3
+              
+- type: construction
+  name: stumble
+  id: Stumble
+  graph: Stumble
+  startNode: start
+  targetNode: Stumble
+  category: construction-category-structures
+  description: Простенькое решение для замедления наступающей силы противника.
+  icon:
+    sprite: /Textures/Victoria/Bomb/fence.rsi
+    state: stumble
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+#-----------------------------------------малая растяжка----------------------------------
+- type: entity
+  id: ShortStretching
+  parent: BaseStructure
+  name: короткая растяжка
+  description: Опа! А что это тут у нас? Растяжечка... Железная маза простив слепых и идиотов!
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: LandMine
+    sound:
+        path: /Audio/Effects/beep_landmine.ogg
+        params:
+            maxDistance: 10
+  - type: MiningScannerViewable
+  - type: Anchorable
+    flags: Unanchorable
+  - type: Sprite
+    sprite: Victoria/Bomb/stretching.rsi
+    state: small
+  - type: Icon
+    sprite: Victoria/Bomb/stretching.rsi
+    state: small
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.1,0.5,0"
+        density: 7
+        mask:
+        - FullTileMask
+        layer:
+        - MidImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Physics
+    bodyType: Static
+  - type: Construction
+    graph: LandMines
+    node: ShortStretching
+    deconstructionTarget: start
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    stepOn: true
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 12
+    intensitySlope: 3
+    totalIntensity: 60 # about a ~4 tile radius
+    canCreateVacuum: false
+#-------------------------------сборка------------------------------------
+- type: construction
+  name: short stretching
+  id: ShortStretching
+  graph: LandMines
+  startNode: start
+  targetNode: ShortStretching
+  category: construction-category-structures
+  description: Растяжечка... Железная маза простив слепых и идиотов!
+  icon:
+    sprite: Victoria/Bomb/stretching.rsi
+    state: small
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+#-----------------------------------------голый провод-------------------------------------
+- type: entity
+  parent: CableBase
+  id: CableWireExtension
+  name: стальная проволока
+  description: Это голый провод. Нет, реально! Голый провод под напряжением! Давай лизнём его!
+  components:
+  - type: Sprite
+    sprite: Structures/Power/Cables/lv_cable.rsi
+    state: lvcable_0
+  - type: Icon
+    sprite: Structures/Power/Cables/lv_cable.rsi
+    state: lvcable_4
+  - type: PowerProvider
+    voltage: Apc
+  - type: ExtensionCableProvider
+  - type: Cable
+    cableDroppedOnCutPrototype: CableWireStack1
+    cableType: Apc
+  - type: PowerConsumer
+    showInMonitor: false
+  - type: Electrified
+    requirePower: true
+    noWindowInTile: true
+    highVoltageNode: high
+    mediumVoltageNode: medium
+    lowVoltageNode: low
+  - type: NodeContainer
+    nodes:
+      high:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+      medium:
+        !type:CableDeviceNode
+        nodeGroupID: MVPower
+      low:
+        !type:CableDeviceNode
+        nodeGroupID: Apc
+      power:
+        !type:CableNode
+        nodeGroupID: Apc
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          CableApcStack1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: CableVisualizer
+    statePrefix: lvcable_
+#-----------------------------------------------------мины--------------------------------------------
+#-----------------------------------------разрывная-----------------------------------------
+- type: construction
+  name: land mine explosive
+  id: LandMineExplosive
+  graph: LandMines
+  startNode: start
+  targetNode: LandMineExplosive
+  category: construction-category-structures
+  description: Разрывная мина. Крайне опасна и даже смертельна.
+  icon:
+    sprite: Objects/Misc/landmine.rsi
+    state: landmine
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+#-----------------------------------------осколочная----------------------------------------
+- type: entity
+  name: осколочная мина
+  id: LandMineFragmentation
+  components:
+  - type: MiningScannerViewable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Anchorable
+    flags: Unanchorable
+  - type: Physics
+    bodyType: Static
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: Icon
+    sprite: Victoria/Bomb/fragmentation_mine.rsi
+    state: fragmentationmine
+  - type: Sprite
+    drawdepth: Items
+    layers:
+      - state: fragmentationmine
+        sprite: Victoria/Bomb/fragmentation_mine.rsi
+        map: [ "enum.MiningScannerVisualLayers.Overlay" ] 
+  - type: LandMine
+    sound:
+        path: /Audio/Effects/beep_landmine.ogg
+        params:
+            maxDistance: 10
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Construction
+    graph: LandMines
+    node: LandMineFragmentation
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    stepOn: true
+  - type: ClusterGrenade
+    fillPrototype: PelletClusterLethal
+    maxGrenadesCount: 30
+    grenadeType: enum.GrenadeType.Shoot
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+      
+- type: construction
+  name: land mine fragmentation
+  id: LandMineFragmentation
+  graph: LandMines
+  startNode: start
+  targetNode: LandMineFragmentation
+  category: construction-category-structures
+  description: Осколочная мина. Крайне опасна и даже смертельна.
+  icon:
+    sprite: Victoria/Bomb/fragmentation_mine.rsi
+    state: fragmentationmine
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+#------------------------------------------ручка---------------------------------------------
+- type: entity
+  name: ручка
+  suffix: Мина
+  parent: BaseLandMine
+  id: LandMinePen
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/pens.rsi
+    layers:
+      - state: pen
+        map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 4
+    intensitySlope: 4
+    totalIntensity: 30
+    canCreateVacuum: false
+  - type: Construction
+    graph: LandMines
+    node: LandMinePen
+    
+- type: construction
+  name: land mine pen
+  id: LandMinePen
+  graph: LandMines
+  startNode: start
+  targetNode: LandMinePen
+  category: construction-category-structures
+  description: Мина-приманка. Выглядит как ручка. Может оторвать руку или ногу.
+  icon:
+    sprite: Objects/Misc/pens.rsi
+    state: pen
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+#------------------------------------------крафт мин------------------------------------
+- type: constructionGraph
+  id: LandMines
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: LandMineExplosive
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - material: ExplosiveMineBase
+              amount: 1
+              doAfter: 0.25
+            - material: FuseMine
+              amount: 1
+              doAfter: 2
+        
+        - to: LandMineFragmentation
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - material: FragmentationMineBase
+              amount: 1
+              doAfter: 0.25
+            - material: FuseMine
+              amount: 1
+              doAfter: 2
+              
+        - to: LandMinePen
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - material: MicroBomb
+              amount: 1
+              doAfter: 2
+            - material: Pen
+              amount: 1
+              doAfter: 3
+              
+        - to: ShortStretching
+          completed:
+            - !type:SnapToGrid
+              southRotation: false
+          conditions:
+            - !type:EntityAnchored { }
+          steps:
+            - material: Cord
+              amount: 2
+              doAfter: 2
+            - material: ExGrenade
+              amount: 1
+              doAfter: 5
+
+    - node: LandMineExplosive
+      entity: LandMineExplosive
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Мина обезврежена"
+            - !type:SpawnPrototype
+              prototype: ExplosiveMineBase
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: FuseMine
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Cutting
+              doAfter: 3
+            - tool: Prying
+              doAfter: 1.5
+              
+    - node: LandMineFragmentation
+      entity: LandMineFragmentation
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Мина обезврежена"
+            - !type:SpawnPrototype
+              prototype: FragmentationMineBase
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: FuseMine
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 1.5
+              
+    - node: LandMinePen
+      entity: LandMinePen
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Мина обезврежена"
+            - !type:SpawnPrototype
+              prototype: MicroBomb
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: Pen
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 1
+
+    - node: ShortStretching
+      entity: ShortStretching
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Растяжка снята"
+            - !type:SpawnPrototype
+              prototype: ExGrenade
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: CordStack1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 1

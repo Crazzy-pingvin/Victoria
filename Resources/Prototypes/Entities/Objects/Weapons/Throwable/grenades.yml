@@ -3,6 +3,7 @@
   parent: BaseItem
   id: GrenadeBase
   components:
+  - type: Material
   - type: Sprite
     sprite: Objects/Weapons/Grenades/grenade.rsi
     layers:
@@ -56,6 +57,9 @@
         volume: 5
     initialBeepDelay: 0
     beepInterval: 2 # 2 beeps total (at 0 and 2)
+  - type: Material
+  - type: Stack
+    stackType: ExGrenade
 
 - type: entity
   name: flashbang

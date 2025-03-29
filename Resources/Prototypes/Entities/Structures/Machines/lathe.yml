@@ -118,6 +118,8 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticRecipes:
+      - RecipeSteelWire
+      - RecipeCord
       - Wirecutter
       - Igniter
       - Signaller
@@ -271,6 +273,8 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticRecipes:
+    - RecipeSteelWire
+    - RecipeCord
     - LargeBeaker
     - Dropper
     - ClothingEyesGlassesChemical
@@ -690,6 +694,9 @@
     idleState: icon
     runningState: icon
     staticRecipes:
+      - ExplosiveMineBase
+      - FragmentationMineBase
+      - FuseMine
       - BoxLethalshot
       - BoxShotgunPractice
       - BoxShotgunSlug

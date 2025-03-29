@@ -1,7 +1,7 @@
 #---------------------------------------------Основы плат----------------------------------------------
 - type: Tag
   id: RawCircuitBord
-#--------------------------------------медь------------------------------------------
+#--------------------------------------Медь------------------------------------------
 #------------------Сама руда-------------------------
 - type: entity
   parent: CrystalOreBase
@@ -23,7 +23,7 @@
       RawCooper: 100
   - type: SolutionContainerManager
     solutions:
-      ironore:
+      cooper:
         reagents:
         - ReagentId: Copper
           Quantity: 40
@@ -45,7 +45,7 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: RawCooper
   stackEntity: OreCooper1
@@ -58,7 +58,7 @@
   oreEntity: OreCooper1
   minOreYield: 2
   maxOreYield: 4
-#-----------------------------------Сам камень с "рудой"--------------------------
+#-----------------------------------Сам камень с рудой--------------------------
 - type: weightedRandomOre
   id: RandomOreCooper
   weights:
@@ -87,7 +87,8 @@
           state: rock_north
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_west
-        - state: cooper  
+        - state: cooper 
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]        
 #------------------Переплавка-------------------------        
 - type: latheRecipe
   id: MeltingCooper
@@ -96,7 +97,6 @@
   materials:
     RawCooper: 30
     Coal: 30    
-#------------------Сам-------------------------
 #------------------Сам-------------------------
 - type: entity
   parent: CrystalOreBase
@@ -134,7 +134,7 @@
   - type: Stack
     stackType: Cooper
     count: 1 
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: CooperMaterial
   stackEntity: Cooper1
@@ -153,7 +153,7 @@
   effects:
     - !type:CreateEntityReactionEffect
       entity: Cooper1
-#--------------------------------------алюминий------------------------------------------
+#--------------------------------------Алюминий------------------------------------------
 #------------------Сама руда-------------------------
 - type: entity
   parent: CrystalOreBase
@@ -175,7 +175,7 @@
       RawAluminium: 100
   - type: SolutionContainerManager
     solutions:
-      ironore:
+      aluminium:
         reagents:
         - ReagentId: Aluminium
           Quantity: 40
@@ -197,20 +197,20 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: RawAluminium
   stackEntity: OreAluminium1
   name: алюминиевая руда
   icon: { sprite: Victoria/Electron/ore_electronic.rsi, state: aluminium }
   price: 0.1 
-#-----------------------------------руда--------------------------
+#-----------------------------------Руда--------------------------
 - type: ore
   id: OreAluminium
   oreEntity: OreAluminium1
   minOreYield: 2
   maxOreYield: 6
-#-----------------------------------Сам камень с "рудой"--------------------------
+#-----------------------------------Сам камень с рудой--------------------------
 - type: entity
   id: WallRockAluminium
   parent: CrystalWallRock
@@ -234,6 +234,7 @@
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_west
         - state: aluminium  
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 #------------------Переплавка-------------------------        
 - type: latheRecipe
   id: MeltingAluminium
@@ -278,7 +279,7 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: AluminiumMaterial
   stackEntity: Aluminium1
@@ -323,7 +324,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: SapphireCircuitBord
-  name: Сапфирная плата
+  name: сапфирная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: sapphire }
   spawn: SapphireCrystall1
   maxCount: 30
@@ -335,11 +336,11 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: SapphireCircuitBordMaterial
   stackEntity: SapphireCircuitBord1
-  name: Сапфирная плата
+  name: сапфирная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: sapphire }
   price: 0.05    
 #------------------Рецепт--------------------------
@@ -350,12 +351,12 @@
   materials:
     CooperMaterial: 10
     SapphireMaterial: 50
-#--------------------------------------Пласкерам------------------------------------------
+#--------------------------------------Плазкерам------------------------------------------
 #------------------Сам-------------------------
 - type: entity
   parent: SapphireCircuitBord
   id: PlazСeramicsCircuitBord
-  name: Плазкерамовая плата
+  name: плазкерамовая плата
   description: Нарезанная метализированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
@@ -370,7 +371,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: PlazСeramicsCircuitBord
-  name: Плазкерамовая плата
+  name: плазкерамовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: plazсeram }
   spawn: PlazСeramicsCircuitBord1
   maxCount: 30
@@ -382,11 +383,11 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: PlazСeramicsCircuitBordMaterial
   stackEntity: PlazСeramicsCircuitBord1
-  name: Плазкерамовая плата
+  name: плазкерамовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: plazсeram }
   price: 0.05    
 #------------------Рецепт--------------------------
@@ -402,7 +403,7 @@
 - type: entity
   parent: SapphireCircuitBord
   id: SiСeramicsCircuitBord
-  name: Кремнекерамовая плата
+  name: кремнекерамовая плата
   description: Нарезанная метализированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
@@ -417,7 +418,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: SiСeramicsCircuitBord
-  name: Кремнекерамовая плата
+  name: кремнекерамовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: siсeramics }
   spawn: SiСeramicsCircuitBord1
   maxCount: 30
@@ -429,11 +430,11 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: SiСeramicsCircuitBordMaterial
   stackEntity: SiСeramicsCircuitBord1
-  name: Кремнекерамовая плата
+  name: кремнекерамовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: siсeramics }
   price: 0.05    
 #------------------Рецепт--------------------------
@@ -449,7 +450,7 @@
 - type: entity
   parent: SapphireCircuitBord
   id: FiberglassCircuitBord
-  name: Стеклотекстолитная плата
+  name: стеклотекстолитная плата
   description: Нарезанная метализированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
@@ -464,7 +465,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: FiberglassCircuitBord
-  name: Стеклотекстолитная плата
+  name: стеклотекстолитная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: fiberglass }
   spawn: FiberglassCircuitBord1
   maxCount: 30
@@ -476,11 +477,11 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: FiberglassCircuitBordMaterial
   stackEntity: FiberglassCircuitBord1
-  name: Стеклотекстолитная плата
+  name: стеклотекстолитная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: fiberglass }
   price: 0.05    
 #------------------Рецепт--------------------------
@@ -496,7 +497,7 @@
 - type: entity
   parent: SapphireCircuitBord
   id: GethinaxCircuitBord
-  name: Гетинаксная плата
+  name: гетинаксная плата
   description: Нарезанная метализированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
@@ -511,7 +512,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: GethinaxCircuitBord
-  name: Гетинаксная плата
+  name: гетинаксная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: gethinax }
   spawn: GethinaxCircuitBord1
   maxCount: 30
@@ -523,11 +524,11 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: GethinaxCircuitBordMaterial
   stackEntity: GethinaxCircuitBord1
-  name: Гетинаксная плата
+  name: гетинаксная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: gethinax }
   price: 0.05    
 #------------------Рецепт--------------------------
@@ -543,7 +544,7 @@
 - type: entity
   parent: SapphireCircuitBord
   id: SiPlazCircuitBord
-  name: Кремнеплазовая плата
+  name: кремнеплазовая плата
   description: Нарезанная метализированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
@@ -558,7 +559,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: SiPlazCircuitBord
-  name: Кремнеплазовая плата
+  name: кремнеплазовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: siplaz }
   spawn: SiPlazCircuitBord1
   maxCount: 30
@@ -570,7 +571,7 @@
   components:
   - type: Stack
     count: 1  
-#----------------------------------материал----------------------------------
+#----------------------------------Материал----------------------------------
 - type: material
   id: SiPlazCircuitBordMaterial
   stackEntity: SiPlazCircuitBord1
@@ -589,7 +590,7 @@
 - type: entity
   id: VacuumMachineMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: Плата вакуумного станка
+  name: плата вакуумного станка
   description: Электронная плата, необходимая для работы вакуумного станка
   components:
     - type: MachineBoard
@@ -605,7 +606,7 @@
 - type: entity
   id: VacuumMachine
   parent: BaseLatheLube
-  name: Вакуумный станок
+  name: вакуумный станок
   description: Тяжёлая производственная машина для создания основ печатных плат
   components:
   - type: Sprite

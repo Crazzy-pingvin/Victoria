@@ -1,11 +1,11 @@
-name-dirty = Грязь
+name-dirty = грязь
 desc-dirty = Грязная грязь
-phy-desc-dirty = Коричневая и противная
+phy-desc-dirty = коричневая и противная
 
-name-hydrochloric-acid = Соляная кислота
+name-hydrochloric-acid = соляная кислота
 desc-hydrochloric-acid = Опасная жижа, растворяющая пластик и органику
-phy-desc-hydrochloric-acid = Прозрачная и с легчайшим запахом
+phy-desc-hydrochloric-acid = прозрачная и с легчайшим запахом
 
-name-precipitator = Осадитель
+name-precipitator = осадитель
 desc-precipitator = Странная жижа
 phy-desc-precipitator = Прозрачная с кисло-солёным запахом

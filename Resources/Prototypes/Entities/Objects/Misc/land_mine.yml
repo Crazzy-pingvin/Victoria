@@ -5,8 +5,7 @@
   - type: Clickable
   - type: InteractionOutline
   - type: Anchorable
-  - type: Pullable
-  - type: MovedByPressure
+    flags: Unanchorable
   - type: Physics
     bodyType: Static
     fixedRotation: true
@@ -19,10 +18,15 @@
         hard: false
         layer:
           - LowImpassable
-  - type: Sprite
-    drawdepth: Items
+  - type: Icon
     sprite: Objects/Misc/landmine.rsi
     state: landmine
+  - type: Sprite
+    drawdepth: Items
+    layers:
+      - state: landmine
+        sprite: Objects/Misc/landmine.rsi
+        map: [ "enum.MiningScannerVisualLayers.Overlay" ]  
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -48,6 +52,7 @@
   parent: BaseLandMine
   id: LandMineKick
   components:
+  - type: MiningScannerViewable
   - type: GhostKickUserOnTrigger
   - type: DeleteOnTrigger
 
@@ -57,6 +62,7 @@
   parent: BaseLandMine
   id: LandMineModular
   components:
+  - type: MiningScannerViewable
   - type: PayloadCase
   - type: Construction
     graph: ModularMineGraph
@@ -67,6 +73,7 @@
   parent: BaseLandMine
   id: LandMineExplosive
   components:
+  - type: MiningScannerViewable
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -74,3 +81,6 @@
     intensitySlope: 3
     totalIntensity: 120 # about a ~4 tile radius
     canCreateVacuum: false
+  - type: Construction
+    graph: LandMines
+    node: LandMineExplosive

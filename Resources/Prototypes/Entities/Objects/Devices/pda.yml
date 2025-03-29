@@ -41,10 +41,17 @@
       whitelist:
         components:
         - IdCard
+    idStamp:
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      whitelist:
+        components:
+        - Stamp
   - type: Item
     size: Small
   - type: ContainerContainer
     containers:
+      PDA-stamp: !type:ContainerSlot {}
       PDA-id: !type:ContainerSlot {}
       PDA-pen: !type:ContainerSlot {}
       PDA-pai: !type:ContainerSlot {}

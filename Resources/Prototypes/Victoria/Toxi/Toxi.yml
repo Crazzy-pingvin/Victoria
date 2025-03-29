@@ -726,7 +726,7 @@
     state: virology
   product: CrateSupAdsorbent
   cost: 700
-  category: Service
+  category: cargoproduct-category-name-medical
   group: market
 #------------------------------------------------------------------------РЕАКЦИИ--------------------------------------  
 #----------------------------получение------------

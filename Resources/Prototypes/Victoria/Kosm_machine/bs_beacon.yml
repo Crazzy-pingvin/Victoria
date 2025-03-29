@@ -4,7 +4,7 @@
 
 - type: stack
   id: MachineCircuitboardCosmBeaconStack
-  name: плата блюспейс-маяка
+  name: плата блюспейс маяка
   icon: { sprite: Objects/Misc/module.rsi, state: science }
   spawn: MachineCircuitboardCosmBeacon
   maxCount: 1
@@ -12,14 +12,14 @@
 - type: material
   id: MachineCircuitboardCosmBeaconMaterial
   stackEntity: MachineCircuitboardCosmBeacon
-  name: плата блюспейс-маяка
+  name: плата блюспейс маяка
   icon: { sprite: Objects/Misc/module.rsi, state: science }
   price: 1 
 
 - type: entity
   id: MachineCircuitboardCosmBeacon
   parent: CrystalOreBase
-  name: плата блюспейс-маяка
+  name: плата блюспейс маяка
   description: Электронная плата для системы управления космециевым маяком.
   suffix: Космециевая машина
   components:
@@ -42,7 +42,7 @@
 - type: entity
   id: CosmBeaconBase
   parent: BaseStructureDynamic
-  name: основа блюспейс-маяка
+  name: основа блюспейс маяка
   description: Все основные системы космециевого маяка распологаются тут, но не хватает верхнего силового модуля.
   suffix: Не маппить!, Космециевая машина
   categories: [ HideSpawnMenu ]
@@ -99,7 +99,7 @@
 - type: entity
   id: CosmBeaconulator
   parent: BaseMachine
-  name: блюспейс-маяк
+  name: блюспейс маяк
   description: Крупный маяк совместной разработки NanoTrasen и Космологистики, который используется для накопление существенного количества энергии в космециевых ядрах.
   suffix: Не маппить!, Космециевая машина
   components:

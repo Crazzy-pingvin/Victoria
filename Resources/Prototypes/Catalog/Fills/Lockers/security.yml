@@ -26,6 +26,7 @@
         amount: 2
       - id: RemoteSignaller
         amount: 2
+      - id: BoxSecurityReservRadio
 
 - type: entity
   id: LockerWardenFilled
@@ -54,6 +55,7 @@
         amount: 2
       - id: RemoteSignaller
         amount: 2
+      - id: BoxSecurityReservRadio
 
 - type: entity
   id: LockerSecurityFilled

@@ -3,11 +3,11 @@ chat-emote-name-coffe = со вкусом пьёт кофеёк
 chat-emote-name-scratches = чешет затылок
 chat-emote-name-cigarette = ищет сигаретку
 chat-emote-name-watch = глядит на часы
-chat-emote-name-warming = потягивает спину
+chat-emote-name-warming = тянет спину
 #--------------------бот ст.снабженец космологистики--------------------
 chat-emote-name-counts = задумчиво считает в уме
 chat-emote-name-listening = внимательно слушает гарнитуру
-chat-emote-name-watching = грозно смотрит в рабочие бумаги
+chat-emote-name-watching = грозно смотрит на документы
 chat-emote-name-grumbles = неразборчиво ворчит в рацию
 chat-emote-name-looks = пристально оглядывает вещи вокруг
 #--------------------бот ремонтник космологистики--------------------
@@ -30,8 +30,8 @@ chat-emote-name-measurement = делает измерения
 # chat-emote-name-checks = проверяет технику
 #--------------------бот мистер Хилл витезтви--------------------
 chat-emote-name-mrHill-cigarette = неторопливо закуривает
-chat-emote-name-mrHill-evaluates = оценивает взгялядом
-chat-emote-name-mrHill-looks = мельком смотрит в планшет
+chat-emote-name-mrHill-evaluates = оценивает взглядом
+chat-emote-name-mrHill-looks = мельком смотрит в КПК
 chat-emote-name-mrHill-listening = с интересом слушает гарнитуру
-chat-emote-name-mrHill-whiskey = делает глотовк из фляги
+chat-emote-name-mrHill-whiskey = делает глоток из фляги
 

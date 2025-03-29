@@ -1609,6 +1609,7 @@
           state: rock_snow_west
         - state: cooper
           sprite: Victoria/Electron/electronic_rock.rsi
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]
           
 - type: entity
   id: WallRockSnowAluminium
@@ -1633,6 +1634,7 @@
           state: rock_snow_west
         - state: aluminium
           sprite: Victoria/Electron/electronic_rock.rsi
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
   id: WallRockSnowBSCrystal

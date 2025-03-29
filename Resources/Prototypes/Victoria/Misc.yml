@@ -1,0 +1,48 @@
+# -----------------------------канал----------------------------------------  
+- type: radioChannel
+  id: SecurityReservRadio
+  name: name-securityreservradio
+  keycode: 'ъ' 
+  frequency: 9876
+  color: "#ff0000"
+  longRange: false
+# -----------------------------ключ----------------------------------------      
+- type: entity
+  parent: EncryptionKeySecurity
+  id: SecurityReservEncryptionKey
+  name: резервный ключ шифрования СБ
+  description: Как и обычный ключ. Но резервный.
+  components:
+  - type: EncryptionKey
+    channels:
+    - SecurityReservRadio
+    defaultChannel: SecurityReservRadio
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: sec_label_reserv 
+# -----------------------------коробка----------------------------------------   
+- type: entity
+  name: коробка резревного шифрования
+  parent: BoxCardboard
+  id: BoxSecurityReservRadio
+  description: коробка с ключами шифрования резервной частоты СБ
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,4,3
+  - type: StorageFill
+    contents:
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+      - id: SecurityReservEncryptionKey
+  - type: Sprite
+    layers:
+      - state: box_medical
