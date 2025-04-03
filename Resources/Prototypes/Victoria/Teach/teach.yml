@@ -96,13 +96,22 @@
 - type: startingGear
   id: CargoTeacherGear
   equipment:
-    jumpsuit: CargoTeacherUniform
-    back: ClothingBackpackCargo
-    shoes: ClothingShoesBootsSalvage
-    head: ClothingHeadHatCargosoft
     id: PDACargoTeacher
     ears: ClothingHeadsetCargo
-    neck: MantelTeacher  
+#-------------------------Лодаут--------------
+- type: roleLoadout
+  id: JobCargoTeacher
+  groups:
+  - Inventory
+  - GroupTankHarness
+  - CargoTeacherJumpsuit
+  - CargoTechnicianBackpack
+  - CargoTechnicianOuterClothing
+  - CargoTeacherShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobCargoTeacher
@@ -229,14 +238,24 @@
 - type: startingGear
   id: EngTeacherGear
   equipment:
-    jumpsuit: EngTeacherUniform
-    back: ClothingBackpackEngineering
-    shoes: ClothingShoesColorBlack
-    head: EngTeacherBeret
+    eyes: ClothingEyesGlassesMeson
     id: PDAEngTeacher
     ears: ClothingHeadsetEngineering
-    neck: MantelTeacher  
     belt: ClothingBeltUtilityEngineering
+#-------------------------Лодаут--------------
+- type: roleLoadout
+  id: JobEngTeacher
+  groups:
+  - Inventory
+  - GroupTankHarness
+  - EngineerTeacherHead
+  - EngineerTeacherJumpsuit
+  - StationEngineerBackpack
+  - StationEngineerOuterClothing
+  - StationEngineerShoes
+  - SurvivalExtended
+  - Trinkets
+  - GroupSpeciesBreathTool
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobEngTeacher
@@ -275,7 +294,7 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SecTeacherUniform
-  name: комбинезон инструктора СБ
+  name: комбинезон инструктора
   suffix: Наставники
   description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет боятся кадетов
   components:
@@ -316,7 +335,7 @@
 - type: entity
   parent: CargoIDCard
   id: SecTeacherIDCard
-  name: ID карта инструктора СБ
+  name: ID карта инструктора
   description: Даёт доступ в бриг и отдел службы безопасности, а также в помещения наставников
   suffix: Наставники
   components:
@@ -331,7 +350,7 @@
 - type: entity
   parent: BasePDA
   id: PDASecTeacher
-  name: КПК инструктора СБ
+  name: КПК инструктора
   suffix: Ведущий
   description: Патриархально простой и крепкий КПК, добротный и преданный
   components:
@@ -347,7 +366,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: SecTeacherCap
-  name: фуражка инструктора СБ
+  name: фуражка инструктора
   suffix: Наставники
   description: Фуражка сотрудника, которая утверждает, что он теперь твой папа, мама и инструктор!
   components:
@@ -363,16 +382,24 @@
 - type: startingGear
   id: SecTeacherGear
   equipment:
-    jumpsuit: SecTeacherUniform
-    back: ClothingBackpackSatchelSecurity
-    shoes: ClothingShoesBootsCowboyBlackFilled
-    head: SecTeacherCap
     id: PDASecTeacher
     ears: ClothingHeadsetSecurity
-    neck: MantelTeacher  
-    belt: ClothingBeltSecurityFilled
-    outerClothing: ClothingOuterArmorBasic
     eyes: ClothingEyesGlassesSecurity
+#-------------------------Лодаут--------------
+- type: roleLoadout
+  id: JobSecTeacher
+  groups:
+  - Inventory
+  - SecurityTeacherHead
+  - SecurityTeacherJumpsuit
+  - SecurityBackpack
+  - SecurityOuterClothing
+  - SecurityShoes
+  - SecurityBelt
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobSecTeacher
@@ -490,7 +517,7 @@
 - type: entity
   parent: ClothingOuterCoatLab
   id: ClothingOuterCoatLabTeacher
-  name: лабораторный халат
+  name: лабораторный халат наставников
   suffix: Наставники
   description: Одевается поверх основной одежды, дабы продемонстрировать статус опытного сотрудника и статус наставника
   components:
@@ -502,13 +529,25 @@
 - type: startingGear
   id: SciTeacherGear
   equipment:
-    jumpsuit: SciTeacherUniform
-    back: ClothingBackpackScience
-    shoes: ClothingShoesColorBlack
     id: PDASciTeacher
-    neck: MantelTeacher  
-    outerClothing: ClothingOuterCoatLabTeacher
     ears: ClothingHeadsetScience
+#-------------------------Лодаут--------------
+- type: roleLoadout
+  id: JobSciTeacher
+  groups:
+  - Inventory
+  - GroupTankHarness
+  - ScientistTeacherHead
+  - ScientistNeck
+  - ScientistTeacherJumpsuit
+  - ScientistBackpack
+  - ScientistTeacherOuterClothing
+  - ScientistTeacherGloves
+  - ScientistTeacherShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobSciTeacher
@@ -610,18 +649,46 @@
     - type: Icon
       sprite: Victoria/Teach/pda_teacher.rsi
       state: pda-scienceteacher
+#-------------------------Берет--------------
+- type: entity
+  parent: ClothingHeadBase
+  id: MedTeacherBeret
+  name: берет медицинского консультанта
+  suffix: Наставники
+  description: При виде этого берета, интерны готовятся к очередному интеллектуальному изнасилованию
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/beret_medic_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/beret_medic_teacher.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
 #-------------------------Гир--------------
 - type: startingGear
   id: MedTeacherGear
   equipment:
-    jumpsuit: MedTeacherUniform
-    back: ClothingBackpackMedical
-    shoes: ClothingShoesColorBlack
     id: PDAMedTeacher
-    neck: MantelTeacher  
-    outerClothing: ClothingOuterCoatLabTeacher
     belt: ClothingBeltMedicalFilled
     ears: ClothingHeadsetMedical
+#-------------------------Лодаут--------------
+- type: roleLoadout
+  id: JobMedTeacher
+  groups:
+  - Inventory
+  - GroupTankHarness
+  - MedicalTeacherHead
+  - MedicalMask
+  - MedicalTeacherJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - MedicalTeacherOuterClothing
+  - MedicalShoes
+  - Glasses
+  - SurvivalMedical
+  - Trinkets
+  - GroupSpeciesBreathToolMedical
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobMedTeacher

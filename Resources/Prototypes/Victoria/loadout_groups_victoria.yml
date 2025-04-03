@@ -1,0 +1,253 @@
+# Бригадир
+
+# Комбинезон
+- type: loadout
+  id: CargoTeacherUniform
+  equipment:
+    jumpsuit: CargoTeacherUniform
+
+- type: loadoutGroup
+  id: CargoTeacherJumpsuit
+  name: Бригадир, комбинезон
+  loadouts:
+  - CargoTeacherUniform
+
+# Обувь
+- type: loadout
+  id: BlackShoes
+  equipment:
+    shoes: BlackShoes
+- type: loadout
+  id: CargoWinterBoots
+  equipment:
+    shoes: CargoWinterBoots
+
+- type: loadoutGroup
+  id: CargoTeacherShoes
+  name: Бригадир, обувь
+  loadouts:
+  - BlackShoes
+  - CargoWinterBoots
+
+# Ведущий инженер
+
+# Голова
+- type: loadout
+  id: ChiefEngineerBeret
+  equipment:
+    head: ChiefEngineerBeret
+- type: loadout
+  id: StationEngineerHardhatYellow
+  equipment:
+    head: StationEngineerHardhatYellow
+- type: loadout
+  id: StationEngineerHardhatOrange
+  equipment:
+    head: StationEngineerHardhatOrange
+- type: loadout
+  id: StationEngineerHardhatRed
+  equipment:
+    head: StationEngineerHardhatRed
+
+- type: loadoutGroup
+  id: EngineerTeacherHead
+  name: Ведущий инженер, голова
+  loadouts:
+  - ChiefEngineerBeret
+  - StationEngineerHardhatYellow
+  - StationEngineerHardhatOrange
+  - StationEngineerHardhatRed
+
+# Комбинезон
+- type: loadout
+  id: EngTeacherUniform
+  equipment:
+    jumpsuit: EngTeacherUniform
+
+- type: loadoutGroup
+  id: EngineerTeacherJumpsuit
+  name: Ведущий инженер, комбинезон
+  loadouts:
+  - EngTeacherUniform
+
+# Инструктор
+
+# Голова
+- type: loadout
+  id: ClothingHeadHatBeretSecurity
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+- type: loadout
+  id: SecTeacherCap
+  equipment:
+    head: SecTeacherCap
+
+- type: loadoutGroup
+  id: SecurityTeacherHead
+  name: Инструктор, голова
+  loadouts:
+  - ClothingHeadHatBeretSecurity
+  - SecTeacherCap
+
+# Комбинезон
+- type: loadout
+  id: SecTeacherUniform
+  equipment:
+    jumpsuit: SecTeacherUniform
+
+- type: loadoutGroup
+  id: SecurityTeacherJumpsuit
+  name: Инструктор, комбинезон
+  loadouts:
+  - SecTeacherUniform
+
+# Доцент
+
+# Голова
+- type: loadout
+  id: ResearchDirectorBeret
+  equipment:
+    head: ResearchDirectorBeret
+
+- type: loadoutGroup
+  id: ScientistTeacherHead
+  name: Доцент, голова
+  loadouts:
+  - ResearchDirectorBeret
+
+# Комбинезон
+- type: loadout
+  id: SciTeacherUniform
+  equipment:
+    jumpsuit: SciTeacherUniform
+
+- type: loadoutGroup
+  id: ScientistTeacherJumpsuit
+  name: Доцент, комбинезон
+  loadouts:
+  - SciTeacherUniform
+
+# Верхняя одежда
+- type: loadout
+  id: ClothingOuterCoatLabTeacher
+  equipment:
+    outerClothing: ClothingOuterCoatLabTeacher
+- type: loadout
+  id: RegularLabCoat
+  equipment:
+    outerClothing: RegularLabCoat
+- type: loadout
+  id: ScienceLabCoat
+  equipment:
+    outerClothing: ScienceLabCoat
+- type: loadout
+  id: ScienceWintercoat
+  equipment:
+    outerClothing: ScienceWintercoat
+
+- type: loadoutGroup
+  id: ScientistTeacherOuterClothing
+  name: Доцент, верхняя одежда
+  loadouts:
+    - ClothingOuterCoatLabTeacher
+    - RegularLabCoat
+    - ScienceLabCoat
+    - ScienceWintercoat
+
+# Перчатки
+- type: loadout
+  id: LatexGloves
+  equipment:
+    gloves: LatexGloves
+- type: loadout
+  id: PurpleGloves
+  equipment:
+    gloves: PurpleGloves
+
+- type: loadoutGroup
+  id: ScientistTeacherGloves
+  name: Доцент, перчатки
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - PurpleGloves
+
+# Обувь
+- type: loadout
+  id: WhiteShoes
+  equipment:
+    shoes: WhiteShoes
+- type: loadout
+  id: ClothingShoesBootsLaceup
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+- type: loadout
+  id: ScienceWinterBoots
+  equipment:
+    shoes: ScienceWinterBoots
+
+- type: loadoutGroup
+  id: ScientistTeacherShoes
+  name: Доцент, обувь
+  loadouts:
+  - ClothingShoesBootsLaceup
+  - WhiteShoes
+  - ScienceWinterBoots
+
+# Медицинский консультант
+
+# Голова
+- type: loadout
+  id: MedTeacherBeret
+  equipment:
+    head: MedTeacherBeret
+- type: loadout
+  id: ClothingHeadHatBeretMedic
+  equipment:
+    head: ClothingHeadHatBeretMedic
+- type: loadout
+  id: ClothingHeadMirror
+  equipment:
+    head: ClothingHeadMirror
+
+- type: loadoutGroup
+  id: MedicalTeacherHead
+  name: Медицинский консультант, голова
+  loadouts:
+  - MedTeacherBeret
+  - ClothingHeadHatBeretMedic
+  - ClothingHeadMirror
+
+# Комбинезон
+- type: loadout
+  id: MedTeacherUniform
+  equipment:
+    jumpsuit: MedTeacherUniform
+
+- type: loadoutGroup
+  id: MedicalTeacherJumpsuit
+  name: Медицинский консультант, комбинезон
+  loadouts:
+  - MedTeacherUniform
+
+# Верхняя одежда
+- type: loadout
+  id: ClothingOuterCoatLabTeacher
+  equipment:
+    outerClothing: ClothingOuterCoatLabTeacher
+- type: loadout
+  id: RegularLabCoat
+  equipment:
+    outerClothing: RegularLabCoat
+- type: loadout
+  id: ClothingOuterWinterMed
+  equipment:
+    outerClothing: ClothingOuterWinterMed
+
+- type: loadoutGroup
+  id: MedicalTeacherOuterClothing
+  name: Медицинский консультант, верхняя одежда
+  loadouts:
+  - ClothingOuterCoatLabTeacher
+  - RegularLabCoat
+  - ClothingOuterWinterMed
