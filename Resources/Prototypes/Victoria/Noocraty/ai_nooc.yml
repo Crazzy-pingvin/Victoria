@@ -193,8 +193,8 @@
     - Whistles
   - type: RandomMetadata
     nameSegments:
-    - NoocName-s
-    - NoocNameTwo
+    - NoocName-niz
+    - NoocNameTwo-niz
   - type: NpcFactionMember
     factions:
       - NoocratyBot
@@ -233,9 +233,12 @@
       path: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserGan
+    shots: 30
+    fireCost: 100
+    capasity: 30
   - type: Battery
-    maxCharge: 30
-    startingCharge: 30
+    maxCharge: 3000
+    startingCharge: 3000
   - type: Gun
     showExamineText: false
     fireRate: 4.5
@@ -243,7 +246,7 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
 #-------------Вооружён ждущий---------------  
 - type: entity
   suffix: Бот, Ноократский, Оруж, стоп
@@ -298,9 +301,12 @@
       path: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserPistol
+    shots: 10
+    fireCost: 100
+    capasity: 10
   - type: Battery
-    maxCharge: 10
-    startingCharge: 10
+    maxCharge: 1000
+    startingCharge: 1000
   - type: Gun
     showExamineText: false
     fireRate: 3.5
@@ -308,7 +314,7 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
 #-------------Вооружён ждущий--------------- 
 - type: entity
   suffix: Бот, Ноократский, Оруж, стоп
