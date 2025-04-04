@@ -12,23 +12,6 @@
   loadouts:
   - CargoTeacherUniform
 
-# Обувь
-- type: loadout
-  id: BlackShoes
-  equipment:
-    shoes: BlackShoes
-- type: loadout
-  id: CargoWinterBoots
-  equipment:
-    shoes: CargoWinterBoots
-
-- type: loadoutGroup
-  id: CargoTeacherShoes
-  name: Бригадир, обувь
-  loadouts:
-  - BlackShoes
-  - CargoWinterBoots
-
 # Ведущий инженер
 
 # Голова
