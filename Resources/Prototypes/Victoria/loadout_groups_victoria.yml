@@ -37,9 +37,6 @@
   name: Ведущий инженер, голова
   loadouts:
   - EngTeacherBeret
-  - StationEngineerHardhatYellow
-  - StationEngineerHardhatOrange
-  - StationEngineerHardhatRed
 
 # Комбинезон
 - type: loadout
