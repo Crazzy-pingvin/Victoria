@@ -100,27 +100,12 @@
   id: ClothingOuterCoatLabTeacher
   equipment:
     outerClothing: ClothingOuterCoatLabTeacher
-- type: loadout
-  id: RegularLabCoat
-  equipment:
-    outerClothing: RegularLabCoat
-- type: loadout
-  id: ScienceLabCoat
-  equipment:
-    outerClothing: ScienceLabCoat
-- type: loadout
-  id: ScienceWintercoat
-  equipment:
-    outerClothing: ScienceWintercoat
 
 - type: loadoutGroup
   id: ScientistTeacherOuterClothing
   name: Доцент, верхняя одежда
   loadouts:
     - ClothingOuterCoatLabTeacher
-    - RegularLabCoat
-    - ScienceLabCoat
-    - ScienceWintercoat
 
 # Перчатки
 - type: loadout
