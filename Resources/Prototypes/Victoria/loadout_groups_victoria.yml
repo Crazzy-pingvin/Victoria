@@ -16,9 +16,9 @@
 
 # Голова
 - type: loadout
-  id: ChiefEngineerBeret
+  id: EngTeacherBeret
   equipment:
-    head: ChiefEngineerBeret
+    head: EngTeacherBeret
 - type: loadout
   id: StationEngineerHardhatYellow
   equipment:
@@ -36,7 +36,7 @@
   id: EngineerTeacherHead
   name: Ведущий инженер, голова
   loadouts:
-  - ChiefEngineerBeret
+  - EngTeacherBeret
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
