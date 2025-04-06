@@ -19,18 +19,6 @@
   id: EngTeacherBeret
   equipment:
     head: EngTeacherBeret
-- type: loadout
-  id: StationEngineerHardhatYellow
-  equipment:
-    head: StationEngineerHardhatYellow
-- type: loadout
-  id: StationEngineerHardhatOrange
-  equipment:
-    head: StationEngineerHardhatOrange
-- type: loadout
-  id: StationEngineerHardhatRed
-  equipment:
-    head: StationEngineerHardhatRed
 
 - type: loadoutGroup
   id: EngineerTeacherHead
