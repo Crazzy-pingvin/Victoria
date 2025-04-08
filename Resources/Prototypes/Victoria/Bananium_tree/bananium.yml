@@ -1,0 +1,36 @@
+- type: seed
+  id: bananiumSeed
+  name: бананиум
+  noun: seeds-noun-seeds
+  displayName: куст бананиума
+  plantRsi: Victoria/Bananium_tree/bananium.rsi
+  packetPrototype: BananiumSeeds
+  productPrototypes:
+    - MaterialBananium1
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 2
+  idealLight: 9
+  waterConsumption: 0.60
+  idealHeat: 298
+  chemicals:
+    Honk:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Nutriment:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 50
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (бананиум)
+  id: BananiumSeeds
+  components:
+    - type: Seed
+      seedId: bananiumSeed
+    - type: Sprite
+      sprite: Victoria/Bananium_tree/bananium.rsi
