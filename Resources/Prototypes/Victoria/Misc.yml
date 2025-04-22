@@ -26,7 +26,7 @@
   name: коробка резревного шифрования
   parent: BoxCardboard
   id: BoxSecurityReservRadio
-  description: коробка с ключами шифрования резервной частоты СБ
+  description: Коробка с ключами шифрования резервной частоты СБ
   components:
   - type: Storage
     maxItemSize: Small

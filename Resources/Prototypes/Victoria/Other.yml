@@ -29,7 +29,7 @@
   components:
     - type: GhostRole
       name: Качующий психолог
-      description: Вы путешествует с подвижной клонирующей установкой и врачом-генетиком. Помогите клонируемым пережить первый шок. 
+      description: Вы путешествуете с подвижной клонирующей установкой и врачом-генетиком. Помогите клонируемым пережить первый шок. 
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short

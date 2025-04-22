@@ -304,7 +304,7 @@
   parent: CrystalOreBase
   id: SapphireCircuitBord
   name: сапфирная плата
-  description: Нарезанная метализированная плата для производства полноценной электронной платы.
+  description: Нарезанная металлизированная плата для производства полноценной электронной платы.
   suffix: Электроника, Full
   components:
   - type: Stack
@@ -357,7 +357,7 @@
   parent: SapphireCircuitBord
   id: PlazСeramicsCircuitBord
   name: плазкерамовая плата
-  description: Нарезанная метализированная плата для производства полноценной электронной платы.
+  description: Нарезанная металлизированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
     stackType: PlazСeramicsCircuitBord
@@ -404,7 +404,7 @@
   parent: SapphireCircuitBord
   id: SiСeramicsCircuitBord
   name: кремнекерамовая плата
-  description: Нарезанная метализированная плата для производства полноценной электронной платы.
+  description: Нарезанная металлизированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
     stackType: SiСeramicsCircuitBord
@@ -451,7 +451,7 @@
   parent: SapphireCircuitBord
   id: FiberglassCircuitBord
   name: стеклотекстолитная плата
-  description: Нарезанная метализированная плата для производства полноценной электронной платы.
+  description: Нарезанная металлизированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
     stackType: FiberglassCircuitBord
@@ -498,7 +498,7 @@
   parent: SapphireCircuitBord
   id: GethinaxCircuitBord
   name: гетинаксная плата
-  description: Нарезанная метализированная плата для производства полноценной электронной платы.
+  description: Нарезанная металлизированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
     stackType: GethinaxCircuitBord
@@ -545,7 +545,7 @@
   parent: SapphireCircuitBord
   id: SiPlazCircuitBord
   name: кремнеплазовая плата
-  description: Нарезанная метализированная плата для производства полноценной электронной платы.
+  description: Нарезанная металлизированная плата для производства полноценной электронной платы.
   components:
   - type: Stack
     stackType: SiPlazCircuitBord

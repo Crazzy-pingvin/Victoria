@@ -31,7 +31,7 @@
   parent: BaseItem
   id: PetrDeclarationOfWar
   name: Декларатор войны
-  description: Объявите всем, что петрищевцы начинают новый терракт! Тогда другие подпольные ячейки проспонсируют вас.
+  description: Объявите всем, что петрищевцы начинают новый теракт! Тогда другие подпольные ячейки проспонсируют вас.
   components:
     - type: Sprite
       sprite: Objects/Devices/declaration_of_war.rsi
@@ -109,7 +109,7 @@
   name: Специалист Петрищевец
   antagonist: true
   setPreference: true
-  objective: Уничтожте всех глав, сотрудников безопасности и учёных НТ, делая упор на технические средства.
+  objective: Уничтожьте всех глав, сотрудников безопасности и учёных НТ, делая упор на технические средства.
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 61200  

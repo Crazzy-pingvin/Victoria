@@ -323,7 +323,7 @@
   parent: BaseMobFlesh
   id: ToxiLeech
   name: токсиявка
-  description: Мелкая гадкая аморфная сущность состаящая из сгущёного токсина. Кусает не то чтобы больно, но тут же вкалывает токсин.
+  description: Мелкая гадкая аморфная сущность сгущённого из сгущёного токсина. Кусает не то чтобы больно, но тут же вкалывает токсин.
   components:
   - type: Sprite
     sprite: Victoria/Toxi/toxi_monsters.rsi

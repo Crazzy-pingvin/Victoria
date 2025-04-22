@@ -20,7 +20,7 @@
   id: MachineCircuitboardCosmScanner
   parent: CrystalOreBase
   name: плата редспейс сканера
-  description: Электронная плата для системы управления космециевым сканнером.
+  description: Электронная плата для системы управления космециевым сканером.
   suffix: Космециевая машина
   components:
     - type: Sprite
@@ -43,7 +43,7 @@
   id: CosmScannerBase
   parent: BaseStructureDynamic
   name: основа редспейс сканера
-  description: Все основные системы космециевого сканера распологаются тут, но не хватает верхнего силового модуля.
+  description: Все основные системы космециевого сканера располагаются тут, но не хватает верхнего силового модуля.
   suffix: Не маппить!, Космециевая машина
   categories: [ HideSpawnMenu ]
   components:
@@ -100,7 +100,7 @@
   id: CosmScanner
   parent: BaseMachine
   name: редспейс сканер
-  description: Крупный сканер разработанный NanoTrasen, который используется для накопление существенного количества энергии в космециевых ядрах.
+  description: Крупный сканер разработанный NanoTrasen, который используется для накопления существенного количества энергии в космециевых ядрах.
   suffix: Не маппить!, Космециевая машина
   components:
     - type: AmbientSound

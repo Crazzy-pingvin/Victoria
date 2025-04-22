@@ -73,7 +73,7 @@
   suffix: Срочность
   parent: BoxCardboard
   id: BoxSrochRubberStamp
-  description: Коробка с штампами срочности
+  description: Коробка со штампами срочности
   components:
   - type: Storage
     maxItemSize: Small
