@@ -89,6 +89,7 @@
     - FoodBanana
   mutationPrototypes:
     - mimana
+    - bananiumSeed
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
