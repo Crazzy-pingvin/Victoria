@@ -460,7 +460,7 @@
     content: |
       [color=#800000]░░░░░░█░░░█░░░░░░[/color]
       [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
-      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]VITZ[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
       [color=#800000]░░░░░███████░░░░░[/color]
       [color=#800000]░░░░░░░███░░░░░░░[/color]
       =============================================
@@ -489,7 +489,7 @@
     content: |
       [color=#800000]░░░░░░█░░░█░░░░░░[/color]
       [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
-      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]VITZ[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
       [color=#800000]░░░░░███████░░░░░[/color]
       [color=#800000]░░░░░░░███░░░░░░░[/color]
       =============================================
@@ -531,7 +531,7 @@
     content: |
       [color=#800000]░░░░░░█░░░█░░░░░░[/color]
       [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
-      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]VITZ[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
       [color=#800000]░░░░░███████░░░░░[/color]
       [color=#800000]░░░░░░░███░░░░░░░[/color]
       =============================================
@@ -562,6 +562,34 @@
       
                                   [italic]Место для печатей[/italic]
 
+#Анекдот
+- type: entity
+  id: HoundPaperAnecdote
+  name: Дурацкий анекдот
+  suffix: Хаунд
+  parent: Paper
+  components:
+  - type: Paper
+    content: |
+      [color=#800000]░░░░░░█░░░█░░░░░░[/color]
+      [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
+      [color=#800000]░░░░░███████░░░░░[/color]
+      [color=#800000]░░░░░░░███░░░░░░░[/color]
+      Идёт Утилизатор по коридору, а навстречу ему- клоун.
+      Красноносый протянул работяге бумажку, и сказал:
+      Не смотри, а покажи первому встречному. И был таков.
+      Показал он это рандомному ассистуху- тот перекрестился и удалился.
+      Утиль пожал плечами и пошёл к КМу, показал бумагу а тот-
+      Орёт, пиздит его консолью заказов и вышвиривает из отдела. Ну, уволили его.
+      Пошёл наш новообразованный ассистент в бар. Показал бармену-
+      Тот ружьё достал, да чуть не пристрелил, благо успел мимом прикрыться.
+      Пошёл он дальше в СБ, пожаловаться на бармена. Те спросили что у него в бумаге было, шо бармен так взбесился, он показал.
+      Одного офицера схватил инфаркт на месте, остальные скрутили его и посадили в перму по всем статьям КЗ.
+      Прилетел он на ЦК, начался суд. Бумагу отняли и показали судье. Тот лишь завопил- "КАЗНИТЬ!" И тотчас же упал замертво.
+      Выкинули его в космос. Увидел как культисты Ратвара призывали своего божка, попутно отбиваясь от ОБР. Решил наш герой подождать, да показать появившемуся божеству бумагу.
+      После этого он оказался в темноте. Не в космосе, но и не в редспейсе. Решил он посмотреть на саму бумагу.
+      А там воксы в нарды играют.
 #-------------------------------------печать-----------------      
 - type: entity
   name: печать корпорации The Hound
@@ -578,6 +606,20 @@
     sprite: Victoria/Hound/Misc/hnd_stamp.rsi
     state: stamp
 #Оборудование и прочее
+#Коробка
+- type: entity
+  parent: BoxCardboard
+  id: HoundBox
+  name: Пепельно-красная коробка
+  suffix: Хаунд
+  description: Коробка светлого тускло-красного цвета. Выглядит прочной.
+  components:
+  - type: Sprite
+    sprite: Victoria/Hound/Misc/hnd_box.rsi
+  - type: Storage
+    grid: 
+    - 0,0,4,4
+    maxItemSize: Normal
 #Мачете
 - type: entity
   name: Полимерное мачете
@@ -594,12 +636,69 @@
     attackRate: 1.3
     damage:
       types:
-        Slash: 18
+        Slash: 17
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
     sprite: Victoria/Hound/Weapons/machete.rsi
   - type: DisarmMalus
+#Нож-бабочка
+- type: entity
+  name: Нож-бабочка Хаунд.
+  suffix: Хаунд
+  parent: [BaseKnife, BaseRestrictedContraband]
+  id: HoundButterflyKnife
+  description: Жутковатая выкидуха. Внутри есть наполянемый инжектор для всякой дряни.
+  components:
+  - type: Tag
+    tags:
+    - CombatKnife
+    - Knife
+  - type: Sprite
+    sprite: Victoria/Hound/Weapons/knife.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 2
+    damage:
+      types:
+        Slash: 13
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    offset: -0.15,0.0
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 15
+  - type: Item
+    sprite: Victoria/Hound/Weapons/knife.rsi
+    size: Tiny
+    shape:
+    - 0,0,1,0
+    # storedSprite:
+      # state: storage
+      # sprite: Victoria/Hound/Weapons/knife.rsi
+  - type: DisarmMalus
+    malus: 0.225
+  - type: ThrowingAngle
+    angle: 225
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 10
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 3
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionInjectOnEmbed
+    transferAmount: 5
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 5
 #Монитор
 - type: entity
   name: Монитор экипажа Хаунд
@@ -1555,6 +1654,19 @@
       - id: OxygenTankFilled
       - id: HoundMachete
 #Аплинковые
+#Ящик с одеждой
+- type: entity
+  parent: HoundBox
+  id: HoundBoxFilledClothes
+  suffix: Хаунд, Одежда
+  components:
+  - type: StorageFill
+    contents:
+      - id: HoundUniformOper
+      - id: HoundGloves
+      - id: HoundBoots
+      - id: HoundOperCap
+      - id: HoundPaperAnecdote
 #Дешовый с пайком
 - type: entity
   parent: HoundBackpack
@@ -2300,6 +2412,16 @@
     HoundChip_currency: 1
   categories:
   - HoundUplinkArmor
+
+- type: listing
+  id: HoundClothingBoxClothes
+  name: Униформа Хаунд.
+  description: Униформа, изолированные перчатки, удобные ботинки, а также фирменные кепка и анекдот! Не забудьте избавиться от ненужных вещиц.
+  productEntity: HoundBoxFilledClothes
+  cost:
+    HoundChip_currency: 3
+  categories:
+  - HoundUplinkArmor
 #------категория вооружение----------
 - type: listing
   id: HoundHeavyPistol
@@ -2328,6 +2450,16 @@
   productEntity: HoundMachete
   cost:
     HoundChip_currency: 2
+  categories:
+  - HoundUplinkWeaponry
+
+- type: listing
+  id: HoundButterflyKnife
+  name: Нож-бабочка.
+  description: Маленький, но тоже страшный нож. Внутри имеется инжектор на 10u, постепенно вспрыскиваемых при ударах.
+  productEntity: HoundButterflyKnife
+  cost:
+    HoundChip_currency: 6
   categories:
   - HoundUplinkWeaponry
 
