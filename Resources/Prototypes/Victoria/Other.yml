@@ -111,8 +111,7 @@
   - name: bounty-item-fusemine
     amount: 10
     whitelist:
-      components:
-      - FuseMine
+      - id: FuseMine
       
 - type: cargoBounty
   id: Plastid
@@ -122,8 +121,7 @@
   - name: bounty-item-plastid
     amount: 15
     whitelist:
-      components:
-      - Plastid
+      - id: Plastid
 
 - type: cargoBounty
   id: SiPlazCircuitBord
@@ -133,8 +131,7 @@
   - name: bounty-item-siplazcircuitbord
     amount: 10
     whitelist:
-      components:
-      - SiPlazCircuitBord
+      - id: SiPlazCircuitBord
 
 - type: cargoBounty
   id: Gethinax
@@ -144,8 +141,7 @@
   - name: bounty-item-gethinax
     amount: 1
     whitelist:
-      components:
-      - Gethinax
+      - id: Gethinax
       
 - type: cargoBounty
   id: SiCrystall
@@ -155,8 +151,7 @@
   - name: bounty-item-sicrystall
     amount: 1
     whitelist:
-      components:
-      - SiCrystall
+      - id: SiCrystall
 
 - type: cargoBounty
   id: Telecrystal
@@ -166,8 +161,7 @@
   - name: bounty-item-telecrystal
     amount: 3
     whitelist:
-      components:
-      - Telecrystal
+      - id: Telecrystal
       
 - type: cargoBounty
   id: BSModule
@@ -177,5 +171,4 @@
   - name: bounty-item-bsmodule
     amount: 4
     whitelist:
-      components:
-      - BSModule
+      - id: BSModule
