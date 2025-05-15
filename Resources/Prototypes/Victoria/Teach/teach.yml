@@ -215,7 +215,7 @@
   id: EngTeacherBeret
   name: берет ведущего инженера
   suffix: Наставники
-  description: Берет действиетельно опытного и заслуженного инженера
+  description: Берет действительно опытного и заслуженного инженера
   components:
   - type: Sprite
     sprite: Victoria/Teach/beret_engineering_teacher.rsi
@@ -277,7 +277,7 @@
   id: SecTeacherUniform
   name: комбинезон инструктора СБ
   suffix: Наставники
-  description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет боятся кадетов
+  description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет бояться кадетов
   components:
   - type: Sprite
     sprite: Victoria/Teach/uniform_security_teacher.rsi
@@ -420,7 +420,7 @@
   id: SciTeacherUniform
   name: комбинезон доцента
   suffix: Наставники
-  description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет боятся кадетов
+  description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет бояться кадетов
   components:
   - type: Sprite
     sprite: Victoria/Teach/uniform_scientist_teacher.rsi

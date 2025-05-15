@@ -114,7 +114,7 @@
   parent: CableStack
   id: CordStack
   name: шнур
-  description: Хороший и прочный шнур. Внимание, производитель не несёт ответсвенности за отсутвие табурета и мыла!
+  description: Хороший и прочный шнур. Внимание, производитель не несёт ответственности за отсутствие табурета и мыла!
   suffix: Full
   components:
   - type: Sprite
@@ -311,7 +311,7 @@
   id: CrateSensitizer
   parent: CrateGenericSteel
   name: ящик с сенсибилизатором
-  description: Ну, само по себе оно безавредно, конечно... Потому ящик и без доступа.
+  description: Ну, само по себе оно безвредно, конечно... Потому ящик и без доступа.
   components:
     - type: StorageFill
       contents:
@@ -321,7 +321,7 @@
 - type: cargoProduct
   id: CrateSensitizer
   name: ящик с сенсибилизатором
-  description: Ну, само по себе оно безавредно, конечно... Потому ящик и без доступа.
+  description: Ну, само по себе оно безвредно, конечно... Потому ящик и без доступа.
   icon:
     sprite: Structures/Wallmounts/signs.rsi
     state: explosives
@@ -397,7 +397,7 @@
   parent: CrystalOreBase
   id: Plastid
   name: пластид
-  description: Мягкая субстанция палевого или зеленоватого цвета. Можно спутать с хлебным мякишом или солёным тестом. НЕ ЖРАТЬ! НЕ РОНЯТЬ! НЕ ГРЕТЬ!
+  description: Мягкая субстанция палевого или зеленоватого цвета. Можно спутать с хлебным мякишем или солёным тестом. НЕ ЖРАТЬ! НЕ РОНЯТЬ! НЕ ГРЕТЬ!
   components:
   - type: Item
     size: Small
@@ -437,7 +437,7 @@
   parent: CrystalOreBase
   id: PicePlastid
   name: кусочек пластида
-  description: Кусочек мягкой субстанции палевого или зеленоватого цвета. Можно спутать с хлебным мякишом или солёным тестом. НЕ ЖРАТЬ! НЕ РОНЯТЬ! НЕ ГРЕТЬ!
+  description: Кусочек мягкой субстанции палевого или зеленоватого цвета. Можно спутать с хлебным мякишем или солёным тестом. НЕ ЖРАТЬ! НЕ РОНЯТЬ! НЕ ГРЕТЬ!
   components:
   - type: Item
     size: Tiny
@@ -665,7 +665,7 @@
   startNode: start
   targetNode: FuseMine
   category: construction-category-materials
-  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрыватель. Можно даже ронять. НЕ КОЛОТЬ ОРЕХИ!
+  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрывателя. Можно даже ронять. НЕ КОЛОТЬ ОРЕХИ!
   icon: { sprite: Victoria/Bomb/part_mine.rsi, state: fuse }
   objectType: Item
 #---------------------лат-------------------------------
@@ -743,7 +743,7 @@
   startNode: start
   targetNode: MicroBomb
   category: construction-category-materials
-  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрыватель. Можно даже ронять. НЕ КОЛИТЕ ИМ, ЧЕРТ ВОЗЬМИ, ОРЕХИ!
+  description: Округлый корпус начинённый взрывчаткой. Безопасный без взрывателя. Можно даже ронять. НЕ КОЛИТЕ ИМ, ЧЕРТ ВОЗЬМИ, ОРЕХИ!
   icon: { sprite: Victoria/Bomb/microbomb.rsi, state: icon }
   objectType: Item
 #----------------------------------------------------структуры-------------------------------------
