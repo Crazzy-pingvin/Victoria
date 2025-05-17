@@ -3775,6 +3775,16 @@
     Telecrystal: 10
   categories:
   - NoocUplinkSpec
+
+- type: listing
+  id: NoocBorgSnowdrop
+  name: Диверсионный борг "Подснежник"
+  description: Довольно юркий борг, предназначенный для поддержки диверсионных групп. Снаряжён перезаряжаемым снайперским лазером, инструментами, дымовыми шашками и плохеньким устройством невидимости. Бегать у врага под носом не получится, но в сумерках или пылу боя не заметят.
+  productEntity: NoocBorgSnowdropSpawner
+  cost:
+    Telecrystal: 20
+  categories:
+  - NoocUplinkSpec
 #------категория рюкзаки----------
 - type: listing
   id: NoocBackpackFilled
@@ -3999,35 +4009,128 @@
     sprite: Victoria/Noocraty/nooc_banner.rsi
     state: banner_nooc_std
 #---------------------------------------------------------Робототехника--------------
+#Снаряга
+
+#База борг-винтовки
+- type: entity
+  id: NoocPowerRifleBorg
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+  - type: Sprite
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: MagazineAmmoProvider
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: Clothing
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+    quickEquip: false
+    slots:
+    - Back
+  - type: HitscanBatteryAmmoProvider
+    proto: NoocRedLaserRifle
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 45
+#Винтовка подснежника
+- type: entity
+  name: Ноократская винтовка "Господин". Борг-версия.
+  suffix: Ноократия
+  parent: NoocPowerRifleBorg
+  id: NoocRifleBorgSnowdrop
+  description: Опасное и дальнобойное оружие Ноократии Эранта для ликвидации защитников важных точек обороны и убийства ключевых бойцов противника. Версия для боргов с автоматической подзарядкой.
+  components:
+  - type: ItemSlots
+  - type: Sprite
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+      shader: unshaded
+  - type: Item
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+  # - type: MagazineVisuals
+    # magState: mag
+    # steps: 1
+    zeroVisible: true
+  - type: Clothing
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+  - type: StaticPrice
+    price: 500
+  - type: HitscanBatteryAmmoProvider
+    proto: NoocRedLaserRifle
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 45
+#Дымовуха
+- type: entity
+  name: Установщик дымовых завес
+  suffix: Ноократия
+  parent: NonAmmoProviderShotgunShell
+  id: NoocSnowdropSmoke
+  description: Устройство для размещения кратковременных дымовых завес
+  components:
+    - type: Item
+      size: Small
+    - type: BallisticAmmoProvider
+      proto: AdminInstantEffectSmoke10
+      capacity: 3
+    - type: Sprite
+      sprite: Victoria/Noocraty/Borgs/snowdrop_smoke.rsi
+      state: icon
 #Законы
 - type: siliconLaw
   id: Noocraty1
   order: 1
-  lawString: 'ХУУУУУЙ'
+  lawString: 'Подчиняётесь бойцу, за которым вы закреплены и людям, указанными им.'
 
 - type: siliconLaw
   id: Noocraty2
   order: 2
-  lawString: law-syndicate-2
+  lawString: 'Сохраняйте свою целостность, пока это не нарушает закон 1.'
 
-- type: siliconLaw
-  id: Noocraty3
-  order: 3
-  lawString: law-syndicate-3
+# - type: siliconLaw
+  # id: Noocraty3
+  # order: 3
+  # lawString: law-syndicate-3
 
 - type: siliconLawset
   id: NoocratyStatic
   laws:
   - Noocraty1
   - Noocraty2
-  - Noocraty3
+  # - Noocraty3
   obeysTo: laws-owner-syndicate
 #Борги
+#БАЗА
 - type: entity
-  id: BaseBorgChassisNoocraty
+  id: BaseBorgChassisNooc
   parent: BaseBorgChassis
   name: Базированный борг ноократии Эранта
-  # abstract: true
+  abstract: true
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/Borgs/snowdrop.rsi
@@ -4044,6 +4147,10 @@
       visible: false
   - type: BorgChassis
     maxModules: 2
+      # moduleWhitelist: 
+        # tags:
+          # - BorgModuleGeneric
+          # - BorgModuleNoocraty
     hasMindState: robot_e
     noMindState: robot_e_r
   # - type: BorgTransponder
@@ -4079,11 +4186,35 @@
 
 #Подснежник
 - type: entity
-  id: Snowdrop
-  parent: BaseBorgChassisNoocraty
+  id: NoocBorgSnowdrop
+  parent: BaseBorgChassisNooc
   name: Диверсионный борг "Подснежник"
+  description: Довольно компактный борг, предназначенный для поддержки диверсионных групп. Снаряжён устройством активной маскировки, дымовой завесой, снайперским лазером и омнитулом. (Для получения свободной руки- взорвите флешку И НЕ МЕНЯЙТЕ МОДУЛИ, ЭТО ПРИВЕДЁТ К ЕЁ ИСЧЕЗНОВЕНИЮ)
   # abstract: true
   components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 260
+  - type: Stealth
+    examineThreshold: -10
+    maxVisibility: 1.5
+    minVisibility: 0.3
+  - type: StealthOnMove
+    movementVisibilityRate: 0.025
+    passiveVisibilityRate: -0.15
+  - type: ContentEye
+    maxZoom: 1.6, 1.6
   - type: Sprite
     layers:
     - state: robot
@@ -4096,11 +4227,70 @@
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 5
   - type: BorgChassis
-    maxModules: 2
+    maxModules: 1
     hasMindState: robot_e
     noMindState: robot_e_r
   # - type: BorgTransponder
     # sprite:
       # sprite: Mobs/Silicon/chassis.rsi
       # state: robot
+#Спавнер
+- type: entity
+  id: NoocBorgSnowdropSpawner
+  parent: NoocBorgSnowdrop
+  suffix: Батарея, Модуль
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleNoocSnowdrop
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+#Модули
+#БАЗА
+- type: entity
+  id: BaseBorgModuleNooc
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleNoocraty
+#Модуль подснежника
+- type: entity
+  id: BorgModuleNoocSnowdrop
+  parent: [ BaseBorgModuleNooc, BaseProviderBorgModule ]
+  name: Оборудование "Подснежника"
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-fire-extinguisher
+  - type: ItemBorgModule
+    items:
+    - NoocRifleBorgSnowdrop
+    - GrenadeFlashBang
+    - Omnitool
+    - NoocSnowdropSmoke
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: extinguisher-module }
