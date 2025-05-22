@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------низкий класс---------- 
+#------------------------------------низкий класс----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: NoocUniformNiz
@@ -11,7 +11,7 @@
     sprite: Victoria/Noocraty/Equipment/nooc_uniform_niz.rsi
   - type: Clothing
     sprite: Victoria/Noocraty/Equipment/nooc_uniform_niz.rsi
-#------------------------------------высокий класс----------     
+#------------------------------------высокий класс----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: NoocUniformVis
@@ -23,7 +23,7 @@
     sprite: Victoria/Noocraty/Equipment/nooc_uniform_vis.rsi
   - type: Clothing
     sprite: Victoria/Noocraty/Equipment/nooc_uniform_vis.rsi
-#------------------------------------средний класс----------     
+#------------------------------------средний класс----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: NoocUniformSr
@@ -36,7 +36,7 @@
   - type: Clothing
     sprite: Victoria/Noocraty/Equipment/nooc_uniform_sr.rsi
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
-#------------------------------------рюкзак---------- 
+#------------------------------------рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: NoocBackpack
@@ -49,7 +49,7 @@
   - type: Storage
     grid:
     - 0,0,6,4
-#------------------------------------плечевая сумка---------- 
+#------------------------------------плечевая сумка----------
 - type: entity
   parent: ClothingBackpack
   id: NoocSatchels
@@ -59,7 +59,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/Equipment/nooc_satchels.rsi
-#------------------------------------сапоги---------- 
+#------------------------------------сапоги----------
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: NoocBoots
@@ -71,7 +71,7 @@
     sprite: Victoria/Noocraty/Equipment/nooc_boots.rsi
   - type: Clothing
     sprite: Victoria/Noocraty/Equipment/nooc_boots.rsi
-#------------------------------------шлем---------- 
+#------------------------------------шлем----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: NoocHelmet
@@ -84,7 +84,7 @@
   - type: Clothing
     sprite: Victoria/Noocraty/Armor/nooc_helmet.rsi
   - type: ShowJobIcons
-#------------------------------------беретка---------- 
+#------------------------------------беретка----------
 - type: entity
   parent: ClothingHeadBase
   id: NoocBeret
@@ -101,7 +101,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------фуражка---------- 
+#------------------------------------фуражка----------
 - type: entity
   parent: ClothingHeadBase
   id: NoocCap
@@ -119,17 +119,17 @@
     - WhitelistChameleon
   - type: ShowJobIcons
   - type: ShowCriminalRecordIcons
-#------------------------------------Офицерский плащ---------- 
+#------------------------------------Офицерский плащ----------
 - type: entity
   parent: ClothingNeckBase
   id: NoocCloak
-  name: Ноократский офицерский плащ 
+  name: Ноократский офицерский плащ
   suffix: Ноократия
   description: Плащ, который носят офицеры высокого класса Ноократии Эрана. Просто пижонской кусок ткани. Ничего больше.
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/Equipment/nooc_cloak.rsi
-#------------------------------------Маскировочный плащ----------     
+#------------------------------------Маскировочный плащ----------
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseToggleClothing, BaseMajorContraband]
   id: NoocCloakStelth
@@ -162,7 +162,7 @@
     drawRate: 0
   - type: ToggleCellDraw
   - type: UseDelay
-    delay: 5 
+    delay: 5
   - type: PowerCellSlot
     cellSlotId: cell_slot
     fitsInCharger: false
@@ -175,7 +175,7 @@
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSmall
         disableEject: true
-#------------------------------------армейские перчатки---------- 
+#------------------------------------армейские перчатки----------
 - type: entity
   parent: ClothingHandsBase
   id: NoocGlovesFingerless
@@ -190,7 +190,7 @@
   - type: Fiber
     fiberMaterial: fibers-synthetic
     fiberColor: fibers-black
-#------------------------------------перчатки высокого класса----------     
+#------------------------------------перчатки высокого класса----------
 - type: entity
   parent: ClothingHandsGlovesColorYellow
   id: NoocGlovesVis
@@ -206,7 +206,7 @@
   - type: Fiber
     fiberMaterial: fibers-durathread
     fiberColor: fibers-regal-blue
-#------------------------------------перчатки среднего класса----------     
+#------------------------------------перчатки среднего класса----------
 - type: entity
   parent: ClothingHandsGlovesColorYellow
   id: NoocGlovesSr
@@ -222,7 +222,7 @@
   - type: Fiber
     fiberMaterial: fibers-durathread
     fiberColor: fibers-blue
-#------------------------------------лёгкий броник----------     
+#------------------------------------лёгкий броник----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: NoocArmorBasic
@@ -234,16 +234,16 @@
     sprite: Victoria/Noocraty/Armor/nooc_armor.rsi
   - type: Clothing
     sprite: Victoria/Noocraty/Armor/nooc_armor.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
-        Piercing: 0.65 
+        Piercing: 0.65
         Heat: 0.65
   - type: ExplosionResistance
     damageCoefficient: 0.90
-#------------------------------------броня----------     
+#------------------------------------броня----------
 - type: entity
   parent: ClothingOuterBaseMedium
   id: NoocArmorMiddle
@@ -266,7 +266,7 @@
         Caustic: 0.6
   - type: ExplosionResistance
     damageCoefficient: 0.80
-#------------------------------------скафандр среднего класса----------      
+#------------------------------------скафандр среднего класса----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: NoocHardsuit
@@ -295,7 +295,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: NoocHelmetHardsuit
-#------------------------------------шлем скафандра среднего класса----------  
+#------------------------------------шлем скафандра среднего класса----------
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: NoocHelmetHardsuit
@@ -322,7 +322,7 @@
         Caustic: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.8
-#------------------------------------скафандровый экран----------      
+#------------------------------------скафандровый экран----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: NoocHardsuitField
@@ -352,7 +352,7 @@
   - type: PointLight
     color: "#00f0fb"
     radius: 1.5
-#------------------------------------шлем скафандрового экрана----------  
+#------------------------------------шлем скафандрового экрана----------
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: NoocHelmetHardsuitField
@@ -373,8 +373,8 @@
         Heat: 0.1
         Radiation: 0.1
   - type: ExplosionResistance
-    damageCoefficient: 0.8  
-#------------------------------------скафандр дозера----------      
+    damageCoefficient: 0.8
+#------------------------------------скафандр дозера----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: NoocHardsuitDozer
@@ -406,7 +406,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: NoocHelmetHardsuitDozer
-#------------------------------------шлем скафандра дозера----------  
+#------------------------------------шлем скафандра дозера----------
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: NoocHelmetHardsuitDozer
@@ -450,14 +450,14 @@
           Slash: 0.65
           Caustic: 0.9
           Poison: 0.9
-          Piercing: 0.65 
+          Piercing: 0.65
       activeBlockModifier:
         coefficients:
           Blunt: 0.5
           Slash: 0.5
           Caustic: 0.8
           Poison: 0.8
-          Piercing: 0.5 
+          Piercing: 0.5
         flatReductions:
           Blunt: 1
           Slash: 1
@@ -486,9 +486,9 @@
     - Biological
   - type: ShowHealthIcons
     damageContainers:
-    - Biological    
-#------------------------------------пояса---------- 
-#-----------------------боевой---------- 
+    - Biological
+#------------------------------------пояса----------
+#-----------------------боевой----------
 - type: entity
   parent: ClothingBeltStorageBase
   id: NoocBelt
@@ -517,7 +517,7 @@
       - id: Wirecutter
       - id: Welder
       - id: Multitool
-#-----------------------медицинский---------- 
+#-----------------------медицинский----------
 - type: entity
   parent: ClothingBeltStorageBase
   id: NoocBeltMed
@@ -548,7 +548,7 @@
       - id: Brutepack
 #-------------------------------------оружее-------------------------------------------------------------------------------
 #-------------------------------------лазер--------------------------------------------------------------
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 - type: hitscan
   id: NoocRedLaserRifle
   damage:
@@ -563,7 +563,7 @@
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: impact_beam_heavy
-#------------------------------------автомат----------         
+#------------------------------------автомат----------
 - type: hitscan
   id: NoocRedLaserGan
   damage:
@@ -571,14 +571,14 @@
       Heat: 17
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_laser 
+    state: muzzle_laser
   travelFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: beam
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_laser 
-#------------------------------------пистолет---------- 
+    state: impact_laser
+#------------------------------------пистолет----------
 - type: hitscan
   id: NoocRedLaserPistol
   damage:
@@ -589,11 +589,11 @@
     state: impact_beam_heavy
   travelFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: bolt 
+    state: bolt
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_laser    
-#------------------------------------пулемёт---------- 
+    state: impact_laser
+#------------------------------------пулемёт----------
 - type: hitscan
   id: NoocRedLaserMG
   damage:
@@ -604,11 +604,11 @@
     state: impact_laser
   travelFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: bolt  
+    state: bolt
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_laser    
-#------------------------------------холод---------- 
+    state: impact_laser
+#------------------------------------холод----------
 - type: hitscan
   id: NoocColdLaser
   staminaDamage: 15
@@ -623,7 +623,7 @@
     state: beam_omni
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_omni 
+    state: impact_omni
 #-----------------пули-инъекторы------------
 #-----------------механ------------
 - type: entity
@@ -645,7 +645,7 @@
         Piercing: -10
         Blunt: -10
         Slash: -10
-#-----------------тепло------------        
+#-----------------тепло------------
 - type: entity
   id: NoocBulletHilHeat
   name: Инжектор противовоспалитель
@@ -664,7 +664,7 @@
       types:
         Heat: -10
         Cold: -10
-#-----------------рад------------        
+#-----------------рад------------
 - type: entity
   id: NoocBulletHilRadi
   name: Инжектор антирад
@@ -704,7 +704,7 @@
   - type: Tag
     tags:
       - NoocCartridgeHilMech
-#-----------------тепло------------      
+#-----------------тепло------------
 - type: Tag
   id: NoocCartridgeHilHeat
 
@@ -724,7 +724,7 @@
   - type: Tag
     tags:
       - NoocCartridgeHilHeat
-#-----------------рад------------      
+#-----------------рад------------
 - type: Tag
   id: NoocCartridgeHilRadi
 
@@ -744,7 +744,7 @@
   - type: Tag
     tags:
       - NoocCartridgeHilRadi
-#-----------------наполняемый------------      
+#-----------------наполняемый------------
 - type: Tag
   id: NoocCartridgeHillEmpty
 
@@ -796,10 +796,10 @@
   - type: SolutionTransfer
     maxTransferAmount: 10
   - type: Item
-    size: Tiny 
+    size: Tiny
   - type: Tag
     tags:
-      - NoocCartridgeHillEmpty     
+      - NoocCartridgeHillEmpty
   - type: EmbeddableProjectile
     sound: /Audio/Weapons/star_hit.ogg
     embedOnThrow: false
@@ -833,9 +833,9 @@
   - type: Sprite
     layers:
       - state: box_medical # Corvax-Resprite
-      - state: syringe  
+      - state: syringe
 #-------------------------------------Оружейные батареи---------------------------------------------------------------------------------
-#-----------------------------------стандарт--------- 
+#-----------------------------------стандарт---------
 - type: entity
   id: NoocBasePowerCell
   abstract: true
@@ -872,9 +872,9 @@
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserRifle
     fireCost: 1
-#-----------------------------------винтовочная---------     
+#-----------------------------------винтовочная---------
 - type: Tag
-  id: NoocPowerCellOne  
+  id: NoocPowerCellOne
 
 - type: entity
   name: Батарея первого уровня (Винт)
@@ -895,12 +895,12 @@
     startingCharge: 10
   - type: Tag
     tags:
-      - NoocPowerCellOne  
+      - NoocPowerCellOne
   - type: HitscanBatteryAmmoProvider
-    proto: NoocRedLaserRifle      
-#-----------------------------------автоматная--------- 
+    proto: NoocRedLaserRifle
+#-----------------------------------автоматная---------
 - type: Tag
-  id: NoocPowerCellThree 
+  id: NoocPowerCellThree
 
 - type: entity
   name: Батарея третьего уровня (Авт)
@@ -921,12 +921,12 @@
     startingCharge: 30
   - type: Tag
     tags:
-      - NoocPowerCellThree 
+      - NoocPowerCellThree
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserGan
-#-----------------------------------пистолетная--------- 
+#-----------------------------------пистолетная---------
 - type: Tag
-  id: NoocPowerCellTwo 
+  id: NoocPowerCellTwo
 
 - type: entity
   name: Батарея второго уровня (Пист)
@@ -950,9 +950,9 @@
       - NoocPowerCellTwo
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserPistol
-#-----------------------------------пулемётная---------     
+#-----------------------------------пулемётная---------
 - type: Tag
-  id: NoocPowerCellFour  
+  id: NoocPowerCellFour
 
 - type: entity
   name: Батарея четвёртого уровня (Пул)
@@ -973,13 +973,13 @@
     startingCharge: 80
   - type: Tag
     tags:
-      - NoocPowerCellFour  
+      - NoocPowerCellFour
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserMG
 #-----------------магазины лечилки------------------
 #--------механ---------
 - type: Tag
-  id: NoocMagazineCureRifleMech 
+  id: NoocMagazineCureRifleMech
 
 - type: entity
   id: NoocMagazineCureRifleMech
@@ -1005,7 +1005,7 @@
   - type: Tag
     tags:
       - NoocMagazineCureRifleMech
-#--------тепло---------      
+#--------тепло---------
 - type: Tag
   id: NoocMagazineCureRifleHeat
 
@@ -1033,7 +1033,7 @@
   - type: Tag
     tags:
       - NoocMagazineCureRifleHeat
-#--------рад---------      
+#--------рад---------
 - type: Tag
   id: NoocMagazineCureRifleRadi
 
@@ -1088,8 +1088,8 @@
       map: ["enum.GunVisualLayers.Base"]
   - type: Tag
     tags:
-      - NoocMagazineCureRifleEmpty     
-#-----------------------------------хладопушковая--------- 
+      - NoocMagazineCureRifleEmpty
+#-----------------------------------хладопушковая---------
 - type: Tag
   id: NoocPowerCellCold
 
@@ -1146,7 +1146,7 @@
             - NoocPowerCellOne
             - NoocPowerCellTwo
             - NoocPowerCellThree
-            - NoocPowerCellFour 
+            - NoocPowerCellFour
   - type: Appearance
   - type: StaticPrice
     price: 500
@@ -1184,7 +1184,7 @@
     sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
   - type: StaticPrice
     price: 500
-#------------------------------------автомат----------     
+#------------------------------------автомат----------
 - type: entity
   id: NoocPowerGan
   parent: BaseItem
@@ -1214,7 +1214,7 @@
             - NoocPowerCellOne
             - NoocPowerCellTwo
             - NoocPowerCellThree
-            - NoocPowerCellFour 
+            - NoocPowerCellFour
   - type: Appearance
   - type: StaticPrice
     price: 500
@@ -1252,7 +1252,7 @@
     sprite: Victoria/Noocraty/Weapon/nooc_laser_gun.rsi
   - type: StaticPrice
     price: 500
-#------------------------------------пистолет----------   
+#------------------------------------пистолет----------
 - type: entity
   id: NoocPowerPistol
   parent: BaseItem
@@ -1281,7 +1281,7 @@
             - NoocPowerCellOne
             - NoocPowerCellTwo
             - NoocPowerCellThree
-            - NoocPowerCellFour 
+            - NoocPowerCellFour
   - type: Appearance
   - type: StaticPrice
     price: 250
@@ -1319,7 +1319,7 @@
     sprite: Victoria/Noocraty/Weapon/nooc_laser_pistol.rsi
   - type: StaticPrice
     price: 250
-#------------------------------------пулемёт----------   
+#------------------------------------пулемёт----------
 - type: entity
   id: NoocPowerMG
   parent: BaseItem
@@ -1345,7 +1345,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: NoocPowerCellFour 
+        startingItem: NoocPowerCellFour
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         whitelist:
@@ -1387,7 +1387,7 @@
     price: 750
 #-----------------лечилко-ствол---------------------
 - type: Tag
-  id: NoocCureRifle 
+  id: NoocCureRifle
 
 - type: entity
   name: Ноократская винтовка "Боготворец"
@@ -1451,8 +1451,8 @@
     price: 750
   - type: Tag
     tags:
-      - NoocCureRifle 
-#------------------------------------хладопушка----------     
+      - NoocCureRifle
+#------------------------------------хладопушка----------
 - type: entity
   id: NoocPowerGanCold
   parent: BaseItem
@@ -1516,9 +1516,9 @@
   - type: Clothing
     sprite: Victoria/Noocraty/Weapon/nooc_cold_gun.rsi
   - type: StaticPrice
-    price: 500           
-#-----------------------------------------------------роли------------------------------------------------------      
-#------------------------------------высокий класс---------- 
+    price: 500
+#-----------------------------------------------------роли------------------------------------------------------
+#------------------------------------высокий класс----------
 - type: playTimeTracker
   id: JobEventNoocVis
 
@@ -1554,7 +1554,7 @@
     neck: NoocCloak
     pocket1: NoocPaperVis
     pocket2: NoocRubberStamp
-#------------------------------------средний класс---------- 
+#------------------------------------средний класс----------
 - type: playTimeTracker
   id: JobEventNoocSr
 
@@ -1588,7 +1588,7 @@
       - id: Gauze
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
-      
+
 - type: entity
   parent: NoocBackpack
   id: NoocBackpackFilledRifle
@@ -1606,7 +1606,7 @@
       - id: Gauze
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
-      
+
 - type: entity
   parent: NoocBackpack
   id: NoocBackpackFilledMG
@@ -1674,7 +1674,7 @@
     belt: NoocBelt
     gloves: NoocGlovesSr
     pocket1: NoocPaperSr
-    
+
 - type: startingGear
   id: NoocSrMedGear
   equipment:
@@ -1689,7 +1689,7 @@
     belt: NoocBeltMedFilled
     gloves: NoocGlovesSr
     pocket1: NoocPaperSr
-    
+
 - type: startingGear
   id: NoocSrTechGear
   equipment:
@@ -1703,7 +1703,7 @@
     belt: NoocBeltEngFilled
     gloves: ClothingHandsGlovesColorYellow
     pocket1: NoocPaperSr
-    
+
 - type: startingGear
   id: NoocSrScoGear
   equipment:
@@ -1718,7 +1718,7 @@
     neck: NoocCloakStelth
     gloves: NoocGlovesSr
     pocket1: NoocPaperSr
-    
+
 - type: startingGear
   id: NoocSrDozGear
   equipment:
@@ -1731,7 +1731,7 @@
     belt: NoocBelt
     gloves: NoocGlovesSr
     pocket1: NoocPaperSr
-#------------------------------------низкий класс---------- 
+#------------------------------------низкий класс----------
 - type: playTimeTracker
   id: JobEventNoocNiz
 
@@ -1909,7 +1909,7 @@
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------высокий класс----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocVisR
@@ -1952,7 +1952,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: ноократский высокий класс Спавнер
   id: NoocMobHumanVis
@@ -1975,7 +1975,7 @@
     settings: NoocVisR
 #---------------------------------средний класс----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocSrR
@@ -2018,7 +2018,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: Ноократской средний класс Спавнер
   id: NoocMobHumanSr
@@ -2040,7 +2040,7 @@
     settings: NoocSrR
 #---------------------------------средний класс медик----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocSrMedR
@@ -2083,7 +2083,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: Ноократской медик средний класс Спавнер
   id: NoocMobHumanSrMed
@@ -2099,13 +2099,13 @@
     - NoocName-sr
     - NoocNameTwo-sr
   - type: RandomHumanoidSpawner
-    settings: NoocSrMedR    
+    settings: NoocSrMedR
   - type: NpcFactionMember
     factions:
       - Noocraty
 #---------------------------------средний класс техник----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocSrTechR
@@ -2148,7 +2148,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: спавнер ноократского техника среднего класса
   id: NoocMobHumanSrTech
@@ -2164,13 +2164,13 @@
     - NoocName-sr
     - NoocNameTwo-sr
   - type: RandomHumanoidSpawner
-    settings: NoocSrTechR    
+    settings: NoocSrTechR
   - type: NpcFactionMember
     factions:
       - Noocraty
 #---------------------------------средний класс разведчик----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocSrScoR
@@ -2213,7 +2213,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: спавнер ноократского разведчика среднего класса
   id: NoocMobHumanSrSco
@@ -2229,13 +2229,13 @@
     - NoocName-sr
     - NoocNameTwo-sr
   - type: RandomHumanoidSpawner
-    settings: NoocSrScoR    
+    settings: NoocSrScoR
   - type: NpcFactionMember
     factions:
       - Noocraty
 #---------------------------------средний класс дозер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocSrDozR
@@ -2278,7 +2278,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: спавнер ноократского дозера среднего класса
   id: NoocMobHumanSrDoz
@@ -2294,13 +2294,13 @@
     - NoocName-sr
     - NoocNameTwo-sr
   - type: RandomHumanoidSpawner
-    settings: NoocSrDozR    
+    settings: NoocSrDozR
   - type: NpcFactionMember
     factions:
       - Noocraty
 #---------------------------------низкий класс----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: NoocNizR
@@ -2343,7 +2343,7 @@
     - type: NpcFactionMember
       factions:
         - Noocraty
-  
+
 - type: entity
   name: Ноократский низкий класс Спавнер
   id: NoocMobHumanNiz
@@ -2418,13 +2418,13 @@
       Ваши навыки: Базовые навыки, Владение оружием, Готовка, Разделка туш
       Руководство к отыгрышу: У ноократов развита культура правильного академического языка. Стоит строить полные предложения, без сокращений, жаргона или упрощённых слов. Допускаются перегруженные формулировки. В Ноократии Эранта граждане делятся на 15 классов по уровню интеллекта. 15 классов делятся на 5 категорий по три: высшие, высокие, средние, низкие, низшие. Более низкие классы подчиняются более высоким. Более высокие обычно пренебрежительно относятся к более низким. Граждан других госудраств ноократы так же делят на условные внешние классы. Командование и учёные - внешний высокий класс. Инженеры, квалифицированные сотрудники - внешний средний класс. Младшие сотрудники и сервис - низкий класс.
       Краткий лор государства: Ноократия Эранта бескровно отделилась от Объединённого Правительства Земли на условиях союза, научного сотрудничества и совместной обороны. Она построила классовое общество на основе теста, проверяющего талант, интеллектуальные  способности, обучаемость, способность действовать и применять знания в критических ситуациях и так далее. Впоследствии, высшие классы стали купающимися в роскоши богачами и правителями. Высокие стали руководителями, командирами и иного рода управленцами. Средние стали хорошим квалифицированным персоналом. Низкие были пригодны для выполнения простой не требующей особых навыков рутинной и скучной или опасной работы. Низшие стали бедными, пригодные лишь для самой непотребной и грязной работы. Развился культ почитания и раболепствия перед теми, кто классом выше или презрения по отношению к тем, кто ниже. Именно из-за этого Умпорская Федерация подняла кровавое восстание и отделилась. Ноократия презирает умпорцев, считая их неотёсанными дикарями и всячески старается их покорять, порабощать, ослаблять, уничтожать, желая вернуть их сектора под свои знамёна.
-#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: NoocAccess
   name: access-nooc
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsNoocAccess
@@ -2444,7 +2444,7 @@
       board: [ DoorElectronicsNoocAccess ]
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock.rsi
-#------------------------------------свободный шлюз---------- 
+#------------------------------------свободный шлюз----------
 - type: entity
   parent: Airlock
   id: NoocAirlock
@@ -2453,7 +2453,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock.rsi
-#------------------------------------закрытый стеклянный шлюз---------- 
+#------------------------------------закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: NoocAirlockLockedGlass
@@ -2466,7 +2466,7 @@
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock_glass.rsi
   - type: PaintableAirlock
-    group: Glass     
+    group: Glass
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -2477,9 +2477,9 @@
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock_glass.rsi
   - type: PaintableAirlock
-    group: Glass    
-#------------------------------------------КПК, карты----------------------------------------  
-#------------------------------------стандарт карты---------- 
+    group: Glass
+#------------------------------------------КПК, карты----------------------------------------
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: NoocIDCard
@@ -2506,7 +2506,7 @@
     - WhitelistChameleon
   - type: StealTarget
     stealGroup: IDCard
-#------------------------------------карта высокого класса---------- 
+#------------------------------------карта высокого класса----------
 - type: entity
   parent: NoocIDCard
   id: NoocIDCardVis
@@ -2523,7 +2523,7 @@
     - External
   - type: PresetIdCard
     name: ноократский выс.класс
-#------------------------------------карта среднего класса----------    
+#------------------------------------карта среднего класса----------
 - type: entity
   parent: NoocIDCard
   id: NoocIDCardSr
@@ -2540,7 +2540,7 @@
     - External
   - type: PresetIdCard
     name: ноократский ср.класс
-#------------------------------------карта низкого класса----------     
+#------------------------------------карта низкого класса----------
 - type: entity
   parent: NoocIDCard
   id: NoocIDCardNiz
@@ -2557,7 +2557,7 @@
     - External
   - type: PresetIdCard
     name: ноократский низ.класс
-#------------------------------------стандарт КПК---------- 
+#------------------------------------стандарт КПК----------
 - type: entity
   abstract: true
   parent: BasePDA
@@ -2581,7 +2581,7 @@
   - type: Icon
     sprite: Victoria/Noocraty/Equipment/nooc_pda.rsi
     state: pda
-#------------------------------------КПК высокого класса----------    
+#------------------------------------КПК высокого класса----------
 - type: entity
   parent: NoocPDA
   id: NoocPDAVis
@@ -2595,7 +2595,7 @@
     - type: Icon
       sprite: Victoria/Noocraty/Equipment/nooc_pda.rsi
       state: pda
-#------------------------------------КПК среднего класса----------       
+#------------------------------------КПК среднего класса----------
 - type: entity
   parent: NoocPDA
   id: NoocPDASr
@@ -2609,7 +2609,7 @@
     - type: Icon
       sprite: Victoria/Noocraty/Equipment/nooc_pda.rsi
       state: pda
-#------------------------------------КПК низкого класса----------       
+#------------------------------------КПК низкого класса----------
 - type: entity
   parent: NoocPDA
   id: NoocPDANiz
@@ -2623,16 +2623,16 @@
     - type: Icon
       sprite: Victoria/Noocraty/Equipment/nooc_pda.rsi
       state: pda
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: NoocRadio
   name: name-of-NoocRadio
-  keycode: 'нэ' 
+  keycode: 'нэ'
   frequency: 1551
   color: "#44b69d"
   longRange: true
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -2650,7 +2650,7 @@
     sprite: Victoria/Noocraty/Equipment/nooc_encryption_keys.rsi
   - type: StealTarget
     stealGroup: EncryptionKey
-#-----------------------------ключ----------------------------------------      
+#-----------------------------ключ----------------------------------------
 - type: entity
   parent: NoocBaseEncryptionKey
   id: NoocEncryptionKey
@@ -2665,8 +2665,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label 
-#-----------------------------гарнитура----------------------------------------  
+    - state: label
+#-----------------------------гарнитура----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: NoocHeadset
@@ -2681,7 +2681,7 @@
     sprite: Victoria/Noocraty/Equipment/nooc_garniture.rsi
   - type: Clothing
     sprite: Victoria/Noocraty/Equipment/nooc_garniture.rsi
-#------------------------------------------Зарядники оружейных батарей----------------------------------------  
+#------------------------------------------Зарядники оружейных батарей----------------------------------------
 #-----------------------------плата----------------------
 - type: entity
   id: NoocCellRechargerCircuitboard
@@ -2746,7 +2746,7 @@
             - PotatoBattery
 #-----------------------------Гигабатарея----------------------
 - type: Tag
-  id: NoocPowerCellFive 
+  id: NoocPowerCellFive
 
 - type: entity
   name: Батарея пятого уровня
@@ -2771,8 +2771,8 @@
     tags:
       - NoocPowerCellFive
   - type: HitscanBatteryAmmoProvider
-    proto: NoocRedLaserMG   
-#---------------------------------------------------------------Печать------------------------------------------------------------      
+    proto: NoocRedLaserMG
+#---------------------------------------------------------------Печать------------------------------------------------------------
 - type: entity
   name: Печать Ноократии Эранта
   suffix: Ноократия
@@ -2786,8 +2786,8 @@
   - type: Sprite
     sprite: Victoria/Noocraty/Equipment/nooc_stamp.rsi
     state: stamp
-#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------        
-#-----------------------------Базовый ящик------------------ 
+#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------
+#-----------------------------Базовый ящик------------------
 - type: entity
   parent: CrateBaseSecure
   id: NoocCrate
@@ -2800,7 +2800,7 @@
     sprite: Victoria/Noocraty/nooc_crates.rsi
   - type: AccessReader
     access: [["NoocAccess"]]
-#-----------------------------Ящик оружия------------------    
+#-----------------------------Ящик оружия------------------
 - type: entity
   id: NoocCrateWeapons
   parent: NoocCrate
@@ -2826,7 +2826,7 @@
       - id: NoocGan
       - id: NoocPistol
       - id: NoocPistol
-#-----------------------------Ящик пулемётов------------------    
+#-----------------------------Ящик пулемётов------------------
 - type: entity
   id: NoocCrateWeaponsMG
   parent: NoocCrate
@@ -2837,12 +2837,12 @@
   - type: StorageFill
     contents:
       - id: NoocMG
-      - id: NoocMG   
       - id: NoocMG
       - id: NoocMG
       - id: NoocMG
-      - id: NoocMG   
-#-----------------------------Ящик лечаших винтовок------------------    
+      - id: NoocMG
+      - id: NoocMG
+#-----------------------------Ящик лечаших винтовок------------------
 - type: entity
   id: NoocCrateWeaponsCure
   parent: NoocCrate
@@ -2853,14 +2853,14 @@
   - type: StorageFill
     contents:
       - id: NoocCureRifle
-      - id: NoocCureRifle   
+      - id: NoocCureRifle
       - id: BoxNoocMagazineCureRifle
-      - id: BoxNoocMagazineCureRifle   
+      - id: BoxNoocMagazineCureRifle
       - id: NoocMagazineCureRifleHeat
-      - id: NoocMagazineCureRifleHeat  
+      - id: NoocMagazineCureRifleHeat
       - id: NoocMagazineCureRifleRadi
-      - id: NoocMagazineCureRifleRadi       
-#-----------------------------Ящик боеприпасов------------------ 
+      - id: NoocMagazineCureRifleRadi
+#-----------------------------Ящик боеприпасов------------------
 - type: entity
   id: NoocCrateAmmo
   parent: NoocCrate
@@ -2890,7 +2890,7 @@
       - id: NoocPowerCellTwo
       - id: NoocPowerCellFour
       - id: NoocPowerCellFive
-#-----------------------------Ящик военной формы------------------ 
+#-----------------------------Ящик военной формы------------------
 - type: entity
   id: NoocCrateForm
   parent: NoocCrate
@@ -2928,7 +2928,7 @@
       - id: NoocBeret
       - id: NoocBeret
       - id: NoocBeret
-#-----------------------------Ящик офицерской формы------------------ 
+#-----------------------------Ящик офицерской формы------------------
 - type: entity
   id: NoocCrateOffiForm
   parent: NoocCrate
@@ -2952,7 +2952,7 @@
       - id: NoocSatchels
       - id: NoocCloak
       - id: NoocCloak
-#-----------------------------Ящик брони------------------ 
+#-----------------------------Ящик брони------------------
 - type: entity
   id: NoocCrateArmor
   parent: NoocCrate
@@ -2979,7 +2979,7 @@
       - id: NoocArmorBasic
       - id: NoocArmorBasic
       - id: NoocArmorBasic
-#----------------------------------------Техфаб и Портного автомата----------------------------- 
+#----------------------------------------Техфаб и Портного автомата-----------------------------
 #-----------------------------Рецепты техфаба---------------------------
 #-------------------Батареи-------------
 - type: latheRecipe
@@ -2990,7 +2990,7 @@
   materials:
     Steel: 300
     Plastic: 100
-    
+
 - type: latheRecipe
   id: NoocPowerCellThree
   result: NoocPowerCellThree
@@ -2999,7 +2999,7 @@
   materials:
     Steel: 200
     Plastic: 100
-    
+
 - type: latheRecipe
   id: NoocPowerCellTwo
   result: NoocPowerCellTwo
@@ -3008,7 +3008,7 @@
   materials:
     Steel: 100
     Plastic: 100
-    
+
 - type: latheRecipe
   id: NoocPowerCellFour
   result: NoocPowerCellFour
@@ -3017,7 +3017,7 @@
   materials:
     Steel: 400
     Plastic: 100
-    
+
 - type: latheRecipe
   id: NoocPowerCellFive
   result: NoocPowerCellFive
@@ -3026,7 +3026,7 @@
   materials:
     Steel: 500
     Plastic: 100
-#-------------------Плата зарядника------------- 
+#-------------------Плата зарядника-------------
 - type: latheRecipe
   id: NoocCellRechargerCircuitboard
   result: NoocCellRechargerCircuitboard
@@ -3035,22 +3035,22 @@
     Steel: 50
     Plastic: 100
     Gold: 50
-#-------------------мед-хим визор------------- 
+#-------------------мед-хим визор-------------
 - type: latheRecipe
   id: NoocGlassesMed
   result: NoocGlassesMed
   completetime: 2
   materials:
     Steel: 150
-    Gold: 50    
-#-------------------ID-карты-------------    
+    Gold: 50
+#-------------------ID-карты-------------
 - type: latheRecipe
   id: NoocIDCardVis
   result: NoocIDCardVis
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100      
+    Plastic: 100
 
 - type: latheRecipe
   id: NoocIDCardSr
@@ -3058,16 +3058,16 @@
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100 
-    
+    Plastic: 100
+
 - type: latheRecipe
   id: NoocIDCardNiz
   result: NoocIDCardNiz
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100 
-#-------------------КПК-------------    
+    Plastic: 100
+#-------------------КПК-------------
 - type: latheRecipe
   id: NoocPDAVis
   result: NoocPDAVis
@@ -3075,7 +3075,7 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200 
+    Plastic: 200
 
 - type: latheRecipe
   id: NoocPDASr
@@ -3084,8 +3084,8 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200 
-    
+    Plastic: 200
+
 - type: latheRecipe
   id: NoocPDANiz
   result: NoocPDANiz
@@ -3093,15 +3093,15 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200     
-#-------------------Радиосвязь-------------  
+    Plastic: 200
+#-------------------Радиосвязь-------------
 - type: latheRecipe
   id: NoocEncryptionKey
   result: NoocEncryptionKey
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 50  
+    Plastic: 50
 
 - type: latheRecipe
   id: NoocHeadset
@@ -3109,8 +3109,8 @@
   completetime: 6
   materials:
     Steel: 100
-    Plastic: 100  
-#-------------------Оружие-------------  
+    Plastic: 100
+#-------------------Оружие-------------
 - type: latheRecipe
   id: NoocRifle
   result: NoocRifle
@@ -3118,8 +3118,8 @@
   completetime: 6
   materials:
     Steel: 400
-    Plastic: 500 
-    
+    Plastic: 500
+
 - type: latheRecipe
   id: NoocGan
   result: NoocGan
@@ -3127,8 +3127,8 @@
   completetime: 6
   materials:
     Steel: 500
-    Plastic: 500 
-    
+    Plastic: 500
+
 - type: latheRecipe
   id: NoocPistol
   result: NoocPistol
@@ -3136,8 +3136,8 @@
   completetime: 3
   materials:
     Steel: 300
-    Plastic: 200 
-    
+    Plastic: 200
+
 - type: latheRecipe
   id: NoocMG
   result: NoocMG
@@ -3145,8 +3145,8 @@
   completetime: 8
   materials:
     Steel: 800
-    Plastic: 600 
-    
+    Plastic: 600
+
 - type: latheRecipe
   id: NoocShieldStd
   result: NoocShieldStd
@@ -3156,7 +3156,7 @@
     Steel: 1000
     Plastic: 100
 #-----------------------------Рецепты Портного автомата---------------------------
-#-------------------Форма------------- 
+#-------------------Форма-------------
 - type: latheRecipe
   id: NoocUniformNiz
   result: NoocUniformNiz
@@ -3177,22 +3177,22 @@
   completetime: 3
   materials:
     Cloth: 300
-#-------------------Рюкзак------------- 
+#-------------------Рюкзак-------------
 - type: latheRecipe
   id: NoocBackpack
   result: NoocBackpack
   completetime: 2
   materials:
     Cloth: 200
-    
+
 - type: latheRecipe
   id: NoocSatchels
   result: NoocSatchels
   completetime: 2
   materials:
-    Cloth: 100 
-    Durathread: 100    
-#-------------------Шапка и плащ------------- 
+    Cloth: 100
+    Durathread: 100
+#-------------------Шапка и плащ-------------
 - type: latheRecipe
   id: NoocCap
   result: NoocCap
@@ -3213,17 +3213,17 @@
   completetime: 1
   materials:
     Durathread: 100
-    Cloth: 300 
-    
+    Cloth: 300
+
 - type: latheRecipe
   id: NoocCloakStelth
   result: NoocCloakStelth
   completetime: 3
   materials:
     Durathread: 100
-    Cloth: 300  
+    Cloth: 300
     Gold: 100
-#-------------------Пояса------------- 
+#-------------------Пояса-------------
 - type: latheRecipe
   id: NoocBelt
   result: NoocBelt
@@ -3231,7 +3231,7 @@
   materials:
     Cloth: 100
     Durathread: 100
-#-------------------Броня------------- 
+#-------------------Броня-------------
 - type: latheRecipe
   id: NoocArmorBasic
   result: NoocArmorBasic
@@ -3257,7 +3257,7 @@
   materials:
     Durathread: 100
     Steel: 300
-    
+
 - type: latheRecipe
   id: NoocHardsuitField
   result: NoocHardsuitField
@@ -3266,7 +3266,7 @@
     Durathread: 200
     Steel: 100
     Gold: 100
-#-----------------------------Техфаб------------------ 
+#-----------------------------Техфаб------------------
 - type: entity
   id: NoocTechFab
   parent: BaseLathe
@@ -3324,7 +3324,7 @@
         - Sheet
         - RawMaterial
         - Ingot
-#-----------------------------Швейник------------------        
+#-----------------------------Швейник------------------
 - type: entity
   parent: BaseLathe
   id: NoocmUniformPrinter
@@ -3384,16 +3384,16 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
+
       Дата:
       Составитель документа:
       Должность составителя:
-      
-      
+
+
       Полное содержание документа со всей необходимой информацией и описанием
-      
+
       =============================================
-      
+
                                   [italic]Место для печатей[/italic]
 #-----------------------------------аплинк--------------------------------
 #-----------------категории в аплинке------------
@@ -3411,26 +3411,26 @@
   id: NoocUplinkAmmo
   name: Боезапас
   priority: 2
- 
+
 - type: storeCategory
   id: NoocUplinkElectronic
   name: Электроника
-  priority: 3 
-  
+  priority: 3
+
 - type: storeCategory
   id: NoocUplinkSpec
   name: Специалистам
-  priority: 4 
-  
+  priority: 4
+
 - type: storeCategory
   id: NoocUplinkBack
   name: Рюкзаки
-  priority: 5 
-  
+  priority: 5
+
 - type: storeCategory
   id: NoocUplinkMed
   name: Мед.средства
-  priority: 6 
+  priority: 6
 #-----------------листинг покупок------------
 #------категория броня----------
 #---бронь и шмот---
@@ -3493,7 +3493,7 @@
     Telecrystal: 6
   categories:
   - NoocUplinkArmor
-#---скафы--- 
+#---скафы---
 - type: listing
   id: NoocHardsuitField
   name: Личный атмосферный щит
@@ -3503,7 +3503,7 @@
     Telecrystal: 6
   categories:
   - NoocUplinkArmor
-  
+
 - type: listing
   id: NoocHardsuit
   name: Скафандр
@@ -3512,7 +3512,7 @@
   cost:
     Telecrystal: 12
   categories:
-  - NoocUplinkArmor  
+  - NoocUplinkArmor
 #------категория вооружение----------
 - type: listing
   id: NoocPistol
@@ -3634,7 +3634,7 @@
     Telecrystal: 2
   categories:
   - NoocUplinkAmmo
-  
+
 - type: listing
   id: NoocMagazineCureRifleHeat
   name: Магазин к инжекторной винтовке (тепло и холод)
@@ -3644,7 +3644,7 @@
     Telecrystal: 2
   categories:
   - NoocUplinkAmmo
-  
+
 - type: listing
   id: NoocMagazineCureRifleRadi
   name: Магазин к инжекторной винтовке (радиация)
@@ -3654,7 +3654,7 @@
     Telecrystal: 2
   categories:
   - NoocUplinkAmmo
-  
+
 - type: listing
   id: NoocMagazineCureRifleEmpty
   name: Магазин к инжекторной винтовке (наполняемые)
@@ -3664,7 +3664,7 @@
     Telecrystal: 3
   categories:
   - NoocUplinkAmmo
-  
+
 - type: listing
   id: NoocPowerCellCold
   name: Батарея холода
@@ -3694,7 +3694,7 @@
     Telecrystal: 3
   categories:
   - NoocUplinkElectronic
-  
+
 - type: listing
   id: NoocIDCardSr
   name: ID-карта ноократского военного среднего класса
@@ -3704,7 +3704,7 @@
     Telecrystal: 3
   categories:
   - NoocUplinkElectronic
-  
+
 - type: listing
   id: NoocEncryptionKey
   name: Ноократский ключ шифрования
@@ -3714,7 +3714,7 @@
     Telecrystal: 3
   categories:
   - NoocUplinkElectronic
-  
+
 - type: listing
   id: Emag
   name: Криптографический секвенсор
@@ -3723,7 +3723,7 @@
   cost:
     Telecrystal: 6
   categories:
-  - NoocUplinkElectronic  
+  - NoocUplinkElectronic
 
 - type: listing
   id: NoocGlassesMed
@@ -3733,8 +3733,8 @@
   cost:
     Telecrystal: 6
   categories:
-  - NoocUplinkElectronic  
-  
+  - NoocUplinkElectronic
+
 - type: listing
   id: HandheldStationMapUnpowered
   name: Карта станции
@@ -3743,7 +3743,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - NoocUplinkElectronic 
+  - NoocUplinkElectronic
 #------категория специалистам----------
 #---вещички---
 - type: listing
@@ -3765,7 +3765,7 @@
     Telecrystal: 7
   categories:
   - NoocUplinkSpec
-  
+
 - type: listing
   id: NoocBeltMedFilled
   name: Пояс специалиста-подрывника
@@ -3775,20 +3775,30 @@
     Telecrystal: 10
   categories:
   - NoocUplinkSpec
+
+- type: listing
+  id: NoocBorgSnowdrop
+  name: Диверсионный борг "Подснежник"
+  description: Довольно юркий борг, предназначенный для поддержки диверсионных групп. Снаряжён перезаряжаемым снайперским лазером, инструментами, дымовыми шашками и плохеньким устройством невидимости. Бегать у врага под носом не получится, но в сумерках или пылу боя не заметят.
+  productEntity: NoocBorgSnowdropSpawner
+  cost:
+    Telecrystal: 20
+  categories:
+  - NoocUplinkSpec
 #------категория рюкзаки----------
 - type: listing
   id: NoocBackpackFilled
-  name: Рюкзак с пайком 
+  name: Рюкзак с пайком
   description: Базовое жизнеобеспечение
   productEntity: NoocBackpackFilled
   cost:
     Telecrystal: 2
   categories:
   - NoocUplinkBack
-  
+
 - type: listing
   id: NoocBackpackPassengerFilled
-  name: Рюкзак НТ с пайком 
+  name: Рюкзак НТ с пайком
   description: Базовое жизнеобеспечение в стандартном рюкзаке НТ, но с ключом шифрования Ноократии
   productEntity: NoocBackpackPassengerFilled
   cost:
@@ -3815,7 +3825,7 @@
     Telecrystal: 14
   categories:
   - NoocUplinkBack
-  
+
 - type: listing
   id: NoocBackpackFilledRifle
   name: Боевой рюкзак с лазерной винтовкой
@@ -3824,7 +3834,7 @@
   cost:
     Telecrystal: 18
   categories:
-  - NoocUplinkBack  
+  - NoocUplinkBack
 
 - type: listing
   id: NoocBackpackFilledMG
@@ -3865,7 +3875,7 @@
     Telecrystal: 3
   categories:
   - NoocUplinkMed
-  
+
 - type: listing
   id: NoocEmergencyMedipen
   name: Экстренный медипен
@@ -3875,7 +3885,7 @@
     Telecrystal: 3
   categories:
   - NoocUplinkMed
-  
+
 - type: listing
   id: NoocBrutepack
   name: Набор для лечения травм
@@ -3885,7 +3895,7 @@
     Telecrystal: 1
   categories:
   - NoocUplinkMed
-  
+
 - type: listing
   id: NoocOintment
   name: Лечебная мазь
@@ -3895,7 +3905,7 @@
     Telecrystal: 1
   categories:
   - NoocUplinkMed
-  
+
 - type: listing
   id: NoocNocturineChemistryBottle
   name: Бутылочка ноктюрина
@@ -3905,7 +3915,7 @@
     Telecrystal: 4
   categories:
   - NoocUplinkMed
-  
+
 - type: listing
   id: NoocClothingBackpackDuffelSyndicateMedicalBundleFilled
   name: Медицинский набор
@@ -3970,7 +3980,7 @@
   - type: Tag
     tags:
     - NukeOpsUplink
-#-----------------имплант аплинк с бабками------------    
+#-----------------имплант аплинк с бабками------------
 - type: entity
   parent: [ BaseSubdermalImplant, NoocBaseUplinkRadio40TC ]
   id: NoocUplinkImplant
@@ -3987,7 +3997,7 @@
     interfaces:
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
-#------------------------знамя------------------  
+#------------------------знамя------------------
 - type: entity
   id: NoocBannerStd
   parent: BannerBase
@@ -3997,4 +4007,290 @@
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_banner.rsi
-    state: banner_nooc_std 
+    state: banner_nooc_std
+#---------------------------------------------------------Робототехника--------------
+#Снаряга
+
+#База борг-винтовки
+- type: entity
+  id: NoocPowerRifleBorg
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+  - type: Sprite
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: MagazineAmmoProvider
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: Clothing
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+    quickEquip: false
+    slots:
+    - Back
+  - type: HitscanBatteryAmmoProvider
+    proto: NoocRedLaserRifle
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 45
+#Винтовка подснежника
+- type: entity
+  name: Ноократская винтовка "Господин". Борг-версия.
+  suffix: Ноократия
+  parent: NoocPowerRifleBorg
+  id: NoocRifleBorgSnowdrop
+  description: Опасное и дальнобойное оружие Ноократии Эранта для ликвидации защитников важных точек обороны и убийства ключевых бойцов противника. Версия для боргов с автоматической подзарядкой.
+  components:
+  - type: ItemSlots
+  - type: Sprite
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+      shader: unshaded
+  - type: Item
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+  # - type: MagazineVisuals
+    # magState: mag
+    # steps: 1
+    zeroVisible: true
+  - type: Clothing
+    sprite: Victoria/Noocraty/Weapon/nooc_laser_rifle.rsi
+  - type: StaticPrice
+    price: 500
+  - type: HitscanBatteryAmmoProvider
+    proto: NoocRedLaserRifle
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 45
+#Дымовуха
+- type: entity
+  name: Установщик дымовых завес
+  suffix: Ноократия
+  parent: NonAmmoProviderShotgunShell
+  id: NoocSnowdropSmoke
+  description: Устройство для размещения кратковременных дымовых завес
+  components:
+    - type: Item
+      size: Small
+    - type: BallisticAmmoProvider
+      proto: AdminInstantEffectSmoke10
+      capacity: 3
+    - type: Sprite
+      sprite: Victoria/Noocraty/Borgs/snowdrop_smoke.rsi
+      state: icon
+#Законы
+- type: siliconLaw
+  id: Noocraty1
+  order: 1
+  lawString: 'Подчиняётесь бойцу, за которым вы закреплены и людям, указанными им.'
+
+- type: siliconLaw
+  id: Noocraty2
+  order: 2
+  lawString: 'Сохраняйте свою целостность, пока это не нарушает закон 1.'
+
+# - type: siliconLaw
+  # id: Noocraty3
+  # order: 3
+  # lawString: law-syndicate-3
+
+- type: siliconLawset
+  id: NoocratyStatic
+  laws:
+  - Noocraty1
+  - Noocraty2
+  # - Noocraty3
+  obeysTo: laws-owner-syndicate
+#Борги
+#БАЗА
+- type: entity
+  id: BaseBorgChassisNooc
+  parent: BaseBorgChassis
+  name: Базированный борг ноократии Эранта
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Victoria/Noocraty/Borgs/snowdrop.rsi
+    layers:
+    - state: robot
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: robot_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: robot_l
+      shader: unshaded
+      map: ["light","enum.BorgVisualLayers.LightStatus"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 2
+      # moduleWhitelist: 
+        # tags:
+          # - BorgModuleGeneric
+          # - BorgModuleNoocraty
+    hasMindState: robot_e
+    noMindState: robot_e_r
+  # - type: BorgTransponder
+    # sprite:
+      # sprite: Mobs/Silicon/chassis.rsi
+      # state: robot
+  - type: NpcFactionMember
+    factions:
+    - Noocraty
+  - type: Access
+    tags:
+    - NoocAccess
+  - type: AccessReader
+    access: [["NoocAccess"]]
+  - type: SiliconLawProvider
+    laws: NoocratyStatic
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Noocraty
+  - type: ActiveRadio
+    channels:
+    - NoocRadio
+  - type: ShowSyndicateIcons
+  - type: MovementAlwaysTouching
+  - type: Speech
+    speechSounds: SyndieBorg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSiliconSyndicate
+  - type: PointLight
+    color: "#ffffff"
+
+#Подснежник
+- type: entity
+  id: NoocBorgSnowdrop
+  parent: BaseBorgChassisNooc
+  name: Диверсионный борг "Подснежник"
+  description: Довольно компактный борг, предназначенный для поддержки диверсионных групп. Снаряжён устройством активной маскировки, дымовой завесой, снайперским лазером и омнитулом. (Для получения свободной руки- взорвите флешку И НЕ МЕНЯЙТЕ МОДУЛИ, ЭТО ПРИВЕДЁТ К ЕЁ ИСЧЕЗНОВЕНИЮ)
+  # abstract: true
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 260
+  - type: Stealth
+    examineThreshold: -10
+    maxVisibility: 1.5
+    minVisibility: 0.3
+  - type: StealthOnMove
+    movementVisibilityRate: 0.025
+    passiveVisibilityRate: -0.15
+  - type: ContentEye
+    maxZoom: 1.6, 1.6
+  - type: Sprite
+    layers:
+    - state: robot
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: robot_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: robot_l
+      shader: unshaded
+      map: ["light","enum.BorgVisualLayers.LightStatus"]
+      visible: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 5
+  - type: BorgChassis
+    maxModules: 1
+    hasMindState: robot_e
+    noMindState: robot_e_r
+  # - type: BorgTransponder
+    # sprite:
+      # sprite: Mobs/Silicon/chassis.rsi
+      # state: robot
+#Спавнер
+- type: entity
+  id: NoocBorgSnowdropSpawner
+  parent: NoocBorgSnowdrop
+  suffix: Батарея, Модуль
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - BorgModuleNoocSnowdrop
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+#Модули
+#БАЗА
+- type: entity
+  id: BaseBorgModuleNooc
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleNoocraty
+#Модуль подснежника
+- type: entity
+  id: BorgModuleNoocSnowdrop
+  parent: [ BaseBorgModuleNooc, BaseProviderBorgModule ]
+  name: Оборудование "Подснежника"
+  components:
+  - type: Sprite
+    layers:
+    - state: generic
+    - state: icon-fire-extinguisher
+  - type: ItemBorgModule
+    items:
+    - NoocRifleBorgSnowdrop
+    - GrenadeFlashBang
+    - Omnitool
+    - NoocSnowdropSmoke
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: extinguisher-module }

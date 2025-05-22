@@ -145,7 +145,7 @@
   id: Hound
   alias:
     - hound
-  name: Гончая Hound
+  name: Гончие Hound
   description: Кто-то из вас не отмылся от былых кровавых грешков. Но агент компании Hound обязательно покарает кого надо...
   showInVote: false
   rules:

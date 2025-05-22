@@ -78,7 +78,7 @@
   id: HoundHelmetOperator
   name: шлем оперативника Хаунд
   suffix: Хаунд
-  description: Неплохой скафандра шлемак от Хаунд. Лёгкий, неплохо защищает от колюще-режущих и тепловых травм. Правда после тупых ударов голова звенит ой-йой...Зато есть встроенный визор свой-чужой.
+  description: Неплохой шлемак скафандра от Хаунд. Лёгкий, неплохо защищает от колюще-режущих и тепловых травм. Правда после тупых ударов голова звенит ой-йой...Зато есть встроенный визор свой-чужой.
   components:
   - type: BreathMask
   - type: PointLight
@@ -460,7 +460,7 @@
     content: |
       [color=#800000]░░░░░░█░░░█░░░░░░[/color]
       [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
-      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]VITZ[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
       [color=#800000]░░░░░███████░░░░░[/color]
       [color=#800000]░░░░░░░███░░░░░░░[/color]
       =============================================
@@ -489,7 +489,7 @@
     content: |
       [color=#800000]░░░░░░█░░░█░░░░░░[/color]
       [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
-      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]VITZ[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
       [color=#800000]░░░░░███████░░░░░[/color]
       [color=#800000]░░░░░░░███░░░░░░░[/color]
       =============================================
@@ -531,7 +531,7 @@
     content: |
       [color=#800000]░░░░░░█░░░█░░░░░░[/color]
       [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
-      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]VITZ[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
       [color=#800000]░░░░░███████░░░░░[/color]
       [color=#800000]░░░░░░░███░░░░░░░[/color]
       =============================================
@@ -562,6 +562,34 @@
       
                                   [italic]Место для печатей[/italic]
 
+#Анекдот
+- type: entity
+  id: HoundPaperAnecdote
+  name: Дурацкий анекдот
+  suffix: Хаунд
+  parent: Paper
+  components:
+  - type: Paper
+    content: |
+      [color=#800000]░░░░░░█░░░█░░░░░░[/color]
+      [color=#800000]░░░░█████████░░░░[/color]      [head=3]Бланк документа[/head]
+      [color=#800000]░░░░██░███░██░░░░[/color]               [head=3]HND[/head]
+      [color=#800000]░░░░░███████░░░░░[/color]
+      [color=#800000]░░░░░░░███░░░░░░░[/color]
+      Идёт Утилизатор по коридору, а навстречу ему- клоун.
+      Красноносый протянул работяге бумажку, и сказал:
+      Не смотри, а покажи первому встречному. И был таков.
+      Показал он это рандомному ассистуху- тот перекрестился и удалился.
+      Утиль пожал плечами и пошёл к КМу, показал бумагу а тот-
+      Орёт, пиздит его консолью заказов и вышвиривает из отдела. Ну, уволили его.
+      Пошёл наш новообразованный ассистент в бар. Показал бармену-
+      Тот ружьё достал, да чуть не пристрелил, благо успел мимом прикрыться.
+      Пошёл он дальше в СБ, пожаловаться на бармена. Те спросили что у него в бумаге было, шо бармен так взбесился, он показал.
+      Одного офицера схватил инфаркт на месте, остальные скрутили его и посадили в перму по всем статьям КЗ.
+      Прилетел он на ЦК, начался суд. Бумагу отняли и показали судье. Тот лишь завопил- "КАЗНИТЬ!" И тотчас же упал замертво.
+      Выкинули его в космос. Увидел как культисты Ратвара призывали своего божка, попутно отбиваясь от ОБР. Решил наш герой подождать, да показать появившемуся божеству бумагу.
+      После этого он оказался в темноте. Не в космосе, но и не в редспейсе. Решил он посмотреть на саму бумагу.
+      А там воксы в нарды играют.
 #-------------------------------------печать-----------------      
 - type: entity
   name: печать корпорации The Hound
@@ -578,6 +606,20 @@
     sprite: Victoria/Hound/Misc/hnd_stamp.rsi
     state: stamp
 #Оборудование и прочее
+#Коробка
+- type: entity
+  parent: BoxCardboard
+  id: HoundBox
+  name: Пепельно-красная коробка
+  suffix: Хаунд
+  description: Коробка светлого тускло-красного цвета. Выглядит прочной.
+  components:
+  - type: Sprite
+    sprite: Victoria/Hound/Misc/hnd_box.rsi
+  - type: Storage
+    grid: 
+    - 0,0,4,4
+    maxItemSize: Normal
 #Мачете
 - type: entity
   name: Полимерное мачете
@@ -594,24 +636,159 @@
     attackRate: 1.3
     damage:
       types:
-        Slash: 18
+        Slash: 17
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
     sprite: Victoria/Hound/Weapons/machete.rsi
   - type: DisarmMalus
+#Нож-бабочка
+- type: entity
+  name: Нож-бабочка Хаунд.
+  suffix: Хаунд
+  parent: [BaseKnife, BaseRestrictedContraband]
+  id: HoundButterflyKnife
+  description: Жутковатая выкидуха. Внутри есть наполянемый инжектор для всякой дряни.
+  components:
+  - type: Tag
+    tags:
+    - CombatKnife
+    - Knife
+  - type: Sprite
+    sprite: Victoria/Hound/Weapons/knife.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 2
+    damage:
+      types:
+        Slash: 13
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/star_hit.ogg
+    offset: -0.15,0.0
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 15
+  - type: Item
+    sprite: Victoria/Hound/Weapons/knife.rsi
+    size: Tiny
+    shape:
+    - 0,0,1,0
+    # storedSprite:
+      # state: storage
+      # sprite: Victoria/Hound/Weapons/knife.rsi
+  - type: DisarmMalus
+    malus: 0.225
+  - type: ThrowingAngle
+    angle: 225
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 10
+  - type: MeleeChemicalInjector
+    solution: melee
+    transferAmount: 3
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionInjectOnEmbed
+    transferAmount: 5
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 5
 #Монитор
 - type: entity
   name: Монитор экипажа Хаунд
   parent: HandheldCrewMonitor
   id: HoundHandheldCrewMonitor
-  description: Крайне лёгкий переносной монитор Хаунд, предназначенный для наблюдения за передвижением членов отряда.
+  description: Крайне лёгкий переносной монитор Хаунд, предназначенный для наблюдения за передвижением членов отряда. Или за жертвой.
   components:
   - type: Item
     shape: 
     - 0,0,0,0
   - type: Sprite
     sprite: Victoria/Hound/Equipment/hnd_crew_monitor.rsi
+#Брутфорсер
+- type: entity
+  name: Электрическое устройство
+  suffix: Хаунд, брутфорсер
+  parent: BaseItem
+  id: HoundBruteforcer
+  description: Кусок пластика с кучей разъёмов и кнопок. Вы без понятия, что это.
+  components:
+  - type: Item
+    shape: 
+    - 0,0,1,1
+  - type: Sprite
+    sprite: Victoria/Hound/Equipment/hnd_bruteforcer.rsi
+    state: icon
+  - type: Bruteforcer
+    sound: /Audio/Victoria/bruteforce_sound.ogg
+#Псевдо-баллон
+- type: entity
+  id: HoundPseudoOxygenTankFilled
+  name: кислородный баллон
+  parent: OxygenTank
+  suffix: Filled
+  components:
+  - type: GasTank
+    outputPressure: 21.3
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        - 0 # 70% oxygen
+        - 0 # nitrogen
+        - 0 # CO2
+        - 0 # plasma
+        - 0 # tritium
+        - 0 # water vapor
+        - 0 # ammonia
+        - 2.051379050 # 30% N2O
+        # 2.051379050       total
+      temperature: 293.15
+#Раскладной ящик
+- type: entity
+  parent: [StructureWheeled, CrateBaseWeldable]
+  id: HoundCorpseCrate
+  name: пластиковый ящик
+  suffix: Хаунд
+  description: Обыкновенный пластиковый ящик. Снизу видны колёса.
+  components:
+  - type: Icon
+    sprite: Victoria/Hound/Equipment/hnd_corpse_crate.rsi
+  - type: Sprite
+    sprite: Victoria/Hound/Equipment/hnd_corpse_crate.rsi
+  # - type: Construction
+    # graph: CratePlastic
+    # node: crateplastic
+    # containers:
+    # - entity_storage
+  - type: StaticPrice
+    price: 100
+#Раскладушка
+- type: entity
+  parent: BaseItem
+  id: HoundCorpseCrateUnfolder
+  name: пластиковый мусор
+  suffix: Хаунд
+  description: Куча непонятного пластика. Выкиньте это в мусорку.
+  components:
+  - type: Item
+    size: Small
+  # - type: Icon
+    # sprite: Victoria/Hound/Equipment/hnd_corpse_crate_unfolder.rsi
+  - type: Sprite
+    sprite: Victoria/Hound/Equipment/hnd_corpse_crate_unfolder.rsi
+    state: base
+  - type: SpawnItemsOnUse
+    items:
+    - id: HoundCorpseCrate
+    sound:
+      path: /Audio/Effects/unwrap.ogg
 #---------------------------------------Пущьки!-/
 #Патроны...сука
 #К тяж пистолету, абстрактный и остальные
@@ -685,7 +862,7 @@
       tags:
         - CartridgeCaselessRifle
     proto: CartridgeCaselessRifle
-    capacity: 14
+    capacity: 10
   - type: Item
     size: Small
   - type: Sprite
@@ -1555,6 +1732,19 @@
       - id: OxygenTankFilled
       - id: HoundMachete
 #Аплинковые
+#Ящик с одеждой
+- type: entity
+  parent: HoundBox
+  id: HoundBoxFilledClothes
+  suffix: Хаунд, Одежда
+  components:
+  - type: StorageFill
+    contents:
+      - id: HoundUniformOper
+      - id: HoundGloves
+      - id: HoundBoots
+      - id: HoundOperCap
+      - id: HoundPaperAnecdote
 #Дешовый с пайком
 - type: entity
   parent: HoundBackpack
@@ -1569,6 +1759,18 @@
       - id: Gauze
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
+#Уборочный
+- type: entity
+  parent: HoundBackpack
+  id: HoundBackpackFilledCleaning
+  suffix: Хаунд, Уборка
+  components:
+  - type: StorageFill
+    contents:
+      - id: HoundCorpseCrateUnfolder
+      - id: Bucket
+      - id: SyringeBluespace
+      - id: WelderMini
 #лёгкий пистолет
 - type: entity
   parent: HoundBackpack
@@ -2218,28 +2420,31 @@
   id: HoundUplinkSpec
   name: Специалистам
   priority: 4 
-  
+
+- type: storeCategory
+  id: HoundUplinkExp
+  name: Взрывчатка
+  priority: 5 
+
 - type: storeCategory
   id: HoundUplinkBack
   name: Рюкзаки
-  priority: 5 
+  priority: 6 
   
 - type: storeCategory
   id: HoundUplinkMed
   name: Мед.средства
-  priority: 6 
+  priority: 7 
 #-----------------листинг покупок------------
 #------категория броня----------
 #---бронь---
-
-
 - type: listing
   id: HoundHelmetLight
   name: Лёгкий шлем
   description: Обыкновенная каска. Нужна если есть новичок, на скафандр которому тратиться жалко.
   productEntity: HoundHelmetLight
   cost:
-    HoundChip_currency: 2
+    HoundChip_currency: 1
   categories:
   - HoundUplinkArmor
 
@@ -2254,7 +2459,7 @@
   - HoundUplinkArmor
 - type: listing
   id: Бронепальто
-  description: Бронированное пальто. Подойдёт для скрытого ношения брони.
+  description: Бронированное пальто. Защищает не очень, зато не вызывает особых подозрений.
   productEntity: HoundArmorPalto
   cost:
     HoundChip_currency: 3
@@ -2264,7 +2469,7 @@
 - type: listing
   id: HoundArmorEVA
   name: ЕВА-Скафандр Хаунд
-  description: Не слишком прочный, но очень лёгкий скафандр. Купите если зелень каким-то образом взяли на задание в космосе.
+  description: Не слишком прочный, но очень лёгкий скафандр. Купите если зелень каким-то образом взяли на задание в космосе. А ещё он очень удобный для движения.
   productEntity: HoundArmorEVA
   cost:
     HoundChip_currency: 4
@@ -2294,10 +2499,20 @@
 - type: listing
   id: HoundCloak
   name: Плащ ветерана
-  description: Плащ. бесполезно, но красиво. В некоторых кругах.
+  description: Плащ. Бесполезно, но красиво. В некоторых кругах.
   productEntity: HoundCloak
   cost:
     HoundChip_currency: 1
+  categories:
+  - HoundUplinkArmor
+
+- type: listing
+  id: HoundClothingBoxClothes
+  name: Униформа Хаунд.
+  description: Униформа, изолированные перчатки, удобные ботинки, а также фирменные кепка и анекдот! Не забудьте избавиться от ненужных вещиц и коробки.
+  productEntity: HoundBoxFilledClothes
+  cost:
+    HoundChip_currency: 3
   categories:
   - HoundUplinkArmor
 #------категория вооружение----------
@@ -2307,7 +2522,7 @@
   description: Довольно крупный и очень мощный пистолет Хаунд. Магазин малюсенький- Не промахнитесь! Для штурмовых заданий и любителей покороче и пожёстче. Использует .45 магнум.
   productEntity: HoundHeavyPistol
   cost:
-    HoundChip_currency: 4
+    HoundChip_currency: 5
   categories:
   - HoundUplinkWeaponry
 
@@ -2332,12 +2547,22 @@
   - HoundUplinkWeaponry
 
 - type: listing
+  id: HoundButterflyKnife
+  name: Нож-бабочка.
+  description: Маленький, но тоже страшный нож. Внутри имеется инжектор на 10u, постепенно вспрыскиваемых при ударах.
+  productEntity: HoundButterflyKnife
+  cost:
+    HoundChip_currency: 6
+  categories:
+  - HoundUplinkWeaponry
+
+- type: listing
   id: HoundLightPistol
   name: Пистолет "Бигль"
   description: Крайне скорострельный и тихий пистолет для секретных миссий или тех, кто любит подольше и поплавнее. Использует .35 авто.
   productEntity: HoundLightPistol
   cost:
-    HoundChip_currency: 5
+    HoundChip_currency: 6
   categories:
   - HoundUplinkWeaponry
 
@@ -2347,7 +2572,7 @@
   description: Довольно мощный ПП. Из-за высокой скорострельности и малого магазина хорошо подходит для тактики ударил-в укрытие Использует патроны .35 авто
   productEntity: HoundSMG
   cost:
-    HoundChip_currency: 8
+    HoundChip_currency: 10
   categories:
   - HoundUplinkWeaponry
 
@@ -2357,7 +2582,7 @@
   description: Крайне мощный дробовик, идеальный для зачистки помещений. Кабы магазин был чуток побольше...
   productEntity: HoundShotgun
   cost:
-    HoundChip_currency: 8
+    HoundChip_currency: 10
   categories:
   - HoundUplinkWeaponry
 
@@ -2367,7 +2592,7 @@
   description: В текущих реалиях снайперские винтовки- фиговое оружие, так что её отдают почти за бесплатно.
   productEntity: HoundSniperRifle
   cost:
-    HoundChip_currency: 7
+    HoundChip_currency: 8
   categories:
   - HoundUplinkWeaponry
 - type: listing
@@ -2478,7 +2703,17 @@
     HoundChip_currency: 1
   categories:
   - HoundUplinkElectronic
-  
+
+- type: listing
+  id: HoundBruteforcer
+  name: Брутфорсер
+  description: Электронная отмычка, перебирающая десятки тысяч вариантов пароля за считанные мгновения. Увы, современные шлюзы имеют защиту от старого доброго брутфорса, болтируясь при нём. Зато можно запереть жертву с собой или преградить путь СБшникам, клоуну или начальнику!
+  productEntity: HoundBruteforcer
+  cost:
+    HoundChip_currency: 4
+  categories:
+  - HoundUplinkElectronic
+
 - type: listing
   id: HoundEmag
   name: Криптографический секвенсор
@@ -2494,12 +2729,33 @@
 - type: listing
   id: HoundRubberStamp
   name: Печать Хаунд
-  description: Отправьте угрозы своей добыче или свяжитесь с начальством.
+  description: Отправьте угрозы своей добыче или свяжитесь с начальством, если, конечно, можете.
   productEntity: HoundRubberStamp
   cost:
     HoundChip_currency: 1
   categories:
   - HoundUplinkSpec
+#Раскладной ящик
+- type: listing
+  id: HoundCorpseCrateUnfolder
+  name: Раскладной ящик
+  description: Используйте это в руке, чтобы мгновенно создать ящик с колёсиками. Ящик с неизвестным содержимым куда менее подозрителен, чем труп или неcущий его человек.
+  productEntity: HoundCorpseCrateUnfolder
+  cost:
+    HoundChip_currency: 3
+  categories:
+  - HoundUplinkSpec
+#Набор уборки
+- type: listing
+  id: HoundBackpackFilledCleaning
+  name: Набор уборки
+  description: В Бриге кровь отпылесосим, чей труп в Снабжении- не спросим! А если серьёзно, то тут есть раскладной ящик для самого трупа и ведро с шприцом и сваркой для всего, что с него натекло. А вещественные улики можете скинуть в сам рюкзак.
+  productEntity: HoundBackpackFilledCleaning
+  cost:
+    HoundChip_currency: 5
+  categories:
+  - HoundUplinkBack
+#Наборы
 #Пояс
 - type: listing
   id: HoundBeltFilled
@@ -2518,16 +2774,6 @@
   productEntity: HoundBeltFilledEngi
   cost:
     HoundChip_currency: 5
-  categories:
-  - HoundUplinkSpec
-
-- type: listing
-  id: HoundBeltFilledExp
-  name: Пояс подрывника
-  description: Пояс с двумя разрывными гранатами, двумя осколочными гранатами, двумя С-4, и одной ЭМИ гранатой. БУМ!
-  productEntity: HoundBeltFilledExp
-  cost:
-    HoundChip_currency: 20
   categories:
   - HoundUplinkSpec
 
@@ -2560,21 +2806,22 @@
     HoundChip_currency: 25
   categories:
   - HoundUplinkSpec
-- type: listing
-  id: HoundCrateExp
-  name: Ящик гранат и взрывчатки
-  description: Шесть обычных и три осколочной гранаты, две дымовой, две слезоточивой и две ЭМИ гранаты. И 4 С-4. Нахуй скрытность!
-  productEntity: HoundCrateExp
-  cost:
-    HoundChip_currency: 30
-  categories:
-  - HoundUplinkSpec
 
 - type: listing
   id: HoundHandheldCrewMonitor
   name: Монитор экипажа.
-  description: Эта штука позволит вам найти ваших товарищей на большом расстоянии. И понять что они померли, если не двигаются.
+  description: Ваш шанс найти жертву, не привлекая внимание СБшников и санитаров. В случае отсутствия соответствующего сервера на станции возврата средств не будет.
   productEntity: HoundHandheldCrewMonitor
+  cost:
+    HoundChip_currency: 4
+  categories:
+  - HoundUplinkSpec
+#Баллон с оксидом азота
+- type: listing
+  id: HoundPseudoOxygenTankFilled
+  name: Псевдобаллон с псевдокислородом.
+  description: Обычный баллон с закисью азота, но замаскированный под кислородный. Усыпляет за считанные мгновения, хоть, увы, не навсегда. Эффект можно усилить, увеличив выходное давление. Только сами себя не усыпите. 
+  productEntity: HoundPseudoOxygenTankFilled
   cost:
     HoundChip_currency: 4
   categories:
@@ -2589,14 +2836,14 @@
     HoundChip_currency: 2
   categories:
   - HoundUplinkBack
-
+#Пушки
 - type: listing
   id: HoundBackpackFilledLightPistol
   name: Боевой рюкзак с агентурынм пистолетом
   description: Базовое жизнеобеспечение, пистолет "Бигль" и три магазина.
   productEntity: HoundBackpackFilledLightPistol
   cost:
-    HoundChip_currency: 12
+    HoundChip_currency: 13
   categories:
   - HoundUplinkBack
 
@@ -2606,7 +2853,7 @@
   description: Базовое жизнеобеспечение, пистолет "Мопс" и три магазина.
   productEntity: HoundBackpackFilledHeavyPistol
   cost:
-    HoundChip_currency: 11
+    HoundChip_currency: 12
   categories:
   - HoundUplinkBack
   
@@ -2616,7 +2863,7 @@
   description: Базовое жизнеобеспечение, пистолет-пулемёт и три магазина.
   productEntity: HoundBackpackFilledSMG
   cost:
-    HoundChip_currency: 15
+    HoundChip_currency: 16
   categories:
   - HoundUplinkBack  
 
@@ -2636,10 +2883,101 @@
   description: Базовое жизнеобеспечение, дробовик и три магазина.
   productEntity: HoundBackpackFilledShotgun
   cost:
-    HoundChip_currency: 15
+    HoundChip_currency: 16
   categories:
   - HoundUplinkBack
-
+#Категория взрывчатки
+#Взрывчатка
+#обычная грена
+- type: listing
+  id: HoundExGrenade
+  name: Разрывная граната
+  description: Обыкновенная граната на 300 урона. НЕ ОТРЫВАТЬ ЧЕКУ ЗУБАМИ!!!
+  productEntity: ExGrenade
+  cost:
+    HoundChip_currency: 3
+  categories:
+  - HoundUplinkExp
+#Светошумовая
+- type: listing
+  id: HoundGrenadeFlashBang
+  name: Светошумовая граната.
+  description: Светошумовая граната. Очки добудете сами.
+  productEntity: GrenadeFlashBang
+  cost:
+    HoundChip_currency: 2
+  categories:
+  - HoundUplinkExp
+#Осколочная
+- type: listing
+  id: HoundGrenadeShrapnel
+  name: Осколочная граната
+  description: Осколочная граната. Опасна обратно пропорционально расстоянию от вас.
+  productEntity: GrenadeShrapnel
+  cost:
+    HoundChip_currency: 4
+  categories:
+  - HoundUplinkExp
+#Дымовая
+- type: listing
+  id: HoundSmokeGrenade
+  name: Дымовая граната
+  description: Превратите помещение в обыкновенный толчок после рейда фанатов электронок.
+  productEntity: SmokeGrenade
+  cost:
+    HoundChip_currency: 3
+  categories:
+  - HoundUplinkExp
+#Слезоточивая
+- type: listing
+  id: HoundTearGasGrenade
+  name: Граната со слезоточивым газом
+  description: Слезоточивая граната для избиения студентов с плакатами.
+  productEntity: TearGasGrenade
+  cost:
+    HoundChip_currency: 3
+  categories:
+  - HoundUplinkExp
+#Эми
+- type: listing
+  id: HoundEmpGrenade
+  name: ЭМИ-граната
+  description: ЭМИ-граната. Что тут ещё сказать?
+  productEntity: EmpGrenade
+  cost:
+    HoundChip_currency: 4
+  categories:
+  - HoundUplinkExp
+#С-4
+- type: listing
+  id: HoundC-4
+  name: C-4
+  description: Устрой сюрприз. Детонатор не в комплекте.
+  productEntity: C-4
+  cost:
+    HoundChip_currency: 3
+  categories:
+  - HoundUplinkExp
+#Пояс
+- type: listing
+  id: HoundBeltFilledExp
+  name: Пояс подрывника
+  description: Пояс с двумя разрывными гранатами, двумя осколочными гранатами, двумя С-4, и одной ЭМИ гранатой. БУМ!
+  productEntity: HoundBeltFilledExp
+  cost:
+    HoundChip_currency: 18
+  categories:
+  - HoundUplinkExp
+#Ящик
+- type: listing
+  id: HoundCrateExp
+  name: Ящик гранат и взрывчатки
+  description: Шесть обычных и три осколочной гранаты, две дымовой, две слезоточивой и две ЭМИ гранаты. И 4 С-4. Нахуй скрытность!
+  productEntity: HoundCrateExp
+  cost:
+    HoundChip_currency: 30
+  categories:
+  - HoundUplinkExp
 #------категория мед.средства
 - type: listing
   id: HoundStimpack
@@ -2740,6 +3078,7 @@
     - HoundUplinkArmor
     - HoundUplinkWeaponry
     - HoundUplinkAmmo
+    - HoundUplinkExp
     - HoundUplinkElectronic
     - HoundUplinkSpec
     - HoundUplinkBack
@@ -2796,3 +3135,14 @@
   - type: Tag
     tags:
     - NukeOpsUplink
+#------------------------знамя------------------
+- type: entity
+  id: HoundBannerStd
+  parent: BannerBase
+  name: знамя Хаунд
+  suffix: Ноократия
+  description: Кажется эти парни очень любят собак. И окроплять знамёна кровью.
+  components:
+  - type: Sprite
+    sprite: Victoria/Hound/hnd_banner.rsi
+    state: banner_hnd_std
