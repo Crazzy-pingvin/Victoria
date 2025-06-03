@@ -200,6 +200,9 @@
       "name": "warden"
     },
     {
+      "name": "tailor"
+    },
+    {
       "name": "zookeeper"
     }
   ]

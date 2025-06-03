@@ -1,0 +1,262 @@
+#===тег для модулей===============
+
+- type: Tag
+  id: BorgModuleDefender
+
+#===база для модулей============
+
+- type: entity
+  id: BaseBorgModuleDefender
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleDefender
+
+#===неразряжающиеся предметы для модуля борга========
+#---атмос голопроектор---------
+- type: entity
+  name: атмос голопроектор
+  description: Останавливает суицидально настроеных пассажиров от убийства остальных во время разгерметизации.
+  parent: HolofanProjector
+  id: HolofanProjectorBorg
+  suffix: Для боргов
+  components:
+  - type: HolosignProjector
+    chargeUse: 240
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+        disableEject: true
+        swap: false
+
+#---проектор голобарьера---------
+- type: entity
+  name: проектор голобарьера
+  description: Создаёт твёрдый но хрупкий барьер.
+  parent: HoloprojectorSecurity
+  id: HoloprojectorSecurityBorg
+  suffix: Для боргов
+  components:
+  - type: HolosignProjector
+    chargeUse: 240
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+        disableEject: true
+        swap: false
+
+#===голопроекторный модуль==============
+
+- type: entity
+  id: BorgModuleHoloprojector
+  parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
+  name: голопроекторный модуль киборга
+  description: Техническая деталь, дающая киборгам новые способности.
+  components:
+  - type: Sprite
+    sprite: Victoria/Borgs/module.rsi
+    layers:
+    - state: security
+    - state: icon-golo
+  - type: ItemBorgModule
+    items:
+    - HolofanProjectorBorg
+    - HoloprojectorBorg
+    - HoloprojectorSecurityBorg
+  - type: BorgModuleIcon
+    icon: { sprite: Victoria/Borgs/module.rsi, state: golo-module }
+
+#===щит для борга======================
+#---база щита---------------
+
+- type: entity
+  name: base shield
+  parent: BaseItem
+  id: BaseShieldNotDistruct
+  description: A shield!
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/shields.rsi
+      state: riot-icon
+    - type: Item
+      sprite: Objects/Weapons/Melee/shields.rsi
+      size: Ginormous
+      heldPrefix: riot
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 0.9
+          Slash: 0.9
+          Piercing: 0.9
+          Heat: 0.9
+      activeBlockModifier:
+        coefficients:
+          Blunt: 0.8
+          Slash: 0.8
+          Piercing: 0.8
+          Heat: 0.8
+        flatReductions:
+          Blunt: 1
+          Slash: 1
+          Piercing: 1
+          Heat: 1
+    - type: Damageable
+      damageContainer: Shield
+
+#---сам щит-----------------
+
+- type: entity
+  name: противопульный щит киборга
+  parent: BaseShieldNotDistruct
+  id: RiotBulletShieldNotDistruct
+  description: Более прочный щит в руках киборга , позволяющий ему эффективнее защищать назначенную цель.
+  suffix: Для боргов
+  components:
+    - type: Sprite
+      state: riot_bullet-icon
+    - type: Item
+      heldPrefix: riot_bullet
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Piercing: 0.7
+      activeBlockModifier:
+        coefficients:
+          Piercing: 0.5
+        flatReductions:
+          Piercing: 1
+
+#---ломающийся щит--------------
+
+- type: entity
+  name: слабый противопульный щит киборга
+  parent: BaseShieldNotDistruct
+  id: RiotBulletShieldDistruct
+  description: Щит в руках киборга , позволяющий ему защищать назначенную цель.
+  suffix: Для боргов
+  components:
+    - type: Sprite
+      state: riot_bullet-icon
+    - type: Item
+      heldPrefix: riot_bullet
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 190
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 150 #This is probably enough damage before it breaks
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel:
+                  min: 2
+                  max: 2
+                SheetGlass:
+                  min: 2
+                  max: 2
+
+#===модули щита(разрушаемый щит и не разрушаемый)============
+
+- type: entity
+  id: BorgModulShildWeek
+  parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
+  name: слабый защитный модуль киборга
+  description: Техническая деталь, дающая киборгам новые способности.
+  components:
+  - type: Sprite
+    sprite: Victoria/Borgs/module.rsi
+    layers:
+    - state: security
+    - state: icon-shield-week
+  - type: ItemBorgModule
+    items:
+    - RiotBulletShieldDistruct
+  - type: BorgModuleIcon
+    icon: { sprite: Victoria/Borgs/module.rsi, state: shield-module-week }
+
+- type: entity
+  id: BorgModulShild
+  parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
+  name: защитный модуль киборга
+  description: Техническая деталь, дающая киборгам новые способности.
+  components:
+  - type: Sprite
+    sprite: Victoria/Borgs/module.rsi
+    layers:
+    - state: security
+    - state: icon-shield
+  - type: ItemBorgModule
+    items:
+    - RiotBulletShieldNotDistruct
+  - type: BorgModuleIcon
+    icon: { sprite: Victoria/Borgs/module.rsi, state: shield-module }
+
+#===станнер для борга===========
+
+- type: entity
+  name: станнер киборга
+  parent: WeaponDisablerPractice
+  id: WeaponDisablerBorg
+  description: Оружие для самозащиты, которое изнуряет органические цели, пока они не свалятся с ног.
+  suffix: Для боргов
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 100
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 35
+
+#===модуль станнера==============
+
+- type: entity
+  id: BorgModuleDisabler
+  parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
+  name: станнерный модуль киборга
+  description: Техническая деталь, дающая киборгам новые способности.
+  components:
+  - type: Sprite
+    sprite: Victoria/Borgs/module.rsi
+    layers:
+    - state: security
+    - state: icon-disabler
+  - type: ItemBorgModule
+    items:
+    - WeaponDisablerBorg
+  - type: BorgModuleIcon
+    icon: { sprite: Victoria/Borgs/module.rsi, state: disabler-module }

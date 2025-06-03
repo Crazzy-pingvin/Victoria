@@ -149,6 +149,10 @@
         acts: [ "Destruction" ]
   - type: CableVisualizer
     statePrefix: mvcable_
+  - type: RandomChangeTime
+    time: 1980
+    prob: 0.01
+    entity: DeffectCableApcStack1
 
 - type: entity
   id: CableMVUncuttable

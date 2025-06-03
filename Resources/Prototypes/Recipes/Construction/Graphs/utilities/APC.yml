@@ -17,6 +17,28 @@
             - component: ApcElectronics
               name: "APC electronics"
               doAfter: 2
+              
+        - to: deffectapc
+          steps:
+            - material: DeffectAPCElectronics
+              amount: 1
+            - tool: Screwing
+              doAfter: 2
+              
+        - to: reliableapc
+          steps:
+            - material: ReliableAPCElectronics
+              amount: 1
+            - tool: Screwing
+              doAfter: 2
+              
+        - to: adminapc
+          steps:
+            - material: AdminAPCElectronics
+              amount: 1
+            - tool: Screwing
+              doAfter: 2
+              
         - to: start
           completed:
             - !type:GivePrototype
@@ -34,6 +56,51 @@
           completed:
             - !type:GivePrototype
               prototype: APCElectronics
+              amount: 1
+          conditions:
+            - !type:WirePanel
+              open: true
+          steps:
+            - tool: Prying
+              doAfter: 4
+              
+    - node: deffectapc
+      entity: DeffectBaseAPC
+      edges:
+        - to: apcFrame
+          completed:
+            - !type:GivePrototype
+              prototype: DeffectSMESMachineCircuitboard
+              amount: 1
+          conditions:
+            - !type:WirePanel
+              open: true
+          steps:
+            - tool: Prying
+              doAfter: 4
+              
+    - node: reliableapc
+      entity: ReliableAPC
+      edges:
+        - to: apcFrame
+          completed:
+            - !type:GivePrototype
+              prototype: ReliableAPCElectronics
+              amount: 1
+          conditions:
+            - !type:WirePanel
+              open: true
+          steps:
+            - tool: Prying
+              doAfter: 4
+              
+    - node: adminapc
+      entity: AdminAPC
+      edges:
+        - to: apcFrame
+          completed:
+            - !type:GivePrototype
+              prototype: AdminAPCElectronics
               amount: 1
           conditions:
             - !type:WirePanel

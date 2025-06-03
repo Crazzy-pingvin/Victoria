@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "prite create by Crazzy_pingvin",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "coilfail-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "coilfail-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "coilfail-30"
+    },
+    {
+      "name": "coilfail-20"
+    },
+    {
+      "name": "coilfail-10"
+    },
+    {
+      "name": "coilfail-equipped-BELT",
+      "directions": 4
+    }
+  ]
+}

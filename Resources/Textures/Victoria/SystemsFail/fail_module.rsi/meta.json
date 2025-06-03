@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprite create by Crazzy_pingvin",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "capacitor_fail"
+    },
+    {
+      "name": "power_mod_fail"
+    }
+  ]
+}

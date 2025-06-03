@@ -314,7 +314,22 @@
     {
       "name": "synd_engi_l",
       "directions": 4
+    },
+	{
+      "name": "defender",
+      "directions": 4
+    },
+    {
+      "name": "defender_e",
+      "directions": 4
+    },
+    {
+      "name": "defender_e_r",
+      "directions": 4
+    },
+    {
+      "name": "defender_l",
+      "directions": 4
     }
-
   ]
 }

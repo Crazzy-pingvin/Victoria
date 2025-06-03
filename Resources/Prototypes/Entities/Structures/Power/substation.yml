@@ -108,6 +108,10 @@
     requirePower: true
     highVoltageNode: input
     mediumVoltageNode: output
+  - type: RandomChangeTime
+    time: 3960
+    prob: 0.45
+    entity: DeffectSubstation
 
 # Compact Wall Substation Base
 - type: entity

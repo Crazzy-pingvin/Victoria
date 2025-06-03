@@ -21,18 +21,6 @@
         amount: 3
 
 - type: entity
-  id: CrateMaterialTextiles
-  parent: CrateGenericSteel
-  name: textiles crate
-  description: 60 pieces of cloth and 30 pieces of durathread.
-  components:
-  - type: StorageFill
-    contents:
-      - id: MaterialCloth
-        amount: 2
-      - id: MaterialDurathread
-
-- type: entity
   id: CrateMaterialPlastic
   parent: CrateGenericSteel
   name: plastic sheet crate

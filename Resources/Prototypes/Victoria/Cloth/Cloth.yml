@@ -1,0 +1,1275 @@
+- type: Tag
+  id: Sheep
+
+#--------------------------------------Лён------------------------------------------
+#------------------Саженец-------------------------
+- type: seed
+  id: linum
+  name: лён
+  noun: seeds-noun-seeds
+  displayName: лён
+  plantRsi: Victoria/Cloth/linum.rsi
+  packetPrototype: LinumSeeds
+  productPrototypes:
+    - Linum1
+  lifespan: 25
+  maturation: 8
+  production: 3
+  yield: 3
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.60
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (лён)
+  id: LinumSeeds
+  components:
+    - type: Seed
+      seedId: linum
+    - type: Sprite
+      sprite: Victoria/Cloth/linum.rsi
+#------------------Сам-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Linum
+  name: лён
+  description: Сырьё.
+  suffix: Полный
+  components:
+  - type: Stack
+    stackType: Linum
+  - type: Sprite
+    sprite: Victoria/Cloth/linum.rsi
+    state: produce
+  - type: Extractable
+    grindableSolutionName: cloth
+  - type: SolutionContainerManager
+    solutions:
+      cloth:
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      LinumMaterial: 100
+  - type: Tag
+    tags:
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Linum
+  name: лён
+  icon: { sprite: Victoria/Cloth/linum.rsi, state: produce }
+  spawn: Linum1
+  maxCount: 30
+#------------------Один лён--------------------------
+- type: entity
+  parent: Linum
+  id: Linum1
+  suffix: Один
+  components:
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: LinumMaterial
+  stackEntity: Linum1
+  name: лён
+  icon: { sprite: Victoria/Cloth/linum.rsi, state: produce }
+  price: 0.05
+
+#--------------------------------------Льняная ткань------------------------------------------
+#----------------------------------Рецепт----------------------------------
+- type: latheRecipe
+  id: RecipeLinumCloth
+  result: MaterialCloth1
+  completetime: 1
+  materials:
+    LinumMaterial: 200
+
+#--------------------------------------Хлопковая ткань------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: CottonCloth
+  name: хлопковая ткань
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: CottonCloth
+    baseLayer: base
+    layerStates:
+    - cloth
+    - cloth_2
+    - cloth_3
+  - type: Sprite
+    sprite: Victoria/Cloth/cottoncloth.rsi
+    state: cloth_3
+    layers:
+    - state: cloth_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      CottonClothMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: CottonCloth
+  name: хлопковая ткань
+  icon: { sprite: Victoria/Cloth/cottoncloth.rsi, state: cloth_3 }
+  spawn: CottonCloth1
+  maxCount: 30
+#------------------Десять хлопковых тканей--------------------------
+- type: entity
+  parent: CottonCloth
+  id: CottonCloth10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 10
+#------------------Одна хлопковая ткань--------------------------
+- type: entity
+  parent: CottonCloth
+  id: CottonCloth1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: CottonClothMaterial
+  stackEntity: CottonCloth1
+  name: хлопковая ткань
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/cottoncloth.rsi, state: cloth }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: latheRecipe
+  id: RecipeCottonCloth
+  result: CottonCloth1
+  completetime: 1
+  materials:
+    CottonMaterial: 200
+
+#--------------------------------------Гладкая кожа------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: SmoothSkin
+  name: гладкая кожа
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: SmoothSkin
+    baseLayer: base
+    layerStates:
+    - leather
+    - leather_2
+    - leather_3
+  - type: Sprite
+    sprite: Objects/Materials/materials.rsi
+    state: leather_3
+    layers:
+    - state: leather_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      SmoothSkinMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: SmoothSkin
+  name: гладкая кожа
+  icon: { sprite: Objects/Materials/materials.rsi, state: leather_3 }
+  spawn: SmoothSkin1
+  maxCount: 30
+#------------------Десять гладких кож--------------------------
+- type: entity
+  parent: SmoothSkin
+  id: SmoothSkin10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 10
+#------------------Одна гладкая кожа--------------------------
+- type: entity
+  parent: SmoothSkin
+  id: SmoothSkin1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: SmoothSkinMaterial
+  stackEntity: SmoothSkin1
+  name: гладкая кожа
+  unit: materials-unit-roll
+  icon: { sprite: Objects/Materials/materials.rsi, state: leather }
+  price: 0.05
+
+#--------------------------------------Хлопчатобумажная ткань------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: CottonPaperCloth
+  name: хлопчатобумажная ткань
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: CottonPaperCloth
+    baseLayer: base
+    layerStates:
+    - cloth
+    - cloth_2
+    - cloth_3
+  - type: Sprite
+    sprite: Victoria/Cloth/cottonpapercloth.rsi
+    state: cloth_3
+    layers:
+    - state: cloth_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      CottonPaperClothMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: CottonPaperCloth
+  name: хлопчатобумажная ткань
+  icon: { sprite: Victoria/Cloth/cottonpapercloth.rsi, state: cloth_3 }
+  spawn: CottonPaperCloth1
+  maxCount: 30
+#------------------Десять Хлопчатобумажных тканей--------------------------
+- type: entity
+  parent: CottonPaperCloth
+  id: CottonPaperCloth10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 10
+#------------------Одна Хлопчатобумажная ткань--------------------------
+- type: entity
+  parent: CottonPaperCloth
+  id: CottonPaperCloth1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: CottonPaperClothMaterial
+  stackEntity: CottonPaperCloth1
+  name: хлопчатобумажная ткань
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/cottonpapercloth.rsi, state: cloth }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: latheRecipe
+  id: RecipeCottonPaperCloth
+  result: CottonPaperCloth1
+  completetime: 1
+  materials:
+    CottonMaterial: 100
+    Paper: 100
+
+#--------------------------------------Эластан------------------------------------------
+#------------------Полимеризатор-------------------------
+- type: reagent
+  id: Polymerizer
+  name: reagent-name-polymerizer
+  desc: reagent-desc-polymerizer
+  physicalDesc: reagent-physical-desc-murky
+  flavor: horrible
+  color: "#002238"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2
+    Medicine:
+      effects:
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        probability: 0.1
+
+- type: entity
+  parent: Jug
+  suffix: полимеризатор
+  id: JugPolymerizer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Label
+    currentLabel: полимеризатор
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: Polymerizer
+          Quantity: 200
+
+- type: entity
+  id: CratePolymerizer
+  parent: CrateChemistrySecure
+  name: ящик с полимеризатором
+  description: Содержит кувшин, в котором находится вещество полимеризатор. Чтобы открыть необходим уровень доступа Химия.
+  components:
+    - type: StorageFill
+      contents:
+        - id: JugPolymerizer
+          amount: 1
+
+- type: cargoProduct
+  id: Polymerizer
+  icon:
+    sprite: Victoria/Cloth/elastanecloth.rsi
+    state: cloth_3
+  product: CratePolymerizer
+  cost: 800
+  category: cargoproduct-category-name-service
+  group: market
+#------------------Сам-------------------------
+- type: entity
+  parent: MaterialBase
+  id: ElastaneCloth
+  name: эластан
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: ElastaneCloth
+    baseLayer: base
+    layerStates:
+    - cloth
+    - cloth_2
+    - cloth_3
+  - type: Sprite
+    sprite: Victoria/Cloth/elastanecloth.rsi
+    state: cloth_3
+    layers:
+    - state: cloth_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ElastaneClothMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: ElastaneCloth
+  name: эластан
+  icon: { sprite: Victoria/Cloth/elastanecloth.rsi, state: cloth_3 }
+  spawn: ElastaneCloth1
+  maxCount: 30
+#------------------Десять эластана--------------------------
+- type: entity
+  parent: ElastaneCloth
+  id: ElastaneCloth10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 10
+#------------------Один эластан--------------------------
+- type: entity
+  parent: ElastaneCloth
+  id: ElastaneCloth1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: ElastaneClothMaterial
+  stackEntity: ElastaneCloth1
+  name: эластан
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/elastanecloth.rsi, state: cloth }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: reaction
+  id: ElastaneCloth
+  impact: Medium
+  minTemp: 325
+  reactants:
+    Polymerizer:
+      amount: 2
+    WeldingFuel:
+      amount: 2
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: ElastaneCloth1
+
+#----------------------------------ПортФаб----------------------------------
+#------------------Плата-------------------------
+- type: entity
+  id: ClothLatheMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: портфаб (машинная плата)
+  components:
+  - type: MachineBoard
+    prototype: ClothLathe
+    stackRequirements:
+      MatterBin: 1
+      Manipulator: 2
+#------------------Сам-------------------------
+- type: entity
+  parent: BaseLathe
+  id: ClothLathe
+  name: портфаб
+  description: Шитьё одежды стало гораздо проще с портфабом! Возможно даже слишком...
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: Victoria/Cloth/clothlathe.rsi
+    snapCardinals: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  - type: Machine
+    board: ClothLatheMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/uniformprinter.ogg
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - ClothMade
+        - CrystalMaterial
+
+#----------------------------------Овца----------------------------------
+- type: entity
+  name: овца
+  parent: SimpleMobBase
+  id: MobSheep
+  description: Пушистая.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: sheep
+      sprite: Victoria/Cloth/sheep.rsi
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - Sheep
+  - type: Reproductive
+    partnerWhitelist:
+      tags:
+      - Sheep
+    offspring:
+    - id: MobSheep
+  - type: ReproductivePartner
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: sheep
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: SolutionContainerManager
+    solutions:
+      udder:
+        maxVol: 250
+        reagents:
+        - ReagentId: SheepWool
+          Quantity: 30
+  - type: Udder
+    reagentId: SheepWool
+    quantityPerUpdate: 25
+    growthDelay: 30
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 5
+    - id: Kidskin10
+      amount: 1
+    - id: Chamois10
+      amount: 1
+  - type: Grammar
+    attributes:
+      gender: female # Here because of UdderComponent
+  - type: InteractionPopup
+    successChance: 0.7
+    interactDelay: 2 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
+    interactSuccessString: petting-success-soft-floofy
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/goat_bah.ogg
+  - type: Perishable
+    molsPerSecondPerUnitMass: 0.0015
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: Body
+    prototype: AnimalRuminant
+  - type: HTN
+    rootTask:
+      task: RuminantCompound
+#------------------Овечья Шерсть-------------------------
+#------------------Грязная-------------------------
+- type: reagent
+  id: SheepWool
+  name: reagent-name-sheep-wool
+  desc: reagent-desc-sheep-wool
+  physicalDesc: reagent-physical-desc-fibrous
+  flavor: fiber
+  color: "#828282"
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        conditions:
+        - !type:OrganType
+          type: Moth
+#------------------Чистая-------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: SheepWoolClean
+  name: овечья шерсть
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: SheepWoolClean
+    baseLayer: base
+    layerStates:
+    - wool
+    - wool_2
+    - wool_3
+  - type: Sprite
+    sprite: Victoria/Cloth/sheepwoolclean.rsi
+    state: wool_3
+    layers:
+    - state: wool_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      SheepWoolCleanMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: SheepWoolClean
+  name: овечья шерсть
+  icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool_3 }
+  spawn: SheepWoolClean1
+  maxCount: 30
+#------------------Десять овечьей шерсти--------------------------
+- type: entity
+  parent: SheepWoolClean
+  id: SheepWoolClean10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: wool
+  - type: Stack
+    count: 10
+#------------------Одна овечья шерсть--------------------------
+- type: entity
+  parent: SheepWoolClean
+  id: SheepWoolClean1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: wool
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: SheepWoolCleanMaterial
+  stackEntity: SheepWoolClean1
+  name: овечья шерсть
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: reaction
+  id: SheepWoolClean
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    Water:
+      amount: 10
+    SheepWool:
+      amount: 10
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: SheepWoolClean10
+
+#--------------------------------------Лайка------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Kidskin
+  name: лайка
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: Kidskin
+    baseLayer: base
+    layerStates:
+    - leather
+    - leather_2
+    - leather_3
+  - type: Sprite
+    sprite: Victoria/Cloth/kidskin.rsi
+    state: leather_3
+    layers:
+    - state: leather_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      KidskinMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Kidskin
+  name: лайка
+  icon: { sprite: Victoria/Cloth/kidskin.rsi, state: leather_3 }
+  spawn: Kidskin1
+  maxCount: 30
+#------------------Десять лаек--------------------------
+- type: entity
+  parent: Kidskin
+  id: Kidskin10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 10
+#------------------Одна лайка--------------------------
+- type: entity
+  parent: Kidskin
+  id: Kidskin1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: KidskinMaterial
+  stackEntity: Kidskin1
+  name: лайка
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/kidskin.rsi, state: leather }
+  price: 0.05
+
+#--------------------------------------Нубук------------------------------------------
+#------------------Сам-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Nubuck
+  name: нубук
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: Nubuck
+    baseLayer: base
+    layerStates:
+    - cloth
+    - cloth_2
+    - cloth_3
+  - type: Sprite
+    sprite: Victoria/Cloth/nubuck.rsi
+    state: cloth_3
+    layers:
+    - state: cloth_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      NubuckMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Nubuck
+  name: нубук
+  icon: { sprite: Victoria/Cloth/nubuck.rsi, state: cloth_3 }
+  spawn: Nubuck1
+  maxCount: 30
+#------------------Десять нубука--------------------------
+- type: entity
+  parent: Nubuck
+  id: Nubuck10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 10
+#------------------Один нубук--------------------------
+- type: entity
+  parent: Nubuck
+  id: Nubuck1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: NubuckMaterial
+  stackEntity: Nubuck1
+  name: нубук
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/nubuck.rsi, state: cloth }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: latheRecipe
+  id: RecipeNubuck
+  result: Nubuck1
+  completetime: 1
+  materials:
+    SmoothSkinMaterial: 200
+    СhromeMaterial: 2000
+
+#--------------------------------------Велюр------------------------------------------
+#------------------Сам-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Velour
+  name: велюр
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: Velour
+    baseLayer: base
+    layerStates:
+    - cloth
+    - cloth_2
+    - cloth_3
+  - type: Sprite
+    sprite: Victoria/Cloth/velour.rsi
+    state: cloth_3
+    layers:
+    - state: cloth_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      VelourMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Velour
+  name: велюр
+  icon: { sprite: Victoria/Cloth/velour.rsi, state: cloth_3 }
+  spawn: Velour1
+  maxCount: 30
+#------------------Десять велюра--------------------------
+- type: entity
+  parent: Velour
+  id: Velour10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 10
+#------------------Один велюр--------------------------
+- type: entity
+  parent: Velour
+  id: Velour1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: cloth
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: VelourMaterial
+  stackEntity: Velour1
+  name: велюр
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/velour.rsi, state: cloth }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: latheRecipe
+  id: RecipeVelour
+  result: Velour1
+  completetime: 1
+  materials:
+    SmoothSkinMaterial: 200
+    SiMaterial: 2000
+
+#--------------------------------------Чепрак------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Сheprak
+  name: чепрак
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: Сheprak
+    baseLayer: base
+    layerStates:
+    - leather
+    - leather_2
+    - leather_3
+  - type: Sprite
+    sprite: Victoria/Cloth/cheprak.rsi
+    state: leather_3
+    layers:
+    - state: leather_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      СheprakMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Сheprak
+  name: чепрак
+  icon: { sprite: Victoria/Cloth/cheprak.rsi, state: leather_3 }
+  spawn: Сheprak1
+  maxCount: 30
+#------------------Десять чепрака--------------------------
+- type: entity
+  parent: Сheprak
+  id: Сheprak10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 10
+#------------------Одна чепрак--------------------------
+- type: entity
+  parent: Сheprak
+  id: Сheprak1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: СheprakMaterial
+  stackEntity: Сheprak1
+  name: чепрак
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/cheprak.rsi, state: leather }
+  price: 0.05
+
+#--------------------------------------Замша------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Chamois
+  name: замша
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: Chamois
+    baseLayer: base
+    layerStates:
+    - leather
+    - leather_2
+    - leather_3
+  - type: Sprite
+    sprite: Victoria/Cloth/chamois.rsi
+    state: leather_3
+    layers:
+    - state: leather_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      ChamoisMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Chamois
+  name: замша
+  icon: { sprite: Victoria/Cloth/chamois.rsi, state: leather_3 }
+  spawn: Chamois1
+  maxCount: 30
+#------------------Десять замши--------------------------
+- type: entity
+  parent: Chamois
+  id: Chamois10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 10
+#------------------Одна замша--------------------------
+- type: entity
+  parent: Chamois
+  id: Chamois1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: ChamoisMaterial
+  stackEntity: Chamois1
+  name: замша
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/chamois.rsi, state: leather }
+  price: 0.05
+
+#------------------Козья Шерсть-------------------------
+#------------------Грязная-------------------------
+- type: reagent
+  id: GoatWool
+  name: reagent-name-goat-wool
+  desc: reagent-desc-sheep-wool
+  physicalDesc: reagent-physical-desc-fibrous
+  flavor: fiber
+  color: "#cba36a"
+  metabolisms:
+    Food:
+      effects:
+      - !type:SatiateHunger
+        conditions:
+        - !type:OrganType
+          type: Moth
+#------------------Чистая-------------------------
+#------------------Сам-------------------------
+- type: entity
+  parent: MaterialBase
+  id: GoatWoolClean
+  name: козья шерсть
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: GoatWoolClean
+    baseLayer: base
+    layerStates:
+    - wool
+    - wool_2
+    - wool_3
+  - type: Sprite
+    sprite: Victoria/Cloth/goatwoolclean.rsi
+    state: wool_3
+    layers:
+    - state: wool_3
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      GoatWoolCleanMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: GoatWoolClean
+  name: козья шерсть
+  icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool_3 }
+  spawn: GoatWoolClean1
+  maxCount: 30
+#------------------Десять козьей шерсти--------------------------
+- type: entity
+  parent: GoatWoolClean
+  id: GoatWoolClean10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: wool
+  - type: Stack
+    count: 10
+#------------------Одна козья шерсть--------------------------
+- type: entity
+  parent: GoatWoolClean
+  id: GoatWoolClean1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: wool
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: GoatWoolCleanMaterial
+  stackEntity: GoatWoolClean1
+  name: козья шерсть
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool }
+  price: 0.05
+#----------------------------------Рецепт----------------------------------
+- type: reaction
+  id: GoatWoolClean
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  reactants:
+    Water:
+      amount: 10
+    GoatWool:
+      amount: 10
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: GoatWoolClean10
+
+#--------------------------------------Анилин------------------------------------------
+#------------------Сама-------------------------
+- type: entity
+  parent: MaterialBase
+  id: Aniline
+  name: анилин
+  description: Сырьё.
+  suffix: Полный, Ткань
+  components:
+  - type: Stack
+    stackType: Aniline
+    baseLayer: base
+    layerStates:
+    - leather
+    - leather_2
+    - leather_3
+  - type: Sprite
+    sprite: Victoria/Cloth/aniline.rsi
+    state: leather_3
+    layers:
+    - state: leather_3
+      map: ["base"]
+  - type: Appearance
+
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      AnilineMaterial: 100
+  - type: Tag
+    tags:
+    - RawMaterial
+    - ClothMade
+#------------------Стак--------------------------
+- type: stack
+  id: Aniline
+  name: анилин
+  icon: { sprite: Victoria/Cloth/aniline.rsi, state: leather_3 }
+  spawn: Chamois1
+  maxCount: 30
+#------------------Десять анилин--------------------------
+- type: entity
+  parent: Aniline
+  id: Aniline10
+  suffix: 10, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 10
+#------------------Одна анилин--------------------------
+- type: entity
+  parent: Aniline
+  id: Aniline1
+  suffix: Один, Ткань
+  components:
+  - type: Sprite
+    state: leather
+  - type: Stack
+    count: 1  
+#----------------------------------Материал----------------------------------
+- type: material
+  id: AnilineMaterial
+  stackEntity: Aniline1
+  name: анилин
+  unit: materials-unit-roll
+  icon: { sprite: Victoria/Cloth/aniline.rsi, state: leather }
+  price: 0.05
+
+- type: entity
+  id: CrateNPCSheep
+  parent: CrateLivestock
+  name: ящик с овцой
+  description: Ящик, содержащий одну овцу.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MobSheep
+        amount: 1
+
+- type: cargoProduct
+  id: LivestockSheep
+  icon:
+    sprite: Victoria/Cloth/sheep.rsi
+    state: sheep
+  product: CrateNPCSheep
+  cost: 1100
+  category: cargoproduct-category-name-livestock
+  group: market
+
+#----------------------------------Новые рецепты для принтера униформы----------------------------------
+
+- type: latheRecipe
+  id: ClothingOuterCoatDetective
+  materials:
+    VelourMaterial: 300
+  result: ClothingOuterCoatDetective
+
+- type: latheRecipe
+  id: ClothingOuterCoatDetectiveLoadoutGrey
+  materials:
+    VelourMaterial: 300
+  result: ClothingOuterCoatDetectiveLoadoutGrey
+
+- type: latheRecipe
+  id: ClothingOuterCoatJensen
+  materials:
+    VelourMaterial: 300
+  result: ClothingOuterCoatJensen
+
+- type: latheRecipe
+  id: ClothingOuterCoatExpensive
+  materials:
+    SheepWoolCleanMaterial: 400
+  result: ClothingOuterCoatExpensive
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitTailor
+  materials:
+    CottonClothMaterial: 300
+  result: ClothingUniformJumpsuitTailor
+
+- type: latheRecipe
+  id: ClothingHeadHatBeaverHat
+  materials:
+    CottonPaperClothMaterial: 100
+  result: ClothingHeadHatBeaverHat
+
+- type: latheRecipe
+  id: ClothingShoesBootsWork
+  materials:
+    VelourMaterial: 100
+  result: ClothingShoesBootsWork
+
+- type: latheRecipe
+  id: ClothingShoesBootsLaceup
+  materials:
+    NubuckMaterial: 100
+  result: ClothingShoesBootsLaceup
+
+- type: latheRecipe
+  id: ClothingBackpack
+  materials:
+    ChamoisMaterial: 200
+  result: ClothingBackpack
+
+- type: latheRecipe
+  id: ClothingBackpackSatchel
+  materials:
+    СheprakMaterial: 200
+  result: ClothingBackpackSatchel

@@ -1,0 +1,106 @@
+- type: entity
+  id: SpawnPointTailor
+  parent: SpawnPointJobBase
+  name: портной
+  components:
+  - type: SpawnPoint
+    job_id: Tailor
+  - type: Sprite
+    layers:
+      - state: green
+      - state: tailor
+
+- type: job
+  id: Tailor
+  name: портной
+  description: Заведуйте модой на станции. Донимайте ботаников своими запросами.
+  playTimeTracker: JobTailor
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 3600 #1 hrs # Corvax-RoleTime
+  startingGear: TailorGear
+  icon: "JobIconTailor"
+  supervisors: job-supervisors-hop
+  access:
+  - Service
+  - Maintenance
+
+- type: playTimeTracker
+  id: JobTailor
+
+- type: startingGear
+  id: TailorGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    id: TailorPDA
+    ears: ClothingHeadsetService
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTailor
+  icon:
+    sprite: /Textures/Victoria/Cloth/Tailor/tailor_icon.rsi
+    state: Tailor
+  jobName: портной
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTailor
+  name: костюм портного
+  description: Классический костюм уважающего себя портного.
+  components:
+  - type: Sprite
+    sprite: Victoria/Cloth/Tailor/tailor_suit.rsi
+  - type: Clothing
+    sprite: Victoria/Cloth/Tailor/tailor_suit.rsi
+
+- type: roleLoadout
+  id: JobTailor
+  groups:
+  - Inventory # Corvax-Loadouts
+  - GroupTankHarness
+  - TailorJumpsuit
+  - CommonBackpack
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: loadoutGroup
+  id: TailorJumpsuit
+  name: loadout-group-tailor-jumpsuit
+  loadouts:
+  - TailorJumpsuit
+
+- type: loadout
+  id: TailorJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitTailor
+
+- type: entity
+  parent: BasePDA
+  id: TailorPDA
+  name: КПК портного
+  description: Пахнет хлопком.
+  components:
+  - type: Pda
+    id: TailorIDCard
+    state: pda-tailor
+  - type: PdaBorderColor
+    borderColor: "#babaa8"
+    accentVColor: "#9e9e9e"
+  - type: Icon
+    state: pda-tailor
+
+- type: entity
+  parent: PassengerIDCard
+  id: TailorIDCard
+  name: ID карта портного
+  components:
+  - type: PresetIdCard
+    job: Tailor
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idtailor

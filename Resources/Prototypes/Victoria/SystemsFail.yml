@@ -1,0 +1,474 @@
+#---------------------------------------------------------------------------------Горелое---------------------------
+#-----------------------------------------------------------------Сгоревший конденсатор---------------------------
+- type: Tag
+  id: DeffectCapacitorStockPart
+
+- type: entity
+  id: DeffectCapacitorStockPart
+  name: Сгоревший конденсатор
+  parent: BaseStockPart
+  description: Раньше это был хороший прибор, способный накапливать заряд. Теперь это бесполезный сплав материалов.
+  suffix: Rating 1
+  components:
+    - type: Sprite
+      sprite: Victoria/SystemsFail/fail_module.rsi
+      state: capacitor_fail
+    - type: Tag
+      tags:
+        - DeffectCapacitorStockPart
+        - Trash
+    - type: Stack
+      stackType: DeffectCapacitor
+
+- type: stack
+  id: DeffectCapacitor
+  name: Сгоревший конденсатор
+  icon: { sprite: "Victoria/SystemsFail/fail_module.rsi", state: capacitor_fail }
+  spawn: DeffectCapacitorStockPart
+  maxCount: 10
+#-----------------------------------------------------------------Сгоревший провод--------------------------------
+- type: entity
+  parent: BaseItem
+  id: DeffectCableApcStack
+  name: Сгоревший кабель
+  description: Кажется этот кабель "почувствовал запах Ампера".
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - CableCoil
+    - Trash
+  - type: Sprite
+    sprite: Victoria/SystemsFail/fail_cable-coils.rsi
+    state: coilfail-30
+    layers:
+    - state: coilfail-30
+      map: ["base"]
+  - type: Item
+    sprite: Victoria/SystemsFail/fail_cable-coils.rsi
+    size: Small
+    storedRotation: -90
+    heldPrefix: coilfail
+  - type: Stack
+    stackType: DeffectCable
+    baseLayer: base
+    layerStates:
+    - coilfail-10
+    - coilfail-20
+    - coilfail-30
+  - type: Appearance
+  - type: Clickable
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 0
+  - type: Extractable
+    grindableSolutionName: deffectcable
+
+- type: entity
+  parent: DeffectCableApcStack
+  id: DeffectCableApcStack1
+  suffix: 1
+  components:
+  - type: Sprite
+    state: coilfail-10
+  - type: Stack
+    count: 1
+    
+- type: stack
+  id: DeffectCable
+  name: Сгоревший кабель
+  icon: { sprite: "Victoria/SystemsFail/fail_cable-coils.rsi", state: coilfail-30 }
+  spawn: DeffectCableApcStack1
+  maxCount: 30
+#-----------------------------------------------------------------Сгоревшая подстанция-----------------------------
+#-------------------------------------------------Горелая плата--------------------------------------
+- type: entity
+  id: DeffectSubstationMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Сгоревшая плата
+  description: Кажется, в этой платы был маленький деффект. А может всему виной скачок напряжения. Аномалии... Может ионная буря?
+  suffix: Подстанция
+  components:
+    - type: Sprite
+      sprite: Victoria/SystemsFail/fail_module.rsi
+      state: power_mod_fail
+    - type: MachineBoard
+      prototype: DeffectSubstation
+      stackRequirements:
+        DeffectCapacitor: 1
+        DeffectCable: 5
+        CableHV: 5
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 200
+    - type: StaticPrice
+      price: 0
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  id: DeffectSubstation
+  parent: [ BaseMachine, ConstructibleMachine ]
+  name: подстанция
+  description: Лампочки не горят. Да и запах странный. И цвет будто бы другой...
+  suffix: Сгоревший
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite 
+    sprite: Structures/Power/substation.rsi
+    snapCardinals: true
+    layers:
+    - state: substation
+  - type: Machine
+    board: DeffectSubstationMachineCircuitboard
+  - type: AtmosDevice
+  - type: GasMiner
+    spawnGas: CarbonDioxide
+    maxExternalPressure: 300
+    spawnAmount: 2
+    spawnTemperature: 340
+  - type: PowerMonitoringDevice
+    group: Substation
+    sprite: Structures/Power/substation.rsi
+    state: substation
+#-----------------------------------------------------------------Сгоревший СМЭС-----------------------------
+#-------------------------------------------------Горелая плата--------------------------------------
+- type: entity
+  id: DeffectSMESMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Сгоревшая плата
+  description: Кажется, в этой платы был маленький деффект. А может всему виной скачок напряжения. Аномалии... Может ионная буря?
+  suffix: СМЭС
+  components:
+    - type: Sprite
+      sprite: Victoria/SystemsFail/fail_module.rsi
+      state: power_mod_fail
+    - type: MachineBoard
+      prototype: DeffectSMES
+      stackRequirements:
+        DeffectCapacitor: 1
+        DeffectCable: 7
+        CableHV: 3
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  id: DeffectSMES
+  parent: [ BaseMachine, ConstructibleMachine ]
+  name: СМЭС
+  description: Лампочки не горят. Да и запах странный. И цвет будто бы другой...
+  suffix: Сгоревший
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite 
+    sprite: Structures/Power/smes.rsi
+    snapCardinals: true
+    layers:
+    - state: smes
+  - type: Machine
+    board: DeffectSMESMachineCircuitboard
+  - type: AtmosDevice
+  - type: GasMiner
+    spawnGas: CarbonDioxide
+    maxExternalPressure: 300
+    spawnAmount: 2
+    spawnTemperature: 340
+  - type: PowerMonitoringDevice
+    group: SMES
+    collectionName: smes
+    sprite: Structures/Power/smes.rsi
+    state: smes
+#-----------------------------------------------------------------Сгоревшый ЛКП--------------------------------
+#-------------------------------------------------Горелая плата--------------------------------------
+- type: entity
+  id: DeffectAPCElectronics
+  parent: BaseElectronics
+  name: Сгоревшая плата
+  description: Кажется, в этой платы был маленький деффект. А может всему виной скачок напряжения. Аномалии... Может ионная буря?
+  suffix: ЛКП
+  components:
+    - type: Sprite
+      sprite: Victoria/SystemsFail/fail_module.rsi
+      state: power_mod_fail
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 50
+    - type: StaticPrice
+      price: 0
+    - type: Stack
+      stackType: DeffectAPCElectronics
+      count: 1
+    - type: Material
+    
+- type: stack
+  id: DeffectAPCElectronics
+  name: сгоревшая плата лкп
+  icon: { sprite: Victoria/SystemsFail/fail_module.rsi, state: power_mod_fail }
+  spawn: DeffectAPCElectronics
+  maxCount: 1
+
+- type: material
+  id: DeffectAPCElectronics
+  stackEntity: DeffectAPCElectronics
+  name: сгоревшая плата лкп
+  icon: { sprite: Victoria/SystemsFail/fail_module.rsi, state: power_mod_fail }
+  price: 1 
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  id: DeffectBaseAPC
+  name: ЛКП
+  description: Лампочки не горят. Да и запах странный. И цвет будто бы другой...
+  suffix: Сгоревший
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: Structures/Power/apc.rsi
+    layers:
+    - state: broken
+  - type: Appearance
+  - type: PowerMonitoringDevice
+    group: APC
+    collectionName: apc
+    sprite: Structures/Power/apc.rsi
+    state: broken
+  - type: Construction
+    graph: APC
+    node: deffectapc
+  - type: WallMount
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: StaticPrice
+    price: 0
+#---------------------------------------------------------------------------------Повышеная надёжность---------------------------
+#-----------------------------------------------------------------Надёжная подстанция-----------------------------
+#-------------------------------------------------Плата--------------------------------------
+- type: entity
+  id: ReliableSubstationMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Плата подстанции повышенной надёжности
+  description: Электронная плата для подстанции с компонентами для увеличения надёжности.
+  components:
+    - type: MachineBoard
+      prototype: ReliableSubstation
+      stackRequirements:
+        Capacitor: 2
+        CableMV: 5
+        CableHV: 5
+        Cable: 5
+      componentRequirements:
+        PowerCell:
+          amount: 2
+          defaultPrototype: PowerCellSmall
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 200
+      chemicalComposition:
+        Silicon: 40
+    - type: StaticPrice
+      price: 70
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  parent: SubstationBasic
+  id: ReliableSubstation
+  name: подстанция
+  description: Понижает напряжение подаваемого в него электричества.
+  suffix: Надёжная
+  components:
+  - type: Machine
+    board: ReliableSubstationMachineCircuitboard
+  - type: RandomChangeTime
+    time: 7260
+    prob: 0.25
+    entity: DeffectSubstation
+#-----------------------------------------------------------------Надёжный СМЭС-----------------------------
+#-------------------------------------------------Плата--------------------------------------
+- type: entity
+  id: ReliableSMESMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Плата СМЭС повышенной надёжности
+  description: Электронная плата для СМЭС с компонентами для увеличения надёжности.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: power_mod
+    - type: MachineBoard
+      prototype: ReliableSMES
+      stackRequirements:
+        Capacitor: 2
+        CableHV: 10
+        Cable: 5
+      componentRequirements:
+        PowerCell:
+          amount: 5
+          defaultPrototype: PowerCellSmall
+    - type: StaticPrice
+      price: 70
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  parent: SMESBasic
+  id: ReliableSMES
+  name: СМЭС
+  description: Сверхпроводящая Магнитная Энергонакопительная Станция (СМЭС) большой ёмкости.
+  suffix: Надёжный
+  components:
+  - type: Machine
+    board: ReliableSMESMachineCircuitboard
+  - type: RandomChangeTime
+    time: 7920
+    prob: 0.2
+    entity: DeffectSMES
+#-----------------------------------------------------------------Надёжный ЛКП--------------------------------
+#-------------------------------------------------Плата--------------------------------------
+- type: entity
+  id: ReliableAPCElectronics
+  parent: BaseElectronics
+  name: Плата ЛКП повышенной надёжности
+  description: Микросхема, используемая в создании ЛКП. Дополнена компонентами, повышающими надёжность.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: charger_APC
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 50
+      chemicalComposition:
+        Silicon: 40
+    - type: StaticPrice
+      price: 50
+    - type: Stack
+      stackType: ReliableAPCElectronics
+      count: 1
+    - type: Material
+    
+- type: stack
+  id: ReliableAPCElectronics
+  name: плата ЛКП повышенной надёжности
+  icon: { sprite: Objects/Misc/module.rsi, state: charger_APC }
+  spawn: ReliableAPCElectronics
+  maxCount: 1
+
+- type: material
+  id: ReliableAPCElectronics
+  stackEntity: ReliableAPCElectronics
+  name: плата ЛКП повышенной надёжности
+  icon: { sprite: Objects/Misc/module.rsi, state: charger_APC }
+  price: 1 
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  parent: APCBasic
+  id: ReliableAPC
+  name: ЛКП
+  description: Терминал управления локальными электрическими системами.
+  suffix: Надёжный
+  components:
+  - type: Clickable
+  - type: RandomChangeTime
+    time: 6600
+    prob: 0.35
+    entity: DeffectBaseAPC
+  - type: Construction
+    graph: APC
+    node: reliableapc
+#-------------------------------------------------Изготовление--------------------------------------------
+- type: construction
+  name: ReliableAPC
+  id: ReliableAPC
+  graph: APC
+  startNode: start
+  targetNode: reliableapc
+  category: construction-category-utilities
+  description: "Area Power Controller (APC). Controls power. In an area."
+  icon:
+    sprite: Structures/Power/apc.rsi
+    state: base
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+#-----------------------------------------------------------------Исследование----------------------------------------
+- type: technology
+  id: ReliablePowerMachineCircuitboard
+  name: research-technology-reliable-power-machines
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: charger_APC
+  discipline: Industrial
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ReliableSubstationMachineCircuitboard
+  - ReliableSMESMachineCircuitboard
+  - ReliableAPCElectronics
+#-----------------------------------------------------------------Админ Приборы--------------------------------
+#-----------------------------------------------------------------Надёжная подстанция-----------------------------
+#-------------------------------------------------Плата--------------------------------------
+- type: entity
+  id: AdminSubstationMachineCircuitboard
+  parent: SubstationMachineCircuitboard
+  name: Плата подстанции сверхвысокой надёжности
+  description: Электронная плата для подстанции с компонентами для увеличения надёжности.
+  suffix: Админ
+  components:
+  - type: MachineBoard
+    prototype: AdminSubstation
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  parent: SubstationBasic
+  id: AdminSubstation
+  name: подстанция
+  description: Понижает напряжение подаваемого в него электричества.
+  suffix: Админ
+  components:
+  - type: Machine
+    board: AdminSubstationMachineCircuitboard
+  - type: RandomChangeTime
+    time: 99999
+    prob: 0
+    entity: DeffectSubstation
+#-----------------------------------------------------------------Надёжный ЛКП--------------------------------
+#-------------------------------------------------Плата--------------------------------------
+- type: entity
+  id: AdminAPCElectronics
+  parent: BaseElectronics
+  name: Плата ЛКП сверхвысокой надёжности
+  description: Микросхема, используемая в создании ЛКП. Дополнена компонентами, повышающими надёжность.
+  suffix: Админ
+  components:
+    - type: Stack
+      stackType: AdminAPCElectronics
+      count: 1
+    - type: Material
+    
+- type: stack
+  id: AdminAPCElectronics
+  name: плата ЛКП сверхвысокой надёжности
+  icon: { sprite: Objects/Misc/module.rsi, state: charger_APC }
+  spawn: AdminAPCElectronics
+  maxCount: 1
+
+- type: material
+  id: AdminAPCElectronics
+  stackEntity: AdminAPCElectronics
+  name: плата ЛКП сверхвысокой надёжности
+  icon: { sprite: Objects/Misc/module.rsi, state: charger_APC }
+  price: 1 
+#-------------------------------------------------Машина--------------------------------------------
+- type: entity
+  parent: APCBasic
+  id: AdminAPC
+  name: ЛКП
+  description: Терминал управления локальными электрическими системами.
+  suffix: Админ
+  components:
+  - type: RandomChangeTime
+    time: 99999
+    prob: 0
+    entity: DeffectBaseAPC
+  - type: Construction
+    graph: APC
+    node: adminapc

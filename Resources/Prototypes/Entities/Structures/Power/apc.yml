@@ -143,6 +143,11 @@
     priority: 1
   - type: StaticPrice
     price: 500
+  - type: RandomChangeTime
+    time: 2640
+    prob: 0.5
+    entity: DeffectBaseAPC
+    
 
 # APC under construction
 - type: entity

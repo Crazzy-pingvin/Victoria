@@ -40,9 +40,6 @@ reagent-desc-arnold-palmer = Now watch this drive.
 reagent-name-milk = milk
 reagent-desc-milk = An opaque white liquid produced by the mammary glands of mammals.
 
-reagent-name-milk-goat = goats milk
-reagent-desc-milk-goat = An opaque white liquid produced by a goat. High buttermilk content.
-
 reagent-name-milk-oat = oat milk
 reagent-desc-milk-oat = Surprisingly tasty.
 

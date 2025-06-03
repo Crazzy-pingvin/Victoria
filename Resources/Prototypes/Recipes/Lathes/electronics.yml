@@ -604,6 +604,33 @@
   result: SMESMachineCircuitboard
 
 - type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ReliableSubstationMachineCircuitboard
+  result: ReliableSubstationMachineCircuitboard
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 400
+    PulseCircuitMaterial: 400
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ReliableAPCElectronics
+  result: ReliableAPCElectronics
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 300
+    PulseCircuitMaterial: 500
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ReliableSMESMachineCircuitboard
+  result: ReliableSMESMachineCircuitboard
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 500
+    PulseCircuitMaterial: 300
+
+- type: latheRecipe
   parent: BaseRecipeSiСeramics_3
   id: PortableGeneratorPacmanMachineCircuitboard
   result: PortableGeneratorPacmanMachineCircuitboard

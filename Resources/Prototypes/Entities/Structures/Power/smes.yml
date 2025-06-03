@@ -90,6 +90,10 @@
       sendBroadcastAttemptEvent: true
       examinableAddress: true
     - type: WiredNetworkConnection
+    - type: RandomChangeTime
+      time: 5280
+      prob: 0.4
+      entity: DeffectSMES
 
 # SMES' in use
 

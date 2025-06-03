@@ -12,31 +12,29 @@
   parent: BaseJumpsuitRecipe
   id: BaseCommandJumpsuitRecipe
   materials:
-    Cloth: 300
-    Durathread: 100
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
 
 - type: latheRecipe
   abstract: true
   id: BaseCoatRecipe
   completetime: 3.2 # don't ask why its faster than a jumpsuit??
   materials:
-    Cloth: 500
-    Durathread: 200
+    SheepWoolCleanMaterial: 500
 
 - type: latheRecipe
   abstract: true
   parent: BaseCoatRecipe
   id: BaseCommandCoatRecipe
   materials:
-    Cloth: 500
-    Durathread: 300
+    SheepWoolCleanMaterial: 500
 
 - type: latheRecipe
   abstract: true
   id: BaseHatRecipe
   completetime: 2
   materials:
-    Cloth: 100
+    CottonPaperClothMaterial: 200
 
 - type: latheRecipe
   abstract: true
@@ -50,8 +48,7 @@
   parent: BaseHatRecipe
   id: BaseCommandHatRecipe
   materials:
-    Cloth: 100
-    Durathread: 50
+    CottonPaperClothMaterial: 300
 
 - type: latheRecipe
   abstract: true
@@ -76,71 +73,108 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitBartender
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpsuitBartender
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtBartender
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpskirtBartender
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCaptain
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitCaptain
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCapFormal
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 300
   result: ClothingUniformJumpsuitCapFormal
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtCapFormalDress
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 300
   result: ClothingUniformJumpskirtCapFormalDress
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtCaptain
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtCaptain
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitCargo
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpsuitCargo
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtCargo
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpskirtCargo
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitSalvageSpecialist
+  materials:
+    ElastaneClothMaterial: 300
   result: ClothingUniformJumpsuitSalvageSpecialist
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCentcomAgent
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 400
   result: ClothingUniformJumpsuitCentcomAgent
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCentcomFormal
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 500
   result: ClothingUniformJumpsuitCentcomFormal
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtCentcomFormalDress
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 500
   result: ClothingUniformJumpskirtCentcomFormalDress
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCentcomOfficer
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 400
   result: ClothingUniformJumpsuitCentcomOfficer
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCentcomOfficial
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 400
   result: ClothingUniformJumpsuitCentcomOfficial
 
 ## CE
@@ -148,21 +182,33 @@
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitChiefEngineer
+  materials:
+    ElastaneClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitChiefEngineer
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtChiefEngineer
+  materials:
+    ElastaneClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtChiefEngineer
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitChiefEngineerTurtle
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitChiefEngineerTurtle
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtChiefEngineerTurtle
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtChiefEngineerTurtle
 
 ## Chaplain
@@ -182,11 +228,15 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitChef
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpsuitChef
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtChef
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpskirtChef
 
 ## Chemist
@@ -194,11 +244,15 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitChemistry
+  materials:
+    ElastaneClothMaterial: 300
   result: ClothingUniformJumpsuitChemistry
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtChemistry
+  materials:
+    ElastaneClothMaterial: 300
   result: ClothingUniformJumpskirtChemistry
 
 ## Clown
@@ -213,21 +267,33 @@
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCMO
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitCMO
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtCMO
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtCMO
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitCMOTurtle
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitCMOTurtle
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtCMOTurtle
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtCMOTurtle
 
 ## Detective
@@ -235,11 +301,15 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitDetective
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpsuitDetective
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtDetective
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpskirtDetective
 
 ## Engineer
@@ -247,11 +317,15 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitEngineering
+  materials:
+    ElastaneClothMaterial: 300
   result: ClothingUniformJumpsuitEngineering
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtEngineering
+  materials:
+    ElastaneClothMaterial: 300
   result: ClothingUniformJumpskirtEngineering
 
 ## HoP
@@ -259,11 +333,17 @@
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHoP
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitHoP
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtHoP
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtHoP
 
 ## HoS
@@ -271,51 +351,81 @@
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHoS
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitHoS
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtHoS
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtHoS
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHosFormal
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 300
   result: ClothingUniformJumpsuitHosFormal
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtHosFormal
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 300
   result: ClothingUniformJumpskirtHosFormal
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHoSParadeMale
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 400
   result: ClothingUniformJumpsuitHoSParadeMale
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtHoSParadeMale
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 400
   result: ClothingUniformJumpskirtHoSParadeMale
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHoSAlt
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitHoSAlt
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHoSBlue
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitHoSBlue
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitHoSGrey
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitHoSGrey
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtHoSAlt
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtHoSAlt
 
 ## Hydroponics
@@ -347,6 +457,9 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitLawyerBlack
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitLawyerBlack
 
 ## Librarian
@@ -354,11 +467,17 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitLibrarian
+  materials:
+    CottonClothMaterial: 300
+    SheepWoolCleanMaterial: 100
   result: ClothingUniformJumpsuitLibrarian
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtColorLightBrown #Librarian
+  materials:
+    CottonClothMaterial: 300
+    SheepWoolCleanMaterial: 100
   result: ClothingUniformJumpskirtColorLightBrown #Librarian
 
 ## Medical Doctor
@@ -390,6 +509,8 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitMusician
+  materials:
+    CottonClothMaterial: 300
   result: ClothingUniformJumpsuitMusician
 
 ## Operative
@@ -397,11 +518,15 @@
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpsuitOperative
+  materials:
+    SheepWoolCleanMaterial: 300
   result: ClothingUniformJumpsuitOperative
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformJumpskirtOperative
+  materials:
+    SheepWoolCleanMaterial: 100
   result: ClothingUniformJumpskirtOperative
 
 ## Paramedic
@@ -433,26 +558,41 @@
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitQM
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitQM
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitQMFormal
+  materials:
+    CottonClothMaterial: 100
+    AnilineMaterial: 300
   result: ClothingUniformJumpsuitQMFormal
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtQM
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtQM
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitQMTurtleneck
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitQMTurtleneck
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtQMTurtleneck
+  materials:
+    SheepWoolCleanMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtQMTurtleneck
 
 ## RD
@@ -460,11 +600,17 @@
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpsuitResearchDirector
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpsuitResearchDirector
 
 - type: latheRecipe
   parent: BaseCommandJumpsuitRecipe
   id: ClothingUniformJumpskirtResearchDirector
+  materials:
+    CottonClothMaterial: 200
+    AnilineMaterial: 100
   result: ClothingUniformJumpskirtResearchDirector
 
 ## Scientist
@@ -833,41 +979,57 @@
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedGreen
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedGreen
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedBlue
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedBlue
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedRed
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedRed
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedBrown
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedBrown
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedLightBlue
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedLightBlue
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedOrange
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedOrange
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedBlack
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedBlack
 
 - type: latheRecipe
   parent: BaseNeckClothingRecipe
   id: ClothingNeckScarfStripedPurple
+  materials:
+    SheepWoolCleanMaterial: 200
   result: ClothingNeckScarfStripedPurple
 
 # Carpets

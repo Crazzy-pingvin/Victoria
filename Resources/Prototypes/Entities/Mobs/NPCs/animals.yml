@@ -830,6 +830,10 @@
     spawned:
     - id: FoodMeat
       amount: 5
+    - id: SmoothSkin10
+      amount: 1
+    - id: Сheprak10
+      amount: 1
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -974,12 +978,12 @@
       udder:
         maxVol: 250
         reagents:
-        - ReagentId: MilkGoat
+        - ReagentId: GoatWool
           Quantity: 30
       wool:
         maxVol: 250
   - type: Udder
-    reagentId: MilkGoat
+    reagentId: GoatWool
     quantityPerUpdate: 25
     growthDelay: 20
   - type: Wooly
@@ -995,6 +999,10 @@
     spawned:
     - id: FoodMeat
       amount: 4
+    - id: Chamois10
+      amount: 1
+    - id: Aniline10
+      amount: 1
   - type: Grammar
     attributes:
       gender: female # Here because of UdderComponent
@@ -3368,6 +3376,10 @@
     spawned:
     - id: FoodMeatBacon
       amount: 6
+    - id: SmoothSkin10
+      amount: 1
+    - id: Chamois10
+      amount: 1
   - type: Grammar
     attributes:
       gender: epicene

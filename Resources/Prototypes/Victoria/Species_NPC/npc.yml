@@ -1,0 +1,238 @@
+# Любой
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Diona
+  id: SimpleHumanoidHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+- type: entity
+  id: SimpleHumanoidHostile
+  name: простой враждебный NPC
+  suffix: Любой
+  components:
+    - type: Sprite
+      sprite: Victoria/Species_NPC/simple_humanoid_hostile.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: SimpleHumanoidHostile
+
+# Человек
+- type: entity
+  name: простой враждебный NPC
+  suffix: Человек
+  parent: BaseMobHuman
+  id: SimpleHumanHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_first
+    - names_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+      
+# Унатх
+# Траблы с наименованием :p
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Vox
+    - Arachnid
+    - Diona
+    - Dwarf
+    - Human 
+    - Moth
+    - SlimePerson
+    - Vulpkanin
+  id: SimpleReptilianHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+- type: entity
+  id: SimpleReptilianHostile
+  name: простой враждебный NPC
+  suffix: Унатх
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/Reptilian/parts.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: SimpleReptilianHostile
+
+# Ниан
+- type: entity
+  name: простой враждебный NPC
+  suffix: Ниан
+  parent: BaseMobMoth
+  id: SimpleMothHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_moth_first_male
+    - names_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+# Арахнид
+- type: entity
+  name: простой враждебный NPC
+  suffix: Арахнид
+  parent: BaseMobArachnid
+  id: SimpleArachnidHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_arachnid_first
+    - names_arachnid_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+      
+# Слаймолюд
+- type: entity
+  name: простой враждебный NPC
+  suffix: Слаймолюд
+  parent: BaseMobSlimePerson
+  id: SimpleSlimePersonHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_first
+    - names_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+# Дворф
+- type: entity
+  name: простой враждебный NPC
+  suffix: Дворф
+  parent: BaseMobDwarf
+  id: SimpleDwarfHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_first
+    - names_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+# Скелет
+- type: entity
+  name: простой враждебный NPC
+  suffix: Скелет
+  parent: BaseMobSkeletonPerson
+  id: SimpleSkeletonHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - skeletonNamesFirst
+    - names_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+# Вокс
+- type: entity
+  name: простой враждебный NPC
+  suffix: Вокс
+  parent: BaseMobVox
+  id: SimpleVoxHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_vox
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound
+
+# Вульпакин
+- type: entity
+  name: простой враждебный NPC
+  suffix: Вульпакин
+  parent: BaseMobVulpkanin
+  id: SimpleVulpkaninHostile
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - names_vulp_first_male
+    - names_vulp_last
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHumanoidHostileCompound

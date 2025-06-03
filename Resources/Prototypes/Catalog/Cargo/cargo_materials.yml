@@ -49,16 +49,6 @@
   group: market
 
 - type: cargoProduct
-  id: MaterialTextiles
-  icon:
-    sprite: Objects/Materials/materials.rsi
-    state: cloth_3
-  product: CrateMaterialTextiles
-  cost: 1500
-  category: cargoproduct-category-name-materials
-  group: market
-
-- type: cargoProduct
   id: MaterialPlasma
   icon:
     sprite: Objects/Materials/Sheets/other.rsi

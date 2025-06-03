@@ -11,7 +11,7 @@ materials-plasteel = пласталь
 # Other
 materials-biomass = биомасса
 materials-cardboard = картон
-materials-cloth = ткань
+materials-cloth = льняная ткань
 materials-durathread = дюраткань
 materials-plasma = плазма
 materials-plastic = пластик

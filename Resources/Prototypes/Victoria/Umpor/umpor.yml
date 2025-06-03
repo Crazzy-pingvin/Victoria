@@ -3011,109 +3011,105 @@
   result: UmporUniformSoldier
   completetime: 3
   materials:
-    Cloth: 300
+    SheepWoolCleanMaterial: 300
 
 - type: latheRecipe
   id: UmporUniformOficier
   result: UmporUniformOficier
   completetime: 3
   materials:
-    Cloth: 400
+    SheepWoolCleanMaterial: 400
 
 - type: latheRecipe
   id: UmporUniformMedic
   result: UmporUniformMedic
   completetime: 3
   materials:
-    Cloth: 300
+    SheepWoolCleanMaterial: 300
 
 - type: latheRecipe
   id: UmporUniformEngineer
   result: UmporUniformEngineer
   completetime: 3
   materials:
-    Cloth: 300
+    SheepWoolCleanMaterial: 300
 
 - type: latheRecipe
   id: UmporUniformLogist
   result: UmporUniformLogist
   completetime: 3
   materials:
-    Cloth: 300
+    SheepWoolCleanMaterial: 300
     
 - type: latheRecipe
   id: UmporUniformMine
   result: UmporUniformMine
   completetime: 3
   materials:
-    Cloth: 300
+    SheepWoolCleanMaterial: 300
 #-------------------Рюкзак------------- 
 - type: latheRecipe
   id: UmporBackpack
   result: UmporBackpack
   completetime: 2
   materials:
-    Cloth: 200
+    SheepWoolCleanMaterial: 200
     
 - type: latheRecipe
   id: UmporBackpackMine
   result: UmporBackpackMine
   completetime: 2
   materials:
-    Cloth: 300
+    SheepWoolCleanMaterial: 300
 #-------------------Шапки------------- 
 - type: latheRecipe
   id: UmporBeret
   result: UmporBeret
   completetime: 1
   materials:
-    Cloth: 100
+    SheepWoolCleanMaterial: 100
 
 - type: latheRecipe
   id: UmporCap
   result: UmporCap
   completetime: 1.5
   materials:
-    Cloth: 150
+    SheepWoolCleanMaterial: 150
 
 - type: latheRecipe
   id: UmporCapP
   result: UmporCapP
   completetime: 1
   materials:
-    Cloth: 100
+    SheepWoolCleanMaterial: 100
 #-------------------Пояса------------- 
 - type: latheRecipe
   id: UmporBeltEng
   result: UmporBeltEng
   completetime: 2
   materials:
-    Cloth: 100
-    Durathread: 100
+    SheepWoolCleanMaterial: 100
 
 - type: latheRecipe
   id: UmporeBeltAssault
   result: UmporeBeltAssault
   completetime: 2
   materials:
-    Cloth: 100
-    Durathread: 100
+    SheepWoolCleanMaterial: 100
 
 - type: latheRecipe
   id: UmporeBeltMed
   result: UmporeBeltMed
   completetime: 2
   materials:
-    Cloth: 100
-    Durathread: 100
+    SheepWoolCleanMaterial: 100
 #-------------------Броня------------- 
 - type: latheRecipe
   id: UmporArmorBasic
   result: UmporArmorBasic
   completetime: 6
   materials:
-    Cloth: 100
-    Durathread: 200
+    SheepWoolCleanMaterial: 100
     Steel: 400
 
 - type: latheRecipe
@@ -3121,8 +3117,7 @@
   result: UmporArmorMiddle
   completetime: 8
   materials:
-    Cloth: 100
-    Durathread: 300
+    SheepWoolCleanMaterial: 300
     Steel: 600
 
 - type: latheRecipe
@@ -3130,7 +3125,7 @@
   result: UmporHelmet
   completetime: 4
   materials:
-    Durathread: 100
+    SheepWoolCleanMaterial: 100
     Steel: 300
 #-----------------------------Техфаб------------------ 
 - type: entity

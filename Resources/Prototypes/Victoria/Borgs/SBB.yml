@@ -1,0 +1,26 @@
+#===борг-тип=====
+- type: borgType
+  id: defender
+  dummyPrototype: BorgChassisDefender
+  extraModuleCount: 4
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - BorgModuleDefender
+  defaultModules:
+  - BorgModuleDisabler
+  - BorgModuleHoloprojector
+  - BorgModulShildWeek
+  - BorgModuleTool
+
+  radioChannels:
+  - Science
+  - Security
+
+  inventoryTemplateId: borgShort
+  spriteBodyState: defender
+  spriteHasMindState: defender_e
+  spriteNoMindState: defender_e_r
+  spriteToggleLightState: defender_l
+  petSuccessString: petting-success-defender-cyborg
+  petFailureString: petting-failure-defender-cyborg

@@ -3162,66 +3162,63 @@
   result: NoocUniformNiz
   completetime: 3
   materials:
-    Cloth: 300
+    ElastaneClothMaterial: 300
 
 - type: latheRecipe
   id: NoocUniformVis
   result: NoocUniformVis
   completetime: 3
   materials:
-    Durathread: 300
+    ElastaneClothMaterial: 300
 
 - type: latheRecipe
   id: NoocUniformSr
   result: NoocUniformSr
   completetime: 3
   materials:
-    Cloth: 300
+    ElastaneClothMaterial: 300
 #-------------------Рюкзак-------------
 - type: latheRecipe
   id: NoocBackpack
   result: NoocBackpack
   completetime: 2
   materials:
-    Cloth: 200
+    ElastaneClothMaterial: 200
 
 - type: latheRecipe
   id: NoocSatchels
   result: NoocSatchels
   completetime: 2
   materials:
-    Cloth: 100
-    Durathread: 100
+    ElastaneClothMaterial: 100
 #-------------------Шапка и плащ-------------
 - type: latheRecipe
   id: NoocCap
   result: NoocCap
   completetime: 1
   materials:
-    Durathread: 100
+    ElastaneClothMaterial: 100
 
 - type: latheRecipe
   id: NoocBeret
   result: NoocBeret
   completetime: 1
   materials:
-    Cloth: 100
+    ElastaneClothMaterial: 100
 
 - type: latheRecipe
   id: NoocCloak
   result: NoocCloak
   completetime: 1
   materials:
-    Durathread: 100
-    Cloth: 300
+    ElastaneClothMaterial: 300 
 
 - type: latheRecipe
   id: NoocCloakStelth
   result: NoocCloakStelth
   completetime: 3
   materials:
-    Durathread: 100
-    Cloth: 300
+    ElastaneClothMaterial: 400  
     Gold: 100
 #-------------------Пояса-------------
 - type: latheRecipe
@@ -3229,16 +3226,14 @@
   result: NoocBelt
   completetime: 2
   materials:
-    Cloth: 100
-    Durathread: 100
+    ElastaneClothMaterial: 100
 #-------------------Броня-------------
 - type: latheRecipe
   id: NoocArmorBasic
   result: NoocArmorBasic
   completetime: 8
   materials:
-    Cloth: 100
-    Durathread: 200
+    ElastaneClothMaterial: 100
     Steel: 400
 
 - type: latheRecipe
@@ -3246,8 +3241,7 @@
   result: NoocArmorMiddle
   completetime: 8
   materials:
-    Cloth: 100
-    Durathread: 300
+    ElastaneClothMaterial: 300
     Steel: 600
 
 - type: latheRecipe
@@ -3255,7 +3249,7 @@
   result: NoocHelmet
   completetime: 4
   materials:
-    Durathread: 100
+    ElastaneClothMaterial: 100
     Steel: 300
 
 - type: latheRecipe
@@ -3263,7 +3257,7 @@
   result: NoocHardsuitField
   completetime: 4
   materials:
-    Durathread: 200
+    ElastaneClothMaterial: 200
     Steel: 100
     Gold: 100
 #-----------------------------Техфаб------------------
