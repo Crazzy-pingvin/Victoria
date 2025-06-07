@@ -182,6 +182,14 @@ public sealed partial class CargoSystem
             TryRemoveBounty(station, bounty.Value);
             FillBountyDatabase(station);
             _adminLogger.Add(LogType.Action, LogImpact.Low, $"Bounty \"{bounty.Value.Bounty}\" (id:{bounty.Value.Id}) was fulfilled");
+            //Спавн гифта
+            if (!_protoMan.TryIndex<CargoBountyPrototype>(bounty.Value.Bounty, out var prototype))
+                return;
+            if (prototype.GiftAmount == 0)
+                return;
+            var stackPrototype = _protoMan.Index<StackPrototype>(prototype.GiftType);
+            var xform = Transform(sold);
+            _stack.Spawn((int) prototype.GiftAmount, stackPrototype, xform.Coordinates);
         }
     }
 

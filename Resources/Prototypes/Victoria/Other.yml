@@ -122,7 +122,11 @@
       
 - type: cargoBounty
   id: Plastid
+  idPrefix: GF
   reward: 2000
+  giftType: GFChip_stack
+  giftAmount: 2
+  giftText: 2 чипа Гефеста
   description: bounty-description-plastid
   entries:
   - name: bounty-item-plastid
@@ -151,6 +155,9 @@
 - type: cargoBounty
   id: Gethinax
   reward: 3000
+  giftType: SbChip_stack
+  giftAmount: 1
+  giftText: 1 чип Saibasan
   description: bounty-description-gethinax
   entries:
   - name: bounty-item-gethinax
@@ -179,6 +186,9 @@
 - type: cargoBounty
   id: Telecrystal
   reward: 6000
+  giftType: NTChip_stack
+  giftAmount: 3
+  giftText: 3 чипа НТ
   description: bounty-description-telecrystal
   entries:
   - name: bounty-item-telecrystal
@@ -188,12 +198,27 @@
       - Telecrystal
       
 - type: cargoBounty
-  id: BSModule
-  reward: 6000
-  description: bounty-description-bsmodule
+  id: Mop
+  idPrefix: HND
+  reward: 4501
+  description: bounty-description-mop
   entries:
-  - name: bounty-item-bsmodule
-    amount: 4
+  - name: bounty-item-mop
+    amount: 2
     whitelist:
       tags:
-      - BSModule
+      - Mop
+- type: cargoBounty
+  id: Pickaxe
+  idPrefix: GF
+  reward: 3501
+  giftType: GFChip_stack
+  giftAmount: 2
+  giftText: 2 чипа Гефеста
+  description: bounty-description-pickaxe
+  entries:
+  - name: bounty-item-pickaxe
+    amount: 2
+    whitelist:
+      tags:
+      - Pickaxe

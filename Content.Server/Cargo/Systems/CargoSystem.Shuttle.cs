@@ -300,7 +300,7 @@ public sealed partial class CargoSystem
 
         return true;
     }
-
+    #region Work
     private void OnPalletSale(EntityUid uid, CargoPalletConsoleComponent component, CargoPalletSellMessage args)
     {
         var xform = Transform(uid);
@@ -335,3 +335,4 @@ public sealed partial class CargoSystem
 /// </summary>
 [ByRefEvent]
 public readonly record struct EntitySoldEvent(HashSet<EntityUid> Sold);
+#endregion

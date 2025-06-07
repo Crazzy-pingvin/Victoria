@@ -24,6 +24,9 @@
 - type: cargoBounty
   id: BountyBrain
   reward: 12500
+  giftType: NTChip_stack
+  giftAmount: 3
+  giftText: 3 чипа НТ
   description: bounty-description-brain
   entries:
   - name: bounty-item-brain
@@ -146,6 +149,9 @@
 - type: cargoBounty
   id: BountyFigurine
   reward: 8000
+  giftType: NTChip_stack
+  giftAmount: 2
+  giftText: 2 чипа НТ
   description: bounty-description-figurine
   entries:
   - name: bounty-item-figurine
@@ -203,6 +209,9 @@
 - type: cargoBounty
   id: BountyKnife
   reward: 6000
+  giftType: NTChip_stack
+  giftAmount: 1
+  giftText: 1 чип НТ
   description: bounty-description-knife
   entries:
   - name: bounty-item-knife
@@ -237,6 +246,9 @@
 - type: cargoBounty
   id: BountyLung
   reward: 2000
+  giftType: NTChip_stack
+  giftAmount: 1
+  giftText: 1 чип НТ
   description: bounty-description-lung
   entries:
   - name: bounty-item-lung
@@ -294,6 +306,9 @@
 - type: cargoBounty
   id: BountyPercussion
   reward: 15000
+  giftType: NTChip_stack
+  giftAmount: 2
+  giftText: 2 чипа НТ
   description: bounty-description-percussion
   entries:
   - name: bounty-item-percussion
@@ -413,6 +428,9 @@
 - type: cargoBounty
   id: BountyToolbox
   reward: 8000
+  giftType: NTChip_stack
+  giftAmount: 1
+  giftText: 1 чип НТ
   description: bounty-description-toolbox
   idPrefix: CC
   entries:
@@ -458,6 +476,9 @@
 - type: cargoBounty
   id: BountyArtifactFragment
   reward: 32500
+  giftType: NTChip_stack
+  giftAmount: 1
+  giftText: 1 чип НТ
   description: bounty-description-artifact-fragment
   entries:
   - name: bounty-item-artifact-fragment
@@ -681,6 +702,9 @@
 - type: cargoBounty
   id: BountyMedkitBox
   reward: 2300
+  giftType: NTChip_stack
+  giftAmount: 1
+  giftText: 1 чип НТ
   description: bounty-description-medkit-box
   entries:
   - name: bounty-item-medkit-box
@@ -758,6 +782,9 @@
 - type: cargoBounty
   id: BountyTeethSharkminnow
   reward: 1500
+  giftType: NTChip_stack
+  giftAmount: 1
+  giftText: 1 чип НТ
   description: bounty-description-tooth-sharkminnow
   entries:
   - name: bounty-item-tooth-sharkminnow

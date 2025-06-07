@@ -9,6 +9,7 @@
             <BoxContainer Orientation="Horizontal">
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                     <RichTextLabel Name="RewardLabel"/>
+                    <RichTextLabel Name="GiftLabel"/>
                     <RichTextLabel Name="ManifestLabel"/>
                 </BoxContainer>
                 <Control MinWidth="10"/>

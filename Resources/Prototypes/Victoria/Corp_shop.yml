@@ -342,7 +342,7 @@
 
 - type: stack
   id: GDChip_stack
-  name: чипп лояльности ГасДеф
+  name: чип лояльности ГасДеф
   icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: gd_chip }
   spawn: GDChip
   maxCount: 20
@@ -368,9 +368,9 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      NTChip_material: 1
+      HNDChip_material: 1
   - type: Stack
-    stackType: NTChip_stack
+    stackType: HNDChip_stack
     count: 1
   - type: Sprite
     sprite: Victoria/Corp_chips/chips.rsi
@@ -389,7 +389,7 @@
   - type: Appearance
   - type: Currency
     price:
-      HoundChip_currency: 1
+      HNDChip_currency: 1
 
 - type: entity
   parent: HoundChip
@@ -400,21 +400,21 @@
     count: 2  
   
 - type: material
-  id: HoundChip_material
+  id: HNDChip_material
   name: чип лояльности Хаунд
   stackEntity: SpaceCash
   icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: hnd_chip }
   price: 5
 
 - type: stack
-  id: HoundChip_stack
+  id: HNDChip_stack
   name: чип лояльности Хаунд
   icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: hnd_chip }
   spawn: NTChip
   maxCount: 20
   
 - type: currency
-  id: HoundChip_currency
+  id: HNDChip_currency
   displayName: Чип лояльности Хаунд
   cash:
     1: HoundChip

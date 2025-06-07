@@ -1,8 +1,9 @@
 ﻿using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-
 namespace Content.Shared.Cargo.Prototypes;
+using Content.Shared.Stacks;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 /// <summary>
 /// This is a prototype for a cargo bounty, a set of items
@@ -21,7 +22,21 @@ public sealed partial class CargoBountyPrototype : IPrototype
     /// </summary>
     [DataField(required: true)]
     public int Reward;
-
+    /// <summary>
+    /// Какие плюшки заспавнить при выполнении запроса?
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField("giftType", customTypeSerializer:typeof(PrototypeIdSerializer<StackPrototype>))]
+    public string GiftType = "Credit";
+    /// <summary>
+    /// Кол-во плюшек
+    /// </summary>
+    [DataField("giftAmount",required: false)]
+    public int GiftAmount = 0;
+    /// <summary>
+    /// текст в лабеле в консоли
+    /// </summary>
+    [DataField("giftText",required: false)]
+    public string GiftText = string.Empty;
     /// <summary>
     /// A description for flava purposes.
     /// </summary>
