@@ -210,6 +210,8 @@ public static class ServerPackaging
             contentAssemblies.AddRange(new[] { "Content.Corvax.Shared", "Content.Corvax.Server" });
         // Corvax-Secrets-End
 
+        contentAssemblies.AddRange(new[] { "Content.SponsorImplementations.Shared", "Content.SponsorImplementations.Server" }); // SponsorImplementation
+
         // Additional assemblies that need to be copied such as EFCore.
         var sourcePath = Path.Combine(contentDir, "bin", "Content.Server");
 

@@ -9,6 +9,7 @@ using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Sprite;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
+using Content.Corvax.Interfaces.Shared;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
 using Content.Shared.Corvax.CCCVars;
@@ -50,6 +51,7 @@ namespace Content.Client.Lobby.UI
         private readonly MarkingManager _markingManager;
         private readonly JobRequirementsManager _requirements;
         private readonly LobbyUIController _controller;
+        private readonly ISharedSponsorsManager? _sponsorsManager; //Sponsor think
 
         private FlavorText.FlavorText? _flavorText;
         private TextEdit? _flavorTextEdit;
@@ -114,7 +116,8 @@ namespace Content.Client.Lobby.UI
             IPrototypeManager prototypeManager,
             IResourceManager resManager,
             JobRequirementsManager requirements,
-            MarkingManager markings)
+            MarkingManager markings,
+            ISharedSponsorsManager? sponsorsManager) //Sponsor think
         {
             RobustXamlLoader.Load(this);
             _sawmill = logManager.GetSawmill("profile.editor");
@@ -124,6 +127,7 @@ namespace Content.Client.Lobby.UI
             _playerManager = playerManager;
             _prototypeManager = prototypeManager;
             _markingManager = markings;
+            _sponsorsManager = sponsorsManager;
             _preferencesManager = preferencesManager;
             _resManager = resManager;
             _requirements = requirements;
@@ -507,11 +511,12 @@ namespace Content.Client.Lobby.UI
                 return;
             }
 
+            var sponsorPrototypes = _sponsorsManager?.GetClientPrototypes()?.ToArray() ?? []; //Sponsor think
+
             // Setup model
             Dictionary<string, List<string>> traitGroups = new();
             List<string> defaultTraits = new();
             traitGroups.Add(TraitCategoryPrototype.Default, defaultTraits);
-
             foreach (var trait in traits)
             {
                 if (trait.Category == null)
@@ -560,7 +565,7 @@ namespace Content.Client.Lobby.UI
                     {
                         if (preference)
                         {
-                            Profile = Profile?.WithTraitPreference(trait.ID, _prototypeManager);
+                            Profile = Profile?.WithTraitPreference(trait.ID, _prototypeManager, sponsorPrototypes); // Sponsor think
                         }
                         else
                         {
@@ -593,6 +598,14 @@ namespace Content.Client.Lobby.UI
                     {
                         selector.Checkbox.Label.FontColorOverride = Color.Red;
                     }
+
+                    //Sponsor think start
+                    if (selector.SponsorOnly && !sponsorPrototypes.Contains(selector.Id))
+                    {
+                        selector.Checkbox.Label.FontColorOverride = Color.Yellow;
+                        selector.Checkbox.ToolTip = Loc.GetString("humanoid-profile-editor-sponsor-only");
+                    }
+                    //Sponsor think end
 
                     TraitsList.AddChild(selector);
                 }

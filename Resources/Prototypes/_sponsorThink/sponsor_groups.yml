@@ -1,0 +1,8 @@
+﻿- type: sponsorGroup
+  id: Sobaka
+  color: "#662311"
+  extraCharSlots: 1
+  serverPriorityJoin: true
+  prototypes:
+  - Vulpkanin
+  - EblanKit

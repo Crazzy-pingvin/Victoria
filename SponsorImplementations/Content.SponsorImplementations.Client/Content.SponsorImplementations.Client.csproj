@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Corvax\Content.Corvax.Interfaces.Shared\Content.Corvax.Interfaces.Shared.csproj" />
+    <ProjectReference Include="..\..\RobustToolbox\Robust.Client\Robust.Client.csproj" />
+    <ProjectReference Include="..\..\RobustToolbox\Robust.Shared.Maths\Robust.Shared.Maths.csproj" />
+    <ProjectReference Include="..\..\RobustToolbox\Robust.Shared\Robust.Shared.csproj" />
+    <ProjectReference Include="..\Content.SponsorImplementations.Shared\Content.SponsorImplementations.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -408,10 +408,14 @@ namespace Content.Shared.Preferences
             };
         }
 
-        public HumanoidCharacterProfile WithTraitPreference(ProtoId<TraitPrototype> traitId, IPrototypeManager protoManager)
+        public HumanoidCharacterProfile WithTraitPreference(ProtoId<TraitPrototype> traitId, IPrototypeManager protoManager, string[] sponsorPrototypes)
         {
             // null category is assumed to be default.
             if (!protoManager.TryIndex(traitId, out var traitProto))
+                return new(this);
+
+            // Sponsor think
+            if (traitProto.SponsorOnly && !sponsorPrototypes.Contains(traitId.Id))
                 return new(this);
 
             var category = traitProto.Category;
@@ -644,7 +648,7 @@ namespace Content.Shared.Preferences
             _antagPreferences.UnionWith(antags);
 
             _traitPreferences.Clear();
-            _traitPreferences.UnionWith(GetValidTraits(traits, prototypeManager));
+            _traitPreferences.UnionWith(GetValidTraits(traits, prototypeManager, sponsorPrototypes));
 
             // Corvax-TTS-Start
             prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voice);
@@ -675,7 +679,7 @@ namespace Content.Shared.Preferences
         /// <summary>
         /// Takes in an IEnumerable of traits and returns a List of the valid traits.
         /// </summary>
-        public List<ProtoId<TraitPrototype>> GetValidTraits(IEnumerable<ProtoId<TraitPrototype>> traits, IPrototypeManager protoManager)
+        public List<ProtoId<TraitPrototype>> GetValidTraits(IEnumerable<ProtoId<TraitPrototype>> traits, IPrototypeManager protoManager, string[] sponsorPrototypes)
         {
             // Track points count for each group.
             var groups = new Dictionary<string, int>();
@@ -684,6 +688,10 @@ namespace Content.Shared.Preferences
             foreach (var trait in traits)
             {
                 if (!protoManager.TryIndex(trait, out var traitProto))
+                    continue;
+
+                //Sponsor think
+                if(traitProto.SponsorOnly && !sponsorPrototypes.Contains(trait.Id))
                     continue;
 
                 // Always valid.

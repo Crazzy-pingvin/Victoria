@@ -90,6 +90,8 @@ public static class ClientPackaging
             assemblies.AddRange(new[] { "Content.Corvax.Shared", "Content.Corvax.Client" });
         // Corvax-Secrets-End
 
+        assemblies.AddRange(new[] { "Content.SponsorImplementations.Shared", "Content.SponsorImplementations.Client" }); // SponsorImplementation
+
         await RobustSharedPackaging.WriteContentAssemblies(
             inputPass,
             contentDir,
