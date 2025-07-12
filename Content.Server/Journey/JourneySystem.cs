@@ -1,4 +1,3 @@
-using Content.Server.Administration.Logs;
 using Content.Server.NPC;
 using Content.Server.NPC.Systems;
 using Content.Shared.Database;
@@ -12,7 +11,6 @@ namespace Content.Server.Journey;
 /// </summary>
 public sealed class JourneySystem : EntitySystem
 {
-    [Dependency] private readonly IAdminLogManager _adminLog = default!;
     [Dependency] private readonly NPCSystem _npc = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
@@ -31,15 +29,13 @@ public sealed class JourneySystem : EntitySystem
             if (_timing.CurTime < comp.NextCheck)
                 continue;
             comp.NextCheck = _timing.CurTime + TimeSpan.FromSeconds(1);
-            _adminLog.Add(LogType.Action, LogImpact.Low, $"Путешественник-{ToPrettyString(uid)}");
 
             var targets = EntityQueryEnumerator<JourneyTargetComponent>();
             JourneyTargetComponent fav_target = new JourneyTargetComponent();
-			fav_target.Priority = -999;
+            fav_target.Priority = -999;
 
             while (targets.MoveNext(out var targ, out var comp_targ))
             {
-                _adminLog.Add(LogType.Action, LogImpact.Low, $"Цель-{ToPrettyString(targ)} с приоритетом(comp_targ.Priority)");
                 if (comp_targ.Priority > fav_target.Priority && (comp.JourneyGroup == comp_targ.JourneyGroup || comp_targ.IgnoreGroups))
                     fav_target = comp_targ;
             }

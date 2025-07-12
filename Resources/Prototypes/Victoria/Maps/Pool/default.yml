@@ -18,3 +18,9 @@
   - VictoriaAvanpost
   - CorvaxSilly
   - VictoriaPalada
+
+- type: gameMapPool
+  id: VictoriaDefenseMapPool
+  maps:
+  # MidLowpop
+  - VictoriaDesertPlatform

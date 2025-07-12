@@ -25,7 +25,7 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 1.1
+          radius: 1.0
         density: 1000
         layer:
         - WallLayer
@@ -53,6 +53,14 @@
     color: "#00f0fb"
     radius: 3
   - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: DefenseTarget
+    name: Флаг
+    flag: true
   - type: JourneyTarget
     journeyGroup: Alpha
     ignoreGroups: true
@@ -69,6 +77,12 @@
   suffix: Оборона, Альфа
   components:
   - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: DefenseTarget
   - type: JourneyTarget
     journeyGroup: Alpha
     ignoreGroups: false
@@ -94,7 +108,7 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-    
+
 - type: entity
   parent: SubstationObjective
   id: SubstationObjectiveBeta
@@ -130,7 +144,7 @@
 - type: entity
   id: FloorRailwayEntity
   name: железная дорога
-  description: Староможная железная дорога для стареньких поездов в колониях.
+  description: Старомодная железная дорога для стареньких поездов в колониях.
   placement:
     mode: SnapgridCenter
     snap:

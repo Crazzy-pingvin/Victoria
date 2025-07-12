@@ -244,6 +244,7 @@
   components:
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -256,6 +257,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -298,7 +303,7 @@
     time: 30
     prob: 1
     entity: MobXenoDefBeta
-        
+
 - type: entity
   suffix: Оборона, Гамма
   parent: MobXenoDefAlfa
@@ -332,6 +337,7 @@
   components:
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -344,6 +350,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -367,7 +377,7 @@
   components:
   - type: Journey
     journeyGroup: Beta
-        
+
 - type: entity
   suffix: Оборона, Гамма
   parent: MobXenoPraetorianDefAlfa
@@ -385,6 +395,7 @@
   components:
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -397,6 +408,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -420,7 +435,7 @@
   components:
   - type: Journey
     journeyGroup: Beta
-        
+
 - type: entity
   suffix: Оборона, Гамма
   parent: MobXenoDroneDefAlfa
@@ -441,6 +456,8 @@
     - XenoTunneller
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
+    boss: true
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -453,6 +470,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        10
+      FollowRange: !type:Single
+        16
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -477,7 +498,7 @@
   components:
   - type: Journey
     journeyGroup: Beta
-        
+
 - type: entity
   suffix: Оборона, Гамма
   parent: MobXenoQueenDefAlfa
@@ -498,6 +519,7 @@
     - XenoTunneller
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -510,6 +532,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -628,6 +654,7 @@
   components:
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -640,6 +667,11 @@
         true
       NavSmash: !type:Bool
         true
+
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -759,6 +791,7 @@
   components:
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -771,6 +804,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -793,7 +830,7 @@
   components:
   - type: Journey
     journeyGroup: Beta
-        
+
 - type: entity
   suffix: Оборона, Гамма
   parent: MobXenoRounyDefAlfa
@@ -811,6 +848,7 @@
   components:
   - type: Journey
     journeyGroup: Alpha
+  - type: DefenseEnemy
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -823,6 +861,10 @@
         true
       NavSmash: !type:Bool
         true
+      FollowCloseRange: !type:Single
+        12
+      FollowRange: !type:Single
+        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -843,7 +885,7 @@
   components:
   - type: Journey
     journeyGroup: Beta
-        
+
 - type: entity
   suffix: Оборона, Гамма
   parent: MobXenoSpitterDefAlfa
@@ -851,6 +893,7 @@
   components:
   - type: Journey
     journeyGroup: Beaver
+#------------------------------------------Спавнеры ботов------------------------------
 #------------------------------------------Плевок плевальщика------------------------------
 - type: entity
   id: BulletAcidDef
@@ -1024,7 +1067,7 @@
     intervalSeconds: 60
     minimumEntitiesSpawned: 1
     maximumEntitiesSpawned: 1
-    
+
 - type: entity
   suffix: Оборона, Бета
   id: SpawnMobXenoQueenDefBeta
@@ -1038,7 +1081,7 @@
     intervalSeconds: 60
     minimumEntitiesSpawned: 1
     maximumEntitiesSpawned: 1
-    
+
 - type: entity
   suffix: Оборона, Гамма
   id: SpawnMobXenoQueenDefGamma
@@ -1216,7 +1259,7 @@
     intervalSeconds: 60
     minimumEntitiesSpawned: 2
     maximumEntitiesSpawned: 4
-    
+
 - type: entity
   suffix: Оборона, Бета
   id: SpawnMobXenoSpitterDefBeta
@@ -1230,7 +1273,7 @@
     intervalSeconds: 60
     minimumEntitiesSpawned: 2
     maximumEntitiesSpawned: 4
-    
+
 - type: entity
   suffix: Оборона, Гамма
   id: SpawnMobXenoSpitterDefGamma

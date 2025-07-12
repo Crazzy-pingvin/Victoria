@@ -261,7 +261,7 @@ namespace Content.Server.NPC.Pathfinding
             EntityUid entity,
             float maxRange,
             CancellationToken cancelToken,
-            int limit = 40,
+            int limit = 80,
             PathFlags flags = PathFlags.None)
         {
             if (!TryComp(entity, out TransformComponent? start))
