@@ -1554,7 +1554,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1617,7 +1621,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1682,7 +1690,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1748,7 +1760,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1871,7 +1887,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2090,7 +2110,11 @@
   - type: StaticPrice
     price: 500
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -135
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2168,7 +2192,11 @@
   - type: StaticPrice
     price: 500
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2242,7 +2270,11 @@
   - type: StaticPrice
     price: 250
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2315,7 +2347,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2387,7 +2423,11 @@
   - type: StaticPrice
     price: 500    
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
