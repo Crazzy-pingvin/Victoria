@@ -27423,38 +27423,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-  - uid: 9258
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -23.5,-47.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 9259
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -18.5,-52.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 9260
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -9.5,-47.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-  - uid: 9262
-    components:
-    - type: Transform
-      pos: -10.5,-52.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-- proto: FloraTreeLarge04
+- proto: FloraTreeLarge
   entities:
   - uid: 7503
     components:
@@ -27462,7 +27431,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 31.58406,-40.20767
       parent: 2
-- proto: FloraTreeLarge05
+- proto: FloraTreeLarge
   entities:
   - uid: 7502
     components:

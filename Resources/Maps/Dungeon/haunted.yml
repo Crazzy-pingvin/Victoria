@@ -1479,7 +1479,7 @@ entities:
     - type: Transform
       pos: 25.5,14.5
       parent: 1653
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 63
     components:
@@ -1511,7 +1511,7 @@ entities:
     - type: Transform
       pos: 3.5664039,19.498943
       parent: 1653
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 64
     components:
@@ -1528,7 +1528,7 @@ entities:
     - type: Transform
       pos: 12.087021,32.358955
       parent: 1653
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 90
     components:
@@ -2277,7 +2277,7 @@ entities:
     - type: Transform
       pos: 30.5,8.5
       parent: 1653
-- proto: ShadowTree03
+- proto: ShadowTree
   entities:
   - uid: 68
     components:

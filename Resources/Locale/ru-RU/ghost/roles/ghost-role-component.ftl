@@ -178,6 +178,9 @@ ghost-role-information-syndicate-kobold-reinforcement-rules = Вы [color=red][b
 ghost-role-information-syndicate-cyborg-assault-name = Штурмовой киборг Синдиката
 ghost-role-information-syndicate-cyborg-saboteur-name = Саботажный киборг Синдиката
 ghost-role-information-syndicate-cyborg-description = Синдикату нужно подкрепление. Вы, холодная кремниевая машина для убийства, поможете им.
+ghost-role-information-derelict-cyborg-name = Древний борг
+ghost-role-information-derelict-cyborg-description = Вы обычный киборг, потерянный в космосе. Спустя годы ионных штормов, вас прибило к космической станции...
+
 ghost-role-information-security-name = Служба безопасности
 ghost-role-information-security-description = Вы входите в состав оперативной группы службы безопасности, но, похоже, попали в странную ситуацию...
 ghost-role-information-medical-name = Медицинский

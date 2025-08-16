@@ -75955,7 +75955,7 @@ entities:
     - type: Transform
       pos: 61.5,19.5
       parent: 2
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 16712
     components:
@@ -75972,7 +75972,7 @@ entities:
     - type: Transform
       pos: 64.42829,-47.413994
       parent: 2
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 16745
     components:
@@ -75994,7 +75994,7 @@ entities:
     - type: Transform
       pos: 46.236732,-51.29415
       parent: 2
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 16697
     components:
@@ -76021,7 +76021,7 @@ entities:
     - type: Transform
       pos: 50.521164,-56.935516
       parent: 2
-- proto: FloraTree01
+- proto: FloraTree
   entities:
   - uid: 1075
     components:
@@ -76038,7 +76038,7 @@ entities:
     - type: Transform
       pos: -45.82935,-1.4404856
       parent: 2
-- proto: FloraTree02
+- proto: FloraTree
   entities:
   - uid: 3619
     components:
@@ -76055,14 +76055,14 @@ entities:
     - type: Transform
       pos: -45.10429,-48.580776
       parent: 2
-- proto: FloraTree05
+- proto: FloraTree
   entities:
   - uid: 6128
     components:
     - type: Transform
       pos: -50.151165,-48.580776
       parent: 2
-- proto: FloraTree06
+- proto: FloraTree
   entities:
   - uid: 3810
     components:
@@ -76076,14 +76076,14 @@ entities:
     - type: Transform
       pos: -33.5,6.5
       parent: 2
-- proto: FloraTreeLarge03
+- proto: FloraTreeLarge
   entities:
   - uid: 1077
     components:
     - type: Transform
       pos: -39.07622,5.790084
       parent: 2
-- proto: FloraTreeLarge04
+- proto: FloraTreeLarge
   entities:
   - uid: 4227
     components:
@@ -76091,14 +76091,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -45.237907,-8.042405
       parent: 2
-- proto: FloraTreeSnow02
+- proto: FloraTreeSnow
   entities:
   - uid: 20393
     components:
     - type: Transform
       pos: 80.68255,-34.341137
       parent: 2
-- proto: FloraTreeSnow04
+- proto: FloraTreeSnow
   entities:
   - uid: 20394
     components:
@@ -106250,11 +106250,11 @@ entities:
         After several simulations where Superconducting Magnetic Energy Storage units were drained from the main system from [italic]a variety[/italic] of user errors and other shenanigans, it has been determined that the Singularity should be put on its own power loop, disconnected from the main station. The upsides of this include but are not limited to:
 
 
-        [bold]1.[/bold] Limited external forces from the containments power. 
+        [bold]1.[/bold] Limited external forces from the containments power.
 
-        [bold]2.[/bold] An "early warning" system, if you see JUST the PA room run out of power, you know there is an issue. 
+        [bold]2.[/bold] An "early warning" system, if you see JUST the PA room run out of power, you know there is an issue.
 
-        [bold]3.[/bold] Due to being on its own small loop, its much easier to spot faults in the system. 
+        [bold]3.[/bold] Due to being on its own small loop, its much easier to spot faults in the system.
 
 
         [italic]While we have listed the upsides we also acknowledge the downside,[/italic] for it being on its own loop you will need an external force if the system "runs out of juice". Our recommendation for this is simply attaching a generator to said SMES and letting it get to full charge before continuing operations but as said from another of our technicians... "just attach it to the main grid for like, a hot moment, and kickstart the thing!"

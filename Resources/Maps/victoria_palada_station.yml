@@ -37639,7 +37639,7 @@ entities:
     - type: Transform
       pos: 32.5,-33.5
       parent: 1
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 7372
     components:
@@ -37652,7 +37652,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 36.482723,-12.500209
       parent: 1
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 7371
     components:
@@ -37670,14 +37670,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 36.545223,-8.500209
       parent: 1
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 7369
     components:
     - type: Transform
       pos: 33.99602,-32.00192
       parent: 1
-- proto: FloraTree02
+- proto: FloraTree
   entities:
   - uid: 1166
     components:
@@ -37691,7 +37691,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 68.44139,-6.330714
       parent: 1
-- proto: FloraTree03
+- proto: FloraTree
   entities:
   - uid: 9665
     components:
@@ -51722,7 +51722,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 45.375233,8.341829
       parent: 1
-- proto: LightTree03
+- proto: LightTree
   entities:
   - uid: 9678
     components:
@@ -51736,7 +51736,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 65.08115,-5.9464626
       parent: 1
-- proto: LightTree04
+- proto: LightTree
   entities:
   - uid: 4815
     components:
@@ -51744,7 +51744,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 24.32167,-22.113485
       parent: 1
-- proto: LightTree05
+- proto: LightTree
   entities:
   - uid: 9652
     components:
@@ -51752,7 +51752,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 62.488514,-6.236964
       parent: 1
-- proto: LightTree06
+- proto: LightTree
   entities:
   - uid: 4829
     components:
@@ -58679,7 +58679,7 @@ entities:
       parent: 1200
     - type: Physics
       canCollide: False
-- proto: ShadowTree05
+- proto: ShadowTree
   entities:
   - uid: 9655
     components:
@@ -58687,7 +58687,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 58.83933,-6.346339
       parent: 1
-- proto: ShadowTree06
+- proto: ShadowTree
   entities:
   - uid: 9666
     components:

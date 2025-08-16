@@ -28,14 +28,24 @@
   materials:
     RawQuartz: 300
 
+# This version is for the autolathe
 - type: latheRecipe
   id: SheetRGlass
   result: SheetRGlass1
   completetime: 0
   materials:
-    RawQuartz: 50
-    RawIron: 30
-    Coal: 25
+    Glass: 100
+    Steel: 50
+
+# This version is for the ore processor
+- type: latheRecipe
+  id: SheetRGlassRaw
+  result: SheetRGlass1
+  completetime: 0
+  materials:
+    RawQuartz: 100
+    RawIron: 50
+    Coal: 15
 
 - type: latheRecipe
   id: SheetRGlass30

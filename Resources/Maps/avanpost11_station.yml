@@ -48132,7 +48132,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: FloraTreeSnow01
+- proto: FloraTreeSnow
   entities:
   - uid: 17186
     components:
@@ -48149,14 +48149,14 @@ entities:
     - type: Transform
       pos: 112.0206,-29.075443
       parent: 2
-- proto: FloraTreeSnow02
+- proto: FloraTreeSnow
   entities:
   - uid: 17185
     components:
     - type: Transform
       pos: 109.23464,-33.19668
       parent: 2
-- proto: FloraTreeSnow05
+- proto: FloraTreeSnow
   entities:
   - uid: 17077
     components:
@@ -48168,7 +48168,7 @@ entities:
     - type: Transform
       pos: 109.79714,-30.349022
       parent: 2
-- proto: FloraTreeSnow06
+- proto: FloraTreeSnow
   entities:
   - uid: 17188
     components:

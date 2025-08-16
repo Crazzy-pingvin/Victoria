@@ -24268,7 +24268,7 @@ entities:
     - type: Transform
       pos: 4.5,40.5
       parent: 2
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 2384
     components:
@@ -24290,7 +24290,7 @@ entities:
     - type: Transform
       pos: 15.976806,19.524523
       parent: 2
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 2389
     components:
@@ -24322,7 +24322,7 @@ entities:
     - type: Transform
       pos: -31.601288,5.4406104
       parent: 2
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 2395
     components:
@@ -24354,7 +24354,7 @@ entities:
     - type: Transform
       pos: -42.213253,23.096977
       parent: 2
-- proto: FloraTree04
+- proto: FloraTree
   entities:
   - uid: 2401
     components:
@@ -24362,7 +24362,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 31.144978,-7.414804
       parent: 2
-- proto: FloraTreeConifer01
+- proto: FloraTreeConifer
   entities:
   - uid: 2402
     components:
@@ -24396,7 +24396,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.539032,13.804901
       parent: 5502
-- proto: FloraTreeConifer02
+- proto: FloraTreeConifer
   entities:
   - uid: 2407
     components:
@@ -24468,7 +24468,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 2.4440918,15.3072815
       parent: 5502
-- proto: FloraTreeConifer03
+- proto: FloraTreeConifer
   entities:
   - uid: 2416
     components:
@@ -24491,7 +24491,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -22.406776,20.712933
       parent: 2
-- proto: FloraTreeLarge02
+- proto: FloraTreeLarge
   entities:
   - uid: 2420
     components:
@@ -24499,7 +24499,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 29.886478,-8.789006
       parent: 2
-- proto: FloraTreeSnow01
+- proto: FloraTreeSnow
   entities:
   - uid: 2421
     components:
@@ -24517,7 +24517,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.302155,-8.77597
       parent: 5502
-- proto: FloraTreeSnow02
+- proto: FloraTreeSnow
   entities:
   - uid: 6949
     components:
@@ -24531,7 +24531,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.676361,12.397369
       parent: 5502
-- proto: FloraTreeSnow03
+- proto: FloraTreeSnow
   entities:
   - uid: 2424
     components:
@@ -24544,7 +24544,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.8744507,-17.837097
       parent: 5502
-- proto: FloraTreeSnow04
+- proto: FloraTreeSnow
   entities:
   - uid: 6945
     components:
@@ -24558,7 +24558,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 17.631882,-6.705353
       parent: 5502
-- proto: FloraTreeSnow05
+- proto: FloraTreeSnow
   entities:
   - uid: 6940
     components:
@@ -24596,7 +24596,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -6.9085693,11.348236
       parent: 5502
-- proto: FloraTreeSnow06
+- proto: FloraTreeSnow
   entities:
   - uid: 2426
     components:

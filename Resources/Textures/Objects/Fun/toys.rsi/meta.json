@@ -21,6 +21,17 @@
       "directions": 4
     },
     {
+      "name": "plushie_lizard"
+    },
+    {
+      "name": "plushielizard-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "plushielizard-inhand-right",
+      "directions": 4
+    },
+    {
       "name": "plushie_spacelizard"
     },
     {
@@ -84,9 +95,6 @@
     },
     {
       "name": "plushie_arachnid"
-    },
-    {
-      "name": "plushie_lizard"
     },
     {
       "name": "plushie_lizard_mirrored"

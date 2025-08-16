@@ -3657,7 +3657,7 @@ entities:
     - type: Transform
       pos: 17.872822,18.42854
       parent: 1
-- proto: ShadowTree03
+- proto: ShadowTree
   entities:
   - uid: 549
     components:

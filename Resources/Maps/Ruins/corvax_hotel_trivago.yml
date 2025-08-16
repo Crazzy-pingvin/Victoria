@@ -3064,7 +3064,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,4.5
       parent: 2
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 1262
     components:
@@ -3084,7 +3084,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 11.5,4.5
       parent: 2
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 1261
     components:
@@ -3098,7 +3098,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 1.5,-16.5
       parent: 2
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 1263
     components:

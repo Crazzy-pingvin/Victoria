@@ -7379,7 +7379,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.5,14.5
       parent: 2
-- proto: FloraGreyStalagmite1
+- proto: FloraGreyStalagmite
   entities:
   - uid: 3612
     components:
@@ -7391,14 +7391,14 @@ entities:
     - type: Transform
       pos: 26.588013,-6.530161
       parent: 2
-- proto: FloraGreyStalagmite2
+- proto: FloraGreyStalagmite
   entities:
   - uid: 3613
     components:
     - type: Transform
       pos: 72.00061,4.7727575
       parent: 2
-- proto: FloraGreyStalagmite3
+- proto: FloraGreyStalagmite
   entities:
   - uid: 3614
     components:
@@ -7415,28 +7415,28 @@ entities:
     - type: Transform
       pos: 30.403847,-11.437703
       parent: 2
-- proto: FloraGreyStalagmite4
+- proto: FloraGreyStalagmite
   entities:
   - uid: 3618
     components:
     - type: Transform
       pos: 24.606232,18.63401
       parent: 2
-- proto: FloraGreyStalagmite5
+- proto: FloraGreyStalagmite
   entities:
   - uid: 3617
     components:
     - type: Transform
       pos: 35.49443,10.516749
       parent: 2
-- proto: FloraGreyStalagmite6
+- proto: FloraGreyStalagmite
   entities:
   - uid: 3616
     components:
     - type: Transform
       pos: 29.348335,15.706366
       parent: 2
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 3605
     components:
@@ -7453,7 +7453,7 @@ entities:
     - type: Transform
       pos: 36.569817,-15.975077
       parent: 2
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 3606
     components:
@@ -7465,7 +7465,7 @@ entities:
     - type: Transform
       pos: 47.49476,12.93837
       parent: 2
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 1744
     components:
@@ -7482,14 +7482,14 @@ entities:
     - type: Transform
       pos: 45.625416,-5.142634
       parent: 2
-- proto: FloraTreeLarge01
+- proto: FloraTreeLarge
   entities:
   - uid: 2843
     components:
     - type: Transform
       pos: 45.79083,11.400676
       parent: 2
-- proto: FloraTreeLarge02
+- proto: FloraTreeLarge
   entities:
   - uid: 2840
     components:
@@ -7501,7 +7501,7 @@ entities:
     - type: Transform
       pos: 40.85333,12.166301
       parent: 2
-- proto: FloraTreeLarge04
+- proto: FloraTreeLarge
   entities:
   - uid: 2841
     components:
@@ -7513,7 +7513,7 @@ entities:
     - type: Transform
       pos: 40.47833,16.338177
       parent: 2
-- proto: FloraTreeLarge05
+- proto: FloraTreeLarge
   entities:
   - uid: 2842
     components:
@@ -7525,7 +7525,7 @@ entities:
     - type: Transform
       pos: 37.458225,15.338176
       parent: 2
-- proto: FloraTreeLarge06
+- proto: FloraTreeLarge
   entities:
   - uid: 2827
     components:
