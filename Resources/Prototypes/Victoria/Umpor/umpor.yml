@@ -135,6 +135,7 @@
     grid:
     - 0,0,7,4
 #------------------------------------сапоги---------- 
+#--------------------------обычные---------- 
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: UmporBoots
@@ -146,6 +147,21 @@
     sprite: Victoria/Umpor/Equipment/umpor_boots.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/umpor_boots.rsi
+#--------------------------ускоряющие---------- 
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: UmporBootsFast
+  name: Успорские амортизирующие сапоги
+  suffix: Умпорский
+  description: В эти сапоги встроена простая, но эффективная система амортизации и обратного импульса, позволяющая носителю передвигаться куда быстрей.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Equipment/umpor_fast_boots.rsi
+  - type: Clothing
+    sprite: Victoria/Umpor/Equipment/umpor_fast_boots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.25
+    sprintModifier: 1.25
 #--------------------------------------------------плащ-------------------------------------- 
 - type: entity
   parent: ClothingNeckBase

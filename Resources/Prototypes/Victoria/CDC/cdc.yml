@@ -173,6 +173,21 @@
     sprite: Victoria/CDC/Equipment/cdc_boots.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_boots.rsi
+#----------------------------------ускоряющие------------------------
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: CDCBootsFast
+  name: Ускоряющие сапоги Конгломерата
+  suffix: Конгломерат
+  description: Крепкие армейские сапоги с плазма-ионными ускорителями. Достаточно плотные, чтобы выдержать песчаные и пылевые бури. Способный ускорять передвижение носителя.
+  components:
+  - type: Sprite
+    sprite: Victoria/CDC/Equipment/cdc_fast_boots.rsi
+  - type: Clothing
+    sprite: Victoria/CDC/Equipment/cdc_fast_boots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.3
+    sprintModifier: 1.3
 #---------------------------------------------шлема------------------------------
 #----------------------------солдатский-------------
 - type: entity

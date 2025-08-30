@@ -110,6 +110,27 @@
   - ExGrenade
   - CableWireStack
   - UmporUniformMine
+  
+- type: thiefBackpackSet
+  id: SetUmporRunner
+  name: Набор Посыльного
+  description: Включает в себя пистолет "Гром", 2 магазина к нему, лёгкий бронежилет, лопатку, ускоряющие сапоги и полезные мелочи.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_fast_boots.rsi
+    state: icon
+  content:
+  - UmporMagazinePistol
+  - UmporMagazinePistol
+  - UmpornKnife
+  - UmporPistol
+  - UmporArmorBasic
+  - UmporSpade
+  - UmporBootsFast
+  - PillCanister
+  - BoxBeaker
+  - EmergencyRollerBedSpawnFolded
+  - LightBomb
+  - LightBomb
 
 - type: entity
   id: ToolboxUmporSPC
@@ -127,6 +148,7 @@
     - SetUmporSniperRifle
     - SetUmporShotgan
     - SetUmporMinesweeper
+    - SetUmporRunner
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -169,6 +191,7 @@
     - SetUmporShotgan
     - SetUmporMinesweeper
     - SetUmporBuilder
+    - SetUmporRunner
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -778,6 +801,27 @@
   - FuseMine
   - FuseMine
   - ExGrenade
+  
+- type: thiefBackpackSet
+  id: SetCDCRunner
+  name: Набор Посыльного
+  description: Включает в себя пистолет "Гул", 2 магазина, бронежилет, ускоряющие ботинки, саблю и полезные мелочи.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_fast_boots.rsi
+    state: icon
+  content:
+  - CDCPistol
+  - CDCMagazinePistolStd
+  - CDCMagazinePistolStd
+  - CDCArmorLight
+  - CDCSaber
+  - CDCBuckler
+  - CDCBootsFast
+  - PillCanister
+  - BoxBeaker
+  - EmergencyRollerBedSpawnFolded
+  - LightBomb
+  - LightBomb
 
 - type: entity
   id: ToolboxCDCSPC
@@ -795,6 +839,7 @@
     - SetCDCSniperRifle
     - SetCDCDefoc
     - SetCDCMinesweeper
+    - SetCDCRunner
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -853,6 +898,7 @@
     - SetCDCDefocD
     - SetCDCMinesweeper
     - SetCDCOperator
+    - SetCDCRunner
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
