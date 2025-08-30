@@ -38,7 +38,7 @@
       types:
         Blunt: 2
         Caustic: 3
-        Structural: 15 
+        Structural: 20 
   - type: Bloodstream
     bloodMaxVolume: 5 
   - type: TimedDespawn
@@ -97,8 +97,8 @@
     - MobXenoAphidDefAlfa
     chance: 1
     intervalSeconds: 20
-    minimumEntitiesSpawned: 3
-    maximumEntitiesSpawned: 6
+    minimumEntitiesSpawned: 2
+    maximumEntitiesSpawned: 5
   - type: NpcFactionMember
     factions:
     - Xeno
