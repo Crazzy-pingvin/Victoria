@@ -243,7 +243,7 @@
         Caustic: 9
         Structural: 40 
   - type: Bloodstream
-    bloodMaxVolume: 50 
+    bloodMaxVolume: 25 
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -288,7 +288,7 @@
         Caustic: 9
         Structural: 40 
   - type: Bloodstream
-    bloodMaxVolume: 50 
+    bloodMaxVolume: 25 
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -382,7 +382,7 @@
         Piercing: 5
         Poison: 5
   - type: Bloodstream
-    bloodMaxVolume: 100
+    bloodMaxVolume: 50
   - type: TimedDespawn
     lifetime: 600
 
@@ -503,7 +503,7 @@
         Poison: 20
         Structural: 30
   - type: Bloodstream
-    bloodMaxVolume: 150
+    bloodMaxVolume: 100
   - type: TimedDespawn
     lifetime: 600
 
@@ -564,7 +564,7 @@
         Caustic: 5
         Structural: 70
   - type: Bloodstream
-    bloodMaxVolume: 100  
+    bloodMaxVolume: 50  
   - type: TimedDespawn
     lifetime: 600 
   - type: RandomChangeTime
@@ -605,7 +605,7 @@
         Caustic: 5
         Structural: 70
   - type: Bloodstream
-    bloodMaxVolume: 100  
+    bloodMaxVolume: 50  
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -699,7 +699,7 @@
         Piercing: 2
         Poison: 10
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -742,7 +742,7 @@
         Caustic: 10
         Structural: 30 
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -835,7 +835,7 @@
         Piercing: 2
         Poison: 10
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
 
@@ -890,7 +890,7 @@
     capacity: 3
     count: 3
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
 

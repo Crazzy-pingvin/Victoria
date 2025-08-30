@@ -13,6 +13,9 @@
     },
     {
       "name": "stumble"
+    },
+    {
+      "name": "stumble-damaged"
     }
   ]
 }

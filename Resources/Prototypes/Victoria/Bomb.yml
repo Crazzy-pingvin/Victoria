@@ -913,6 +913,10 @@
     damage:
       types:
         Piercing: 4
+  - type: RandomChangeTime
+    time: 3600
+    prob: 0.5
+    entity: StumbleDamaged
 #-------------------------------сборка------------------------------------
 - type: constructionGraph
   id: Stumble
@@ -943,6 +947,28 @@
           steps:
             - tool: Cutting
               doAfter: 3
+        - to: StumbleDamaged
+          completed:
+            - !type:AdminLog
+              message: "Спотыкач был поломан"
+          steps:
+            - tool: Prying
+              doAfter: 2
+              
+    - node: StumbleDamaged
+      entity: StumbleDamaged
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Спотыкач был разрезан"
+            - !type:SpawnPrototype
+              prototype: CableWireStack1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 2
 
 - type: construction
   name: wire stumble
@@ -961,6 +987,68 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+#-----------------------------------------сломанный спотыкач----------------------------------------
+- type: entity
+  id: StumbleDamaged
+  parent: BaseStructure
+  name: старый спотыкач
+  description: Это укрепление уже явно несвежее... Скоро оно совсем развалится.
+  components:
+  - type: Anchorable
+  - type: Sprite
+    sprite: Victoria/Bomb/fence.rsi
+    state: stumble-damaged
+  - type: Icon
+    sprite: Victoria/Bomb/fence.rsi
+    state: stumble-damaged
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 20
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Construction
+    graph: Stumble
+    node: StumbleDamaged
+    deconstructionTarget: start
+  - type: DamageContacts
+    damage:
+      types:
+        Piercing: 3
+  - type: StaminaDamageOnCollide
+    damage: 10
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.8
+    sprintSpeedModifier: 0.8
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: TriggerOnStepTrigger
+  - type: PreventableStepTrigger
+  - type: Slippery
+    slipSound:
+      path: /Audio/Effects/fence_rattle2.ogg
+    launchForwardsMultiplier: 0
+  - type: DamageUserOnTrigger
+    damage:
+      types:
+        Piercing: 2
+  - type: TimedDespawn
+    lifetime: 1200
 #-----------------------------------------малая растяжка----------------------------------
 - type: entity
   id: ShortStretching
