@@ -1,0 +1,64 @@
+#------------------------------------------мачеха------------------------------
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Mut1
+  suffix: Оборона, Мачеха1
+  components:
+  - type: RandomChangeTime
+    time: 3420
+    prob: 1
+    entity: MobXenoStiefmutterAlphaMap1Mut1
+    
+- type: entity
+  name: Ксеноспавнер Мачехи
+  suffix: Оборона, Альфа
+  id: MobXenoStiefmutterAlphaMap1Mut1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Victoria/DefenseMode/Xenos/stiefmutter.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoStiefmutterAlpha
+    chance: 1
+    intervalSeconds: 420
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 2
+  - type: TimedDespawn
+    lifetime: 4030
+#------------------------------------------сабля------------------------------
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Sab1
+  suffix: Оборона, Сабля1
+  components:
+  - type: RandomChangeTime
+    time: 4260
+    prob: 1
+    entity: MobXenoStiefmutterAlphaMap1Sab1
+    
+- type: entity
+  name: Ксеноспавнер Сабельщика
+  suffix: Оборона, Альфа
+  id: MobXenoStiefmutterAlphaMap1Sab1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Victoria/DefenseMode/Xenos/saber.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoSaberDefAlfa
+    chance: 1
+    intervalSeconds: 420
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 2
+  - type: TimedDespawn
+    lifetime: 3190

@@ -6222,12 +6222,12 @@ entities:
   - uid: 5957
     components:
     - type: Transform
-      pos: -22.684998,-53.187824
+      pos: -21.047915,-53.186855
       parent: 2
   - uid: 5958
     components:
     - type: Transform
-      pos: -22.325623,-53.32845
+      pos: -21.50104,-53.186855
       parent: 2
   - uid: 5959
     components:
@@ -27425,19 +27425,17 @@ entities:
       fixtures: {}
 - proto: FloraTreeLarge
   entities:
-  - uid: 7503
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 31.58406,-40.20767
-      parent: 2
-- proto: FloraTreeLarge
-  entities:
   - uid: 7502
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -31.5346,-40.52017
+      parent: 2
+  - uid: 7503
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 31.58406,-40.20767
       parent: 2
 - proto: GasAnalyzer
   entities:
@@ -43343,6 +43341,139 @@ entities:
     - type: Transform
       pos: 23.62443,-50.581924
       parent: 2
+- proto: HolopadAiMain
+  entities:
+  - uid: 9276
+    components:
+    - type: Transform
+      pos: -20.5,-57.5
+      parent: 2
+- proto: HolopadCargoBay
+  entities:
+  - uid: 9275
+    components:
+    - type: Transform
+      pos: -31.5,-24.5
+      parent: 2
+- proto: HolopadCargoSalvageBay
+  entities:
+  - uid: 9287
+    components:
+    - type: Transform
+      pos: -33.5,-14.5
+      parent: 2
+- proto: HolopadCommandBridge
+  entities:
+  - uid: 9281
+    components:
+    - type: Transform
+      pos: 0.5,3.5
+      parent: 2
+- proto: HolopadCommandMeetingRoom
+  entities:
+  - uid: 9278
+    components:
+    - type: Transform
+      pos: 2.5,-0.5
+      parent: 2
+- proto: HolopadEngineeringAtmosMain
+  entities:
+  - uid: 9258
+    components:
+    - type: Transform
+      pos: 18.5,-49.5
+      parent: 2
+- proto: HolopadEngineeringStorage
+  entities:
+  - uid: 9277
+    components:
+    - type: Transform
+      pos: 8.5,-45.5
+      parent: 2
+- proto: HolopadGeneralArrivals
+  entities:
+  - uid: 9289
+    components:
+    - type: Transform
+      pos: 27.5,-39.5
+      parent: 2
+- proto: HolopadGeneralCryosleep
+  entities:
+  - uid: 9280
+    components:
+    - type: Transform
+      pos: 16.5,-14.5
+      parent: 2
+- proto: HolopadGeneralEvac
+  entities:
+  - uid: 9288
+    components:
+    - type: Transform
+      pos: -29.5,-39.5
+      parent: 2
+- proto: HolopadMedicalMedbay
+  entities:
+  - uid: 9279
+    components:
+    - type: Transform
+      pos: 17.5,-29.5
+      parent: 2
+- proto: HolopadScienceFront
+  entities:
+  - uid: 9282
+    components:
+    - type: Transform
+      pos: 29.5,-31.5
+      parent: 2
+- proto: HolopadScienceRnd
+  entities:
+  - uid: 9285
+    components:
+    - type: Transform
+      pos: 29.5,-21.5
+      parent: 2
+- proto: HolopadSecurityArmory
+  entities:
+  - uid: 9283
+    components:
+    - type: Transform
+      pos: -14.5,-30.5
+      parent: 2
+- proto: HolopadSecurityBrig
+  entities:
+  - uid: 9260
+    components:
+    - type: Transform
+      pos: -14.5,-25.5
+      parent: 2
+- proto: HolopadSecurityPerma
+  entities:
+  - uid: 9284
+    components:
+    - type: Transform
+      pos: -16.5,-20.5
+      parent: 2
+- proto: HolopadServiceBar
+  entities:
+  - uid: 9259
+    components:
+    - type: Transform
+      pos: -17.5,-42.5
+      parent: 2
+- proto: HolopadServiceBotany
+  entities:
+  - uid: 9262
+    components:
+    - type: Transform
+      pos: -19.5,-52.5
+      parent: 2
+- proto: HolopadServiceChapel
+  entities:
+  - uid: 9286
+    components:
+    - type: Transform
+      pos: 2.5,-21.5
+      parent: 2
 - proto: Holoprojector
   entities:
   - uid: 6004
@@ -43423,12 +43554,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -21.5,-53.5
-      parent: 2
-  - uid: 5953
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -22.5,-53.5
       parent: 2
 - proto: IngotGold
   entities:
@@ -52513,6 +52638,13 @@ entities:
     components:
     - type: Transform
       pos: 19.5,-30.5
+      parent: 2
+- proto: VendingMachineNutri
+  entities:
+  - uid: 5953
+    components:
+    - type: Transform
+      pos: -22.5,-53.5
       parent: 2
 - proto: VendingMachineRoboDrobe
   entities:

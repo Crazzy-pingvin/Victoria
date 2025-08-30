@@ -7816,96 +7816,27 @@ entities:
       rot: 3.141592653589793 rad
       pos: 46.5,-8.5
       parent: 2
-- proto: FloraTreeSnow01
+- proto: FloraTreeSnow
   entities:
-  - uid: 5535
+  - uid: 5532
     components:
     - type: Transform
-      pos: -5.269833,14.46685
+      pos: -9.379208,10.349059
       parent: 2
-  - uid: 5541
-    components:
-    - type: Transform
-      pos: -8.342199,29.66519
-      parent: 2
-  - uid: 5559
-    components:
-    - type: Transform
-      pos: 22.629856,17.99919
-      parent: 2
-  - uid: 5562
-    components:
-    - type: Transform
-      pos: 51.31062,17.206741
-      parent: 2
-  - uid: 5565
-    components:
-    - type: Transform
-      pos: 46.908176,7.982774
-      parent: 2
-  - uid: 5569
-    components:
-    - type: Transform
-      pos: 54.026566,-17.61832
-      parent: 2
-  - uid: 5579
-    components:
-    - type: Transform
-      pos: 56.86979,7.397152
-      parent: 2
-  - uid: 5586
-    components:
-    - type: Transform
-      pos: 61.60918,-9.977372
-      parent: 2
-  - uid: 5589
-    components:
-    - type: Transform
-      pos: 66.74988,-16.225235
-      parent: 2
-- proto: FloraTreeSnow02
-  entities:
-  - uid: 5538
-    components:
-    - type: Transform
-      pos: 0.017176151,17.422802
-      parent: 2
-  - uid: 5551
-    components:
-    - type: Transform
-      pos: 19.926731,-5.5513554
-      parent: 2
-  - uid: 5566
-    components:
-    - type: Transform
-      pos: 42.655724,-4.0029573
-      parent: 2
-  - uid: 5576
-    components:
-    - type: Transform
-      pos: 55.98909,-13.625879
-      parent: 2
-  - uid: 5577
-    components:
-    - type: Transform
-      pos: 49.80159,-4.2109623
-      parent: 2
-  - uid: 5583
-    components:
-    - type: Transform
-      pos: 63.9365,3.870964
-      parent: 2
-  - uid: 5587
-    components:
-    - type: Transform
-      pos: 56.843555,-2.2898722
-      parent: 2
-- proto: FloraTreeSnow03
-  entities:
   - uid: 5533
     components:
     - type: Transform
       pos: -6.707333,12.583434
+      parent: 2
+  - uid: 5534
+    components:
+    - type: Transform
+      pos: -7.097958,15.513725
+      parent: 2
+  - uid: 5535
+    components:
+    - type: Transform
+      pos: -5.269833,14.46685
       parent: 2
   - uid: 5536
     components:
@@ -7916,6 +7847,41 @@ entities:
     components:
     - type: Transform
       pos: -4.810949,17.329052
+      parent: 2
+  - uid: 5538
+    components:
+    - type: Transform
+      pos: 0.017176151,17.422802
+      parent: 2
+  - uid: 5539
+    components:
+    - type: Transform
+      pos: -0.31094885,13.829051
+      parent: 2
+  - uid: 5540
+    components:
+    - type: Transform
+      pos: 0.15780115,11.063426
+      parent: 2
+  - uid: 5541
+    components:
+    - type: Transform
+      pos: -8.342199,29.66519
+      parent: 2
+  - uid: 5542
+    components:
+    - type: Transform
+      pos: -3.233015,31.931862
+      parent: 2
+  - uid: 5543
+    components:
+    - type: Transform
+      pos: 4.43886,32.603737
+      parent: 2
+  - uid: 5544
+    components:
+    - type: Transform
+      pos: 2.8739915,26.244362
       parent: 2
   - uid: 5545
     components:
@@ -7932,10 +7898,30 @@ entities:
     - type: Transform
       pos: 20.176731,-19.40681
       parent: 2
+  - uid: 5548
+    components:
+    - type: Transform
+      pos: 21.942356,-15.09431
+      parent: 2
+  - uid: 5549
+    components:
+    - type: Transform
+      pos: 19.989231,-12.016185
+      parent: 2
   - uid: 5550
     components:
     - type: Transform
       pos: 21.786106,-9.395105
+      parent: 2
+  - uid: 5551
+    components:
+    - type: Transform
+      pos: 19.926731,-5.5513554
+      parent: 2
+  - uid: 5552
+    components:
+    - type: Transform
+      pos: 21.770481,-6.1607304
       parent: 2
   - uid: 5553
     components:
@@ -7947,171 +7933,175 @@ entities:
     - type: Transform
       pos: 19.957981,5.5959644
       parent: 2
-  - uid: 5558
+  - uid: 5555
     components:
     - type: Transform
-      pos: 19.957981,16.24919
-      parent: 2
-  - uid: 5561
-    components:
-    - type: Transform
-      pos: 47.388744,19.816116
-      parent: 2
-  - uid: 5564
-    components:
-    - type: Transform
-      pos: 53.96687,11.748797
-      parent: 2
-  - uid: 5568
-    components:
-    - type: Transform
-      pos: 48.120316,-21.415195
-      parent: 2
-  - uid: 5574
-    components:
-    - type: Transform
-      pos: 53.39262,-4.7352424
-      parent: 2
-- proto: FloraTreeSnow04
-  entities:
-  - uid: 5540
-    components:
-    - type: Transform
-      pos: 0.15780115,11.063426
-      parent: 2
-  - uid: 5549
-    components:
-    - type: Transform
-      pos: 19.989231,-12.016185
-      parent: 2
-  - uid: 5552
-    components:
-    - type: Transform
-      pos: 21.770481,-6.1607304
+      pos: 22.176731,9.099443
       parent: 2
   - uid: 5556
     components:
     - type: Transform
       pos: 19.661106,11.943193
       parent: 2
-  - uid: 5567
-    components:
-    - type: Transform
-      pos: 42.561974,-7.2217073
-      parent: 2
-  - uid: 5571
-    components:
-    - type: Transform
-      pos: 52.26762,-12.874479
-      parent: 2
-  - uid: 5578
-    components:
-    - type: Transform
-      pos: 42.851826,12.403793
-      parent: 2
-  - uid: 5581
-    components:
-    - type: Transform
-      pos: 59.71042,4.584652
-      parent: 2
-- proto: FloraTreeSnow05
-  entities:
-  - uid: 5532
-    components:
-    - type: Transform
-      pos: -9.379208,10.349059
-      parent: 2
-  - uid: 5539
-    components:
-    - type: Transform
-      pos: -0.31094885,13.829051
-      parent: 2
-  - uid: 5542
-    components:
-    - type: Transform
-      pos: -3.233015,31.931862
-      parent: 2
-  - uid: 5544
-    components:
-    - type: Transform
-      pos: 2.8739915,26.244362
-      parent: 2
-  - uid: 5548
-    components:
-    - type: Transform
-      pos: 21.942356,-15.09431
-      parent: 2
-  - uid: 5555
-    components:
-    - type: Transform
-      pos: 22.176731,9.099443
-      parent: 2
   - uid: 5557
     components:
     - type: Transform
       pos: 21.801731,13.880693
       parent: 2
-  - uid: 5570
+  - uid: 5558
     components:
     - type: Transform
-      pos: 49.126995,-16.483854
+      pos: 19.957981,16.24919
       parent: 2
-  - uid: 5580
+  - uid: 5559
     components:
     - type: Transform
-      pos: 55.71354,3.428402
-      parent: 2
-  - uid: 5584
-    components:
-    - type: Transform
-      pos: 57.088852,-5.794897
-      parent: 2
-  - uid: 5588
-    components:
-    - type: Transform
-      pos: 61.462376,-4.852372
-      parent: 2
-  - uid: 5591
-    components:
-    - type: Transform
-      pos: 66.62488,-9.395983
-      parent: 2
-- proto: FloraTreeSnow06
-  entities:
-  - uid: 5534
-    components:
-    - type: Transform
-      pos: -7.097958,15.513725
-      parent: 2
-  - uid: 5543
-    components:
-    - type: Transform
-      pos: 4.43886,32.603737
+      pos: 22.629856,17.99919
       parent: 2
   - uid: 5560
     components:
     - type: Transform
       pos: 31.468124,21.048376
       parent: 2
+  - uid: 5561
+    components:
+    - type: Transform
+      pos: 47.388744,19.816116
+      parent: 2
+  - uid: 5562
+    components:
+    - type: Transform
+      pos: 51.31062,17.206741
+      parent: 2
   - uid: 5563
     components:
     - type: Transform
       pos: 46.826244,16.112991
+      parent: 2
+  - uid: 5564
+    components:
+    - type: Transform
+      pos: 53.96687,11.748797
+      parent: 2
+  - uid: 5565
+    components:
+    - type: Transform
+      pos: 46.908176,7.982774
+      parent: 2
+  - uid: 5566
+    components:
+    - type: Transform
+      pos: 42.655724,-4.0029573
+      parent: 2
+  - uid: 5567
+    components:
+    - type: Transform
+      pos: 42.561974,-7.2217073
+      parent: 2
+  - uid: 5568
+    components:
+    - type: Transform
+      pos: 48.120316,-21.415195
+      parent: 2
+  - uid: 5569
+    components:
+    - type: Transform
+      pos: 54.026566,-17.61832
+      parent: 2
+  - uid: 5570
+    components:
+    - type: Transform
+      pos: 49.126995,-16.483854
+      parent: 2
+  - uid: 5571
+    components:
+    - type: Transform
+      pos: 52.26762,-12.874479
       parent: 2
   - uid: 5572
     components:
     - type: Transform
       pos: 49.39262,-8.512787
       parent: 2
+  - uid: 5574
+    components:
+    - type: Transform
+      pos: 53.39262,-4.7352424
+      parent: 2
+  - uid: 5576
+    components:
+    - type: Transform
+      pos: 55.98909,-13.625879
+      parent: 2
+  - uid: 5577
+    components:
+    - type: Transform
+      pos: 49.80159,-4.2109623
+      parent: 2
+  - uid: 5578
+    components:
+    - type: Transform
+      pos: 42.851826,12.403793
+      parent: 2
+  - uid: 5579
+    components:
+    - type: Transform
+      pos: 56.86979,7.397152
+      parent: 2
+  - uid: 5580
+    components:
+    - type: Transform
+      pos: 55.71354,3.428402
+      parent: 2
+  - uid: 5581
+    components:
+    - type: Transform
+      pos: 59.71042,4.584652
+      parent: 2
   - uid: 5582
     components:
     - type: Transform
       pos: 60.288544,9.459652
       parent: 2
+  - uid: 5583
+    components:
+    - type: Transform
+      pos: 63.9365,3.870964
+      parent: 2
+  - uid: 5584
+    components:
+    - type: Transform
+      pos: 57.088852,-5.794897
+      parent: 2
+  - uid: 5586
+    components:
+    - type: Transform
+      pos: 61.60918,-9.977372
+      parent: 2
+  - uid: 5587
+    components:
+    - type: Transform
+      pos: 56.843555,-2.2898722
+      parent: 2
+  - uid: 5588
+    components:
+    - type: Transform
+      pos: 61.462376,-4.852372
+      parent: 2
+  - uid: 5589
+    components:
+    - type: Transform
+      pos: 66.74988,-16.225235
+      parent: 2
   - uid: 5590
     components:
     - type: Transform
       pos: 64.3905,-12.787736
+      parent: 2
+  - uid: 5591
+    components:
+    - type: Transform
+      pos: 66.62488,-9.395983
       parent: 2
 - proto: GeneratorBasic15kW
   entities:
@@ -11669,14 +11659,6 @@ entities:
     - type: Transform
       pos: 2.5,-11.5
       parent: 2
-- proto: SpawnerCrutchObjectiveAlfaFour
-  entities:
-  - uid: 5687
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 65.5,0.5
-      parent: 2
 - proto: SpawnerCrutchObjectiveAlfaOne
   entities:
   - uid: 5678
@@ -11706,36 +11688,32 @@ entities:
   - uid: 5682
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,0.5
+      pos: 65.5,0.5
       parent: 2
-- proto: SpawnerCrutchObjectiveAlfaThree
-  entities:
-  - uid: 5685
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 45.5,12.5
-      parent: 2
-  - uid: 5686
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 47.5,0.5
-      parent: 2
-- proto: SpawnerCrutchObjectiveAlfaTwo
-  entities:
   - uid: 5683
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 29.5,0.5
+      pos: 8.5,0.5
       parent: 2
   - uid: 5684
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 21.5,12.5
+      pos: 45.5,12.5
+      parent: 2
+  - uid: 5685
+    components:
+    - type: Transform
+      pos: 21.5,15.5
+      parent: 2
+  - uid: 5686
+    components:
+    - type: Transform
+      pos: 46.5,0.5
+      parent: 2
+  - uid: 5687
+    components:
+    - type: Transform
+      pos: 27.5,0.5
       parent: 2
 - proto: SpawnPaperMapFrozenTown
   entities:
@@ -28228,6 +28206,13 @@ entities:
     - type: Transform
       pos: 90.02284,4.113965
       parent: 2
+- proto: XenoEggAlfaMap1Mut1
+  entities:
+  - uid: 5714
+    components:
+    - type: Transform
+      pos: 63.465485,18.808327
+      parent: 2
 - proto: XenoEggAlfaMap1Pl1
   entities:
   - uid: 3698
@@ -28262,6 +28247,13 @@ entities:
     components:
     - type: Transform
       pos: 86.473755,6.919364
+      parent: 2
+- proto: XenoEggAlfaMap1Sab1
+  entities:
+  - uid: 5715
+    components:
+    - type: Transform
+      pos: 66.78561,-15.310886
       parent: 2
 - proto: XenoEggBetaMap1Be2
   entities:
@@ -33924,5 +33916,10 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 70.5,16.5
+      parent: 2
+  - uid: 5716
+    components:
+    - type: Transform
+      pos: 66.5,-15.5
       parent: 2
 ...
