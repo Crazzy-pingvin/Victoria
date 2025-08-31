@@ -3856,6 +3856,11 @@
       maxExternalPressure: 120
       spawnAmount: 2
       spawnTemperature: 340
+    - type: IgnitionSource
+      temperature: 1000
+      ignited: true
+    - type: IgniteOnCollide
+      fireStacks: 0.25 
 
 - type: entity
   id: CDCPlasmaFireHot
