@@ -3571,3 +3571,329 @@
   - type: TemperatureProtection
     heatingCoefficient: 1.1
     coolingCoefficient: 0.1
+#-----------------------------------------плазменный метатель-------------------------------
+#--------------------------------реагенты---------------------------------
+#-------------------обычная--------------------------
+- type: flavor
+  id: CDCPlasmaStd
+  flavorType: Complex
+  description: fla-cdc-plasma-std
+
+- type: reagent
+  id: CDCPlasmaStd
+  name: name-cdc-plasma-std
+  group: Botanical
+  desc: desc-cdc-plasma-std
+  physicalDesc: phy-desc-cdc-plasma-std
+  flavor: CDCPlasmaStd
+  color: "#161c82"
+  meltingPoint: -101.5
+  boilingPoint: -34.04
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: 5
+            Heat: 30
+            
+- type: reaction
+  id: CDCPlasmaStdFire
+  reactants:
+    CDCPlasmaStd:
+      amount: 30
+    Sensitizer:
+      amount: 10
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: CDCPlasmaFireStd
+#-------------------горячая--------------------------
+- type: reagent
+  id: CDCPlasmaHot
+  name: name-cdc-plasma-hot
+  group: Botanical
+  desc: desc-cdc-plasma-std
+  physicalDesc: phy-desc-cdc-plasma-std
+  flavor: CDCPlasmaStd
+  color: "#970000"
+  meltingPoint: -101.5
+  boilingPoint: -34.04
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: 5
+            Heat: 60
+            
+- type: reaction
+  id: CDCPlasmaStdHot
+  reactants:
+    CDCPlasmaHot:
+      amount: 30
+    Sensitizer:
+      amount: 10
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: CDCPlasmaFireHot
+#-------------------слабая--------------------------
+- type: reagent
+  id: CDCPlasmaCold
+  name: name-cdc-plasma-cold
+  group: Botanical
+  desc: desc-cdc-plasma-std
+  physicalDesc: phy-desc-cdc-plasma-std
+  flavor: CDCPlasmaStd
+  color: "#00b125"
+  meltingPoint: -101.5
+  boilingPoint: -34.04
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: 5
+            Heat: 15
+            
+- type: reaction
+  id: CDCPlasmaStdCold
+  reactants:
+    CDCPlasmaCold:
+      amount: 30
+    Sensitizer:
+      amount: 10
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: CDCPlasmaFireCold
+#--------------------------------ёмкости---------------------------------
+- type: Tag
+  id: CDCBeakerProjectile
+#-------------------пустая--------------------------
+- type: entity
+  name: ёмкость для метателя
+  parent: LargeBeaker
+  description: Боеприпас для Конгломератского метателя "Салах-ад-Дин".
+  suffix: Конгломерат, Пустая
+  id: CDCBeakerPlasma
+  components:
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_beaker.rsi
+    layers:
+      - state: beakerlarge
+      - state: beakerlarge1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+  - type: Projectile
+    damage:
+      types:
+        Slash: 5
+  - type: Tag
+    tags:
+    - CDCBeakerProjectile
+  - type: ReagentTank
+#-------------------обычная--------------------------
+- type: entity
+  parent: CDCBeakerPlasma
+  name: ёмкость вареной плазмы
+  id: CDCBeakerPlasmaStd
+  suffix: Конгломерат, Стандартная
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+        - ReagentId: CDCPlasmaStd
+          Quantity: 300
+#-------------------горячая--------------------------
+- type: entity
+  parent: CDCBeakerPlasmaStd
+  name: ёмкость вареной горячей плазмы
+  id: CDCBeakerPlasmaHot
+  suffix: Конгломерат, Горячая
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+        - ReagentId: CDCPlasmaHot
+          Quantity: 300
+#-------------------слабая--------------------------
+- type: entity
+  parent: CDCBeakerPlasmaStd
+  name: ёмкость вареной слабой плазмы
+  id: CDCBeakerPlasmaCold
+  suffix: Конгломерат, Слабая
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+        - ReagentId: CDCPlasmaCold
+          Quantity: 300
+#-------------------сенсебилизатор--------------------------
+- type: entity
+  parent: CDCBeakerPlasmaStd
+  name: ёмкость с сенсебилизатором
+  description: В этой ёмкости плещется сенсебилизатор, что может в мгновение ока поджечь варёную плазму!
+  id: CDCBeakerSensitizer
+  suffix: Конгломерат, Сенсебилизатор
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+        - ReagentId: Sensitizer
+          Quantity: 300
+#-------------------пенаобразователь--------------------------
+- type: entity
+  parent: CDCBeakerPlasmaStd
+  name: ёмкость с пенаобразователем
+  description: В этой ёмкости плещется набор химикатов, при добавлении алюминия к которому появится плотная пена.
+  id: CDCBeakerFoam
+  suffix: Конгломерат, Пена
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+        - ReagentId: FluorosulfuricAcid
+          Quantity: 150
+        - ReagentId: FoamingAgent
+          Quantity: 150  
+#--------------------------------метатель---------------------------------
+- type: entity
+  name: Плазменный метатель "Салах-ад-Дин"
+  parent: BaseWeaponLauncher
+  id: CDCThrowerBeakerPlasma
+  suffix: Конгломерат
+  description: Жуткая поражающая способность оружейной плазмы натолкнула на мысль о том, что можно использовать её, как временные жидкие препятствия на пути противника.
+  components:
+  - type: Item
+    size: Large
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 0.7
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CDCBeakerProjectile
+    capacity: 2
+    proto: CDCBeakerPlasmaStd
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_thrower.rsi
+    layers:
+    - state: icon
+      map: [ "enum.GunVisualLayers.Base" ]
+#--------------------------------огонь---------------------------------
+- type: entity
+  id: CDCPlasmaFireStd
+  name: Плазменное пламя
+  description: Жарко горит! И крайне опасно!
+  suffix: Стандарт
+  components:
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path:
+            "/Audio/Effects/fire.ogg"
+    - type: Sprite
+      sprite: Effects/fire.rsi
+      state: 1
+    - type: SpeedModifierContacts
+      walkSpeedModifier: 0.8
+      sprintSpeedModifier: 0.8
+    - type: DamageContacts
+      damage:
+        types:
+          Heat: 50
+    - type: TimedDespawn
+      lifetime: 20
+    - type: Clickable
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+          - MidImpassable
+    - type: StaminaDamageOnCollide
+      damage: 5
+    - type: Anchorable
+    - type: AtmosDevice
+    - type: GasMiner
+      spawnGas: CarbonDioxide
+      maxExternalPressure: 120
+      spawnAmount: 2
+      spawnTemperature: 340
+
+- type: entity
+  id: CDCPlasmaFireHot
+  parent: CDCPlasmaFireStd
+  suffix: Горячая
+  components:
+  - type: DamageContacts
+    damage:
+      types:
+        Heat: 75
+  - type: TimedDespawn
+    lifetime: 15
+      
+- type: entity
+  id: CDCPlasmaFireCold
+  parent: CDCPlasmaFireStd
+  suffix: Слабая
+  components:
+  - type: DamageContacts
+    damage:
+      types:
+        Heat: 25
+  - type: TimedDespawn
+    lifetime: 25
+    
+- type: entity
+  suffix: Алюминий
+  parent: Beaker
+  name: мензурка
+  description: Используется для хранения среднего количества химикатов или растворов
+  id: AluminiumBeakerSmall
+  components:
+  - type: Label
+    currentLabel: Алюминий
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 50
+        reagents:
+        - ReagentId: Aluminium
+          Quantity: 50

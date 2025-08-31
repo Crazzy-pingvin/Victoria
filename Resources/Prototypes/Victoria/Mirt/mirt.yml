@@ -1231,7 +1231,53 @@
     layers:
       - state: tip
   - type: StaminaDamageOnCollide
-    damage: 5     
+    damage: 5   
+#------------------------------------зенитный осколок----------         
+- type: entity
+  id: MirtBulletLightFrag
+  suffix: Миртан
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
+    layers:
+      - state: tip
+  - type: StaminaDamageOnCollide
+    damage: 5 
+  - type: TimedDespawn
+    lifetime: 0.3    
+#------------------------------------зенитка---------- 
+- type: entity
+  id: MirtBulletFrag
+  name: Осколочный заряд (zhc)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RepeatingTrigger
+    delay: 0.6 # line of fire as well as if it hits something
+  - type: ProjectileGrenade
+    fillPrototype: MirtBulletLightFrag
+    capacity: 20
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
+    layers:
+      - state: tip     
 #------------------------------------пожарный лазер---------- 
 - type: Tag
   id: MirtFireLaser
@@ -1308,6 +1354,23 @@
   - type: Tag
     tags:
       - MirtCartridgePistol
+#------------------------------------зенитка----------      
+- type: Tag
+  id: MirtCartridgeFrag
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: MirtCartridgeFrag
+  name: Осколочный заряд (zhc)
+  parent: BaseCartridgePistol
+  description: Нестабильный боеприпас, который разрывается на кучу осколков при любом неудачном случае.
+  components:
+  - type: CartridgeAmmo
+    proto: MirtBulletFrag
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - MirtCartridgeFrag
 #-------------------------------------------------------------------------------магазины------------------------------------------------
 #--------------------------------------------------------миртанские------------------------------------
 - type: Tag
@@ -1494,7 +1557,35 @@
   - type: Tag
     tags:
       - MirtPowerCell 
+      - MirtMagazine
+#-----------------------------------зенитка---------
+- type: Tag
+  id: MirtMagazineZenit
+
+- type: entity
+  id: MirtMagazineZenit
+  name: Магазин к зенитному пулемёту "Носорог" (zhc)
+  suffix: Миртан
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Victoria\Mirt\Weapon\mirt_zenit_magazine.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - MirtMagazineZenit
       - MirtMagazine 
+  - type: ProjectileBatteryAmmoProvider
+    proto: MirtCartridgeFrag
+    fireCost: 100000
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: Battery
+    maxCharge: 5000000
+    startingCharge: 5000000 
+  - type: Appearance
 #-------------------------------------стволы---------------------------------------------------------------------------------
 #---------------------------------------------------миртан-----------------------------------
 #-----------------------гражданская-----------------------
@@ -1901,62 +1992,56 @@
     graph: MirtRifleSniper
     node: MirtRifle
 #-----------------------зенитка-----------------------
-# - type: entity
-  # name: Зенитный пулемёт "Носорог" 
-  # suffix: Миртан
-  # parent: BaseWeaponLightMachineGun
-  # id: MirtZenit
-  # description: Блюспейс-пулемёт армии Империи Миртана, выполненный как ручная зенитная пушка. Хорошо помогает и против летунов, и против наземных целей. (zhc)
-  # components:
-  # - type: Sprite
-    # sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
-    # layers:
-      # - state: base
-        # map: ["enum.GunVisualLayers.Base"]
-      # - state: mag-0
-        # map: ["enum.GunVisualLayers.Mag"]
-  # - type: Item
-    # size: Large
-  # - type: Clothing
-    # sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
-  # - type: Gun
-    # useKey: false
-    # fireRate: 6
-    # soundGunshot:
-      # path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-    # projectileSpeed: 10
-  # - type: ChamberMagazineAmmoProvider
-    # soundRack:
-      # path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
-  # - type: ItemSlots
-    # slots:
-      # gun_magazine:
-        # name: Magazine
-        # startingItem: MirtMagazineZenit
-        # insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        # ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        # priority: 2
-        # whitelist:
-          # tags:
-            # - MirtMagazineZenit
-      # gun_chamber:
-        # name: Chamber
-        # startingItem: MirtCartridgeZenit
-        # priority: 1
-        # whitelist:
-          # tags:
-            # - MirtCartridgeZenit
-  # - type: ContainerContainer
-    # containers:
-      # gun_magazine: !type:ContainerSlot
-      # gun_chamber: !type:ContainerSlot
-  # - type: MagazineVisuals
-    # magState: mag
-    # steps: 1
-    # zeroVisible: true
-  # - type: Appearance
-  # - type: StaticPrice
-    # price: 750
+- type: entity
+  name: Зенитный пулемёт "Носорог" 
+  suffix: Миртан
+  parent: BaseWeaponLightMachineGun
+  id: MirtZenit
+  description: Блюспейс-пулемёт армии Империи Миртана, выполненный как ручная зенитная пушка. Хорошо помогает и против летунов, и против наземных целей. (zhc)
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
+  - type: Gun
+    minAngle: 10
+    maxAngle: 60
+    angleIncrease: 10
+    angleDecay: 0.5
+    fireRate: 4
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+    projectileSpeed: 25
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MirtMagazineZenit
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MirtMagazineZenit
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 750
 #-----------------------пожарный лазер-----------------------
 - type: entity
   name: Пожарный лазер "Месяц"
@@ -1999,6 +2084,15 @@
   - type: StaticPrice
     price: 500
 #-----------------------гранатомёт-----------------------
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ProjectileDragonsBreath
+  id: ProjectileMirtGran
+  name: зажигательный гранотомётный заряд.
+  components:
+  - type: TimedDespawn
+    lifetime: 3
+
 - type: entity  
   name: Гранатомёт "Медведка"
   suffix: Миртан
@@ -2034,7 +2128,7 @@
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 5
   - type: BasicEntityAmmoProvider
-    proto: ProjectileDragonsBreath
+    proto: ProjectileMirtGran
     capacity: 1
     count: 1
   - type: StaticPrice

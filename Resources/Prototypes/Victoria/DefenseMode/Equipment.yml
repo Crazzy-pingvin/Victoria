@@ -132,6 +132,28 @@
   - LightBomb
   - LightBomb
 
+- type: thiefBackpackSet
+  id: SetUmporGrenadier
+  name: Набор Гренадёра
+  description: Включает в себя реактивный гранатомёт "Ярость", по 2 разрывных, осколочных и дольнобойных ракеты, бронекомплект, лопатку, бинокль и пластид.
+  sprite:
+    sprite: Victoria/Umpor/Weapon/umpor_launcher.rsi
+    state: base
+  content:
+  - UmporWeaponLauncherRocket
+  - UmporArmorMiddle
+  - UmporSpade
+  - Plastid
+  - Plastid
+  - UmporRocketExp
+  - UmporRocketExp
+  - UmporRocketFrag
+  - UmporRocketFrag
+  - UmporRocketFar
+  - UmporRocketfar
+  - Binoculars
+  - UmporUniformMine
+
 - type: entity
   id: ToolboxUmporSPC
   name: Набор вооружения умпорского специалиста
@@ -149,6 +171,7 @@
     - SetUmporShotgan
     - SetUmporMinesweeper
     - SetUmporRunner
+    - SetUmporGrenadier
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -192,6 +215,7 @@
     - SetUmporMinesweeper
     - SetUmporBuilder
     - SetUmporRunner
+    - SetUmporGrenadier
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -587,7 +611,7 @@
 - type: thiefBackpackSet
   id: SetMirtLaser
   name: Набор Поджигателя
-  description: Включает в себя пожарный лазер "Месяц", 2 батареи, бронекомплект и нож.
+  description: Включает в себя пожарный лазер "Месяц", 2 батареи, бронекомплект, бинокль и нож.
   sprite:
     sprite: Victoria/Mirt/Weapon/mirt_laser.rsi
     state: icon
@@ -595,6 +619,22 @@
   - MirtLaser
   - MirtPowerCell
   - MirtPowerCell
+  - MirtArmorMiddle
+  - Binoculars
+  - MirtnKnife
+
+- type: thiefBackpackSet
+  id: SetMirtZenit
+  name: Набор Зенитчика (блюспейс зенитка)
+  description: Включает в себя блюспейс зенитный пулемёт "Носорог", 3 цинка, бронекомплект и нож.
+  sprite:
+    sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
+    state: icon
+  content:
+  - MirtZenit
+  - MirtMagazineZenit
+  - MirtMagazineZenit
+  - MirtMagazineZenit
   - MirtArmorMiddle
   - MirtnKnife
 
@@ -615,6 +655,7 @@
     - SetMirtLMG
     - SetMirtRaz
     - SetMirtDefender
+    - SetMirtZenit
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -685,6 +726,7 @@
     - SetMirtDefender
     - SetMirtLaser
     - SetMirtGran
+    - SetMirtZenit
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -801,6 +843,28 @@
   - FuseMine
   - FuseMine
   - ExGrenade
+
+- type: thiefBackpackSet
+  id: CDCThrowerBeakerPlasma
+  name: Набор Огнеметателя
+  description: Включает в себя метатель "Салах-ад-Дин", 4 мёмкости с плазмой, 3 с сенсебилизатором, 1 с пенообразомателем, мензурку с алюминием, бронекомплект, бинокль и саблю.
+  sprite:
+    sprite: Victoria/CDC/Weapon/cdc_thrower.rsi
+    state: icon
+  content:
+  - CDCThrowerBeakerPlasma
+  - CDCBeakerPlasmaStd
+  - CDCBeakerPlasmaStd
+  - CDCBeakerPlasmaStd
+  - CDCBeakerPlasmaStd
+  - CDCBeakerSensitizer
+  - CDCBeakerSensitizer
+  - CDCBeakerSensitizer
+  - CDCBeakerFoam
+  - AluminiumBeakerSmall
+  - CDCArmorMiddle
+  - Binoculars
+  - CDCSaber
   
 - type: thiefBackpackSet
   id: SetCDCRunner
@@ -840,6 +904,7 @@
     - SetCDCDefoc
     - SetCDCMinesweeper
     - SetCDCRunner
+    - CDCThrowerBeakerPlasma
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface
@@ -899,6 +964,7 @@
     - SetCDCMinesweeper
     - SetCDCOperator
     - SetCDCRunner
+    - CDCThrowerBeakerPlasma
   - type: ActivatableUI
     key: enum.ThiefBackpackUIKey.Key
   - type: UserInterface

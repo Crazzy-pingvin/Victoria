@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Crate by Crazzy_pingvin",
+    "states": [
+        {
+            "name": "o3"
+        },
+		{
+            "name": "o2"
+        },
+        {
+            "name": "o1"
+        },
+        {
+            "name": "bullet"
+        },
+        {
+            "name": "rocket"
+        }
+    ]
+}
