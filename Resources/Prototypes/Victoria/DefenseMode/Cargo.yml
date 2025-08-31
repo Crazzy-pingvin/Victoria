@@ -2108,20 +2108,20 @@
   - DefShopAmmoCDC  
   
 - type: listing
-  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
   name: Ящик горячеплазменных боеприпасов метателя
   description: Четыре горячеплазменных ёмкости и три с сенсебилизатором
-  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
   cost:
     DefChip_currency: 7
   categories:
   - DefShopAmmoCDC  
   
 - type: listing
-  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
   name: Ящик cлабоплазменных боеприпасов метателя
   description: Четыре слабоплазменных ёмкости и три с сенсебилизатором
-  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
   cost:
     DefChip_currency: 5
   categories:
