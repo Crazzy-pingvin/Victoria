@@ -11745,6 +11745,13 @@ entities:
     - type: Transform
       pos: 5.5349393,16.54465
       parent: 2
+- proto: VendingMachineChemicals
+  entities:
+  - uid: 4504
+    components:
+    - type: Transform
+      pos: 21.5,-3.5
+      parent: 2
 - proto: VendingMachineSeedsUnlocked
   entities:
   - uid: 2270

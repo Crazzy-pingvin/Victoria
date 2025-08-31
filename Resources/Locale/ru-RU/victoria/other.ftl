@@ -55,3 +55,10 @@ petting-failure-defender-cyborg = Вы тянетесь погладить { $ta
 entrenching-stop-digging = Вы прекратили копать.
 entrenching-begin-filling = Вы начали засыпать песок в мешки.
 entrenching-start-digging = Вы начали копать
+
+name-cdc-plasma-std = свареная плазма
+desc-cdc-plasma-std = горячая субстанция, способная прожечь даже сталь
+phy-desc-cdc-plasma-std = густое и вязкое
+fla-cdc-plasma-std = ГОРЯЧО! БОЛЬНО!
+name-cdc-plasma-hot = свареная горячая плазма
+name-cdc-plasma-cold = свареная слабая плазма

@@ -178,6 +178,15 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      5000: Critical
+      1000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   id: FoamedIronMetal
