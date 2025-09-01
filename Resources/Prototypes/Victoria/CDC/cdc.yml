@@ -3602,9 +3602,9 @@
   id: CDCPlasmaStdFire
   reactants:
     CDCPlasmaStd:
-      amount: 30
+      amount: 15
     Sensitizer:
-      amount: 10
+      amount: 5
   effects:
     - !type:CreateEntityReactionEffect
       entity: CDCPlasmaFireStd
@@ -3632,9 +3632,9 @@
   id: CDCPlasmaStdHot
   reactants:
     CDCPlasmaHot:
-      amount: 30
+      amount: 15
     Sensitizer:
-      amount: 10
+      amount: 5
   effects:
     - !type:CreateEntityReactionEffect
       entity: CDCPlasmaFireHot
@@ -3662,9 +3662,9 @@
   id: CDCPlasmaStdCold
   reactants:
     CDCPlasmaCold:
-      amount: 30
+      amount: 15
     Sensitizer:
-      amount: 10
+      amount: 5
   effects:
     - !type:CreateEntityReactionEffect
       entity: CDCPlasmaFireCold
