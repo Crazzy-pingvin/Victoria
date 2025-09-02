@@ -215,6 +215,8 @@
   parent: MobXeno
   id: MobXenoDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: NpcFactionMember
     factions:
     - XenoTunnellerOnly
@@ -258,6 +260,8 @@
   parent: MobXeno
   id: MobXenoDefAlfaAlter
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -351,6 +355,8 @@
   parent: MobXenoPraetorian
   id: MobXenoPraetorianDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -409,6 +415,8 @@
   parent: MobXenoDrone
   id: MobXenoDroneDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -467,6 +475,8 @@
   parent: MobXenoQueen
   id: MobXenoQueenDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -530,6 +540,8 @@
   parent: MobXenoRavager
   id: MobXenoRavagerDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -579,6 +591,8 @@
   parent: MobXenoRavager
   id: MobXenoRavagerDefAlfaAlter
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: HTN
@@ -668,6 +682,8 @@
   parent: MobXenoRunner
   id: MobXenoRunnerDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -714,6 +730,8 @@
   parent: MobXenoRunner
   id: MobXenoRunnerDefAlfaAlter
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -805,6 +823,8 @@
   parent: MobXenoRouny
   id: MobXenoRounyDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -862,6 +882,8 @@
   parent: MobXenoSpitter
   id: MobXenoSpitterDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy

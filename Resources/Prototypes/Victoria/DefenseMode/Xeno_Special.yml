@@ -60,6 +60,8 @@
   parent: MobXeno
   id: MobXenoStiefmutterAlpha
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Sprite
     drawdepth: Mobs
     sprite: Victoria/DefenseMode/Xenos/stiefmutter.rsi
@@ -136,6 +138,8 @@
   parent: MobXenoRavager
   id: MobXenoSaberDefAlfa
   components:
+  - type: GhostRole
+    prob: 0.00
   - type: Sprite
     drawdepth: Mobs
     sprite: Victoria/DefenseMode/Xenos/saber.rsi
