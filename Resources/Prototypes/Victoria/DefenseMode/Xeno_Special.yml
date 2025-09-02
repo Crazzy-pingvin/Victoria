@@ -61,7 +61,7 @@
   id: MobXenoStiefmutterAlpha
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Sprite
     drawdepth: Mobs
     sprite: Victoria/DefenseMode/Xenos/stiefmutter.rsi
@@ -139,7 +139,7 @@
   id: MobXenoSaberDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Sprite
     drawdepth: Mobs
     sprite: Victoria/DefenseMode/Xenos/saber.rsi

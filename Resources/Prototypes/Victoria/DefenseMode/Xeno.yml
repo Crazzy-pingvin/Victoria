@@ -216,7 +216,7 @@
   id: MobXenoDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunnellerOnly
@@ -261,7 +261,7 @@
   id: MobXenoDefAlfaAlter
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -356,7 +356,7 @@
   id: MobXenoPraetorianDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -416,7 +416,7 @@
   id: MobXenoDroneDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -476,7 +476,7 @@
   id: MobXenoQueenDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -541,7 +541,7 @@
   id: MobXenoRavagerDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -592,7 +592,7 @@
   id: MobXenoRavagerDefAlfaAlter
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: HTN
@@ -683,7 +683,7 @@
   id: MobXenoRunnerDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -731,7 +731,7 @@
   id: MobXenoRunnerDefAlfaAlter
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -824,7 +824,7 @@
   id: MobXenoRounyDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -883,7 +883,7 @@
   id: MobXenoSpitterDefAlfa
   components:
   - type: GhostRole
-    prob: 0.00
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
