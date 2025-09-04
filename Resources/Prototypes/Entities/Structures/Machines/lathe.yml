@@ -547,6 +547,7 @@
       - ServiceTechFabCircuitboard
       - IndustrialVacuumMachineMachineCircuitboard
       - IndustrialLithographMachineCircuitboard
+      - HolopadMachineCircuitboard
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ShuttleGunDusterCircuitboard

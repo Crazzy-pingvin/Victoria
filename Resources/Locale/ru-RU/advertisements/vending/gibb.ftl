@@ -1,0 +1,12 @@
+﻿advertisement-gibb-1 = Вкуснотища!
+advertisement-gibb-2 = Рекомендует до одного процента врачей!
+advertisement-gibb-3 = Большей миллиона напитков продано!
+advertisement-gibb-4 = Доктор Гибб, что плохого может случиться?
+advertisement-gibb-5 = Доктор Гибб, взрыв вкуса!
+advertisement-gibb-6 = Верь мне, Я врач!
+advertisement-gibb-7 = Лучший сахарный эликсир в галактике!
+advertisement-gibb-8 = Спейс Кола — смотри не ГИБнись!
+thankyou-gibb-1 = Док уже ... в вашем животе!
+thankyou-gibb-2 = Диагноз: вкус!
+thankyou-gibb-3 = Насладись 42 вкусами!
+thankyou-gibb-4 = Насладись сиропной вкуснятиной!

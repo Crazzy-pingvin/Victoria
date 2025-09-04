@@ -923,3 +923,8 @@
   parent: BaseRecipeSiPlaz_2
   id: IndustrialLithographMachineCircuitboard
   result: IndustrialLithographMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: HolopadMachineCircuitboard
+  result: HolopadMachineCircuitboard
