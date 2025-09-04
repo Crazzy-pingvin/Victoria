@@ -46,6 +46,19 @@ public partial class MobStateSystem
         SubscribeLocalEvent<MobStateComponent, AttemptPacifiedAttackEvent>(OnAttemptPacifiedAttack);
 
         SubscribeLocalEvent<MobStateComponent, UnbuckleAttemptEvent>(OnUnbuckleAttempt);
+
+        SubscribeLocalEvent<MobStateComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<MobStateComponent, ComponentShutdown>(OnShutdown);
+    }
+
+    private void OnStartup(Entity<MobStateComponent> ent, ref ComponentStartup args)
+    {
+        _appearance.SetData(ent, MobStateVisuals.State, ent.Comp.CurrentState);
+    }
+
+    private void OnShutdown(Entity<MobStateComponent> ent, ref ComponentShutdown args)
+    {
+        _appearance.RemoveData(ent, MobStateVisuals.State);
     }
 
     private void OnUnbuckleAttempt(Entity<MobStateComponent> ent, ref UnbuckleAttemptEvent args)
