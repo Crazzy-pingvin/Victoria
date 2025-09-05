@@ -55,10 +55,18 @@ public abstract class SharedWoolySystem : EntitySystem
 
             if (wooly.CurrentState != WoolyState.Long)
             {
-                wooly.CurrentState++;
-                _appearance.SetData(uid, WoolyVisualState.State, wooly.CurrentState);
+                SetState(uid, wooly.CurrentState + 1);
             }
         }
+    }
+
+    public void SetState(EntityUid mob, WoolyState state)
+    {
+        if (!TryComp<WoolyComponent>(mob, out var wooly))
+            return;
+
+        wooly.CurrentState = state;
+        _appearance.SetData(mob, WoolyVisualState.State, wooly.CurrentState);
     }
 }
 

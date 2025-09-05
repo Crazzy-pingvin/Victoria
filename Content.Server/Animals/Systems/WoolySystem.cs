@@ -55,7 +55,7 @@ public sealed partial class WoolySystem : SharedWoolySystem
 
         _stack.SpawnMultiple(comp.WoolEntity, quantity, mob);
 
-        comp.CurrentState--;
+        SetState(mob, comp.CurrentState - 1);
     }
 
     private void AttemptShave(EntityUid mob, EntityUid user, EntityUid used)
