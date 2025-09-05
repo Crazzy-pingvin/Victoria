@@ -32,9 +32,9 @@ public sealed partial class WoolyComponent : Component
     public Dictionary<WoolyState, int> WoolyQuantity = new()
     {
         { WoolyState.Naked, 0 },
-        { WoolyState.Short, 4 },
-        { WoolyState.Normal, 6 },
-        { WoolyState.Long, 10 },
+        { WoolyState.Short, 2 },
+        { WoolyState.Normal, 4 },
+        { WoolyState.Long, 6 },
     };
 
     [DataField, AutoNetworkedField]

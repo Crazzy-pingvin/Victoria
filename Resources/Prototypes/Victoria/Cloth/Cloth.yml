@@ -547,9 +547,9 @@
   - type: Sprite
     drawdepth: Mobs
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.WoolyVisualLayers.Base"] # Victoria-WoolySheep
       state: sheep
-      sprite: Victoria/Cloth/sheep.rsi
+      sprite: Mobs/Animals/sheep.rsi
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -573,25 +573,10 @@
         - MobMask
         layer:
         - MobLayer
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: sheep
-      Critical:
-        Base: dead
-      Dead:
-        Base: dead
-  - type: SolutionContainerManager
-    solutions:
-      udder:
-        maxVol: 250
-        reagents:
-        - ReagentId: SheepWool
-          Quantity: 30
-  - type: Udder
-    reagentId: SheepWool
-    quantityPerUpdate: 25
-    growthDelay: 30
+  - type: WoolyVisuals # Victoria-WoolySheep
+    spritePrefix: sheep-
+  - type: Wooly
+    woolEntity: SheepWoolClean1
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -622,21 +607,9 @@
     rootTask:
       task: RuminantCompound
 #------------------Овечья Шерсть-------------------------
-#------------------Грязная-------------------------
-- type: reagent
-  id: SheepWool
-  name: reagent-name-sheep-wool
-  desc: reagent-desc-sheep-wool
-  physicalDesc: reagent-physical-desc-fibrous
-  flavor: fiber
-  color: "#828282"
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:OrganType
-          type: Moth
+
+
+
 #------------------Чистая-------------------------
 #------------------Сама-------------------------
 - type: Tag
@@ -654,13 +627,13 @@
     baseLayer: base
     layerStates:
     - wool
-    - wool_2
-    - wool_3
+    - wool-2
+    - wool-3
   - type: Sprite
     sprite: Victoria/Cloth/sheepwoolclean.rsi
-    state: wool_3
+    state: wool-3
     layers:
-    - state: wool_3
+    - state: wool-3
       map: ["base"]
   - type: Appearance
   - type: Material
@@ -687,7 +660,7 @@
 - type: stack
   id: SheepWoolClean
   name: овечья шерсть
-  icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool_3 }
+  icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool-3 }
   spawn: SheepWoolClean1
   maxCount: 30
 #------------------Десять овечьей шерсти--------------------------
@@ -718,20 +691,6 @@
   unit: materials-unit-roll
   icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool }
   price: 0.05
-#----------------------------------Рецепт----------------------------------
-- type: reaction
-  id: SheepWoolClean
-  impact: Low
-  quantized: true
-  conserveEnergy: false
-  reactants:
-    Water:
-      amount: 10
-    SheepWool:
-      amount: 10
-  effects:
-    - !type:CreateEntityReactionEffect
-      entity: SheepWoolClean10
 
 #--------------------------------------Лайка------------------------------------------
 #------------------Сама-------------------------
@@ -1089,21 +1048,6 @@
   price: 0.05
 
 #------------------Козья Шерсть-------------------------
-#------------------Грязная-------------------------
-- type: reagent
-  id: GoatWool
-  name: reagent-name-goat-wool
-  desc: reagent-desc-sheep-wool
-  physicalDesc: reagent-physical-desc-fibrous
-  flavor: fiber
-  color: "#cba36a"
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:OrganType
-          type: Moth
 #------------------Чистая-------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -1118,13 +1062,13 @@
     baseLayer: base
     layerStates:
     - wool
-    - wool_2
-    - wool_3
+    - wool-2
+    - wool-3
   - type: Sprite
     sprite: Victoria/Cloth/goatwoolclean.rsi
-    state: wool_3
+    state: wool-3
     layers:
-    - state: wool_3
+    - state: wool-3
       map: ["base"]
   - type: Appearance
   - type: Material
@@ -1150,7 +1094,7 @@
 - type: stack
   id: GoatWoolClean
   name: козья шерсть
-  icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool_3 }
+  icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool-3 }
   spawn: GoatWoolClean1
   maxCount: 30
 #------------------Десять козьей шерсти--------------------------
@@ -1181,21 +1125,6 @@
   unit: materials-unit-roll
   icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool }
   price: 0.05
-#----------------------------------Рецепт----------------------------------
-- type: reaction
-  id: GoatWoolClean
-  impact: Low
-  quantized: true
-  conserveEnergy: false
-  reactants:
-    Water:
-      amount: 10
-    GoatWool:
-      amount: 10
-  effects:
-    - !type:CreateEntityReactionEffect
-      entity: GoatWoolClean10
-
 #--------------------------------------Анилин------------------------------------------
 #------------------Сама-------------------------
 - type: entity
@@ -1278,7 +1207,7 @@
 - type: cargoProduct
   id: LivestockSheep
   icon:
-    sprite: Victoria/Cloth/sheep.rsi
+    sprite: Mobs/Animals/sheep.rsi
     state: sheep
   product: CrateNPCSheep
   cost: 1100
