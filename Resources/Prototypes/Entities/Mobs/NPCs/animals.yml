@@ -960,6 +960,7 @@
     - DoorBumpOpener
     - Goat
   - type: Reproductive
+    makeOffspringInfant: false
     partnerWhitelist:
       tags:
       - Goat
