@@ -46,6 +46,10 @@
     {
       "name": "goat-short-alive",
       "directions": 4
+    },
+    {
+      "name": "goat",
+      "directions": 4
     }
   ]
 }

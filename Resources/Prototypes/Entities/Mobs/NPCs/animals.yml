@@ -964,7 +964,7 @@
       tags:
       - Goat
     offspring:
-    - id: MobGoat
+    - id: MobGoatChild
   - type: ReproductivePartner
   - type: Appearance
   # Victoria-WoolyGoats | Control over visuals passed to WoolyVisuals
@@ -981,13 +981,13 @@
       udder:
         maxVol: 250
         reagents:
-        - ReagentId: GoatMilk
+        - ReagentId: MilkGoat
           Quantity: 30
       # Victoria-WoolyGoats | Now it spawns items
       # wool:
       #   maxVol: 250
   - type: Udder
-    reagentId: GoatMilk
+    reagentId: MilkGoat
     quantityPerUpdate: 25
     growthDelay: 20
   - type: WoolyVisuals # Victoria-WoolyGoats

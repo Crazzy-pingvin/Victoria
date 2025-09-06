@@ -46,6 +46,10 @@
     {
       "name": "sheep-short-alive",
       "directions": 4
+    },
+        {
+      "name": "sheep",
+      "directions": 4
     }
   ]
 }
