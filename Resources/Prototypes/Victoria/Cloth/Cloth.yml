@@ -548,7 +548,7 @@
     drawdepth: Mobs
     layers:
     - map: ["enum.WoolyVisualLayers.Base"] # Victoria-WoolySheep
-      state: sheep
+      state: sheep-normal-alive
       sprite: Mobs/Animals/sheep.rsi
   - type: Tag
     tags:

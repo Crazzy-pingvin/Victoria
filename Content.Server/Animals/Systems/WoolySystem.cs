@@ -1,19 +1,16 @@
-using Content.Server.Animals.Systems;
 using Content.Server.DoAfter;
 using Content.Server.Kitchen.Components;
-using Content.Server.Popups;
 using Content.Server.Stack;
 using Content.Shared.Animals;
 using Content.Shared.DoAfter;
 using Content.Shared.Verbs;
 
-namespace Content.Server.Animals;
+namespace Content.Server.Animals.Systems;
 
 public sealed partial class WoolySystem : SharedWoolySystem
 {
     [Dependency] private readonly DoAfterSystem _doAfter = default!;
     [Dependency] private readonly StackSystem _stack = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
 
     public override void Initialize()
     {
@@ -56,8 +53,6 @@ public sealed partial class WoolySystem : SharedWoolySystem
 
         _stack.SpawnMultiple(comp.WoolEntity, quantity, mob);
         SetState(mob, comp.CurrentState - 1);
-
-        _popup.PopupClient(Loc.GetString("wooly-system-success", ("amount", quantity), ("target", MetaData(mob).EntityName)), args.User);
     }
 
     private void AttemptShave(EntityUid mob, EntityUid user, EntityUid used)

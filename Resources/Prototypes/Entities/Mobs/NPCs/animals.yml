@@ -941,6 +941,7 @@
     layers:
     - map: ["enum.WoolyVisualLayers.Base"] # Victoria-WoolyGoats
       sprite: Mobs/Animals/goat.rsi
+      state: goat-normal-alive
   - type: Fixtures
     fixtures:
       fix1:
