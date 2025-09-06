@@ -1,37 +1,55 @@
 {
   "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by Askolots (discord: 788252896016990219)",
   "size": {
     "x": 32,
     "y": 32
   },
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from https://github.com/tgstation/tgstation/commit/53d1f1477d22a11a99c6c6924977cd431075761b",
   "states": [
     {
-      "name": "dead",
-      "delays": [
-        [
-          1
-        ]
-      ]
+      "name": "goat-long-dead"
+    },
+    {
+      "name": "goat-naked-dead"
+    },
+    {
+      "name": "goat-normal-dead"
+    },
+    {
+      "name": "goat-short-dead"
+    },
+    {
+      "name": "goat-long-critical"
+    },
+    {
+      "name": "goat-naked-critical"
+    },
+    {
+      "name": "goat-normal-critical"
+    },
+    {
+      "name": "goat-short-critical"
+    },
+    {
+      "name": "goat-long-alive",
+      "directions": 4
+    },
+    {
+      "name": "goat-naked-alive",
+      "directions": 4
+    },
+    {
+      "name": "goat-normal-alive",
+      "directions": 4
+    },
+    {
+      "name": "goat-short-alive",
+      "directions": 4
     },
     {
       "name": "goat",
-      "directions": 4,
-      "delays": [
-        [
-          1
-        ],
-        [
-          1
-        ],
-        [
-          1
-        ],
-        [
-          1
-        ]
-      ]
+      "directions": 4
     }
   ]
 }

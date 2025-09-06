@@ -80,6 +80,9 @@ public sealed class UdderSystem : EntitySystem
         if (!Resolve(udder, ref udder.Comp))
             return;
 
+        if (_mobState.IsDead(udder))
+            return;
+
         var doargs = new DoAfterArgs(EntityManager, userUid, 5, new MilkingDoAfterEvent(), udder, udder, used: containerUid)
         {
             BreakOnMove = true,

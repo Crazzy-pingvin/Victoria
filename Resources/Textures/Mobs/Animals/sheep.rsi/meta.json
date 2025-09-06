@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by Askolots (discord: 788252896016990219)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "sheep-long-dead"
+    },
+    {
+      "name": "sheep-naked-dead"
+    },
+    {
+      "name": "sheep-normal-dead"
+    },
+    {
+      "name": "sheep-short-dead"
+    },
+    {
+      "name": "sheep-long-critical"
+    },
+    {
+      "name": "sheep-naked-critical"
+    },
+    {
+      "name": "sheep-normal-critical"
+    },
+    {
+      "name": "sheep-short-critical"
+    },
+    {
+      "name": "sheep-long-alive",
+      "directions": 4
+    },
+    {
+      "name": "sheep-naked-alive",
+      "directions": 4
+    },
+    {
+      "name": "sheep-normal-alive",
+      "directions": 4
+    },
+    {
+      "name": "sheep-short-alive",
+      "directions": 4
+    },
+        {
+      "name": "sheep",
+      "directions": 4
+    }
+  ]
+}
