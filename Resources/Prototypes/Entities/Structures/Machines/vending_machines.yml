@@ -663,7 +663,7 @@
     ejectDelay: 1.9
     initialStockQuality: 0.33
   - type: Advertise
-    pack: RobustSoftdrinksAds
+    pack: DrGibbAds
   - type: SpeakOnUIClosed
     pack: DrGibbGoodbyes
   - type: Sprite

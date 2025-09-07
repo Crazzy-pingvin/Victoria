@@ -30,6 +30,7 @@ guide-entry-foods = Пищевые
 guide-entry-biological = Биологические
 guide-entry-others = Другие
 guide-entry-botanical = Ботанические
+guide-entry-special = Особые
 guide-entry-jobs = Должности
 guide-entry-janitorial = Уборка станции
 guide-entry-bartender = Бармен
