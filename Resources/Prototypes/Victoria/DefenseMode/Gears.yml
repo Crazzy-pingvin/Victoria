@@ -1485,6 +1485,7 @@
     belt: CDCBeltSold
     gloves: CDCGloves
     eyes: DefGlass
+    ears: CDCHeadset
     pocket1: FlashlightLantern
   storage:
     back:
@@ -1544,6 +1545,7 @@
     belt: CDCBeltSold
     gloves: CDCGlovesTech
     eyes: DefGlass
+    ears: CDCHeadset
     pocket1: FlashlightLantern
   storage:
     back:
@@ -1603,6 +1605,7 @@
     belt: CDCBeltSold
     gloves: CDCGloves
     eyes: DefGlass
+    ears: CDCHeadset
     pocket1: FlashlightLantern
   storage:
     back:
@@ -1660,6 +1663,7 @@
     belt: CDCBeltSold
     gloves: CDCGloves
     eyes: DefGlass
+    ears: CDCHeadset
     pocket1: FlashlightLantern
   storage:
     back:

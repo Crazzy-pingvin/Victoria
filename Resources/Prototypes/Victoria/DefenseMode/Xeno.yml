@@ -215,6 +215,8 @@
   parent: MobXeno
   id: MobXenoDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunnellerOnly
@@ -243,7 +245,7 @@
         Caustic: 9
         Structural: 40 
   - type: Bloodstream
-    bloodMaxVolume: 50 
+    bloodMaxVolume: 25 
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -258,6 +260,8 @@
   parent: MobXeno
   id: MobXenoDefAlfaAlter
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -288,7 +292,7 @@
         Caustic: 9
         Structural: 40 
   - type: Bloodstream
-    bloodMaxVolume: 50 
+    bloodMaxVolume: 25 
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -351,6 +355,8 @@
   parent: MobXenoPraetorian
   id: MobXenoPraetorianDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -382,7 +388,7 @@
         Piercing: 5
         Poison: 5
   - type: Bloodstream
-    bloodMaxVolume: 100
+    bloodMaxVolume: 50
   - type: TimedDespawn
     lifetime: 600
 
@@ -409,6 +415,8 @@
   parent: MobXenoDrone
   id: MobXenoDroneDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -467,6 +475,8 @@
   parent: MobXenoQueen
   id: MobXenoQueenDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -503,7 +513,7 @@
         Poison: 20
         Structural: 30
   - type: Bloodstream
-    bloodMaxVolume: 150
+    bloodMaxVolume: 100
   - type: TimedDespawn
     lifetime: 600
 
@@ -530,6 +540,8 @@
   parent: MobXenoRavager
   id: MobXenoRavagerDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -564,7 +576,7 @@
         Caustic: 5
         Structural: 70
   - type: Bloodstream
-    bloodMaxVolume: 100  
+    bloodMaxVolume: 50  
   - type: TimedDespawn
     lifetime: 600 
   - type: RandomChangeTime
@@ -579,6 +591,8 @@
   parent: MobXenoRavager
   id: MobXenoRavagerDefAlfaAlter
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: HTN
@@ -605,7 +619,7 @@
         Caustic: 5
         Structural: 70
   - type: Bloodstream
-    bloodMaxVolume: 100  
+    bloodMaxVolume: 50  
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -668,6 +682,8 @@
   parent: MobXenoRunner
   id: MobXenoRunnerDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -699,7 +715,7 @@
         Piercing: 2
         Poison: 10
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -714,6 +730,8 @@
   parent: MobXenoRunner
   id: MobXenoRunnerDefAlfaAlter
   components:
+  - type: GhostRole
+    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -742,7 +760,7 @@
         Caustic: 10
         Structural: 30 
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
   - type: RandomChangeTime
@@ -805,6 +823,8 @@
   parent: MobXenoRouny
   id: MobXenoRounyDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -835,7 +855,7 @@
         Piercing: 2
         Poison: 10
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
 
@@ -862,6 +882,8 @@
   parent: MobXenoSpitter
   id: MobXenoSpitterDefAlfa
   components:
+  - type: GhostRole
+    prob: 0
   - type: Journey
     journeyGroup: Alpha
   - type: DefenseEnemy
@@ -890,7 +912,7 @@
     capacity: 3
     count: 3
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 25
   - type: TimedDespawn
     lifetime: 600
 

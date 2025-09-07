@@ -5649,14 +5649,15 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Первая линия
-- proto: DefibrillatorCabinetFilled
+- proto: Defibrillator
   entities:
   - uid: 538
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 20.5,-6.5
+      pos: 23.353392,-11.559627
       parent: 2
+- proto: DefibrillatorCabinetFilled
+  entities:
   - uid: 2501
     components:
     - type: Transform
@@ -7383,20 +7384,11 @@ entities:
     - type: Transform
       pos: 59.691868,-5.9166565
       parent: 2
-  - uid: 3620
-    components:
-    - type: Transform
-      pos: 26.588013,-6.530161
-      parent: 2
-- proto: FloraGreyStalagmite
-  entities:
   - uid: 3613
     components:
     - type: Transform
       pos: 72.00061,4.7727575
       parent: 2
-- proto: FloraGreyStalagmite
-  entities:
   - uid: 3614
     components:
     - type: Transform
@@ -7407,60 +7399,30 @@ entities:
     - type: Transform
       pos: 31.317085,7.637294
       parent: 2
-  - uid: 3619
-    components:
-    - type: Transform
-      pos: 30.403847,-11.437703
-      parent: 2
-- proto: FloraGreyStalagmite
-  entities:
-  - uid: 3618
-    components:
-    - type: Transform
-      pos: 24.606232,18.63401
-      parent: 2
-- proto: FloraGreyStalagmite
-  entities:
-  - uid: 3617
-    components:
-    - type: Transform
-      pos: 35.49443,10.516749
-      parent: 2
-- proto: FloraGreyStalagmite
-  entities:
   - uid: 3616
     components:
     - type: Transform
       pos: 29.348335,15.706366
       parent: 2
-- proto: FloraRockSolid
-  entities:
-  - uid: 3605
+  - uid: 3617
     components:
     - type: Transform
-      pos: 68.587326,-7.21288
+      pos: 35.49443,10.516749
       parent: 2
-  - uid: 3608
+  - uid: 3618
     components:
     - type: Transform
-      pos: 56.37047,14.20907
+      pos: 24.606232,18.63401
       parent: 2
-  - uid: 3610
+  - uid: 3619
     components:
     - type: Transform
-      pos: 36.569817,-15.975077
+      pos: 30.403847,-11.437703
       parent: 2
-- proto: FloraRockSolid
-  entities:
-  - uid: 3606
+  - uid: 3620
     components:
     - type: Transform
-      pos: 62.60295,9.587144
-      parent: 2
-  - uid: 3611
-    components:
-    - type: Transform
-      pos: 47.49476,12.93837
+      pos: 26.588013,-6.530161
       parent: 2
 - proto: FloraRockSolid
   entities:
@@ -7469,58 +7431,40 @@ entities:
     - type: Transform
       pos: 75.37121,5.703827
       parent: 2
+  - uid: 3605
+    components:
+    - type: Transform
+      pos: 68.587326,-7.21288
+      parent: 2
+  - uid: 3606
+    components:
+    - type: Transform
+      pos: 62.60295,9.587144
+      parent: 2
   - uid: 3607
     components:
     - type: Transform
       pos: 62.54045,8.946519
+      parent: 2
+  - uid: 3608
+    components:
+    - type: Transform
+      pos: 56.37047,14.20907
       parent: 2
   - uid: 3609
     components:
     - type: Transform
       pos: 45.625416,-5.142634
       parent: 2
-- proto: FloraTreeLarge
-  entities:
-  - uid: 2843
+  - uid: 3610
     components:
     - type: Transform
-      pos: 45.79083,11.400676
+      pos: 36.569817,-15.975077
       parent: 2
-- proto: FloraTreeLarge
-  entities:
-  - uid: 2840
+  - uid: 3611
     components:
     - type: Transform
-      pos: 58.408318,14.697346
-      parent: 2
-  - uid: 2845
-    components:
-    - type: Transform
-      pos: 40.85333,12.166301
-      parent: 2
-- proto: FloraTreeLarge
-  entities:
-  - uid: 2841
-    components:
-    - type: Transform
-      pos: 54.314568,13.978596
-      parent: 2
-  - uid: 2846
-    components:
-    - type: Transform
-      pos: 40.47833,16.338177
-      parent: 2
-- proto: FloraTreeLarge
-  entities:
-  - uid: 2842
-    components:
-    - type: Transform
-      pos: 52.225048,11.108617
-      parent: 2
-  - uid: 2847
-    components:
-    - type: Transform
-      pos: 37.458225,15.338176
+      pos: 47.49476,12.93837
       parent: 2
 - proto: FloraTreeLarge
   entities:
@@ -7529,10 +7473,45 @@ entities:
     - type: Transform
       pos: 55.564568,16.947346
       parent: 2
+  - uid: 2840
+    components:
+    - type: Transform
+      pos: 58.408318,14.697346
+      parent: 2
+  - uid: 2841
+    components:
+    - type: Transform
+      pos: 54.314568,13.978596
+      parent: 2
+  - uid: 2842
+    components:
+    - type: Transform
+      pos: 52.225048,11.108617
+      parent: 2
+  - uid: 2843
+    components:
+    - type: Transform
+      pos: 45.79083,11.400676
+      parent: 2
   - uid: 2844
     components:
     - type: Transform
       pos: 44.118954,15.244426
+      parent: 2
+  - uid: 2845
+    components:
+    - type: Transform
+      pos: 40.85333,12.166301
+      parent: 2
+  - uid: 2846
+    components:
+    - type: Transform
+      pos: 40.47833,16.338177
+      parent: 2
+  - uid: 2847
+    components:
+    - type: Transform
+      pos: 37.458225,15.338176
       parent: 2
 - proto: FloraTreeStump
   entities:
@@ -7588,6 +7567,8 @@ entities:
     - type: Transform
       pos: 1.5,29.5
       parent: 2
+    - type: PowerSupplier
+      supplyRate: 30000
 - proto: GeneratorBasic15kW
   entities:
   - uid: 2595
@@ -8479,10 +8460,10 @@ entities:
       parent: 2
 - proto: NitrousOxideTankFilled
   entities:
-  - uid: 4362
+  - uid: 695
     components:
     - type: Transform
-      pos: 22.581743,-12.412048
+      pos: 22.53532,-12.524315
       parent: 2
 - proto: OperatingTable
   entities:
@@ -10781,43 +10762,32 @@ entities:
     - type: Transform
       pos: 22.5,7.5
       parent: 2
-- proto: SpawnerCrutchObjectiveAlfaFour
-  entities:
-  - uid: 4491
-    components:
-    - type: Transform
-      pos: 59.5,0.5
-      parent: 2
 - proto: SpawnerCrutchObjectiveAlfaOne
   entities:
-  - uid: 4497
+  - uid: 4362
+    components:
+    - type: Transform
+      pos: 58.5,0.5
+      parent: 2
+  - uid: 4491
     components:
     - type: Transform
       pos: 7.5,-8.5
       parent: 2
-  - uid: 4498
-    components:
-    - type: Transform
-      pos: 7.5,0.5
-      parent: 2
-  - uid: 4499
-    components:
-    - type: Transform
-      pos: 7.5,7.5
-      parent: 2
-- proto: SpawnerCrutchObjectiveAlfaThree
-  entities:
   - uid: 4495
+    components:
+    - type: Transform
+      pos: 14.5,0.5
+      parent: 2
+  - uid: 4496
     components:
     - type: Transform
       pos: 35.5,0.5
       parent: 2
-- proto: SpawnerCrutchObjectiveAlfaTwo
-  entities:
-  - uid: 4496
+  - uid: 4497
     components:
     - type: Transform
-      pos: 15.5,0.5
+      pos: 7.5,7.5
       parent: 2
 - proto: SpawnPaperMapDesrtPlatform
   entities:
@@ -11702,16 +11672,16 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.5,-10.5
       parent: 2
+  - uid: 3532
+    components:
+    - type: Transform
+      pos: 22.5,-12.5
+      parent: 2
   - uid: 3573
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 57.5,-14.5
-      parent: 2
-  - uid: 4360
-    components:
-    - type: Transform
-      pos: 22.5,-12.5
       parent: 2
 - proto: TableWood
   entities:
@@ -11774,6 +11744,13 @@ entities:
     components:
     - type: Transform
       pos: 5.5349393,16.54465
+      parent: 2
+- proto: VendingMachineChemicals
+  entities:
+  - uid: 4504
+    components:
+    - type: Transform
+      pos: 21.5,-3.5
       parent: 2
 - proto: VendingMachineSeedsUnlocked
   entities:
@@ -12051,7 +12028,6 @@ entities:
   - uid: 693
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 22.5,-13.5
       parent: 2
   - uid: 694
@@ -12059,12 +12035,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 24.5,-13.5
-      parent: 2
-  - uid: 695
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 22.5,-12.5
       parent: 2
   - uid: 696
     components:
@@ -12369,12 +12339,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 14.5,-1.5
-      parent: 2
-  - uid: 3532
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 21.5,-12.5
       parent: 2
 - proto: WallReinforcedDef
   entities:
@@ -21711,6 +21675,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -4.5,29.5
       parent: 2
+  - uid: 4360
+    components:
+    - type: Transform
+      pos: 21.5,-12.5
+      parent: 2
 - proto: WardrobeGrey
   entities:
   - uid: 2973
@@ -22961,6 +22930,13 @@ entities:
     - type: Transform
       pos: 82.59659,13.366501
       parent: 2
+- proto: XenoEggAlfaMap1Mut1
+  entities:
+  - uid: 4498
+    components:
+    - type: Transform
+      pos: 84.55724,-2.5442815
+      parent: 2
 - proto: XenoEggAlfaMap1Pl1
   entities:
   - uid: 4427
@@ -22995,6 +22971,13 @@ entities:
     components:
     - type: Transform
       pos: 91.538025,6.4451513
+      parent: 2
+- proto: XenoEggAlfaMap1Sab1
+  entities:
+  - uid: 4499
+    components:
+    - type: Transform
+      pos: 60.471107,-15.48745
       parent: 2
 - proto: XenoEggBetaMap1Be2
   entities:
@@ -25706,5 +25689,20 @@ entities:
     components:
     - type: Transform
       pos: 74.5,-12.5
+      parent: 2
+  - uid: 4501
+    components:
+    - type: Transform
+      pos: 60.5,-15.5
+      parent: 2
+  - uid: 4502
+    components:
+    - type: Transform
+      pos: 60.5,-14.5
+      parent: 2
+  - uid: 4503
+    components:
+    - type: Transform
+      pos: 59.5,-15.5
       parent: 2
 ...

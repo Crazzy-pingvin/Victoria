@@ -261,8 +261,6 @@
   name: "Сборщик чипов поставок"
   priority: 0
 
-
-
 - type: entity
   id: PresetStoreDefChip
   abstract: true
@@ -1458,6 +1456,54 @@
       - id: UmporMagazineLightRifle
       - id: UmporMagazineLightRifle
       - id: UmporMagazineLightRifle
+      
+- type: entity
+  id: UmporCrateCartridgeRocketExpDef
+  parent: UmporCrate
+  name: Ящик разрывныхх ракет
+  suffix: Умпорский, Оборона
+  description: Шесть разрывных выстрелов для гранатомёта Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      
+- type: entity
+  id: UmporCrateCartridgeRocketFragDef
+  parent: UmporCrate
+  name: Ящик осколочных ракет
+  suffix: Умпорский, Оборона
+  description: Шесть осколочных выстрелов для гранатомёта Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      
+- type: entity
+  id: UmporCrateCartridgeRocketFarDef
+  parent: UmporCrate
+  name: Ящик дальнобойных ракет
+  suffix: Умпорский, Оборона
+  description: Шесть дальнобойных выстрелов для гранатомёта Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
 #----------------Листинги------------
 - type: listing
   id: UmporCratePistolsAmmoDef
@@ -1486,6 +1532,36 @@
   productEntity: UmporCrateShotganAmmoDef
   cost:
     DefChip_currency: 4
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateCartridgeRocketExpDef
+  name: Ящик разрывныхх ракет
+  description: Шесть разрывных выстрелов для гранатомёта Умпорской Федерации
+  productEntity: UmporCrateCartridgeRocketExpDef
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateCartridgeRocketFragDef
+  name: Ящик осколочных ракет
+  description: Шесть осколочных выстрелов для гранатомёта Умпорской Федерации
+  productEntity: UmporCrateCartridgeRocketFragDef
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateCartridgeRocketFarDef
+  name: Шесть дальнобойных выстрелов для гранатомёта Умпорской Федерации
+  description: Ящик дальнобойных ракет
+  productEntity: UmporCrateCartridgeRocketFarDef
+  cost:
+    DefChip_currency: 6
   categories:
   - DefShopAmmoUmpor
 #------------------------------Миртанийская-------------
@@ -1555,6 +1631,20 @@
       - id: MirtMagazineLMG
       - id: MirtMagazineLMG
       - id: MirtMagazineLMG
+      
+- type: entity
+  id: MirtCrateMirtMagazineZenitDef
+  parent: MirtCrate
+  name: Ящик боеприпасов к зенитке
+  suffix: Миртан, Оборона
+  description: Четыре магазина к зенитке Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtMagazineZenit
+      - id: MirtMagazineZenit
+      - id: MirtMagazineZenit
+      - id: MirtMagazineZenit
   
 - type: entity
   id: MirtCrateWeaponsHOAmmoDef
@@ -1650,6 +1740,16 @@
   productEntity: MirtCrateWeaponsHPAmmoDef
   cost:
     DefChip_currency: 2
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateMirtMagazineZenitDef
+  name: Ящик боеприпасов к зенитке
+  description: Четыре магазина к зенитке Империи Миртана
+  productEntity: MirtCrateMirtMagazineZenitDef
+  cost:
+    DefChip_currency: 3
   categories:
   - DefShopAmmoMirt
 
@@ -1838,6 +1938,74 @@
     contents:
       - id: CDCMagazineDefocLig
       - id: CDCMagazineDefocLig
+      
+- type: entity
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  parent: CDCCrate
+  name: Ящик стандартных боеприпасов метателя
+  suffix: Конгломерат, Оборона
+  description: Четыре плазменных ёмкости и три с сенсебилизатором
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+
+- type: entity
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
+  parent: CDCCrate
+  name: Ящик горячеплазменных боеприпасов метателя
+  suffix: Конгломерат, Оборона
+  description: Четыре горячеплазменных ёмкости и три с сенсебилизатором
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+
+- type: entity
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
+  parent: CDCCrate
+  name: Ящик cлабоплазменных боеприпасов метателя
+  suffix: Конгломерат, Оборона
+  description: Четыре слабоплазменных ёмкости и три с сенсебилизатором
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      
+- type: entity
+  id: CDCCrateWeaponsAmmoFoam
+  parent: CDCCrate
+  name: Ящик пенаобразования
+  suffix: Конгломерат, Оборона
+  description: Пенаобразующая ёмкость, жидкий алюминий и стеклянный мензурки.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerFoam
+      - id: AluminiumBeakerSmall
+      - id: Beaker
+      - id: Beaker
+      - id: Beaker
+      - id: Beaker
+      - id: Beaker    
 #----------------Листинги------------
 - type: listing
   id: CDCCrateWeaponsLAmmoDef
@@ -1928,6 +2096,46 @@
     DefChip_currency: 3
   categories:
   - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  name: Ящик стандартных боеприпасов метателя
+  description: Четыре плазменных ёмкости и три с сенсебилизатором
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoCDC  
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
+  name: Ящик горячеплазменных боеприпасов метателя
+  description: Четыре горячеплазменных ёмкости и три с сенсебилизатором
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
+  cost:
+    DefChip_currency: 7
+  categories:
+  - DefShopAmmoCDC  
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
+  name: Ящик cлабоплазменных боеприпасов метателя
+  description: Четыре слабоплазменных ёмкости и три с сенсебилизатором
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoFoam
+  name: Пенаобразующая ёмкость, жидкий алюминий и стеклянный мензурки.
+  description: Ящик пенаобразования
+  productEntity: CDCCrateWeaponsAmmoFoam
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoCDC 
 #------------------------------Советско-Петрищевская-------------
 #----------------Ящики------------
 

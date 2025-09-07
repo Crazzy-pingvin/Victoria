@@ -939,9 +939,9 @@
   - type: Sprite
     drawdepth: Mobs
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: goat
+    - map: ["enum.WoolyVisualLayers.Base"] # Victoria-WoolyGoats
       sprite: Mobs/Animals/goat.rsi
+      state: goat-normal-alive
   - type: Fixtures
     fixtures:
       fix1:
@@ -960,35 +960,40 @@
     - DoorBumpOpener
     - Goat
   - type: Reproductive
+    makeOffspringInfant: false
     partnerWhitelist:
       tags:
       - Goat
     offspring:
-    - id: MobGoat
+    - id: MobGoatChild
   - type: ReproductivePartner
   - type: Appearance
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: goat
-      Critical:
-        Base: dead
-      Dead:
-        Base: dead
+  # Victoria-WoolyGoats | Control over visuals passed to WoolyVisuals
+  # - type: DamageStateVisuals
+  #   states:
+  #     Alive:
+  #       Base: goat
+  #     Critical:
+  #       Base: dead
+  #     Dead:
+  #       Base: dead
   - type: SolutionContainerManager
     solutions:
       udder:
         maxVol: 250
         reagents:
-        - ReagentId: GoatWool
+        - ReagentId: MilkGoat
           Quantity: 30
-      wool:
-        maxVol: 250
+      # Victoria-WoolyGoats | Now it spawns items
+      # wool:
+      #   maxVol: 250
   - type: Udder
-    reagentId: GoatWool
+    reagentId: MilkGoat
     quantityPerUpdate: 25
     growthDelay: 20
+  - type: WoolyVisuals # Victoria-WoolyGoats
   - type: Wooly
+    woolEntity: GoatWoolClean1
   - type: Food
     solution: wool
     requiresSpecialDigestion: true
