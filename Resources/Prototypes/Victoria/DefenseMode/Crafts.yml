@@ -5,6 +5,13 @@
   result: FoodBowlBig
   materials:
     Steel: 10
+    
+- type: latheRecipe
+  id: DefBeaker
+  result: Beaker
+  completetime: 2
+  materials:
+    Glass: 200
 #-----------------------------------------Умпорский----------------------------------------
 #-------------------------------Рецепты-------------------------
 #-------------------Патроны-------------    
@@ -40,6 +47,36 @@
   materials:
     PlumbumMaterial: 2
     Plastic: 2
+    
+- type: latheRecipe
+  id: DefUmporRocketExp
+  result: UmporRocketExp
+  category: Ammo
+  completetime: 0.8
+  materials:
+    PlumbumMaterial: 100
+    Plastic: 100
+    PlastidMaterial: 60
+    
+- type: latheRecipe
+  id: DefUmporRocketFrag
+  result: UmporRocketFrag
+  category: Ammo
+  completetime: 0.8
+  materials:
+    PlumbumMaterial: 150
+    Plastic: 100
+    PlastidMaterial: 50   
+
+- type: latheRecipe
+  id: DefUmporRocketFar
+  result: UmporRocketFar
+  category: Ammo
+  completetime: 0.8
+  materials:
+    PlumbumMaterial: 100
+    Plastic: 150
+    PlastidMaterial: 40 
 #-------------------Магазины оружия-------------    
 - type: latheRecipe
   id: DefUmporMagazineHeavyRifle
@@ -142,12 +179,17 @@
       - DefUmporBoxPistol
       - DefUmporBoxShotgan
       - DefFoodBowlBig
+      - DefBeaker
+      - DefUmporRocketExp
+      - DefUmporRocketFrag
+      - DefUmporRocketFar
   - type: MaterialStorage
     whitelist:
       tags:
         - Sheet
         - RawMaterial
         - Ingot
+        - Plastid
   - type: Anchorable
     flags: Anchorable
 #-----------------------------------------Миртанийский----------------------------------------
@@ -221,6 +263,15 @@
   materials:
     Steel: 115 
     Plastic: 10 
+    
+- type: latheRecipe
+  id: DefMirtMagazineZenit
+  result: MirtMagazineZenit
+  category: Ammo
+  completetime: 6
+  materials:
+    Steel: 250 
+    Plastic: 50
 #-------------------Коробки патронов-------------    
 - type: latheRecipe
   id: DefMirtBoxHeavy
@@ -365,6 +416,8 @@
       - DefNoocPowerCellCold
       - NoocCellRechargerCircuitboard
       - DefFoodBowlBig
+      - DefBeaker
+      - DefMirtMagazineZenit
   - type: MaterialStorage
     whitelist:
       tags:
@@ -447,6 +500,41 @@
   completetime: 0.45
   materials:
     Plasma: 2 
+    
+- type: latheRecipe
+  id: DefCDCBeakerPlasma
+  result: CDCBeakerPlasma
+  category: Ammo
+  completetime: 0.5
+  materials:
+    Glass: 300
+    
+- type: latheRecipe
+  id: DefCDCBeakerPlasmaStd
+  result: CDCBeakerPlasmaStd
+  category: Ammo
+  completetime: 0.5
+  materials:
+    Glass: 300
+    Plasma: 100 
+    
+- type: latheRecipe
+  id: DefCDCBeakerPlasmaHot
+  result: CDCBeakerPlasmaHot
+  category: Ammo
+  completetime: 0.5
+  materials:
+    Glass: 300
+    Plasma: 200 
+    
+- type: latheRecipe
+  id: DefCDCBeakerPlasmaCold
+  result: CDCBeakerPlasmaCold
+  category: Ammo
+  completetime: 0.5
+  materials:
+    Glass: 300
+    Plasma: 50 
 #-------------------Магазины оружия-------------    
 - type: latheRecipe
   id: DefCDCMagazinePistolStd
@@ -694,6 +782,11 @@
       - DefCDCBoxCartridgePlasmaHotDefoc
       - DefCDCBoxCartridgePlasmaLigDefoc
       - DefFoodBowlBig
+      - DefBeaker
+      - DefCDCBeakerPlasma
+      - DefCDCBeakerPlasmaStd
+      - DefCDCBeakerPlasmaHot
+      - DefCDCBeakerPlasmaCold
   - type: MaterialStorage
     whitelist:
       tags:
