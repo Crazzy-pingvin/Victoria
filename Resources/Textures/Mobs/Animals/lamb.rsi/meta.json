@@ -8,13 +8,11 @@
   },
   "states": [
     {
-      "name": "wool"
+      "name": "lamb-dead"
     },
     {
-      "name": "wool-2"
-    },
-    {
-      "name": "wool-3"
+      "name": "lamb",
+      "directions": 4
     }
   ]
 }

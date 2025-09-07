@@ -8,13 +8,11 @@
   },
   "states": [
     {
-      "name": "wool"
+      "name": "goatling-dead"
     },
     {
-      "name": "wool-2"
-    },
-    {
-      "name": "wool-3"
+      "name": "goatling",
+      "directions": 4
     }
   ]
 }
