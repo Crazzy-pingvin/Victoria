@@ -589,7 +589,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/wirecutters.rsi
-      state: storage
+      state: cutters-map
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/wirecutters.rsi
     state: cutters-map
@@ -603,7 +603,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/screwdriver.rsi
-      state: storage
+      state: screwdriver-map
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/screwdriver.rsi
     state: screwdriver-map
@@ -630,7 +630,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/welder.rsi
-      state: storage
+      state: icon
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/welder.rsi
 #---------------------------------------------Топорик------------------------------------
@@ -643,7 +643,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/hatchet.rsi
-      state: storage
+      state: icon
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/hatchet.rsi
 #---------------------------------------------Лопата------------------------------------
@@ -656,7 +656,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/spade.rsi
-      state: storage
+      state: icon
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/spade.rsi
 #---------------------------------------------Серп------------------------------------
@@ -669,7 +669,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/scythe.rsi
-      state: storage
+      state: icon
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/scythe.rsi
 #---------------------------------------------Тяпка------------------------------------
@@ -682,7 +682,7 @@
   - type: Item
     storedSprite:
       sprite: Victoria/USSP/Equipment/Tools/hoe.rsi
-      state: storage
+      state: icon
   - type: Sprite
     sprite: Victoria/USSP/Equipment/Tools/hoe.rsi
 #---------------------------------------------------------Анализатор здоровья---------------------------------------------
