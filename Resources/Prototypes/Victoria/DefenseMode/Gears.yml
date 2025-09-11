@@ -1112,6 +1112,7 @@
     belt: MirtBelt
     gloves: MirtGlovesFingerless
     eyes: DefGlass
+    ears: MirtHeadset
     pocket1: FlashlightLantern
 
 - type: entity
@@ -1142,6 +1143,7 @@
   - MirtGlovesFingerless
   - DefGlass
   - FlashlightLantern
+  - MirtHeadset
   
 - type: entity
   id: ToolboxGearDefMirtEng
@@ -1165,6 +1167,7 @@
     belt: MirtBelt
     gloves: MirtGlovesFingerless
     eyes: DefGlass
+    ears: MirtHeadset
     pocket1: FlashlightLantern
     pocket2: HandheldHealthAnalyzerUnpowered
 
@@ -1195,6 +1198,7 @@
   - DefGlass
   - FlashlightLantern
   - HandheldHealthAnalyzerUnpowered
+  - MirtHeadset
   
 - type: entity
   id: ToolboxGearDefMirtMed
@@ -1220,6 +1224,7 @@
     belt: MirtBelt
     gloves: MirtGlovesFingerless
     eyes: DefGlass
+    ears: MirtHeadset
     pocket1: FlashlightLantern
     pocket2: DefChip
 
@@ -1252,6 +1257,7 @@
   - DefGlass
   - DefChip
   - FlashlightLantern
+  - MirtHeadset
   
 - type: entity
   id: ToolboxGearDefMirtLog
