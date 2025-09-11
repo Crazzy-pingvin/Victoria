@@ -19,6 +19,9 @@
 	{
       "name": "cdc"
     },
+	{
+      "name": "ussp"
+    },
     {
       "name": "panel"
     },

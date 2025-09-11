@@ -1910,25 +1910,760 @@
     - SetGearDefCDCLog
 #--------------------------------------------------------------------Советские-----------------------------------------
 #----------------------------------------------------Командор--------------------------
+- type: startingGear
+  id: GearDefUSSPCom
+  equipment:
+    jumpsuit: USSPUniformOfi
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapBlue
+    outerClothing: USSPArmorLight
+    id: DefPDAComanderUSSP
+    ears: USSPHeadset
+    belt: USSPBeltOffiFilled
+    neck: USSPCloakOf
+    eyes: DefGlass
+    gloves: USSPGlovesOfi
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPCom
 
+- type: entity
+  parent: USSPIDCardOffi
+  id: DefIDCardComanderUSSP
+  name: ID-карта командора
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefComander
+    name: командор
+
+- type: entity
+  parent: USSPPDAOffi
+  id: DefPDAComanderUSSP
+  name: КПК командира СССП
+  suffix: Оборона,СССП
+  components:
+    - type: Pda
+      id: DefIDCardComanderUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPCom
+  name: Набор командора СССП
+  description: Одежда и базовое снаряжение командора СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cloak.rsi
+    state: icon
+  content:
+  - USSPUniformOfi
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCapBlue
+  - USSPArmorLight
+  - DefPDAComanderUSSP
+  - USSPHeadset
+  - USSPBeltOffiFilled
+  - USSPCloakOf
+  - DefGlass
+  - ToolboxUSSPCom
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPCom
+  name: Набор командора СССП
+  description: Одежда и базовое снаряжение командора СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPCom
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Офицер--------------------------
+- type: startingGear
+  id: GearDefUSSPOfi
+  equipment:
+    jumpsuit: USSPUniformOfi
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCap
+    outerClothing: USSPArmorLight
+    id: DefPDAOfficerUSSP
+    ears: USSPHeadset
+    belt: USSPBeltOffi
+    eyes: DefGlass
+    gloves: USSPGlovesOfi
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPOfi
 
+- type: entity
+  parent: USSPIDCardOffi
+  id: DefIDCardOfficerUSSP
+  name: ID-карта офицера
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefOfficer
+    name: офицер
+
+- type: entity
+  parent: USSPPDAOffi
+  id: DefPDAOfficerUSSP
+  name: КПК офицера СССП
+  suffix: Оборона,СССП
+  components:
+    - type: Pda
+      id: DefIDCardOfficerUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPOfi
+  name: Набор офицера СССП
+  description: Одежда и базовое снаряжение офицера СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cap.rsi
+    state: icon
+  content:
+  - USSPUniformOfi
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCapBlue
+  - USSPArmorLight
+  - DefPDAComanderUSSP
+  - USSPHeadset
+  - USSPBeltOffiFilled
+  - USSPCloakOf
+  - DefGlass
+  - ToolboxUSSPOfi
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPOfi
+  name: Набор офицера СССП
+  description: Одежда и базовое снаряжение офицера СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPOfi
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Доп.Офицер--------------------------
+- type: entity
+  parent: PetrHeadset
+  id: PetrHeadsetDef
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - USSPEncryptionKey
+      - PetrEncryptionKey
 
+- type: startingGear
+  id: GearDefPetrOfiD
+  equipment:
+    jumpsuit: PetrUniform
+    back: PetrBackpackFilledEmpty
+    shoes: PetrBoots
+    head: PetrCapP
+    neck: PetrCloak
+    outerClothing: PetrArmorBasic
+    id: DefPDAOfficerDopPetr
+    ears: PetrHeadsetDef
+    belt: PetrBeltSold
+    pocket2: PetrRubberStamp
+  storage:
+    back:
+    - ToolboxPetrOfiDop
+
+- type: entity
+  parent: PetrIDCardOffi
+  id: DefIDCardOfficerDopPetr
+  name: ID-карта командира петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+  - type: PresetIdCard
+    job: DefOfficerDop
+    name: офицер
+
+- type: entity
+  parent: PetrPDAOffi
+  id: DefPDAOfficerDopPetr
+  name: КПК командира петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+    - type: Pda
+      id: DefIDCardOfficerDopPetr
+    
+- type: thiefBackpackSet
+  id: SetGearDefPetrOfiD
+  name: Набор командира петрищевцев
+  description: Одежда и базовое снаряжение командира петрищевцев.
+  sprite:
+    sprite: Victoria/Petr/Equipment/petr_cloak.rsi
+    state: icon
+  content:
+  - PetrUniform
+  - PetrBackpackFilledEmpty
+  - PetrBoots
+  - PetrCapP
+  - PetrCloak
+  - PetrArmorBasic
+  - DefPDAOfficerDopPetr
+  - PetrHeadsetDef
+  - PetrBeltSold
+  - PetrRubberStamp
+  - ToolboxPetrOfiDop
+  
+- type: entity
+  id: ToolboxGearDefPetrOfi
+  name: Набор командира петрищевцев
+  description: Одежда и базовое снаряжение командира петрищевцев.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefPetrOfiD
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Специалист--------------------------
+- type: startingGear
+  id: GearDefUSSPSPC
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCap
+    id: DefIDCardSPCUSSP
+    ears: USSPHeadset
+    belt: USSPBeltSold
+    eyes: DefGlass
+    gloves: USSPGloves
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPSPC
 
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardSPCUSSP
+  name: ID-карта специалиста
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefSpecialist
+    name: специалист
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPSPC
+  name: Набор специалиста СССП
+  description: Одежда и базовое снаряжение специалиста СССП.
+  sprite:
+    sprite: Victoria/USSP/Armor/ussp_armor_mid.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCap
+  - DefIDCardSPCUSSP
+  - USSPHeadset
+  - USSPBeltSold
+  - DefGlass
+  - USSPGloves
+  - ToolboxUSSPSPC
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPSPC
+  name: Набор специалиста СССП
+  description: Одежда и базовое снаряжение специалиста СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPSPC
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Доп.Специалист--------------------------
+- type: startingGear
+  id: GearDefPetrSPC
+  equipment:
+    jumpsuit: PetrUniform
+    back: PetrBackpackFilledEmpty
+    shoes: PetrBoots
+    head: PetrCapP
+    id: DefPDASPCDopPetr
+    ears: PetrHeadsetDef
+    belt: PetrBeltSold
+    eyes: DefGlass
+  storage:
+    back:
+    - ToolboxPetrSPCDop
 
+- type: entity
+  parent: PetrIDCardSold
+  id: DefIDCardSPCPetr
+  name: ID-карта специалиста
+  suffix: Оборона, Петрищевцы
+  components:
+  - type: PresetIdCard
+    job: DefSpecialistDop
+    name: специалист
+
+- type: entity
+  parent: PetrPDAOffi
+  id: DefPDASPCDopPetr
+  name: КПК специалиста петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+    - type: Pda
+      id: DefIDCardSPCPetr
+
+- type: thiefBackpackSet
+  id: SetGearDefPetrSPC
+  name: Набор специалиста петрищевцев
+  description: Одежда и базовое снаряжение специалиста петрищевцев.
+  sprite:
+    sprite: Victoria/Petr/Armor/petr_armor_mid.rsi
+    state: icon
+  content:
+  - PetrUniform
+  - PetrBackpackFilledEmpty
+  - PetrBoots
+  - PetrCapP
+  - DefPDASPCDopPetr
+  - PetrHeadsetDef
+  - PetrBeltSold
+  - DefGlass
+  - ToolboxPetrSPCDop
+  
+- type: entity
+  id: ToolboxGearDefPetrSPC
+  name: Набор специалиста петрищевцев
+  description: Одежда и базовое снаряжение специалиста петрищевцев.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefPetrSPC
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Солдат--------------------------
+- type: startingGear
+  id: GearDefUSSPSol
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapP
+    id: DefIDCardSolUSSP
+    ears: USSPHeadset
+    belt: USSPBeltSold
+    eyes: DefGlass
+    gloves: USSPGloves
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPSol
 
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardSolUSSP
+  name: ID-карта солдата
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefSolder
+    name: солдат
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPSol
+  name: Набор солдата СССП
+  description: Одежда и базовое снаряжение солдата СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cap_p.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCapP
+  - DefIDCardSolUSSP
+  - USSPHeadset
+  - USSPBeltSold
+  - DefGlass
+  - USSPGloves
+  - ToolboxUSSPSol
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPSol
+  name: Набор солдата СССП
+  description: Одежда и базовое снаряжение солдата СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPSol
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Доп.Солдат--------------------------
+- type: startingGear
+  id: GearDefPetrSol
+  equipment:
+    jumpsuit: PetrUniform
+    back: PetrBackpackFilledEmpty
+    shoes: PetrBoots
+    head: PetrCapP
+    id: DefPDASolDopPetr
+    ears: PetrHeadsetDef
+    belt: PetrBeltSold
+    eyes: DefGlass
+  storage:
+    back:
+    - ToolboxPetrSolDop
 
+- type: entity
+  parent: PetrIDCardSold
+  id: DefIDCardSolPetr
+  name: ID-карта солдата петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+  - type: PresetIdCard
+    job: DefSolderDop
+    name: солдат
+
+- type: entity
+  parent: PetrPDAOffi
+  id: DefPDASolDopPetr
+  name: КПК солдата петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+    - type: Pda
+      id: DefIDCardSolPetr
+
+- type: thiefBackpackSet
+  id: SetGearDefPetrSol
+  name: Набор солдата петрищевцев
+  description: Одежда и базовое снаряжение солдата петрищевцев.
+  sprite:
+    sprite: Victoria/Petr/Equipment/petr_cap_p.rsi
+    state: icon
+  content:
+  - PetrUniform
+  - PetrBackpackFilledEmpty
+  - PetrBoots
+  - PetrCapP
+  - DefPDASolDopPetr
+  - PetrHeadsetDef
+  - PetrBeltSold
+  - DefGlass
+  - ToolboxPetrSolDop
+  
+- type: entity
+  id: ToolboxGearDefPetrSol
+  name: Набор солдата петрищевцев
+  description: Одежда и базовое снаряжение солдата петрищевцев.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefPetrSol
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Инженер--------------------------
+- type: startingGear
+  id: GearDefUSSPEng
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCepka
+    id: DefPDAEngeUSSP
+    ears: USSPHeadset
+    belt: USSPBeltEngeFilled
+    outerClothing: USSPArmorLight
+    eyes: DefGlass
+    gloves: USSPGlovesEnge
+    pocket1: BookWeaponUSSP
 
+- type: entity
+  parent: USSPIDCardEnge
+  id: DefIDCardEngUSSP
+  name: ID-карта инженера
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefEngener
+    name: инженер
+
+- type: entity
+  parent: USSPPDAEnge
+  id: DefPDAEngeUSSP
+  name: КПК инженера СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardEngUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPEng
+  name: Набор инженера СССП
+  description: Одежда и базовое снаряжение инженера СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_belt_e.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCepka
+  - DefPDAEngeUSSP
+  - USSPHeadset
+  - USSPBeltEngeFilled
+  - USSPArmorLight
+  - DefGlass
+  - USSPGlovesEnge
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPEng
+  name: Набор инженера СССП
+  description: Одежда и базовое снаряжение инженера СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPEng
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Медик--------------------------
+- type: startingGear
+  id: GearDefUSSPMed
+  equipment:
+    jumpsuit: USSPUniformMed
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapPBlue
+    id: DefPDAMedUSSP
+    ears: USSPHeadset
+    belt: USSPBeltMedFilled
+    outerClothing: USSPHardsuitTech
+    eyes: DefGlass
+    gloves: USSPGlovesOfi
+    pocket1: BookWeaponUSSP
+    pocket2: USSPHealthAnalyzerUnpowered
 
+- type: entity
+  parent: USSPIDCardMed
+  id: DefIDCardMedUSSP
+  name: ID-карта врача
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefMedic
+    name: врач
+
+- type: entity
+  parent: USSPPDAMed
+  id: DefPDAMedUSSP
+  name: КПК врача СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardMedUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPMed
+  name: Набор врача СССП
+  description: Одежда и базовое снаряжение врача СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cap_p_blue.rsi
+    state: icon
+  content:
+  - USSPUniformMed
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCapPBlue
+  - DefPDAMedUSSP
+  - USSPHeadset
+  - USSPBeltMedFilled
+  - USSPHardsuitTech
+  - DefGlass
+  - USSPGlovesOfi
+  - USSPHealthAnalyzerUnpowered
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPMed
+  name: Набор врача СССП
+  description: Одежда и базовое снаряжение врача СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPMed
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #----------------------------------------------------Снабженец--------------------------
+- type: startingGear
+  id: GearDefUSSPLog
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapP
+    id: DefPDALogUSSP
+    ears: USSPHeadset
+    belt: USSPBeltCargoFilled
+    outerClothing: USSPArmorLight
+    eyes: DefGlass
+    gloves: USSPGlovesEnge
+    pocket1: BookWeaponUSSP
 
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardLogUSSP
+  name: ID-карта снабженца
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefCargo
+    name: снабженец
+
+- type: entity
+  parent: USSPPDAEnge
+  id: DefPDALogUSSP
+  name: КПК снабженца СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardLogUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPLog
+  name: Набор снабженца СССП
+  description: Одежда и базовое снаряжение снабженца СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cepka.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCapP
+  - DefPDALogUSSP
+  - USSPHeadset
+  - USSPBeltCargoFilled
+  - USSPArmorLight
+  - DefGlass
+  - USSPGlovesEnge
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPLog
+  name: Набор снабженца СССП
+  description: Одежда и базовое снаряжение снабженца СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPLog
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #--------------------------------------------------------------------Корпоративные-----------------------------------------
 #----------------------------------------------------Командор--------------------------
 

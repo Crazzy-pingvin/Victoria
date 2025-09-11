@@ -1561,9 +1561,153 @@
 
 #--------------------СССП------------
 #------------Магаз------------
+- type: storeCategory
+  id: DefShopGearUSSPOfi
+  name: Командиры
+  priority: 0
 
+- type: storeCategory
+  id: DefShopGearUSSPSold
+  name: Бойцы
+  priority: 1
+
+- type: storeCategory
+  id: DefShopGearUSSPWork
+  name: Служащие
+  priority: 2
+  
+- type: entity
+  id: StorePresetDefShopGearUSSP
+  abstract: true
+  components:
+  - type: Store
+    name: Def-Shop-Gear
+    categories:
+    - DefShopGearUSSPOfi
+    - DefShopGearUSSPSold
+    - DefShopGearUSSPWork
+    currencyWhitelist:
+    - DefChipGearCommander
+    - DefChipGearOffi
+    - DefChipGearOffiDop
+    - DefChipGearSpc
+    - DefChipGearSpcDop
+    - DefChipGearSolder
+    - DefChipGearSolderDop
+    - DefChipGearEnge
+    - DefChipGearMed
+    - DefChipGearLogi
+    balance:
+      DefChipGearCommander: 0
+      DefChipGearOffi: 0
+      DefChipGearOffiDop: 0
+      DefChipGearSpc: 0
+      DefChipGearSpcDop: 0
+      DefChipGearSolder: 0
+      DefChipGearSolderDop: 0
+      DefChipGearEnge: 0
+      DefChipGearMed: 0
+      DefChipGearLogi: 0
 #------------Листинги---------
+- type: listing
+  id: ToolboxGearDefUSSPCom
+  name: Набор советского командора
+  description: Одежда и базовое снаряжение командора Советского Союза.
+  productEntity: ToolboxGearDefUSSPCom
+  cost:
+    DefChipGearCommander: 1
+  categories:
+  - DefShopGearUSSPOfi
+  
+- type: listing
+  id: ToolboxGearDefUSSPOfi
+  name: Набор советского офицера
+  description: Одежда и базовое снаряжение офицера Советского Союза.
+  productEntity: ToolboxGearDefUSSPOfi
+  cost:
+    DefChipGearOffi: 1
+  categories:
+  - DefShopGearUSSPOfi
+  
+- type: listing
+  id: ToolboxGearDefPetrOfi
+  name: Набор петрищевского офицера доп.отряда
+  description: Одежда и базовое снаряжение офицера доп.отряда Революционеров-Петрищевцев.
+  productEntity: ToolboxGearDefPetrOfi
+  cost:
+    DefChipGearOffiDop: 1
+  categories:
+  - DefShopGearUSSPOfi
+  
+- type: listing
+  id: ToolboxGearDefUSSPSPC
+  name: Набор советского специалиста
+  description: Одежда и базовое снаряжение специалиста Советского Союза.
+  productEntity: ToolboxGearDefUSSPSPC
+  cost:
+    DefChipGearSpc: 1
+  categories:
+  - DefShopGearUSSPSold
+  
+- type: listing
+  id: ToolboxGearDefPetrSPC
+  name: Набор петрищевского специалиста доп.отряда
+  description: Одежда и базовое снаряжение специалиста доп.отряда Революционеров-Петрищевцев.
+  productEntity: ToolboxGearDefPetrSPC
+  cost:
+    DefChipGearSpcDop: 1
+  categories:
+  - DefShopGearUSSPSold
+  
+- type: listing
+  id: ToolboxGearDefUSSPSol
+  name: Набор советского солдата
+  description: Одежда и базовое снаряжение солдата Советского Союза.
+  productEntity: ToolboxGearDefUSSPSol
+  cost:
+    DefChipGearSolder: 1
+  categories:
+  - DefShopGearUSSPSold
+  
+- type: listing
+  id: ToolboxGearDefPetrSol
+  name: Набор петрищевского солдата доп.отряда
+  description: Одежда и базовое снаряжение солдата доп.отряда Революционеров-Петрищевцев.
+  productEntity: ToolboxGearDefPetrSol
+  cost:
+    DefChipGearSolderDop: 1
+  categories:
+  - DefShopGearUSSPSold
 
+- type: listing
+  id: ToolboxGearDefUSSPEng
+  name: Набор советского инженера
+  description: Одежда и базовое снаряжение инженера Советского Союза.
+  productEntity: ToolboxGearDefUSSPEng
+  cost:
+    DefChipGearEnge: 1
+  categories:
+  - DefShopGearUSSPWork
+  
+- type: listing
+  id: ToolboxGearDefUSSPMed
+  name: Набор советского медика
+  description: Одежда и базовое снаряжение медика Советского Союза.
+  productEntity: ToolboxGearDefUSSPMed
+  cost:
+    DefChipGearMed: 1
+  categories:
+  - DefShopGearUSSPWork
+
+- type: listing
+  id: ToolboxGearDefUSSPLog
+  name: Набор советского снабженца
+  description: Одежда и базовое снаряжение снабженца Советского Союза.
+  productEntity: ToolboxGearDefUSSPLog
+  cost:
+    DefChipGearLogi: 1
+  categories:
+  - DefShopGearUSSPWork
 #---------------------------------Автоматы---------------------------
 #---------------------------Умпор---------------------------
 - type: entity
@@ -1646,3 +1790,28 @@
 #---------------------------Корпорации---------------------------
 
 #---------------------------Советы---------------------------
+- type: entity
+  parent: [BaseComputerAiAccess, StorePresetDefShopGearUSSP]
+  id: VendingMachineDefGearUSSP
+  name: Машина поставки снаряжения
+  description: Автомат для выдачи базового армейского снаряжения и вооружения для вновьприбывших солдат гарнизона.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/vending_machine.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: ussp
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Anchorable
+    flags: Anchorable

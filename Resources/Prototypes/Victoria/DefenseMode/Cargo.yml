@@ -1389,9 +1389,73 @@
   - DefShopWeaponCDC
 #------------------------------Советско-Петрищевское-------------
 #----------------Ящики------------
+- type: entity
+  id: PetrCrateWeaponsLightDef
+  parent: PetrCrate
+  name: Ящик лёгкого оружия Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Лёгкие стволы Петрищевцев скрываются тут под замком
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrWeaponRevolver
+      - id: PetrWeaponRevolver
+      - id: PetrPistol
+      - id: PetrPistol
 
+- type: entity
+  id: PetrCrateWeaponsAutoDef
+  parent: PetrCrate
+  name: Ящик автоматического оружия Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Скорострельные стволы Петрищевцев скрываются тут под замком
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrLightRifle
+      - id: PetrLightRifle
+      - id: PetrSMG
+      - id: PetrSMG
 #----------------Листинги------------
-
+- type: listing
+  id: USSPCrateWeaponsL
+  name: Ящик лёгкого оружия СССП
+  description: 2 советских пистолета, 2 пистолет-пулемёта и 2 карабина СССП
+  productEntity: USSPCrateWeaponsL
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+  
+- type: listing
+  id: USSPCrateWeaponsH
+  name: Ящик тяжёлого оружия СССП
+  description: 2 советских автомата, и 2 винтовки СССП
+  productEntity: USSPCrateWeaponsH
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+  
+- type: listing
+  id: PetrCrateWeaponsLightDef
+  name: Ящик лёгкого оружия Петрищевцев
+  description: Лёгкие стволы Петрищевцев скрываются тут под замком
+  productEntity: PetrCrateWeaponsLightDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+  
+- type: listing
+  id: PetrCrateWeaponsAutoDef
+  name: Ящик автоматического оружия Петрищевцев
+  description: Скорострельные стволы Петрищевцев скрываются тут под замком
+  productEntity: PetrCrateWeaponsAutoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
 #------------------------------Корпоративное-------------
 #----------------Ящики------------
 
@@ -2138,9 +2202,173 @@
   - DefShopAmmoCDC 
 #------------------------------Советско-Петрищевская-------------
 #----------------Ящики------------
-
+- type: entity
+  id: PetrCratePistAmmoDef
+  parent: PetrCrate
+  name: Ящик лёгких боеприпасов Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик патронов к лёгкому оружию Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrBoxRevolver
+      - id: PetrBoxRevolver
+      
+- type: entity
+  id: PetrCrateAutoAmmoDef
+  parent: PetrCrate
+  name: Ящик скорострельных боеприпасов Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик патронов к скорострельному оружию Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      
+- type: entity
+  id: PetrCrateShotAmmoDef
+  parent: PetrCrate
+  name: Ящик боеприпасов дробовика Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик патронов к дробовику Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      
+- type: entity
+  id: PetrCrateLMGAmmoDef
+  parent: PetrCrate
+  name: Ящик боеприпасов пулемёта Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик цинков к пулемёту Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazineRifleBox
+      - id: PetrMagazineRifleBox
+      - id: PetrMagazineRifleBox
 #----------------Листинги------------
+- type: listing
+  id: PetrCratePistAmmoDef
+  name: Ящик лёгких боеприпасов Петрищевцев
+  description: Большой ящик патронов к лёгкому оружию Петрищевцев
+  productEntity: PetrCratePistAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
 
+- type: listing
+  id: PetrCrateAutoAmmoDef
+  name: Ящик скорострельных боеприпасов Петрищевцев
+  description: Большой ящик патронов к скорострельному оружию Петрищевцев
+  productEntity: PetrCrateAutoAmmoDef
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: PetrCrateShotAmmoDef
+  name: Ящик боеприпасов дробовика Петрищевцев
+  description: Большой ящик патронов к дробовику Петрищевцев
+  productEntity: PetrCrateShotAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: PetrCrateLMGAmmoDef
+  name: Ящик боеприпасов пулемёта Петрищевцев
+  description: Большой ящик цинков к пулемёту Петрищевцев
+  productEntity: PetrCrateLMGAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: USSPCrateBatteryL
+  name: Ящик лёгких батарей СССП
+  description: 8 малых лёгких батарей и 4 больших
+  productEntity: USSPCrateBatteryL
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: USSPCrateBatteryH
+  name: Ящик тяжёлых батарей СССП
+  description: 6 малых тяжёлых батарей и 6 больших
+  productEntity: USSPCrateBatteryH
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: USSPCrateBatteryShot
+  name: Ящик дробовиковых батарей СССП
+  description: 5 дробовиковых батарей
+  productEntity: USSPCrateBatteryShot
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: USSPCrateBatteryLMG
+  name: Ящик батарей пулемёта СССП
+  description: 3 батареи пулемёта
+  productEntity: USSPCrateBatteryLMG
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: USSPCrateBatterySing
+  name: Ящик батарей притяжителя СССП
+  description: 3 батареи притяжителя
+  productEntity: USSPCrateBatterySing
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: USSPCrateBatteryRadio
+  name: Ящик батарей излучателя СССП
+  description: 3 батареи излучателя
+  productEntity: USSPCrateBatteryRadio
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUSSP
 #------------------------------Корпоративная-------------
 #----------------Ящики------------
 
