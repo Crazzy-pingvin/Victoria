@@ -301,3 +301,25 @@
   - Dragon
   - XenoTunneller
   - XenoTunnellerOnly
+#-----------------------------------------------Советы----------------------------------   
+- type: npcFaction
+  id: USSP
+  hostile:
+  - SimpleHostile
+  - Xeno
+  - Zombie
+  - Syndicate
+  - Revolutionary
+  - Noocraty
+  - NoocratyBot
+  - Dragon
+  - XenoTunneller
+  - XenoTunnellerOnly
+  - Mirt
+  - CDC
+  friendly:
+  - UmporBot
+  - Umpor
+  - KMLG
+  - SNK
+  - SNKBot
