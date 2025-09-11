@@ -2166,6 +2166,7 @@
             - NoocPowerCellThree
             - NoocPowerCellFour 
             - MirtPowerCell
+            - NoocPowerCellOneSnipe
   - type: Appearance
   - type: StaticPrice
     price: 500

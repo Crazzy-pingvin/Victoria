@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Sprite created by crazzy_pingvin",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "auto"
+    },
+	{
+      "name": "carab_snipe"
+    },
+	{
+      "name": "lmg"
+    },
+	{
+      "name": "pist_carab"
+    },
+	{
+      "name": "rif"
+    },
+	{
+      "name": "rif_snipe"
+    },
+	{
+      "name": "shot"
+    },
+	{
+      "name": "sing"
+    },
+	{
+      "name": "smg"
+    },
+	{
+      "name": "xray"
+    },
+    {
+      "name": "mag-0"
+    }
+  ]
+}

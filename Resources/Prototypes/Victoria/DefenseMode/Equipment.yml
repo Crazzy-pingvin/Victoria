@@ -972,7 +972,504 @@
       enum.ThiefBackpackUIKey.Key:
         type: ThiefBackpackBoundUserInterface
 #------------------------------------------------------Советские----------------------
+#-----------------------------------------Командор---------------------
+- type: thiefBackpackSet
+  id: SetUSSPPistolOfi
+  name: Пистолет
+  description: Включает в себя пистолет "Попов", 3 батареи и бронежилет.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_pistol.rsi
+    state: icon
+  content:
+  - USSPPistol
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPArmorLight
+  - USSPHelmet
+  
+- type: thiefBackpackSet
+  id: SetUSSPSMGOfi
+  name: Пистолет-пулемёт
+  description: Включает в себя пистолет-пулемёт "Фабрикант", 3 батареи и бронежилет.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_smg.rsi
+    state: icon
+  content:
+  - USSPSMG
+  - USSPBatterySMG
+  - USSPBatterySMG
+  - USSPBatterySMG
+  - USSPArmorLight
+  - USSPHelmet
+  
+- type: entity
+  id: ToolboxUSSPCom
+  name: Набор вооружения советского командора
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetUSSPPistolOfi
+    - SetUSSPSMGOfi
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#-----------------------------------------Офицер---------------------
+- type: thiefBackpackSet
+  id: SetUSSPCarabineOfi
+  name: Карабин
+  description: Включает в себя карабин "Коломиец", 3 батареи и бронежилет.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_carabine.rsi
+    state: icon
+  content:
+  - USSPCarabine
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPArmorLight
+  - USSPHelmet
+  
+- type: entity
+  id: ToolboxUSSPOfi
+  name: Набор вооружения советского офицера
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetUSSPPistolOfi
+    - SetUSSPSMGOfi
+    - SetUSSPCarabineOfi
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#-----------------------------------------Доп.офицер---------------------
+- type: thiefBackpackSet
+  id: SetPetrPistolOfi
+  name: Пистолет
+  description: Включает в себя пистолет "Горький", 3 магазина и бронежилет.
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_pistol.rsi
+    state: icon
+  content:
+  - PetrPistol
+  - PetrMagazinePistol
+  - PetrMagazinePistol
+  - PetrMagazinePistol
+  - PetrArmorBasic
+  - PetrHelmet
+  
+- type: thiefBackpackSet
+  id: SetPetrSMGOfi
+  name: Пистолет-пулемёт
+  description: Включает в себя пистолет-пулемёт "Коллективист", 3 магазина и бронежилет.
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_smg.rsi
+    state: icon
+  content:
+  - PetrSMG
+  - PetrMagazineSMG
+  - PetrMagazineSMG
+  - PetrMagazineSMG
+  - PetrArmorBasic
+  - PetrHelmet
 
+- type: thiefBackpackSet
+  id: SetPetrRevolverOfi
+  name: Револьвер
+  description: Включает в себя револьвер "Троцкий", 3 спидлоадера и бронежилет.
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_revolver.rsi
+    state: icon
+  content:
+  - PetrWeaponRevolver
+  - PetrSpeedLoader
+  - PetrSpeedLoader
+  - PetrSpeedLoader
+  - PetrArmorBasic
+  - PetrHelmet
+  
+- type: entity
+  id: ToolboxPetrOfiDop
+  name: Набор вооружения петрищевского командира
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Петрищев, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetPetrPistolOfi
+    - SetPetrSMGOfi
+    - SetPetrRevolverOfi
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#-----------------------------------------Специалист---------------------
+- type: thiefBackpackSet
+  id: SetUSSPSniperCarabine
+  name: Набор Снайпера c карабином
+  description: Включает в себя карабин "Коломиец", 3 батареи и бронежилет, оптический прицел, отвёртку, шлем и преобразователь зарядов.
+  sprite:
+    sprite: Victoria/Snipe/ussp_carabine.rsi
+    state: icon
+  content:
+  - USSPCarabine
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPArmorLight
+  - OpticalSight
+  - Screwdriver
+  - DefСartridgeСonverter
+  - USSPHelmet
+  
+- type: thiefBackpackSet
+  id: SetUSSPSniperRifle
+  name: Набор Снайпера c винтовкой
+  description: Включает в себя винтовку "Капица", 3 батареи, бронежилет, оптический прицел, отвёртку, шлем и преобразователь зарядов.
+  sprite:
+    sprite: Victoria/Snipe/ussp_rifle.rsi
+    state: icon
+  content:
+  - USSPRifle
+  - USSPBatteryRif
+  - USSPBatteryRif
+  - USSPBatteryRif
+  - USSPArmorLight
+  - OpticalSight
+  - USSPScrewdriver
+  - DefСartridgeСonverter
+  - USSPHelmet
+
+- type: thiefBackpackSet
+  id: SetUSSPShotgun
+  name: Набор Дробовика
+  description: Включает в себя дробовик "Лебедев", 3 батареи и бронекомплект.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_shotgun.rsi
+    state: icon
+  content:
+  - USSPShotgun
+  - USSPBatteryShot
+  - USSPBatteryShot
+  - USSPBatteryShot
+  - USSPArmorMiddle
+  - USSPHelmet
+  
+- type: thiefBackpackSet
+  id: SetUSSPLMG
+  name: Набор Пулемётчика
+  description: Включает в себя пулемёт "Ландау", 3 батареи и бронекомплект.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_lmg.rsi
+    state: icon
+  content:
+  - USSPLMG
+  - USSPBatteryLMG
+  - USSPBatteryLMG
+  - USSPBatteryLMG
+  - USSPArmorMiddle
+  - USSPHelmet
+
+- type: thiefBackpackSet
+  id: SetUSSPRadiator
+  name: Набор Излучателя
+  description: Включает в себя мзлучатель "Курчатов", 2 батареи и бронескафандр.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_radiator.rsi
+    state: icon
+  content:
+  - USSPRadiator
+  - USSPBatteryRadio
+  - USSPBatteryRadio
+  - USSPHardsuitArm
+  
+- type: thiefBackpackSet
+  id: SetUSSPSing
+  name: Набор Притяжителя
+  description: Включает в себя притяжитель "Королёв", 3 батареи и бронескафандр.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_attraction.rsi
+    state: icon
+  content:
+  - USSPAttraction
+  - USSPBatterySing
+  - USSPBatterySing
+  - USSPBatterySing
+  - USSPHardsuitArm
+  
+- type: thiefBackpackSet
+  id: SetUSSPGraviGun
+  name: Набор Манипулятора
+  description: Включает в себя гравитационый манипулятор и бронекомплект.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_shotgun.rsi
+    state: icon
+  content:
+  - WeaponTetherGun
+  - USSPArmorLight
+  - USSPHelmet
+
+- type: entity
+  id: ToolboxUSSPSPC
+  name: Набор вооружения советского специалиста
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetUSSPSniperCarabine
+    - SetUSSPSniperRifle
+    - SetUSSPShotgun
+    - SetUSSPLMG
+    - SetUSSPRadiator
+    - SetUSSPSing
+    - SetUSSPGraviGun
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#-----------------------------------------Доп.специалсит---------------------
+- type: thiefBackpackSet
+  id: SetPetrMinesweeperSPC
+  name: Набор Сапёра
+  description: Включает в себя пистолет "Горький", 3 магазина, скафандр "Звезда", отвёртку, кусачки, мотки шнура и кабеля, пластид, взрыватели и гранату.
+  sprite:
+    sprite: Victoria/Bomb/fragmentation_mine.rsi
+    state: fragmentationmine
+  content:
+  - PetrPistol
+  - PetrMagazinePistol
+  - PetrMagazinePistol
+  - PetrMagazinePistol
+  - PetrHardsuitZvezda
+  - Wirecutter
+  - Screwdriver
+  - CordStack
+  - Plastid
+  - Plastid
+  - FuseMine
+  - FuseMine
+  - ExGrenade
+  - CableWireStack
+  
+- type: thiefBackpackSet
+  id: SetPetrHardsuitSerpSPC
+  name: Набор "Серпа"
+  description: Включает в себя дробовик "Старатель", 4 магазина и скафандр "Серп".
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_shotgun.rsi
+    state: icon
+  content:
+  - PetrWeaponShotgun
+  - PetrMagazineShotgun
+  - PetrMagazineShotgun
+  - PetrMagazineShotgun
+  - PetrMagazineShotgun
+  - PetrHardsuitSerp
+  
+- type: thiefBackpackSet
+  id: SetPetrHardsuitMolotSPC
+  name: Набор "Молота"
+  description: Включает в себя пулемёт "Товарищ Петрищев", 2 цинка и бронескафандр "Молот".
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_lmg.rsi
+    state: icon
+  content:
+  - PetrWeaponLMG
+  - PetrMagazineRifleBox
+  - PetrMagazineRifleBox
+  - PetrHardsuitMolot
+  
+- type: entity
+  id: ToolboxPetrSPCDop
+  name: Набор вооружения петрищевского специалиста
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Петрищев, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetPetrMinesweeperSPC
+    - SetPetrHardsuitSerpSPC
+    - SetPetrHardsuitMolotSPC
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface  
+#-----------------------------------------Солдат---------------------
+- type: thiefBackpackSet
+  id: SetUSSPCarabineSol
+  name: Карабин
+  description: Включает в себя карабин "Коломиец", 3 батареи и бронескафандр.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_carabine.rsi
+    state: icon
+  content:
+  - USSPCarabine
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPBatteryPistCarab
+  - USSPHardsuitArm
+
+- type: thiefBackpackSet
+  id: SetUSSPRifleSol
+  name: Винтовка
+  description: Включает в себя винтовку "Капица", 3 батареи и бронекомплект.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_rifle.rsi
+    state: icon
+  content:
+  - USSPRifle
+  - USSPBatteryRif
+  - USSPBatteryRif
+  - USSPBatteryRif
+  - USSPArmorMiddle
+  - USSPHelmet
+
+- type: thiefBackpackSet
+  id: SetUSSPAutomatSol
+  name: Автомат
+  description: Включает в себя автомат "Лебедев", 3 батареи и бронекомплект.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_automat.rsi
+    state: icon
+  content:
+  - USSPAuto
+  - USSPBatteryAuto
+  - USSPBatteryAuto
+  - USSPBatteryAuto
+  - USSPArmorMiddle
+  - USSPHelmet
+  
+- type: thiefBackpackSet
+  id: SetUSSPSMGSol
+  name: Пистолет-пулемёт
+  description: Включает в себя пистолет-пулемёт "Фабрикант", 3 батареи и бронескафандр.
+  sprite:
+    sprite: Victoria/USSP/Weapon/ussp_smg.rsi
+    state: icon
+  content:
+  - USSPSMG
+  - USSPBatterySMG
+  - USSPBatterySMG
+  - USSPBatterySMG
+  - USSPHardsuitArm
+  
+- type: entity
+  id: ToolboxUSSPSol
+  name: Набор вооружения содата СССП
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetUSSPCarabineSol
+    - SetUSSPRifleSol
+    - SetUSSPAutomatSol
+    - SetUSSPSMGSol
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#-----------------------------------------Доп.солдат---------------------
+- type: thiefBackpackSet
+  id: SetPetrAutomatSol
+  name: Автомат
+  description: Включает в себя автомат "Повстанец", 3 магазина и бронекомплект.
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_automat.rsi
+    state: icon
+  content:
+  - PetrLightRifle
+  - PetrMagazineRifle
+  - PetrMagazineRifle
+  - PetrMagazineRifle
+  - PetrArmorMid
+  - PetrHelmet
+  
+- type: thiefBackpackSet
+  id: SetPetrSMGSol
+  name: Пистолет-пулемёт
+  description: Включает в себя питолет-пулемёт "Коллективист", 3 магазина и бронекомплект.
+  sprite:
+    sprite: Victoria/Petr/Weapon/petr_smg.rsi
+    state: icon
+  content:
+  - PetrSMG
+  - PetrMagazineSMG
+  - PetrMagazineSMG
+  - PetrMagazineSMG
+  - PetrArmorMid
+  - PetrHelmet
+  
+- type: entity
+  id: ToolboxPetrSolDop
+  name: Набор вооружения петрищевского бойца
+  description: Выбери себе ствол, да по-скорей! Враг ждать не будет!
+  suffix: СССП, Петрищев, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetPetrAutomatSol
+    - SetPetrSMGSol
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #------------------------------------------------------Корпоративные-------------------
 
 
@@ -1107,6 +1604,31 @@
   - type: Tag
     tags:
     - DefBanner
+  # - type: Skills
+    # skills:
+      # DefBanner: 1
+  # - type: MarineOrders
+#-----------------------------------------------------Советское----------------------
+- type: entity
+  name: Советское полковое знамя
+  suffix: Оборона, СССП
+  parent: CaptainSabre
+  id: DefBannerUSSP
+  description: "Вставай, угнетённый, и сбрось тяжкий груз! Нам Ленин великий путь озарил,а товарищ Песецкий народ вдохновил! "
+  components:
+  - type: Tag
+    tags:
+    - DefBanner
+  - type: Sprite
+    sprite: Victoria/DefenseMode/ussp_banner.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria/DefenseMode/ussp_banner.rsi
+  - type: MeleeWeapon
+    attackRate: 0.5
+    damage:
+      types:
+        Piercing: 5
   # - type: Skills
     # skills:
       # DefBanner: 1

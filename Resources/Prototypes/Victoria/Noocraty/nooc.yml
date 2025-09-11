@@ -563,6 +563,21 @@
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: impact_beam_heavy
+#------------------------------------винтовка-снайпер---------
+- type: hitscan
+  id: NoocRedLaserRifleSnipe
+  damage:
+    types:
+      Heat: 60
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_beam_heavy
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_heavy
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_beam_heavy
 #------------------------------------автомат----------
 - type: hitscan
   id: NoocRedLaserGan
@@ -871,7 +886,7 @@
   - type: Riggable
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserRifle
-    fireCost: 1
+    fireCost: 50
 #-----------------------------------винтовочная---------
 - type: Tag
   id: NoocPowerCellOne
@@ -891,13 +906,48 @@
       state: mag-0
       shader: unshaded
   - type: Battery
-    maxCharge: 10
-    startingCharge: 10
+    maxCharge: 500
+    startingCharge: 500
   - type: Tag
     tags:
       - NoocPowerCellOne
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserRifle
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      NoocPowerCellOne: 1
+#--------------снайперская---------
+- type: Tag
+  id: NoocPowerCellOneSnipe
+
+- type: entity
+  name: Батарея первого уровня (Винт) Усиленная
+  suffix: Ноократия, Full
+  description: Стандартная оружейная батарея Ноократии Эранта рассчитанная на 10 выстрелов
+  id: NoocPowerCellOneSnipe
+  parent: NoocBasePowerCell
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: rifle
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: mag-0
+      shader: unshaded
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Tag
+    tags:
+      - NoocPowerCellOneSnipe
+  - type: HitscanBatteryAmmoProvider
+    proto: NoocRedLaserRifleSnipe
+    fireCost: 100
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      NoocPowerCellOne: 1
 #-----------------------------------автоматная---------
 - type: Tag
   id: NoocPowerCellThree
@@ -917,13 +967,14 @@
       state: mag-0
       shader: unshaded
   - type: Battery
-    maxCharge: 30
-    startingCharge: 30
+    maxCharge: 300
+    startingCharge: 300
   - type: Tag
     tags:
       - NoocPowerCellThree
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserGan
+    fireCost: 10
 #-----------------------------------пистолетная---------
 - type: Tag
   id: NoocPowerCellTwo
@@ -943,13 +994,14 @@
       state: mag-0
       shader: unshaded
   - type: Battery
-    maxCharge: 10
-    startingCharge: 10
+    maxCharge: 300
+    startingCharge: 300
   - type: Tag
     tags:
       - NoocPowerCellTwo
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserPistol
+    fireCost: 15
 #-----------------------------------пулемётная---------
 - type: Tag
   id: NoocPowerCellFour
@@ -969,13 +1021,14 @@
       state: mag-0
       shader: unshaded
   - type: Battery
-    maxCharge: 80
-    startingCharge: 80
+    maxCharge: 640
+    startingCharge: 640
   - type: Tag
     tags:
       - NoocPowerCellFour
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserMG
+    fireCost: 8
 #-----------------магазины лечилки------------------
 #--------механ---------
 - type: Tag
@@ -1108,13 +1161,14 @@
       state: mag-0
       shader: unshaded
   - type: Battery
-    maxCharge: 40
-    startingCharge: 40
+    maxCharge: 400
+    startingCharge: 400
   - type: Tag
     tags:
       - NoocPowerCellCold
   - type: HitscanBatteryAmmoProvider
     proto: NoocColdLaser
+    fireCost: 10
 #-------------------------------------стволы---------------------------------------------------------------------------------
 #-----------------------винтовки-----------------------
 - type: entity
@@ -1147,6 +1201,7 @@
             - NoocPowerCellTwo
             - NoocPowerCellThree
             - NoocPowerCellFour
+            - NoocPowerCellOneSnipe
   - type: Appearance
   - type: StaticPrice
     price: 500
@@ -2778,13 +2833,14 @@
       state: mag-0
       shader: unshaded
   - type: Battery
-    maxCharge: 250
-    startingCharge: 250
+    maxCharge: 2000
+    startingCharge: 2000
   - type: Tag
     tags:
       - NoocPowerCellFive
   - type: HitscanBatteryAmmoProvider
     proto: NoocRedLaserMG
+    fireCost: 8
 #---------------------------------------------------------------Печать------------------------------------------------------------
 - type: entity
   name: Печать Ноократии Эранта

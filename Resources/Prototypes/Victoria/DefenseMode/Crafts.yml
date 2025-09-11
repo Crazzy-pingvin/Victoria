@@ -12,6 +12,23 @@
   completetime: 2
   materials:
     Glass: 200
+
+- type: entity
+  id: DefCellRechargerCircuitboard
+  parent: CellRechargerCircuitboard
+  components:
+    - type: MachineBoard
+      prototype: PowerCellRecharger
+      stackRequirements:
+        Cable: 20
+    
+- type: latheRecipe
+  id: DefDefCellRechargerCircuitboard
+  result: DefCellRechargerCircuitboard
+  completetime: 10
+  materials:
+    Steel: 1500 
+    Plastic: 1500    
 #-----------------------------------------Умпорский----------------------------------------
 #-------------------------------Рецепты-------------------------
 #-------------------Патроны-------------    
@@ -183,6 +200,7 @@
       - DefUmporRocketExp
       - DefUmporRocketFrag
       - DefUmporRocketFar
+      - DefDefCellRechargerCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -414,7 +432,7 @@
       - DefNoocPowerCellFour
       - DefNoocPowerCellFive
       - DefNoocPowerCellCold
-      - NoocCellRechargerCircuitboard
+      - DefDefCellRechargerCircuitboard
       - DefFoodBowlBig
       - DefBeaker
       - DefMirtMagazineZenit
@@ -787,6 +805,7 @@
       - DefCDCBeakerPlasmaStd
       - DefCDCBeakerPlasmaHot
       - DefCDCBeakerPlasmaCold
+      - DefDefCellRechargerCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -797,9 +816,346 @@
     flags: Anchorable
 #-----------------------------------------Советский----------------------------------------
 #-------------------------------Рецепты-------------------------
-
+#---------------------Патроны-----------------
+- type: latheRecipe
+  id: DefPetrCartridgeRifle
+  result: PetrCartridgeRifle
+  category: Ammo
+  completetime: 0.5
+  materials:
+    PlumbumMaterial: 4
+    
+- type: latheRecipe
+  id: DefPetrCartridgePistol
+  result: PetrCartridgePistol
+  category: Ammo
+  completetime: 0.5
+  materials:
+    PlumbumMaterial: 2
+    
+- type: latheRecipe
+  id: DefPetrCartridgeRevolver
+  result: PetrCartridgeRevolver
+  category: Ammo
+  completetime: 0.5
+  materials:
+    PlumbumMaterial: 3
+    
+- type: latheRecipe
+  id: DefShellShotgun
+  result: ShellShotgun
+  category: Ammo
+  completetime: 0.5
+  materials:
+    PlumbumMaterial: 3
+    Plastic: 2
+#---------------------Магазины и батареи-----------------
+- type: latheRecipe
+  id: DefPetrMagazinePistol
+  result: PetrMagazinePistol
+  category: Ammo
+  completetime: 3
+  materials:
+    PlumbumMaterial: 20
+    
+- type: latheRecipe
+  id: DefPetrMagazineSMG
+  result: PetrMagazineSMG
+  category: Ammo
+  completetime: 5
+  materials:
+    PlumbumMaterial: 55
+    
+- type: latheRecipe
+  id: DefPetrSpeedLoader
+  result: PetrSpeedLoader
+  category: Ammo
+  completetime: 2
+  materials:
+    PlumbumMaterial: 25
+    
+- type: latheRecipe
+  id: DefPetrMagazineRifle
+  result: PetrMagazineRifle
+  category: Ammo
+  completetime: 6
+  materials:
+    PlumbumMaterial: 140
+    
+- type: latheRecipe
+  id: DefPetrMagazineRifleBox
+  result: PetrMagazineRifleBox
+  category: Ammo
+  completetime: 10
+  materials:
+    PlumbumMaterial: 520
+    
+- type: latheRecipe
+  id: DefPetrMagazineShotgun
+  result: PetrMagazineShotgun
+  category: Ammo
+  completetime: 4
+  materials:
+    PlumbumMaterial: 30
+    Plastic: 20
+    
+- type: latheRecipe
+  id: DefUSSPBatteryPistCarab
+  result: USSPBatteryPistCarab
+  category: Ammo
+  completetime: 4
+  materials:
+    PlumbumMaterial: 40
+    Plasma: 20
+    
+- type: latheRecipe
+  id: DefUSSPBatterySMG
+  result: USSPBatterySMG
+  category: Ammo
+  completetime: 6
+  materials:
+    PlumbumMaterial: 100
+    Plasma: 50
+    
+- type: latheRecipe
+  id: DefUSSPBatteryRif
+  result: USSPBatteryRif
+  category: Ammo
+  completetime: 6
+  materials:
+    PlumbumMaterial: 80
+    Plasma: 40
+    
+- type: latheRecipe
+  id: DefUSSPBatteryAuto
+  result: USSPBatteryAuto
+  category: Ammo
+  completetime: 8
+  materials:
+    PlumbumMaterial: 200
+    Plasma: 100
+    
+- type: latheRecipe
+  id: DefUSSPBatteryLMG
+  result: USSPBatteryLMG
+  category: Ammo
+  completetime: 12
+  materials:
+    PlumbumMaterial: 600
+    Plasma: 300
+    
+- type: latheRecipe
+  id: DefUSSPBatteryShot
+  result: USSPBatteryShot
+  category: Ammo
+  completetime: 8
+  materials:
+    PlumbumMaterial: 150
+    Plasma: 60
+    
+- type: latheRecipe
+  id: DefUSSPBatterySing
+  result: USSPBatterySing
+  category: Ammo
+  completetime: 8
+  materials:
+    PlumbumMaterial: 150
+    Plasma: 200
+    
+- type: latheRecipe
+  id: DefUSSPBatteryRadio
+  result: USSPBatteryRadio
+  category: Ammo
+  completetime: 8
+  materials:
+    PlumbumMaterial: 150
+    Plasma: 200
+#---------------------Коробки с патронами-----------------
+- type: latheRecipe
+  id: DefPetrBoxRifle
+  result: PetrBoxRifle
+  category: Ammo
+  completetime: 15
+  materials:
+    PlumbumMaterial: 210
+    
+- type: latheRecipe
+  id: DefPetrBoxRevolver
+  result: PetrBoxRevolver
+  category: Ammo
+  completetime: 15
+  materials:
+    PlumbumMaterial: 135
+    
+- type: latheRecipe
+  id: DefPetrBoxPistol
+  result: PetrBoxPistol
+  category: Ammo
+  completetime: 15
+  materials:
+    PlumbumMaterial: 165
+    
+- type: latheRecipe
+  id: DefBoxLethalshot
+  result: BoxLethalshot
+  category: Ammo
+  completetime: 8
+  materials:
+    PlumbumMaterial: 40
+    Plasma: 25
+#---------------------Оружейные детали-----------------
+- type: latheRecipe
+  id: DefUSSPWeaponPartSlb
+  result: USSPWeaponPartSlb
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 250
+    PlumbumMaterial: 750
+    Plasma: 500
+    
+- type: latheRecipe
+  id: DefUSSPWeaponPartSib
+  result: USSPWeaponPartSib
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 750
+    PlumbumMaterial: 250
+    Plasma: 500
+    
+- type: latheRecipe
+  id: DefUSSPWeaponPartCev
+  result: USSPWeaponPartCev
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 200
+    Wood: 100
+    
+- type: latheRecipe
+  id: DefUSSPWeaponPartStb
+  result: USSPWeaponPartStb
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 300
+    PlumbumMaterial: 300
+    Plasma: 100
+    
+- type: latheRecipe
+  id: DefUSSPWeaponPartUsk
+  result: USSPWeaponPartUsk
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 200
+    PlumbumMaterial: 100
+    Plasma: 400
+    
+- type: latheRecipe
+  id: DefUSSPWeaponPartKmp
+  result: USSPWeaponPartKmp
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 100
+    PlumbumMaterial: 400
+    Plasma: 200
+    
+- type: latheRecipe
+  id: DefUSSPWeaponPartPrk
+  result: USSPWeaponPartPrk
+  category: Ammo
+  completetime: 40
+  materials:
+    Steel: 100
+    Wood: 200
+    
+- type: latheRecipe
+  id: DefUSSPWirecutter
+  result: USSPWirecutter
+  completetime: 4
+  materials:
+    Steel: 150
+    Wood: 100
+    
+- type: latheRecipe
+  id: DefUSSPScrewdriver
+  result: USSPScrewdriver
+  completetime: 4
+  materials:
+    Steel: 100
+    Wood: 100
 #-------------------------------Сам Фабрикатор------------------
-
+- type: entity
+  id: DefUSSPTechFab
+  parent: BaseLathe
+  name: Советский оборонный фабрикатор
+  suffix: СССП, Оборона
+  description: Небольшая промышленная машина, способная производить боеприпасы, магазины и коробки с патронами образца Конгломерата.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: ussp
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SecurityTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - DefPetrCartridgeRifle
+      - DefPetrCartridgePistol
+      - DefPetrCartridgeRevolver
+      - DefShellShotgun
+      - DefPetrMagazinePistol
+      - DefPetrMagazineSMG
+      - DefPetrSpeedLoader
+      - DefPetrMagazineRifle
+      - DefPetrMagazineRifleBox
+      - DefPetrMagazineShotgun
+      - DefUSSPBatteryPistCarab
+      - DefUSSPBatterySMG
+      - DefUSSPBatteryRif
+      - DefUSSPBatteryAuto
+      - DefUSSPBatteryLMG
+      - DefUSSPBatteryShot
+      - DefUSSPBatterySing
+      - DefUSSPBatteryRadio
+      - DefPetrBoxRifle
+      - DefPetrBoxRevolver
+      - DefPetrBoxPistol
+      - DefBoxLethalshot
+      - DefFoodBowlBig
+      - DefBeaker
+      - DefUSSPWeaponPartSlb
+      - DefUSSPWeaponPartSib
+      - DefUSSPWeaponPartCev
+      - DefUSSPWeaponPartStb
+      - DefUSSPWeaponPartUsk
+      - DefUSSPWeaponPartKmp
+      - DefUSSPWeaponPartPrk
+      - DefUSSPWirecutter
+      - DefUSSPScrewdriver
+      - DefDefCellRechargerCircuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+  - type: Anchorable
+    flags: Anchorable
 #-----------------------------------------Корпоративный----------------------------------------
 #-------------------------------Рецепты-------------------------
 
@@ -840,7 +1196,28 @@
   stackEntity: CDCCartridgePlasmaLigRif
   name: конгломератский слабоплазменный винтовочный патрон
   icon: { sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi, state: base_light }
-  price: 0.1  
+  price: 0.1 
+
+- type: material
+  id: NoocPowerCellOne
+  stackEntity: NoocPowerCellOne
+  name: ноократская батарея первого уровня
+  icon: { sprite: Victoria/Noocraty/Weapon/nooc_magazine.rsi, state: rifle }
+  price: 0.1 
+
+- type: material
+  id: USSPBatteryPistCarab
+  stackEntity: USSPBatteryPistCarab
+  name: советская батарея 
+  icon: { sprite: Victoria/USSP/Weapon/ussp_magazine.rsi, state: pist_carab }
+  price: 0.1 
+
+- type: material
+  id: USSPBatteryRif
+  stackEntity: USSPBatteryRif
+  name: советская батеря
+  icon: { sprite: Victoria/USSP/Weapon/ussp_magazine.rsi, state: rif }
+  price: 0.1   
 #-------------------------------------------------------------------Снайперская приблуда----------------------
 #--------------------------------------------------Материалы патронов-----------------
 - type: material
@@ -1083,7 +1460,31 @@
   category: Ammo
   completetime: 40
   materials:
-    CDCCartridgePlasmaLigRif: 1 
+    CDCCartridgePlasmaLigRif: 1
+
+- type: latheRecipe
+  id: NoocPowerCellOneSnipe
+  result: NoocPowerCellOneSnipe
+  category: Ammo
+  completetime: 180
+  materials:
+    NoocPowerCellOne: 1 
+
+- type: latheRecipe
+  id: USSPBatteryCarabSnipe
+  result: USSPBatteryCarabSnipe
+  category: Ammo
+  completetime: 180
+  materials:
+    USSPBatteryPistCarab: 1 
+
+- type: latheRecipe
+  id: USSPBatteryRifSnipe
+  result: USSPBatteryRifSnipe
+  category: Ammo
+  completetime: 180
+  materials:
+    USSPBatteryRif: 1     
 #--------------------------------------------------Преобразователь патронов-----------------
 - type: entity
   id: DefСartridgeСonverter
@@ -1117,6 +1518,9 @@
       - CDCSniperCartridgePlasmaRif
       - CDCSniperCartridgePlasmaHotRif
       - CDCSniperCartridgePlasmaLigRif
+      - NoocPowerCellOneSnipe
+      - USSPBatteryCarabSnipe
+      - USSPBatteryRifSnipe
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1125,28 +1529,37 @@
         - CDCCartridgePlasmaRif
         - CDCCartridgePlasmaHotRif
         - CDCCartridgePlasmaLigRif
+        - NoocPowerCellOne
+        - USSPBatteryPistCarab
+        - USSPBatteryRif
 #--------------------------------------------------Тёплое пальто-----------------
 #-------------------------------------Умпорский-------------------
 - type: latheRecipe
   id: RecipeUmporCoat
   materials:
-    GoatWoolCleanMaterial: 700
+    SheepWoolCleanMaterial: 700
     ElastaneClothMaterial: 500
   result: UmporCoat
 #-------------------------------------Миртан-------------------
 - type: latheRecipe
   id: RecipeMirtCoat
   materials:
-    GoatWoolCleanMaterial: 700
+    SheepWoolCleanMaterial: 700
     ElastaneClothMaterial: 500
   result: MirtCoat
 #-------------------------------------Конгломерат-------------------
 - type: latheRecipe
   id: RecipeCDCCoat
   materials:
-    GoatWoolCleanMaterial: 700
+    SheepWoolCleanMaterial: 700
     ElastaneClothMaterial: 500
   result: CDCCoat
 #-------------------------------------Корпораты-------------------
 
 #-------------------------------------СССП-------------------
+- type: latheRecipe
+  id: RecipeUSSPCoat
+  materials:
+    SheepWoolCleanMaterial: 700
+    ElastaneClothMaterial: 500
+  result: USSPCoat

@@ -1,0 +1,31 @@
+- type: entity
+  id: MechEquipmentShotgun
+  parent: BaseMechEquipment
+  name: мех пушка
+  description: Gives the mech the ability to grab things and drag them around.
+  components:
+  - type: Sprite
+    state: mecha_clamp
+  - type: UIFragment
+    ui: !type:MechGrabberUi
+  - type: Gun
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - UmporShellShotgun
+    capacity: 7
+    proto: UmporShellShotgun
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []

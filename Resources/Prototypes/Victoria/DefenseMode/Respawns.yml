@@ -578,19 +578,205 @@
     settings: DefHumanoidSettingsCDCLog
 #------------------------------------------------Советские-------------------------------------------
 #-------------------------------------Специалист-----------------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Diona
+    - Vox
+  id: DefHumanoidSettingsUSSPSPC
+  randomizeName: false
+  components:
+    - type: NpcFactionMember
+      factions:
+      - USSP
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Советский специалист
+      description: Вы образованный, опытный и храбрый боец Советского Союза. Используйте своё особое вооружение, что выдала вам родина, чтобы победить врагов и привечти пролеториат к победе!
+    - type: GhostTakeoverAvailable
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 120
+    - type: Loadout
+      prototypes: [ GearDefUSSPSPC]
+    - type: RandomMetadata
+      nameSegments:
+      - USSPName-ems
+      - USSPName
 
+- type: entity
+  name: Советский специалист Спавнер
+  id: DefSpawnerUSSPSPC
+  suffix: СССП, GHOST, Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: spc
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPSPC
 #-------------------------------------Доп Специалист-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPDSPC
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Петрищевский специалист доп.отряда
+      description: Вы вечный революционер. Вас называют экстремистом, убийцей, мясником. Хотя для победы Коммунизма в галактике все средства хороши. Но сейчас давно потеряная Родина зовёт на помощь. Возьмите лучшее оружие, чтобы защитить её.
+    - type: Loadout
+      prototypes: [ GearDefPetrSPC ]
+    - type: RandomMetadata
+      nameSegments:
+      - PetrName-vet
+      - PetrNameTwo
 
+- type: entity
+  name: Петрищевский доп.специалист Спавнер
+  id: DefSpawnerUSSPDSPC
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dspc
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPDSPC
 #-------------------------------------Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPSol
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский солдат
+      description: Вы честный и верный гражданин Союза Советский Социалистических Планет. Но вашей Родине нужна ваша сила. Берите оружие и вставайте в стой!
+    - type: Loadout
+      prototypes: [ GearDefUSSPSol ]
+    - type: RandomMetadata
+      nameSegments:
+      - USSPName-s
+      - USSPName
 
+- type: entity
+  name: Советский солдат Спавнер
+  id: DefSpawnerUSSPSol
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPSol
 #-------------------------------------Доп Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPDSol
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Петрищевский солдат
+      description: Ваша мечта - коммунизм по всей галактике. И не важно что придётся сделать, ибо ваши руки уже в крови по плечо. Но на потерянной Родине звонит колокол беды. Берите оружие и помогите им!
+    - type: Loadout
+      prototypes: [ GearDefPetrSol ]
+    - type: RandomMetadata
+      nameSegments:
+      - PetrName-tov
+      - PetrNameTwo
 
+- type: entity
+  name: Петрищевский доп.солдат Спавнер
+  id: DefSpawnerUSSPSolD
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPDSol
 #-------------------------------------Инженер-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPEng
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский инженер
+      description: Вы прекрасно образованный и весьма опытный Советский инженер широкого профиля. В вашей голове умещется и механика, и электроника, и энергетика, и фортификация. Так покажите врагам, что Родина не зря вас учила!
+    - type: Loadout
+      prototypes: [ GearDefUSSPEng ]
 
+- type: entity
+  name: Советский инженер Спавнер
+  id: DefSpawnerUSSPEng
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: eng
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPEng
 #-------------------------------------Медик-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPMed
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский медик
+      description: Вы умелый военный врач Советской Красной Армии. Проявляйте строгость, расторопность, умелость. Солдатам всегда нужна помощь на поле боя.
+    - type: Loadout
+      prototypes: [ GearDefUSSPMed ]
 
+- type: entity
+  name: Советский медик Спавнер
+  id: DefSpawnerUSSPMed
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: med
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPMed
 #-------------------------------------Снабженец-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPLog
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский логист
+      description: Вы снабженец армии Советского Союза. Ваше дело очень широкое и важное. Будьте кровью в жилах войны. Носите материалы, добывайте провизию, создавайте боеприпасы. Снабжайте армию всем, что нужно для победы.
+    - type: Loadout
+      prototypes: [ GearDefUSSPLog ]
+    - type: RandomMetadata
+      nameSegments:
+      - USSPName-s
+      - USSPName
 
+- type: entity
+  name: Советский логист Спавнер
+  id: DefSpawnerUSSPLog
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: car
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPLog
 #------------------------------------------------Корпоративные-------------------------------------------
 #-------------------------------------Специалист-----------------
 
@@ -1295,7 +1481,234 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 #------------------------------------------------Советские-------------------------------------------
+- type: storeCategory
+  id: StoreRespawnsMap1USSP
+  name: "Сборщик пополнения"
+  priority: 1
+  
+- type: entity
+  id: PresetStoreRespawnsMap1USSP
+  abstract: true
+  components:
+  - type: Store
+    name: preset-respawns-def-name
+    categories:
+    - StoreDefChip
+    - StoreRespawnsMap1USSP
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: listing
+  id: DefRespawnsMap1USSP60Sol
+  name: Первое пополнение
+  description: 2 солдата.
+  productEntity: DefSpawnerUSSPSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 3600
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+    
+- type: listing
+  id: DefRespawnsMap1USSP70SPC
+  name: Второе пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUSSPSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4200
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP70Log
+  name: Второе пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUSSPLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP80Eng
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
 
+- type: listing
+  id: DefRespawnsMap1USSP80Med
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPMed
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4800
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1USSP90Eng
+  name: Четвёртое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 5400
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+   
+- type: listing
+  id: DefRespawnsMap1USSP90Sol
+  name: Четвёртое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerUSSPSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 5400
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP90SolD
+  name: Четвёртое пополнение
+  description: 1 доп.солдат.
+  productEntity: DefSpawnerUSSPSolD
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 5400
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP100SPC
+  name: Пятое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUSSPSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6000
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP100Log
+  name: Пятое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUSSPLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6000
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP110Sol
+  name: Шестое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUSSPSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6600
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP110Log
+  name: Шестое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUSSPLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP120Eng
+  name: Шестое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP120Sol
+  name: Шестое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerUSSPSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 7200
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
 #------------------------------------------------Корпоративные-------------------------------------------
 
 #-----------------------------------------------------------------Сборщики поставок-----------------------------------------------------
@@ -1366,5 +1779,25 @@
       balance: 
         DefChip_currency: 0
 #------------------------------------------------Советский-------------------------------------------
-
+- type: entity
+  name: Сборщик поставок
+  suffix: Оборона, Умпорский, Малый
+  parent: [BaseItem, PresetStoreRespawnsMap1USSP]
+  id: ProviderDefSuppliesMap1USSP
+  description: Небольшое устройсво, получающее чипы поставок и пополнение.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
 #------------------------------------------------Корпоративный-------------------------------------------

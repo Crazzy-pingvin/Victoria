@@ -389,7 +389,17 @@
 #-----------------------------------------Корпорации-------------------------------
 
 #-----------------------------------------СССП-------------------------------
-
+- type: entity
+  parent: TelecomServer
+  id: DefTelecomServerFilledUSSP
+  suffix: Оборона, СССП
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - USSPEncryptionKey
+      - PetrEncryptionKey
+      - USSPEncryptionKeyBifaze
 #------------------------------------------------------------Портфабы------------------------------------------------------------------   
 #-----------------------------------------Умпорский-------------------------------
 - type: entity
@@ -436,8 +446,19 @@
 #-----------------------------------------Корпорации-------------------------------
 
 #-----------------------------------------СССП-------------------------------
-
-
+- type: entity
+  parent: ClothLathe
+  id: DefClothLatheUSSP
+  suffix: Оборона, СССП
+  components:
+  - type: Lathe
+    staticRecipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour
+      - RecipeUSSPCoat 
 #------------------------------------------------------------Вечные кабели------------------------------------------------------------------   
 - type: entity
   parent: CableMV
