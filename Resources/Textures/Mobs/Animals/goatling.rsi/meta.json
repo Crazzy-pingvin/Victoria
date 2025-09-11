@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by Askolots (discord: 788252896016990219)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "goatling-dead"
+    },
+    {
+      "name": "goatling",
+      "directions": 4
+    }
+  ]
+}
