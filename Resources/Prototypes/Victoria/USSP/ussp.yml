@@ -700,7 +700,7 @@
   name: Печать армии СССП
   suffix: СССП
   parent: RubberStampBaseAlt
-  id: SSSPRubberStamp
+  id: USSPRubberStamp
   components:
   - type: Stamp
     stampedName: Союз Советских Социалистических Планет
@@ -3520,8 +3520,8 @@
     contents:
       - id: USSPAttraction
       - id: USSPAttraction
-      - id: USSPRadioLaser
-      - id: USSPRadioLaser
+      - id: USSPRadiator
+      - id: USSPRadiator
 #-----------------------------Ящик батарей лёгкого оружия------------------  
 - type: entity
   id: USSPCrateBatteryL

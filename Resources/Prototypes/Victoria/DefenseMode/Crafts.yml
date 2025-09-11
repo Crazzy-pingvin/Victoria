@@ -1209,14 +1209,14 @@
   id: USSPBatteryPistCarab
   stackEntity: USSPBatteryPistCarab
   name: советская батарея 
-  icon: { sprite: Victoria/CDC/Weapon/cdc_magazine.rsi, state: pist_carab }
+  icon: { sprite: Victoria/USSP/Weapon/ussp_magazine.rsi, state: pist_carab }
   price: 0.1 
 
 - type: material
   id: USSPBatteryRif
   stackEntity: USSPBatteryRif
   name: советская батеря
-  icon: { sprite: Victoria/CDC/Weapon/cdc_magazine.rsi, state: rif }
+  icon: { sprite: Victoria/USSP/Weapon/ussp_magazine.rsi, state: rif }
   price: 0.1   
 #-------------------------------------------------------------------Снайперская приблуда----------------------
 #--------------------------------------------------Материалы патронов-----------------
