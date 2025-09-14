@@ -97,6 +97,18 @@ public abstract partial class SharedGunSystem : EntitySystem
         SubscribeLocalEvent<GunComponent, CycleModeEvent>(OnCycleMode);
         SubscribeLocalEvent<GunComponent, HandSelectedEvent>(OnGunSelected);
         SubscribeLocalEvent<GunComponent, MapInitEvent>(OnMapInit);
+
+        // Victoria-Mech
+        SubscribeLocalEvent<GunComponent, GetGunEvent>(OnGetGun);
+    }
+
+    // Victoria-Mech
+    private void OnGetGun(Entity<GunComponent> gun, ref GetGunEvent args)
+    {
+        if (args.Gun != null)
+            return;
+
+        args.Gun = gun;
     }
 
     private void OnMapInit(Entity<GunComponent> gun, ref MapInitEvent args)
@@ -185,6 +197,17 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (TryComp(entity, out gun))
         {
             gunEntity = entity;
+            gunComp = gun;
+            return true;
+        }
+
+        // Victoria-GunMech | Add a way for outer systems to provide gun in indirect ways
+        var ev = new GetGunEvent();
+        RaiseLocalEvent(entity, ref ev);
+
+        if (ev.Gun != null && TryComp(ev.Gun, out gun))
+        {
+            gunEntity = ev.Gun.Value;
             gunComp = gun;
             return true;
         }
@@ -467,6 +490,7 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         TransformSystem.SetLocalRotation(xform, Random.NextAngle());
         TransformSystem.SetCoordinates(entity, xform, coordinates);
+        TransformSystem.AttachToGridOrMap(entity, xform); // Victoria-AlwaysDropShellsToGrid
 
         // decides direction the casing ejects and only when not cycling
         if (angle != null)

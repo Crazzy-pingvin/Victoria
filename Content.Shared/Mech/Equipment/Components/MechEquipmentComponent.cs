@@ -1,5 +1,6 @@
 ﻿using Content.Shared.DoAfter;
 using Content.Shared.Mech.Components;
+using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Mech.Equipment.Components;
@@ -7,7 +8,7 @@ namespace Content.Shared.Mech.Equipment.Components;
 /// <summary>
 /// A piece of equipment that can be installed into <see cref="MechComponent"/>
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class MechEquipmentComponent : Component
 {
     /// <summary>
@@ -18,7 +19,7 @@ public sealed partial class MechEquipmentComponent : Component
     /// <summary>
     /// The mech that the equipment is inside of.
     /// </summary>
-    [ViewVariables] public EntityUid? EquipmentOwner;
+    [DataField, AutoNetworkedField] public EntityUid? EquipmentOwner;
 }
 
 /// <summary>
@@ -51,3 +52,12 @@ public sealed partial class InsertEquipmentEvent : SimpleDoAfterEvent
 {
 }
 
+public sealed partial class MechSelectedEquipmentEvent : EntityEventArgs
+{
+    public EntityUid Mech;
+}
+
+public sealed partial class MechUnselectedEquipmentEvent : EntityEventArgs
+{
+    public EntityUid Mech;
+}

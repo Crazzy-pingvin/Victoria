@@ -114,6 +114,48 @@ public sealed partial class GunSystem
         }
     }
 
+    public sealed class AmmoStatusControl : Control
+    {
+        private readonly BulletRender _bullets;
+        private readonly Label _ammoCount;
+
+        public AmmoStatusControl()
+        {
+            MinHeight = 15;
+            HorizontalExpand = true;
+            VerticalAlignment = VAlignment.Center;
+
+            AddChild(new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                Children =
+                {
+                    (_bullets = new BulletRender
+                    {
+                        Margin = new Thickness(0, 0, 5, 0),
+                        HorizontalExpand = true
+                    }),
+                    (_ammoCount = new Label
+                    {
+                        StyleClasses = { StyleNano.StyleClassItemStatus },
+                        HorizontalAlignment = HAlignment.Right,
+                        VerticalAlignment = VAlignment.Bottom
+                    }),
+                }
+            });
+        }
+
+        public void Update(int count, int max)
+        {
+            _ammoCount.Visible = true;
+
+            _ammoCount.Text = $"x{count:00}";
+
+            _bullets.Capacity = max;
+            _bullets.Count = count;
+        }
+    }
+
     public sealed class BoxesStatusControl : Control
     {
         private readonly BatteryBulletRenderer _bullets;
