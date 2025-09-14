@@ -1,0 +1,10 @@
+<equipment:MechGunUiFragment
+    xmlns:equipment="clr-namespace:Content.Client.Mech.Ui.Equipment"
+    xmlns:weaponSystems="clr-namespace:Content.Client.Weapons.Ranged.Systems"
+    xmlns="https://spacestation14.io" Margin="1 0 2 0" HorizontalExpand="True" VerticalExpand="True">
+    <BoxContainer Orientation="Vertical"
+                  HorizontalExpand="True"
+                  VerticalExpand="True"
+                  Name="Container">
+    </BoxContainer>
+</equipment:MechGunUiFragment>

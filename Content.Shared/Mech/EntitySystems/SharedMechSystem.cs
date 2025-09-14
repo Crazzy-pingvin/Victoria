@@ -15,6 +15,8 @@ using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Weapons.Melee;
+using Content.Shared.Weapons.Ranged.Events;
+using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.Network;
@@ -55,6 +57,14 @@ public abstract class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechPilotComponent, GetMeleeWeaponEvent>(OnGetMeleeWeapon);
         SubscribeLocalEvent<MechPilotComponent, CanAttackFromContainerEvent>(OnCanAttackFromContainer);
         SubscribeLocalEvent<MechPilotComponent, AttackAttemptEvent>(OnAttackAttempt);
+
+        #region Equipment events relays
+        SubscribeLocalEvent<MechComponent, GunShotEvent>(RelayMechEvent);
+        SubscribeLocalEvent<MechComponent, TakeAmmoEvent>(RelayMechEvent);
+        SubscribeLocalEvent<MechComponent, GetAmmoCountEvent>(RelayMechEvent);
+
+        SubscribeLocalEvent<MechPilotComponent, GetGunEvent>(RelayPilotEvent);
+        #endregion
     }
 
     private void OnToggleEquipmentAction(EntityUid uid, MechComponent component, MechToggleEquipmentEvent args)
@@ -87,6 +97,32 @@ public abstract class SharedMechSystem : EntitySystem
         {
             RaiseLocalEvent(component.CurrentSelectedEquipment.Value, args);
         }
+    }
+
+    private void RelayMechEvent<T>(EntityUid uid, MechComponent component, ref T args) where T : notnull
+    {
+        var pilot = component.PilotSlot.ContainedEntity;
+        if (pilot == null)
+            return;
+
+        // TODO why is this being blocked?
+        if (!_timing.IsFirstTimePredicted)
+            return;
+
+        if (component.CurrentSelectedEquipment != null)
+        {
+            RaiseLocalEvent(component.CurrentSelectedEquipment.Value, ref args);
+        }
+    }
+
+    private void RelayPilotEvent<T>(EntityUid uid, MechPilotComponent component, ref T args) where T : notnull
+    {
+        var mech = component.Mech;
+
+        if (!TryComp<MechComponent>(mech, out var mechComp))
+            return;
+
+        RelayMechEvent(mech, mechComp, ref args);
     }
 
     private void OnStartup(EntityUid uid, MechComponent component, ComponentStartup args)
@@ -178,16 +214,34 @@ public abstract class SharedMechSystem : EntitySystem
         var allEquipment = component.EquipmentContainer.ContainedEntities.ToList();
 
         var equipmentIndex = -1;
+
+        // is the equipment was already cycled
         if (component.CurrentSelectedEquipment != null)
         {
             bool StartIndex(EntityUid u) => u == component.CurrentSelectedEquipment;
             equipmentIndex = allEquipment.FindIndex(StartIndex);
+
+            var unselectEvent = new MechUnselectedEquipmentEvent()
+            {
+                Mech = uid
+            };
+            RaiseLocalEvent(component.CurrentSelectedEquipment.Value, unselectEvent);
         }
 
         equipmentIndex++;
         component.CurrentSelectedEquipment = equipmentIndex >= allEquipment.Count
             ? null
             : allEquipment[equipmentIndex];
+
+        // is equipment selected
+        if (component.CurrentSelectedEquipment != null)
+        {
+            var selectEvent = new MechSelectedEquipmentEvent()
+            {
+                Mech = uid
+            };
+            RaiseLocalEvent(component.CurrentSelectedEquipment.Value, selectEvent);
+        }
 
         var popupString = component.CurrentSelectedEquipment != null
             ? Loc.GetString("mech-equipment-select-popup", ("item", component.CurrentSelectedEquipment))
@@ -222,6 +276,8 @@ public abstract class SharedMechSystem : EntitySystem
             return;
 
         equipmentComponent.EquipmentOwner = uid;
+        Dirty(toInsert, equipmentComponent);
+
         _container.Insert(toInsert, component.EquipmentContainer);
         var ev = new MechEquipmentInsertedEvent(uid);
         RaiseLocalEvent(toInsert, ref ev);
@@ -260,6 +316,8 @@ public abstract class SharedMechSystem : EntitySystem
             CycleEquipment(uid, component);
 
         equipmentComponent.EquipmentOwner = null;
+        Dirty(toRemove, equipmentComponent);
+
         _container.Remove(toRemove, component.EquipmentContainer);
         UpdateUserInterface(uid, component);
     }
