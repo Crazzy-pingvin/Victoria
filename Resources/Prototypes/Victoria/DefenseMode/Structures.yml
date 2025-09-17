@@ -25,7 +25,7 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 1.2
+          radius: 0.9
         density: 1000
         layer:
         - WallLayer
@@ -64,7 +64,7 @@
   - type: JourneyTarget
     journeyGroup: Alpha
     ignoreGroups: true
-    priority: 5
+    priority: 1
     maxRange: 25
   - type: NpcFactionMember
     factions:
@@ -130,232 +130,52 @@
   components:
   - type: JourneyTarget
     journeyGroup: Beaver
-#------------------------------------------------------------Цель-костыль для атак издалека------------------------------    
+#------------------------------------------------------------Вэйпоинты----------------------------------------------------------------------
 - type: entity
-  id: BaseCrutchObjectiveAlfaOne
-  name: метка-цель
-  suffix: Оборона, Альфа, приоритет 1
-  components:
-  - type: Sprite 
-    sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
-    layers:
-    - state: tip
-  - type: MobState
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      1: Critical
-      2: Dead
-  - type: DefenseTarget
-  - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 1
-  - type: NpcFactionMember
-    factions:
-    - DefenseStructureBase
-  - type: Anchorable
-    flags: Anchorable
-  - type: InteractionOutline
-  - type: Physics
-    bodyType: Static
-  - type: Transform
-    noRot: true
-  - type: RandomChangeTime
-    time: 1800
-    prob: 1
-    entity: SpawnerCrutchObjectiveAlfaOne
-  - type: Damageable
-    damageContainer: StructuralInorganic
-  - type: Destructible
-    thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 2
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-
-- type: entity
-  id: CrutchObjectiveAlfaOne
-  name: метка-цель
-  suffix: Оборона, приоритет 1
-  components:
-  - type: Sprite 
-    sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
-    layers:
-    - state: tip
-  - type: MobState
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      1: Critical
-      2: Dead
-  - type: DefenseTarget
-  - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 1
-  - type: NpcFactionMember
-    factions:
-    - DefenseStructureBase
-  - type: Anchorable
-    flags: Anchorable
-  - type: InteractionOutline
-  - type: Physics
-    bodyType: Static
-  - type: Transform
-    noRot: true
-  - type: Damageable
-    damageContainer: StructuralInorganic
-  - type: Destructible
-    thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 2
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-    
-- type: entity
-  name: Спавнер метки-цели
-  suffix: Оборона, Альфа, приоритет 1
-  id: SpawnerCrutchObjectiveAlfaOne
-  parent: MarkerBase
+  id: WaypointBase
+  name: промежуточная точка
+  description: Неестественный свет, указывающий на внимание со стороны Улья.
+  abstract: true
   components:
   - type: Sprite
-    layers:
-    - state: green
-  - type: Timer
-  - type: TimedSpawner
-    prototypes:
-    - CrutchObjectiveAlfaOne
-    chance: 1
-    intervalSeconds: 180
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 1
-  - type: TimedDespawn
-    lifetime: 6600
-    
-- type: entity
-  parent: BaseCrutchObjectiveAlfaOne
-  id: BaseCrutchObjectiveAlfaTwo
-  name: метка-цель
-  suffix: Оборона, Альфа, приоритет 2
-  components:
+    sprite: deprecated.rsi
+    state: deprecated
+    drawdepth: Overdoors
   - type: JourneyTarget
     journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 2
-  - type: RandomChangeTime
-    time: 1800
-    prob: 1
-    entity: SpawnerCrutchObjectiveAlfaTwo
+    ignoreGroups: false
+    priority: -100
+    maxRange: 55
+  - type: PointLight
+    color: "#00f0fb"
+    radius: 55
 
 - type: entity
-  parent: CrutchObjectiveAlfaOne
-  id: CrutchObjectiveAlfaTwo
-  name: метка-цель
-  suffix: Оборона, приоритет 2
+  id: WaypointOne
+  suffix: первая
+  parent: WaypointBase
   components:
   - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 2
+    priority: -100
+    maxRange: 45
 
 - type: entity
-  name: Спавнер метки-цели
-  suffix: Оборона, Альфа, приоритет 2
-  id: SpawnerCrutchObjectiveAlfaTwo
-  parent: SpawnerCrutchObjectiveAlfaOne
-  components:
-  - type: TimedSpawner
-    prototypes:
-    - CrutchObjectiveAlfaTwo
-    chance: 1
-    intervalSeconds: 180
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 1
-    
-- type: entity
-  parent: BaseCrutchObjectiveAlfaOne
-  id: BaseCrutchObjectiveAlfaThree
-  name: метка-цель
-  suffix: Оборона, Альфа, приоритет 3
+  id: WaypointTwo
+  suffix: вторая
+  parent: WaypointBase
   components:
   - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 3
-  - type: RandomChangeTime
-    time: 1800
-    prob: 1
-    entity: SpawnerCrutchObjectiveAlfaThree
+    priority: -90
+    maxRange: 45
 
 - type: entity
-  parent: CrutchObjectiveAlfaOne
-  id: CrutchObjectiveAlfaThree
-  name: метка-цель
-  suffix: Оборона, приоритет 3
+  id: WaypointThree
+  suffix: третья
+  parent: WaypointBase
   components:
   - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 3
-
-- type: entity
-  name: Спавнер метки-цели
-  suffix: Оборона, Альфа, приоритет 3
-  id: SpawnerCrutchObjectiveAlfaThree
-  parent: SpawnerCrutchObjectiveAlfaOne
-  components:
-  - type: TimedSpawner
-    prototypes:
-    - CrutchObjectiveAlfaThree
-    chance: 1
-    intervalSeconds: 180
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 1
-    
-- type: entity
-  parent: BaseCrutchObjectiveAlfaOne
-  id: BaseCrutchObjectiveAlfaFour
-  name: метка-цель
-  suffix: Оборона, Альфа, приоритет 4
-  components:
-  - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 4
-  - type: RandomChangeTime
-    time: 1800
-    prob: 1
-    entity: SpawnerCrutchObjectiveAlfaFour
-    
-- type: entity
-  parent: CrutchObjectiveAlfaOne
-  id: CrutchObjectiveAlfaFour
-  name: метка-цель
-  suffix: Оборона, приоритет 4
-  components:
-  - type: JourneyTarget
-    journeyGroup: Alpha
-    ignoreGroups: true
-    priority: 4
-    
-- type: entity
-  name: Спавнер метки-цели
-  suffix: Оборона, Альфа, приоритет 4
-  id: SpawnerCrutchObjectiveAlfaFour
-  parent: SpawnerCrutchObjectiveAlfaOne
-  components:
-  - type: TimedSpawner
-    prototypes:
-    - CrutchObjectiveAlfaFour
-    chance: 1
-    intervalSeconds: 180
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 1
+    priority: -80
+    maxRange: 45
 #------------------------------------------------------------Сервера связи------------------------------------------------------------------   
 #-----------------------------------------Умпорский-------------------------------
 - type: entity
