@@ -65,7 +65,7 @@
     journeyGroup: Alpha
     ignoreGroups: true
     priority: 1
-    maxRange: 25
+    maxRange: 35
   - type: NpcFactionMember
     factions:
     - DefenseStructureBase
@@ -88,7 +88,7 @@
     journeyGroup: Alpha
     ignoreGroups: false
     priority: 2
-    maxRange: 20
+    maxRange: 40
   - type: NpcFactionMember
     factions:
     - DefenseStructureBase
