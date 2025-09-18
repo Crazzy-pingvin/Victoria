@@ -978,7 +978,7 @@
   id: USSPRadioLaser
   damage:
     types:
-      Radiation: 3
+      Radiation: 6
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_xray
@@ -1213,10 +1213,10 @@
       - USSPBatteryRif
   - type: ProjectileBatteryAmmoProvider
     proto: USSPCartridgeOliveSnipe
-    fireCost: 60
+    fireCost: 90
   - type: Battery
-    maxCharge: 720
-    startingCharge: 720
+    maxCharge: 1080
+    startingCharge: 1080
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -1240,8 +1240,8 @@
     tags:
       - USSPBatteryAuto
   - type: Battery
-    maxCharge: 1800
-    startingCharge: 1800
+    maxCharge: 2700
+    startingCharge: 2700
 #----------------------------------Винтовка-Снайперская----------------------------
 - type: Tag
   id: USSPBatteryRifSnipe
@@ -1262,10 +1262,10 @@
       - USSPBatteryRifSnipe
   - type: ProjectileBatteryAmmoProvider
     proto: USSPCartridgeWedgeSnipe
-    fireCost: 120
+    fireCost: 180
   - type: Battery
-    maxCharge: 1200
-    startingCharge: 1200
+    maxCharge: 1800
+    startingCharge: 1800
 #----------------------------------Дробовик----------------------------
 - type: Tag
   id: USSPBatteryShot
@@ -1286,10 +1286,10 @@
       - USSPBatteryShot
   - type: ProjectileBatteryAmmoProvider
     proto: USSPCartridgeWedgeShotgan
-    fireCost: 70
+    fireCost: 100
   - type: Battery
-    maxCharge: 700
-    startingCharge: 700
+    maxCharge: 1000
+    startingCharge: 1000
 #----------------------------------Пулемёт----------------------------
 - type: Tag
   id: USSPBatteryLMG
@@ -1309,8 +1309,8 @@
     tags:
       - USSPBatteryLMG
   - type: Battery
-    maxCharge: 5400
-    startingCharge: 5400
+    maxCharge: 8100
+    startingCharge: 8100
 #----------------------------------Притяжитель---------------------------
 - type: Tag
   id: USSPBatterySing
@@ -1331,10 +1331,10 @@
       - USSPBatterySing
   - type: ProjectileBatteryAmmoProvider
     proto: USSPCartridgeSing
-    fireCost: 250
+    fireCost: 350
   - type: Battery
-    maxCharge: 1250
-    startingCharge: 1250
+    maxCharge: 1750
+    startingCharge: 1750
 #----------------------------------Излучатель---------------------------
 - type: Tag
   id: USSPBatteryRadio
@@ -1359,10 +1359,10 @@
   - type: Riggable
   - type: HitscanBatteryAmmoProvider
     proto: USSPRadioLaser
-    fireCost: 6
+    fireCost: 9
   - type: Battery
-    maxCharge: 3000
-    startingCharge: 3000
+    maxCharge: 4500
+    startingCharge: 4500
   - type: PowerCell
 #---------------------------------------------Стволы------------------------------------
 #----------------------------------Пистолет----------------------------
