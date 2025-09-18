@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/16/2025 18:07:46
-  entityCount: 4501
+  time: 09/17/2025 19:31:08
+  entityCount: 4502
 maps:
 - 1
 grids:
@@ -21703,6 +21703,29 @@ entities:
     components:
     - type: Transform
       pos: 17.5,3.5
+      parent: 2
+- proto: WaypointOne
+  entities:
+  - uid: 4362
+    components:
+    - type: Transform
+      pos: 59.023216,0.48397708
+      parent: 2
+    - type: JourneyTarget
+      maxRange: 65
+- proto: WaypointThree
+  entities:
+  - uid: 4495
+    components:
+    - type: Transform
+      pos: 11.673625,0.5673106
+      parent: 2
+- proto: WaypointTwo
+  entities:
+  - uid: 4491
+    components:
+    - type: Transform
+      pos: 36.483902,0.44231057
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:

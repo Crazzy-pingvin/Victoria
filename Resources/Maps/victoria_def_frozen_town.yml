@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Map
+  engineVersion: 247.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 09/18/2025 15:32:11
+  entityCount: 5719
+maps:
+- 1
+grids:
+- 2
+orphans: []
+nullspace: []
 tilemap:
   0: Space
   2: DefFloorAstroIce
@@ -28,7 +39,6 @@ entities:
     - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
-    - type: LoadedMap
     - type: MapAtmosphere
       space: False
       mixture:
@@ -1905,6 +1915,33 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -14.5,5.5
+      parent: 2
+- proto: Aluminium1
+  entities:
+  - uid: 5681
+    components:
+    - type: Transform
+      pos: 0.7892276,-10.765302
+      parent: 2
+  - uid: 5682
+    components:
+    - type: Transform
+      pos: 0.72015077,-10.696272
+      parent: 2
+  - uid: 5683
+    components:
+    - type: Transform
+      pos: 0.6723286,-10.632552
+      parent: 2
+  - uid: 5684
+    components:
+    - type: Transform
+      pos: 0.52354777,-10.733441
+      parent: 2
+  - uid: 5685
+    components:
+    - type: Transform
+      pos: 0.6351333,-10.791851
       parent: 2
 - proto: AmeController
   entities:
@@ -7291,6 +7328,20 @@ entities:
     - type: Transform
       pos: 37.5,4.5
       parent: 2
+- proto: ClothingShoesBootsCombat
+  entities:
+  - uid: 5719
+    components:
+    - type: Transform
+      pos: 66.41971,17.823095
+      parent: 2
+- proto: CombatKnife
+  entities:
+  - uid: 5718
+    components:
+    - type: Transform
+      pos: 67.05335,17.811148
+      parent: 2
 - proto: ComputerComms
   entities:
   - uid: 78
@@ -8486,6 +8537,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,-8.5
       parent: 2
+- proto: HeadSkeleton
+  entities:
+  - uid: 5686
+    components:
+    - type: Transform
+      pos: 67.02682,18.825443
+      parent: 2
 - proto: HydroponicsToolClippers
   entities:
   - uid: 4780
@@ -8808,6 +8866,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.576474,0.1979293
       parent: 2
+- proto: Lantern
+  entities:
+  - uid: 5717
+    components:
+    - type: Transform
+      rot: 2.443460952792061 rad
+      pos: 66.234955,16
+      parent: 2
 - proto: LockerFreezer
   entities:
   - uid: 4937
@@ -8965,6 +9031,23 @@ entities:
     - type: Transform
       pos: 2.5,-10.5
       parent: 2
+- proto: Paper
+  entities:
+  - uid: 5687
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 65.659935,-2.3151119
+      parent: 2
+    - type: Paper
+      content: >-
+        МАРТИН, чёрт возьми, хватит лезть в пещеру!!!!
+
+        Я сам чуть не помер, когда вытаскивал себя на своём горбу под плевками кислоты.
+
+        Ещё раз полезешь в этот гадюшник- вытаскивать не будем.
+
+        Без уважения, Фредерик.
 - proto: PaperBin20
   entities:
   - uid: 4866
@@ -26005,6 +26088,31 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-13.5
+      parent: 2
+- proto: WaypointOne
+  entities:
+  - uid: 5678
+    components:
+    - type: Transform
+      pos: 65.5,0.5
+      parent: 2
+    - type: JourneyTarget
+      maxRange: 68
+- proto: WaypointThree
+  entities:
+  - uid: 5680
+    components:
+    - type: Transform
+      pos: 18.5,0.5
+      parent: 2
+    - type: JourneyTarget
+      maxRange: 50
+- proto: WaypointTwo
+  entities:
+  - uid: 5679
+    components:
+    - type: Transform
+      pos: 43.5,0.5
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:

@@ -133,6 +133,7 @@
 #------------------------------------------------------------Вэйпоинты----------------------------------------------------------------------
 - type: entity
   id: WaypointBase
+  parent: MarkerBase
   name: промежуточная точка
   description: Неестественный свет, указывающий на внимание со стороны Улья.
   abstract: true
@@ -140,7 +141,6 @@
   - type: Sprite
     sprite: deprecated.rsi
     state: deprecated
-    drawdepth: Overdoors
   - type: JourneyTarget
     journeyGroup: Alpha
     ignoreGroups: false
