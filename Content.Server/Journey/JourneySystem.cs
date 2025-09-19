@@ -16,7 +16,7 @@ public sealed class JourneySystem : EntitySystem
     [Dependency] private readonly NPCSystem _npc = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+    //[Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -32,11 +32,11 @@ public sealed class JourneySystem : EntitySystem
 
             if (_timing.CurTime < comp_seek.NextCheck)
                 continue;
-            _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"{ToPrettyString(uid)} ищет путь...");
+            //_adminLogger.Add(LogType.Action, LogImpact.Extreme, $"{ToPrettyString(uid)} ищет путь...");
             comp_seek.NextCheck = _timing.CurTime + TimeSpan.FromSeconds(3);
 
             var targets = EntityQueryEnumerator<JourneyTargetComponent>();
-            _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"'сырые' цели: {targets}");
+            //_adminLogger.Add(LogType.Action, LogImpact.Extreme, $"'сырые' цели: {targets}");
             var targets_approved = new List<JourneyTargetComponent>();
             JourneyTargetComponent fav_target = new JourneyTargetComponent();
 
@@ -48,7 +48,7 @@ public sealed class JourneySystem : EntitySystem
                     targets_approved.Add(comp_targ);
             };
 
-            _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"фильтрованные цели: {targets_approved}");
+            //_adminLogger.Add(LogType.Action, LogImpact.Extreme, $"фильтрованные цели: {targets_approved}");
 
 
             foreach (JourneyTargetComponent cycle_targ in targets_approved)
@@ -59,13 +59,13 @@ public sealed class JourneySystem : EntitySystem
 
             if (fav_target.Priority == -999)
             {
-                _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"Цель не найдена. Увынск.");
+                //_adminLogger.Add(LogType.Action, LogImpact.Extreme, $"Цель не найдена. Увынск.");
                 return;
             }
             ;
 
             _npc.SetBlackboard(uid, NPCBlackboard.FollowTarget, new EntityCoordinates(fav_target.Owner, Vector2.Zero));
-            _adminLogger.Add(LogType.Action, LogImpact.Extreme, $"цель найдена: {ToPrettyString( fav_target.Owner )}");
+            //_adminLogger.Add(LogType.Action, LogImpact.Extreme, $"цель найдена: {ToPrettyString( fav_target.Owner )}");
         }
     }
 }

@@ -146,9 +146,6 @@
     ignoreGroups: false
     priority: -100
     maxRange: 55
-  - type: PointLight
-    color: "#00f0fb"
-    radius: 55
 
 - type: entity
   id: WaypointOne
