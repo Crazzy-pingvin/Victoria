@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Map
+  engineVersion: 247.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 09/17/2025 19:31:08
+  entityCount: 4502
+maps:
+- 1
+grids:
+- 2
+orphans: []
+nullspace: []
 tilemap:
   0: Space
   3: DefFloorAsphalt
@@ -46,7 +57,6 @@ entities:
     - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
-    - type: LoadedMap
     - type: MapAtmosphere
       space: False
       mixture:
@@ -10761,33 +10771,6 @@ entities:
     components:
     - type: Transform
       pos: 22.5,7.5
-      parent: 2
-- proto: SpawnerCrutchObjectiveAlfaOne
-  entities:
-  - uid: 4362
-    components:
-    - type: Transform
-      pos: 58.5,0.5
-      parent: 2
-  - uid: 4491
-    components:
-    - type: Transform
-      pos: 7.5,-8.5
-      parent: 2
-  - uid: 4495
-    components:
-    - type: Transform
-      pos: 14.5,0.5
-      parent: 2
-  - uid: 4496
-    components:
-    - type: Transform
-      pos: 35.5,0.5
-      parent: 2
-  - uid: 4497
-    components:
-    - type: Transform
-      pos: 7.5,7.5
       parent: 2
 - proto: SpawnPaperMapDesrtPlatform
   entities:
@@ -21720,6 +21703,29 @@ entities:
     components:
     - type: Transform
       pos: 17.5,3.5
+      parent: 2
+- proto: WaypointOne
+  entities:
+  - uid: 4362
+    components:
+    - type: Transform
+      pos: 59.023216,0.48397708
+      parent: 2
+    - type: JourneyTarget
+      maxRange: 65
+- proto: WaypointThree
+  entities:
+  - uid: 4495
+    components:
+    - type: Transform
+      pos: 11.673625,0.5673106
+      parent: 2
+- proto: WaypointTwo
+  entities:
+  - uid: 4491
+    components:
+    - type: Transform
+      pos: 36.483902,0.44231057
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:

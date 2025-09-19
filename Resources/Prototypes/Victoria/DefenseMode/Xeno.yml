@@ -277,10 +277,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -372,10 +368,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -432,10 +424,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -496,10 +484,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        10
-      FollowRange: !type:Single
-        16
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -560,10 +544,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -699,11 +679,6 @@
         true
       NavSmash: !type:Bool
         true
-
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -840,10 +815,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -899,10 +870,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: MobThresholds
     thresholds:
       0: Alive

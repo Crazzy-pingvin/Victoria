@@ -11,5 +11,8 @@ namespace Content.Server.Journey
 
         [DataField("journeyGroup")]
         public string JourneyGroup = "Alpha";
+
+        [DataField("maxRange")]
+        public float MaxRange = 10;
     }
 }

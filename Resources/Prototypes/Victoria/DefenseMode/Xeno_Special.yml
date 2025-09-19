@@ -119,10 +119,6 @@
         true
       NavSmash: !type:Bool
         true
-      FollowCloseRange: !type:Single
-        12
-      FollowRange: !type:Single
-        18
   - type: Butcherable
     butcheringType: Knife
     spawned:
