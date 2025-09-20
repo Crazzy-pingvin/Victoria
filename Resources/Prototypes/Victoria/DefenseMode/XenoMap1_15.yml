@@ -1,0 +1,671 @@
+#------------------------------------------Спавнеры 5 фазы------------------------
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  id: SpawnMobXenoDroneDefAlfaPeriod5Map1D1
+  parent: SpawnMobXenoDroneDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 940
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  id: SpawnMobXenoDefAlfaPeriod5Map1DB1B2
+  parent: SpawnMobXenoDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 940
+
+- type: entity
+  suffix: Оборона, Бета, Карта 2-10, Фаза 5
+  id: SpawnMobXenoDroneDefBetaPeriod5Map1D2
+  parent: SpawnMobXenoDroneDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 940
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  id: SpawnMobXenoSpitterDefAlfaPeriod5Map1Pl1
+  parent: SpawnMobXenoSpitterDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 940
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  id: SpawnMobXenoRunnerDefBetaPeriod5Map1Be1
+  parent: SpawnMobXenoRunnerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 730
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  id: SpawnMobXenoRounyDefAlfaPeriod5Map1Ru1
+  parent: SpawnMobXenoRounyDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 730
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  id: SpawnMobXenoRavagerDefAlfaPeriod5Map1Rz1
+  parent: SpawnMobXenoRavagerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 490
+    
+- type: entity
+  suffix: Оборона, Бета, Карта 2-10, Фаза 4
+  id: SpawnMobXenoRunnerDefBetaPeriod5Map1Be2
+  parent: SpawnMobXenoRunnerDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 490
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr1
+  parent: SpawnMobXenoPraetorianDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 250
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr2
+  parent: SpawnMobXenoPraetorianDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 240
+  - type: TimedDespawn
+    lifetime: 250
+#------------------------------------------Спавнеры 4 фазы------------------------
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoDroneDefAlfaPeriod4Map1D1
+  parent: SpawnMobXenoDroneDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 8
+    maximumEntitiesSpawned: 10
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoDroneDefAlfaPeriod5Map1D1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoDefAlfaPeriod4Map1DB1B2
+  parent: SpawnMobXenoDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 4
+    maximumEntitiesSpawned: 8
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod5Map1DB1B2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoDroneDefBetaPeriod4Map1D2
+  parent: SpawnMobXenoDroneDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 4
+    maximumEntitiesSpawned: 8
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoDroneDefBetaPeriod5Map1D2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoSpitterDefAlfaPeriod4Map1Pl1
+  parent: SpawnMobXenoSpitterDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 8
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoSpitterDefAlfaPeriod5Map1Pl1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoRunnerDefAlfaPeriod4Map1Be1
+  parent: SpawnMobXenoRunnerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoRunnerDefAlfaPeriod5Map1Be1
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoRounyDefAlfaPeriod4Map1Ru1
+  parent: SpawnMobXenoRounyDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoRounyDefAlfaPeriod5Map1Ru1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoRavagerDefAlfaPeriod4Map1Rz1
+  parent: SpawnMobXenoRavagerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 2
+    maximumEntitiesSpawned: 6
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoRavagerDefAlfaPeriod5Map1Rz1
+    
+- type: entity
+  suffix: Оборона, Бета, Карта 2-10, Фаза 4
+  id: SpawnMobXenoRunnerDefBetaPeriod4Map1Be2
+  parent: SpawnMobXenoRunnerDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoRunnerDefBetaPeriod5Map1Be2
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr1
+  parent: SpawnMobXenoPraetorianDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+    minimumEntitiesSpawned: 2
+    maximumEntitiesSpawned: 6
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr2
+  parent: SpawnMobXenoPraetorianDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 310
+    prob: 1
+    entity: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr2
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  id: SpawnMobXenoQueenDefAlfaPeriod3Map1Cor1
+  parent: SpawnMobXenoQueenDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: TimedDespawn
+    lifetime: 310
+#------------------------------------------Спавнеры 3 фазы------------------------
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoDroneDefAlfaPeriod3Map1D1
+  parent: SpawnMobXenoDroneDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoDroneDefAlfaPeriod4Map1D1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoDefAlfaPeriod3Map1DB1B2
+  parent: SpawnMobXenoDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod4Map1DB1B2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoDroneDefBetaPeriod3Map1D2
+  parent: SpawnMobXenoDroneDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoDroneDefBetaPeriod4Map1D2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoSpitterDefAlfaPeriod3Map1Pl1
+  parent: SpawnMobXenoSpitterDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoSpitterDefAlfaPeriod4Map1Pl1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoRunnerDefAlfaPeriod3Map1Be1
+  parent: SpawnMobXenoRunnerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoRunnerDefAlfaPeriod4Map1Be1
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoRounyDefAlfaPeriod3Map1Ru1
+  parent: SpawnMobXenoRounyDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoRounyDefAlfaPeriod4Map1Ru1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoRavagerDefAlfaPeriod3Map1Rz1
+  parent: SpawnMobXenoRavagerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoRavagerDefAlfaPeriod4Map1Rz1
+    
+- type: entity
+  suffix: Оборона, Бета, Карта 2-10, Фаза 3
+  id: SpawnMobXenoRunnerDefBetaPeriod3Map1Be2
+  parent: SpawnMobXenoRunnerDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+    minimumEntitiesSpawned: 5
+    maximumEntitiesSpawned: 8
+  - type: RandomChangeTime
+    time: 1910
+    prob: 1
+    entity: SpawnMobXenoRunnerDefBetaPeriod4Map1Be2
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoPraetorianDefAlfaPeriod3Map1Pr1
+  parent: SpawnMobXenoPraetorianDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 1280
+    prob: 1
+    entity: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr1
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  id: SpawnMobXenoPraetorianDefAlfaPeriod3Map1Pr2
+  parent: SpawnMobXenoPraetorianDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 210
+  - type: RandomChangeTime
+    time: 650
+    prob: 1
+    entity: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr2
+#------------------------------------------Спавнеры 2 фазы------------------------
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoDroneDefAlfaPeriod2Map1D1
+  parent: SpawnMobXenoDroneDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 1625
+    prob: 1
+    entity: SpawnMobXenoDroneDefAlfaPeriod3Map1D1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoDefAlfaPeriod2Map1DB1B2
+  parent: SpawnMobXenoDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 1625
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod3Map1DB1B2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoDroneDefBetaPeriod2Map1D2
+  parent: SpawnMobXenoDroneDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 1625
+    prob: 1
+    entity: SpawnMobXenoDroneDefBetaPeriod3Map1D2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoSpitterDefAlfaPeriod2Map1Pl1
+  parent: SpawnMobXenoSpitterDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 1625
+    prob: 1
+    entity: SpawnMobXenoSpitterDefAlfaPeriod3Map1Pl1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoRunnerDefAlfaPeriod2Map1Be1
+  parent: SpawnMobXenoRunnerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 1625
+    prob: 1
+    entity: SpawnMobXenoRunnerDefAlfaPeriod3Map1Be1
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoRounyDefAlfaPeriod2Map1Ru1
+  parent: SpawnMobXenoRounyDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 1085
+    prob: 1
+    entity: SpawnMobXenoRounyDefAlfaPeriod3Map1Ru1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  id: SpawnMobXenoRavagerDefAlfaPeriod2Map1Rz1
+  parent: SpawnMobXenoRavagerDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 270
+  - type: RandomChangeTime
+    time: 545
+    prob: 1
+    entity: SpawnMobXenoRavagerDefAlfaPeriod3Map1Rz1
+#------------------------------------------Спавнеры 1 фазы------------------------
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  id: SpawnMobXenoDroneDefAlfaPeriod1Map1D1
+  parent: SpawnMobXenoDroneDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 2105
+    prob: 1
+    entity: SpawnMobXenoDroneDefAlfaPeriod2Map1D1
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  id: SpawnMobXenoDefAlfaPeriod1Map1DB1
+  parent: SpawnMobXenoDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 2105
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod2Map1DB1B2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  id: SpawnMobXenoDroneDefBetaPeriod1Map1D2
+  parent: SpawnMobXenoDroneDefBeta
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 1505
+    prob: 1
+    entity: SpawnMobXenoDroneDefBetaPeriod2Map1D2
+    
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  id: SpawnMobXenoDefAlfaPeriod1Map1DB2
+  parent: SpawnMobXenoDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 905
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod2Map1DB1B2
+
+- type: entity
+  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  id: SpawnMobXenoSpitterDefAlfaPeriod1Map1Pl1
+  parent: SpawnMobXenoSpitterDefAlfa
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedSpawner
+    intervalSeconds: 300
+  - type: RandomChangeTime
+    time: 605
+    prob: 1
+    entity: SpawnMobXenoSpitterDefAlfaPeriod2Map1Pl1
+#------------------------------------------Яйца------------------------
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1D1
+  suffix: Оборона, Д1
+  components:
+  - type: RandomChangeTime
+    time: 1500
+    prob: 1
+    entity: SpawnMobXenoDroneDefAlfaPeriod1Map1D1
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1B1
+  suffix: Оборона, Бу1
+  components:
+  - type: RandomChangeTime
+    time: 1500
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod1Map1DB1
+
+- type: entity
+  parent: XenoEgg
+  id: XenoEggBetaMap1D2
+  suffix: Оборона, Д2
+  components:
+  - type: RandomChangeTime
+    time: 2100
+    prob: 1
+    entity: SpawnMobXenoDroneDefBetaPeriod1Map1D2
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1B2
+  suffix: Оборона, Бу2
+  components:
+  - type: RandomChangeTime
+    time: 2700
+    prob: 1
+    entity: SpawnMobXenoDefAlfaPeriod1Map1DB2
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Pl1
+  suffix: Оборона, Пл1
+  components:
+  - type: RandomChangeTime
+    time: 3000
+    prob: 1
+    entity: SpawnMobXenoSpitterDefAlfaPeriod1Map1Pl1
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Be1
+  suffix: Оборона, Бе1
+  components:
+  - type: RandomChangeTime
+    time: 3605
+    prob: 1
+    entity: SpawnMobXenoRunnerDefAlfaPeriod2Map1Be1
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Ru1
+  suffix: Оборона, Ру1
+  components:
+  - type: RandomChangeTime
+    time: 4145
+    prob: 1
+    entity: SpawnMobXenoRounyDefAlfaPeriod2Map1Ru1
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Rz1
+  suffix: Оборона, Рз1
+  components:
+  - type: RandomChangeTime
+    time: 4685
+    prob: 1
+    entity: SpawnMobXenoRavagerDefAlfaPeriod2Map1Rz1
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggBetaMap1Be2
+  suffix: Оборона, Бе2
+  components:
+  - type: RandomChangeTime
+    time: 5230
+    prob: 1
+    entity: SpawnMobXenoRunnerDefBetaPeriod3Map1Be2
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Pr1
+  suffix: Оборона, Пр1
+  components:
+  - type: RandomChangeTime
+    time: 5860
+    prob: 1
+    entity: SpawnMobXenoPraetorianDefAlfaPeriod3Map1Pr1
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Pr2
+  suffix: Оборона, Пр2
+  components:
+  - type: RandomChangeTime
+    time: 6490
+    prob: 1
+    entity: SpawnMobXenoPraetorianDefAlfaPeriod3Map1Pr2
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap1Cor1
+  suffix: Оборона, Кор1
+  components:
+  - type: RandomChangeTime
+    time: 7140
+    prob: 1
+    entity: SpawnMobXenoQueenDefAlfaPeriod3Map1Cor1

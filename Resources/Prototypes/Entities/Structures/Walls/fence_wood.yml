@@ -46,6 +46,15 @@
   - type: Climbable
     delay: 5.0
   - type: Appearance
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseFenceWood

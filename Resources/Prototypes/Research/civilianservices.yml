@@ -53,6 +53,7 @@
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
   - TelecomServerCircuitboard
+  - HolopadMachineCircuitboard
 
 - type: technology
   id: AdvancedEntertainment
@@ -153,7 +154,7 @@
   cost: 10000
   recipeUnlocks:
   - AdvMopItem
-  - BluespaceSprayBottle
+  - MegaSprayBottle
   - TrashBagBlue
   - BlueSpaceLightReplacer
 

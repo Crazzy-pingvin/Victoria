@@ -28,8 +28,8 @@
     Plastic: 100
 
 - type: latheRecipe
-  id: BluespaceSprayBottle
-  result: BluespaceSprayBottle
+  id: MegaSprayBottle
+  result: MegaSprayBottle
   completetime: 3
   materials:
     Plastic: 250

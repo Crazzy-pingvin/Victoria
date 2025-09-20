@@ -20,7 +20,7 @@
   - type: MachineBoard
     prototype: AutolatheHyperConvection
     stackRequirements:
-      IndustrialMatterBin: 3
+      MatterBin: 3
       Glass: 1
     tagRequirements:
       Igniter:
@@ -52,7 +52,7 @@
   - type: MachineBoard
     prototype: ProtolatheHyperConvection
     stackRequirements:
-      IndustrialMatterBin: 2
+      MatterBin: 2
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -153,7 +153,7 @@
   - type: MachineBoard
     prototype: CircuitImprinterHyperConvection
     stackRequirements:
-      IndustrialMatterBin: 2
+      MatterBin: 2
     tagRequirements:
       GlassBeaker:
         amount: 2
@@ -401,8 +401,8 @@
   - type: MachineBoard
     prototype: GasThermoMachineHellfireFreezer
     stackRequirements:
-      IndustrialMatterBin: 2
-      IndustrialCapacitor: 2
+      MatterBin: 2
+      Capacitor: 2
       Plasma: 1
   - type: Construction
     deconstructionTarget: null
@@ -420,8 +420,8 @@
   - type: MachineBoard
     prototype: GasThermoMachineHellfireHeater
     stackRequirements:
-      IndustrialMatterBin: 2
-      IndustrialCapacitor: 2
+      MatterBin: 2
+      Capacitor: 2
       Plasma: 1
   - type: Construction
     graph: ThermomachineBoard
@@ -738,7 +738,7 @@
   - type: MachineBoard
     prototype: TurboItemRecharger
     stackRequirements:
-      IndustrialCapacitor: 2
+      Capacitor: 2
       CableMV: 5
   - type: PhysicalComposition
     materialComposition:
@@ -757,7 +757,7 @@
   - type: MachineBoard
     prototype: TurboBatteryRecharger
     stackRequirements:
-      IndustrialCapacitor: 2
+      Capacitor: 2
       CableMV: 5
   - type: PhysicalComposition
     materialComposition:
@@ -1013,8 +1013,8 @@
   - type: MachineBoard
     prototype: OreProcessorIndustrial
     stackRequirements:
-      IndustrialMatterBin: 1
-      IndustrialManipulator: 3
+      MatterBin: 1
+      Manipulator: 3
       Glass: 1
 
 - type: entity
@@ -1058,7 +1058,7 @@
     - type: MachineBoard
       prototype: FatExtractor
       stackRequirements:
-        IndustrialManipulator: 1
+        Manipulator: 1
       componentRequirements:
         Utensil:
           amount: 1
@@ -1073,8 +1073,8 @@
   - type: MachineBoard
     prototype: MachineFlatpacker
     stackRequirements:
-      IndustrialManipulator: 2
-      IndustrialMatterBin: 1
+      Manipulator: 2
+      MatterBin: 1
       Steel: 1
       BSModuleStack: 1
 
@@ -1269,8 +1269,8 @@
   - type: MachineBoard
     prototype: ReagentGrinderIndustrial
     stackRequirements:
-      IndustrialMatterBin: 1
-      IndustrialManipulator: 3
+      MatterBin: 1
+      Manipulator: 3
       Glass: 1
 
 - type: entity
@@ -1304,7 +1304,6 @@
   id: CargoTechFabCircuitboard
   parent: BaseMachineCircuitboard
   name: грузовой ТехФаб (машинная плата)
-  description: Печатная плата грузового ТехФаба.
   components:
     - type: Sprite
       state: supply
@@ -1322,7 +1321,6 @@
   id: EngineeringTechFabCircuitboard
   parent: BaseMachineCircuitboard
   name: инженерный ТехФаб (машинная плата)
-  description: Печатная плата инженерного ТехФаба.
   components:
     - type: Sprite
       state: engineering
@@ -1340,12 +1338,42 @@
   id: ServiceTechFabCircuitboard
   parent: BaseMachineCircuitboard
   name: сервисный ТехФаб (машинная плата)
-  description: Печатная плата сервисного ТехФаба.
   components:
     - type: Sprite
       state: service
     - type: MachineBoard
       prototype: ServiceTechFab
+      stackRequirements:
+        MatterBin: 2
+        Manipulator: 2
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+
+- type: entity
+  id: IndustrialVacuumMachineMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: промышленный вакуумный станок (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: IndustrialVacuumMachine
+      stackRequirements:
+        MatterBin: 2
+        Manipulator: 2
+      tagRequirements:
+        GlassBeaker:
+          amount: 2
+          defaultPrototype: Beaker
+
+
+- type: entity
+  id: IndustrialLithographMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: промышленный литограф (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: IndustrialLithograph
       stackRequirements:
         MatterBin: 2
         Manipulator: 2

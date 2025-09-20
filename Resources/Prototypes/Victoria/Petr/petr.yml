@@ -1265,6 +1265,7 @@
     sprite: Victoria/Petr/Equipment/petr_pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
     - state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
@@ -1284,10 +1285,14 @@
   components:
     - type: Pda
       id: PetrIDCardSold
-      state: pda
     - type: Icon
       sprite: Victoria/Petr/Equipment/petr_pda.rsi
       state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК командир----------       
 - type: entity
   parent: PetrPDA
@@ -1296,10 +1301,13 @@
   components:
     - type: Pda
       id: PetrIDCardOffi
-      state: pda
     - type: Icon
       sprite: Victoria/Petr/Equipment/petr_pda.rsi
-      state: pda      
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------------связь----------------------------------------  
 #-----------------------------канал----------------------------------------  
 - type: radioChannel

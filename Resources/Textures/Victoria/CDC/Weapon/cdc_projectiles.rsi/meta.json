@@ -19,6 +19,12 @@
     {
       "name": "base_hot-spent"
     },
+	{
+      "name": "base_light"
+    },
+    {
+      "name": "base_light-spent"
+    },
     {
       "name": "plasma_defocus"
     },
@@ -26,11 +32,18 @@
       "name": "plasma_defocus_hot"
     },
     {
+      "name": "plasma_defocus_light"
+    },
+    {
       "name": "plasma_base",
       "directions": 4
     },
     {
       "name": "plasma_hot",
+      "directions": 4
+    },
+    {
+      "name": "plasma_light",
       "directions": 4
     }
   ]

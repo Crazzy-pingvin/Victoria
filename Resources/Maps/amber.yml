@@ -61372,7 +61372,7 @@ entities:
     - type: Transform
       pos: 35.69605,1.7648865
       parent: 2
-- proto: DungeonMasterCircuitBoard
+- proto: GameMasterCircuitBoard
   entities:
   - uid: 16465
     components:
@@ -65307,7 +65307,7 @@ entities:
     - type: Transform
       pos: -40.5,-42.5
       parent: 2
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 17948
     components:
@@ -65325,7 +65325,7 @@ entities:
     - type: Transform
       pos: 28.488077,14.527548
       parent: 2
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 19549
     components:
@@ -65347,7 +65347,7 @@ entities:
     - type: Transform
       pos: 36.523605,12.614467
       parent: 2
-- proto: FloraRockSolid03
+- proto: FloraRockSolid
   entities:
   - uid: 19553
     components:
@@ -65364,7 +65364,7 @@ entities:
     - type: Transform
       pos: 9.461854,1.5700341
       parent: 2
-- proto: FloraTree04
+- proto: FloraTree
   entities:
   - uid: 1550
     components:
@@ -65372,7 +65372,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -15.792082,16.220356
       parent: 2
-- proto: FloraTree05
+- proto: FloraTree
   entities:
   - uid: 4620
     components:
@@ -65405,7 +65405,7 @@ entities:
     - type: Transform
       pos: -8.998787,-40.16732
       parent: 2
-- proto: FloraTreeLarge06
+- proto: FloraTreeLarge
   entities:
   - uid: 5376
     components:
@@ -96122,7 +96122,7 @@ entities:
         [color=#ff0000][head=2]                    PARENT FORM: PRF07     [/head]
                          -- This document is tied to Child Forms:--         [/color]
                                                 [head=3]NotATrasen[/ head]
-        [color=#1b67a5]█▄ █ ▀█▀ [head=3]Author: Command Secretary[/head] █ ▀█     █    
+        [color=#1b67a5]█▄ █ ▀█▀ [head=3]Author: Command Secretary[/head] █ ▀█     █
 
         (* = A Required Field)
 

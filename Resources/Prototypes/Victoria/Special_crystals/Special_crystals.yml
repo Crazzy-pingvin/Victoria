@@ -279,7 +279,7 @@
   id: CreateSapphireCrystall
   impact: Low
   quantized: true
-  conserveEnergy: false
+  minTemp: 660
   reactants:
     Aluminium:
       amount: 10
@@ -463,7 +463,6 @@
   id: TransmutatorMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: трансмутатор (машинная плата)
-  description: Электронная плата, необходимая для работы трансмутатора
   components:
     - type: MachineBoard
       prototype: Transmutator
@@ -479,7 +478,7 @@
   id: Transmutator
   parent: BaseLatheLube
   name: трансмутатор
-  description: Сложное научное оборудование для преобразования кристаллов
+  description: Сложное научное оборудование для преобразования кристаллов.
   components:
   - type: Sprite
     sprite: Victoria/Special_crystals/transmutator.rsi

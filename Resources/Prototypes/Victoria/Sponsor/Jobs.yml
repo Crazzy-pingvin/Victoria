@@ -22,6 +22,7 @@
   - Maintenance
   - Security
   - Brig
+  sponsorOnly: true
 #-----------------------------------лодауты-------------------------
 - type: loadout
   id: BrigmedicBackpack
@@ -588,7 +589,6 @@
   components:
   - type: Pda
     id: SSIDCard
-    state: pda
   - type: PdaBorderColor
     borderColor: "#7C5D00"
   - type: Sprite
@@ -776,6 +776,7 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  sponsorOnly: true
 #-----------------------------------спавн-поинт-------------------------
 - type: entity
   id: SpawnPointSSOfficer

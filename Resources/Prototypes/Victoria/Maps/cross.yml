@@ -62,3 +62,6 @@
             SecTeacher: [ 1, 1 ]
             SciTeacher: [ 1, 1 ]
             MedTeacher: [ 1, 1 ]
+            #sponsor
+            Brigmedic: [ 1, 1 ]
+            SSOfficer: [ 1, 1 ]

@@ -86,6 +86,18 @@
       SpaceGlue: 5 # no change from normal lathe, overheat!!!
 
 - type: entity
+  abstract: true
+  id: BaseIndustriallathe
+  components:
+  - type: Lathe
+    materialUseMultiplier: 0.5
+  - type: LatheIndustrialProducing
+  - type: ReagentSpeed
+    modifiers:
+      SpaceLube: 0.8 # being faster means less heat so lube needs to be nerfed
+      SpaceGlue: 5 # no change from normal lathe, overheat!!!
+
+- type: entity
   id: Autolathe
   parent: BaseLatheLube
   name: autolathe
@@ -137,6 +149,8 @@
       - HandheldGPSBasic
       - TRayScanner
       - AirTank
+      - DoubleEmergencyOxygenTank
+      - DoubleEmergencyNitrogenTank
       - GasAnalyzer
       - UtilityBelt
       - Pickaxe
@@ -190,6 +204,16 @@
       - SheetPaper
       - LargeBeaker
       - Dropper
+      - SignalTimerElectronics
+      - WallmountSubstationElectronics
+      - CellRechargerCircuitboard
+      - WeaponCapacitorRechargerCircuitboard
+      - FreezerElectronics
+      - MailingUnitElectronics
+      - IntercomElectronics
+      - DoorElectronics
+      - FirelockElectronics
+      - AirAlarmElectronics
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
@@ -293,7 +317,7 @@
       - AdvMopItem
       - WeaponSprayNozzle
       - ClothingBackpackWaterTank
-      - BluespaceSprayBottle
+      - MegaSprayBottle
       - TimerTrigger
       - ChemicalPayload
       - FlashPayload
@@ -329,9 +353,6 @@
       - JawsOfLife
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
-      - IndustrialCapacitorStockPart
-      - IndustrialManipulatorStockPart
-      - IndustrialMatterBinStockPart
       - SeismicCharge
       - Fulton
       - FultonBeacon
@@ -415,9 +436,6 @@
     idleState: icon
     runningState: building
     staticRecipes:
-    - SMESMachineCircuitboard
-    - SubstationMachineCircuitboard
-    - APCElectronics
     - ProtolatheMachineCircuitboard
     - AutolatheMachineCircuitboard
     - CircuitImprinterMachineCircuitboard
@@ -438,11 +456,13 @@
     - SodaDispenserMachineCircuitboard
     - SpaceHeaterMachineCircuitBoard
     - CutterMachineCircuitboard
-    - StationAnchorCircuitboard
     - SalvageMagnetMachineCircuitboard
     - VacuumMachineMachineCircuitboard
     - LithographMachineCircuitboard
     - ClothLatheMachineCircuitboard
+    - SubstationMachineCircuitboard
+    - SMESMachineCircuitboard
+    - APCElectronics
     dynamicRecipes:
       - ReliableSubstationMachineCircuitboard
       - ReliableSMESMachineCircuitboard
@@ -525,6 +545,9 @@
       - CargoTechFabCircuitboard
       - EngineeringTechFabCircuitboard
       - ServiceTechFabCircuitboard
+      - IndustrialVacuumMachineMachineCircuitboard
+      - IndustrialLithographMachineCircuitboard
+      - HolopadMachineCircuitboard
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ShuttleGunDusterCircuitboard
@@ -927,7 +950,7 @@
   id: CargoTechFab
   parent: BaseLatheLube
   name: грузовой ТехФаб
-  description: Печатает снаряжение для отдела снабжения
+  description: Печатает снаряжение для отдела снабжения.
   components:
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
@@ -1037,7 +1060,7 @@
   id: ServiceTechFab
   parent: BaseLatheLube
   name: сервисный ТехФаб
-  description: Печатает снаряжение для сервисного отдела. Похоже, некоторые рецепты недоступны. Может, что-то сможет их разблокировать?
+  description: Печатает снаряжение для сервисного отдела.
   components:
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
@@ -1108,7 +1131,7 @@
       - SynthesizerInstrument
       - ClothingShoesBootsSpeed
       - WeaponSprayNozzle
-      - BluespaceSprayBottle
+      - MegaSprayBottle
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - CluwneHorn
@@ -1307,8 +1330,28 @@
       - ClothingBackpack
       - ClothingBackpackSatchel
       # Victoria-Clothing-End
+      # Bedsheets
+      - BedsheetBlack
+      - BedsheetBlue
+      - BedsheetBrown
+      - BedsheetGreen
+      - BedsheetGrey
+      - BedsheetOrange
+      - BedsheetPurple
+      - BedsheetRed
+      - BedsheetWhite
+      - BedsheetYellow
+      - BedsheetClown
+      - BedsheetCosmos
+      - BedsheetIan
+      - BedsheetMedical
+      - BedsheetMime
+      - BedsheetNT
+      - BedsheetRainbow
+      - BedsheetBrigmedic
   - type: EmagLatheRecipes
     emagStaticRecipes:
+      # Clothing
       - ClothingHeadHatCentcomcap
       - ClothingHeadHatCentcom
       - ClothingUniformJumpsuitCentcomAgent
@@ -1331,6 +1374,8 @@
       - ClothingOuterWinterCentcom
       - ClothingOuterWinterSyndie
       - ClothingOuterWinterSyndieCap
+      # Bedsheets
+      - BedsheetSyndie
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1433,7 +1478,7 @@
       staticRecipes:
         - SheetSteel
         - SheetGlass1
-        - SheetRGlass
+        - SheetRGlassRaw
         - SheetPlasma1
         - SheetPGlass1
         - SheetRPGlass1
@@ -1464,7 +1509,7 @@
     staticRecipes:
       - SheetSteel
       - SheetGlass1
-      - SheetRGlass
+      - SheetRGlassRaw
       - SheetPlasma1
       - SheetPGlass1
       - SheetRPGlass1
@@ -1569,3 +1614,25 @@
         - Wooden
         - RawMaterial
         - Plastic
+
+- type: entity
+  id: IndustrialVacuumMachine
+  parent: [VacuumMachine, BaseIndustriallathe]
+  name: промышленный вакуумный станок
+  description: Экспериментальный вакуумный станок, создающий предметы гораздо более экономично, но при этом выбрасывает в атмосферу побочный продукт в виде диоксида углерода.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/industrial_vacuum_machine.rsi
+  - type: Machine
+    board: IndustrialVacuumMachineMachineCircuitboard
+
+- type: entity
+  id: IndustrialLithograph
+  parent: [Lithograph, BaseIndustriallathe]
+  name: промышленный литограф
+  description: Экспериментальный литограф, создающий предметы гораздо более экономично, но при этом выбрасывает в атмосферу побочный продукт в виде диоксида углерода.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/industrial_lithograph.rsi
+  - type: Machine
+    board: IndustrialLithographMachineCircuitboard

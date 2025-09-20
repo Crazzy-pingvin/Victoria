@@ -874,6 +874,7 @@
     sprite: Victoria/KMLG/Equipment/kmlg_pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
     - state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
@@ -893,7 +894,11 @@
   components:
     - type: Pda
       id: KMLGIDCardCt
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК старшего снабженца----------    
 - type: entity
   parent: KMLGPDA
@@ -902,7 +907,11 @@
   components:
     - type: Pda
       id: KMLGIDCardCc
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК ремонтника----------    
 - type: entity
   parent: KMLGPDA
@@ -911,7 +920,11 @@
   components:
     - type: Pda
       id: KMLGIDCardRm
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК инженер----------    
 - type: entity
   parent: KMLGPDA
@@ -920,7 +933,11 @@
   components:
     - type: Pda
       id: KMLGIDCardE
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК старшего инженера----------    
 - type: entity
   parent: KMLGPDA
@@ -929,7 +946,11 @@
   components:
     - type: Pda
       id: KMLGIDCardCe
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК охранникаа----------    
 - type: entity
   parent: KMLGPDA
@@ -938,7 +959,11 @@
   components:
     - type: Pda
       id: KMLGIDCardS
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК сержанта----------    
 - type: entity
   parent: KMLGPDA
@@ -947,7 +972,11 @@
   components:
     - type: Pda
       id: KMLGIDCardCs
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК сервисника----------    
 - type: entity
   parent: KMLGPDA
@@ -956,7 +985,11 @@
   components:
     - type: Pda
       id: KMLGIDCardSw
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------КПК пилота----------    
 - type: entity
   parent: KMLGPDA
@@ -965,7 +998,11 @@
   components:
     - type: Pda
       id: KMLGIDCardP
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
 #------------------------------------------связь----------------------------------------  
 #-----------------------------канал----------------------------------------  
 - type: radioChannel

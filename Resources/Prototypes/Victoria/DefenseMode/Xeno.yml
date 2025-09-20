@@ -1,0 +1,1294 @@
+#------------------------------------------Смола, яйца------------------------------
+- type: damageContainer
+  id: StructuralXeno
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+  - Structural
+
+- type: entity
+  id: XenoWeeds
+  name: Смола
+  description: Weird black weeds...
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        layer:
+        - SlipLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  #- type: XenoWeeds                      #!!!!!
+  - type: Clickable
+  # - type: EdgeSpreader
+    # id: XenoWeeds
+  - type: ActiveEdgeSpreader
+  - type: Sprite
+    sprite: Victoria/DefenseMode/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: weed_dir
+    mode: CardinalFlags
+  # - type: IconSmoothRandom
+    # overrides:
+    # - weed_dir0
+    # - weed_dir15
+  - type: RandomSprite
+    available:
+    - 0:
+        weed0: ""
+    - 0:
+        weed1: ""
+    - 0:
+        weed2: ""
+    - 0:
+        weed3: ""
+    - 0:
+        weed4: ""
+    - 0:
+        weed5: ""
+    - 0:
+        weed6: ""
+    - 0:
+        weed7: ""
+    - 0:
+        weed8: ""
+    - 0:
+        weed9: ""
+    - 0:
+        weed10: ""
+    - 0:
+        weed11: ""
+    - 0:
+        weed12: ""
+    - 0:
+        weed13: ""
+    - 0:
+        weed14: ""
+    - 0:
+        weed15: ""
+  - type: Damageable
+    damageContainer: StructuralXeno
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: XenoWeeds
+  id: XenoWeedsSource
+  name: Корень смолы
+  description: Кажется это... нечто вырабатывает смолу ксеноморфов.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+    - state: constructionnode
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 33
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseItem
+  id: XenoEgg
+  name: яйцо Ксеноморфов
+  description: Отсюда вылупляются молодые особи роя и улья. Они должны быть уничтожены...
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        layer:
+        - BulletImpassable
+        restitution: 0.3
+        friction: 0.2
+      xeno_egg:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        hard: false
+        mask:
+        - MobLayer
+  - type: CollisionWake
+    enabled: false
+  - type: Flammable
+    fireSpread: false
+    damage:
+      types:
+        Heat: 3
+  - type: Sprite
+    sprite: Victoria/DefenseMode/xeno_egg.rsi
+    drawdepth: SmallMobs
+    layers:
+    - state: egg_item
+      map: [ "enum.XenoEggLayers.Base" ]
+  - type: Item
+    size: Ginormous
+  - type: XenoEgg
+  - type: Damageable
+    damageContainer: StructuralXeno
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 60
+      behaviors:
+      - !type:BurnBodyBehavior { }
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.5
+#------------------------------------------Поведение ботов------------------------------
+- type: htnCompound
+  id: XenoCompoundDef
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FollowCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
+          
+- type: htnCompound
+  id: XenoCompoundDefRanged
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: InnateRangedCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FollowCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
+#------------------------------------------Сами боты------------------------------
+- type: entity
+  name: Бурильщик
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXeno
+  id: MobXenoDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: NpcFactionMember
+    factions:
+    - XenoTunnellerOnly
+  - type: Journey
+    journeyGroup: Alpha
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+        Caustic: 9
+        Structural: 40 
+  - type: Bloodstream
+    bloodMaxVolume: 25 
+  - type: TimedDespawn
+    lifetime: 600
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefAlfaAlter    
+
+- type: entity
+  name: Бурильщик
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Альтернативный
+  parent: MobXeno
+  id: MobXenoDefAlfaAlter
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+        Caustic: 9
+        Structural: 40 
+  - type: Bloodstream
+    bloodMaxVolume: 25 
+  - type: TimedDespawn
+    lifetime: 600
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefAlfa 
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoDefAlfa
+  id: MobXenoDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefBetaAlter
+    
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoDefAlfaAlter
+  id: MobXenoDefBetaAlter
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefBeta
+
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoDefAlfa
+  id: MobXenoDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefGammaAlter
+    
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoDefAlfaAlter
+  id: MobXenoDefGammaAlter
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefGamma
+
+- type: entity
+  name: Преторианец
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoPraetorian
+  id: MobXenoPraetorianDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 15
+        Blunt: 5
+        Piercing: 5
+        Poison: 5
+  - type: Bloodstream
+    bloodMaxVolume: 50
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoPraetorianDefAlfa
+  id: MobXenoPraetorianDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoPraetorianDefAlfa
+  id: MobXenoPraetorianDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+
+- type: entity
+  name: Дрон
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoDrone
+  id: MobXenoDroneDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      70: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 7
+        Blunt: 1
+        Piercing: 1
+        Poison: 1
+  - type: Bloodstream
+    bloodMaxVolume: 50
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoDroneDefAlfa
+  id: MobXenoDroneDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoDroneDefAlfa
+  id: MobXenoDroneDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+
+- type: entity
+  name: Королева
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoQueen
+  id: MobXenoQueenDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: NpcFactionMember
+    factions:
+    - XenoTunneller
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+    boss: true
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      700: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 20
+        Blunt: 10
+        Piercing: 10
+        Poison: 20
+        Structural: 30
+  - type: Bloodstream
+    bloodMaxVolume: 100
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoQueenDefAlfa
+  id: MobXenoQueenDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoQueenDefAlfa
+  id: MobXenoQueenDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+
+- type: entity
+  name: Разрушитель
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoRavager
+  id: MobXenoRavagerDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: NpcFactionMember
+    factions:
+    - XenoTunneller
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 15
+        Piercing: 5
+        Caustic: 5
+        Structural: 70
+  - type: Bloodstream
+    bloodMaxVolume: 50  
+  - type: TimedDespawn
+    lifetime: 600 
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRavagerDefAlfaAlter    
+    
+- type: entity
+  name: Разрушитель
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Альтернативный
+  parent: MobXenoRavager
+  id: MobXenoRavagerDefAlfaAlter
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 15
+        Piercing: 5
+        Caustic: 5
+        Structural: 70
+  - type: Bloodstream
+    bloodMaxVolume: 50  
+  - type: TimedDespawn
+    lifetime: 600
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRavagerDefAlfa    
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoRavagerDefAlfa
+  id: MobXenoRavagerDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRavagerDefBetaAlter
+
+- type: entity
+  suffix: Оборона, Бета, Альтернативный
+  parent: MobXenoRavagerDefAlfaAlter
+  id: MobXenoRavagerDefBetaAlter
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRavagerDefBeta
+        
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoRavagerDefAlfa
+  id: MobXenoRavagerDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRavagerDefGammaAlter
+    
+- type: entity
+  suffix: Оборона, Гамма, Альтернативный
+  parent: MobXenoRavagerDefAlfaAlter
+  id: MobXenoRavagerDefGammaAlter
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRavagerDefGamma
+
+- type: entity
+  name: Бегун
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoRunner
+  id: MobXenoRunnerDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 3
+        Piercing: 2
+        Poison: 10
+  - type: Bloodstream
+    bloodMaxVolume: 25
+  - type: TimedDespawn
+    lifetime: 600
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRunnerDefAlfaAlter
+
+- type: entity
+  name: Бегун
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Альтернативный
+  parent: MobXenoRunner
+  id: MobXenoRunnerDefAlfaAlter
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: NpcFactionMember
+    factions:
+    - XenoTunneller
+  - type: Journey
+    journeyGroup: Alpha
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 5
+        Caustic: 10
+        Structural: 30 
+  - type: Bloodstream
+    bloodMaxVolume: 25
+  - type: TimedDespawn
+    lifetime: 600
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRunnerDefAlfa
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoRunnerDefAlfa
+  id: MobXenoRunnerDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRunnerDefBetaAlter
+    
+- type: entity
+  suffix: Оборона, Бета, Альтернативный
+  parent: MobXenoRunnerDefAlfaAlter
+  id: MobXenoRunnerDefBetaAlter
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRunnerDefBeta
+        
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoRunnerDefAlfa
+  id: MobXenoRunnerDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRunnerDefGammaAlter
+    
+- type: entity
+  suffix: Оборона, Гамма, Альтернативный
+  parent: MobXenoRunnerDefAlfaAlter
+  id: MobXenoRunnerDefGammaAlter
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoRunnerDefGamma
+
+- type: entity
+  name: Руни
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoRouny
+  id: MobXenoRounyDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      70: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 3
+        Piercing: 2
+        Poison: 10
+  - type: Bloodstream
+    bloodMaxVolume: 25
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoRounyDefAlfa
+  id: MobXenoRounyDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoRounyDefAlfa
+  id: MobXenoRounyDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+
+- type: entity
+  name: Плевальщик
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа
+  parent: MobXenoSpitter
+  id: MobXenoSpitterDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDefRanged
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcidDef
+    capacity: 3
+    count: 3
+  - type: Bloodstream
+    bloodMaxVolume: 25
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  suffix: Оборона, Бета
+  parent: MobXenoSpitterDefAlfa
+  id: MobXenoSpitterDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+
+- type: entity
+  suffix: Оборона, Гамма
+  parent: MobXenoSpitterDefAlfa
+  id: MobXenoSpitterDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+#------------------------------------------Спавнеры ботов------------------------------
+#------------------------------------------Плевок плевальщика------------------------------
+- type: entity
+  id: BulletAcidDef
+  parent: BulletAcid
+  components:
+    - type: Projectile
+      damage:
+        types:
+          Caustic: 15
+#------------------------------------------Спавнеры ботов------------------------------   
+- type: entity
+  name: Ксеноспавнер Бурильщика
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/burrower.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 6
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoDefBeta
+  parent: SpawnMobXenoDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 6
+    
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoDefGamma
+  parent: SpawnMobXenoDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 6
+
+- type: entity
+  name: Ксеноспавнер Преторианца
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoPraetorianDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/praetorian.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoPraetorianDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoPraetorianDefBeta
+  parent: SpawnMobXenoPraetorianDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoPraetorianDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+    
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoPraetorianDefGamma
+  parent: SpawnMobXenoPraetorianDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoPraetorianDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+    
+- type: entity
+  name: Ксеноспавнер Дрона
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoDroneDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/drone.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoDroneDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 4
+    maximumEntitiesSpawned: 8
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoDroneDefBeta
+  parent: SpawnMobXenoDroneDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoDroneDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 4
+    maximumEntitiesSpawned: 8
+    
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoDroneDefGamma
+  parent: SpawnMobXenoDroneDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoDroneDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 4
+    maximumEntitiesSpawned: 8
+
+- type: entity
+  name: Ксеноспавнер Королевы
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoQueenDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/queen.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoQueenDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoQueenDefBeta
+  parent: SpawnMobXenoQueenDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoQueenDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoQueenDefGamma
+  parent: SpawnMobXenoQueenDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoQueenDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+
+- type: entity
+  name: Ксеноспавнер Разрушителя
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoRavagerDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/ravager.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRavagerDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoRavagerDefBeta
+  parent: SpawnMobXenoRavagerDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRavagerDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+    
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoRavagerDefGamma
+  parent: SpawnMobXenoRavagerDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRavagerDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+
+- type: entity
+  name: Ксеноспавнер Бегуна
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoRunnerDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/runner.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRunnerDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 5
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoRunnerDefBeta
+  parent: SpawnMobXenoRunnerDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRunnerDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 5
+    
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoRunnerDefGamma
+  parent: SpawnMobXenoRunnerDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRunnerDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 5
+
+- type: entity
+  name: Ксеноспавнер Руни
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoRounyDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/rouny.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRounyDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 5
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoRounyDefBeta
+  parent: SpawnMobXenoRounyDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRounyDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 5
+    
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoRounyDefGamma
+  parent: SpawnMobXenoRounyDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoRounyDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 3
+    maximumEntitiesSpawned: 5
+
+- type: entity
+  name: Ксеноспавнер Плевальщика
+  suffix: Оборона, Альфа
+  id: SpawnMobXenoSpitterDefAlfa
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Xenos/spitter.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoSpitterDefAlfa
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 2
+    maximumEntitiesSpawned: 4
+
+- type: entity
+  suffix: Оборона, Бета
+  id: SpawnMobXenoSpitterDefBeta
+  parent: SpawnMobXenoSpitterDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoSpitterDefBeta
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 2
+    maximumEntitiesSpawned: 4
+
+- type: entity
+  suffix: Оборона, Гамма
+  id: SpawnMobXenoSpitterDefGamma
+  parent: SpawnMobXenoSpitterDefAlfa
+  components:
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoSpitterDefGamma
+    chance: 1
+    intervalSeconds: 60
+    minimumEntitiesSpawned: 2
+    maximumEntitiesSpawned: 4

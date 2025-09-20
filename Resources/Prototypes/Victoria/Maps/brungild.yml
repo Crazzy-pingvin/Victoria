@@ -1,0 +1,67 @@
+- type: gameMap
+  id: VictoriaBrungild
+  mapName: 'Brungild Station'
+  mapPath: /Maps/victoria_brungild_station.yml
+  minPlayers: 0
+  maxPlayers: 30
+  stations:
+    VictoriaBrungild:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Брунгильда {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'TG'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
+        - type: StationJobs
+          availableJobs:
+            CargoTechnician: [ 2, 2 ]
+            Passenger: [ -1, -1 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            Chef: [ 1, 1 ]
+            Clown: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            Mime: [ 1, 1 ]
+            Captain: [ 1, 1 ]
+            IAA: [ 1, 1 ]
+            HeadOfPersonnel: [ 1, 1 ]
+            ChiefEngineer: [ 1, 1 ]
+            StationEngineer: [ 2, 2 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            MedicalDoctor: [ 2, 2 ]
+            Chemist: [ 1, 1 ]
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 1, 1 ]
+            HeadOfSecurity: [ 1, 1 ]
+            SecurityOfficer: [ 3, 3 ]
+            Chaplain: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Librarian: [ 1, 1 ]
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 2, 2 ]
+            Musician: [ 1, 1 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            TechnicalAssistant: [ 1, 1 ]
+            ResearchAssistant: [ 1, 1 ]
+            Reporter: [ 1, 1 ]
+            MedicalIntern: [ 1, 1 ]
+            ServiceWorker: [ 1, 1 ]
+            SecurityCadet: [ 2, 2 ]
+            Psychologist: [ 0, 0 ]
+            Detective: [ 1, 1 ]
+            Paramedic: [ 1, 1 ]
+            StationAi: [ 1, 1 ]
+            Borg: [ 1, 1 ]
+            Tailor: [ 1, 1 ]
+            #sponsor
+            Brigmedic: [ 1, 1 ]
+            SSOfficer: [ 1, 1 ]
+            #teacher
+            CargoTeacher: [ 1, 1 ]
+            EngTeacher: [ 1, 1 ]
+            SecTeacher: [ 1, 1 ]
+            SciTeacher: [ 1, 1 ]
+            MedTeacher: [ 1, 1 ]

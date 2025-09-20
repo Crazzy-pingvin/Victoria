@@ -1,0 +1,1803 @@
+#-----------------------------------------------------------------Спавнеры-----------------------------------------------------
+#------------------------------------------------Умпорские-------------------------------------------
+#-------------------------------------Специалист-----------------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Diona
+    - Vox
+  id: DefHumanoidSettingsUmporSPC
+  randomizeName: false
+  components:
+    - type: NpcFactionMember
+      factions:
+      - Umpor
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Умпорский специалист
+      description: Вы смелый и умелый боец армии Умпорсокой Федерации. Вы обучены пользоваться более сложной техникой и вам хватает находчивости быть более гибким в бою. Слушайтесь офицеров и приведите свою страну к победе!
+    - type: GhostTakeoverAvailable
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        120: Critical
+        210: Dead
+    - type: Stamina
+      critThreshold: 120
+    - type: Loadout
+      prototypes: [ GearDefUmporSPC ]
+    - type: RandomMetadata
+      nameSegments:
+      - UmporName-s
+      - UmporNameTwo
+
+- type: entity
+  name: Умпорский специалист Спавнер
+  id: DefSpawnerUmporSPC
+  suffix: Умпор, GHOST, Оборона
+  components:
+  # - type: NpcFactionMember
+    # factions:
+      # - Umpor
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: spc
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  # - type: RandomMetadata
+      # nameSegments:
+      # - UmporName-s
+      # - UmporNameTwo
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporSPC
+#-------------------------------------Доп Специалист-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUmporDSPC
+  parent: DefHumanoidSettingsUmporSPC
+  components:
+    - type: GhostRole
+      name: Умпорский специалист доп.отряда
+      description: Вы смелый и умелый боец армии Умпорсокой Федерации. Вы обучены пользоваться более сложной техникой и вам хватает находчивости быть более гибким в бою. Слушайтесь офицеров и приведите свою страну к победе!
+    - type: Loadout
+      prototypes: [ GearDefUmporSPCD ]
+
+- type: entity
+  name: Умпорский доп.специалист Спавнер
+  id: DefSpawnerUmporDSPC
+  suffix: Умпор, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dspc
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporDSPC
+#-------------------------------------Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUmporSol
+  parent: DefHumanoidSettingsUmporSPC
+  components:
+    - type: GhostRole
+      name: Умпорский солдат
+      description: Вы один из многих, да. Но вы основная боевая сила Умпорской Федерации и основная причина её побед. Будьте стойким, сильным и слушайтесь своего командира, а если его нет, то инженера отряда.
+    - type: Loadout
+      prototypes: [ GearDefUmporSol ]
+
+- type: entity
+  name: Умпорский солдат Спавнер
+  id: DefSpawnerUmporSol
+  suffix: Умпор, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporSol
+#-------------------------------------Доп Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUmporDSol
+  parent: DefHumanoidSettingsUmporSPC
+  components:
+    - type: GhostRole
+      name: Умпорский солдат
+      description: Вы не один из многих, Вы элитный солдат Умпорской Федерации и основная причина её побед. Будьте стойким, сильным и слушайтесь своего командира, а если его нет, то инженера отряда.
+    - type: Loadout
+      prototypes: [ GearDefUmporSolD ]
+
+- type: entity
+  name: Умпорский доп.солдат Спавнер
+  id: DefSpawnerUmporSolD
+  suffix: Умпор, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporDSol
+#-------------------------------------Инженер-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUmporEng
+  parent: DefHumanoidSettingsUmporSPC
+  components:
+    - type: GhostRole
+      name: Умпорский инженер
+      description: Вы может и не вполне систематически образованный, но умелый и находчивый армейский инженер Умпорской Федерации. Чините оборудование, возводите фортификации, будьте мастером на все руки. Выполняйте приказы командора и офицеров, а если они погибнут, возьмите командование на себя.
+    - type: Loadout
+      prototypes: [ GearDefUmporEng ]
+
+- type: entity
+  name: Умпорский инженер Спавнер
+  id: DefSpawnerUmporEng
+  suffix: Умпор, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: eng
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporEng
+#-------------------------------------Медик-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUmporMed
+  parent: DefHumanoidSettingsUmporSPC
+  components:
+    - type: GhostRole
+      name: Умпорский медик
+      description: Вы умелый армейский медик Умпорской Федерации. Вы и санитар, и врач и химик мало-мальский. Спасите своих сослуживцев от ран. Возглавьте их в вопросах здоровья. Напоминайте командиру, как будут лучше для отряда, но не нарушайте субординацию. Солдаты, как дети. Верните их домой живыми.
+    - type: Loadout
+      prototypes: [ GearDefUmporMed ]
+
+- type: entity
+  name: Умпорский медик Спавнер
+  id: DefSpawnerUmporMed
+  suffix: Умпор, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: med
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporMed
+#-------------------------------------Снабженец-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUmporLog
+  parent: DefHumanoidSettingsUmporSPC
+  components:
+    - type: GhostRole
+      name: Умпорский логист
+      description: Вы логист, снабженец или дорожник армии Умпорской Федерации. Важа задача "родить" всё, что нужно отряду буквально из ничего. Добывайте еду, собирайте припасы, производите боезапас. Сделайте свой отряд лучшим.
+    - type: Loadout
+      prototypes: [ GearDefUmporLog ]
+
+- type: entity
+  name: Умпорский логист Спавнер
+  id: DefSpawnerUmporLog
+  suffix: Умпор, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: car
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUmporLog
+#------------------------------------------------Миртанийские-------------------------------------------
+#-------------------------------------Специалист-----------------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Diona
+    - Arachnid
+    - Moth
+    - Reptilian
+    - SlimePerson
+    - Vox
+    - Vulpkanin
+  id: DefHumanoidSettingsMirtSPC
+  randomizeName: false
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Миртанийский специалист
+      description: Вы опытный и умелый специалист армии Империи Миртана! Будьте преданы своей стране, народу и Богу-Император! Слушайтесь командира, помогайте армии своим особым оснащением и защищайте свои земли и несите смерть всем врагам!
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ GearDefMirtSPC ]
+    - type: RandomMetadata
+      nameSegments:
+      - MirtName-t
+      - MirtNameTwo
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        110: Critical
+        220: Dead
+    - type: Stamina
+      critThreshold: 120
+    - type: NpcFactionMember
+      factions:
+        - Mirt
+
+- type: entity
+  name: Миртанский спецалист Спавнер
+  id: DefSpawnerMirtSPC
+  suffix: Миртан, GOST, Оборона
+  components:
+  # - type: NpcFactionMember
+    # factions:
+      # - Mirt
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: spc
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  # - type: RandomMetadata
+    # nameSegments:
+    # - MirtName-s
+    # - MirtNameTwo
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtSPC
+#-------------------------------------Доп Специалист-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsMirtDSPC
+  parent: DefHumanoidSettingsMirtSPC
+  components:
+    - type: GhostRole
+      name: Миртанийский специалист
+      description: Вы опытный и умелый специалист инквизиции Империи Миртана! Будьте преданы своей стране, народу и Богу-Император! Слушайтесь командира, помогайте армии своим особым оснащением и защищайте свои земли и несите смерть всем врагам!
+    - type: Loadout
+      prototypes: [ GearDefMirtSPCD ]
+
+- type: entity
+  name: Миртанский доп.спецалист Спавнер
+  id: DefSpawnerMirtDSPC
+  suffix: Миртан, GHOST, Оборона
+  parent: DefSpawnerMirtSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dspc
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtDSPC
+#-------------------------------------Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsMirtSol
+  parent: DefHumanoidSettingsMirtSPC
+  components:
+    - type: GhostRole
+      name: Миртанийский солдат
+      description: Вы солдат армии Империи Миртана! Будьте преданы своей стране, народу и Богу-Император! Слушайтесь командира, защищайте свои земли и несите смерть всем врагам!
+    - type: Loadout
+      prototypes: [ GearDefMirtSol ]
+    - type: RandomMetadata
+      nameSegments:
+      - MirtName-s
+      - MirtNameTwo
+
+- type: entity
+  name: Миртанский солдат Спавнер
+  id: DefSpawnerMirtSol
+  suffix: Миртан, GHOST, Оборона
+  parent: DefSpawnerMirtSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtSol
+#-------------------------------------Доп Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsMirtDSol
+  parent: DefHumanoidSettingsMirtSol
+  components:
+    - type: GhostRole
+      name: Миртанийский инквизитор
+      description: Вы солдат инквизиции Империи Миртана! Будьте преданы своей стране, народу и Богу-Император! Слушайтесь командира, защищайте свои земли и несите смерть всем врагам!
+    - type: Loadout
+      prototypes: [ GearDefMirtSolD ]
+
+- type: entity
+  name: Миртанский инквизитор Спавнер
+  id: DefSpawnerMirtSolD
+  suffix: Миртан, GHOST, Оборона
+  parent: DefSpawnerMirtSol
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dsol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtDSol
+#-------------------------------------Инженер-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsMirtEng
+  parent: DefHumanoidSettingsMirtSol
+  components:
+    - type: GhostRole
+      name: Миртанийский инженер
+      description: Хоть вы и проходили курс рукопашного и огнестрельного боя, но вы не совсем солдат Империи Миртана. Вы инженер, техник, фортификатор. Ваша задача обеспечивать структурную целостность обороны и её энергоснабжение.
+    - type: Loadout
+      prototypes: [ GearDefMirtEng ]
+
+- type: entity
+  name: Миртанский инженер Спавнер
+  id: DefSpawnerMirtEng
+  suffix: Миртан, GHOST, Оборона
+  parent: DefSpawnerMirtSol
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: eng
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtEng
+#-------------------------------------Медик-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsMirtMed
+  parent: DefHumanoidSettingsMirtSPC
+  components:
+    - type: GhostRole
+      name: Миртанийский медик
+      description: Хоть вы и проходили курс рукопашного и огнестрельного боя, но вы не совсем солдат Империи Миртана. Вы медик, которому выпал часть спасти ещё живых бойцов. а не собирать по кусам разорванных, как это обычно бывает.
+    - type: Loadout
+      prototypes: [ GearDefMirtMed ]
+
+- type: entity
+  name: Миртанский медик Спавнер
+  id: DefSpawnerMirtMed
+  suffix: Миртан, GHOST, Оборона
+  parent: DefSpawnerMirtSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: med
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtMed
+#-------------------------------------Снабженец-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsMirtLog
+  parent: DefHumanoidSettingsMirtSol
+  components:
+    - type: GhostRole
+      name: Миртанийский снабженец
+      description: Хоть вы и проходили курс рукопашного и огнестрельного боя, но вы не совсем солдат Империи Миртана. Вы снабженец. Боец, которому нужно обеспецить сражающихся на фронте или лечащих да чинящих в тылу всем необходимым снаряжением, материалами и боезапасом.
+    - type: Loadout
+      prototypes: [ GearDefMirtLog ]
+
+- type: entity
+  name: Миртанский снабженец Спавнер
+  id: DefSpawnerMirtLog
+  suffix: Миртан, GHOST, Оборона
+  parent: DefSpawnerMirtSol
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: car
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsMirtLog
+#------------------------------------------------Конгломератские-------------------------------------------
+#-------------------------------------Специалист-----------------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Diona
+    - Vox
+  id: DefHumanoidSettingsCDCSPC
+  randomizeName: false
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Специалист Конгломерата
+      description: Вы умелый и образованный специалист Халифатского Божественного Конгломерата! Будьте преданы своей стране, народу и Аллаху! Слушайтесь командира, защищайте свои земли и несите смерть всем врагам!
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ GearDefCDCSPC ]
+    - type: RandomMetadata
+      nameSegments:
+      - CDCName-s
+      - CDCName
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        105: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 130
+    - type: NpcFactionMember
+      factions:
+        - CDC
+  
+- type: entity
+  name: Конгломерат специалист Спавнер
+  id: DefSpawnerCDCSPC
+  suffix: Конгломерат, GOST, Оборона
+  components:
+  # - type: NpcFactionMember
+    # factions:
+      # - CDC
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: spc
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  # - type: RandomMetadata
+    # nameSegments:
+    # - CDCName-s
+    # - CDCName
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsCDCSPC
+#-------------------------------------Доп Специалист-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsCDCDSPC
+  parent: DefHumanoidSettingsCDCSPC
+  components:
+    - type: GhostRole
+      name: Доп.специалист Конгломерата
+      description: Вы умелый и образованный специалист Халифатского Божественного Конгломерата! Будьте преданы своей стране, народу и Аллаху! Слушайтесь командира, защищайте свои земли и несите смерть всем врагам!
+    - type: Loadout
+      prototypes: [ GearDefCDCSPCD ]
+
+- type: entity
+  name: Конгломерат доп.спецалист Спавнер
+  id: DefSpawnerCDCDSPC
+  suffix: Конгломерат, GOST, Оборона
+  parent: DefSpawnerCDCSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dspc
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsCDCDSPC
+#-------------------------------------Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsCDCSol
+  parent: DefHumanoidSettingsCDCSPC
+  components:
+    - type: GhostRole
+      name: Солдат Конгломерата
+      description: Вы солдат Халифатского Божественного Конгломерата! Будьте преданы своей стране, народу и Аллаху! Слушайтесь командира, защищайте свои земли и несите смерть всем врагам!
+    - type: Loadout
+      prototypes: [ GearDefCDCSol ]
+
+- type: entity
+  name: Конгломерат солдат Спавнер
+  id: DefSpawnerCDCSol
+  suffix: Конгломерат, GOST, Оборона
+  parent: DefSpawnerCDCSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsCDCSol
+#-------------------------------------Доп Солдат-----------------
+- type: entity
+  name: Конгломерат борг Спавнер
+  id: DefSpawnerCDCSolD
+  suffix: Конгломерат, GOST, Оборона
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: dsol
+  - type: ConditionalSpawner
+    prototypes:
+    - CDCBorg
+#-------------------------------------Инженер-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsCDCEng
+  parent: DefHumanoidSettingsCDCSPC
+  components:
+    - type: GhostRole
+      name: Инженер Конгломерата
+      description: Вы армейский техник Халифатского Божественного Конгломерата! Чините базу, ремонтируйте укрепления, помогайте боргам. Будьте преданы своей стране, народу и Аллаху!
+    - type: Loadout
+      prototypes: [ GearDefCDCEng ]
+
+- type: entity
+  name: Конгломерат инженер Спавнер
+  id: DefSpawnerCDCEng
+  suffix: Конгломерат, GOST, Оборона
+  parent: DefSpawnerCDCSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: eng
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsCDCEng
+#-------------------------------------Медик-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsCDCMed
+  parent: DefHumanoidSettingsCDCSPC
+  components:
+    - type: GhostRole
+      name: Медик Конгломерата
+      description: Вы армейский медик Халифатского Божественного Конгломерата! Видит Аллах в ваших силах поставить раненых бойцов на ноги! Помгайте раненым и провожайте в последний путь усопших.
+    - type: Loadout
+      prototypes: [ GearDefCDCMed ]
+
+- type: entity
+  name: Конгломерат медик Спавнер
+  id: DefSpawnerCDCMed
+  suffix: Конгломерат, GOST, Оборона
+  parent: DefSpawnerCDCSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: med
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsCDCMed
+#-------------------------------------Снабженец-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsCDCLog
+  parent: DefHumanoidSettingsCDCSPC
+  components:
+    - type: GhostRole
+      name: Снабженец Конгломерата
+      description: Вы снабженец армии Халифатского Божественного Конгломерата! Вашем товарищам нужны боеприпасы, оружие снаряжение, материалы и медикаменты. Достаньте их и доставьте на поле боя.
+    - type: Loadout
+      prototypes: [ GearDefCDCLog ]
+
+- type: entity
+  name: Конгломерат снабженец Спавнер
+  id: DefSpawnerCDCLog
+  suffix: Конгломерат, GOST, Оборона
+  parent: DefSpawnerCDCSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: med
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsCDCLog
+#------------------------------------------------Советские-------------------------------------------
+#-------------------------------------Специалист-----------------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Diona
+    - Vox
+  id: DefHumanoidSettingsUSSPSPC
+  randomizeName: false
+  components:
+    - type: NpcFactionMember
+      factions:
+      - USSP
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Советский специалист
+      description: Вы образованный, опытный и храбрый боец Советского Союза. Используйте своё особое вооружение, что выдала вам родина, чтобы победить врагов и привечти пролеториат к победе!
+    - type: GhostTakeoverAvailable
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 120
+    - type: Loadout
+      prototypes: [ GearDefUSSPSPC]
+    - type: RandomMetadata
+      nameSegments:
+      - USSPName-ems
+      - USSPName
+
+- type: entity
+  name: Советский специалист Спавнер
+  id: DefSpawnerUSSPSPC
+  suffix: СССП, GHOST, Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: spc
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPSPC
+#-------------------------------------Доп Специалист-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPDSPC
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Петрищевский специалист доп.отряда
+      description: Вы вечный революционер. Вас называют экстремистом, убийцей, мясником. Хотя для победы Коммунизма в галактике все средства хороши. Но сейчас давно потеряная Родина зовёт на помощь. Возьмите лучшее оружие, чтобы защитить её.
+    - type: Loadout
+      prototypes: [ GearDefPetrSPC ]
+    - type: RandomMetadata
+      nameSegments:
+      - PetrName-vet
+      - PetrNameTwo
+
+- type: entity
+  name: Петрищевский доп.специалист Спавнер
+  id: DefSpawnerUSSPDSPC
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dspc
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPDSPC
+#-------------------------------------Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPSol
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский солдат
+      description: Вы честный и верный гражданин Союза Советский Социалистических Планет. Но вашей Родине нужна ваша сила. Берите оружие и вставайте в стой!
+    - type: Loadout
+      prototypes: [ GearDefUSSPSol ]
+    - type: RandomMetadata
+      nameSegments:
+      - USSPName-s
+      - USSPName
+
+- type: entity
+  name: Советский солдат Спавнер
+  id: DefSpawnerUSSPSol
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUmporSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPSol
+#-------------------------------------Доп Солдат-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPDSol
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Петрищевский солдат
+      description: Ваша мечта - коммунизм по всей галактике. И не важно что придётся сделать, ибо ваши руки уже в крови по плечо. Но на потерянной Родине звонит колокол беды. Берите оружие и помогите им!
+    - type: Loadout
+      prototypes: [ GearDefPetrSol ]
+    - type: RandomMetadata
+      nameSegments:
+      - PetrName-tov
+      - PetrNameTwo
+
+- type: entity
+  name: Петрищевский доп.солдат Спавнер
+  id: DefSpawnerUSSPSolD
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: sol
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPDSol
+#-------------------------------------Инженер-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPEng
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский инженер
+      description: Вы прекрасно образованный и весьма опытный Советский инженер широкого профиля. В вашей голове умещется и механика, и электроника, и энергетика, и фортификация. Так покажите врагам, что Родина не зря вас учила!
+    - type: Loadout
+      prototypes: [ GearDefUSSPEng ]
+
+- type: entity
+  name: Советский инженер Спавнер
+  id: DefSpawnerUSSPEng
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: eng
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPEng
+#-------------------------------------Медик-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPMed
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский медик
+      description: Вы умелый военный врач Советской Красной Армии. Проявляйте строгость, расторопность, умелость. Солдатам всегда нужна помощь на поле боя.
+    - type: Loadout
+      prototypes: [ GearDefUSSPMed ]
+
+- type: entity
+  name: Советский медик Спавнер
+  id: DefSpawnerUSSPMed
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: med
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPMed
+#-------------------------------------Снабженец-----------------
+- type: randomHumanoidSettings
+  id: DefHumanoidSettingsUSSPLog
+  parent: DefHumanoidSettingsUSSPSPC
+  components:
+    - type: GhostRole
+      name: Советский логист
+      description: Вы снабженец армии Советского Союза. Ваше дело очень широкое и важное. Будьте кровью в жилах войны. Носите материалы, добывайте провизию, создавайте боеприпасы. Снабжайте армию всем, что нужно для победы.
+    - type: Loadout
+      prototypes: [ GearDefUSSPLog ]
+    - type: RandomMetadata
+      nameSegments:
+      - USSPName-s
+      - USSPName
+
+- type: entity
+  name: Советский логист Спавнер
+  id: DefSpawnerUSSPLog
+  suffix: СССП, GHOST, Оборона
+  parent: DefSpawnerUSSPSPC
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: car
+  - type: RandomHumanoidSpawner
+    settings: DefHumanoidSettingsUSSPLog
+#------------------------------------------------Корпоративные-------------------------------------------
+#-------------------------------------Специалист-----------------
+
+#-------------------------------------Доп Специалист-----------------
+
+#-------------------------------------Солдат-----------------
+
+#-------------------------------------Доп Солдат-----------------
+
+#-------------------------------------Инженер-----------------
+
+#-------------------------------------Медик-----------------
+
+#-------------------------------------Снабженец-----------------
+
+#-----------------------------------------------------------------Листинги-----------------------------------------------------
+#------------------------------------------------Умпорские-------------------------------------------
+- type: storeCategory
+  id: StoreRespawnsMap1Umpor
+  name: "Сборщик пополнения"
+  priority: 1
+  
+- type: entity
+  id: PresetStoreRespawnsMap1Umpor
+  abstract: true
+  components:
+  - type: Store
+    name: preset-respawns-def-name
+    categories:
+    - StoreDefChip
+    - StoreRespawnsMap1Umpor
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: listing
+  id: DefRespawnsMap1Umpor60Sol
+  name: Первое пополнение
+  description: 2 солдата.
+  productEntity: DefSpawnerUmporSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 3600
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+    
+- type: listing
+  id: DefRespawnsMap1Umpor70SPC
+  name: Второе пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUmporSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 4200
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor70Log
+  name: Второе пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUmporLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 4200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor80Eng
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUmporEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 4800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1Umpor80Med
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUmporMed
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 4800
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1Umpor90Eng
+  name: Четвёртое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUmporEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 5400
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+   
+- type: listing
+  id: DefRespawnsMap1Umpor90Sol
+  name: Четвёртое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerUmporSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 5400
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor90SolD
+  name: Четвёртое пополнение
+  description: 1 доп.солдат.
+  productEntity: DefSpawnerUmporSolD
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 5400
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor100SPC
+  name: Пятое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUmporSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 6000
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor100Log
+  name: Пятое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUmporLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 6000
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor110Sol
+  name: Шестое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUmporSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 6600
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor110Log
+  name: Шестое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUmporLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor120Eng
+  name: Шестое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUmporEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Umpor120Sol
+  name: Шестое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerUmporSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Umpor
+  restockTime: 7200
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+#------------------------------------------------Миртанийские-------------------------------------------
+- type: storeCategory
+  id: StoreRespawnsMap1Mirt
+  name: "Сборщик пополнения"
+  priority: 1
+  
+- type: entity
+  id: PresetStoreRespawnsMap1Mirt
+  abstract: true
+  components:
+  - type: Store
+    name: preset-respawns-def-name
+    categories:
+    - StoreDefChip
+    - StoreRespawnsMap1Mirt
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: listing
+  id: DefRespawnsMap1Mirt60Sol
+  name: Первое пополнение
+  description: 2 солдата.
+  productEntity: DefSpawnerMirtSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 3600
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+    
+- type: listing
+  id: DefRespawnsMap1Mirt70SPC
+  name: Второе пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerMirtSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 4200
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt70Log
+  name: Второе пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerMirtLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 4200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt80Eng
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerMirtEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 4800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1Mirt80Med
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerMirtMed
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 4800
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1Mirt90Eng
+  name: Четвёртое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerMirtEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 5400
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+   
+- type: listing
+  id: DefRespawnsMap1Mirt90Sol
+  name: Четвёртое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerMirtSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 5400
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt90SolD
+  name: Четвёртое пополнение
+  description: 1 доп.солдат.
+  productEntity: DefSpawnerMirtSolD
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 5400
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt100SPC
+  name: Пятое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerMirtSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 6000
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt100Log
+  name: Пятое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerMirtLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 6000
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt110Sol
+  name: Шестое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerMirtSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 6600
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt110Log
+  name: Шестое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerMirtLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt120Eng
+  name: Шестое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerMirtEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1Mirt120Sol
+  name: Шестое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerMirtSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1Mirt
+  restockTime: 7200
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+#------------------------------------------------Конгломератские-------------------------------------------
+- type: storeCategory
+  id: StoreRespawnsMap1CDC
+  name: "Сборщик пополнения"
+  priority: 1
+  
+- type: entity
+  id: PresetStoreRespawnsMap1CDC
+  abstract: true
+  components:
+  - type: Store
+    name: preset-respawns-def-name
+    categories:
+    - StoreDefChip
+    - StoreRespawnsMap1CDC
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: listing
+  id: DefRespawnsMap1CDC60Sol
+  name: Первое пополнение
+  description: 2 солдата.
+  productEntity: DefSpawnerCDCSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 3600
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+    
+- type: listing
+  id: DefRespawnsMap1CDC70SPC
+  name: Второе пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerCDCSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 4200
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC70Log
+  name: Второе пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerCDCLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 4200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC80Eng
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerCDCEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 4800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1CDC80Med
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerCDCMed
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 4800
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1CDC90Eng
+  name: Четвёртое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerCDCEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 5400
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+   
+- type: listing
+  id: DefRespawnsMap1CDC90Sol
+  name: Четвёртое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerCDCSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 5400
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC90SolD
+  name: Четвёртое пополнение
+  description: 1 доп.солдат.
+  productEntity: DefSpawnerCDCSolD
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 5400
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC100SPC
+  name: Пятое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerCDCSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 6000
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC100Log
+  name: Пятое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerCDCLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 6000
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC110Sol
+  name: Шестое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerCDCSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 6600
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC110Log
+  name: Шестое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerCDCLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC120Eng
+  name: Шестое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerCDCEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1CDC120Sol
+  name: Шестое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerCDCSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1CDC
+  restockTime: 7200
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+#------------------------------------------------Советские-------------------------------------------
+- type: storeCategory
+  id: StoreRespawnsMap1USSP
+  name: "Сборщик пополнения"
+  priority: 1
+  
+- type: entity
+  id: PresetStoreRespawnsMap1USSP
+  abstract: true
+  components:
+  - type: Store
+    name: preset-respawns-def-name
+    categories:
+    - StoreDefChip
+    - StoreRespawnsMap1USSP
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: listing
+  id: DefRespawnsMap1USSP60Sol
+  name: Первое пополнение
+  description: 2 солдата.
+  productEntity: DefSpawnerUSSPSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 3600
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+    
+- type: listing
+  id: DefRespawnsMap1USSP70SPC
+  name: Второе пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUSSPSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4200
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP70Log
+  name: Второе пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUSSPLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP80Eng
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1USSP80Med
+  name: Третье пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPMed
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 4800
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefRespawnsMap1USSP90Eng
+  name: Четвёртое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 5400
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+   
+- type: listing
+  id: DefRespawnsMap1USSP90Sol
+  name: Четвёртое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerUSSPSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 5400
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP90SolD
+  name: Четвёртое пополнение
+  description: 1 доп.солдат.
+  productEntity: DefSpawnerUSSPSolD
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 5400
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP100SPC
+  name: Пятое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUSSPSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6000
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP100Log
+  name: Пятое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUSSPLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6000
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP110Sol
+  name: Шестое пополнение
+  description: 1 специалист.
+  productEntity: DefSpawnerUSSPSPC
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6600
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP110Log
+  name: Шестое пополнение
+  description: 1 логист.
+  productEntity: DefSpawnerUSSPLog
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP120Eng
+  name: Шестое пополнение
+  description: 1 инженер.
+  productEntity: DefSpawnerUSSPEng
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+    
+- type: listing
+  id: DefRespawnsMap1USSP120Sol
+  name: Шестое пополнение
+  description: 1 солдат.
+  productEntity: DefSpawnerUSSPSol
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreRespawnsMap1USSP
+  restockTime: 7200
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+#------------------------------------------------Корпоративные-------------------------------------------
+
+#-----------------------------------------------------------------Сборщики поставок-----------------------------------------------------
+#------------------------------------------------Умпорский----------------------------------------
+- type: entity
+  name: Сборщик поставок
+  suffix: Оборона, Умпорский, Малый
+  parent: [BaseItem, PresetStoreRespawnsMap1Umpor]
+  id: ProviderDefSuppliesMap1Umpor
+  description: Небольшое устройсво, получающее чипы поставок и пополнение.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
+#------------------------------------------------Миртанийский-------------------------------------------
+- type: entity
+  name: Сборщик поставок
+  suffix: Оборона, Миртан, Малый
+  parent: [BaseItem, PresetStoreRespawnsMap1Mirt]
+  id: ProviderDefSuppliesMap1Mirt
+  description: Небольшое устройсво, получающее чипы поставок и пополнение.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
+#------------------------------------------------Конгломератский-------------------------------------------
+- type: entity
+  name: Сборщик поставок
+  suffix: Оборона, Конгломерат, Малый
+  parent: [BaseItem, PresetStoreRespawnsMap1CDC]
+  id: ProviderDefSuppliesMap1CDC
+  description: Небольшое устройсво, получающее чипы поставок и пополнение.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
+#------------------------------------------------Советский-------------------------------------------
+- type: entity
+  name: Сборщик поставок
+  suffix: Оборона, Умпорский, Малый
+  parent: [BaseItem, PresetStoreRespawnsMap1USSP]
+  id: ProviderDefSuppliesMap1USSP
+  description: Небольшое устройсво, получающее чипы поставок и пополнение.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
+#------------------------------------------------Корпоративный-------------------------------------------

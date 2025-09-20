@@ -11,6 +11,7 @@
     - HeadTop
   - type: Hunger
   - type: Thirst
+  - type: Chockable
   - type: Icon
     sprite: Mobs/Species/Moth/parts.rsi
     state: full

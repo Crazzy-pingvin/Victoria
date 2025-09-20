@@ -1,67 +1,74 @@
-using Content.Server.Animals.Components;
-using Content.Server.Nutrition;
-using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.Mobs.Systems;
-using Content.Shared.Nutrition.Components;
-using Content.Shared.Nutrition.EntitySystems;
-using Robust.Shared.Timing;
+using Content.Server.DoAfter;
+using Content.Server.Kitchen.Components;
+using Content.Server.Stack;
+using Content.Shared.Animals;
+using Content.Shared.DoAfter;
+using Content.Shared.Verbs;
 
 namespace Content.Server.Animals.Systems;
 
-/// <summary>
-///     Gives ability to produce fiber reagents, produces endless if the
-///     owner has no HungerComponent
-/// </summary>
-public sealed class WoolySystem : EntitySystem
+public sealed partial class WoolySystem : SharedWoolySystem
 {
-    [Dependency] private readonly HungerSystem _hunger = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
+    [Dependency] private readonly DoAfterSystem _doAfter = default!;
+    [Dependency] private readonly StackSystem _stack = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<WoolyComponent, BeforeFullyEatenEvent>(OnBeforeFullyEaten);
+        SubscribeLocalEvent<WoolyComponent, GetVerbsEvent<AlternativeVerb>>(AddShaveVerb);
+        SubscribeLocalEvent<WoolyComponent, WoolShaveDoAfterEvent>(OnWoolShaveDoAfterEvent);
     }
 
-    public override void Update(float frameTime)
+    private void AddShaveVerb(Entity<WoolyComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
     {
-        base.Update(frameTime);
+        if (args.Using == null ||
+             !args.CanInteract ||
+             entity.Comp.CurrentState == WoolyState.Naked)
+            return;
 
-        var query = EntityQueryEnumerator<WoolyComponent>();
-        var now = _timing.CurTime;
-        while (query.MoveNext(out var uid, out var wooly))
+        var uid = entity.Owner;
+        var user = args.User;
+        var used = args.Using.Value;
+
+        AlternativeVerb verb = new()
         {
-            if (now < wooly.NextGrowth)
-                continue;
-
-            wooly.NextGrowth = now + wooly.GrowthDelay;
-
-            if (_mobState.IsDead(uid))
-                continue;
-
-            // Actually there is food digestion so no problem with instant reagent generation "OnFeed"
-            if (EntityManager.TryGetComponent(uid, out HungerComponent? hunger))
+            Act = () =>
             {
-                // Is there enough nutrition to produce reagent?
-                if (_hunger.GetHungerThreshold(hunger) < HungerThreshold.Okay)
-                    continue;
-
-                _hunger.ModifyHunger(uid, -wooly.HungerUsage, hunger);
-            }
-
-            if (!_solutionContainer.ResolveSolution(uid, wooly.SolutionName, ref wooly.Solution))
-                continue;
-
-            _solutionContainer.TryAddReagent(wooly.Solution.Value, wooly.ReagentId, wooly.Quantity, out _);
-        }
+                AttemptShave(uid, user, used);
+            },
+            Text = Loc.GetString("wooly-system-verb-shave"),
+            Priority = 2
+        };
+        args.Verbs.Add(verb);
     }
 
-    private void OnBeforeFullyEaten(Entity<WoolyComponent> ent, ref BeforeFullyEatenEvent args)
+    private void OnWoolShaveDoAfterEvent(EntityUid mob, WoolyComponent comp, ref WoolShaveDoAfterEvent args)
     {
-        // don't want moths to delete goats after eating them
-        args.Cancel();
+        if (comp.CurrentState == WoolyState.Naked)
+            return;
+
+        if (!comp.WoolyQuantity.TryGetValue(comp.CurrentState, out var quantity))
+            return;
+
+        _stack.SpawnMultiple(comp.WoolEntity, quantity, mob);
+        SetState(mob, comp.CurrentState - 1);
+    }
+
+    private void AttemptShave(EntityUid mob, EntityUid user, EntityUid used)
+    {
+        if (!HasComp<SharpComponent>(used))
+            return;
+
+        var doargs = new DoAfterArgs(EntityManager, user, 5, new WoolShaveDoAfterEvent(), mob, mob, used)
+        {
+            BreakOnDamage = true,
+            BreakOnHandChange = true,
+            BlockDuplicate = true,
+            MovementThreshold = 1.0f,
+        };
+
+        _doAfter.TryStartDoAfter(doargs);
     }
 }
+

@@ -7,4 +7,10 @@ damage-force-say-4 = АУЧ!
 damage-force-say-5 = АУ!
 damage-force-say-6 = УГХ!
 damage-force-say-7 = ХРК!
-damage-force-say-sleep = хррррр...
+damage-force-say-sleep-1 = хррррр...
+
+damage-force-say-numb-1 = оу-
+damage-force-say-numb-2 = оуу-
+damage-force-say-numb-3 = уф-
+damage-force-say-numb-4 = ах-
+damage-force-say-numb-5 = ух-

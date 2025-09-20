@@ -1,0 +1,167 @@
+#----------------------------------------знамя--------------------------------
+- type: entity
+  name: Спавнер знамени
+  id: SpawnBannerDef
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: banner_umpor_std
+      sprite: Victoria/Umpor/umpor_banner.rsi
+  - type: StateChoiceSpawner
+    umpor: UmporBannerStd
+    mirt: MirtBannerStd
+    cdc: CDCBannerStd
+    nt: MirtBannerStd
+    ussp: CDCBannerStd
+#----------------------------------------Сборщик чипов--------------------------------    
+- type: entity
+  name: Спавнер сборщика поставок
+  id: SpawnProviderDefSuppliesMap1
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/provider_defchip.rsi
+    state: icon
+  - type: StateChoiceSpawner
+    umpor: ProviderDefSuppliesMap1Umpor
+    mirt: ProviderDefSuppliesMap1Mirt
+    cdc: ProviderDefSuppliesMap1CDC
+    nt: ProviderDefSuppliesMap1Mirt
+    ussp: ProviderDefSuppliesMap1CDC
+#----------------------------------------Консоль поставок--------------------------------
+- type: entity
+  name: Спавнер консоли армейских поставок
+  id: SpawnComputerCargoDef
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/computers.rsi
+    state: computer
+  - type: StateChoiceSpawner
+    umpor: ComputerCargoDefUmpor
+    mirt: ComputerCargoDefMirt
+    cdc: ComputerCargoDefCDC
+    nt: ComputerCargoDefMirt
+    ussp: ComputerCargoDefCDC
+#----------------------------------------шлюз--------------------------------
+- type: entity
+  name: Спавнер шлюза
+  id: SpawnAirlockLocked
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/umpor_airlock.rsi
+    state: closed
+  - type: StateChoiceSpawner
+    umpor: UmporAirlockLocked
+    mirt: MirtAirlockLocked
+    cdc: CDCAirlockLocked
+    nt: MirtAirlockLocked
+    ussp: CDCAirlockLocked
+#----------------------------------------стеклянный щлюз--------------------------------
+- type: entity
+  name: Спавнер стеклянного шлюза
+  id: SpawnAirlockLockedGlass
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/umpor_airlock_glass.rsi
+    state: closed
+  - type: StateChoiceSpawner
+    umpor: UmporAirlockLockedGlass
+    mirt: MirtAirlockLocked
+    cdc: CDCAirlockLockedGlass
+    nt: MirtAirlockLocked
+    ussp: CDCAirlockLockedGlass
+#----------------------------------------Оборонный фабрикатор--------------------------------
+- type: entity
+  name: Спавнер оборонного фабрикатора
+  id: SpawnDefTechFab
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: cdc
+  - type: StateChoiceSpawner
+    umpor: DefUmporTechFab
+    mirt: DefMirtTechFab
+    cdc: DefCDCTechFab
+    nt: DefMirtTechFab
+    ussp: DefCDCTechFab
+#----------------------------------------Автомат со снарягой--------------------------------
+- type: entity
+  name: Спавнер машины поставки снаряжения
+  id: SpawnVendingMachineDefGear
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/vending_machine.rsi
+    layers:
+    - state: off
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  - type: StateChoiceSpawner
+    umpor: VendingMachineDefGearUmpor
+    mirt: VendingMachineDefGearMirt
+    cdc: VendingMachineDefGearCDC
+    nt: VendingMachineDefGearMirt
+    ussp: VendingMachineDefGearCDC
+#----------------------------------------Автомат со снарягой---------------------
+- type: entity
+  name: Спавнер пояса с инструментами
+  id: SpawnBeltEngFilled
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/utility.rsi
+    state: icon
+  - type: StateChoiceSpawner
+    umpor: UmporBeltEngFilled
+    mirt: MirtBeltEngFilled
+    cdc: CDCBeltTechFilled
+    nt: MirtBeltEngFilled
+    ussp: CDCBeltTechFilled
+#----------------------------------------Сервер связи---------------------
+- type: entity
+  name: Спавнер сервера связи
+  id: SpawnTelecomServer
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/telecomms.rsi
+    state: icon
+  - type: StateChoiceSpawner
+    umpor: DefTelecomServerFilledUmpor
+    mirt: DefTelecomServerFilledMirt
+    cdc: DefTelecomServerFilledCDC
+    nt: DefTelecomServerFilledMirt
+    ussp: DefTelecomServerFilledCDC
+#----------------------------------------Портфаб---------------------
+- type: entity
+  name: Спавнер портфаба
+  id: SpawnClothLathe
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/Cloth/clothlathe.rsi
+    state: icon
+  - type: StateChoiceSpawner
+    umpor: DefClothLatheUmpor
+    mirt: DefClothLatheMirt
+    cdc: DefClothLatheCDC
+    nt: DefClothLatheMirt
+    ussp: DefClothLatheCDC

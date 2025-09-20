@@ -1,0 +1,2657 @@
+#------------------------------------------------------Всякие ящики----------------------  
+#------------------------------------------Ящик тканевых семян----------------------  
+- type: entity
+  id: ClothSeedsCrate
+  parent: CrateHydroponics
+  name: Ящик текстильных семян
+  description: По три мешочка с семянами льна и хлопка.
+  components:
+  - type: StorageFill
+    contents:
+      - id: LinumSeeds
+      - id: CottonSeeds
+      - id: LinumSeeds
+      - id: CottonSeeds
+      - id: LinumSeeds
+      - id: CottonSeeds
+#------------------------------------------Ящик раздатчиков фаеров---------------------- 
+- type: entity
+  id: CrateProviderFlare
+  parent: CrateGenericSteel
+  name: Ящик раздатчиков флаеров
+  description: Два мешочка с флаерами.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtProviderFlare
+      - id: MirtProviderFlare
+#------------------------------------------Ящик световых шашек---------------------- 
+- type: entity
+  name: Световая шашка
+  parent: BaseItem
+  id: LightBomb
+  description: Горит ярче, чем обычный фальшфейр или флаер, но сгорает быстрей.
+  components:
+  - type: Tag
+    tags:
+    - Flare
+    - Trash
+  - type: SpaceGarbage
+  - type: ExpendableLight
+    spentName: spent-lightbomb-name
+    spentDesc: spent-lightbomb-desc
+    glowDuration: 110
+    fadeOutDuration: 25
+    iconStateOn: flare_unlit
+    iconStateSpent: flare_spent
+    turnOnBehaviourID: turn_on
+    fadeOutBehaviourID: fade_out
+    litSound:
+      path: /Audio/Items/Flare/flare_on.ogg
+    loopedSound:
+      path: /Audio/Items/Flare/flare_burn.ogg
+      params:
+        loop: true
+        volume: -10
+        maxDistance: 5
+  - type: Sprite
+    sprite: Victoria/DefenseMode/light_bomb.rsi
+    layers:
+      - map: [ enum.ExpendableLightVisualLayers.Base ]
+        state: flare_base
+      - map: [ enum.ExpendableLightVisualLayers.Glow ]
+        state: flare_burn
+        visible: false
+        shader: unshaded
+      - map: [ enum.ExpendableLightVisualLayers.Overlay ]
+        state: flare_unlit
+        color: "#FF0000"
+  - type: Icon
+    sprite: Objects/Misc/flare.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Misc/flare.rsi
+    heldPrefix: unlit
+    size: Tiny
+  - type: Appearance
+  - type: PointLight
+    enabled: false
+    color: "#FF8080"
+    radius: 3.0
+    energy: 13.0
+    netsync: false
+  - type: IgnitionSource
+    temperature: 1000
+  - type: LightBehaviour
+    behaviours:
+      - !type:FadeBehaviour # have the radius start small and get larger as it starts to burn
+        id: turn_on
+        maxDuration: 45.0
+        startValue: 2.5
+        endValue: 11.0
+      - !type:RandomizeBehaviour # weaker flicker as it fades out
+        id: fade_out
+        interpolate: Nearest
+        minDuration: 0.001
+        maxDuration: 0.001
+        startValue: 4.0
+        endValue: 9.0
+        property: Energy
+        isLooped: true
+      - !type:FadeBehaviour # fade out radius as it burns out
+        id: fade_out
+        maxDuration: 15.0
+        startValue: 11.0
+        endValue: 1.0
+
+- type: entity
+  name: Коробка световых шашек
+  parent: BoxCardboard
+  id: BoxLightBomb
+  description: Тут девять световых шашек.
+  components:
+  - type: StorageFill
+    contents:
+      - id: LightBomb
+        amount: 9
+  - type: Sprite
+    layers:
+      - state: box
+      
+- type: entity
+  id: CrateBoxLightBomb
+  parent: CrateGenericSteel
+  name: Ящик коробок световых шашек
+  description: Две коробки световых шашек
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxLightBomb
+      - id: BoxLightBomb
+#------------------------------------------Ящик гранат---------------------- 
+- type: entity
+  name: Коробка гранат
+  parent: BoxCardboard
+  id: BoxExGrenade
+  description: Пять раз по взрыву.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ExGrenade
+        amount: 5
+  - type: Sprite
+    layers:
+      - state: box
+      
+- type: entity
+  id: CrateBoxExGrenade
+  parent: CrateGenericSteel
+  name: Ящик коробок с гранатами
+  description: Две коробки по пять взрывов.
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxExGrenade
+      - id: BoxExGrenade
+#------------------------------------------------------Чип обороны----------------------  
+- type: entity
+  id: DefChipBullet
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 0
+
+- type: entity
+  parent: NTChip
+  id: DefChip
+  name: чип поставок  
+  description: Система электронного подтверждения для получения определённого количества поставок со стороны Штаба Фронта.
+  suffix: Оборона
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      DefChip_material: 1
+  - type: Stack
+    stackType: DefChip_stack
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: def_chip
+  - type: Currency
+    price:
+      DefChip_currency: 1
+  - type: CartridgeAmmo
+    proto: DefChipBullet
+      
+- type: entity
+  parent: DefChip
+  id: DefChip10
+  suffix: х10
+  components:
+  - type: Stack
+    count: 10
+    
+- type: entity
+  parent: DefChip
+  id: DefChip15
+  suffix: х15
+  components:
+  - type: Stack
+    count: 15
+    
+- type: entity
+  parent: DefChip
+  id: DefChip20
+  suffix: х20
+  components:
+  - type: Stack
+    count: 20
+    
+- type: entity
+  parent: DefChip
+  id: DefChip30
+  suffix: х30
+  components:
+  - type: Stack
+    count: 30
+    
+- type: entity
+  parent: DefChip
+  id: DefChip60
+  suffix: х60
+  components:
+  - type: Stack
+    count: 60
+    
+- type: entity
+  parent: DefChip
+  id: DefChip120
+  suffix: х120
+  components:
+  - type: Stack
+    count: 120
+
+- type: material
+  id: DefChip_material
+  name: чип поставок 
+  stackEntity: DefChip
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: def_chip }
+  price: 5
+
+- type: stack
+  id: DefChip_stack
+  name: чип поставок  
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: def_chip }
+  spawn: DefChip
+  maxCount: 30
+  
+- type: currency
+  id: DefChip_currency
+  displayName: чип поставок 
+  cash:
+    1: DefChip
+  canWithdraw: true 
+#------------------------------------------------------Спавнер чипов----------------------  
+#--------------------------------------------до 50 рыл----------------------  
+- type: storeCategory
+  id: StoreDefChip
+  name: "Сборщик чипов поставок"
+  priority: 0
+
+- type: entity
+  id: PresetStoreDefChip
+  abstract: true
+  components:
+  - type: Store
+    name: preset-store-def-name
+    categories:
+    - StoreDefChip
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+
+- type: listing
+  id: DefChipList0
+  name: Стартовая поставка
+  description: Стартовая поставка. 60 чипов.
+  productEntity: DefChip60
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 0
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList1
+  name: Первая поставка
+  description: Первая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 600
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList2
+  name: Вторая поставка
+  description: Вторая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 1200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList3
+  name: Третья поставка
+  description: Третья поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 1800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipList4
+  name: Четвёртая поставка
+  description: Четвёртая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 2400
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList5
+  name: Пятая поставка
+  description: Пятая поставка. 15 чипов.
+  productEntity: DefChip15
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 3000
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList6
+  name: Шестая поставка
+  description: Шестая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 3600
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipList7
+  name: Седьмая поставка
+  description: Седьмая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 4200
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList8
+  name: Восьмая поставка
+  description: Восьмая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 4800
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList9
+  name: Девятая поставка
+  description: Девятая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 5400
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipList10
+  name: Десятая поставка
+  description: Десятая поставка. 15 чипов.
+  productEntity: DefChip15
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 6000
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList11
+  name: Одиннадцатая поставка
+  description: Одиннадцатая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList12
+  name: Двенадцатая поставка
+  description: венадцатая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipList13
+  name: Тринадцатая поставка
+  description: Тринадцатая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 7800
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList14
+  name: Четырнадцатая поставка
+  description: Четырнадцатая поставка. 10 чипов.
+  productEntity: DefChip10
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 8400
+  priority: 15
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipList15
+  name: Последняя поставка
+  description: Последняя поставка. 15 чипов.
+  productEntity: DefChip15
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChip
+  restockTime: 9000
+  priority: 16
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: entity
+  name: Сборщик чипов поставок
+  suffix: Оборона
+  parent: [BaseItem, PresetStoreDefChip]
+  id: ProviderDefChip
+  description: Небольшое устройсво, получающее чипы поставок и выдающее по команде.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
+#--------------------------------------------больше 50 рыл----------------------
+- type: storeCategory
+  id: StoreDefChipMore
+  name: "Сборщик чипов поставок"
+  priority: 0
+
+- type: storePreset
+  id: PresetStoreDefChipMore
+  storeName: Сборщик чипов поставок
+  categories:
+  - StoreDefChipMore
+  currencyWhitelist:
+  - DefChip_currency
+
+- type: entity
+  id: PresetStoreDefChipMore
+  abstract: true
+  components:
+  - type: Store
+    name: preset-store-def-name
+    categories:
+    - StoreDefChipMore
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+
+- type: listing
+  id: DefChipMoreList0
+  name: Стартовая поставка
+  description: Стартовая поставка. 120 чипов.
+  productEntity: DefChip120
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 0
+  priority: 1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList1
+  name: Первая поставка
+  description: Первая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 600
+  priority: 2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList2
+  name: Вторая поставка
+  description: Вторая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 1200
+  priority: 3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList3
+  name: Третья поставка
+  description: Третья поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 1800
+  priority: 4
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipMoreList4
+  name: Четвёртая поставка
+  description: Четвёртая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 2400
+  priority: 5
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList5
+  name: Пятая поставка
+  description: Пятая поставка. 15 чипов.
+  productEntity: DefChip30
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 3000
+  priority: 6
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList6
+  name: Шестая поставка
+  description: Шестая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 3600
+  priority: 7
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipMoreList7
+  name: Седьмая поставка
+  description: Седьмая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 4200
+  priority: 8
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList8
+  name: Восьмая поставка
+  description: Восьмая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 4800
+  priority: 9
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList9
+  name: Девятая поставка
+  description: Девятая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 5400
+  priority: 10
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipMoreList10
+  name: Десятая поставка
+  description: Десятая поставка. 15 чипов.
+  productEntity: DefChip30
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 6000
+  priority: 11
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList11
+  name: Одиннадцатая поставка
+  description: Одиннадцатая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 6600
+  priority: 12
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList12
+  name: Двенадцатая поставка
+  description: венадцатая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 7200
+  priority: 13
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DefChipMoreList13
+  name: Тринадцатая поставка
+  description: Тринадцатая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 7800
+  priority: 14
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList14
+  name: Четырнадцатая поставка
+  description: Четырнадцатая поставка. 10 чипов.
+  productEntity: DefChip20
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 8400
+  priority: 15
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  
+- type: listing
+  id: DefChipMoreList15
+  name: Последняя поставка
+  description: Последняя поставка. 15 чипов.
+  productEntity: DefChip30
+  cost:
+    DefChip_currency: 0
+  categories:
+  - StoreDefChipMore
+  restockTime: 9000
+  priority: 16
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: entity
+  name: Сборщик чипов поставок
+  suffix: Оборона, Удвоенный
+  parent: [BaseItem, PresetStoreDefChipMore]
+  id: ProviderDefChipMore
+  description: Небольшое устройсво, получающее чипы поставок и выдающее по команде.
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Victoria/DefenseMode/provider_defchip.rsi
+      state: icon
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance: 
+        DefChip_currency: 0
+#------------------------------------------------------Пресет категорий в магазине------------
+- type: storeCategory
+  id: DefShopMaterials
+  name: Материалы
+  priority: 0
+
+- type: storeCategory
+  id: DefShopWeaponUmpor
+  name: Вооружеие
+  priority: 1
+
+- type: storeCategory
+  id: DefShopAmmoUmpor
+  name: Амуниция
+  priority: 2
+  
+- type: storeCategory
+  id: DefShopWeaponMirt
+  name: Вооружеие
+  priority: 1
+
+- type: storeCategory
+  id: DefShopAmmoMirt
+  name: Амуниция
+  priority: 2
+
+- type: storeCategory
+  id: DefShopWeaponCDC
+  name: Вооружеие
+  priority: 1
+
+- type: storeCategory
+  id: DefShopAmmoCDC
+  name: Амуниция
+  priority: 2
+
+- type: storeCategory
+  id: DefShopWeaponUSSP
+  name: Вооружеие
+  priority: 1
+
+- type: storeCategory
+  id: DefShopAmmoUSSP
+  name: Амуниция
+  priority: 2
+
+- type: storeCategory
+  id: DefShopWeaponCorp
+  name: Вооружеие
+  priority: 1
+
+- type: storeCategory
+  id: DefShopAmmoCorp
+  name: Амуниция
+  priority: 2
+
+- type: storeCategory
+  id: DefShopExplosives
+  name: Взрывчатка
+  priority: 3
+
+- type: storeCategory
+  id: DefShopAnymals
+  name: Сельхоз
+  priority: 4
+
+- type: entity
+  id: StorePresetDefShopUmpor
+  abstract: true
+  components:
+  - type: Store
+    name: Def-Shop
+    categories:
+    - DefShopMaterials
+    - DefShopAnymals
+    - DefShopWeaponUmpor
+    - DefShopAmmoUmpor
+    - DefShopExplosives
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: entity
+  id: StorePresetDefShopMirt
+  abstract: true
+  components:
+  - type: Store
+    name: Def-Shop
+    categories:
+    - DefShopMaterials
+    - DefShopAnymals
+    - DefShopWeaponMirt
+    - DefShopAmmoMirt
+    - DefShopExplosives
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: entity
+  id: StorePresetDefShopCDC
+  abstract: true
+  components:
+  - type: Store
+    name: Def-Shop
+    categories:
+    - DefShopMaterials
+    - DefShopAnymals
+    - DefShopWeaponCDC
+    - DefShopAmmoCDC
+    - DefShopExplosives
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: entity
+  id: StorePresetDefShopUSSP
+  abstract: true
+  components:
+  - type: Store
+    name: Def-Shop
+    categories:
+    - DefShopMaterials
+    - DefShopAnymals
+    - DefShopWeaponUSSP
+    - DefShopAmmoUSSP
+    - DefShopExplosives
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+      
+- type: entity
+  id: StorePresetDefShopCorp
+  abstract: true
+  components:
+  - type: Store
+    name: Def-Shop
+    categories:
+    - DefShopMaterials
+    - DefShopAnymals
+    - DefShopWeaponCorp
+    - DefShopAmmoCorp
+    - DefShopExplosives
+    currencyWhitelist:
+    - DefChip_currency
+    balance:
+      DefChip_currency: 0
+#------------------------------------------------------Листинг покупок------------
+#-------------------------------------------Категория материалов----------
+- type: listing
+  id: CrateSandbagEmpty
+  name: Ящик мешков
+  description: Пустые мешки для построения брустверов.
+  productEntity: CrateSandbagEmpty
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateMaterialSteel
+  name: Ящик стали
+  description: Листы стали для создания укреплений, ремонта построек и создания различных предметов.
+  productEntity: CrateMaterialSteel
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateMaterialGlass
+  name: Ящик стекла
+  description: Стекло для окон.
+  productEntity: CrateMaterialGlass
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateMaterialWood
+  name: Ящик досок
+  description: Древесина для укреплений и инструментов.
+  productEntity: CrateMaterialWood
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateEngineeringCableLV
+  name: Ящик низковольтных кабелей
+  description: Кабели для электроснобжения и освещения.
+  productEntity: CrateEngineeringCableLV
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: BoxLightMixed
+  name: Коробка разных лампочек
+  description: Для ремонта и постройки освещения тьмы.
+  productEntity: BoxLightMixed
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateMaterialPlasma
+  name: Ящик плазмы
+  description: Для медикаментов и иных потребностей.
+  productEntity: CrateMaterialPlasma
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: WeldingFuelTankFull
+  name: Резервуар с топливом
+  description: Компонент для создания эластана, топливо для сварки и последний подарок наступающим врагам.
+  productEntity: WeldingFuelTankFull
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateEngineeringAMEJar
+  name: Ящик топлива для ДАМ
+  description: Контейнеры с антигелием для выработки энергии через Двигатель Антиматерии.
+  productEntity: CrateEngineeringAMEJar
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateMaterialPlumbum
+  name: Ящик листов свинца
+  description: Для создания противорадиационных убежищ и прочего.
+  productEntity: CrateMaterialPlumbum
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopMaterials
+  
+- type: listing
+  id: CrateMaterialPlastic
+  name: Ящик листов пластика
+  description: Для создания различных предметов.
+  productEntity: CrateMaterialPlastic
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopMaterials
+#-------------------------------------------Категория вооружения----------
+#------------------------------Умпорское-------------
+#----------------Ящики------------
+- type: entity
+  id: UmporCratePistolsWeaponsDef
+  parent: UmporCrate
+  name: Ящик пистолетов
+  suffix: Умпорский, Оборона
+  description: Четыре пистолета Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporPistol
+      - id: UmporPistol
+      - id: UmporPistol
+      - id: UmporPistol
+      
+- type: entity
+  id: UmporCrateRiflesWeaponsDef
+  parent: UmporCrate
+  name: Ящик основного оружия
+  suffix: Умпорский, Оборона
+  description: Две винтовки и два автомата Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporHeavyRifle
+      - id: UmporHeavyRifle
+      - id: UmporLightRifle
+      - id: UmporLightRifle
+      
+- type: entity
+  id: UmporCrateMeleeWeaponsDef
+  parent: UmporCrate
+  name: Ящик рукопашного оружия
+  suffix: Умпорский, Оборона
+  description: По два топора, ножа и лопаты Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporHatchet
+      - id: UmporSpade
+      - id: UmpornKnife
+      - id: UmporHatchet
+      - id: UmporSpade
+      - id: UmpornKnife
+#----------------Листинги------------
+- type: listing
+  id: UmporCratePistolsWeaponsDef
+  name: Ящик пистолетов
+  description: Четыре пистолета Умпорской Федерации
+  productEntity: UmporCratePistolsWeaponsDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUmpor
+  
+- type: listing
+  id: UmporCrateRiflesWeaponsDef
+  name: Ящик основного оружия
+  description: Две винтовки и два автомата Умпорской Федерации
+  productEntity: UmporCrateRiflesWeaponsDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUmpor
+  
+- type: listing
+  id: UmporCrateMeleeWeaponsDef
+  name: Ящик рукопашного оружия
+  description: По два топора, ножа и лопаты Умпорской Федерации
+  productEntity: UmporCrateMeleeWeaponsDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopWeaponUmpor
+#------------------------------Миртанийское-------------
+#----------------Ящики------------
+- type: entity
+  id: MirtCrateWeaponsLWeaponDef
+  parent: MirtCrate
+  name: Ящик лёгкого оружия Империи Миртана
+  suffix: Миртан, Оборона
+  description: По два пистолета и пистолет-пулемёта Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtPistol
+      - id: MirtPistol
+      - id: MirtSMG
+      - id: MirtSMG
+      
+- type: entity
+  id: MirtCrateWeaponsSWeaponDef
+  parent: MirtCrate
+  name: Ящик основного оружия Империи Миртана
+  suffix: Миртан, Оборона
+  description: Два автомата и две винтовки Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtAutoRifle
+      - id: MirtAutoRifle
+      - id: MirtRifle
+      - id: MirtRifle
+
+- type: entity
+  id: MirtCrateWeaponsNSWeaponDef
+  parent: MirtCrate
+  name: Ящик стандартного оружия Ноократии Эранта
+  suffix: Миртан, Оборона
+  description: Два автомата и две винтовки Ноократии Эранта
+  components:
+  - type: AccessReader
+    access: [["MirtAccess"], ["NoocAccess"]]
+  - type: StorageFill
+    contents:
+      - id: MirtNoocGan
+      - id: MirtNoocGan
+      - id: MirtNoocRifle
+      - id: MirtNoocRifle
+      
+- type: entity
+  id: MirtCrateWeaponsOEWeaponDef
+  parent: MirtCrate
+  name: Ящик офицерского оружия Ноократии Эранта
+  suffix: Миртан, Оборона
+  description: Два пистолета и два излучателя холода Ноократии Эранта
+  components:
+  - type: AccessReader
+    access: [["MirtAccess"], ["NoocAccess"]]
+  - type: StorageFill
+    contents:
+      - id: MirtNoocPistol
+      - id: MirtNoocPistol
+      - id: MirtNoocGanCold
+      - id: MirtNoocGanCold
+
+- type: entity
+  id: MirtCrateWeaponsMeleeWeaponDef
+  parent: MirtCrate
+  name: Ящик рукопашного
+  suffix: Миртан, Оборона
+  description: Четыре ножа и два меча Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtnKnife
+      - id: MirtnKnife
+      - id: MirtnKnife
+      - id: MirtnKnife
+      - id: MirtnSword
+      - id: MirtnSword
+           
+- type: entity
+  id: MirtCrateWeaponsShieldsWeaponDef
+  parent: MirtCrate
+  name: Ящик щитов
+  suffix: Миртан, Оборона
+  description: Два малых щита и один большой щит Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtShieldBig
+      - id: MirtShieldStd
+      - id: MirtShieldStd
+#----------------Листинги------------      
+- type: listing
+  id: MirtCrateWeaponsLWeaponDef
+  name: Ящик лёгкого оружия Империи Миртана
+  description: По два пистолета и пистолет-пулемёта Империи Миртана
+  productEntity: MirtCrateWeaponsLWeaponDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponMirt
+  
+- type: listing
+  id: MirtCrateWeaponsSWeaponDef
+  name: Ящик основного оружия Империи Миртана
+  description: Два автомата и две винтовки Империи Миртана
+  productEntity: MirtCrateWeaponsSWeaponDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponMirt
+  
+- type: listing
+  id: MirtCrateWeaponsNSWeaponDef
+  name: Ящик стандартного оружия Ноократии Эранта
+  description: Два автомата и две винтовки Ноократии Эранта
+  productEntity: MirtCrateWeaponsNSWeaponDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponMirt
+  
+- type: listing
+  id: MirtCrateWeaponsOEWeaponDef
+  name: Ящик офицерского оружия Ноократии Эранта
+  description: Два пистолета и два излучателя холода Ноократии Эранта
+  productEntity: MirtCrateWeaponsOEWeaponDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponMirt
+  
+- type: listing
+  id: MirtCrateWeaponsMeleeWeaponDef
+  name: Ящик рукопашного
+  description: Четыре ножа и два меча Империи Миртана
+  productEntity: MirtCrateWeaponsMeleeWeaponDef
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopWeaponMirt
+  
+- type: listing
+  id: MirtCrateWeaponsShieldsWeaponDef
+  name: Ящик щитов
+  description: Два малых щита и один большой щит Империи Миртана
+  productEntity: MirtCrateWeaponsShieldsWeaponDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopWeaponMirt
+#------------------------------Конгломератское-------------
+#----------------Ящики------------
+- type: entity
+  id: CDCCrateWeaponsLWeaponDef
+  parent: CDCCrate
+  name: Ящик лёгкого оружия
+  suffix: Конгломерат, Оборона
+  description: Четыре плазменных пистолета Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCPistol
+      - id: CDCPistol
+      - id: CDCPistol
+      - id: CDCPistol
+      
+- type: entity
+  id: CDCCrateWeaponsMeleeWeaponDef
+  parent: CDCCrate
+  name: Ящик рукопашного оружия
+  suffix: Конгломерат, Оборона
+  description: Четыре баклера, три лёгкие сабли и одна тяжёлая сабля Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCSaber
+      - id: CDCSaber
+      - id: CDCSaber
+      - id: CDCSaberHigh
+      - id: CDCBuckler
+      - id: CDCBuckler
+      - id: CDCBuckler
+      - id: CDCBuckler
+      
+- type: entity
+  id: CDCCrateWeaponsMWeaponDef
+  parent: CDCCrate
+  name: Ящик основного оружия
+  suffix: Конгломерат, Оборона
+  description: Два плазменных автомата и две плазменных винтовки Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCAutomat
+      - id: CDCAutomat
+      - id: CDCRifle
+      - id: CDCRifle
+#----------------Листинги------------
+- type: listing
+  id: CDCCrateWeaponsLWeaponDef
+  name: Ящик лёгкого оружия
+  description: Четыре плазменных пистолета Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsLWeaponDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponCDC
+  
+- type: listing
+  id: CDCCrateWeaponsMeleeWeaponDef
+  name: Ящик рукопашного оружия
+  description: Четыре баклера, три лёгкие сабли и одна тяжёлая сабля Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsMeleeWeaponDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopWeaponCDC
+  
+- type: listing
+  id: CDCCrateWeaponsMWeaponDef
+  name: Ящик основного оружия
+  description: Два плазменных автомата и две плазменных винтовки Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsMWeaponDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponCDC
+#------------------------------Советско-Петрищевское-------------
+#----------------Ящики------------
+- type: entity
+  id: PetrCrateWeaponsLightDef
+  parent: PetrCrate
+  name: Ящик лёгкого оружия Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Лёгкие стволы Петрищевцев скрываются тут под замком
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrWeaponRevolver
+      - id: PetrWeaponRevolver
+      - id: PetrPistol
+      - id: PetrPistol
+
+- type: entity
+  id: PetrCrateWeaponsAutoDef
+  parent: PetrCrate
+  name: Ящик автоматического оружия Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Скорострельные стволы Петрищевцев скрываются тут под замком
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrLightRifle
+      - id: PetrLightRifle
+      - id: PetrSMG
+      - id: PetrSMG
+#----------------Листинги------------
+- type: listing
+  id: USSPCrateWeaponsL
+  name: Ящик лёгкого оружия СССП
+  description: 2 советских пистолета, 2 пистолет-пулемёта и 2 карабина СССП
+  productEntity: USSPCrateWeaponsL
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+  
+- type: listing
+  id: USSPCrateWeaponsH
+  name: Ящик тяжёлого оружия СССП
+  description: 2 советских автомата, и 2 винтовки СССП
+  productEntity: USSPCrateWeaponsH
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+  
+- type: listing
+  id: PetrCrateWeaponsLightDef
+  name: Ящик лёгкого оружия Петрищевцев
+  description: Лёгкие стволы Петрищевцев скрываются тут под замком
+  productEntity: PetrCrateWeaponsLightDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+  
+- type: listing
+  id: PetrCrateWeaponsAutoDef
+  name: Ящик автоматического оружия Петрищевцев
+  description: Скорострельные стволы Петрищевцев скрываются тут под замком
+  productEntity: PetrCrateWeaponsAutoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopWeaponUSSP
+#------------------------------Корпоративное-------------
+#----------------Ящики------------
+
+#----------------Листинги------------
+
+#-------------------------------------------Категория амуниции----------
+#------------------------------Умпорская-------------
+#----------------Ящики------------
+- type: entity
+  id: UmporCrateShotganAmmoDef
+  parent: UmporCrate
+  name: Ящик дроби
+  suffix: Умпорский, Оборона
+  description: Три коробки зарядов для дробовика Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporBoxShotgan
+      - id: UmporBoxShotgan
+      - id: UmporBoxShotgan
+      
+- type: entity
+  id: UmporCratePistolsAmmoDef
+  parent: UmporCrate
+  name: Ящик боеприпасов к пистолету
+  suffix: Умпорский, Оборона
+  description: Восемь магазинов к пистолету Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+      - id: UmporMagazinePistol
+
+- type: entity
+  id: UmporCrateRifleAmmoDef
+  parent: UmporCrate
+  name: Ящик основных боеприпасов
+  suffix: Умпорский, Оборона
+  description: По восемь магазинов к автоматам и винтовкам Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineHeavyRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      - id: UmporMagazineLightRifle
+      
+- type: entity
+  id: UmporCrateCartridgeRocketExpDef
+  parent: UmporCrate
+  name: Ящик разрывныхх ракет
+  suffix: Умпорский, Оборона
+  description: Шесть разрывных выстрелов для гранатомёта Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      - id: UmporRocketExp
+      
+- type: entity
+  id: UmporCrateCartridgeRocketFragDef
+  parent: UmporCrate
+  name: Ящик осколочных ракет
+  suffix: Умпорский, Оборона
+  description: Шесть осколочных выстрелов для гранатомёта Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      - id: UmporRocketFrag
+      
+- type: entity
+  id: UmporCrateCartridgeRocketFarDef
+  parent: UmporCrate
+  name: Ящик дальнобойных ракет
+  suffix: Умпорский, Оборона
+  description: Шесть дальнобойных выстрелов для гранатомёта Умпорской Федерации
+  components:
+  - type: StorageFill
+    contents:
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+      - id: UmporRocketFar
+#----------------Листинги------------
+- type: listing
+  id: UmporCratePistolsAmmoDef
+  name: Ящик боеприпасов к пистолету
+  description: Восемь магазинов к пистолету Умпорской Федерации
+  productEntity: UmporCratePistolsAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUmpor
+
+- type: listing
+  id: UmporCrateRifleAmmoDef
+  name: Ящик основных боеприпасов
+  description: По восемь магазинов к автоматам и винтовкам Умпорской Федерации
+  productEntity: UmporCrateRifleAmmoDef
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateShotganAmmoDef
+  name: Ящик дроби
+  description: Три коробки зарядов для дробовика Умпорской Федерации
+  productEntity: UmporCrateShotganAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateCartridgeRocketExpDef
+  name: Ящик разрывныхх ракет
+  description: Шесть разрывных выстрелов для гранатомёта Умпорской Федерации
+  productEntity: UmporCrateCartridgeRocketExpDef
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateCartridgeRocketFragDef
+  name: Ящик осколочных ракет
+  description: Шесть осколочных выстрелов для гранатомёта Умпорской Федерации
+  productEntity: UmporCrateCartridgeRocketFragDef
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUmpor
+  
+- type: listing
+  id: UmporCrateCartridgeRocketFarDef
+  name: Шесть дальнобойных выстрелов для гранатомёта Умпорской Федерации
+  description: Ящик дальнобойных ракет
+  productEntity: UmporCrateCartridgeRocketFarDef
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUmpor
+#------------------------------Миртанийская-------------
+#----------------Ящики------------
+- type: entity
+  id: MirtCrateWeaponsLAmmoDef
+  parent: MirtCrate
+  name: Ящик боеприпасов к лёгкогому оружию
+  suffix: Миртан, Оборона
+  description: Боеприпасы к пистолетам и пистолет-пулемётам Империи Миртана. По восемь магазинов.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazinePistol
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      - id: MirtMagazineSMG
+      
+- type: entity
+  id: MirtCrateWeaponsSAmmoDef
+  parent: MirtCrate
+  name: Ящик боеприпасов к основному оружию
+  suffix: Миртан, Оборона
+  description: Боеприпасы к автоматам и винтовкам Империи Миртана. По восемь магазинов.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineAutomat
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      - id: MirtMagazineRifle
+      
+- type: entity
+  id: MirtCrateWeaponsHPAmmoDef
+  parent: MirtCrate
+  name: Ящик боеприпасов к пулемёту
+  suffix: Миртан, Оборона
+  description: Четыре магазина к пулемёту Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtMagazineLMG
+      - id: MirtMagazineLMG
+      - id: MirtMagazineLMG
+      - id: MirtMagazineLMG
+      
+- type: entity
+  id: MirtCrateMirtMagazineZenitDef
+  parent: MirtCrate
+  name: Ящик боеприпасов к зенитке
+  suffix: Миртан, Оборона
+  description: Четыре магазина к зенитке Империи Миртана
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtMagazineZenit
+      - id: MirtMagazineZenit
+      - id: MirtMagazineZenit
+      - id: MirtMagazineZenit
+  
+- type: entity
+  id: MirtCrateWeaponsHOAmmoDef
+  parent: MirtCrate
+  name: Ящик миртанийских батарей
+  suffix: Миртан, Оборона
+  description: Две батареи к пожарному лазеру Империи Миртана.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MirtPowerCell
+      - id: MirtPowerCell
+      
+- type: entity
+  id: MirtCrateWeaponsNSAmmoDef
+  parent: MirtCrate
+  name: Ящик стандартных батарей
+  suffix: Миртан, Оборона
+  description: По четыре батареи к автоматам и винтовкам Ноократии Эранта.
+  components:
+  - type: AccessReader
+    access: [["MirtAccess"], ["NoocAccess"]]
+  - type: StorageFill
+    contents:
+      - id: NoocPowerCellThree
+      - id: NoocPowerCellThree
+      - id: NoocPowerCellThree
+      - id: NoocPowerCellThree
+      - id: NoocPowerCellOne
+      - id: NoocPowerCellOne
+      - id: NoocPowerCellOne
+      - id: NoocPowerCellOne
+
+- type: entity
+  id: MirtCrateWeaponsOEAmmoDef
+  parent: MirtCrate
+  name: Ящик офицерских батарей
+  suffix: Миртан, Оборона
+  description: По четыре батареи к пистолету и излучателю холода Ноократии Эранта.
+  components:
+  - type: AccessReader
+    access: [["MirtAccess"], ["NoocAccess"]]
+  - type: StorageFill
+    contents:
+      - id: NoocPowerCellTwo
+      - id: NoocPowerCellTwo
+      - id: NoocPowerCellTwo
+      - id: NoocPowerCellTwo
+      - id: NoocPowerCellCold
+      - id: NoocPowerCellCold
+      - id: NoocPowerCellCold
+      - id: NoocPowerCellCold
+      
+- type: entity
+  id: MirtCrateWeaponsPowerMGAmmoDef
+  parent: MirtCrate
+  name: Ящик скорострельных батарей
+  suffix: Миртан, Оборона
+  description: Одна сверхъёмкая и две стандартные батареи к скорострельному лазеру Ноократии Эранта.
+  components:
+  - type: AccessReader
+    access: [["MirtAccess"], ["NoocAccess"]]
+  - type: StorageFill
+    contents:
+      - id: NoocPowerCellFour
+      - id: NoocPowerCellFour
+      - id: NoocPowerCellFive
+#----------------Листинги------------
+- type: listing
+  id: MirtCrateWeaponsLAmmoDef
+  name: Ящик боеприпасов к лёгкогому оружию
+  description: Боеприпасы к пистолетам и пистолет-пулемётам Империи Миртана. По восемь магазинов.
+  productEntity: MirtCrateWeaponsLAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoMirt
+  
+- type: listing
+  id: MirtCrateWeaponsSAmmoDef
+  name: Ящик боеприпасов к основному оружию
+  description: Боеприпасы к автоматам и винтовкам Империи Миртана. По четыре магазинов.
+  productEntity: MirtCrateWeaponsSAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateWeaponsHPAmmoDef
+  name: Ящик боеприпасов к пулемёту
+  description: Четыре магазина к пулемёту Империи Миртана
+  productEntity: MirtCrateWeaponsHPAmmoDef
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateMirtMagazineZenitDef
+  name: Ящик боеприпасов к зенитке
+  description: Четыре магазина к зенитке Империи Миртана
+  productEntity: MirtCrateMirtMagazineZenitDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateWeaponsHOAmmoDef
+  name: Ящик миртанийских батарей
+  description: Две батареи к пожарному лазеру Империи Миртана.
+  productEntity: MirtCrateWeaponsHOAmmoDef
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateWeaponsNSAmmoDef
+  name: Ящик стандартных батарей
+  description: По четыре батареи к автоматам и винтовкам Ноократии Эранта.
+  productEntity: MirtCrateWeaponsNSAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateWeaponsOEAmmoDef
+  name: Ящик офицерских батарей
+  description: По четыре батареи к пистолету и излучателю холода Ноократии Эранта.
+  productEntity: MirtCrateWeaponsOEAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoMirt
+
+- type: listing
+  id: MirtCrateWeaponsPowerMGAmmoDef
+  name: Ящик скорострельных батарей
+  description: Одна сверхъёмкая и две стандартные батареи к скорострельному лазеру Ноократии Эранта.
+  productEntity: MirtCrateWeaponsPowerMGAmmoDef
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopAmmoMirt  
+#------------------------------Конгломератская-------------
+#----------------Ящики------------
+- type: entity
+  id: CDCCrateWeaponsLAmmoDef
+  parent: CDCCrate
+  name: Ящик стандартных пистолетных боеприпасов
+  suffix: Конгломерат, Оборона
+  description: Восемь стандартных магазинов к плазменному пистолету Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      - id: CDCMagazinePistolStd
+      
+- type: entity
+  id: CDCCrateWeaponsLHotAmmoDef
+  parent: CDCCrate
+  name: Ящик горячих пистолетных боеприпасов
+  suffix: Конгломерат, Оборона
+  description: Шесть горячеплазменных магазинов к плазменному пистолету Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazinePistolHot
+      - id: CDCMagazinePistolHot
+      - id: CDCMagazinePistolHot
+      - id: CDCMagazinePistolHot
+      - id: CDCMagazinePistolHot
+      - id: CDCMagazinePistolHot
+      
+- type: entity
+  id: CDCCrateWeaponsLLigAmmoDef
+  parent: CDCCrate
+  name: Ящик слабых пистолетных боеприпасов
+  suffix: Конгломерат, Оборона
+  description: Шесть слабоплазменных магазинов к плазменному пистолету Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazinePistolLig
+      - id: CDCMagazinePistolLig
+      - id: CDCMagazinePistolLig
+      - id: CDCMagazinePistolLig
+      - id: CDCMagazinePistolLig
+      - id: CDCMagazinePistolLig
+      
+- type: entity
+  id: CDCCrateWeaponsMAmmoDef
+  parent: CDCCrate
+  name: Ящик стандартных боеприпасов основного оружия
+  suffix: Конгломерат, Оборона
+  description: По шесть стандартных магазинов к плазменным винтовками автоматам Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazineAutomatStd
+      - id: CDCMagazineAutomatStd
+      - id: CDCMagazineAutomatStd
+      - id: CDCMagazineAutomatStd
+      - id: CDCMagazineAutomatStd
+      - id: CDCMagazineAutomatStd
+      - id: CDCMagazineRifleStd
+      - id: CDCMagazineRifleStd
+      - id: CDCMagazineRifleStd
+      - id: CDCMagazineRifleStd
+      - id: CDCMagazineRifleStd
+      - id: CDCMagazineRifleStd
+      
+- type: entity
+  id: CDCCrateWeaponsMHotAmmoDef
+  parent: CDCCrate
+  name: Ящик горячих боеприпасов основного оружия
+  suffix: Конгломерат, Оборона
+  description: По четыре горячеплазменных магазинов к плазменным винтовками автоматам Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazineAutomatHot
+      - id: CDCMagazineAutomatHot
+      - id: CDCMagazineAutomatHot
+      - id: CDCMagazineAutomatHot
+      - id: CDCMagazineRifleHot
+      - id: CDCMagazineRifleHot
+      - id: CDCMagazineRifleHot
+      - id: CDCMagazineRifleHot
+      
+- type: entity
+  id: CDCCrateWeaponsMLigAmmoDef
+  parent: CDCCrate
+  name: Ящик слабых боеприпасов основного оружия
+  suffix: Конгломерат, Оборона
+  description: По четыре слабоплазменных магазинов к плазменным винтовками автоматам Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazineAutomatLig
+      - id: CDCMagazineAutomatLig
+      - id: CDCMagazineAutomatLig
+      - id: CDCMagazineAutomatLig
+      - id: CDCMagazineRifleLig
+      - id: CDCMagazineRifleLig
+      - id: CDCMagazineRifleLig
+      - id: CDCMagazineRifleLig
+      
+- type: entity
+  id: CDCCrateWeaponsHAmmoDef
+  parent: CDCCrate
+  name: Ящик стандартных боеприпасов дефокусировщика
+  suffix: Конгломерат, Оборона
+  description: Три стандартных магазина к плазменному дефокусировщику Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazineDefocStd
+      - id: CDCMagazineDefocStd
+      - id: CDCMagazineDefocStd
+      
+- type: entity
+  id: CDCCrateWeaponsHHotAmmoDef
+  parent: CDCCrate
+  name: Ящик горячих боеприпасов дефокусировщика
+  suffix: Конгломерат, Оборона
+  description: Два горячеплазменных магазина к плазменному дефокусировщику Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazineDefocHot
+      - id: CDCMagazineDefocHot
+      
+- type: entity
+  id: CDCCrateWeaponsHLigAmmoDef
+  parent: CDCCrate
+  name: Ящик слабых боеприпасов дефокусировщика
+  suffix: Конгломерат, Оборона
+  description: Два слабоплазменных магазина к плазменному дефокусировщику Халифатского Божественного Конгомерата
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCMagazineDefocLig
+      - id: CDCMagazineDefocLig
+      
+- type: entity
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  parent: CDCCrate
+  name: Ящик стандартных боеприпасов метателя
+  suffix: Конгломерат, Оборона
+  description: Четыре плазменных ёмкости и три с сенсебилизатором
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerPlasmaStd
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+
+- type: entity
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
+  parent: CDCCrate
+  name: Ящик горячеплазменных боеприпасов метателя
+  suffix: Конгломерат, Оборона
+  description: Четыре горячеплазменных ёмкости и три с сенсебилизатором
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerPlasmaHot
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+
+- type: entity
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
+  parent: CDCCrate
+  name: Ящик cлабоплазменных боеприпасов метателя
+  suffix: Конгломерат, Оборона
+  description: Четыре слабоплазменных ёмкости и три с сенсебилизатором
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerPlasmaCold
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      - id: CDCBeakerSensitizer
+      
+- type: entity
+  id: CDCCrateWeaponsAmmoFoam
+  parent: CDCCrate
+  name: Ящик пенаобразования
+  suffix: Конгломерат, Оборона
+  description: Пенаобразующая ёмкость, жидкий алюминий и стеклянный мензурки.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CDCBeakerFoam
+      - id: AluminiumBeakerSmall
+      - id: Beaker
+      - id: Beaker
+      - id: Beaker
+      - id: Beaker
+      - id: Beaker    
+#----------------Листинги------------
+- type: listing
+  id: CDCCrateWeaponsLAmmoDef
+  name: Ящик стандартных пистолетных боеприпасов
+  description: Восемь стандартных магазинов к плазменному пистолету Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsLAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoCDC
+
+- type: listing
+  id: CDCCrateWeaponsLHotAmmoDef
+  name: Ящик горячих пистолетных боеприпасов
+  description: Шесть горячеплазменных магазинов к плазменному пистолету Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsLHotAmmoDef
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsLLigAmmoDef
+  name: Ящик слабых пистолетных боеприпасов
+  description: Шесть горячеплазменных магазинов к плазменному пистолету Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsLLigAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsMAmmoDef
+  name: Ящик стандартных боеприпасов основного оружия
+  description: По шесть стандартных магазинов к плазменным винтовками автоматам Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsMAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsMHotAmmoDef
+  name: Ящик горячих боеприпасов основного оружия
+  description: По четыре горячеплазменных магазинов к плазменным винтовками автоматам Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsMHotAmmoDef
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsMLigAmmoDef
+  name: Ящик слабых боеприпасов основного оружия
+  description: По четыре горячеплазменных магазинов к плазменным винтовками автоматам Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsMLigAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoCDC
+
+- type: listing
+  id: CDCCrateWeaponsHAmmoDef
+  name: Ящик стандартных боеприпасов дефокусировщика
+  description: Три стандартных магазина к плазменному дефокусировщику Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsHAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsHHotAmmoDef
+  name: Ящик горячих боеприпасов дефокусировщика
+  description: Два горячеплазменных магазина к плазменному дефокусировщику Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsHHotAmmoDef
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsHLigAmmoDef
+  name: Ящик слабых боеприпасов дефокусировщика
+  description: Два горячеплазменных магазина к плазменному дефокусировщику Халифатского Божественного Конгомерата
+  productEntity: CDCCrateWeaponsHLigAmmoDef
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  name: Ящик стандартных боеприпасов метателя
+  description: Четыре плазменных ёмкости и три с сенсебилизатором
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaStd
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoCDC  
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
+  name: Ящик горячеплазменных боеприпасов метателя
+  description: Четыре горячеплазменных ёмкости и три с сенсебилизатором
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaHot
+  cost:
+    DefChip_currency: 7
+  categories:
+  - DefShopAmmoCDC  
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
+  name: Ящик cлабоплазменных боеприпасов метателя
+  description: Четыре слабоплазменных ёмкости и три с сенсебилизатором
+  productEntity: CDCCrateWeaponsAmmoThrowerBeakerPlasmaCold
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoCDC
+  
+- type: listing
+  id: CDCCrateWeaponsAmmoFoam
+  name: Пенаобразующая ёмкость, жидкий алюминий и стеклянный мензурки.
+  description: Ящик пенаобразования
+  productEntity: CDCCrateWeaponsAmmoFoam
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoCDC 
+#------------------------------Советско-Петрищевская-------------
+#----------------Ящики------------
+- type: entity
+  id: PetrCratePistAmmoDef
+  parent: PetrCrate
+  name: Ящик лёгких боеприпасов Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик патронов к лёгкому оружию Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrMagazinePistol
+      - id: PetrBoxRevolver
+      - id: PetrBoxRevolver
+      
+- type: entity
+  id: PetrCrateAutoAmmoDef
+  parent: PetrCrate
+  name: Ящик скорострельных боеприпасов Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик патронов к скорострельному оружию Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineSMG
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      - id: PetrMagazineRifle
+      
+- type: entity
+  id: PetrCrateShotAmmoDef
+  parent: PetrCrate
+  name: Ящик боеприпасов дробовика Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик патронов к дробовику Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      - id: PetrMagazineShotgun
+      
+- type: entity
+  id: PetrCrateLMGAmmoDef
+  parent: PetrCrate
+  name: Ящик боеприпасов пулемёта Петрищевцев
+  suffix: Петрищев, Оборона
+  description: Большой ящик цинков к пулемёту Петрищевцев
+  components:
+  - type: StorageFill
+    contents:
+      - id: PetrMagazineRifleBox
+      - id: PetrMagazineRifleBox
+      - id: PetrMagazineRifleBox
+#----------------Листинги------------
+- type: listing
+  id: PetrCratePistAmmoDef
+  name: Ящик лёгких боеприпасов Петрищевцев
+  description: Большой ящик патронов к лёгкому оружию Петрищевцев
+  productEntity: PetrCratePistAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: PetrCrateAutoAmmoDef
+  name: Ящик скорострельных боеприпасов Петрищевцев
+  description: Большой ящик патронов к скорострельному оружию Петрищевцев
+  productEntity: PetrCrateAutoAmmoDef
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: PetrCrateShotAmmoDef
+  name: Ящик боеприпасов дробовика Петрищевцев
+  description: Большой ящик патронов к дробовику Петрищевцев
+  productEntity: PetrCrateShotAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: PetrCrateLMGAmmoDef
+  name: Ящик боеприпасов пулемёта Петрищевцев
+  description: Большой ящик цинков к пулемёту Петрищевцев
+  productEntity: PetrCrateLMGAmmoDef
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: USSPCrateBatteryL
+  name: Ящик лёгких батарей СССП
+  description: 8 малых лёгких батарей и 4 больших
+  productEntity: USSPCrateBatteryL
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: USSPCrateBatteryH
+  name: Ящик тяжёлых батарей СССП
+  description: 6 малых тяжёлых батарей и 6 больших
+  productEntity: USSPCrateBatteryH
+  cost:
+    DefChip_currency: 5
+  categories:
+  - DefShopAmmoUSSP
+
+- type: listing
+  id: USSPCrateBatteryShot
+  name: Ящик дробовиковых батарей СССП
+  description: 5 дробовиковых батарей
+  productEntity: USSPCrateBatteryShot
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: USSPCrateBatteryLMG
+  name: Ящик батарей пулемёта СССП
+  description: 3 батареи пулемёта
+  productEntity: USSPCrateBatteryLMG
+  cost:
+    DefChip_currency: 4
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: USSPCrateBatterySing
+  name: Ящик батарей притяжителя СССП
+  description: 3 батареи притяжителя
+  productEntity: USSPCrateBatterySing
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUSSP
+  
+- type: listing
+  id: USSPCrateBatteryRadio
+  name: Ящик батарей излучателя СССП
+  description: 3 батареи излучателя
+  productEntity: USSPCrateBatteryRadio
+  cost:
+    DefChip_currency: 6
+  categories:
+  - DefShopAmmoUSSP
+#------------------------------Корпоративная-------------
+#----------------Ящики------------
+
+#----------------Листинги------------
+
+#-------------------------------------------Категория взрывчатки----------
+- type: listing
+  id: CrateSensitizer
+  name: Ящик сенсебилизатора
+  description: Жидкость, позволяющая взрывоопасным соединениям стать активней.
+  productEntity: CrateSensitizer
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopExplosives
+  
+- type: listing
+  id: CrateProviderFlare
+  name: Ящик коробок фаеров
+  description: Принесёт свет во тьму и весьма на долго.
+  productEntity: CrateProviderFlare
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopExplosives
+  
+- type: listing
+  id: CrateBoxLightBomb
+  name: Ящик световых шашек
+  description: Принесёт много света во тьму, но не очень на долго.
+  productEntity: CrateBoxLightBomb
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopExplosives
+  
+- type: listing
+  id: CrateBoxExGrenade
+  name: Ящик гранат
+  description: Позволит быстро отбиться от всякой шоблы, что прогрызает сюда дорогу.
+  productEntity: CrateBoxExGrenade
+  cost:
+    DefChip_currency: 3
+  categories:
+  - DefShopExplosives
+#-------------------------------------------Категория сельхоз----------
+- type: listing
+  id: CrateNPCCow
+  name: Ящик с коровй
+  description: Тут вам и молоко и шкура.
+  productEntity: CrateNPCCow
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopAnymals
+
+- type: listing
+  id: CrateNPCSheep
+  name: Ящик с овцой
+  description: Тут вам шерсть для пошива мешков.
+  productEntity: CrateNPCSheep
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopAnymals
+
+- type: listing
+  id: WaterTankHighCapacity
+  name: Резервуар с водой
+  description: Уталит жажду солдат или поможит в химических или бытовых нуждах.
+  productEntity: WaterTankHighCapacity
+  cost:
+    DefChip_currency: 2
+  categories:
+  - DefShopAnymals
+
+- type: listing
+  id: ClothSeedsCrate
+  name: Ящик текстильных семян
+  description: Хлопок и лён для выращиванья растений текстильной промышленности.
+  productEntity: ClothSeedsCrate
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopAnymals  
+
+- type: listing
+  id: CratePolymerizer
+  name: Ящик с полимеризатором
+  description: Помогает в создании элестана.
+  productEntity: CratePolymerizer
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopAnymals 
+  
+- type: listing
+  id: CrateFoodPizza
+  name: Ящик пиццы
+  description: Самая быстрая еда, котору удалось достать в этой глуши.
+  productEntity: CrateFoodPizza
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopAnymals 
+  
+- type: listing
+  id: CrateFoodSoftdrinks
+  name: Ящик газировки
+  description: Поможет промочить горло и выброс сахара в кровь для прилива энергии!
+  productEntity: CrateFoodSoftdrinks
+  cost:
+    DefChip_currency: 1
+  categories:
+  - DefShopAnymals 
+#------------------------------------------------------Консоли магазина----------------------  
+#--------------------------------------------Умпорская-------------
+- type: entity
+  id: ComputerCargoDefUmpor
+  parent: [BaseComputerAiAccess, StorePresetDefShopUmpor]
+  name: консоль армейских поставок
+  description: Это система, которая служит для обмена чипов обороны на поставки из штаба подразделения.
+  suffix: Умпорский, Оборона
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: supply
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: CorpShopMachineMachineCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Anchorable
+    flags: Anchorable
+#--------------------------------------------Миртанийская-------------
+- type: entity
+  id: ComputerCargoDefMirt
+  parent: [BaseComputerAiAccess, StorePresetDefShopMirt]
+  name: консоль армейских поставок
+  description: Это система, которая служит для обмена чипов обороны на поставки из штаба подразделения.
+  suffix: Миртан, Оборона
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: supply
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: CorpShopMachineMachineCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Anchorable
+    flags: Anchorable
+#--------------------------------------------Конгломератовская-------------
+- type: entity
+  id: ComputerCargoDefCDC
+  parent: [BaseComputerAiAccess, StorePresetDefShopCDC]
+  name: консоль армейских поставок
+  description: Это система, которая служит для обмена чипов обороны на поставки из штаба подразделения.
+  suffix: Конгломерат, Оборона
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: supply
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: CorpShopMachineMachineCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Anchorable
+    flags: Anchorable
+#--------------------------------------------Советско-Петрищевская-------------
+- type: entity
+  id: ComputerCargoDefUSSP
+  parent: [BaseComputerAiAccess, StorePresetDefShopUSSP]
+  name: консоль армейских поставок
+  description: Это система, которая служит для обмена чипов обороны на поставки из штаба подразделения.
+  suffix: СССП, Оборона
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: supply
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: CorpShopMachineMachineCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Anchorable
+    flags: Anchorable
+#--------------------------------------------Корпоративная-------------
+- type: entity
+  id: ComputerCargoDefCorp
+  parent: [BaseComputerAiAccess, StorePresetDefShopCorp]
+  name: консоль армейских поставок
+  description: Это система, которая служит для обмена чипов обороны на поставки со складов Центрального Командования.
+  suffix: Корп, Оборона
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: supply
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: CorpShopMachineMachineCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Anchorable
+    flags: Anchorable

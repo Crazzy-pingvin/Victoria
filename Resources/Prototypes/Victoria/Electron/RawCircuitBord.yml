@@ -367,8 +367,8 @@
   result: SapphireCircuitBord1
   completetime: 1
   materials:
-    CooperMaterial: 10
-    SapphireMaterial: 50
+    CooperMaterial: 500
+    SapphireMaterial: 1000
 #--------------------------------------Плазкерам------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -414,8 +414,8 @@
   result: PlazСeramicsCircuitBord1
   completetime: 1
   materials:
-    CooperMaterial: 10
-    PlazСeramicsMaterial: 50
+    CooperMaterial: 500
+    PlazСeramicsMaterial: 1000
 #--------------------------------------Кремнекерам------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -461,8 +461,8 @@
   result: SiСeramicsCircuitBord1
   completetime: 1
   materials:
-    CooperMaterial: 10
-    SiСeramicsMaterial: 50
+    CooperMaterial: 500
+    SiСeramicsMaterial: 1000
 #--------------------------------------Стеклотекстолит------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -508,8 +508,8 @@
   result: FiberglassCircuitBord1
   completetime: 1
   materials:
-    CooperMaterial: 10
-    FiberglassMaterial: 50
+    CooperMaterial: 500
+    FiberglassMaterial: 1000
 #--------------------------------------Гетинакс------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -555,8 +555,8 @@
   result: GethinaxCircuitBord1
   completetime: 1
   materials:
-    CooperMaterial: 10
-    GethinaxMaterial: 50
+    CooperMaterial: 500
+    GethinaxMaterial: 1000
 #--------------------------------------Кремнеплаз------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -602,14 +602,13 @@
   result: SiPlazCircuitBord1
   completetime: 1
   materials:
-    CooperMaterial: 10
-    SiPlazMaterial: 50
+    CooperMaterial: 500
+    SiPlazMaterial: 1000
 #--------------------------------------Вакуумный станок------------------------------------------
 - type: entity
   id: VacuumMachineMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: вакуумный станок (машинная плата)
-  description: Электронная плата, необходимая для работы вакуумного станка
   components:
     - type: MachineBoard
       prototype: VacuumMachine
@@ -625,7 +624,7 @@
   id: VacuumMachine
   parent: BaseLatheLube
   name: вакуумный станок
-  description: Тяжёлая производственная машина для создания основ печатных плат
+  description: Тяжёлая производственная машина для создания основ печатных плат.
   components:
   - type: Sprite
     sprite: Victoria/Electron/vacuum_machine.rsi

@@ -101,6 +101,9 @@
       "name": "packet-pepper"
     },
     {
+      "name": "packet-razorium"
+    },
+    {
       "name": "packet-salt"
     },
     {

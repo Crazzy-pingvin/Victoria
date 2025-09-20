@@ -257,7 +257,7 @@
     - type: MachineBoard
       prototype: ReliableSubstation
       stackRequirements:
-        IndustrialCapacitor: 2
+        Capacitor: 2
         CableMV: 5
         CableHV: 5
         Cable: 5
@@ -300,7 +300,7 @@
     - type: MachineBoard
       prototype: ReliableSMES
       stackRequirements:
-        IndustrialCapacitor: 2
+        Capacitor: 2
         CableHV: 10
         Cable: 5
       componentRequirements:

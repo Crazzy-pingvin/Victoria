@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Sprite created by crazzy_pingvin",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cev"
+    },
+	{
+      "name": "hld"
+    },
+	{
+      "name": "kmp"
+    },
+	{
+      "name": "prk"
+    },
+	{
+      "name": "ruk"
+    },
+	{
+      "name": "sib"
+    },
+	{
+      "name": "slb"
+    },
+	{
+      "name": "stb"
+    },
+	{
+      "name": "usk"
+    },
+	{
+      "name": "web"
+    },
+	{
+      "name": "web_sib"
+    },
+	{
+      "name": "web_sib_ruk"
+    },
+	{
+      "name": "web_sib_ruk_cev"
+    },
+	{
+      "name": "web_sib_ruk_cev_kmp"
+    },
+	{
+      "name": "web_sib_ruk_cev_usk"
+    },
+	{
+      "name": "web_sib_ruk_cev_usk_stb"
+    },
+	{
+      "name": "web_sib_ruk_hld"
+    },
+	{
+      "name": "web_sib_ruk_hld_kmp"
+    },
+	{
+      "name": "web_sib_ruk_hld_kmp_stb"
+    },
+	{
+      "name": "web_sib_ruk_hld_ruk"
+    },
+	{
+      "name": "web_slb"
+    },
+	{
+      "name": "web_slb_ruk"
+    },
+	{
+      "name": "web_slb_ruk_cev"
+    },
+	{
+      "name": "web_slb_ruk_cev_kmp"
+    },
+	{
+      "name": "zkg"
+    }
+  ]
+}

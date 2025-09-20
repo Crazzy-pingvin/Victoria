@@ -1,0 +1,400 @@
+#------------------------------------------------------------Знамя-маяк------------------------------------------------------------------
+- type: entity
+  id: BannerObjective
+  name: Знамя-Маяк
+  description: Cердце вашей базы и ядро вашей обороны. Не дайте врагу достичь его и уничтожить, иначе ваше командование сочтёт, что ваш отряд погиб.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: SpriteFade
+  - type: Clickable
+  - type: Sprite
+    sprite: Victoria/DefenseMode/banner_objective.rsi
+    state: icon
+    noRot: true
+    drawdepth: Overdoors
+    offset: 0,1
+    layers:
+      - state: banner_objective
+        visible: true
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.9
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: FlimsyMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Transform
+    anchored: true
+  - type: PointLight
+    color: "#00f0fb"
+    radius: 3
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: DefenseTarget
+    name: Флаг
+    flag: true
+  - type: JourneyTarget
+    journeyGroup: Alpha
+    ignoreGroups: true
+    priority: 1
+    maxRange: 35
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructureBase
+#------------------------------------------------------------Ключевая подстанция------------------------------------------------------------------    
+- type: entity
+  parent: AdminSubstation
+  id: SubstationObjective
+  name: полевая подстанция
+  description: Очень важно сохранить её, чтобы поддержать оборону в рабочем состоянии.
+  suffix: Оборона, Альфа
+  components:
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: DefenseTarget
+  - type: JourneyTarget
+    journeyGroup: Alpha
+    ignoreGroups: false
+    priority: 2
+    maxRange: 40
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructureBase
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: FlimsyMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+
+- type: entity
+  parent: SubstationObjective
+  id: SubstationObjectiveBeta
+  name: полевая подстанция
+  description: Очень важно сохранить её, чтобы поддержать оборону в рабочем состоянии.
+  suffix: Оборона, Бета
+  components:
+  - type: JourneyTarget
+    journeyGroup: Beta
+    
+- type: entity
+  parent: SubstationObjective
+  id: SubstationObjectiveGamma
+  name: полевая подстанция
+  description: Очень важно сохранить её, чтобы поддержать оборону в рабочем состоянии.
+  suffix: Оборона, Гамма
+  components:
+  - type: JourneyTarget
+    journeyGroup: Beaver
+#------------------------------------------------------------Вэйпоинты----------------------------------------------------------------------
+- type: entity
+  id: WaypointBase
+  parent: MarkerBase
+  name: промежуточная точка
+  description: Неестественный свет, указывающий на внимание со стороны Улья.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: deprecated.rsi
+    state: deprecated
+  - type: JourneyTarget
+    journeyGroup: Alpha
+    ignoreGroups: false
+    priority: -100
+    maxRange: 55
+
+- type: entity
+  id: WaypointOne
+  suffix: первая
+  parent: WaypointBase
+  components:
+  - type: JourneyTarget
+    priority: -100
+    maxRange: 45
+
+- type: entity
+  id: WaypointTwo
+  suffix: вторая
+  parent: WaypointBase
+  components:
+  - type: JourneyTarget
+    priority: -90
+    maxRange: 45
+
+- type: entity
+  id: WaypointThree
+  suffix: третья
+  parent: WaypointBase
+  components:
+  - type: JourneyTarget
+    priority: -80
+    maxRange: 45
+#------------------------------------------------------------Сервера связи------------------------------------------------------------------   
+#-----------------------------------------Умпорский-------------------------------
+- type: entity
+  parent: TelecomServer
+  id: DefTelecomServerFilledUmpor
+  suffix: Оборона, Умпорский
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - UmporEncryptionKey
+#-----------------------------------------Миртан-------------------------------
+- type: entity
+  parent: TelecomServer
+  id: DefTelecomServerFilledMirt
+  suffix: Оборона, Умпорский
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - MirtEncryptionKey
+#-----------------------------------------Конгломерат-------------------------------
+- type: entity
+  parent: TelecomServer
+  id: DefTelecomServerFilledCDC
+  suffix: Оборона, Умпорский
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - CDCEncryptionKey
+      - CDCEncryptionKeyVI
+#-----------------------------------------Корпорации-------------------------------
+
+#-----------------------------------------СССП-------------------------------
+- type: entity
+  parent: TelecomServer
+  id: DefTelecomServerFilledUSSP
+  suffix: Оборона, СССП
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - USSPEncryptionKey
+      - PetrEncryptionKey
+      - USSPEncryptionKeyBifaze
+#------------------------------------------------------------Портфабы------------------------------------------------------------------   
+#-----------------------------------------Умпорский-------------------------------
+- type: entity
+  parent: ClothLathe
+  id: DefClothLatheUmpor
+  suffix: Оборона, Умпорский
+  components:
+  - type: Lathe
+    staticRecipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour
+      - RecipeUmporCoat      
+#-----------------------------------------Миртан-------------------------------
+- type: entity
+  parent: ClothLathe
+  id: DefClothLatheMirt
+  suffix: Оборона, Миртан
+  components:
+  - type: Lathe
+    staticRecipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour
+      - RecipeMirtCoat 
+#-----------------------------------------Конгломерат-------------------------------
+- type: entity
+  parent: ClothLathe
+  id: DefClothLatheCDC
+  suffix: Оборона, Конгломерат
+  components:
+  - type: Lathe
+    staticRecipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour
+      - RecipeCDCCoat 
+#-----------------------------------------Корпорации-------------------------------
+
+#-----------------------------------------СССП-------------------------------
+- type: entity
+  parent: ClothLathe
+  id: DefClothLatheUSSP
+  suffix: Оборона, СССП
+  components:
+  - type: Lathe
+    staticRecipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour
+      - RecipeUSSPCoat 
+#------------------------------------------------------------Вечные кабели------------------------------------------------------------------   
+- type: entity
+  parent: CableMV
+  id: AdminCableMV
+  name: СВ кабель
+  suffix: Админ
+  description: Сверхнадёжный средневольтный кабель.
+  components:
+  - type: RandomChangeTime
+    time: 99999
+    prob: 0
+    entity: CableMV
+#------------------------------------------------------------Железная дорога------------------------------------------------------------------    
+- type: entity
+  id: FloorRailwayEntity
+  name: железная дорога
+  description: Старомодная железная дорога для стареньких поездов в колониях.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: FloorOccluder   
+  - type: Sprite
+    sprite: Victoria/DefenseMode/railway.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: railway  
+  - type: Transform
+    anchored: true
+  - type: SyncSprite
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.9
+    sprintSpeedModifier: 0.9
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1,-1,1,1"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+#------------------------------------------------------------Стены------------------------------------------------------------------
+#--------------------------------------------------Неразрушаемые-----------------------------------------
+- type: entity
+  parent: BaseWall
+  id: WallReinforcedDef
+  name: укреплённая стена
+  suffix: Неразрушаемый
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/solid.rsi
+  - type: Icon
+    sprite: Structures/Walls/solid.rsi
+    state: rgeneric
+  - type: IconSmooth
+    key: walls
+    base: reinf_over
+    
+- type: entity
+  parent: BaseWall
+  id: WallRockDef
+  name: камень
+  suffix: Неразрушаемый
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+      - state: rock
+      - map: [ "enum.EdgeLayer.South" ]
+        state: rock_south
+      - map: [ "enum.EdgeLayer.East" ]
+        state: rock_east
+      - map: [ "enum.EdgeLayer.North" ]
+        state: rock_north
+      - map: [ "enum.EdgeLayer.West" ]
+        state: rock_west
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock
+  - type: SmoothEdge
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+#--------------------------------------------------Пропадающие-----------------------------------------
+- type: entity
+  parent: WallRockDef
+  id: WallRockDef5Min
+  name: камень
+  suffix: Неразрушаемый, 5 минут
+  description: Временная стена на базе. Должна исчезнуть через 5 минут.
+  components:
+  - type: TimedDespawn
+    lifetime: 300
+
+- type: entity
+  parent: WallRockDef5Min
+  id: WallRockDef15Min
+  name: камень
+  suffix: Неразрушаемый, 10 минут
+  description: Временная стена на базе. Должна исчезнуть через 10 минут.
+  components:
+  - type: TimedDespawn
+    lifetime: 600
+    
+- type: entity
+  parent: WallRockDef5Min
+  id: WallRockDef40Min
+  name: камень
+  description: Временная стена, удерживающая ксеноморфов подальше от вас. Должна исчезнуть через 30 минут.
+  suffix: Неразрушаемый, 30 минут
+  components:
+  - type: TimedDespawn
+    lifetime: 1800

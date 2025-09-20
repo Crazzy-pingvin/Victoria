@@ -3001,6 +3001,7 @@
     sprite: Victoria/SNK/Equipment/snk_pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
     - state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
@@ -3012,6 +3013,9 @@
   - type: Icon
     sprite: Victoria/SNK/Equipment/snk_pda.rsi
     state: pda_s
+  - type: PdaBorderColor
+    borderColor: "#5b71be"
+    accentHColor: "##478851"
 #------------------------------------КПК солдата----------    
 - type: entity
   parent: SNKPDA
@@ -3021,10 +3025,14 @@
   components:
     - type: Pda
       id: SNKIDCardSold
-      state: pda_s
     - type: Icon
       sprite: Victoria/SNK/Equipment/snk_pda.rsi
       state: pda_s
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda_s
 #------------------------------------КПК командир----------       
 - type: entity
   parent: SNKPDA
@@ -3034,10 +3042,9 @@
   components:
     - type: Pda
       id: SNKIDCardOffi
-      state: pda_o 
     - type: Icon
       sprite: Victoria/SNK/Equipment/snk_pda.rsi
-      state: pda_o      
+      state: pda_o
     - type: ActivatableUI
       key: enum.CrewMonitoringUIKey.Key
     - type: UserInterface
@@ -3050,7 +3057,12 @@
       receiveFrequencyId: CrewMonitor
     - type: WirelessNetworkConnection
       range: 500
-#------------------------------------КПК медика----------    
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda_o
+#------------------------------------КПК медика----------
 - type: entity
   parent: SNKPDA
   id: SNKPDAMed
@@ -3059,14 +3071,14 @@
   components:
     - type: Pda
       id: SNKIDCardMed
-      state: pda_m
     - type: Icon
       sprite: Victoria/SNK/Equipment/snk_pda.rsi
       state: pda_m
-    - type: HealthAnalyzer
-      scanDelay: 1
-      scanningEndSound:
-        path: "/Audio/Items/Medical/healthscanner.ogg"
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda_m
 #------------------------------------КПК инженера----------       
 - type: entity
   parent: SNKPDA
@@ -3076,10 +3088,9 @@
   components:
     - type: Pda
       id: SNKIDCardEng
-      state: pda_e
     - type: Icon
       sprite: Victoria/SNK/Equipment/snk_pda.rsi
-      state: pda_e      
+      state: pda_e
     - type: GasAnalyzer
     - type: ActivatableUI
       inHandsOnly: true
@@ -3090,6 +3101,11 @@
       interfaces:
         enum.GasAnalyzerUiKey.Key:
           type: GasAnalyzerBoundUserInterface
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda_e
 #------------------------------------------связь----------------------------------------  
 #-----------------------------канал----------------------------------------  
 - type: radioChannel

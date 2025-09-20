@@ -1,3 +1,4 @@
+#--------------------------------------------------Без наставников------------------------
 - type: sponsorGroup
   id: SponsorGroupUmpor
   color: "#7f7f7f"
@@ -73,7 +74,7 @@
   - KMLGBelt
   - KMLGBeret
   - Hooligan
-  # - SSOfficer
+  - SSOfficer
   
 - type: sponsorGroup
   id: SponsorGroupMirt
@@ -112,7 +113,7 @@
   - KMLGBelt
   - KMLGBeret
   - Hooligan
-  # - SSOfficer
+  - SSOfficer
   # Mirt
   - MirtAccent
   - MirtnKnife
@@ -160,7 +161,7 @@
   - KMLGBelt
   - KMLGBeret
   - Hooligan
-  # - SSOfficer
+  - SSOfficer
   # Mirt
   - MirtAccent
   - MirtnKnife
@@ -221,7 +222,7 @@
   - KMLGBelt
   - KMLGBeret
   - Hooligan
-  # - SSOfficer
+  - SSOfficer
   # Mirt
   - MirtAccent
   - MirtnKnife
@@ -252,7 +253,7 @@
   - NoocHardsuitField
   - NoocCap
   - NoocCloak
-  # - Brigmedic
+  - Brigmedic
   
 - type: sponsorGroup
   id: SponsorGroupOPZ
@@ -291,7 +292,7 @@
   - KMLGBelt
   - KMLGBeret
   - Hooligan
-  # - SSOfficer
+  - SSOfficer
   # Mirt
   - MirtAccent
   - MirtnKnife
@@ -322,5 +323,374 @@
   - NoocHardsuitField
   - NoocCap
   - NoocCloak
-  # - Brigmedic
+  - Brigmedic
   # OPZ
+#--------------------------------------------------С наставниками------------------------
+- type: sponsorGroup
+  id: SponsorGroupUmporAndTeachers
+  color: "#7f7f7f"
+  extraCharSlots: 0
+  serverPriorityJoin: false
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher
+  
+- type: sponsorGroup
+  id: SponsorGroupUsspAndTeachers
+  color: "#f60000"
+  extraCharSlots: 1
+  serverPriorityJoin: false
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  # USSP
+  - UsspAccent
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher
+  
+- type: sponsorGroup
+  id: SponsorGroupSNKAndTeachers
+  color: "#394e35"
+  extraCharSlots: 2
+  serverPriorityJoin: false
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  # USSP
+  - UsspAccent
+  #SNK-KMLG
+  - KMLGCapP
+  - KMLGBandana
+  - KMLGEpolets10
+  - KMLGEpolets20
+  - KMLGEpolets30
+  - KMLGCoat
+  - KMLGCepka
+  - SNKShapkaStd
+  - SNKShapkaLes
+  - SNKShapkaZim
+  - SNKCloakLes
+  - SNKCloakPes
+  - SNKCloakZim
+  - KMLGUniformRepairman
+  - KMLGBelt
+  - KMLGBeret
+  - Hooligan
+  - SSOfficer
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher
+  
+- type: sponsorGroup
+  id: SponsorGroupMirtAndTeachers
+  color: "#a73800"
+  extraCharSlots: 3
+  serverPriorityJoin: true
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  # USSP
+  - UsspAccent
+  #SNK-KMLG
+  - KMLGCapP
+  - KMLGBandana
+  - KMLGEpolets10
+  - KMLGEpolets20
+  - KMLGEpolets30
+  - KMLGCoat
+  - KMLGCepka
+  - SNKShapkaStd
+  - SNKShapkaLes
+  - SNKShapkaZim
+  - SNKCloakLes
+  - SNKCloakPes
+  - SNKCloakZim
+  - KMLGUniformRepairman
+  - KMLGBelt
+  - KMLGBeret
+  - Hooligan
+  - SSOfficer
+  # Mirt
+  - MirtAccent
+  - MirtnKnife
+  - MirtMaskGas
+  - MirtCloakOfInk
+  - MirtHelmetInk
+  - MirtGlassesRaz
+  - MirtCloakSP
+  - MirtnSword
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher
+  
+- type: sponsorGroup
+  id: SponsorGroupConglAndTeachers
+  color: "#b68448"
+  extraCharSlots: 4
+  serverPriorityJoin: true
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  # USSP
+  - UsspAccent
+  #SNK-KMLG
+  - KMLGCapP
+  - KMLGBandana
+  - KMLGEpolets10
+  - KMLGEpolets20
+  - KMLGEpolets30
+  - KMLGCoat
+  - KMLGCepka
+  - SNKShapkaStd
+  - SNKShapkaLes
+  - SNKShapkaZim
+  - SNKCloakLes
+  - SNKCloakPes
+  - SNKCloakZim
+  - KMLGUniformRepairman
+  - KMLGBelt
+  - KMLGBeret
+  - Hooligan
+  - SSOfficer
+  # Mirt
+  - MirtAccent
+  - MirtnKnife
+  - MirtMaskGas
+  - MirtCloakOfInk
+  - MirtHelmetInk
+  - MirtGlassesRaz
+  - MirtCloakSP
+  - MirtnSword
+  #Congl
+  - ConglAccent
+  - CDCUniformImam
+  - CDCTurban
+  - CDCFez
+  - Quran
+  - CDCCepka
+  - CDCBeltTech
+  - CDCBuckler
+  - CDCCap
+  - CDCGloves
+  - CDCGlovesTech
+  - CDCBeltOffi
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher
+  
+- type: sponsorGroup
+  id: SponsorGroupNoocAndTeachers
+  color: "#00a2e9"
+  extraCharSlots: 5
+  serverPriorityJoin: true
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  # USSP
+  - UsspAccent
+  #SNK-KMLG
+  - KMLGCapP
+  - KMLGBandana
+  - KMLGEpolets10
+  - KMLGEpolets20
+  - KMLGEpolets30
+  - KMLGCoat
+  - KMLGCepka
+  - SNKShapkaStd
+  - SNKShapkaLes
+  - SNKShapkaZim
+  - SNKCloakLes
+  - SNKCloakPes
+  - SNKCloakZim
+  - KMLGUniformRepairman
+  - KMLGBelt
+  - KMLGBeret
+  - Hooligan
+  - SSOfficer
+  # Mirt
+  - MirtAccent
+  - MirtnKnife
+  - MirtMaskGas
+  - MirtCloakOfInk
+  - MirtHelmetInk
+  - MirtGlassesRaz
+  - MirtCloakSP
+  - MirtnSword
+  #Congl
+  - ConglAccent
+  - CDCUniformImam
+  - CDCTurban
+  - CDCFez
+  - Quran
+  - CDCCepka
+  - CDCBeltTech
+  - CDCBuckler
+  - CDCCap
+  - CDCGloves
+  - CDCGlovesTech
+  - CDCBeltOffi
+  #Nooc
+  - NoocAccent
+  - LaserPointer
+  - NoocPistol
+  - NoocPowerCellTwo
+  - NoocHardsuitField
+  - NoocCap
+  - NoocCloak
+  - Brigmedic
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher
+  
+- type: sponsorGroup
+  id: SponsorGroupOPZAndTeachers
+  color: "#0018ba"
+  extraCharSlots: 6
+  serverPriorityJoin: true
+  prototypes:
+  #Umpor
+  - UmporAccent
+  - UmpornKnife
+  - UmporSpade
+  - UmporHatchet
+  - UmporCapP
+  - UmporRCD
+  - UmporBeret
+  - UmporeBeltMed
+  - UmporCap
+  - UmporHealthAnalyzerUnpowered
+  # USSP
+  - UsspAccent
+  #SNK-KMLG
+  - KMLGCapP
+  - KMLGBandana
+  - KMLGEpolets10
+  - KMLGEpolets20
+  - KMLGEpolets30
+  - KMLGCoat
+  - KMLGCepka
+  - SNKShapkaStd
+  - SNKShapkaLes
+  - SNKShapkaZim
+  - SNKCloakLes
+  - SNKCloakPes
+  - SNKCloakZim
+  - KMLGUniformRepairman
+  - KMLGBelt
+  - KMLGBeret
+  - Hooligan
+  - SSOfficer
+  # Mirt
+  - MirtAccent
+  - MirtnKnife
+  - MirtMaskGas
+  - MirtCloakOfInk
+  - MirtHelmetInk
+  - MirtGlassesRaz
+  - MirtCloakSP
+  - MirtnSword
+  #Congl
+  - ConglAccent
+  - CDCUniformImam
+  - CDCTurban
+  - CDCFez
+  - Quran
+  - CDCCepka
+  - CDCBeltTech
+  - CDCBuckler
+  - CDCCap
+  - CDCGloves
+  - CDCGlovesTech
+  - CDCBeltOffi
+  #Nooc
+  - NoocAccent
+  - LaserPointer
+  - NoocPistol
+  - NoocPowerCellTwo
+  - NoocHardsuitField
+  - NoocCap
+  - NoocCloak
+  - Brigmedic
+  # OPZ
+  #Teachers
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher

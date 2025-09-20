@@ -7,6 +7,15 @@
     sprite: Structures/Doors/Airlocks/Standard/freezer.rsi
   - type: Wires
     layoutId: AirlockService
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: Airlock

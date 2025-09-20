@@ -88,9 +88,9 @@
 - type: entity
   parent: ClothingBackpack
   id: UmporBackpack
-  name: name-of-UmporBackpack
+  name: умпорский армейский рюкзак
   suffix: Умпорский
-  description: description-of-UmporBackpack
+  description: Стандартный армейский рюкзак Умпорской Федерации с полевым одеялом
   components:
   - type: Sprite
     sprite: Victoria/Umpor/Equipment/umpor_back.rsi
@@ -135,6 +135,7 @@
     grid:
     - 0,0,7,4
 #------------------------------------сапоги---------- 
+#--------------------------обычные---------- 
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: UmporBoots
@@ -146,6 +147,36 @@
     sprite: Victoria/Umpor/Equipment/umpor_boots.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/umpor_boots.rsi
+#--------------------------ускоряющие---------- 
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: UmporBootsFast
+  name: Успорские амортизирующие сапоги
+  suffix: Умпорский
+  description: В эти сапоги встроена простая, но эффективная система амортизации и обратного импульса, позволяющая носителю передвигаться куда быстрей.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Equipment/umpor_fast_boots.rsi
+  - type: Clothing
+    sprite: Victoria/Umpor/Equipment/umpor_fast_boots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.25
+    sprintModifier: 1.25
+#--------------------------------------------------плащ-------------------------------------- 
+- type: entity
+  parent: ClothingNeckBase
+  id: UmporCloakOf
+  name: Плащ старшего офицера Федерации
+  suffix: Конгломерат
+  description: Плащ, который носят старшие офицеры Умпорской Федерации на торжественные церемонии или для поддержки боевого духа солдат.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Equipment/umpor_cloak.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.9
+        Poison: 0.9
 #------------------------------------шлем---------- 
 - type: entity
   parent: ClothingHeadHelmetBasic
@@ -578,6 +609,7 @@
       - id: Screwdriver
       - id: Wirecutter
       - id: Welder
+      - id: Multitool 
       - id: UmporHatchet
       - id: UmporSpade
       - id: UmpornKnife
@@ -670,7 +702,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 35
 #------------------------------------автомат----------         
 - type: entity
   id: UmporBulletLightRifle
@@ -711,6 +743,10 @@
   - type: Tag
     tags:
       - UmporCartridgeHeavyRifle
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      UmporCartridgeHeavyRifle: 1
 #------------------------------------автомат---------- 
 - type: Tag
   id: UmporCartridgeLightRifle
@@ -757,6 +793,7 @@
     whitelist:
       tags:
         - UmporCartridgeHeavyRifle
+        - UmporSniperCartridgeHeavyRifle
     proto: UmporCartridgeHeavyRifle
     capacity: 12
   - type: Item
@@ -940,6 +977,7 @@
         whitelist:
           tags:
             - UmporCartridgeHeavyRifle
+            - UmporSniperCartridgeHeavyRifle
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -1345,6 +1383,7 @@
     sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
     - state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
@@ -1366,7 +1405,11 @@
   components:
     - type: Pda
       id: UmporIDCardSolder
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
@@ -1380,7 +1423,11 @@
   components:
     - type: Pda
       id: UmporIDCardOfficer
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
@@ -1394,7 +1441,11 @@
   components:
     - type: Pda
       id: UmporIDCardEngener
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
@@ -1408,7 +1459,11 @@
   components:
     - type: Pda
       id: UmporIDCardMedic
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
@@ -1422,7 +1477,11 @@
   components:
     - type: Pda
       id: UmporIDCardLogist
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
@@ -1484,7 +1543,20 @@
     sprite: Victoria/Umpor/Equipment/umpor_garniture.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/umpor_garniture.rsi
-#-----------------------------------------------------роли------------------------------------------------------      
+#-----------------------------------------------------роли------------------------------------------------------  
+- type: entity
+  parent: UmporBackpack
+  id: UmporBackpackFilled
+  suffix: Полный, Umpor
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskGas
+      - id: FoodTinMRE
+      - id: FoodTinMRE
+      - id: DrinkWaterBottleFull
+      - id: Gauze
+      - id: OxygenTankFilled    
 #------------------------------------офицер---------- 
 - type: playTimeTracker
   id: JobEventUmporOfficer
@@ -1713,7 +1785,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 12
+        Piercing: 15
         
 - type: entity
   id: UmporPelletShotgunSpread
@@ -1722,7 +1794,7 @@
   components:
   - type: ProjectileSpread
     proto: UmporPelletShotgun
-    count: 6
+    count: 7
     spread: 15        
 #-----------------------картридж----------------------
 - type: Tag
@@ -3321,3 +3393,297 @@
   - type: Sprite
     sprite: Victoria/Umpor/umpor_banner.rsi
     state: banner_umpor_std 
+#------------------------------------------куртка---------------------------------
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: UmporCoat
+  name: Тёплая армейская куртка
+  suffix: Умпорский
+  description: Тёплая куртка, которую обожают в армии, когда приходится вести дела на замёрзших планетах.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Equipment/umpor_coat.rsi
+  - type: Clothing
+    sprite: Victoria/Umpor/Equipment/umpor_coat.rsi
+  - type: ToggleableClothing
+    clothingPrototype: UmporCoatHood
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+  - type: Armor 
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Cold: 0.7
+#-----------------------------------------капюшон куртки-------------------------------
+- type: entity
+  parent: ClothingHeadHatHoodWinterDefault
+  id: UmporCoatHood
+  name: Капюшон армейской куртки
+  suffix: Умпорский
+  description: Закрывает голову от холода и стужи.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Equipment/umpor_coat_hood.rsi
+  - type: Clothing
+    sprite: Victoria/Umpor/Equipment/umpor_coat_hood.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Cold: 0.85
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1
+#-----------------------------------------гранатомёт-------------------------------
+- type: Tag
+  id: UmporCartridgeRocket
+  
+- type: Tag
+  id: UmporRocket
+#------------------------------разрывной заряд---------------
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: UmporCartridgeRocketExp
+  name: Разрывной заряд
+  parent: BaseBullet
+  suffix: Умпорский
+  description: Стандартная тяжёлая ракета для Умпорского реактивного гранатомёта "Ярость". Пробивает ноократские танки так же хорошо, как горячий нож режет масло.
+  components:
+  # - type: CartridgeAmmo
+    # proto: BulletRocket
+    # deleteOnSpawn: true
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
+  - type: RepeatingTrigger
+    delay: 0.6 # line of fire as well as if it hits something
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 9
+    intensitySlope: 3
+    totalIntensity: 90 # about a ~3 tile radius
+    canCreateVacuum: false
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: Tag
+    tags:
+      - UmporCartridgeRocket
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+#------------------------------осколочный заряд---------------
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: UmporCartridgeRocketFrag
+  name: Осколочный заряд
+  parent: BaseBullet
+  suffix: Умпорский
+  description: Стандартная ракета с осколочным зарядом для Умпорского реактивного гранатомёта "Ярость". Её трижды пыталось запретить ГИОР. Разрывает пехоту в мелкий фарш.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
+  - type: RepeatingTrigger
+    delay: 0.6 # line of fire as well as if it hits something
+  - type: ProjectileGrenade
+    fillPrototype: PelletClusterLethal
+    capacity: 60
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: Tag
+    tags:
+      - UmporCartridgeRocket
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+#------------------------------дальнобойный заряд---------------
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: UmporCartridgeRocketFar
+  name: Дальнобойный заряд
+  parent: BaseBullet
+  suffix: Умпорский
+  description: Дальнобойная тяжёлая ракета для Умпорского реактивного гранатомёта "Ярость". Летит дальше, но обладает мешьней разрывной массой.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
+  - type: RepeatingTrigger
+    delay: 1 # line of fire as well as if it hits something
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 6
+    intensitySlope: 3
+    totalIntensity: 60 # about a ~3 tile radius
+    canCreateVacuum: false
+  - type: TimedDespawn
+    lifetime: 1.1
+  - type: Tag
+    tags:
+      - UmporCartridgeRocket
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+#------------------------------заряд для заряжания---------------  
+#------------------------------разрывной заряд---------------  
+- type: entity
+  id: UmporRocketExp
+  parent: BaseItem
+  name: разрывная умпорская ракета
+  suffix: Умпорский
+  description:  Стандартная тяжёлая ракета для Умпорского реактивного гранатомёта "Ярость". Пробивает ноократские танки так же хорошо, как горячий нож режет масло.
+  components:
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 8
+    intensitySlope: 3
+    totalIntensity: 30 # about a ~3 tile radius
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: rocket
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 5000000
+    startingCharge: 5000000
+  - type: Tag
+    tags:
+      - UmporRocket
+  - type: Appearance
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: ProjectileBatteryAmmoProvider
+    proto: UmporCartridgeRocketExp
+    fireCost: 5000000
+#------------------------------осколочный заряд---------------
+- type: entity
+  id: UmporRocketFrag
+  parent: BaseItem
+  name: осколочная умпорская ракета
+  suffix: Умпорский
+  description: Стандартная ракета с осколочным зарядом для Умпорского реактивного гранатомёта "Ярость". Её трижды пыталось запретить ГИОР. Разрывает пехоту в мелкий фарш.
+  components:
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 6
+    intensitySlope: 3
+    totalIntensity: 60 # about a ~2 tile radius
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: rocket
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o1
+      shader: unshaded
+  - type: Battery
+    maxCharge: 5000000
+    startingCharge: 5000000
+  - type: Tag
+    tags:
+      - UmporRocket
+  - type: Appearance
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: ProjectileBatteryAmmoProvider
+    proto: UmporCartridgeRocketFrag
+    fireCost: 5000000
+#------------------------------дальнобойный заряд---------------  
+- type: entity
+  id: UmporRocketFar
+  parent: BaseItem
+  name: дальнобойная умпорская ракета
+  suffix: Умпорский
+  description:  Стандартная тяжёлая ракета для Умпорского реактивного гранатомёта "Ярость". Летит дальше, но обладает мешьней разрывной массой.
+  components:
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 6
+    intensitySlope: 3
+    totalIntensity: 60 # about a ~3 tile radius
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: rocket
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o3
+      shader: unshaded
+  - type: Battery
+    maxCharge: 5000000
+    startingCharge: 5000000
+  - type: Tag
+    tags:
+      - UmporRocket
+  - type: Appearance
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: ProjectileBatteryAmmoProvider
+    proto: UmporCartridgeRocketFar
+    fireCost: 5000000
+#------------------------------сам гранатомёт----------------
+- type: entity
+  name: Умпорский РГ-5 "Ярость"
+  parent: BaseWeaponLauncher
+  id: UmporWeaponLauncherRocket
+  suffix: Умпорский
+  description: Этот реактивный гранатомёт принёс немало горя семьям солдат ноократской армии. На счету этого простого и якобы морально устаревшего оружия десятки тысяч единиц техники и миллионы единиц пехоты.
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_launcher.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
+  - type: Gun
+    fireRate: 1
+    projectileSpeed: 20
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: UmporRocketExp
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - UmporRocket
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+    

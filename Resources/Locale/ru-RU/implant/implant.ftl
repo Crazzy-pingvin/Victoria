@@ -14,6 +14,8 @@ implanter-empty-text = Пусто
 implanter-label = [color=green]{ $implantName }[/color]
     Режим: [color=white]{ $modeString }[/color]
 implanter-contained-implant-text = [color=green]{ $desc }[/color]
+action-name-toggle-fake-mindshield = [color=green]Переключить лже-щит разума[/color]
+action-description-toggle-fake-mindshield = Выключить/включить лже-щит разума
 
 ## Implanter Actions
 

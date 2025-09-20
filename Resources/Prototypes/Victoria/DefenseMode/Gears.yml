@@ -1,0 +1,2692 @@
+#--------------------------------------------------------------------Умпорские-----------------------------------------
+#----------------------------------------------------Командор--------------------------
+- type: startingGear
+  id: GearDefUmporCom
+  equipment:
+    jumpsuit: UmporUniformOficier
+    back: UmporBackpackFilledPistol
+    shoes: UmporBoots
+    head: UmporCap
+    outerClothing: UmporArmorBasic
+    id: DefPDAComanderUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltAssault
+    neck: UmporCloakOf
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+    pocket2: UmporRubberStamp
+
+- type: entity
+  parent: UmporIDCardOfficer
+  id: DefIDCardComanderUmpor
+  name: ID-карта командора
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefComander
+    name: командор
+
+- type: entity
+  parent: UmporPDAOfficer
+  id: DefPDAComanderUmpor
+  name: КПК умпорского командира
+  suffix: Оборона,Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardComanderUmpor
+
+- type: thiefBackpackSet
+  id: SetGearDefUmporCom
+  name: Набор умпорского командора
+  description: Одежда и базовое снаряжение командора Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_cloak.rsi
+    state: icon
+  content:
+  - UmporUniformOficier
+  - UmporBackpackFilledPistol
+  - UmporBoots
+  - UmporCap
+  - UmporArmorBasic
+  - DefPDAComanderUmpor
+  - UmporHeadset
+  - UmporeBeltAssault
+  - UmporCloakOf
+  - DefGlass
+  - UmporRubberStamp
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporCom
+  name: Набор умпорского командора
+  description: Одежда и базовое снаряжение командора Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_thief.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporCom
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Офицер--------------------------
+- type: startingGear
+  id: GearDefUmporOfi
+  equipment:
+    jumpsuit: UmporUniformOficier
+    back: UmporBackpackFilledPistol
+    shoes: UmporBoots
+    head: UmporCap
+    outerClothing: UmporArmorBasic
+    id: DefPDAOfficerUmpor
+    ears: UmporHeadset
+    eyes: DefGlass
+    belt: UmporeBeltAssault
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: UmporIDCardOfficer
+  id: DefIDCardOfficerUmpor
+  name: ID-карта офицера
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefOfficer
+    name: офицер
+
+- type: entity
+  parent: UmporPDAOfficer
+  id: DefPDAOfficerUmpor
+  name: КПК умпорского офицера
+  suffix: Оборона,Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardOfficerUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporOfi
+  name: Набор умпорского офицера
+  description: Одежда и базовое снаряжение офицера Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_cap.rsi
+    state: icon
+  content:
+  - UmporUniformOficier
+  - UmporBackpackFilledPistol
+  - UmporBoots
+  - UmporCap
+  - UmporArmorBasic
+  - DefPDAOfficerUmpor
+  - UmporHeadset
+  - DefGlass
+  - UmporeBeltAssault
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporOfi
+  name: Набор умпорского офицера
+  description: Одежда и базовое снаряжение офицера Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporOfi
+#----------------------------------------------------Доп.Офицер--------------------------
+- type: startingGear
+  id: GearDefUmporOfiD
+  equipment:
+    jumpsuit: UmporUniformOficier
+    back: UmporBackpackFilledPistol
+    shoes: UmporBoots
+    head: UmporHelmet
+    outerClothing: UmporArmorMiddle
+    id: DefPDAOfficerDopUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltAssaultFilled
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: UmporIDCardOfficer
+  id: DefIDCardOfficerDopUmpor
+  name: ID-карта офицера
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefOfficerDop
+    name: офицер
+
+- type: entity
+  parent: UmporPDAOfficer
+  id: DefPDAOfficerDopUmpor
+  name: КПК умпорского офицера
+  suffix: Оборона,Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardOfficerDopUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporOfiD
+  name: Набор умпорского офицера доп.отряда
+  description: Одежда и базовое снаряжение офицера доп.отряда Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_cap.rsi
+    state: icon
+  content:
+  - UmporUniformOficier
+  - UmporBackpackFilledPistol
+  - UmporBoots
+  - UmporHelmet
+  - UmporArmorMiddle
+  - DefPDAOfficerDopUmpor
+  - UmporHeadset
+  - DefGlass
+  - UmporeBeltAssaultFilled
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporOfiD
+  name: Набор умпорского офицера доп.отряда
+  description: Одежда и базовое снаряжение офицера доп.отряда Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporOfiD
+#----------------------------------------------------Специалист--------------------------
+- type: startingGear
+  id: GearDefUmporSPC
+  equipment:
+    jumpsuit: UmporUniformSoldier
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporHelmet
+    id: DefPDASPCUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltAssault
+    gloves: UmporGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxUmporSPC
+
+- type: entity
+  parent: UmporIDCardSolder
+  id: DefIDCardSPCUmpor
+  name: ID-карта специалиста
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefSpecialist
+    name: специалист
+
+- type: entity
+  parent: UmporPDASolder
+  id: DefPDASPCUmpor
+  name: КПК умпорского специалиста
+  suffix: Оборона,Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardSPCUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporSPC
+  name: Набор умпорского специалиста
+  description: Одежда и базовое снаряжение специалиста Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Armor/umpor_armor_mid.rsi
+    state: icon
+  content:
+  - UmporUniformSoldier
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporHelmet
+  - DefPDASPCUmpor
+  - UmporHeadset
+  - UmporeBeltAssault
+  - UmporGlovesFingerless
+  - DefGlass
+  - ToolboxUmporSPC
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporSPC
+  name: Набор умпорского офицера специалиста
+  description: Одежда и базовое снаряжение специалиста Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporSPC
+#----------------------------------------------------Доп.Специалист--------------------------
+- type: startingGear
+  id: GearDefUmporSPCD
+  equipment:
+    jumpsuit: UmporUniformSoldier
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporHelmet
+    id: DefPDASPCDopUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltAssaultFilled
+    gloves: UmporGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxUmporDSPC
+
+- type: entity
+  parent: UmporIDCardSolder
+  id: DefIDCardSPCDopUmpor
+  name: ID-карта специалиста
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefSpecialistDop
+    name: специалист
+
+- type: entity
+  parent: UmporPDASolder
+  id: DefPDASPCDopUmpor
+  name: КПК умпорского специалиста
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardSPCDopUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporSPCD
+  name: Набор умпорского специалиста доп.отряда
+  description: Одежда и базовое снаряжение специалиста доп.отряда Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Armor/umpor_armor_mid.rsi
+    state: icon
+  content:
+  - UmporUniformSoldier
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporHelmet
+  - DefPDASPCDopUmpor
+  - UmporHeadset
+  - UmporeBeltAssaultFilled
+  - UmporGlovesFingerless
+  - DefGlass
+  - ToolboxUmporDSPC
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporSPCD
+  name: Набор умпорского офицера специалиста доп.отряда
+  description: Одежда и базовое снаряжение специалиста доп.отряда Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporSPCD
+#----------------------------------------------------Солдат--------------------------
+- type: startingGear
+  id: GearDefUmporSol
+  equipment:
+    jumpsuit: UmporUniformSoldier
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporHelmet
+    id: DefPDASolderUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltAssault
+    gloves: UmporGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxUmporSol
+
+- type: entity
+  parent: UmporIDCardSolder
+  id: DefIDCardSolderUmpor
+  name: ID-карта солдата
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefSolder
+    name: солдат
+
+- type: entity
+  parent: UmporPDASolder
+  id: DefPDASolderUmpor
+  name: КПК умпорского солдата
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardSolderUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporSol
+  name: Набор умпорского солдата
+  description: Одежда и базовое снаряжение солдата Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Armor/umpor_helmet.rsi
+    state: icon
+  content:
+  - UmporUniformSoldier
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporHelmet
+  - DefPDASolderUmpor
+  - UmporHeadset
+  - UmporeBeltAssault
+  - UmporGlovesFingerless
+  - DefGlass
+  - ToolboxUmporSol
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporSol
+  name: Набор умпорского офицера солдата
+  description: Одежда и базовое снаряжение солдата Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporSol
+#----------------------------------------------------Доп.Солдат--------------------------
+- type: startingGear
+  id: GearDefUmporSolD
+  equipment:
+    jumpsuit: UmporUniformSoldier
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporHelmet
+    id: DefPDASolderDopUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltAssaultFilled
+    gloves: UmporGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxUmporSol
+
+- type: entity
+  parent: UmporIDCardSolder
+  id: DefIDCardSolderDopUmpor
+  name: ID-карта солдата
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefSolderDop
+    name: солдат
+
+- type: entity
+  parent: UmporPDASolder
+  id: DefPDASolderDopUmpor
+  name: КПК умпорского солдата
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardSolderDopUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporSolD
+  name: Набор умпорского солдата доп.отряда
+  description: Одежда и базовое снаряжение солдата доп.отряда Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Armor/umpor_helmet.rsi
+    state: icon
+  content:
+  - UmporUniformSoldier
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporHelmet
+  - DefPDASolderDopUmpor
+  - UmporHeadset
+  - UmporeBeltAssaultFilled
+  - UmporGlovesFingerless
+  - DefGlass
+  - ToolboxUmporSol
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporSolD
+  name: Набор умпорского офицера солдата доп.отряда
+  description: Одежда и базовое снаряжение солдата доп.отряда Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporSolD
+#----------------------------------------------------Инженер--------------------------
+- type: startingGear
+  id: GearDefUmporEng
+  equipment:
+    jumpsuit: UmporUniformEngineer
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporBeret
+    outerClothing: UmporArmorMiddle
+    id: DefPDAEngenerUmpor
+    ears: UmporHeadset
+    belt: UmporBeltEngFilled
+    gloves: UmporInsulativeGloves
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: UmporIDCardEngener
+  id: DefIDCardEngenerUmpor
+  name: ID-карта инженера
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefEngener
+    name: инженер
+
+- type: entity
+  parent: UmporPDAEngener
+  id: DefPDAEngenerUmpor
+  name: КПК умпорского инженера
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardEngenerUmpor
+    
+- type: thiefBackpackSet
+  id: SetGearDefUmporEng
+  name: Набор умпорского инженера
+  description: Одежда и базовое снаряжение инженера Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Weapon/umpor_spade.rsi
+    state: icon
+  content:
+  - UmporUniformEngineer
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporBeret
+  - UmporArmorMiddle
+  - DefPDAEngenerUmpor
+  - UmporHeadset
+  - UmporBeltEngFilled
+  - UmporInsulativeGloves
+  - DefGlass
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporEng
+  name: Набор умпорского офицера инженера
+  description: Одежда и базовое снаряжение инженера Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporEng
+#----------------------------------------------------Медик--------------------------
+- type: startingGear
+  id: GearDefUmporMed
+  equipment:
+    jumpsuit: UmporUniformMedic
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporBeret
+    id: DefPDAMedicUmpor
+    ears: UmporHeadset
+    belt: UmporeBeltMedFilled
+    gloves: UmporGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: UmporIDCardMedic
+  id: DefIDCardMedicUmpor
+  name: ID-карта медика
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefMedic
+    name: медик
+
+- type: entity
+  parent: UmporPDAMedic
+  id: DefPDAMedicUmpor
+  name: КПК умпорского медика
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardMedicUmpor
+
+- type: thiefBackpackSet
+  id: SetGearDefUmporMed
+  name: Набор умпорского медика
+  description: Одежда и базовое снаряжение медика Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_healthanalyzer.rsi
+    state: icon
+  content:
+  - UmporUniformMedic
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporBeret
+  - DefPDAMedicUmpor
+  - UmporHeadset
+  - UmporeBeltMedFilled
+  - UmporGlovesFingerless
+  - DefGlass
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporMed
+  name: Набор умпорского офицера медика
+  description: Одежда и базовое снаряжение медика Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporMed
+#----------------------------------------------------Снабженец--------------------------
+- type: startingGear
+  id: GearDefUmporLog
+  equipment:
+    jumpsuit: UmporUniformLogist
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporCapP
+    id: DefPDALogistUmpor
+    ears: UmporHeadset
+    belt: UmporBeltEng
+    gloves: UmporGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+    pocket2: DefChip
+
+- type: entity
+  parent: UmporIDCardLogist
+  id: DefIDCardLogistUmpor
+  name: ID-карта логиста
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefCargo
+    name: логист
+
+- type: entity
+  parent: UmporPDALogist
+  id: DefPDALogistUmpor
+  name: КПК умпорского логиста
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardLogistUmpor
+
+- type: thiefBackpackSet
+  id: SetGearDefUmporLog
+  name: Набор умпорского снабженца
+  description: Одежда и базовое снаряжение снабженца Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_cap_p.rsi
+    state: icon
+  content:
+  - UmporUniformLogist
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporCapP
+  - DefPDALogistUmpor
+  - UmporHeadset
+  - UmporBeltEng
+  - UmporGlovesFingerless
+  - DefGlass
+  - DefChip
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefUmporLog
+  name: Набор умпорского офицера снабженца
+  description: Одежда и базовое снаряжение снабженца Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporLog
+#--------------------------------------------------------------------Миртанийские-----------------------------------------
+#----------------------------------------------------Командор--------------------------
+- type: startingGear
+  id: GearDefMirtCom
+  equipment:
+    jumpsuit: MirtUniformOffi
+    back: MirtBackpackSFilled
+    shoes: MirtBootsSteel
+    head: MirtHelmetArm
+    id: DefIDCardComanderMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    neck: MirtCloakOfCom
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+    pocket2: MirtRubberStampArm
+  storage:
+    back:
+    - ToolboxMirtCom
+
+- type: entity
+  parent: MirtIDCardOfficer
+  id: DefIDCardComanderMirt
+  name: Чип миртанского офицера
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefComander
+    name: командор
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtCom
+  name: Набор миртанийского командора
+  description: Одежда и базовое снаряжение командора Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_o_st.rsi
+    state: icon
+  content:
+  - MirtUniformOffi
+  - MirtBackpackSFilled
+  - MirtBootsSteel
+  - MirtHelmetArm
+  - DefIDCardComanderMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - MirtCloakOfCom
+  - DefGlass
+  - MirtRubberStampArm
+  - ToolboxMirtCom
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtCom
+  name: Набор миртанийского командора
+  description: Одежда и базовое снаряжение командора Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_gold.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtCom
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Офицер--------------------------
+- type: startingGear
+  id: GearDefMirtOfi
+  equipment:
+    jumpsuit: MirtUniformOffi
+    back: MirtBackpackSFilled
+    shoes: MirtBootsSteel
+    head: MirtHelmetArm
+    id: DefIDCardOfficerMirt
+    belt: MirtBelt
+    gloves: MirtGlovesStrong
+    eyes: DefGlass
+    neck: MirtCloakOf
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxMirtOfi
+
+- type: entity
+  parent: MirtIDCardOfficer
+  id: DefIDCardOfficerMirt
+  name: Чип миртанского офицера
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefOfficer
+    name: офицер
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtOfi
+  name: Набор миртанийского офицера
+  description: Одежда и базовое снаряжение офицера Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_o.rsi
+    state: icon
+  content:
+  - MirtUniformOffi
+  - MirtBackpackSFilled
+  - MirtBootsSteel
+  - MirtHelmetArm
+  - DefIDCardOfficerMirt
+  - MirtBelt
+  - MirtGlovesStrong
+  - MirtCloakOf
+  - DefGlass
+  - ToolboxMirtOfi
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtOfi
+  name: Набор миртанийского офицера
+  description: Одежда и базовое снаряжение офицера Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtOfi
+#----------------------------------------------------Доп.Офицер--------------------------
+- type: startingGear
+  id: GearDefMirtOfiD
+  equipment:
+    jumpsuit: MirtUniformOffi
+    back: MirtBackpackSFilled
+    shoes: MirtBoots
+    head: MirtHelmetInk
+    id: DefIDCardOfficerDopMirt
+    belt: MirtBelt
+    gloves: MirtGlovesStrong
+    eyes: DefGlass
+    neck: MirtCloakOfInk
+    pocket1: FlashlightLantern
+    pocket2: MirtRubberStampInk
+  storage:
+    back:
+    - ToolboxMirtDOfi
+
+- type: entity
+  parent: MirtIDCardLogist
+  id: DefIDCardOfficerDopMirt
+  name: Чип миртанского старшего инквизитора
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefOfficerDop
+    name: старший инквизитор
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtOfiD
+  name: Набор миртанийского офицера доп.отряда
+  description: Одежда и базовое снаряжение офицера доп.отряда Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_o_ink.rsi
+    state: icon
+  content:
+  - MirtUniformOffi
+  - MirtBackpackSFilled
+  - MirtBootsSteel
+  - MirtHelmetInk
+  - DefIDCardOfficerDopMirt
+  - MirtBelt
+  - MirtGlovesStrong
+  - MirtCloakOfInk
+  - DefGlass
+  - ToolboxMirtDOfi
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtOfiD
+  name: Набор миртанийского офицера доп.отряда
+  description: Одежда и базовое снаряжение офицера доп.отряда Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtOfiD
+#----------------------------------------------------Специалист--------------------------
+- type: startingGear
+  id: GearDefMirtSPC
+  equipment:
+    jumpsuit: MirtUniformTg
+    back: MirtBackpackLFilled
+    shoes: MirtBootsSteel
+    head: MirtHelmetArm
+    id: DefIDCardSpecialistMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    neck: MirtCloakSP
+    pocket1: FlashlightLantern
+    pocket2: MirtProviderFlare
+  storage:
+    back:
+    - ToolboxMirtSPC
+
+- type: entity
+  parent: MirtIDCardSolder
+  id: DefIDCardSpecialistMirt
+  name: Чип миртанского специалиста
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefSpecialist
+    name: специалист
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtSPC
+  name: Набор миртанийского специалиста
+  description: Одежда и базовое снаряжение специалиста Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_sp.rsi
+    state: icon
+  content:
+  - MirtUniformTg
+  - MirtBackpackLFilled
+  - MirtBootsSteel
+  - MirtHelmetArm
+  - DefIDCardSpecialistMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - MirtCloakSP
+  - MirtProviderFlare
+  - ToolboxMirtSPC
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtSPC
+  name: Набор миртанийского специалиста
+  description: Одежда и базовое снаряжение специалиста Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtSPC
+#----------------------------------------------------Доп.Специалист--------------------------
+- type: startingGear
+  id: GearDefMirtSPCD
+  equipment:
+    jumpsuit: MirtUniformTg
+    back: MirtBackpackLFilled
+    shoes: MirtBootsSteel
+    head: MirtHelmetInk
+    id: DefIDCardSpecialistDopMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    neck: MirtCloakSPInk
+    pocket1: FlashlightLantern
+    pocket2: MirtProviderFlare
+  storage:
+    back:
+    - ToolboxMirtDSPC
+
+- type: entity
+  parent: MirtIDCardEngener
+  id: DefIDCardSpecialistDopMirt
+  name: Чип миртанского специалиста инквизиции
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefSpecialistDop
+    name: инквизитор-специалист
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtSPCD
+  name: Набор миртанийского специалиста доп.отряда
+  description: Одежда и базовое снаряжение специалиста доп.отряда Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_sp_ink.rsi
+    state: icon
+  content:
+  - MirtUniformTg
+  - MirtBackpackLFilled
+  - MirtBootsSteel
+  - MirtHelmetArm
+  - DefIDCardSpecialistDopMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - MirtCloakSPInk
+  - MirtProviderFlare
+  - ToolboxMirtDSPC
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtSPCD
+  name: Набор миртанийского специалиста доп.отряда
+  description: Одежда и базовое снаряжение специалиста доп.отряда Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtSPCD
+#----------------------------------------------------Солдат--------------------------
+- type: startingGear
+  id: GearDefMirtSol
+  equipment:
+    jumpsuit: MirtUniformSold
+    back: MirtBackpackMFilled
+    shoes: MirtBootsSteel
+    head: MirtHelmetArm
+    id: DefIDCardSolderMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxMirtSol
+
+- type: entity
+  parent: MirtIDCardSolder
+  id: DefIDCardSolderMirt
+  name: Чип миртанского солдата
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefSolder
+    name: солдат
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtSol
+  name: Набор миртанийского солдата
+  description: Одежда и базовое снаряжение солдата Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Armor/mirt_helmet_std.rsi
+    state: icon
+  content:
+  - MirtUniformSold
+  - MirtBackpackMFilled
+  - MirtBootsSteel
+  - MirtHelmetArm
+  - DefIDCardSolderMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - ToolboxMirtSol
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtSol
+  name: Набор миртанийского солдата
+  description: Одежда и базовое снаряжение солдата Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtSol
+#----------------------------------------------------Доп.Солдат--------------------------
+- type: startingGear
+  id: GearDefMirtSolD
+  equipment:
+    jumpsuit: MirtUniformSold
+    back: MirtBackpackMFilled
+    shoes: MirtBoots
+    head: MirtHelmetInk
+    id: DefIDCardSolderDopMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    neck: MirtEpolets
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxMirtDSol
+
+- type: entity
+  parent: MirtIDCardEngener
+  id: DefIDCardSolderDopMirt
+  name: Чип миртанского инквизиции
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefSolderDop
+    name: инквизитор
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtSolD
+  name: Набор миртанийского солдата доп.отряда
+  description: Одежда и базовое снаряжение специалиста доп.отряда Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Armor/mirt_helmet_ink.rsi
+    state: icon
+  content:
+  - MirtUniformSold
+  - MirtBackpackMFilled
+  - MirtBoots
+  - MirtHelmetInk
+  - DefIDCardSolderDopMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - ToolboxMirtDSol
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefMirtSolD
+  name: Набор миртанийского солдата доп.отряда
+  description: Одежда и базовое снаряжение солдата доп.отряда Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtSolD
+#----------------------------------------------------Инженер--------------------------
+- type: startingGear
+  id: GearDefMirtEng
+  equipment:
+    jumpsuit: MirtUniformRear
+    back: MirtBackpackMFilled
+    shoes: MirtBoots
+    head: MirtHelmetGr
+    outerClothing: MirtArmorGr
+    id: DefIDCardEngenerMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    ears: MirtHeadset
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: MirtIDCardSolder
+  id: DefIDCardEngenerMirt
+  name: Чип миртанского инженера
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefEngener
+    name: инженер
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtEng
+  name: Набор миртанийского инженера
+  description: Одежда и базовое снаряжение инженера Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Armor/mirt_armor_gr.rsi
+    state: icon
+  content:
+  - MirtUniformRear
+  - MirtBackpackMFilled
+  - MirtBoots
+  - MirtHelmetGr
+  - MirtArmorGr
+  - DefIDCardEngenerMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - FlashlightLantern
+  - MirtHeadset
+  
+- type: entity
+  id: ToolboxGearDefMirtEng
+  name: Набор миртанийского инженера
+  description: Одежда и базовое снаряжение инженера Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtEng
+#----------------------------------------------------Медик--------------------------
+- type: startingGear
+  id: GearDefMirtMed
+  equipment:
+    jumpsuit: MirtUniformMed
+    back: MirtBackpackMFilled
+    shoes: MirtBoots
+    id: DefIDCardMedicMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    ears: MirtHeadset
+    pocket1: FlashlightLantern
+    pocket2: HandheldHealthAnalyzerUnpowered
+
+- type: entity
+  parent: MirtIDCardSolder
+  id: DefIDCardMedicMirt
+  name: Чип миртанского медика
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefMedic
+    name: медик
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtMed
+  name: Набор миртанийского медика
+  description: Одежда и базовое снаряжение медика Империи Миртана.
+  sprite:
+    sprite: Objects/Specific/Medical/medical.rsi
+    state: regenerative-mesh
+  content:
+  - MirtUniformMed
+  - MirtBackpackMFilled
+  - MirtBoots
+  - DefIDCardMedicMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - FlashlightLantern
+  - HandheldHealthAnalyzerUnpowered
+  - MirtHeadset
+  
+- type: entity
+  id: ToolboxGearDefMirtMed
+  name: Набор миртанийского медика
+  description: Одежда и базовое снаряжение медика Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtMed
+#----------------------------------------------------Снабженец--------------------------
+- type: startingGear
+  id: GearDefMirtLog
+  equipment:
+    jumpsuit: MirtUniformRear
+    back: MirtBackpackLFilled
+    shoes: MirtBoots
+    head: MirtHelmetGr
+    outerClothing: MirtArmorGr
+    id: DefIDCardCargoMirt
+    belt: MirtBelt
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    ears: MirtHeadset
+    pocket1: FlashlightLantern
+    pocket2: DefChip
+
+- type: entity
+  parent: MirtIDCardSolder
+  id: DefIDCardCargoMirt
+  name: Чип миртанского снабженец
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefCargo
+    name: снабженец
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtLog
+  name: Набор миртанийского снабженца
+  description: Одежда и базовое снаряжение снабженца Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Weapon/mirt_knife.rsi
+    state: icon
+  content:
+  - MirtUniformRear
+  - MirtBackpackLFilled
+  - MirtBoots
+  - MirtHelmetGr
+  - MirtArmorGr
+  - DefIDCardCargoMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - DefChip
+  - FlashlightLantern
+  - MirtHeadset
+  
+- type: entity
+  id: ToolboxGearDefMirtLog
+  name: Набор миртанийского снабженца
+  description: Одежда и базовое снаряжение снабженца Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtLog
+#--------------------------------------------------------------------Конгломератские-----------------------------------------
+#----------------------------------------------------Командор--------------------------
+- type: startingGear
+  id: GearDefCDCCom
+  equipment:
+    jumpsuit: CDCUniformComander
+    back: CDCSatchelsFilledPist
+    shoes: CDCBoots
+    head: CDCCap
+    outerClothing: CDCArmorLight
+    id: DefPDAComanderCDC
+    ears: CDCHeadset
+    belt: CDCBeltOffiFilled
+    gloves: CDCGloves
+    eyes: DefGlass
+    neck: CDCCloakOf
+    pocket1: FlashlightLantern
+    pocket2: CDCRubberStamp
+
+- type: entity
+  parent: CDCIDCardOfficer
+  id: DefIDCardComanderCDC
+  name: Чип командора Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefComander
+    name: командор
+    
+- type: entity
+  parent: CDCPDAOfficer
+  id: DefPDAComanderCDC
+  suffix: Оборона, Конгломерат
+  components:
+    - type: Pda
+      id: DefIDCardComanderCDC
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCCom
+  name: Набор командора конгломерата
+  description: Одежда и базовое снаряжение командора Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_cloak.rsi
+    state: icon
+  content:
+  - CDCUniformComander
+  - CDCSatchelsFilledPist
+  - CDCBoots
+  - CDCCap
+  - CDCArmorLight
+  - DefPDAComanderCDC
+  - CDCHeadset
+  - CDCBeltOffiFilled
+  - CDCGloves
+  - DefGlass
+  - CDCCloakOf
+  - CDCRubberStamp
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCCom
+  name: Набор командора конгломерата
+  description: Одежда и базовое снаряжение командора Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_yellow.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCCom
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Офицер--------------------------
+- type: startingGear
+  id: GearDefCDCOfi
+  equipment:
+    jumpsuit: CDCUniformOffi
+    back: CDCSatchelsFilledPist
+    shoes: CDCBoots
+    head: CDCHelmetOffi
+    outerClothing: CDCArmorMiddle
+    id: DefPDAOfficerCDC
+    ears: CDCHeadset
+    belt: CDCBeltOffiFilled
+    gloves: CDCGloves
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: CDCIDCardOfficer
+  id: DefIDCardOfficerCDC
+  name: Чип офицера Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefOfficer
+    name: офицер
+    
+- type: entity
+  parent: CDCPDAOfficer
+  id: DefPDAOfficerCDC
+  suffix: Оборона, Конгломерат
+  components:
+    - type: Pda
+      id: DefIDCardOfficerCDC
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCOfi
+  name: Набор офицера конгломерата
+  description: Одежда и базовое снаряжение офицера Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Armor/cdc_helmet_o.rsi
+    state: icon
+  content:
+  - CDCUniformOffi
+  - CDCSatchelsFilledPist
+  - CDCBoots
+  - CDCHelmetOffi
+  - CDCArmorMiddle
+  - DefPDAOfficerCDC
+  - CDCHeadset
+  - CDCBeltOffiFilled
+  - CDCGloves
+  - DefGlass
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCOfi
+  name: Набор офицера конгломерата
+  description: Одежда и базовое снаряжение офицера Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCOfi
+#----------------------------------------------------Доп.Офицер--------------------------
+- type: startingGear
+  id: GearDefCDCOfiD
+  equipment:
+    jumpsuit: CDCUniformOffi
+    back: CDCSatchelsFilledPist
+    shoes: CDCBoots
+    head: CDCCap
+    outerClothing: CDCHardsuitArm
+    id: DefPDAOfficerDopCDC
+    ears: CDCHeadset
+    belt: CDCBeltOffiFilled
+    gloves: CDCGloves
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+
+- type: entity
+  parent: CDCIDCardOfficer
+  id: DefIDCardOfficerDopCDC
+  name: Чип офицера Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefOfficerDop
+    name: офицер
+    
+- type: entity
+  parent: CDCPDAOfficer
+  id: DefPDAOfficerDopCDC
+  suffix: Оборона, Конгломерат
+  components:
+    - type: Pda
+      id: DefIDCardOfficerDopCDC
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCOfiD
+  name: Набор офицера доп.отряда конгломерата
+  description: Одежда и базовое снаряжение офицера доп.отряда Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_cap.rsi
+    state: icon
+  content:
+  - CDCUniformOffi
+  - CDCSatchelsFilledPist
+  - CDCBoots
+  - CDCCap
+  - CDCHardsuitArm
+  - DefPDAOfficerDopCDC
+  - CDCHeadset
+  - CDCBeltOffiFilled
+  - CDCGloves
+  - DefGlass
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCOfiD
+  name: Набор офицера доп.отряда конгломерата
+  description: Одежда и базовое снаряжение офицера доп.отряда Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCOfiD
+#----------------------------------------------------Специалист--------------------------
+- type: startingGear
+  id: GearDefCDCSPC
+  equipment:
+    jumpsuit: CDCUniformSPC
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCHelmetSld
+    id: DefIDCardSpecialistCDC
+    belt: CDCBeltSold
+    gloves: CDCGloves
+    eyes: DefGlass
+    ears: CDCHeadset
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxCDCSPC
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardSpecialistCDC
+  name: Чип специалиста Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefSpecialist
+    name: специалист
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCSPC
+  name: Набор специалиста конгломерата
+  description: Одежда и базовое снаряжение специалиста Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Armor/cdc_helmet_s.rsi
+    state: icon
+  content:
+  - CDCUniformSPC
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCHelmetSld
+  - DefIDCardSpecialistCDC
+  - CDCBeltSold
+  - CDCGloves
+  - DefGlass
+  - CDCPaperSold
+  - ToolboxCDCSPC
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCSPC
+  name: Набор специалиста
+  description: Одежда и базовое снаряжение специалиста Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCSPC
+#----------------------------------------------------Доп.Специалист--------------------------
+- type: startingGear
+  id: GearDefCDCSPCD
+  equipment:
+    jumpsuit: CDCUniformSPC
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCHelmetSld
+    outerClothing: CDCHardsuitArm
+    id: DefIDCardSpecialistDopCDC
+    belt: CDCBeltSold
+    gloves: CDCGlovesTech
+    eyes: DefGlass
+    ears: CDCHeadset
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxCDCDSPC
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardSpecialistDopCDC
+  name: Чип специалиста Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefSpecialistDop
+    name: специалист
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCSPCD
+  name: Набор специалиста доп.отряда конгломерата
+  description: Одежда и базовое снаряжение специалиста доп.отряда Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Sintetic/cdc_msu.rsi
+    state: icon
+  content:
+  - CDCUniformSPC
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCHelmetSld
+  - CDCHardsuitArm
+  - DefIDCardSpecialistDopCDC
+  - CDCBeltSold
+  - CDCGlovesTech
+  - DefGlass
+  - CDCPaperSold
+  - ToolboxCDCDSPC
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCSPCD
+  name: Набор специалиста доп.отряда конгломерата
+  description: Одежда и базовое снаряжение специалиста доп.отряда Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCSPCD
+#----------------------------------------------------Солдат--------------------------
+- type: startingGear
+  id: GearDefCDCSol
+  equipment:
+    jumpsuit: CDCUniformSold
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCHelmetSld
+    id: DefIDCardSolderCDC
+    belt: CDCBeltSold
+    gloves: CDCGloves
+    eyes: DefGlass
+    ears: CDCHeadset
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxCDCSol
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardSolderCDC
+  name: Чип солдата Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefSolder
+    name: солдат
+   
+- type: thiefBackpackSet
+  id: SetGearDefCDCSol
+  name: Набор солдата конгломерата
+  description: Одежда и базовое снаряжение солдата Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Armor/cdc_armor_light.rsi
+    state: icon
+  content:
+  - CDCUniformSold
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCHelmetSld
+  - DefIDCardSolderCDC
+  - CDCBeltSold
+  - CDCGloves
+  - DefGlass
+  - ToolboxCDCSol
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCSol
+  name: Набор солдата конгломерата
+  description: Одежда и базовое снаряжение солдата Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCSol
+#----------------------------------------------------Доп.Солдат--------------------------
+- type: startingGear
+  id: GearDefCDCDSol
+  equipment:
+    jumpsuit: CDCUniformSold
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCHelmetSld
+    id: DefIDCardSolderDopCDC
+    belt: CDCBeltSold
+    gloves: CDCGloves
+    eyes: DefGlass
+    ears: CDCHeadset
+    pocket1: FlashlightLantern
+  storage:
+    back:
+    - ToolboxCDCSol
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardSolderDopCDC
+  name: Чип солдата Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefSolderDop
+    name: солдат
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCDSol
+  name: Набор солдата доп.отряда конгломерата
+  description: Одежда и базовое снаряжение солдата доп.отряда Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Armor/cdc_armor_mid.rsi
+    state: icon
+  content:
+  - CDCUniformSold
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCHelmetSld
+  - DefIDCardSolderDopCDC
+  - CDCBeltSold
+  - CDCGloves
+  - DefGlass
+  - ToolboxCDCSol
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCDSol
+  name: Набор солдата доп.отряда конгломерата
+  description: Одежда и базовое снаряжение солдата доп.отряда Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCDSol
+#----------------------------------------------------Инженер--------------------------
+- type: startingGear
+  id: GearDefCDCEng
+  equipment:
+    jumpsuit: CDCUniformEng
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCCepka
+    id: DefIDCardEngenerCDC
+    ears: CDCHeadset
+    belt: CDCBeltTech
+    gloves: CDCGlovesTech
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+  storage:
+    belt:
+    - Crowbar
+    - Wrench
+    - Screwdriver
+    - Wirecutter
+    - Welder 
+
+- type: entity
+  parent: CDCIDCardEngener
+  id: DefIDCardEngenerCDC
+  name: Чип инженера Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefEngener
+    name: инженер
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCEng
+  name: Набор инженера конгломерата
+  description: Одежда и базовое снаряжение инженера Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_gloves_tech.rsi
+    state: icon
+  content:
+  - CDCUniformEng
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCCepka
+  - DefIDCardEngenerCDC
+  - CDCHeadset
+  - CDCBeltTech
+  - CDCGlovesTech
+  - DefGlass
+  - Crowbar
+  - Wrench
+  - Screwdriver
+  - Wirecutter
+  - Welder 
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCEng
+  name: Набор инженера конгломерата
+  description: Одежда и базовое снаряжение инженера Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCEng
+#----------------------------------------------------Медик--------------------------
+- type: startingGear
+  id: GearDefCDCMed
+  equipment:
+    jumpsuit: CDCUniformMedic
+    back: CDCSatchelsFilled
+    shoes: CDCBoots
+    head: CDCFez
+    outerClothing: CDCArmorLight
+    id: DefIDCardMedicCDC
+    ears: CDCHeadset
+    belt: CDCBeltTech
+    gloves: CDCGloves
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+    pocket2: HandheldHealthAnalyzerUnpowered
+  storage:
+    belt:
+    - Ointment
+    - Ointment
+    - Bloodpack
+    - Bloodpack
+    - Gauze
+    - Gauze
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardMedicCDC
+  name: Чип медика Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefMedic
+    name: медик
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCMed
+  name: Набор медика конгломерата
+  description: Одежда и базовое снаряжение медика Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_fez.rsi
+    state: icon
+  content:
+  - CDCUniformMedic
+  - CDCSatchelsFilled
+  - CDCBoots
+  - CDCFez
+  - CDCArmorLight
+  - DefIDCardMedicCDC
+  - CDCHeadset
+  - CDCBeltTech
+  - CDCGloves
+  - DefGlass
+  - Ointment
+  - Ointment
+  - Bloodpack
+  - Bloodpack
+  - Gauze
+  - Gauze 
+  - FlashlightLantern
+  - HandheldHealthAnalyzerUnpowered
+  
+- type: entity
+  id: ToolboxGearDefCDCMed
+  name: Набор медика конгломерата
+  description: Одежда и базовое снаряжение медика Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCMed
+#----------------------------------------------------Снабженец--------------------------
+- type: startingGear
+  id: GearDefCDCLog
+  equipment:
+    jumpsuit: CDCUniformEng
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCCepka
+    outerClothing: CDCHardsuitTech
+    id: DefIDCardCargoCDC
+    ears: CDCHeadset
+    belt: CDCBeltTech
+    gloves: CDCGlovesTech
+    eyes: DefGlass
+    pocket1: FlashlightLantern
+    pocket2: DefChip
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardCargoCDC
+  name: Чип снабженца Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefCargo
+    name: снабженец
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCLog
+  name: Набор снабженца конгломерата
+  description: Одежда и базовое снаряжение снабженца Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_cepka.rsi
+    state: icon
+  content:
+  - CDCUniformEng
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCCepka
+  - CDCHardsuitTech
+  - DefIDCardCargoCDC
+  - CDCHeadset
+  - CDCBeltTech
+  - CDCGlovesTech
+  - DefGlass
+  - DefChip
+  - FlashlightLantern
+  
+- type: entity
+  id: ToolboxGearDefCDCLog
+  name: Набор снабженца конгломерата
+  description: Одежда и базовое снаряжение снабженца Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCLog
+#--------------------------------------------------------------------Советские-----------------------------------------
+#----------------------------------------------------Командор--------------------------
+- type: startingGear
+  id: GearDefUSSPCom
+  equipment:
+    jumpsuit: USSPUniformOfi
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapBlue
+    outerClothing: USSPArmorLight
+    id: DefPDAComanderUSSP
+    ears: USSPHeadset
+    belt: USSPBeltOffiFilled
+    neck: USSPCloakOf
+    eyes: DefGlass
+    gloves: USSPGlovesOfi
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPCom
+
+- type: entity
+  parent: USSPIDCardOffi
+  id: DefIDCardComanderUSSP
+  name: ID-карта командора
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefComander
+    name: командор
+
+- type: entity
+  parent: USSPPDAOffi
+  id: DefPDAComanderUSSP
+  name: КПК командира СССП
+  suffix: Оборона,СССП
+  components:
+    - type: Pda
+      id: DefIDCardComanderUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPCom
+  name: Набор командора СССП
+  description: Одежда и базовое снаряжение командора СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cloak.rsi
+    state: icon
+  content:
+  - USSPUniformOfi
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCapBlue
+  - USSPArmorLight
+  - DefPDAComanderUSSP
+  - USSPHeadset
+  - USSPBeltOffiFilled
+  - USSPCloakOf
+  - DefGlass
+  - ToolboxUSSPCom
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPCom
+  name: Набор командора СССП
+  description: Одежда и базовое снаряжение командора СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPCom
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Офицер--------------------------
+- type: startingGear
+  id: GearDefUSSPOfi
+  equipment:
+    jumpsuit: USSPUniformOfi
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCap
+    outerClothing: USSPArmorLight
+    id: DefPDAOfficerUSSP
+    ears: USSPHeadset
+    belt: USSPBeltOffi
+    eyes: DefGlass
+    gloves: USSPGlovesOfi
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPOfi
+
+- type: entity
+  parent: USSPIDCardOffi
+  id: DefIDCardOfficerUSSP
+  name: ID-карта офицера
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefOfficer
+    name: офицер
+
+- type: entity
+  parent: USSPPDAOffi
+  id: DefPDAOfficerUSSP
+  name: КПК офицера СССП
+  suffix: Оборона,СССП
+  components:
+    - type: Pda
+      id: DefIDCardOfficerUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPOfi
+  name: Набор офицера СССП
+  description: Одежда и базовое снаряжение офицера СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cap.rsi
+    state: icon
+  content:
+  - USSPUniformOfi
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCapBlue
+  - USSPArmorLight
+  - DefPDAComanderUSSP
+  - USSPHeadset
+  - USSPBeltOffiFilled
+  - USSPCloakOf
+  - DefGlass
+  - ToolboxUSSPOfi
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPOfi
+  name: Набор офицера СССП
+  description: Одежда и базовое снаряжение офицера СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPOfi
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Доп.Офицер--------------------------
+- type: entity
+  parent: PetrHeadset
+  id: PetrHeadsetDef
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - USSPEncryptionKey
+      - PetrEncryptionKey
+
+- type: startingGear
+  id: GearDefPetrOfiD
+  equipment:
+    jumpsuit: PetrUniform
+    back: PetrBackpackFilledEmpty
+    shoes: PetrBoots
+    head: PetrCapP
+    neck: PetrCloak
+    outerClothing: PetrArmorBasic
+    id: DefPDAOfficerDopPetr
+    ears: PetrHeadsetDef
+    belt: PetrBeltSold
+    pocket2: PetrRubberStamp
+  storage:
+    back:
+    - ToolboxPetrOfiDop
+
+- type: entity
+  parent: PetrIDCardOffi
+  id: DefIDCardOfficerDopPetr
+  name: ID-карта командира петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+  - type: PresetIdCard
+    job: DefOfficerDop
+    name: офицер
+
+- type: entity
+  parent: PetrPDAOffi
+  id: DefPDAOfficerDopPetr
+  name: КПК командира петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+    - type: Pda
+      id: DefIDCardOfficerDopPetr
+    
+- type: thiefBackpackSet
+  id: SetGearDefPetrOfiD
+  name: Набор командира петрищевцев
+  description: Одежда и базовое снаряжение командира петрищевцев.
+  sprite:
+    sprite: Victoria/Petr/Equipment/petr_cloak.rsi
+    state: icon
+  content:
+  - PetrUniform
+  - PetrBackpackFilledEmpty
+  - PetrBoots
+  - PetrCapP
+  - PetrCloak
+  - PetrArmorBasic
+  - DefPDAOfficerDopPetr
+  - PetrHeadsetDef
+  - PetrBeltSold
+  - PetrRubberStamp
+  - ToolboxPetrOfiDop
+  
+- type: entity
+  id: ToolboxGearDefPetrOfi
+  name: Набор командира петрищевцев
+  description: Одежда и базовое снаряжение командира петрищевцев.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefPetrOfiD
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Специалист--------------------------
+- type: startingGear
+  id: GearDefUSSPSPC
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCap
+    id: DefIDCardSPCUSSP
+    ears: USSPHeadset
+    belt: USSPBeltSold
+    eyes: DefGlass
+    gloves: USSPGloves
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPSPC
+
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardSPCUSSP
+  name: ID-карта специалиста
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefSpecialist
+    name: специалист
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPSPC
+  name: Набор специалиста СССП
+  description: Одежда и базовое снаряжение специалиста СССП.
+  sprite:
+    sprite: Victoria/USSP/Armor/ussp_armor_mid.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCap
+  - DefIDCardSPCUSSP
+  - USSPHeadset
+  - USSPBeltSold
+  - DefGlass
+  - USSPGloves
+  - ToolboxUSSPSPC
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPSPC
+  name: Набор специалиста СССП
+  description: Одежда и базовое снаряжение специалиста СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPSPC
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Доп.Специалист--------------------------
+- type: startingGear
+  id: GearDefPetrSPC
+  equipment:
+    jumpsuit: PetrUniform
+    back: PetrBackpackFilledEmpty
+    shoes: PetrBoots
+    head: PetrCapP
+    id: DefPDASPCDopPetr
+    ears: PetrHeadsetDef
+    belt: PetrBeltSold
+    eyes: DefGlass
+  storage:
+    back:
+    - ToolboxPetrSPCDop
+
+- type: entity
+  parent: PetrIDCardSold
+  id: DefIDCardSPCPetr
+  name: ID-карта специалиста
+  suffix: Оборона, Петрищевцы
+  components:
+  - type: PresetIdCard
+    job: DefSpecialistDop
+    name: специалист
+
+- type: entity
+  parent: PetrPDAOffi
+  id: DefPDASPCDopPetr
+  name: КПК специалиста петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+    - type: Pda
+      id: DefIDCardSPCPetr
+
+- type: thiefBackpackSet
+  id: SetGearDefPetrSPC
+  name: Набор специалиста петрищевцев
+  description: Одежда и базовое снаряжение специалиста петрищевцев.
+  sprite:
+    sprite: Victoria/Petr/Armor/petr_armor_mid.rsi
+    state: icon
+  content:
+  - PetrUniform
+  - PetrBackpackFilledEmpty
+  - PetrBoots
+  - PetrCapP
+  - DefPDASPCDopPetr
+  - PetrHeadsetDef
+  - PetrBeltSold
+  - DefGlass
+  - ToolboxPetrSPCDop
+  
+- type: entity
+  id: ToolboxGearDefPetrSPC
+  name: Набор специалиста петрищевцев
+  description: Одежда и базовое снаряжение специалиста петрищевцев.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefPetrSPC
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Солдат--------------------------
+- type: startingGear
+  id: GearDefUSSPSol
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPBackpackFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapP
+    id: DefIDCardSolUSSP
+    ears: USSPHeadset
+    belt: USSPBeltSold
+    eyes: DefGlass
+    gloves: USSPGloves
+    pocket1: BookWeaponUSSP
+  storage:
+    back:
+    - ToolboxUSSPSol
+
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardSolUSSP
+  name: ID-карта солдата
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefSolder
+    name: солдат
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPSol
+  name: Набор солдата СССП
+  description: Одежда и базовое снаряжение солдата СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cap_p.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPBackpackFilledEmpty
+  - USSPBoots
+  - USSPCapP
+  - DefIDCardSolUSSP
+  - USSPHeadset
+  - USSPBeltSold
+  - DefGlass
+  - USSPGloves
+  - ToolboxUSSPSol
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPSol
+  name: Набор солдата СССП
+  description: Одежда и базовое снаряжение солдата СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPSol
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Доп.Солдат--------------------------
+- type: startingGear
+  id: GearDefPetrSol
+  equipment:
+    jumpsuit: PetrUniform
+    back: PetrBackpackFilledEmpty
+    shoes: PetrBoots
+    head: PetrCapP
+    id: DefPDASolDopPetr
+    ears: PetrHeadsetDef
+    belt: PetrBeltSold
+    eyes: DefGlass
+  storage:
+    back:
+    - ToolboxPetrSolDop
+
+- type: entity
+  parent: PetrIDCardSold
+  id: DefIDCardSolPetr
+  name: ID-карта солдата петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+  - type: PresetIdCard
+    job: DefSolderDop
+    name: солдат
+
+- type: entity
+  parent: PetrPDAOffi
+  id: DefPDASolDopPetr
+  name: КПК солдата петрищевцев
+  suffix: Оборона, Петрищевцы
+  components:
+    - type: Pda
+      id: DefIDCardSolPetr
+
+- type: thiefBackpackSet
+  id: SetGearDefPetrSol
+  name: Набор солдата петрищевцев
+  description: Одежда и базовое снаряжение солдата петрищевцев.
+  sprite:
+    sprite: Victoria/Petr/Equipment/petr_cap_p.rsi
+    state: icon
+  content:
+  - PetrUniform
+  - PetrBackpackFilledEmpty
+  - PetrBoots
+  - PetrCapP
+  - DefPDASolDopPetr
+  - PetrHeadsetDef
+  - PetrBeltSold
+  - DefGlass
+  - ToolboxPetrSolDop
+  
+- type: entity
+  id: ToolboxGearDefPetrSol
+  name: Набор солдата петрищевцев
+  description: Одежда и базовое снаряжение солдата петрищевцев.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefPetrSol
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Инженер--------------------------
+- type: startingGear
+  id: GearDefUSSPEng
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCepka
+    id: DefPDAEngeUSSP
+    ears: USSPHeadset
+    belt: USSPBeltEngeFilled
+    outerClothing: USSPArmorLight
+    eyes: DefGlass
+    gloves: USSPGlovesEnge
+    pocket1: BookWeaponUSSP
+
+- type: entity
+  parent: USSPIDCardEnge
+  id: DefIDCardEngUSSP
+  name: ID-карта инженера
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefEngener
+    name: инженер
+
+- type: entity
+  parent: USSPPDAEnge
+  id: DefPDAEngeUSSP
+  name: КПК инженера СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardEngUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPEng
+  name: Набор инженера СССП
+  description: Одежда и базовое снаряжение инженера СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_belt_e.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCepka
+  - DefPDAEngeUSSP
+  - USSPHeadset
+  - USSPBeltEngeFilled
+  - USSPArmorLight
+  - DefGlass
+  - USSPGlovesEnge
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPEng
+  name: Набор инженера СССП
+  description: Одежда и базовое снаряжение инженера СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPEng
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Медик--------------------------
+- type: startingGear
+  id: GearDefUSSPMed
+  equipment:
+    jumpsuit: USSPUniformMed
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapPBlue
+    id: DefPDAMedUSSP
+    ears: USSPHeadset
+    belt: USSPBeltMedFilled
+    outerClothing: USSPHardsuitTech
+    eyes: DefGlass
+    gloves: USSPGlovesOfi
+    pocket1: BookWeaponUSSP
+    pocket2: USSPHealthAnalyzerUnpowered
+
+- type: entity
+  parent: USSPIDCardMed
+  id: DefIDCardMedUSSP
+  name: ID-карта врача
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefMedic
+    name: врач
+
+- type: entity
+  parent: USSPPDAMed
+  id: DefPDAMedUSSP
+  name: КПК врача СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardMedUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPMed
+  name: Набор врача СССП
+  description: Одежда и базовое снаряжение врача СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cap_p_blue.rsi
+    state: icon
+  content:
+  - USSPUniformMed
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCapPBlue
+  - DefPDAMedUSSP
+  - USSPHeadset
+  - USSPBeltMedFilled
+  - USSPHardsuitTech
+  - DefGlass
+  - USSPGlovesOfi
+  - USSPHealthAnalyzerUnpowered
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPMed
+  name: Набор врача СССП
+  description: Одежда и базовое снаряжение врача СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPMed
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Снабженец--------------------------
+- type: startingGear
+  id: GearDefUSSPLog
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapP
+    id: DefPDALogUSSP
+    ears: USSPHeadset
+    belt: USSPBeltCargoFilled
+    outerClothing: USSPArmorLight
+    eyes: DefGlass
+    gloves: USSPGlovesEnge
+    pocket1: BookWeaponUSSP
+
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardLogUSSP
+  name: ID-карта снабженца
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefCargo
+    name: снабженец
+
+- type: entity
+  parent: USSPPDAEnge
+  id: DefPDALogUSSP
+  name: КПК снабженца СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardLogUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPLog
+  name: Набор снабженца СССП
+  description: Одежда и базовое снаряжение снабженца СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cepka.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCapP
+  - DefPDALogUSSP
+  - USSPHeadset
+  - USSPBeltCargoFilled
+  - USSPArmorLight
+  - DefGlass
+  - USSPGlovesEnge
+  - BookWeaponUSSP
+  
+- type: entity
+  id: ToolboxGearDefUSSPLog
+  name: Набор снабженца СССП
+  description: Одежда и базовое снаряжение снабженца СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPLog
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
+#--------------------------------------------------------------------Корпоративные-----------------------------------------
+#----------------------------------------------------Командор--------------------------
+
+#----------------------------------------------------Офицер--------------------------
+
+#----------------------------------------------------Доп.Офицер--------------------------
+
+#----------------------------------------------------Специалист--------------------------
+
+#----------------------------------------------------Доп.Специалист--------------------------
+
+#----------------------------------------------------Солдат--------------------------
+
+#----------------------------------------------------Доп.Солдат--------------------------
+
+#----------------------------------------------------Инженер--------------------------
+
+#----------------------------------------------------Медик--------------------------
+
+#----------------------------------------------------Снабженец--------------------------

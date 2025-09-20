@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Client.Lobby;
+using Content.Corvax.Interfaces.Shared;
 using Content.Shared.CCVar;
 using Content.Shared.Players;
 using Content.Shared.Players.JobWhitelist;
@@ -107,6 +108,9 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         if (player == null)
             return true;
 
+        if (!CheckSponsor(job, player.UserId, out reason)) // SponsorThink
+            return false; // SponsorThink
+
         return CheckRoleRequirements(job, profile, out reason);
     }
 
@@ -178,4 +182,36 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
 
         return _roles;
     }
+
+    // SponsorThink Start
+    public bool CheckSponsor(JobPrototype job, NetUserId userId, [NotNullWhen(false)] out FormattedMessage? reason)
+    {
+        reason = null;
+
+        if(!job.SponsorOnly)
+            return true;
+
+        if (!(IoCManager.Instance?.TryResolveType<ISharedSponsorsManager>(out var sharedSponsorsManager) ?? false))
+            return true;
+
+        var isServer = IoCManager.Resolve<INetManager>().IsServer;
+        var protoName = job.ID;
+
+        if (isServer)
+        {
+            if (sharedSponsorsManager.TryGetServerPrototypes(userId,
+                    out var sponsorPrototypes) && sponsorPrototypes.Contains(protoName))
+                return true;
+
+            reason = FormattedMessage.FromMarkupPermissive($"{Loc.GetString("role-player-not-sponsor")}");
+            return false;
+        }
+
+        if (sharedSponsorsManager.GetClientPrototypes().Contains(protoName))
+            return true;
+
+        reason = FormattedMessage.FromMarkupPermissive($"{Loc.GetString("role-player-not-sponsor")}");
+        return false;
+    }
+    // SponsorThink End
 }

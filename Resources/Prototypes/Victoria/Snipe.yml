@@ -73,7 +73,7 @@
     sprite: Victoria/Snipe/bolt_gun_wood.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -131,7 +131,7 @@
     sprite: Victoria/Snipe/laser_gun.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -189,7 +189,7 @@
     sprite: Victoria/Snipe/pulse_rifle.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -248,7 +248,7 @@
     sprite: Victoria/Snipe/umpor_rifle.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -308,7 +308,7 @@
     sprite: Victoria/Snipe/nooc_laser_rifle.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -367,7 +367,7 @@
     sprite: Victoria/Snipe/mirt_nooc_laser_rifle.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -425,7 +425,7 @@
     sprite: Victoria/Snipe/mirt_rifle_bs.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -483,7 +483,7 @@
     sprite: Victoria/Snipe/snk_carabine_laser.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -541,7 +541,7 @@
     sprite: Victoria/Snipe/snk_carabine_hig.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope
@@ -599,7 +599,7 @@
     sprite: Victoria/Snipe/cdc_rifle.rsi
   - type: Gun
     minAngle: 0
-    maxAngle: 3
+    maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
   - type: Scope

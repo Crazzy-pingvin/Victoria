@@ -2141,14 +2141,14 @@ entities:
       parent: 768
     - type: Fixtures
       fixtures: {}
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 594
     components:
     - type: Transform
       pos: 6.5734406,0.1678339
       parent: 768
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 595
     components:

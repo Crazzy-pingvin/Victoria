@@ -547,19 +547,20 @@
   - type: Sprite
     drawdepth: Mobs
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: sheep
-      sprite: Victoria/Cloth/sheep.rsi
+    - map: ["enum.WoolyVisualLayers.Base"] # Victoria-WoolySheep
+      state: sheep-normal-alive
+      sprite: Mobs/Animals/sheep.rsi
   - type: Tag
     tags:
     - DoorBumpOpener
     - Sheep
   - type: Reproductive
+    makeOffspringInfant: false
     partnerWhitelist:
       tags:
       - Sheep
     offspring:
-    - id: MobSheep
+    - id: MobSheepChild
   - type: ReproductivePartner
   - type: Physics
   - type: Fixtures
@@ -573,25 +574,11 @@
         - MobMask
         layer:
         - MobLayer
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: sheep
-      Critical:
-        Base: dead
-      Dead:
-        Base: dead
-  - type: SolutionContainerManager
-    solutions:
-      udder:
-        maxVol: 250
-        reagents:
-        - ReagentId: SheepWool
-          Quantity: 30
-  - type: Udder
-    reagentId: SheepWool
-    quantityPerUpdate: 25
-    growthDelay: 30
+  - type: WoolyVisuals # Victoria-WoolySheep
+    spritePrefix: sheep-
+    state: sheep-normal-alive
+  - type: Wooly
+    woolEntity: SheepWoolClean1
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -621,24 +608,153 @@
   - type: HTN
     rootTask:
       task: RuminantCompound
+
+- type: entity
+  name: ягнёнок
+  parent: SimpleMobBase
+  id: MobSheepChild
+  description: Чоп-чоп-чопает себе по жизни и горя не знает. Если не лень, можешь подождать пока подойдёт к тебе, и убить его. 
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: lamb
+      sprite: Mobs/Animals/lamb.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: lamb
+      # You did it, monster.
+      Critical:
+        Base: lamb
+      Dead:
+        Base: lamb-dead
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      45: Critical
+      50: Dead
+  - type: TriggerOnSpawn
+  - type: TwoStageTrigger
+    triggerDelay: 300
+    components:
+    - type: DeleteOnTrigger
+    - type: SpawnOnTrigger
+      proto: MobSheep
+  - type: Infant
+    visualScale: 1,1
+  - type: InteractionPopup
+    successChance: 0.7
+    interactDelay: 2 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
+    interactSuccessString: petting-success-soft-floofy
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/goat_bah.ogg
+  - type: Perishable
+    molsPerSecondPerUnitMass: 0.0015
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: Body
+    prototype: AnimalRuminant
+  - type: HTN
+    rootTask:
+      task: RuminantCompound
+
+- type: entity
+  name: козлёнок
+  parent: SimpleMobBase
+  id: MobGoatChild
+  description: Он съел твою куртку, зачётку и мысль о прекрасном. Теперь у него несварение. 
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: goatling
+      sprite: Mobs/Animals/goatling.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: goatling
+      # You did it, monster x 2.
+      Critical:
+        Base: goatling
+      Dead:
+        Base: goatling-dead
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Infant
+    visualScale: 1,1
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      45: Critical
+      50: Dead
+  - type: TriggerOnSpawn
+  - type: TwoStageTrigger
+    triggerDelay: 300
+    components:
+    - type: DeleteOnTrigger
+    - type: SpawnOnTrigger
+      proto: MobGoat
+  - type: InteractionPopup
+    successChance: 0.7
+    interactDelay: 2 # Avoids overlapping SFX due to spam - these SFX are a little longer than the typical 1 second.
+    interactSuccessString: petting-success-soft-floofy
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/goat_bah.ogg
+  - type: Perishable
+    molsPerSecondPerUnitMass: 0.0015
+  - type: NpcFactionMember
+    factions:
+    - Passive
+  - type: Body
+    prototype: AnimalRuminant
+  - type: HTN
+    rootTask:
+      task: RuminantCompound
 #------------------Овечья Шерсть-------------------------
-#------------------Грязная-------------------------
-- type: reagent
-  id: SheepWool
-  name: reagent-name-sheep-wool
-  desc: reagent-desc-sheep-wool
-  physicalDesc: reagent-physical-desc-fibrous
-  flavor: fiber
-  color: "#828282"
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:OrganType
-          type: Moth
-#------------------Чистая-------------------------
-#------------------Сама-------------------------
 - type: Tag
   id: SheepWoolClean
 
@@ -654,13 +770,13 @@
     baseLayer: base
     layerStates:
     - wool
-    - wool_2
-    - wool_3
+    - wool-2
+    - wool-3
   - type: Sprite
     sprite: Victoria/Cloth/sheepwoolclean.rsi
-    state: wool_3
+    state: wool-3
     layers:
-    - state: wool_3
+    - state: wool-3
       map: ["base"]
   - type: Appearance
   - type: Material
@@ -687,7 +803,7 @@
 - type: stack
   id: SheepWoolClean
   name: овечья шерсть
-  icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool_3 }
+  icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool-3 }
   spawn: SheepWoolClean1
   maxCount: 30
 #------------------Десять овечьей шерсти--------------------------
@@ -718,20 +834,6 @@
   unit: materials-unit-roll
   icon: { sprite: Victoria/Cloth/sheepwoolclean.rsi, state: wool }
   price: 0.05
-#----------------------------------Рецепт----------------------------------
-- type: reaction
-  id: SheepWoolClean
-  impact: Low
-  quantized: true
-  conserveEnergy: false
-  reactants:
-    Water:
-      amount: 10
-    SheepWool:
-      amount: 10
-  effects:
-    - !type:CreateEntityReactionEffect
-      entity: SheepWoolClean10
 
 #--------------------------------------Лайка------------------------------------------
 #------------------Сама-------------------------
@@ -1089,23 +1191,6 @@
   price: 0.05
 
 #------------------Козья Шерсть-------------------------
-#------------------Грязная-------------------------
-- type: reagent
-  id: GoatWool
-  name: reagent-name-goat-wool
-  desc: reagent-desc-sheep-wool
-  physicalDesc: reagent-physical-desc-fibrous
-  flavor: fiber
-  color: "#cba36a"
-  metabolisms:
-    Food:
-      effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:OrganType
-          type: Moth
-#------------------Чистая-------------------------
-#------------------Сам-------------------------
 - type: entity
   parent: MaterialBase
   id: GoatWoolClean
@@ -1118,13 +1203,13 @@
     baseLayer: base
     layerStates:
     - wool
-    - wool_2
-    - wool_3
+    - wool-2
+    - wool-3
   - type: Sprite
     sprite: Victoria/Cloth/goatwoolclean.rsi
-    state: wool_3
+    state: wool-3
     layers:
-    - state: wool_3
+    - state: wool-3
       map: ["base"]
   - type: Appearance
   - type: Material
@@ -1150,7 +1235,7 @@
 - type: stack
   id: GoatWoolClean
   name: козья шерсть
-  icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool_3 }
+  icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool-3 }
   spawn: GoatWoolClean1
   maxCount: 30
 #------------------Десять козьей шерсти--------------------------
@@ -1181,21 +1266,6 @@
   unit: materials-unit-roll
   icon: { sprite: Victoria/Cloth/goatwoolclean.rsi, state: wool }
   price: 0.05
-#----------------------------------Рецепт----------------------------------
-- type: reaction
-  id: GoatWoolClean
-  impact: Low
-  quantized: true
-  conserveEnergy: false
-  reactants:
-    Water:
-      amount: 10
-    GoatWool:
-      amount: 10
-  effects:
-    - !type:CreateEntityReactionEffect
-      entity: GoatWoolClean10
-
 #--------------------------------------Анилин------------------------------------------
 #------------------Сама-------------------------
 - type: entity
@@ -1278,7 +1348,7 @@
 - type: cargoProduct
   id: LivestockSheep
   icon:
-    sprite: Victoria/Cloth/sheep.rsi
+    sprite: Mobs/Animals/sheep.rsi
     state: sheep
   product: CrateNPCSheep
   cost: 1100

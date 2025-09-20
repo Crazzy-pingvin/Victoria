@@ -32,6 +32,9 @@
       "name": "pda"
     },
     {
+      "name": "pda-security"
+    },
+    {
       "name": "equipped-IDCARD",
       "directions": 4
     }

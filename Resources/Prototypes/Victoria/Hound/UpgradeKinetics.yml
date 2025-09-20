@@ -1,0 +1,76 @@
+- type: constructionGraph
+  id: UpgradeWeaponProtoKineticAccelerator
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: upgraded
+          steps:
+            - tag: WeaponPistolProtoKineticAccelerator
+              doAfter: 2
+
+    - node: upgraded
+      entity: WeaponProtoKineticAcceleratorUpgraded
+
+- type: entity
+  name: Набор улучшения протокинетического ускорителя
+  parent: [BaseItem, BaseMajorContraband]
+  id: WeaponProtoKineticAcceleratorUpgradeKit
+  description: Кустарно разогнанная начинка протокинетика, несколько увеличивающая урон по живым существам.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: abductor_mod
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - WeaponPistolProtoKineticAccelerator
+
+- type: Tag
+  id: WeaponPistolProtoKineticAccelerator
+
+- type: entity
+  name: протокинетический ускоритель
+  id: WeaponProtoKineticAcceleratorUpgraded
+  parent: [WeaponProtoKineticAccelerator, BaseCargoContraband]
+  suffix: усиленный
+  description: Стреляет кинетическими зарядами с низким уроном на короткое расстояние.
+  components:
+  - type: BasicEntityAmmoProvider
+    proto: BulletKineticUpgrade
+    capacity: 1
+    count: 1
+  - type: HiddenDescription
+    entries:
+    - label: hidden-desc-ProtoKinetic-hound
+      whitelistMind:
+        mindRoles:
+        - HoundRole
+    - label: hidden-desc-ProtoKinetic-cargo
+      jobRequired:
+        - CargoTechnician
+        - Quartermaster
+        - SalvageSpecialist
+        - CargoTeacher
+    - label: hidden-desc-ProtoKinetic-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - SciTeacher
+  # todo: add itemcomponent with inhandVisuals states using unused texture and animation assets in kinetic_accelerator.rsi
+  # todo: add clothingcomponent with clothingVisuals states using unused texture and animations assets in kinetic_accelerator.rsi
+- type: entity
+  id: BulletKineticUpgrade
+  name: kinetic bolt
+  parent: BulletKinetic
+  categories: [ HideSpawnMenu ]
+  description: Not too bad, but you still don't want to get hit by it.
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 40
+        Structural: 15

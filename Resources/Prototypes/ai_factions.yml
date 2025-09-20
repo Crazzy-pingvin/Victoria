@@ -19,7 +19,10 @@
     - KMLG
     - Hound
     - CDC
-    - DefenseStructure
+    - DefenseStructureBase
+    - XenoTunneller
+    - XenoTunnellerOnly
+    - USSP
 
 - type: npcFaction
   id: NanoTrasen
@@ -29,6 +32,9 @@
   - Xeno
   - Zombie
   - Revolutionary
+  - XenoTunneller
+  - XenoTunnellerOnly
+  - Dragon
   friendly:
   - UmporBot
   - Umpor
@@ -53,6 +59,8 @@
   - SimpleHostile
   - Zombie
   - Xeno
+  - XenoTunneller
+  - XenoTunnellerOnly
 
 - type: npcFaction
   id: SimpleHostile
@@ -75,7 +83,8 @@
   - KMLG
   - Hound
   - CDC
-  - DefenseStructure
+  - DefenseStructureBase
+  - USSP
 
 - type: npcFaction
   id: SimpleNeutral
@@ -88,12 +97,16 @@
   - Xeno
   - PetsNT
   - Zombie
+  - Dragon
   - UmporBot
   - Umpor
   - Vitz
   - KMLG
   - Hound
   - CDC
+  - XenoTunneller
+  - XenoTunnellerOnly
+  - USSP
 
 - type: npcFaction
   id: Xeno
@@ -116,7 +129,48 @@
   - KMLG
   - Hound
   - CDC
+  - DefenseStructureBase
+  - USSP
+  friendly:
+  - XenoTunneller
+  - XenoTunnellerOnly
+
+- type: npcFaction
+  id: XenoTunneller
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - UmporBot
+  - Umpor
+  - Noocraty
+  - NoocratyBot
+  - Petr
+  - Vitz
+  - SNKBot
+  - SNK
+  - Mirt
+  - KMLG
+  - Hound
+  - CDC
+  - DefenseStructureBase
   - DefenseStructure
+  - USSP
+  friendly:
+  - Xeno
+  - XenoTunnellerOnly
+  
+- type: npcFaction
+  id: XenoTunnellerOnly
+  hostile:
+  - DefenseStructureBase
+  - DefenseStructure
+  friendly:
+  - Xeno
+  - XenoTunneller
 
 - type: npcFaction
   id: Zombie
@@ -140,7 +194,8 @@
   - KMLG
   - Hound
   - CDC
-  - DefenseStructure
+  - DefenseStructureBase
+  - USSP
 
 - type: npcFaction
   id: Revolutionary
@@ -160,3 +215,7 @@
   - KMLG
   - Hound
   - CDC
+  - XenoTunneller
+  - Xeno
+  - XenoTunnellerOnly
+  - USSP

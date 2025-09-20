@@ -41,8 +41,10 @@ wires-board-name-flatpacker = Упаковщик
 wires-board-name-spaceheater = Термостат
 wires-board-name-jukebox = Музыкальный автомат
 wires-board-name-computer = Компьютер
+wires-board-name-holopad = Голопад
+wires-board-name-barsign = Барная вывеска
 
-# names that get displayed in the wire hacking hud & admin logs.
+# Имена проводов, показываемые пр ивзломе и в админлогах.
 
 wire-name-access = ДСТП
 wire-name-arcade-overflow = ЛИМТ

@@ -1,0 +1,12 @@
+﻿advertisement-smite-1 = ХЫДЫЩЬ! Забань свою жажду!
+advertisement-smite-2 = Потусторонний заряд лимона и лайма!
+advertisement-smite-3 = Больше миллиона напитков продано!
+advertisement-smite-4 = ХЫДЫЩЬ! Кидай 2д8 на ВКУС.
+advertisement-smite-5 = ХЫДЫЩЬ! Давай разберёмся с бумажками!
+advertisement-smite-6 = Уборщик имеет на тебя зуб!
+advertisement-smite-7 = ХЫДЫЩЬ! Вас бить он не будет.
+advertisement-smite-8 = Время лимон-лайма!
+thankyou-smite-1 = ХЫДЫЩЬ крут!
+thankyou-smite-2 = Ты ОПРЕДЕЛЁННО хотел лимон-лайм!
+thankyou-smite-3 = Офис не узнает, что их ударило.
+thankyou-smite-4 = Уничтожь свою жажду.

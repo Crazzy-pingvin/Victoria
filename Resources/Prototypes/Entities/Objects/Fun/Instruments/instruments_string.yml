@@ -9,7 +9,7 @@
   - type: SwappableInstrument
     instrumentList:
       "Clean": {27: 0}
-      "Jazz": {25: 0}
+      "Jazz": {26: 0}
       "Muted": {28: 0}
   - type: Sprite
     sprite: Objects/Fun/Instruments/eguitar.rsi
@@ -142,6 +142,9 @@
           MaterialWoodPlank:
             min: 2
             max: 4
+          Chord:
+            min: 2
+            max: 3
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: DamageOnHit # This makes it destroy after one hit.

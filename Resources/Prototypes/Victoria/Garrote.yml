@@ -1,0 +1,96 @@
+#База
+- type: entity
+  parent: BaseItem
+  id: BaseGarrote
+  name: Базовая удавка
+  abstract: true
+  suffix: Хаунд
+  components:
+  - type: MultiHandedItem
+  - type: Garotte
+    damage:
+      types:
+        Blunt: 1
+        Asphyxiation: 14
+    setSound: /Audio/Items/bow_pull.ogg
+    chokeSound: /Audio/Effects/Gasp/gasp_male1.ogg
+#Провод
+- type: entity
+  parent: [ BaseGarrote, BaseMinorContraband ]
+  id: GarroteWire
+  name: шнур из проводов
+  suffix: Хаунд
+  description: Несколько переплетённых проводов с  импровизированными ручками-петлями на конце.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,0
+  - type: MultiHandedItem
+  - type: Icon
+    sprite: Victoria/Garrote/wire_garrote.rsi
+    state: base
+  - type: Sprite
+    sprite: Victoria/Garrote/wire_garrote.rsi
+    state: base
+  - type: Garotte
+    speedModifier: 0.9
+    duration: 3.0
+    damage:
+      types:
+        Blunt: 2
+        Asphyxiation: 5
+  - type: Construction
+    graph: GarroteWire
+    node: GarroteWire
+#крафт
+- type: constructionGraph
+  id: GarroteWire
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: GarroteWire
+          steps:
+            - material: Cable
+              amount: 20
+              doAfter: 10
+    - node: GarroteWire
+      entity: GarroteWire
+
+- type: construction
+  name: шнур из проводов
+  id: GarroteWire
+  graph: GarroteWire
+  startNode: start
+  targetNode: GarroteWire
+  category: construction-category-weapons
+  description: Самодельная удавка из проводов. Не думайте, что кто-то поверит в то, что это скакалка.
+  icon: { sprite: Victoria/Garrote/wire_garrote.rsi, state: base }
+  objectType: Item
+#Струна
+- type: entity
+  parent: BaseGarrote
+  id: Chord
+  name: струна
+  suffix: Хаунд
+  description: Струна из какого-то музыкального инструмента.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,0
+  - type: MultiHandedItem
+  - type: Icon
+    sprite: Victoria/Garrote/chord_garrote.rsi
+    state: base
+  - type: Sprite
+    sprite: Victoria/Garrote/chord_garrote.rsi
+    state: base
+  - type: Garotte
+    speedModifier: 1.0
+    duration: 3.5
+    damage:
+      types:
+        Slash: 3
+        Asphyxiation: 3

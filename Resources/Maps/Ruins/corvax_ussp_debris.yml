@@ -1490,14 +1490,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.4708157,2.4782007
       parent: 1
-- proto: FloraGreyStalagmite2
+- proto: FloraGreyStalagmite
   entities:
   - uid: 141
     components:
     - type: Transform
       pos: 4.053198,3.8774834
       parent: 1
-- proto: FloraGreyStalagmite6
+- proto: FloraGreyStalagmite
   entities:
   - uid: 142
     components:

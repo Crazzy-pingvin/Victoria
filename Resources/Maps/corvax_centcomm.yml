@@ -9074,7 +9074,7 @@ entities:
       content: >2+
                                    [head=2] Джордж Оруэлл [/head]
 
-                                                [head=1] 1984  [/head]                                             
+                                                [head=1] 1984  [/head]
 
                                          (краткий пересказ)
         [head=3] Часть первая [/head]
@@ -26804,7 +26804,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: FloraTree02
+- proto: FloraTree
   entities:
   - uid: 3406
     components:
@@ -26812,7 +26812,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 49.61338,17.421902
       parent: 2
-- proto: FloraTree05
+- proto: FloraTree
   entities:
   - uid: 3407
     components:
@@ -26820,14 +26820,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 47.934948,12.376297
       parent: 2
-- proto: FloraTreeLarge01
+- proto: FloraTreeLarge
   entities:
   - uid: 3408
     components:
     - type: Transform
       pos: 47.93064,17.038946
       parent: 2
-- proto: FloraTreeLarge02
+- proto: FloraTreeLarge
   entities:
   - uid: 3409
     components:

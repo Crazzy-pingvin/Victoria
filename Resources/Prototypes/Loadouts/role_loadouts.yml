@@ -35,7 +35,7 @@
 # Silicons
 - type: roleLoadout
   id: JobStationAi
-  nameDataset: names_ai
+  nameDataset: NamesAI
 
 # Civilian
 - type: roleLoadout
@@ -93,7 +93,7 @@
   - GroupKMLGLoadoutEpolets
   - GroupKMLGLoadoutCapServ
   - GroupKMLGLoadoutCoat
-  - GroupKMLGLoadoutUniformServise 
+  - GroupKMLGLoadoutUniformServise
   - GroupCDCLoadoutServ
 
 - type: roleLoadout
@@ -133,7 +133,7 @@
   - GroupKMLGLoadoutEpolets
   - GroupKMLGLoadoutCapServ
   - GroupKMLGLoadoutCoat
-  - GroupKMLGLoadoutUniformServise 
+  - GroupKMLGLoadoutUniformServise
   - GroupCDCLoadoutServ
 
 - type: roleLoadout

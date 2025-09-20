@@ -13,20 +13,6 @@
       count: 1
 
 - type: entity
-  id: IndustrialStockPart
-  name: industrial stock part
-  parent: BaseItem
-  description: What?
-  abstract: true
-  components:
-    - type: Sprite
-      sprite: Objects/Misc/stock_parts.rsi
-    - type: Item
-      size: Tiny
-    - type: Stack
-      count: 1
-
-- type: entity
   id: CapacitorStockPart
   name: capacitor
   parent: BaseStockPart
@@ -64,63 +50,3 @@
       state: matter_bin
     - type: Stack
       stackType: MatterBin
-
-- type: entity
-  id: IndustrialCapacitorStockPart
-  name: промышленный конденсатор
-  parent: IndustrialStockPart
-  description: Промышленный конденсатор, используемый в конструкции промышленных устройств.
-  suffix: Промышленный
-  components:
-    - type: Sprite
-      state: industrial_capacitor
-    - type: Tag
-      tags:
-        - CapacitorStockPart
-    - type: Stack
-      stackType: IndustrialCapacitor
-
-- type: stack
-  id: IndustrialCapacitor
-  name: промышленный конденсатор
-  icon: { sprite: Objects/Misc/stock_parts.rsi, state: industrial_capacitor }
-  spawn: IndustrialCapacitorStockPart
-  maxCount: 10
-
-- type: entity
-  id: IndustrialManipulatorStockPart
-  name: промышленный манипулятор
-  parent: IndustrialStockPart
-  description: Промышленный манипулятор, используемый в конструкции промышленных устройств.
-  suffix: Промышленный
-  components:
-    - type: Sprite
-      state: industrial_mani
-    - type: Stack
-      stackType: IndustrialManipulator
-
-- type: stack
-  id: IndustrialManipulator
-  name: промышленный манипулятор
-  icon: { sprite: Objects/Misc/stock_parts.rsi, state: industrial_mani }
-  spawn: IndustrialManipulatorStockPart
-  maxCount: 10
-
-- type: entity
-  id: IndustrialMatterBinStockPart
-  name: промышленная ёмкость материи
-  parent: IndustrialStockPart
-  description: Промышленная ёмкость материи, используемая в конструкции промышленных устройств.
-  suffix: Промышленный
-  components:
-    - type: Sprite
-      state: industrial_matter_bin
-    - type: Stack
-      stackType: IndustrialMatterBin
-
-- type: stack
-  id: IndustrialMatterBin
-  name: промышленная ёмкость материи
-  icon: { sprite: Objects/Misc/stock_parts.rsi, state: industrial_matter_bin }
-  spawn: IndustrialMatterBinStockPart
-  maxCount: 10

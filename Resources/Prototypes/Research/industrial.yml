@@ -47,20 +47,6 @@
   - TurboBatteryRechargerCircuitboard
 
 - type: technology
-  id: IndustrialStockParts
-  name: research-technology-industrial-stock-parts
-  icon:
-    sprite: Objects/Misc/stock_parts.rsi
-    state: industrial_capacitor
-  discipline: Industrial
-  tier: 1
-  cost: 7500
-  recipeUnlocks:
-    - IndustrialCapacitorStockPart
-    - IndustrialManipulatorStockPart
-    - IndustrialMatterBinStockPart
-
-- type: technology
   id: MechanicalCompression
   name: research-technology-mechanical-compression
   icon:
@@ -80,11 +66,13 @@
     state: building
   discipline: Industrial
   tier: 1
-  cost: 10000
+  cost: 12500
   recipeUnlocks:
   - AutolatheHyperConvectionMachineCircuitboard
   - ProtolatheHyperConvectionMachineCircuitboard
   - CircuitImprinterHyperConvectionMachineCircuitboard
+  - IndustrialVacuumMachineMachineCircuitboard
+  - IndustrialLithographMachineCircuitboard
 
 - type: technology
   id: TechnicalFabricators

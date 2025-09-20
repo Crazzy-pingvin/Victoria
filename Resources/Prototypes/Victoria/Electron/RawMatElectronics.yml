@@ -12,15 +12,24 @@
   components:
   - type: Stack
     stackType: СeramicsCrystall
+    baseLayer: base
+    layerStates:
+    - сeramics
+    - сeramics_2
+    - сeramics_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: сeramics
+    state: сeramics_3
+    layers:
+    - state: сeramics_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: сeramcrystal
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       СeramicsMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - CrystalMaterial
@@ -53,8 +62,8 @@
   result: СeramicsCrystall1
   completetime: 2
   materials:
-    RawIron: 500
-    RawQuartz: 500
+    RawIron: 250
+    RawQuartz: 250
 #--------------------------------------Плазкерам------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -66,15 +75,24 @@
   components:
   - type: Stack
     stackType: PlazСeramicsCrystall
+    baseLayer: base
+    layerStates:
+    - plazсeramics_crystal
+    - plazсeramics_crystal_2
+    - plazсeramics_crystal_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: plazсeramics_crystal
+    state: plazсeramics_crystal_3
+    layers:
+    - state: plazсeramics_crystal_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: plazсeram
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       PlazСeramicsMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - CrystalMaterial
@@ -107,17 +125,17 @@
   result: PlazСeramicsCrystall1
   completetime: 2
   materials:
-    RawIron: 500
-    RawQuartz: 500
-    RawPlasma: 500
+    RawIron: 250
+    RawQuartz: 250
+    RawPlasma: 250
     
 - type: latheRecipe
   id: RecipePlazСeramicsMaterial_2
   result: PlazСeramicsCrystall1
   completetime: 3
   materials:
-    СeramicsMaterial: 500
-    Plasma: 500
+    СeramicsMaterial: 250
+    Plasma: 250
 #--------------------------------------Кремнекерам------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -129,15 +147,24 @@
   components:
   - type: Stack
     stackType: SiСeramicsCrystall
+    baseLayer: base
+    layerStates:
+    - siсeramics_crystal
+    - siсeramics_crystal_2
+    - siсeramics_crystal_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: siсeramics_crystal
+    state: siсeramics_crystal_3
+    layers:
+    - state: siсeramics_crystal_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: siсeramcrystal
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       SiСeramicsMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - RawMatElectronics
@@ -169,16 +196,16 @@
   result: SiСeramicsCrystall1
   completetime: 2
   materials:
-    RawIron: 500
-    RawQuartz: 1000
+    RawIron: 250
+    RawQuartz: 500
     
 - type: latheRecipe
   id: RecipeSiСeramicsMaterial_2
   result: SiСeramicsCrystall1
   completetime: 3
   materials:
-    СeramicsMaterial: 500
-    SiMaterial: 1000
+    СeramicsMaterial: 250
+    SiMaterial: 500
 #--------------------------------------Углеродная смола------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -190,15 +217,24 @@
   components:
   - type: Stack
     stackType: CarbonPitch
+    baseLayer: base
+    layerStates:
+    - carbonpitch
+    - carbonpitch_2
+    - carbonpitch_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: carbonpitch
+    state: carbonpitch_3
+    layers:
+    - state: carbonpitch_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: carbonpitch
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       CarbonPitchMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - CrystalMaterial
@@ -250,15 +286,24 @@
   components:
   - type: Stack
     stackType: PolymerPitch
+    baseLayer: base
+    layerStates:
+    - polymerpitch
+    - polymerpitch_2
+    - polymerpitch_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: polymerpitch
+    state: polymerpitch_3
+    layers:
+    - state: polymerpitch_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: polymerpitch
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       PolymerPitchMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - CrystalMaterial
@@ -291,8 +336,8 @@
   result: PolymerPitch1
   completetime: 2
   materials:
-    CarbonPitchMaterial: 500
-    Plastic: 500
+    CarbonPitchMaterial: 750
+    Plastic: 250
 #--------------------------------------Стеклотекстолит------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -304,15 +349,24 @@
   components:
   - type: Stack
     stackType: Fiberglass
+    baseLayer: base
+    layerStates:
+    - fiberglass
+    - fiberglass_2
+    - fiberglass_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: fiberglass
+    state: fiberglass_3
+    layers:
+    - state: fiberglass_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: fiberglass
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       FiberglassMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - RawMatElectronics
@@ -321,7 +375,7 @@
   id: Fiberglass
   name: стеклотекстолит
   icon: { sprite: Victoria/Electron/rawelectronics_mat.rsi, state: fiberglass }
-  spawn: PolymerPitch1
+  spawn: Fiberglass1
   maxCount: 30
 #------------------Один кристалл--------------------------
 - type: entity
@@ -344,9 +398,9 @@
   result: Fiberglass1
   completetime: 2
   materials:
-    Cloth: 300
-    PolymerPitchMaterial: 300
-    Glass: 300
+    Cloth: 150
+    PolymerPitchMaterial: 150
+    Glass: 150
 #--------------------------------------Гетинакс------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -358,15 +412,24 @@
   components:
   - type: Stack
     stackType: Gethinax
+    baseLayer: base
+    layerStates:
+    - gethinax
+    - gethinax_2
+    - gethinax_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: gethinax
+    state: gethinax_3
+    layers:
+    - state: gethinax_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: gethinax
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       GethinaxMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - RawMatElectronics
@@ -376,7 +439,7 @@
   id: Gethinax
   name: гетинакс
   icon: { sprite: Victoria/Electron/rawelectronics_mat.rsi, state: gethinax }
-  spawn: PolymerPitch1
+  spawn: Gethinax1
   maxCount: 30
 #------------------Один кристалл--------------------------
 - type: entity
@@ -399,8 +462,8 @@
   result: Gethinax1
   completetime: 2
   materials:
-    Paper: 500
-    CarbonPitchMaterial: 500
+    Paper: 250
+    CarbonPitchMaterial: 250
 #--------------------------------------Кремнеплаз------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -412,15 +475,24 @@
   components:
   - type: Stack
     stackType: SiPlazCrystall
+    baseLayer: base
+    layerStates:
+    - siplaz_crystal
+    - siplaz_crystal_2
+    - siplaz_crystal_3
   - type: Sprite
     sprite: Victoria/Electron/rawelectronics_mat.rsi
-    state: siplaz_crystal
+    state: siplaz_crystal_3
+    layers:
+    - state: siplaz_crystal_3
+      map: ["base"]
   - type: Extractable
     grindableSolutionName: siplazrystal
   - type: Material
   - type: PhysicalComposition
     materialComposition:
       SiPlazMaterial: 1000
+  - type: Appearance
   - type: Tag
     tags:
     - RawMatElectronics
@@ -429,7 +501,7 @@
   id: SiPlazCrystall
   name: кремнеплаз
   icon: { sprite: Victoria/Electron/rawelectronics_mat.rsi, state: siplaz_crystal }
-  spawn: SiСeramicsCrystall1
+  spawn: SiPlazCrystall1
   maxCount: 30
 #------------------Один кристалл--------------------------
 - type: entity
@@ -452,5 +524,5 @@
   result: SiPlazCrystall1
   completetime: 3
   materials:
-    Plasma: 500
-    SiMaterial: 500
+    Plasma: 250
+    SiMaterial: 250

@@ -5,6 +5,7 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
+  - type: Chockable
   - type: HumanoidAppearance
     species: Vulpkanin
   - type: Hunger # on 1.5x more
@@ -31,13 +32,24 @@
     requiredLegs: 2
   - type: Inventory
     speciesId: reptilian # whyyy
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Corvax/Mobs/Species/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: Corvax/Mobs/Species/displacement.rsi
+            state: shoes
     displacements:
       jumpsuit:
         sizeMaps:
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: jumpsuit
-      shoes: # DM only for colored shoes!
+      shoes:
         sizeMaps:
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi
@@ -84,13 +96,24 @@
     species: Vulpkanin
   - type: Inventory
     speciesId: reptilian
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Corvax/Mobs/Species/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: Corvax/Mobs/Species/displacement.rsi
+            state: shoes
     displacements:
       jumpsuit:
         sizeMaps:
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: jumpsuit
-      shoes: # DM only for colored shoes!
+      shoes:
         sizeMaps:
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi

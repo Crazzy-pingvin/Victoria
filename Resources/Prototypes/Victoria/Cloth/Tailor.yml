@@ -93,7 +93,11 @@
   components:
   - type: Pda
     id: TailorIDCard
-    state: pda-tailor
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-tailor
   - type: PdaBorderColor
     borderColor: "#babaa8"
     accentVColor: "#9e9e9e"

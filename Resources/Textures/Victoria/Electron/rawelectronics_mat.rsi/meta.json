@@ -10,26 +10,74 @@
         {
             "name": "carbonpitch"
         },
+        {
+            "name": "carbonpitch_2"
+        },
+        {
+            "name": "carbonpitch_3"
+        },
 		{
             "name": "fiberglass"
+        },
+		{
+            "name": "fiberglass_2"
+        },
+		{
+            "name": "fiberglass_3"
         },
 		{
             "name": "gethinax"
         },
 		{
+            "name": "gethinax_2"
+        },
+		{
+            "name": "gethinax_3"
+        },
+		{
             "name": "plazсeramics_crystal"
+        },
+		{
+            "name": "plazсeramics_crystal_2"
+        },
+		{
+            "name": "plazсeramics_crystal_3"
         },
 		{
             "name": "polymerpitch"
         },
 		{
+            "name": "polymerpitch_2"
+        },
+		{
+            "name": "polymerpitch_3"
+        },
+		{
             "name": "siplaz_crystal"
+        },
+		{
+            "name": "siplaz_crystal_2"
+        },
+		{
+            "name": "siplaz_crystal_3"
         },
 		{
             "name": "siсeramics_crystal"
         },
 		{
+            "name": "siсeramics_crystal_2"
+        },
+		{
+            "name": "siсeramics_crystal_3"
+        },
+		{
             "name": "сeramics"
+        },
+		{
+            "name": "сeramics_2"
+        },
+		{
+            "name": "сeramics_3"
         },
 		{
 		  "name": "inhand-left",

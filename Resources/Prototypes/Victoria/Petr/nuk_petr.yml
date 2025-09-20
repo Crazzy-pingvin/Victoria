@@ -141,6 +141,7 @@
   - type: MindRole
     exclusiveAntag: true
     antagPrototype: NukPetr
+    roleType: TeamAntagonist
   - type: PetrRole
   - type: PetrOperative
 

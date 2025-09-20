@@ -5,6 +5,7 @@ using Content.Shared.Corvax.TTS;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
+using Content.Shared.Roles;
 using Content.Shared.Traits;
 using Content.SponsorImplementations.Server;
 using Content.SponsorImplementations.Shared;
@@ -172,6 +173,7 @@ public sealed class AddSponsorCommand: IConsoleCommand
             .With<MarkingPrototype>()
             .With<TraitPrototype>()
             .With<TTSVoicePrototype>()
+            .With<JobPrototype>()
             .Build();
     }
 }

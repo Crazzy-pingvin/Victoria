@@ -7882,14 +7882,14 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: FloraTree03
+- proto: FloraTree
   entities:
   - uid: 2211
     components:
     - type: Transform
       pos: 4.492442,0.04305768
       parent: 1
-- proto: FloraTree04
+- proto: FloraTree
   entities:
   - uid: 2210
     components:

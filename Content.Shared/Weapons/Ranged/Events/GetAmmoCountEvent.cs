@@ -4,7 +4,7 @@ namespace Content.Shared.Weapons.Ranged.Events;
 /// Raised on an AmmoProvider to request deets.
 /// </summary>
 [ByRefEvent]
-public struct GetAmmoCountEvent
+public sealed partial class GetAmmoCountEvent : EntityEventArgs
 {
     public int Count;
     public int Capacity;

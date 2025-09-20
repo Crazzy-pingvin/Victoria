@@ -88,10 +88,16 @@
       sprite: Victoria/Teach/pda_teacher.rsi
     - type: Pda
       id: CargoTeacherIDCard
-      state: pda-cargoteacher
     - type: Icon
       sprite: Victoria/Teach/pda_teacher.rsi
       state: pda-cargoteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-cargoteacher
+    - type: PdaBorderColor
+      borderColor: "#e39751"
 #-------------------------Гир--------------
 - type: startingGear
   id: CargoTeacherGear
@@ -136,6 +142,7 @@
   - Salvage
   - External
   - Maintenance
+  sponsorOnly: true
 #-------------------------------------------Ведущий инженер----------------------------
 #-------------------------Комбез--------------
 - type: entity
@@ -205,10 +212,17 @@
       sprite: Victoria/Teach/pda_teacher.rsi
     - type: Pda
       id: EngTeacherIDCard
-      state: pda-engteacher
     - type: Icon
       sprite: Victoria/Teach/pda_teacher.rsi
       state: pda-engteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-engteacher
+    - type: PdaBorderColor
+      borderColor: "#949137"
+      accentVColor: "#A32D26"
 #-------------------------Берет--------------
 - type: entity
   parent: ClothingHeadBase
@@ -270,6 +284,7 @@
   - Atmospherics
   - External
   - Maintenance
+  sponsorOnly: true
 #-------------------------------------------Инструктор----------------------------
 #-------------------------Комбез--------------
 - type: entity
@@ -339,10 +354,17 @@
       sprite: Victoria/Teach/pda_teacher.rsi
     - type: Pda
       id: SecTeacherIDCard
-      state: pda-secteacher
     - type: Icon
       sprite: Victoria/Teach/pda_teacher.rsi
       state: pda-secteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-secteacher
+    - type: PdaBorderColor
+      borderColor: "#A32D26"
+      accentHColor: "#447987"
 #-------------------------Фуражка--------------
 - type: entity
   parent: ClothingHeadBase
@@ -413,6 +435,7 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  sponsorOnly: true
 #-------------------------------------------Доцент----------------------------
 #-------------------------Комбез--------------
 - type: entity
@@ -420,7 +443,7 @@
   id: SciTeacherUniform
   name: комбинезон доцента
   suffix: Наставники
-  description: Крепкая и очень красивая. Привлекает к себе дамочек и заставляет бояться кадетов
+  description: Удобный и красивый. Если, конечно, его не разорвёт в клочья какой-нибудь артефакт.
   components:
   - type: Sprite
     sprite: Victoria/Teach/uniform_scientist_teacher.rsi
@@ -482,10 +505,18 @@
       sprite: Victoria/Teach/pda_teacher.rsi
     - type: Pda
       id: SciTeacherIDCard
-      state: pda-scienceteacher
     - type: Icon
       sprite: Victoria/Teach/pda_teacher.rsi
       state: pda-scienceteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-scienceteacher
+    - type: PdaBorderColor
+      borderColor: "#d7d7d0"
+      accentHColor: "#447987"
+      accentVColor: "#8900c9"
 #-------------------------Халат--------------
 - type: entity
   parent: ClothingOuterCoatLab
@@ -542,6 +573,7 @@
   - !type:AddComponentSpecial
     components:
       - type: PetrTarget
+  sponsorOnly: true
 #-------------------------------------------Мед. консультант----------------------------
 #-------------------------Комбез--------------
 - type: entity
@@ -610,7 +642,15 @@
       sprite: Victoria/Teach/pda_teacher.rsi
     - type: Pda
       id: MedTeacherIDCard
-      state: pda-scienceteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-medteacher
+    - type: PdaBorderColor
+      borderColor: "#d7d7d0"
+      accentHColor: "#447987"
+      accentVColor: "#447987"
     - type: Icon
       sprite: Victoria/Teach/pda_teacher.rsi
       state: pda-scienceteacher
@@ -659,6 +699,7 @@
   - Chemistry
   - External
   - Maintenance
+  sponsorOnly: true
 #-------------------------------------------Спавнеры ролям----------------------------
 #-------------------------Бригадир--------------
 - type: entity
@@ -743,3 +784,13 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsTeacherAccess ]  
+
+- type: sponsorGroup
+  id: LjeSponsorGroupTeachers
+  serverPriorityJoin: true
+  prototypes:
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher

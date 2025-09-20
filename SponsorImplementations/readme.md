@@ -44,6 +44,7 @@
 `MarkingPrototype`
 `TraitPrototype`
 `TTSVoicePrototype`
+`JobPrototype`
 
 
 При желании сделать прототип лишь для спонсоров делаем такие манипулияции:

@@ -133,7 +133,7 @@
             False: {visible: false}
     - type: ResearchClient
     - type: ResearchPointSource
-      pointspersecond: 10
+      pointspersecond: 7
       active: true
     - type: Construction
       graph: Machine

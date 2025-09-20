@@ -1,0 +1,32 @@
+- type: entity
+  id: MechEquipmentGun
+  parent: BaseMechEquipment
+  name: мех пушка
+  description: Gives the mech the ability to shoot things
+  components:
+  - type: Sprite
+    state: mecha_clamp
+  - type: MechGun
+    comps:
+    - type: Gun
+      # настройки самой пушки
+  - type: UIFragment
+    ui: !type:MechGunUi
+
+  # патроны через магазины
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot

@@ -75,8 +75,8 @@
 - type: entity
   id: WristwatchHop
   parent: Wristwatch
-  name: Часы главы персонала
-  description: Электронные часы с интегрированным ПО консоли станционного учёта.
+  name: часы главы персонала
+  description: Электронные часы с интегрированным программным обеспечением станционного учёта.
   components:
   - type: Sprite
     sprite: Victoria/cap_watch.rsi
@@ -95,8 +95,8 @@
 - type: entity
   id: WristwatchSmo
   parent: Wristwatch
-  name: Часы главного врача
-  description: Электронные часы с интегрированным ПО консоли мониторинга экипажа.
+  name: часы главного врача
+  description: Электронные часы с интегрированным программным обеспечением мониторинга экипажа.
   components:
   - type: Sprite
     sprite: Victoria/cap_watch.rsi
@@ -118,8 +118,8 @@
 - type: entity
   id: WristwatchRd
   parent: Wristwatch
-  name: Часы научного руководителя
-  description: Электронные часы с интегрированным ПО консоли исследований.
+  name: часы научного руководителя
+  description: Электронные часы с интегрированным программным обеспечением консоли исследований.
   components:
   - type: Sprite
     sprite: Victoria/cap_watch.rsi
@@ -147,8 +147,8 @@
 - type: entity
   id: WristwatchHos
   parent: Wristwatch
-  name: Часы главы службы безопасности
-  description: Электронные часы с интегрированным ПО монитора камер.
+  name: часы главы службы безопасности
+  description: Электронные часы с интегрированным программным обеспечением монитора камер.
   components:
   - type: Sprite
     sprite: Victoria/cap_watch.rsi
@@ -173,8 +173,8 @@
 - type: entity
   id: WristwatchQm
   parent: Wristwatch
-  name: Часы квартирмейстера
-  description: Электронные часы с интегрированным ПО консоли запросов.
+  name: часы квартирмейстера
+  description: Электронные часы с интегрированным программным обеспечением консоли запросов.
   components:
   - type: Sprite
     sprite: Victoria/cap_watch.rsi
@@ -195,8 +195,8 @@
 - type: entity
   id: WristwatchSe
   parent: Wristwatch
-  name: Часы старшено инженера
-  description: Электронные часы с интегрированным ПО консоли контроля питания.
+  name: часы старшено инженера
+  description: Электронные часы с интегрированным программным обеспечением консоли контроля питания.
   components:
   - type: Sprite
     sprite: Victoria/cap_watch.rsi
@@ -256,7 +256,7 @@
   parent: BaseItem
   id: SandbagEmpty
   name: пустые мешки
-  description: Материя, крепко, но грубо сшитая в мешок. В него можно запихнуть разные сыпучие штуки.
+  description: В него можно засыпать песок.
   components:
   - type: Item
     size: Small
@@ -296,8 +296,8 @@
 - type: entity
   parent: BaseItem
   id: SandbagFull
-  name: мешки с меском
-  description: На такой "подушке" поспать смогли бы лишь древне-древнеземные египтяне. Но из них получатся отличные брустверы.
+  name: мешки с песком
+  description: На такой "подушке" поспать смогли бы лишь древние египтяне, но из них получатся отличные брустверы.
   components:
   - type: Item
     size: Large
@@ -325,7 +325,7 @@
     
 - type: stack
   id: SandbagFull
-  name: мешки с меском
+  name: мешки с песком
   spawn: SandbagFull
   maxCount: 50
   
@@ -364,6 +364,10 @@
           steps:
             - material: ElastaneCloth
               amount: 1    
+        - to: SandbagEmptySheepWool
+          steps:
+            - material: SheepWoolClean
+              amount: 1  
     - node: SandbagEmptyLinum 
       entity: SandbagEmpty     
     - node: SandbagEmptyCotton
@@ -371,6 +375,8 @@
     - node: SandbagEmptyCottonPaper
       entity: SandbagEmpty
     - node: SandbagEmptyElastane
+      entity: SandbagEmpty
+    - node: SandbagEmptySheepWool
       entity: SandbagEmpty
       
 - type: construction
@@ -412,6 +418,17 @@
   graph: Sandbag
   startNode: start
   targetNode: SandbagEmptyElastane
+  category: construction-category-materials
+  description: Мешок, который можно будет наполнить чем-то сыпучим.
+  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
+  objectType: Item
+  
+- type: construction
+  name: sandbag empty
+  id: SandbagEmptySheepWool
+  graph: Sandbag
+  startNode: start
+  targetNode: SandbagEmptySheepWool
   category: construction-category-materials
   description: Мешок, который можно будет наполнить чем-то сыпучим.
   icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
@@ -771,8 +788,8 @@
 - type: entity
   parent: CrystalOreBase
   id: SandHandful
-  name: Горсть песка
-  description: Синие и высокоэнергетические. Весьма дорогие и очень важные.
+  name: горсть песка
+  description: Можно насыпать в мешки и строить из них баррикады или переплавлять в стекло.
   suffix: Full
   components:
   - type: Stack
@@ -803,7 +820,7 @@
 #------------------Стак--------------------------
 - type: stack
   id: SandHandful
-  name: Горсть песка
+  name: горсть песка
   icon: { sprite: Victoria/sandbags.rsi, state: sand }
   spawn: SandHandful1
   maxCount: 100

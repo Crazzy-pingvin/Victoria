@@ -55,6 +55,7 @@ namespace Content.Server.Lathe
         /// Per-tick cache
         /// </summary>
         private readonly List<GasMixture> _environments = new();
+        private readonly List<GasMixture> _gasEnvironments = new();
 
         public override void Initialize()
         {
@@ -73,7 +74,9 @@ namespace Content.Server.Lathe
             SubscribeLocalEvent<TechnologyDatabaseComponent, LatheGetRecipesEvent>(OnGetRecipes);
             SubscribeLocalEvent<EmagLatheRecipesComponent, LatheGetRecipesEvent>(GetEmagLatheRecipes);
             SubscribeLocalEvent<LatheHeatProducingComponent, LatheStartPrintingEvent>(OnHeatStartPrinting);
+            SubscribeLocalEvent<LatheIndustrialProducingComponent, LatheStartPrintingEvent>(OnIndustrialStartPrinting);
         }
+
         public override void Update(float frameTime)
         {
             var query = EntityQueryEnumerator<LatheProducingComponent, LatheComponent>();
@@ -117,6 +120,46 @@ namespace Content.Server.Lathe
                     }
                 }
             }
+
+            var industrialQuery = EntityQueryEnumerator<LatheIndustrialProducingComponent, LatheProducingComponent, TransformComponent>();
+            while (industrialQuery.MoveNext(out var uid, out var comp, out _, out var xform))
+            {
+                if (_timing.CurTime < comp.NextUpdate)
+                    continue;
+
+                comp.NextUpdate += TimeSpan.FromSeconds(1);
+
+                _gasEnvironments.Clear();
+                var position = _transform.GetGridTilePositionOrDefault((uid, xform));
+
+                if (_atmosphere.GetTileMixture(xform.GridUid, xform.MapUid, position, true) is { } tileMix)
+                    _gasEnvironments.Add(tileMix);
+
+                if (xform.GridUid != null)
+                {
+                    var enumerator = _atmosphere.GetAdjacentTileMixtures(xform.GridUid.Value, position, false, true);
+                    while (enumerator.MoveNext(out var mix))
+                    {
+                        _gasEnvironments.Add(mix);
+                    }
+                }
+
+                if (_gasEnvironments.Count > 0)
+                {
+                    var molesPerTile = comp.MolesPerSecond / _gasEnvironments.Count;
+                    foreach (var env in _gasEnvironments)
+                    {
+                        var mix = new GasMixture(1) { Temperature = env.Temperature };
+                        mix.SetMoles((int)Gas.CarbonDioxide, molesPerTile);
+                        _atmosphere.Merge(env, mix);
+                    }
+                }
+            }
+        }
+
+        private void OnIndustrialStartPrinting(EntityUid uid, LatheIndustrialProducingComponent component, LatheStartPrintingEvent args)
+        {
+            component.NextUpdate = _timing.CurTime;
         }
 
         private void OnGetWhitelist(EntityUid uid, LatheComponent component, ref GetMaterialWhitelistEvent args)
@@ -178,7 +221,7 @@ namespace Content.Server.Lathe
             foreach (var (mat, amount) in recipe.Materials)
             {
                 var adjustedAmount = recipe.ApplyMaterialDiscount
-                    ? (int) (-amount * component.MaterialUseMultiplier)
+                    ? (int)(-amount * component.MaterialUseMultiplier)
                     : -amount;
 
                 _materialStorage.TryChangeMaterialAmount(uid, mat, adjustedAmount);

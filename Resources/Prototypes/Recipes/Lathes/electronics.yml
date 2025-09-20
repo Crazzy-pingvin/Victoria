@@ -276,22 +276,22 @@
     SiPlazCircuitBordMaterial: 1000
     DigitalCircuitMaterial: 800
     PulseCircuitMaterial: 200
-#----------------------------------------------Фактические Рецепты------------------------------------------    
+#----------------------------------------------Фактические Рецепты------------------------------------------
 - type: latheRecipe
   parent: BaseRecipeFiberglass_10
   id: FirelockElectronics
   result: FirelockElectronics
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_7
   id: MailingUnitElectronics
   result: MailingUnitElectronics
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: CellRechargerCircuitboard
   result: CellRechargerCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: BorgChargerCircuitboard
@@ -310,13 +310,13 @@
 - type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: TurboBatteryRechargerCircuitboard
-  result: TurboBatteryRechargerCircuitboard 
-  
+  result: TurboBatteryRechargerCircuitboard
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_1
   id: DoorElectronics
   result: DoorElectronics
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: FreezerElectronics
@@ -346,7 +346,7 @@
   parent: BaseRecipeFiberglass_4
   id: SignalTimerElectronics
   result: SignalTimerElectronics
-  
+
 - type: latheRecipe
   parent: BaseRecipeSapphire_2
   id: CloningPodMachineCircuitboard
@@ -376,7 +376,7 @@
   parent: BaseRecipeSiСeramics_2
   id: SpaceHeaterMachineCircuitBoard
   result: SpaceHeaterMachineCircuitBoard
-  
+
 - type: latheRecipe
   parent: BaseRecipeSapphire_1
   id: MedicalScannerMachineCircuitboard
@@ -411,7 +411,7 @@
   parent: BaseRecipeFiberglass_7
   id: HydroponicsTrayMachineCircuitboard
   result: HydroponicsTrayMachineCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_4
   id: AutolatheMachineCircuitboard
@@ -451,7 +451,7 @@
   parent: BaseRecipeFiberglass_4
   id: UniformPrinterMachineCircuitboard
   result: UniformPrinterMachineCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_7
   id: BiogeneratorMachineCircuitboard
@@ -491,7 +491,7 @@
   parent: BaseRecipeSiPlaz_1
   id: AnomalySynchronizerCircuitboard
   result: AnomalySynchronizerCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_3
   id: APECircuitboard
@@ -571,7 +571,7 @@
   parent: BaseRecipeFiberglass_5
   id: RipleyPeripheralsElectronics
   result: RipleyPeripheralsElectronics
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_8
   id: HonkerCentralElectronics
@@ -596,7 +596,7 @@
   parent: BaseRecipeFiberglass_5
   id: HamtrPeripheralsElectronics
   result: HamtrPeripheralsElectronics
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: APCElectronics
@@ -663,7 +663,7 @@
   parent: BaseRecipeSiСeramics_5
   id: SolarControlComputerCircuitboard
   result: SolarControlComputerCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_4
   id: SolarTrackerElectronics
@@ -703,7 +703,7 @@
   parent: BaseRecipeFiberglass_4
   id: SurveillanceCameraRouterCircuitboard
   result: SurveillanceCameraRouterCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_4
   id: SurveillanceCameraWirelessRouterCircuitboard
@@ -743,7 +743,7 @@
   parent: BaseRecipeFiberglass_2
   id: ThrusterMachineCircuitboard
   result: ThrusterMachineCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_5
   id: GyroscopeMachineCircuitboard
@@ -788,7 +788,7 @@
   parent: BaseRecipeFiberglass_2
   id: MiniGravityGeneratorCircuitboard
   result: MiniGravityGeneratorCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: PowerCageRechargerCircuitboard
@@ -825,12 +825,6 @@
   completetime: 12
 
 - type: latheRecipe
-  parent: BaseRecipeFiberglass_2
-  id: StationAnchorCircuitboard
-  result: StationAnchorCircuitboard
-  completetime: 8
-
-- type: latheRecipe
   parent: BaseRecipeFiberglass_5
   id: ReagentGrinderIndustrialMachineCircuitboard
   result: ReagentGrinderIndustrialMachineCircuitboard
@@ -844,42 +838,42 @@
   parent: BaseRecipeFiberglass_7
   id: CutterMachineCircuitboard
   result: CutterMachineCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeGethinax_2
   id: SalvageExpeditionsComputerCircuitboard
   result: SalvageExpeditionsComputerCircuitboard
- 
+
 - type: latheRecipe
   parent: BaseRecipeFiberglass_8
   id: PrinterDocMachineCircuitboard
   result: PrinterDocMachineCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_2
   id: LithographMachineCircuitboard
   result: LithographMachineCircuitboard
- 
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_2
   id: VacuumMachineMachineCircuitboard
   result: VacuumMachineMachineCircuitboard
-  
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_2
   id: MachineCircuitboardCosmMachine
   result: MachineCircuitboardCosmMachine
-  
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_3
   id: MachineCircuitboardCosmAccum
   result: MachineCircuitboardCosmAccum
-  
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_3
   id: MachineCircuitboardCosmBeacon
   result: MachineCircuitboardCosmBeacon
-  
+
 - type: latheRecipe
   parent: BaseRecipeSiPlaz_1
   id: MachineCircuitboardCosmScanner
@@ -919,3 +913,18 @@
   parent: BaseRecipeFiberglass_4
   id: ClothLatheMachineCircuitboard
   result: ClothLatheMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: IndustrialVacuumMachineMachineCircuitboard
+  result: IndustrialVacuumMachineMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: IndustrialLithographMachineCircuitboard
+  result: IndustrialLithographMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: HolopadMachineCircuitboard
+  result: HolopadMachineCircuitboard

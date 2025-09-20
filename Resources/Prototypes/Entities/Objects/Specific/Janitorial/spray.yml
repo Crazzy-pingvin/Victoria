@@ -45,7 +45,7 @@
 
 - type: entity
   name: блюспейс распылитель
-  id: BluespaceSprayBottle
+  id: MegaSprayBottle
   parent: SprayBottle
   suffix: Empty
   description: Улучшенный распылитель, что имеет больше вместительность и больше дальность поражения.

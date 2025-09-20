@@ -10625,6 +10625,26 @@ entities:
     - type: Transform
       pos: 90.55121,-10.254825
       parent: 2
+  - uid: 15244
+    components:
+    - type: Transform
+      pos: 14.394579,-23.21022
+      parent: 2
+  - uid: 15245
+    components:
+    - type: Transform
+      pos: 14.488329,-23.36647
+      parent: 2
+  - uid: 15246
+    components:
+    - type: Transform
+      pos: 14.410204,-23.569595
+      parent: 2
+  - uid: 15247
+    components:
+    - type: Transform
+      pos: 14.722704,-23.507095
+      parent: 2
 - proto: APCHighCapacity
   entities:
   - uid: 43
@@ -11002,15 +11022,15 @@ entities:
     - type: Transform
       pos: 51.5,18.5
       parent: 2
-  - uid: 942
-    components:
-    - type: Transform
-      pos: 15.5,-23.5
-      parent: 2
   - uid: 6910
     components:
     - type: Transform
       pos: 13.5,20.5
+      parent: 2
+  - uid: 15241
+    components:
+    - type: Transform
+      pos: 13.5,-25.5
       parent: 2
 - proto: BananaPhoneInstrument
   entities:
@@ -32541,6 +32561,38 @@ entities:
     - type: Transform
       pos: 59.5,38.5
       parent: 2
+- proto: CapacitorStockPart
+  entities:
+  - uid: 15255
+    components:
+    - type: Transform
+      pos: 13.253954,-28.132095
+      parent: 2
+  - uid: 15256
+    components:
+    - type: Transform
+      pos: 13.425829,-28.30397
+      parent: 2
+  - uid: 15257
+    components:
+    - type: Transform
+      pos: 13.285204,-28.444595
+      parent: 2
+  - uid: 15258
+    components:
+    - type: Transform
+      pos: 13.410204,-28.61647
+      parent: 2
+  - uid: 15259
+    components:
+    - type: Transform
+      pos: 13.660204,-28.46022
+      parent: 2
+  - uid: 15260
+    components:
+    - type: Transform
+      pos: 13.660204,-28.163345
+      parent: 2
 - proto: CaptainIDCard
   entities:
   - uid: 1255
@@ -37789,6 +37841,11 @@ entities:
     - type: Transform
       pos: 25.514921,-29.44944
       parent: 2
+  - uid: 15265
+    components:
+    - type: Transform
+      pos: 22.375998,-25.30397
+      parent: 2
 - proto: ClothingBeltUtilityFilled
   entities:
   - uid: 872
@@ -37844,6 +37901,11 @@ entities:
     - type: Transform
       pos: 12.5,-35.5
       parent: 2
+  - uid: 801
+    components:
+    - type: Transform
+      pos: 17.082079,-23.132095
+      parent: 2
   - uid: 5718
     components:
     - type: Transform
@@ -37858,6 +37920,11 @@ entities:
     components:
     - type: Transform
       pos: 44.482018,28.569605
+      parent: 2
+  - uid: 15263
+    components:
+    - type: Transform
+      pos: 17.113329,-23.350845
       parent: 2
 - proto: ClothingEyesGlassesSunglasses
   entities:
@@ -37894,10 +37961,15 @@ entities:
     - type: Transform
       pos: 30.487595,-14.515437
       parent: 2
-  - uid: 5630
+  - uid: 15261
     components:
     - type: Transform
-      pos: 17.199833,-23.332096
+      pos: 14.285204,-28.58522
+      parent: 2
+  - uid: 15262
+    components:
+    - type: Transform
+      pos: 14.316454,-28.225845
       parent: 2
 - proto: ClothingHandsGlovesFingerless
   entities:
@@ -38124,6 +38196,13 @@ entities:
     - type: Transform
       pos: 102.40892,-16.268303
       parent: 2
+- proto: ClothingMaskBlushingMime
+  entities:
+  - uid: 8345
+    components:
+    - type: Transform
+      pos: 25.245346,6.3236885
+      parent: 2
 - proto: ClothingMaskBreathMedical
   entities:
   - uid: 12657
@@ -38169,13 +38248,6 @@ entities:
     components:
     - type: Transform
       pos: 81.53254,11.610725
-      parent: 2
-- proto: ClothingMaskSexyMime
-  entities:
-  - uid: 8345
-    components:
-    - type: Transform
-      pos: 25.245346,6.3236885
       parent: 2
 - proto: ClothingMaskSterile
   entities:
@@ -38491,6 +38563,11 @@ entities:
     components:
     - type: Transform
       pos: 8.56214,-8.481274
+      parent: 2
+  - uid: 15264
+    components:
+    - type: Transform
+      pos: 22.469748,-25.507095
       parent: 2
 - proto: ClothingShoesFlippers
   entities:
@@ -43572,13 +43649,6 @@ entities:
     - type: Transform
       pos: 57.63163,-13.7188425
       parent: 2
-- proto: DungeonMasterCircuitBoard
-  entities:
-  - uid: 14279
-    components:
-    - type: Transform
-      pos: 84.42593,28.556656
-      parent: 2
 - proto: ElectricGuitarInstrument
   entities:
   - uid: 14550
@@ -46769,6 +46839,13 @@ entities:
     components:
     - type: Transform
       pos: 33.59406,-4.5126047
+      parent: 2
+- proto: GameMasterCircuitBoard
+  entities:
+  - uid: 14279
+    components:
+    - type: Transform
+      pos: 84.42593,28.556656
       parent: 2
 - proto: GasFilterFlipped
   entities:
@@ -66592,6 +66669,118 @@ entities:
     - type: Transform
       pos: 83.5,30.5
       parent: 2
+- proto: HolopadAiMain
+  entities:
+  - uid: 15272
+    components:
+    - type: Transform
+      pos: 92.5,30.5
+      parent: 2
+- proto: HolopadCargoBay
+  entities:
+  - uid: 15271
+    components:
+    - type: Transform
+      pos: 10.5,21.5
+      parent: 2
+- proto: HolopadCargoFront
+  entities:
+  - uid: 15280
+    components:
+    - type: Transform
+      pos: 19.5,22.5
+      parent: 2
+- proto: HolopadCommandBridge
+  entities:
+  - uid: 15276
+    components:
+    - type: Transform
+      pos: 27.5,45.5
+      parent: 2
+- proto: HolopadCommandMeetingRoom
+  entities:
+  - uid: 15274
+    components:
+    - type: Transform
+      pos: 21.5,41.5
+      parent: 2
+- proto: HolopadEngineeringAtmosFront
+  entities:
+  - uid: 15267
+    components:
+    - type: Transform
+      pos: 29.5,-26.5
+      parent: 2
+- proto: HolopadEngineeringFront
+  entities:
+  - uid: 15273
+    components:
+    - type: Transform
+      pos: 20.5,-26.5
+      parent: 2
+- proto: HolopadGeneralArrivals
+  entities:
+  - uid: 15278
+    components:
+    - type: Transform
+      pos: -23.5,-12.5
+      parent: 2
+- proto: HolopadGeneralEvac
+  entities:
+  - uid: 15281
+    components:
+    - type: Transform
+      pos: -7.5,-0.5
+      parent: 2
+- proto: HolopadMedicalMedbay
+  entities:
+  - uid: 15275
+    components:
+    - type: Transform
+      pos: 56.5,-0.5
+      parent: 2
+- proto: HolopadScienceFront
+  entities:
+  - uid: 15277
+    components:
+    - type: Transform
+      pos: 52.5,19.5
+      parent: 2
+- proto: HolopadScienceRnd
+  entities:
+  - uid: 15279
+    components:
+    - type: Transform
+      pos: 60.5,24.5
+      parent: 2
+- proto: HolopadSecurityBrig
+  entities:
+  - uid: 15269
+    components:
+    - type: Transform
+      pos: 34.5,19.5
+      parent: 2
+- proto: HolopadSecurityCourtroom
+  entities:
+  - uid: 15266
+    components:
+    - type: Transform
+      pos: 19.5,31.5
+      parent: 2
+- proto: HolopadServiceBotany
+  entities:
+  - uid: 15270
+    components:
+    - type: Transform
+      pos: 42.5,-3.5
+      parent: 2
+- proto: HolopadServiceLibrary
+  entities:
+  - uid: 15268
+    components:
+    - type: Transform
+      pos: 11.5,3.5
+      parent: 2
 - proto: HospitalCurtainsOpen
   entities:
   - uid: 3192
@@ -68725,11 +68914,6 @@ entities:
       parent: 2
 - proto: PortableGeneratorJrPacman
   entities:
-  - uid: 801
-    components:
-    - type: Transform
-      pos: 13.5,-28.5
-      parent: 2
   - uid: 3176
     components:
     - type: Transform
@@ -68779,6 +68963,11 @@ entities:
     components:
     - type: Transform
       pos: -6.5,-23.5
+      parent: 2
+  - uid: 15243
+    components:
+    - type: Transform
+      pos: 11.5,-29.5
       parent: 2
 - proto: PortableGeneratorPacman
   entities:
@@ -69410,6 +69599,16 @@ entities:
     components:
     - type: Transform
       pos: 16.4019,-23.383022
+      parent: 2
+  - uid: 15253
+    components:
+    - type: Transform
+      pos: 16.253954,-23.538345
+      parent: 2
+  - uid: 15254
+    components:
+    - type: Transform
+      pos: 15.894579,-23.52272
       parent: 2
 - proto: PowerCellRecharger
   entities:
@@ -75407,6 +75606,13 @@ entities:
     - type: Transform
       pos: 45.5,-16.5
       parent: 2
+- proto: ReliableAPCElectronics
+  entities:
+  - uid: 15248
+    components:
+    - type: Transform
+      pos: 14.722704,-23.225845
+      parent: 2
 - proto: RemoteSignaller
   entities:
   - uid: 9222
@@ -77723,6 +77929,13 @@ entities:
     - type: Transform
       pos: 37.5,33.5
       parent: 2
+- proto: SMESMachineCircuitboard
+  entities:
+  - uid: 15252
+    components:
+    - type: Transform
+      pos: 15.816454,-23.27272
+      parent: 2
 - proto: SmokingPipeFilledTobacco
   entities:
   - uid: 11946
@@ -79432,6 +79645,23 @@ entities:
     - type: Transform
       pos: 80.5,34.5
       parent: 2
+- proto: SubstationMachineCircuitboard
+  entities:
+  - uid: 15249
+    components:
+    - type: Transform
+      pos: 15.300829,-23.194595
+      parent: 2
+  - uid: 15250
+    components:
+    - type: Transform
+      pos: 15.300829,-23.350845
+      parent: 2
+  - uid: 15251
+    components:
+    - type: Transform
+      pos: 15.300829,-23.507095
+      parent: 2
 - proto: SuitStorageCaptain
   entities:
   - uid: 869
@@ -81062,10 +81292,20 @@ entities:
     - type: Transform
       pos: 16.5,-26.5
       parent: 2
+  - uid: 800
+    components:
+    - type: Transform
+      pos: 15.5,-23.5
+      parent: 2
   - uid: 884
     components:
     - type: Transform
       pos: 32.5,-30.5
+      parent: 2
+  - uid: 942
+    components:
+    - type: Transform
+      pos: 14.5,-28.5
       parent: 2
   - uid: 1033
     components:
@@ -81415,6 +81655,16 @@ entities:
     - type: Transform
       pos: 86.5,1.5
       parent: 2
+  - uid: 5630
+    components:
+    - type: Transform
+      pos: 14.5,-23.5
+      parent: 2
+  - uid: 5643
+    components:
+    - type: Transform
+      pos: 13.5,-28.5
+      parent: 2
   - uid: 5710
     components:
     - type: Transform
@@ -81554,6 +81804,11 @@ entities:
     components:
     - type: Transform
       pos: 16.5,-5.5
+      parent: 2
+  - uid: 10296
+    components:
+    - type: Transform
+      pos: 22.5,-25.5
       parent: 2
   - uid: 10664
     components:
@@ -94817,11 +95072,6 @@ entities:
       parent: 2
 - proto: WaterCooler
   entities:
-  - uid: 5643
-    components:
-    - type: Transform
-      pos: 14.5,-23.5
-      parent: 2
   - uid: 11223
     components:
     - type: Transform
@@ -95049,11 +95299,6 @@ entities:
       parent: 2
 - proto: WeldingFuelTankFull
   entities:
-  - uid: 800
-    components:
-    - type: Transform
-      pos: 14.5,-28.5
-      parent: 2
   - uid: 2163
     components:
     - type: Transform
@@ -95108,6 +95353,11 @@ entities:
     components:
     - type: Transform
       pos: -15.5,-24.5
+      parent: 2
+  - uid: 15242
+    components:
+    - type: Transform
+      pos: 11.5,-28.5
       parent: 2
 - proto: WetFloorSign
   entities:

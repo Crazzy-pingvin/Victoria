@@ -39,7 +39,7 @@
     graph: SteelWire
     node: SteelWire
   - type: Material
-    
+
 - type: entity
   parent: CableWireStack
   id: CableWireStack10
@@ -59,21 +59,21 @@
     state: coilwire-10
   - type: Stack
     count: 1
-    
+
 - type: stack
   id: Wire
   name: стальная проволока
   icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilwire-30 }
   spawn: CableWireStack1
   maxCount: 30
-  
+
 # - type: material
   # id: CableWireMaterial
   # stackEntity: Wire
   # name: стальная проволока
   # icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilwire-30 }
   # price: 0.05
-#-------------------------------крафт------------------------------------    
+#-------------------------------крафт------------------------------------
 #---------------------руками----------------------------
 - type: constructionGraph
   id: SteelWire
@@ -140,7 +140,7 @@
   - type: StackPrice
     price: 0.25
   - type: Material
-          
+
 - type: entity
   parent: CordStack
   id: CordStack10
@@ -160,21 +160,21 @@
     state: coilcord-10
   - type: Stack
     count: 1
-    
+
 - type: stack
   id: Cord
   name: шнур
   icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilcord-30 }
   spawn: CordStack1
   maxCount: 30
-  
+
 - type: material
   id: CordMaterial
   stackEntity: CordStack1
   name: шнур
   icon: { sprite: "/Textures/Victoria/Bomb/coils.rsi", state: coilcord-30 }
   price: 0.05
-#-------------------------------крафт------------------------------------    
+#-------------------------------крафт------------------------------------
 #---------------------руками----------------------------
 - type: constructionGraph
   id: Cord
@@ -270,7 +270,7 @@
     Nitrogen:
       amount: 1
     Ammonia:
-      amount: 1  
+      amount: 1
   products:
     AmmoniumNitrate: 5
 #-------------------------------сенсибилизатор-------------------------
@@ -306,7 +306,7 @@
         reagents:
         - ReagentId: Sensitizer
           Quantity: 50
-            
+
 - type: entity
   id: CrateSensitizer
   parent: CrateGenericSteel
@@ -328,7 +328,7 @@
   product: CrateSensitizer
   cost: 1500
   category: cargoproduct-category-name-security
-  group: market           
+  group: market
 #-------------------------------пластидин------------------------------
 - type: flavor
   id: Plastidin
@@ -350,7 +350,7 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-        
+
 - type: reaction
   id: Plastidin
   reactants:
@@ -359,10 +359,10 @@
     AmmoniumNitrate:
       amount: 1
     Sensitizer:
-      amount: 1  
+      amount: 1
   products:
     Plastidin: 3
-    
+
 - type: reaction
   id: PlastidinExplosion
   impact: High
@@ -388,11 +388,11 @@
     Plastidin:
       amount: 6
     Iron:
-      amount: 1 
+      amount: 1
   effects:
     - !type:CreateEntityReactionEffect
       entity: Plastid
-      
+
 - type: entity
   parent: CrystalOreBase
   id: Plastid
@@ -425,13 +425,13 @@
   icon: { sprite: Victoria/Bomb/plastid.rsi, state: plastid }
   spawn: Plastid
   maxCount: 1
-  
+
 - type: material
   id: PlastidMaterial
   stackEntity: Plastid
   name: пластид
   icon: { sprite: Victoria/Bomb/plastid.rsi, state: plastid }
-  price: 0.1 
+  price: 0.1
 #-------------------------------кусочек пластида------------------------------------
 - type: entity
   parent: CrystalOreBase
@@ -460,7 +460,7 @@
   name: кусочек пластида
   icon: { sprite: Victoria/Bomb/plastid.rsi, state: pice }
   spawn: PicePlastid
-  maxCount: 3 
+  maxCount: 3
 #-----------------------------------------разрывная основа-------------------------
 - type: entity
   parent: CrystalOreBase
@@ -620,7 +620,7 @@
     - FuseMine
   - type: Construction
     graph: FuseMine
-    node: FuseMine  
+    node: FuseMine
 
 - type: entity
   parent: FuseMine
@@ -630,7 +630,7 @@
   - type: Stack
     stackType: FuseMine
     count: 1
-    
+
 - type: stack
   id: FuseMine
   name: взрыватель мины
@@ -693,7 +693,7 @@
     explosionType: Default
     maxIntensity: 4
     intensitySlope: 4
-    totalIntensity: 30 
+    totalIntensity: 30
     canCreateVacuum: false
   - type: OnUseTimerTrigger
     beepSound:
@@ -709,7 +709,7 @@
   - type: Construction
     graph: MicroBomb
     node: MicroBomb
-    
+
 - type: stack
   id: MicroBomb
   name: микробомба
@@ -735,7 +735,7 @@
 
     - node: MicroBomb
       entity: MicroBomb
-      
+
 - type: construction
   name: micro bomb
   id: MicroBomb
@@ -795,10 +795,14 @@
   - type: DamageContacts
     damage:
       types:
-        Piercing: 8
+        Piercing: 6
   - type: SpeedModifierContacts
-    walkSpeedModifier: 0.15
-    sprintSpeedModifier: 0.15
+    walkSpeedModifier: 0.25
+    sprintSpeedModifier: 0.25
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 #-------------------------------сборка------------------------------------
 - type: constructionGraph
   id: Wirefence
@@ -827,12 +831,12 @@
               message: "Колючка была разрезана"
             - !type:SpawnPrototype
               prototype: CableWireStack1
-              amount: 3 
+              amount: 3
             - !type:DeleteEntity
           steps:
             - tool: Cutting
               doAfter: 10
-              
+
 - type: construction
   name: wirefence
   id: Wirefence
@@ -891,12 +895,12 @@
   - type: DamageContacts
     damage:
       types:
-        Piercing: 4
+        Piercing: 3
   - type: StaminaDamageOnCollide
     damage: 20
   - type: SpeedModifierContacts
-    walkSpeedModifier: 0.5
-    sprintSpeedModifier: 0.5
+    walkSpeedModifier: 0.6
+    sprintSpeedModifier: 0.6
   - type: StepTrigger
     intersectRatio: 0.2
   - type: TriggerOnStepTrigger
@@ -908,7 +912,11 @@
   - type: DamageUserOnTrigger
     damage:
       types:
-        Piercing: 5
+        Piercing: 4
+  - type: RandomChangeTime
+    time: 3600
+    prob: 0.5
+    entity: StumbleDamaged
 #-------------------------------сборка------------------------------------
 - type: constructionGraph
   id: Stumble
@@ -922,7 +930,7 @@
               southRotation: true
           steps:
             - material: Wire
-              amount: 3
+              amount: 4
               doAfter: 2
 
     - node: Stumble
@@ -939,9 +947,31 @@
           steps:
             - tool: Cutting
               doAfter: 3
+        - to: StumbleDamaged
+          completed:
+            - !type:AdminLog
+              message: "Спотыкач был поломан"
+          steps:
+            - tool: Prying
+              doAfter: 2
               
+    - node: StumbleDamaged
+      entity: StumbleDamaged
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "Спотыкач был разрезан"
+            - !type:SpawnPrototype
+              prototype: CableWireStack1
+              amount: 1
+            - !type:DeleteEntity
+          steps:
+            - tool: Cutting
+              doAfter: 2
+
 - type: construction
-  name: stumble
+  name: wire stumble
   id: Stumble
   graph: Stumble
   startNode: start
@@ -957,6 +987,68 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+#-----------------------------------------сломанный спотыкач----------------------------------------
+- type: entity
+  id: StumbleDamaged
+  parent: BaseStructure
+  name: старый спотыкач
+  description: Это укрепление уже явно несвежее... Скоро оно совсем развалится.
+  components:
+  - type: Anchorable
+  - type: Sprite
+    sprite: Victoria/Bomb/fence.rsi
+    state: stumble-damaged
+  - type: Icon
+    sprite: Victoria/Bomb/fence.rsi
+    state: stumble-damaged
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 20
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Construction
+    graph: Stumble
+    node: StumbleDamaged
+    deconstructionTarget: start
+  - type: DamageContacts
+    damage:
+      types:
+        Piercing: 3
+  - type: StaminaDamageOnCollide
+    damage: 10
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.8
+    sprintSpeedModifier: 0.8
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: TriggerOnStepTrigger
+  - type: PreventableStepTrigger
+  - type: Slippery
+    slipSound:
+      path: /Audio/Effects/fence_rattle2.ogg
+    launchForwardsMultiplier: 0
+  - type: DamageUserOnTrigger
+    damage:
+      types:
+        Piercing: 2
+  - type: TimedDespawn
+    lifetime: 1200
 #-----------------------------------------малая растяжка----------------------------------
 - type: entity
   id: ShortStretching
@@ -1145,7 +1237,7 @@
     layers:
       - state: fragmentationmine
         sprite: Victoria/Bomb/fragmentation_mine.rsi
-        map: [ "enum.MiningScannerVisualLayers.Overlay" ] 
+        map: [ "enum.MiningScannerVisualLayers.Overlay" ]
   - type: LandMine
     sound:
         path: /Audio/Effects/beep_landmine.ogg
@@ -1168,14 +1260,13 @@
   - type: StepTrigger
     requiredTriggeredSpeed: 0
     stepOn: true
-  - type: ClusterGrenade
+  - type: ProjectileGrenade
     fillPrototype: PelletClusterLethal
-    maxGrenadesCount: 30
-    grenadeType: enum.GrenadeType.Shoot
+    capacity: 30
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container
-      
+
 - type: construction
   name: land mine fragmentation
   id: LandMineFragmentation
@@ -1213,7 +1304,7 @@
   - type: Construction
     graph: LandMines
     node: LandMinePen
-    
+
 - type: construction
   name: land mine pen
   id: LandMinePen
@@ -1249,7 +1340,7 @@
             - material: FuseMine
               amount: 1
               doAfter: 2
-        
+
         - to: LandMineFragmentation
           completed:
             - !type:SnapToGrid
@@ -1263,7 +1354,7 @@
             - material: FuseMine
               amount: 1
               doAfter: 2
-              
+
         - to: LandMinePen
           completed:
             - !type:SnapToGrid
@@ -1277,7 +1368,7 @@
             - material: Pen
               amount: 1
               doAfter: 3
-              
+
         - to: ShortStretching
           completed:
             - !type:SnapToGrid
@@ -1313,7 +1404,7 @@
               doAfter: 3
             - tool: Prying
               doAfter: 1.5
-              
+
     - node: LandMineFragmentation
       entity: LandMineFragmentation
       edges:
@@ -1335,7 +1426,7 @@
               doAfter: 2
             - tool: Prying
               doAfter: 1.5
-              
+
     - node: LandMinePen
       entity: LandMinePen
       edges:

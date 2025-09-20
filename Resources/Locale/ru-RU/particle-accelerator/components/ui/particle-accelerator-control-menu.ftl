@@ -8,7 +8,6 @@ particle-accelerator-control-menu-alarm-control-1 = [bold][color=red]МОЩНО�
 particle-accelerator-control-menu-alarm-control-2 = [bold][color=red]СБОЙ ОГРАНИЧИТЕЛЯ[/bold][/color]
 particle-accelerator-control-menu-scan-parts-button = Сканировать части
 particle-accelerator-control-menu-check-containment-field-warning = Убедитесь, что сдерживающее поле активно!
-particle-accelerator-control-menu-foo-bar-baz = FOO-BAR-BAZ
 particle-accelerator-control-menu-status-label = [bold]Статус:[/bold]
 particle-accelerator-control-menu-status-unknown = [font="Monospace"][color=red]Нет данных[/color][/bold]
 particle-accelerator-control-menu-status-operational = [font="Monospace"][color=green]Работоспособно[/color][/bold]
@@ -19,3 +18,5 @@ particle-accelerator-control-menu-draw-not-available = [font="Monospace"][color=
 particle-accelerator-radio-message-on = Питание УЧ было включено.
 particle-accelerator-radio-message-off = Питание УЧ было выключено.
 particle-accelerator-radio-message-num = Мощность УЧ установлена на уровень { $level }.
+particle-accelerator-control-menu-flavor-left = ДЕРЖИТЕ КЛОУНА КАК МОЖНО ДАЛЬШЕ ОТ ЭТОЙ КОНСОЛИ!
+particle-accelerator-control-menu-flavor-right = v 1.6

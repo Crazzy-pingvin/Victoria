@@ -36,6 +36,15 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHull
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   id: CounterBase
@@ -54,3 +63,12 @@
         - TableMask
         layer:
         - TableLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure

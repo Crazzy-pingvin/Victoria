@@ -31,6 +31,18 @@
 	{
       "name": "hot_shot"
     },
+	{
+      "name": "light_auto"
+    },
+	{
+      "name": "light_pist"
+    },
+	{
+      "name": "light_rifle"
+    },
+	{
+      "name": "light_shot"
+    },
     {
       "name": "mag-0"
     }

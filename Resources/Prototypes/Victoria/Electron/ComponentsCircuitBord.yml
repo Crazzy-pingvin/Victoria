@@ -52,16 +52,16 @@
   result: DigitalCircuit1
   completetime: 1
   materials:
-    CooperMaterial: 50
-    SiMaterial: 50
-    AluminiumMaterial: 10
+    CooperMaterial: 400
+    SiMaterial: 400
+    AluminiumMaterial: 550
 #--------------------------------------Аналоговые------------------------------------------
 #------------------Сам-------------------------
 - type: entity
   parent: DigitalCircuit
   id: AnalogCircuit
   name: аналоговый компонент
-  description: Как дедушка электроники - всё понимает плавно, но если перегрузить – возмущается и косит
+  description: Как дедушка электроники - всё понимает плавно, но если перегрузить – возмущается и косит.
   suffix: Электроника, Full
   components:
   - type: Stack
@@ -101,8 +101,8 @@
   result: AnalogCircuit1
   completetime: 1
   materials:
-    CooperMaterial: 100
-    SiMaterial: 100
+    CooperMaterial: 500
+    SiMaterial: 500
 #-------------------------------------Импульсные------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -149,9 +149,9 @@
   result: PulseCircuit1
   completetime: 1
   materials:
-    CooperMaterial: 50
-    SiMaterial: 100
-    AluminiumMaterial: 50
+    CooperMaterial: 300
+    SiMaterial: 400
+    AluminiumMaterial: 300
 #--------------------------------------Силовые------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -198,8 +198,8 @@
   result: PowerCircuit1
   completetime: 1
   materials:
-    CooperMaterial: 150
-    SapphireMaterial: 100
+    CooperMaterial: 600
+    SapphireMaterial: 400
 #--------------------------------------Программируемые------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -246,8 +246,8 @@
   result: ProgrammableCircuit1
   completetime: 1
   materials:
-    CooperMaterial: 50
-    SiMaterial: 100
+    CooperMaterial: 400
+    SiMaterial: 500
     Gold: 50
 #--------------------------------------СВЧ------------------------------------------
 #------------------Сам-------------------------
@@ -295,8 +295,8 @@
   result: MicrowaveCircuit1
   completetime: 1
   materials:
-    AluminiumMaterial: 150
-    SiMaterial: 100
+    AluminiumMaterial: 600
+    SiMaterial: 500
     Gold: 50
 #--------------------------------------Дискретные------------------------------------------
 #------------------Сам-------------------------
@@ -344,14 +344,13 @@
   result: DiscreteCircuit1
   completetime: 1
   materials:
-    AluminiumMaterial: 100
-    SiMaterial: 200
+    AluminiumMaterial: 500
+    SiMaterial: 600
 #--------------------------------------Литограф----------------------------------------------
 - type: entity
   id: LithographMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: литограф (машинная плата)
-  description: Электронная плата, необходимая для работы литографа
   components:
     - type: MachineBoard
       prototype: Lithograph
@@ -367,7 +366,7 @@
   id: Lithograph
   parent: BaseLatheLube
   name: литограф
-  description: Чудная машина для создания чипов электронных схем
+  description: Чудная машина для создания чипов электронных схем.
   components:
   - type: Sprite
     sprite: Victoria/Electron/lithograph.rsi

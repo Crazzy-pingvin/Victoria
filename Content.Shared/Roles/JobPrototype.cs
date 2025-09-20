@@ -119,6 +119,13 @@ namespace Content.Shared.Roles
         [DataField("jobEntity", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
         public string? JobEntity = null;
 
+        /// <summary>
+        /// Entity to use as a preview in the lobby/character editor.
+        /// Same restrictions as <see cref="JobEntity"/> apply.
+        /// </summary>
+        [DataField]
+        public EntProtoId? JobPreviewEntity = null;
+
         [DataField]
         public ProtoId<JobIconPrototype> Icon { get; private set; } = "JobIconUnknown";
 
@@ -146,6 +153,9 @@ namespace Content.Shared.Roles
         /// </summary>
         [DataField]
         public List<ProtoId<GuideEntryPrototype>>? Guides;
+
+        // Sponsor think
+        [DataField] public bool SponsorOnly = false;
     }
 
     /// <summary>

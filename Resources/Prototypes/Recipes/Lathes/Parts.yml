@@ -51,18 +51,3 @@
   parent: BaseStockPartRecipe
   id: MicroManipulatorStockPart
   result: MicroManipulatorStockPart
-
-- type: latheRecipe
-  parent: IndustrialStockPartRecipe
-  id: IndustrialCapacitorStockPart
-  result: IndustrialCapacitorStockPart
-
-- type: latheRecipe
-  parent: IndustrialStockPartRecipe
-  id: IndustrialManipulatorStockPart
-  result: IndustrialManipulatorStockPart
-
-- type: latheRecipe
-  parent: IndustrialStockPartRecipe
-  id: IndustrialMatterBinStockPart
-  result: IndustrialMatterBinStockPart

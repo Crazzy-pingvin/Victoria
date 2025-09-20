@@ -49489,7 +49489,7 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: FloraTree01
+- proto: FloraTree
   entities:
   - uid: 7528
     components:
@@ -49497,21 +49497,21 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.7296805,-40.53731
       parent: 2
-- proto: FloraTree05
+- proto: FloraTree
   entities:
   - uid: 7529
     components:
     - type: Transform
       pos: 11.2466135,-200.43379
       parent: 2
-- proto: FloraTree06
+- proto: FloraTree
   entities:
   - uid: 7530
     components:
     - type: Transform
       pos: 9.820292,-197.55566
       parent: 2
-- proto: FloraTreeLarge01
+- proto: FloraTreeLarge
   entities:
   - uid: 7531
     components:

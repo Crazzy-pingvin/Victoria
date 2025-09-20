@@ -85,6 +85,15 @@
     base: brick
   - type: RadiationBlocker
     resistance: 1
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseWall
@@ -656,7 +665,6 @@
 - type: entity
   parent: WallReinforced
   id: WallReinforcedRust
-  name: reinforced wall
   suffix: rusted
   components:
   - type: Sprite
@@ -672,6 +680,28 @@
     base: reinf_over
   - type: RadiationBlocker
     resistance: 0.4
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -731,6 +761,15 @@
     base: riveted
   - type: StaticPrice
     price: 150
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseWall
@@ -894,6 +933,15 @@
   - type: Construction
     graph: Girder
     node: diagonalshuttleWall
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseWall
@@ -955,6 +1003,15 @@
           5: { state: shuttle_construct-5, visible: true}
   - type: Reflect
     reflectProb: 1
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseWall
@@ -1000,6 +1057,15 @@
     base: state
   - type: Reflect
     reflectProb: 1
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseWall
@@ -1046,6 +1112,15 @@
   - type: IconSmooth
     key: walls
     base: solid
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -1068,11 +1143,19 @@
   - type: Icon
     sprite: Structures/Walls/solid_diagonal.rsi
     state: state0
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: WallSolid
   id: WallSolidRust
-  name: solid wall
   suffix: rusted
   components:
   - type: Sprite
@@ -1086,6 +1169,37 @@
   - type: IconSmooth
     key: walls
     base: solid
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
 
 - type: entity
   parent: BaseWall
@@ -1131,13 +1245,14 @@
   parent: BaseWall
   id: WallWood
   name: wood wall
+  description: The traditional greytide defense.
   components:
   - type: Sprite
     sprite: Structures/Walls/wood.rsi
   - type: Icon
     sprite: Structures/Walls/wood.rsi
   - type: Construction
-    graph: Girder
+    graph: Barricade
     node: woodWall
   - type: Destructible
     thresholds:
@@ -1158,7 +1273,7 @@
         sound:
           collection: WoodDestroyHeavy
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: Barricade
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: IconSmooth
@@ -1166,6 +1281,15 @@
     base: wood
   - type: RadiationBlocker
     resistance: 0.2
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: BaseWall
@@ -1210,6 +1334,15 @@
   - type: Construction
     graph: WebStructures
     node: wall
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 
 # Lavalend Walls
@@ -1268,6 +1401,15 @@
   - type: Appearance
   - type: RadiationBlocker
     resistance: 0.4
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -1292,6 +1434,15 @@
     state: state0
   - type: RadiationBlocker
     resistance: 0.4
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
 
 
 # Vault Walls

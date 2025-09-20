@@ -949,7 +949,11 @@
   components:
     - type: Pda
       id: VitzIDCardEfreitor
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
@@ -963,7 +967,11 @@
   components:
     - type: Pda
       id: VitzIDCardPilot
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
@@ -977,7 +985,11 @@
   components:
     - type: Pda
       id: VitzIDCardStarshina
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
@@ -991,7 +1003,11 @@
   components:
     - type: Pda
       id: VitzIDCardZvenievoi
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
@@ -1005,7 +1021,11 @@
   components:
     - type: Pda
       id: VitzIDCardMrHill
-      state: pda
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda            

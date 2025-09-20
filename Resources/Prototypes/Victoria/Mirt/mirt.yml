@@ -47,6 +47,30 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_r.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_uniform_r.rsi
+#------------------------------------медик----------     
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: MirtUniformMed
+  name: Миртанская форма армейского медика
+  suffix: Миртан
+  description: Прочная и закрытая форма Миртанийского армейского медика
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Equipment/mirt_uniform_m.rsi
+  - type: Clothing
+    sprite: Victoria/Mirt/Equipment/mirt_uniform_m.rsi
+#------------------------------------тыловой боец----------     
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: MirtUniformRear
+  name: Миртанская форма тылового работника
+  suffix: Миртан
+  description: Прочная и закрытая форма тылового работника
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Equipment/mirt_uniform_t.rsi
+  - type: Clothing
+    sprite: Victoria/Mirt/Equipment/mirt_uniform_t.rsi
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
 #---------------------------------------------------------рюкзаки----------------------------------
 #------------------------------------малый рюкзак---------- 
@@ -194,9 +218,9 @@
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: MirtHelmetGr
-  name: Гражданский шлем
+  name: Лёгкий шлем
   suffix: Миртан
-  description: Простой гражданский шлем Империи Миртана. Слой стали и вера в Императора...
+  description: Простой гражданский и тыловой шлем Империи Миртана. Слой стали и вера в Императора...
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Armor/mirt_helmet_gr.rsi
@@ -315,6 +339,21 @@
       coefficients:
         Caustic: 0.9
         Poison: 0.9
+#------------------------------------старше офицерский---------- 
+- type: entity
+  parent: ClothingNeckBase
+  id: MirtCloakOfCom
+  name: Миртанийский плащ старшего офицера
+  suffix: Миртан
+  description: Плащ, который носят заслуженные старшие офицеры Империи Миртана.
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_o_st.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.85
+        Poison: 0.85
 #------------------------------------специалиста---------- 
 - type: entity
   parent: ClothingNeckBase
@@ -335,6 +374,16 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Equipment/mirt_cloak_ink.rsi
+#------------------------------------специалиста-инквизитора---------- 
+- type: entity
+  parent: ClothingNeckBase
+  id: MirtCloakSPInk
+  name: Миртанийский плащ специалиста инквизиции
+  suffix: Миртан
+  description: Плащ, который носят военные специалисты из инквизиции Империи Миртана
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Equipment/mirt_cloak_sp_ink.rsi
 #------------------------------------офицерский-инквизиторский--------- 
 - type: entity
   parent: ClothingNeckBase
@@ -444,9 +493,9 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: MirtArmorGr
-  name: Гражданский бронежилет
+  name: Лёгкий бронежилет
   suffix: Миртан
-  description: Лёгкий устаревший бронежилет, используемые ополченцами и гражданскими Империи Миртана
+  description: Лёгкий бронежилет, используемый ополченцами и гражданскими Империи Миртана, а так же военными штаба и тыла
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Armor/mirt_armor_gr.rsi
@@ -1000,6 +1049,23 @@
       - id: MirtnKnife
       - id: MirtProviderFlare
       - id: MirtMedpack
+
+- type: entity
+  id: MirtBeltEngFilled
+  parent: MirtBelt
+  suffix: Заполненный, Инженерный, Миртан
+  components:
+  - type: StorageFill
+    contents:
+      - id: Crowbar
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool 
+      - id: MirtnKnife
+      - id: MirtProviderFlare
+      - id: MirtMedpack
       
 - type: entity
   id: MirtBeltOffiFilled
@@ -1165,7 +1231,53 @@
     layers:
       - state: tip
   - type: StaminaDamageOnCollide
-    damage: 5     
+    damage: 5   
+#------------------------------------зенитный осколок----------         
+- type: entity
+  id: MirtBulletLightFrag
+  suffix: Миртан
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
+    layers:
+      - state: tip
+  - type: StaminaDamageOnCollide
+    damage: 5 
+  - type: TimedDespawn
+    lifetime: 0.3    
+#------------------------------------зенитка---------- 
+- type: entity
+  id: MirtBulletFrag
+  name: Осколочный заряд (zhc)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RepeatingTrigger
+    delay: 0.6 # line of fire as well as if it hits something
+  - type: ProjectileGrenade
+    fillPrototype: MirtBulletLightFrag
+    capacity: 20
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
+    layers:
+      - state: tip     
 #------------------------------------пожарный лазер---------- 
 - type: Tag
   id: MirtFireLaser
@@ -1206,6 +1318,10 @@
   - type: Tag
     tags:
       - MirtCartridgeHeavy
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MirtCartridgeHeavy: 1
 #------------------------------------пп-пулемёт---------- 
 - type: Tag
   id: MirtCartridgeLight
@@ -1238,6 +1354,23 @@
   - type: Tag
     tags:
       - MirtCartridgePistol
+#------------------------------------зенитка----------      
+- type: Tag
+  id: MirtCartridgeFrag
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: MirtCartridgeFrag
+  name: Осколочный заряд (zhc)
+  parent: BaseCartridgePistol
+  description: Нестабильный боеприпас, который разрывается на кучу осколков при любом неудачном случае.
+  components:
+  - type: CartridgeAmmo
+    proto: MirtBulletFrag
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - MirtCartridgeFrag
 #-------------------------------------------------------------------------------магазины------------------------------------------------
 #--------------------------------------------------------миртанские------------------------------------
 - type: Tag
@@ -1283,6 +1416,7 @@
     whitelist:
       tags:
         - MirtCartridgeHeavy
+        - MirtSniperCartridgeHeavy
     proto: MirtCartridgeHeavy
     capacity: 13
   - type: Sprite
@@ -1423,7 +1557,35 @@
   - type: Tag
     tags:
       - MirtPowerCell 
+      - MirtMagazine
+#-----------------------------------зенитка---------
+- type: Tag
+  id: MirtMagazineZenit
+
+- type: entity
+  id: MirtMagazineZenit
+  name: Магазин к зенитному пулемёту "Носорог" (zhc)
+  suffix: Миртан
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_zenit_magazine.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - MirtMagazineZenit
       - MirtMagazine 
+  - type: ProjectileBatteryAmmoProvider
+    proto: MirtCartridgeFrag
+    fireCost: 100000
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: Battery
+    maxCharge: 5000000
+    startingCharge: 5000000 
+  - type: Appearance
 #-------------------------------------стволы---------------------------------------------------------------------------------
 #---------------------------------------------------миртан-----------------------------------
 #-----------------------гражданская-----------------------
@@ -1483,7 +1645,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1546,7 +1712,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1611,7 +1781,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1677,7 +1851,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1787,6 +1965,7 @@
         whitelist:
           tags:
             - MirtCartridgeHeavy
+            - MirtSniperCartridgeHeavy
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -1799,7 +1978,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -1809,62 +1992,56 @@
     graph: MirtRifleSniper
     node: MirtRifle
 #-----------------------зенитка-----------------------
-# - type: entity
-  # name: Зенитный пулемёт "Носорог" 
-  # suffix: Миртан
-  # parent: BaseWeaponLightMachineGun
-  # id: MirtZenit
-  # description: Блюспейс-пулемёт армии Империи Миртана, выполненный как ручная зенитная пушка. Хорошо помогает и против летунов, и против наземных целей. (zhc)
-  # components:
-  # - type: Sprite
-    # sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
-    # layers:
-      # - state: base
-        # map: ["enum.GunVisualLayers.Base"]
-      # - state: mag-0
-        # map: ["enum.GunVisualLayers.Mag"]
-  # - type: Item
-    # size: Large
-  # - type: Clothing
-    # sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
-  # - type: Gun
-    # useKey: false
-    # fireRate: 6
-    # soundGunshot:
-      # path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-    # projectileSpeed: 10
-  # - type: ChamberMagazineAmmoProvider
-    # soundRack:
-      # path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
-  # - type: ItemSlots
-    # slots:
-      # gun_magazine:
-        # name: Magazine
-        # startingItem: MirtMagazineZenit
-        # insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        # ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        # priority: 2
-        # whitelist:
-          # tags:
-            # - MirtMagazineZenit
-      # gun_chamber:
-        # name: Chamber
-        # startingItem: MirtCartridgeZenit
-        # priority: 1
-        # whitelist:
-          # tags:
-            # - MirtCartridgeZenit
-  # - type: ContainerContainer
-    # containers:
-      # gun_magazine: !type:ContainerSlot
-      # gun_chamber: !type:ContainerSlot
-  # - type: MagazineVisuals
-    # magState: mag
-    # steps: 1
-    # zeroVisible: true
-  # - type: Appearance
-  # - type: StaticPrice
-    # price: 750
+- type: entity
+  name: Зенитный пулемёт "Носорог" 
+  suffix: Миртан
+  parent: BaseWeaponLightMachineGun
+  id: MirtZenit
+  description: Блюспейс-пулемёт армии Империи Миртана, выполненный как ручная зенитная пушка. Хорошо помогает и против летунов, и против наземных целей. (zhc)
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: Victoria/Mirt/Weapon/mirt_zenit.rsi
+  - type: Gun
+    minAngle: 10
+    maxAngle: 60
+    angleIncrease: 10
+    angleDecay: 0.5
+    fireRate: 4
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+    projectileSpeed: 25
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MirtMagazineZenit
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MirtMagazineZenit
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 750
 #-----------------------пожарный лазер-----------------------
 - type: entity
   name: Пожарный лазер "Месяц"
@@ -1907,6 +2084,15 @@
   - type: StaticPrice
     price: 500
 #-----------------------гранатомёт-----------------------
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ProjectileDragonsBreath
+  id: ProjectileMirtGran
+  name: зажигательный гранотомётный заряд.
+  components:
+  - type: TimedDespawn
+    lifetime: 3
+
 - type: entity  
   name: Гранатомёт "Медведка"
   suffix: Миртан
@@ -1942,7 +2128,7 @@
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 5
   - type: BasicEntityAmmoProvider
-    proto: ProjectileDragonsBreath
+    proto: ProjectileMirtGran
     capacity: 1
     count: 1
   - type: StaticPrice
@@ -1980,6 +2166,7 @@
             - NoocPowerCellThree
             - NoocPowerCellFour 
             - MirtPowerCell
+            - NoocPowerCellOneSnipe
   - type: Appearance
   - type: StaticPrice
     price: 500
@@ -2018,7 +2205,11 @@
   - type: StaticPrice
     price: 500
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -135
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2096,7 +2287,11 @@
   - type: StaticPrice
     price: 500
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2170,7 +2365,11 @@
   - type: StaticPrice
     price: 250
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2243,7 +2442,11 @@
   - type: StaticPrice
     price: 750
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
@@ -2315,12 +2518,94 @@
   - type: StaticPrice
     price: 500    
   - type: AltFireMelee
+    attackType: Heavy
   - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
     attackRate: 1
     damage:
       types:
         Slash: 7
         Piercing: 3
+#--------------------------------------------коробки с патронами------------------------------------
+#------------------------------базовая коробка----------------
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseMirtBox
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - MirtCartridgeHeavy
+        - MirtCartridgeLight
+        - MirtCartridgePistol
+    proto: MirtCartridgeHeavy
+    capacity: 100
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Victoria/Umpor/Weapon/umpor_box_ammo.rsi
+  - type: Appearance
+#------------------------------винтовочные----------------
+- type: entity
+  parent: BaseMirtBox
+  id: MirtBoxHeavy
+  name: Коробка миртанских тяжёлых патронов (hhc)
+  suffix: Миртан
+  description: Заряды к миртанийской винтовке "Чаровница" (hhc)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 39
+    proto: MirtCartridgeHeavy
+  - type: Sprite
+    layers:
+    - state: rifle
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+    zeroVisible: false
+#------------------------------автоматные----------------
+- type: entity
+  parent: BaseMirtBox
+  id: MirtBoxLight
+  name: Коробка миртанских лёгких патронов (lhc)
+  suffix: Миртан
+  description: Заряды к миртанийским пулемёту "Молот" и пистолет-пулемёту "Шершень" (lhc)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 60
+    proto: MirtCartridgeLight
+  - type: Sprite
+    layers:
+    - state: automat
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    zeroVisible: false
+#------------------------------пистолетные----------------      
+- type: entity
+  parent: BaseMirtBox
+  id: MirtBoxPistol
+  name: Коробка миртанских стандартных патронов (shc)
+  suffix: Миртан
+  description: Заряды к миртанийским автомату "Развратник" и пистолету "Клык" (shc)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 42
+    proto: MirtCartridgePistol
+  - type: Sprite
+    layers:
+    - state: pistol
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    zeroVisible: false
 #------------------------------------------карты, доступы и шлюзы----------------------------------------    
 #------------------------------------------доступы и шлюзы---------------------------------------- 
 #------------------------------------доступ----------  
@@ -2523,6 +2808,17 @@
 #-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------  
 #--------------------------------------------сумки------------------------------------ 
 #------------------------------------малые----------------------------------
+- type: entity
+  parent: MirtBackpackS
+  id: MirtBackpackSFilled
+  suffix: Миртан, Полный
+  components:
+  - type: StorageFill
+    contents:
+      - id: FoodTinMRE
+      - id: DrinkWaterBottleFull
+      - id: Gauze
+      - id: OxygenTankFilled
 #-----------------------миртан-пистолет-----------------------
 - type: entity
   parent: MirtBackpackS
@@ -2588,6 +2884,17 @@
       - id: Gauze
       - id: OxygenTankFilled
 #------------------------------------средние----------------------------------
+- type: entity
+  parent: MirtBackpackM
+  id: MirtBackpackMFilled
+  suffix: Миртан, Полный
+  components:
+  - type: StorageFill
+    contents:
+      - id: FoodTinMRE
+      - id: DrinkWaterBottleFull
+      - id: Gauze
+      - id: OxygenTankFilled
 #-----------------------миртан-гражданский-----------------------
 - type: entity
   parent: MirtBackpackM
@@ -2685,6 +2992,17 @@
       - id: Gauze
       - id: OxygenTankFilled
 #------------------------------------большие----------------------------------
+- type: entity
+  parent: MirtBackpackL
+  id: MirtBackpackLFilled
+  suffix: Миртан, Полный
+  components:
+  - type: StorageFill
+    contents:
+      - id: FoodTinMRE
+      - id: DrinkWaterBottleFull
+      - id: Gauze
+      - id: OxygenTankFilled
 #-----------------------миртан-пулемёт-----------------------
 - type: entity
   parent: MirtBackpackL
@@ -3637,7 +3955,7 @@
     access: [["MirtAccess"], ["NoocAccess"]]
   - type: StorageFill
     contents:
-      - id: MirtNoocGanCold
+      - id: MirtNoocPowerMG
       - id: NoocPowerCellFour
       - id: NoocPowerCellFour
       - id: NoocPowerCellFive
@@ -3869,3 +4187,60 @@
   - type: Construction
     graph: SandbagBarricade
     node: SandBarricade
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      1000: Critical
+      2000: Dead
+  - type: NpcFactionMember
+    factions:
+    - DefenseStructure
+#------------------------------------------куртка---------------------------------
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: MirtCoat
+  name: Тёплое пальто
+  suffix: Миртан
+  description: Тёплое пальто, которого обожают в армии, когда приходится вести дела на замёрзших планетах.
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Equipment/mirt_coat.rsi
+  - type: Clothing
+    sprite: Victoria/Mirt/Equipment/mirt_coat.rsi
+  - type: ToggleableClothing
+    clothingPrototype: MirtCoatHood
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+  - type: Armor 
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Cold: 0.7
+        Caustic: 0.95
+        Poison: 0.95
+#-----------------------------------------капюшон куртки-------------------------------
+- type: entity
+  parent: ClothingHeadHatHoodWinterDefault
+  id: MirtCoatHood
+  name: Капюшон тёплого пальто
+  suffix: Миртан
+  description: Закрывает голову от холода и стужи.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/Equipment/mirt_coat_hood.rsi
+  - type: Clothing
+    sprite: Victoria/Mirt/Equipment/mirt_coat_hood.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Cold: 0.85
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1

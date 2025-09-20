@@ -33780,21 +33780,21 @@ entities:
     - type: Transform
       pos: 27.598589,-5.5317454
       parent: 31
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 8569
     components:
     - type: Transform
       pos: 0.88375235,-33.48718
       parent: 31
-- proto: FloraRockSolid02
+- proto: FloraRockSolid
   entities:
   - uid: 10815
     components:
     - type: Transform
       pos: 4.1304145,-33.0152
       parent: 31
-- proto: FloraTreeLarge05
+- proto: FloraTreeLarge
   entities:
   - uid: 7374
     components:
