@@ -930,7 +930,7 @@
     layers:
       - state: wedge
   - type: RandomChangeTime
-    time: 0.4
+    time: 0.3
     prob: 1
     entity: USSPSing      
 #----------------------------------Чёрная дыра----------------------------
@@ -963,7 +963,9 @@
   - type: TimedDespawn
     lifetime: 15
   - type: EventHorizon # To make the singularity consume things.
-    radius: 0.5
+    radius: 3
+    consumeTiles: false
+    consumeEntities: false
     canBreachContainment: false
     colliderFixtureId: EventHorizonCollider
     consumerFixtureId: EventHorizonConsumer
@@ -978,7 +980,7 @@
   id: USSPRadioLaser
   damage:
     types:
-      Radiation: 6
+      Radiation: 7
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_xray
@@ -1212,7 +1214,7 @@
     tags:
       - USSPBatteryRif
   - type: ProjectileBatteryAmmoProvider
-    proto: USSPCartridgeOliveSnipe
+    proto: USSPBulletWedgeStd
     fireCost: 90
   - type: Battery
     maxCharge: 1080
@@ -1432,7 +1434,7 @@
   - type: Clothing
     sprite: Victoria/USSP/Weapon/ussp_smg.rsi
   - type: Gun
-    fireRate: 3
+    fireRate: 4
     projectileSpeed: 30
   - type: MagazineAmmoProvider
   - type: ItemSlots
@@ -1626,7 +1628,7 @@
   - type: Clothing
     sprite: Victoria/USSP/Weapon/ussp_automat.rsi
   - type: Gun
-    fireRate: 4.5
+    fireRate: 3.5
     selectedMode: Burst
     availableModes:
       - Burst
@@ -1807,7 +1809,7 @@
     - Back
   - type: AmmoCounter
   - type: Gun
-    fireRate: 5
+    fireRate: 6
     minAngle: 0
     maxAngle: 0
     angleIncrease: 0
