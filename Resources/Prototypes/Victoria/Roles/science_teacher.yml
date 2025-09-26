@@ -1,0 +1,73 @@
+- type: job
+  id: SciTeacher
+  name: доцент
+  description: Опытный учёный, знающий о науке всё. Его задача — направить любопытство ассистентов в нужное русло, чтобы их эксперименты заканчивались открытиями, а не уничтожением отдела.
+  playTimeTracker: JobSciTeacher
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 43200
+  startingGear: SciTeacherGear
+  icon: "JobIconSciTeacher"
+  supervisors: job-supervisors-rd
+  access:
+  - Teacher
+  - Research
+  - External
+  - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: PetrTarget
+  sponsorOnly: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSciTeacher
+  icon:
+    sprite: /Textures/Victoria/Teach/job_icons_teacher.rsi
+    state: TeacherSci
+  jobName: доцент
+
+- type: startingGear
+  id: SciTeacherGear
+  equipment:
+    id: PDASciTeacher
+    ears: ClothingHeadsetScience
+
+# Clothing
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpsuitScienceTeacher
+  name: комбинезон доцента
+  suffix: Наставники
+  description: Комбинезон, созданный для проведения экспериментов, последствия которых вам предстоит расхлебывать.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/uniform_scientist_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/uniform_scientist_teacher.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtScienceTeacher
+  name: юбка-комбинезон доцента
+  suffix: Наставники
+  description: Юбка-комбинезон, созданная для проведения экспериментов, последствия которых вам предстоит расхлебывать.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/women's_uniform_scientist_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/women's_uniform_scientist_teacher.rsi
+
+- type: entity
+  parent: ClothingOuterCoatLab
+  id: ClothingOuterCoatLabScienceTeacher
+  name: лабораторный халат доцента
+  suffix: Наставники
+  description: Халат, владелец которого знает, что теория без практики — это просто тихий бред в пустой комнате.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/labcoat_scientist_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/labcoat_scientist_teacher.rsi

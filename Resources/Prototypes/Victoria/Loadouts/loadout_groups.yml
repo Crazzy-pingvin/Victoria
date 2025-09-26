@@ -1,0 +1,204 @@
+# Engineering
+- type: loadoutGroup
+  id: EngineerTeacherHead
+  name: Ведущий инженер, голова
+  minLimit: 0
+  loadouts:
+  - ChiefEngineerBeret
+
+- type: loadoutGroup
+  id: EnginneerTeacherJumpsuit
+  name: Ведущий инженер, комбинезон
+  loadouts:
+  - EngineerTeacherJumpsuit
+  - EngineerTeacherJumpskirt
+
+- type: loadoutGroup
+  id: EnginneerTeacherBackpack
+  name: Ведущий инженер, рюкзак
+  loadouts:
+  - StationEngineerBackpack
+  - StationEngineerSatchel
+  - StationEngineerDuffel
+  - AtmosphericTechnicianBackpack
+  - AtmosphericTechnicianSatchel
+  - AtmosphericTechnicianDuffel
+
+- type: loadoutGroup
+  id: EnginneerTeacherOuterClothing
+  name: Ведущий инженер, верхняя одежда
+  minLimit: 0
+  loadouts:
+  - StationEngineerOuterVest
+  - StationEngineerWintercoat
+  - AtmosphericTechnicianWintercoat
+
+- type: loadoutGroup
+  id: EnginneerTeacherShoes
+  name: Ведущий инженер, обувь
+  loadouts:
+  - WorkBoots
+  - EngineeringWinterBoots
+
+# Science
+- type: loadoutGroup
+  id: ScienceTeacherHead
+  name: Доцент, голова
+  minLimit: 0
+  loadouts:
+  - ResearchDirectorBeret
+
+- type: loadoutGroup
+  id: ScienceTeacherJumpsuit
+  name: Доцент, комбинезон
+  loadouts:
+  - ScienceTeacherJumpsuit
+  - ScienceTeacherJumpskirt
+
+- type: loadoutGroup
+  id: ScienceTeacherBackpack
+  name: Доцент, рюкзак
+  loadouts:
+  - ScientistBackpack
+  - ScientistSatchel
+  - ScientistDuffel
+
+- type: loadoutGroup
+  id: ScienceTeacherOuterClothing
+  name: Доцент, вехрняя одежда
+  minLimit: 0
+  loadouts:
+  - ScienceTeacherOuterClothing
+
+- type: loadoutGroup
+  id: ScienceTeacherShoes
+  name: Доцент, обувь
+  loadouts:
+  - WhiteShoes
+  - BlackShoes
+  - ScienceWinterBoots
+
+- type: loadoutGroup
+  id: ScienceTeacherGloves
+  name: Доцент, перчатки
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - PurpleGloves
+  - RobohandsGloves
+
+# Security
+- type: loadoutGroup
+  id: SecurityTeacherHead
+  name: Инструктор СБ, голова
+  minLimit: 0
+  loadouts:
+  - SecurityBeret
+
+- type: loadoutGroup
+  id: SecurityTeacherJumpsuit
+  name: Инструктор СБ, комбинезон
+  loadouts:
+  - SecurityTeacherJumpsuit
+  - SecurityTeacherJumpskirt
+
+- type: loadoutGroup
+  id: SecurityTeacherBackpack
+  name: Инструктор СБ, рюкзак
+  loadouts:
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
+
+- type: loadoutGroup
+  id: SecurityTeacherBelt
+  name: Инструктор СБ, пояс
+  loadouts:
+  - SecurityBelt
+  - SecurityWebbing
+
+- type: loadoutGroup
+  id: SecurityTeacherOuterClothing
+  name: Инструктор СБ, верхняя одежда
+  loadouts:
+  - ArmorVest
+  - ArmorVestSlim
+  - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: SecurityTeacherShoes
+  name: Инструктор СБ, обувь
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots
+
+# Medical
+- type: loadoutGroup
+  id: MedicalTeacherHead
+  name: Заведующий интернатурой, голова
+  minLimit: 0
+  loadouts:
+  - MedicalTeacherHead
+
+- type: loadoutGroup
+  id: MedicalTeacherJumpsuit
+  name: Заведующий интернатурой, комбинезон
+  loadouts:
+  - MedicalTeacherJumpsuit
+  - MedicalTeacherJumpskirt
+
+- type: loadoutGroup
+  id: MedicalTeacherBackpack
+  name: Заведующий интернатурой, рюкзак
+  loadouts:
+  - MedicalDoctorBackpack
+  - MedicalDoctorSatchel
+  - MedicalDoctorDuffel
+
+- type: loadoutGroup
+  id: MedicalTeacherOuterClothing
+  name: Заведующий интернатурой, вехрняя одежда
+  minLimit: 0
+  loadouts:
+  - MedicalTeacherOuterClothing
+
+- type: loadoutGroup
+  id: MedicalTeacherShoes
+  name: Заведующий интернатурой, обувь
+  loadouts:
+  - WhiteShoes
+  - MedicalWinterBoots
+
+# Cargo
+- type: loadoutGroup
+  id: CargoTeacherHead
+  name: Бригадир, голова
+  minLimit: 0
+  loadouts:
+  - QuartermasterBeret
+
+- type: loadoutGroup
+  id: CargoTeacherOuterClothing
+  name: Бригадир, верхняя одежда
+  minLimit: 0
+  loadouts:
+  - CargoTechnicianWintercoat
+  - SalvageSpecialistWintercoat
+
+- type: loadoutGroup
+  id: CargoTeacherBackpack
+  name: Бригадир, рюкзак
+  loadouts:
+  - CargoTechnicianBackpack
+  - CargoTechnicianSatchel
+  - CargoTechnicianDuffel
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistSatchel
+  - SalvageSpecialistDuffel
+
+- type: loadoutGroup
+  id: CargoTeacherShoes
+  name: Бригадир, обувь
+  loadouts:
+  - SalvageBoots
+  - CargoWinterBoots

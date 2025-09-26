@@ -104,7 +104,6 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
-  - Brigmedic
   - MedTeacher # Victoria-Job
 
 - type: department
@@ -121,6 +120,7 @@
   - Detective
   - Warden
   - SecTeacher # Victoria-Job
+  - Brigmedic
 
 - type: department
   id: Science

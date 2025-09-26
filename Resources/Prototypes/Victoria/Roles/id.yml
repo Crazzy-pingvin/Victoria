@@ -1,0 +1,79 @@
+# Cargo
+- type: entity
+  parent: CargoIDCard
+  id: CargoTeacherIDCard
+  name: ID карта бригадира
+  description: Карта, необходимая для доступа в различные области станции.
+  suffix: Наставники
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/id_cards_teacher.rsi
+    layers:
+    - state: default
+    - state: idcargo_teacher
+  - type: PresetIdCard
+    job: CargoTeacher
+
+# Engineering
+- type: entity
+  parent: CargoIDCard
+  id: EngTeacherIDCard
+  name: ID карта ведущего инженера
+  description: Карта, необходимая для доступа в различные области станции.
+  suffix: Наставники
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/id_cards_teacher.rsi
+    layers:
+    - state: default
+    - state: ideng-teach
+  - type: PresetIdCard
+    job: EngTeacher
+
+# Security
+- type: entity
+  parent: CargoIDCard
+  id: SecTeacherIDCard
+  name: ID карта инструктора СБ
+  description: Карта, необходимая для доступа в различные области станции.
+  suffix: Наставники
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/id_cards_teacher.rsi
+    layers:
+    - state: default
+    - state: idsec_teacher
+  - type: PresetIdCard
+    job: SecTeacher
+
+# Science
+- type: entity
+  parent: CargoIDCard
+  id: SciTeacherIDCard
+  name: ID карта доцента
+  description: Карта, необходимая для доступа в различные области станции.
+  suffix: Наставники
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/id_cards_teacher.rsi
+    layers:
+    - state: default
+    - state: idsci_teacher
+  - type: PresetIdCard
+    job: SciTeacher
+
+# Medical
+- type: entity
+  parent: CargoIDCard
+  id: MedTeacherIDCard
+  name: ID карта заведующего интернатурой
+  description: Карта, необходимая для доступа в различные области станции.
+  suffix: Наставники
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/id_cards_teacher.rsi
+    layers:
+    - state: default
+    - state: idmed_teacher
+  - type: PresetIdCard
+    job: MedTeacher
