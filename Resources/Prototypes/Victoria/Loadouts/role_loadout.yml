@@ -1,0 +1,97 @@
+# Engineering
+- type: roleLoadout
+  id: JobEngTeacher
+  groups:
+  - GroupTankHarness
+  - EngineerTeacherHead
+  - EnginneerTeacherJumpsuit
+  - EnginneerTeacherBackpack
+  - EnginneerTeacherOuterClothing
+  - EnginneerTeacherShoes
+  - SurvivalExtended
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - GroupUmporLoadoutEng
+  - GroupMirtLoadoutEng
+  - GroupKMLGLoadoutEpolets
+  - GroupSNKLoadoutEng
+  - GroupNoocLoadoutEng
+
+# Science
+- type: roleLoadout
+  id: JobSciTeacher
+  groups:
+  - GroupTankHarness
+  - ScienceTeacherHead
+  - ScienceTeacherJumpsuit
+  - ScienceTeacherBackpack
+  - ScienceTeacherOuterClothing
+  - ScienceTeacherGloves
+  - ScienceTeacherShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - GroupNoocLoadoutRnD
+  - GroupKMLGLoadoutEpolets
+  - GroupSNKLoadoutEng
+  - GroupCDCLoadoutRnD
+
+# Security
+- type: roleLoadout
+  id: JobSecTeacher
+  groups:
+  - SecurityTeacherHead
+  - SecurityTeacherJumpsuit
+  - SecurityTeacherBackpack
+  - SecurityTeacherOuterClothing
+  - SecurityTeacherShoes
+  - SecurityTeacherBelt
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+  - GroupUmporLoadoutSec
+  - GroupMirtLoadoutServ
+  - GroupNoocLoadoutSecWeapon
+  - GroupNoocLoadoutSecAmmo
+  - GroupCDCLoadoutSec
+
+# Medical
+- type: roleLoadout
+  id: JobMedTeacher
+  groups:
+  - GroupTankHarness
+  - MedicalTeacherHead
+  - MedicalMask
+  - MedicalTeacherJumpsuit
+  - MedicalGloves
+  - MedicalTeacherBackpack
+  - MedicalTeacherOuterClothing
+  - MedicalTeacherShoes
+  - Glasses
+  - SurvivalMedical
+  - Trinkets
+  - GroupSpeciesBreathToolMedical
+  - GroupSpeciesBreathToolMedical
+  - GroupUmporLoadoutMed
+  - GroupKMLGLoadoutMed
+
+# Cargo
+- type: roleLoadout
+  id: JobCargoTeacher
+  groups:
+  - GroupTankHarness
+  - CargoTeacherHead
+  - CargoTeacherBackpack
+  - CargoTeacherOuterClothing
+  - CargoTeacherShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - GroupUmporLoadoutCapP
+  - GroupMirtLoadoutCarg
+  - GroupKMLGLoadoutCepka
+  - GroupKMLGLoadoutEpolets
+  - GroupCDCLoadoutCargo

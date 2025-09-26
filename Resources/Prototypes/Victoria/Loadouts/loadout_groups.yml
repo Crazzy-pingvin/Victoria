@@ -1,0 +1,204 @@
+# Engineering
+- type: loadoutGroup
+  id: EngineerTeacherHead
+  name: loadout-group-engineer-teacher-head
+  minLimit: 0
+  loadouts:
+  - ChiefEngineerBeret
+
+- type: loadoutGroup
+  id: EnginneerTeacherJumpsuit
+  name: loadout-group-engineer-teacher-jumpsuit
+  loadouts:
+  - EngineerTeacherJumpsuit
+  - EngineerTeacherJumpskirt
+
+- type: loadoutGroup
+  id: EnginneerTeacherBackpack
+  name: loadout-group-engineer-teacher-backpack
+  loadouts:
+  - StationEngineerBackpack
+  - StationEngineerSatchel
+  - StationEngineerDuffel
+  - AtmosphericTechnicianBackpack
+  - AtmosphericTechnicianSatchel
+  - AtmosphericTechnicianDuffel
+
+- type: loadoutGroup
+  id: EnginneerTeacherOuterClothing
+  name: loadout-group-engineer-teacher-outerclothing
+  minLimit: 0
+  loadouts:
+  - StationEngineerOuterVest
+  - StationEngineerWintercoat
+  - AtmosphericTechnicianWintercoat
+
+- type: loadoutGroup
+  id: EnginneerTeacherShoes
+  name: loadout-group-engineer-teacher-shoes
+  loadouts:
+  - WorkBoots
+  - EngineeringWinterBoots
+
+# Science
+- type: loadoutGroup
+  id: ScienceTeacherHead
+  name: loadout-group-scientist-teacher-head
+  minLimit: 0
+  loadouts:
+  - ResearchDirectorBeret
+
+- type: loadoutGroup
+  id: ScienceTeacherJumpsuit
+  name: loadout-group-scientist-teacher-jumpsuit
+  loadouts:
+  - ScienceTeacherJumpsuit
+  - ScienceTeacherJumpskirt
+
+- type: loadoutGroup
+  id: ScienceTeacherBackpack
+  name: loadout-group-scientist-teacher-backpack
+  loadouts:
+  - ScientistBackpack
+  - ScientistSatchel
+  - ScientistDuffel
+
+- type: loadoutGroup
+  id: ScienceTeacherOuterClothing
+  name: loadout-group-scientist-teacher-outerclothing 
+  minLimit: 0
+  loadouts:
+  - ScienceTeacherOuterClothing
+
+- type: loadoutGroup
+  id: ScienceTeacherShoes
+  name: loadout-group-scientist-teacher-shoes
+  loadouts:
+  - WhiteShoes
+  - BlackShoes
+  - ScienceWinterBoots
+
+- type: loadoutGroup
+  id: ScienceTeacherGloves
+  name: loadout-group-scientist-teacher-gloves
+  minLimit: 0
+  loadouts:
+  - LatexGloves
+  - PurpleGloves
+  - RobohandsGloves
+
+# Security
+- type: loadoutGroup
+  id: SecurityTeacherHead
+  name: loadout-group-security-teacher-head
+  minLimit: 0
+  loadouts:
+  - SecurityBeret
+
+- type: loadoutGroup
+  id: SecurityTeacherJumpsuit
+  name: loadout-group-security-teacher-jumpsuit
+  loadouts:
+  - SecurityTeacherJumpsuit
+  - SecurityTeacherJumpskirt
+
+- type: loadoutGroup
+  id: SecurityTeacherBackpack
+  name: loadout-group-security-teacher-backpack
+  loadouts:
+  - SecurityBackpack
+  - SecuritySatchel
+  - SecurityDuffel
+
+- type: loadoutGroup
+  id: SecurityTeacherBelt
+  name: loadout-group-security-teacher-belt
+  loadouts:
+  - SecurityBelt
+  - SecurityWebbing
+
+- type: loadoutGroup
+  id: SecurityTeacherOuterClothing
+  name: loadout-group-security-teacher-outerclothing
+  loadouts:
+  - ArmorVest
+  - ArmorVestSlim
+  - SecurityOfficerWintercoat
+
+- type: loadoutGroup
+  id: SecurityTeacherShoes
+  name: loadout-group-security-teacher-shoes
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots
+
+# Medical
+- type: loadoutGroup
+  id: MedicalTeacherHead
+  name: loadout-group-medical-teacher-head
+  minLimit: 0
+  loadouts:
+  - MedicalTeacherHead
+
+- type: loadoutGroup
+  id: MedicalTeacherJumpsuit
+  name: loadout-group-medical-teacher-jumpsuit
+  loadouts:
+  - MedicalTeacherJumpsuit
+  - MedicalTeacherJumpskirt
+
+- type: loadoutGroup
+  id: MedicalTeacherBackpack
+  name: loadout-group-medical-teacher-backpack
+  loadouts:
+  - MedicalDoctorBackpack
+  - MedicalDoctorSatchel
+  - MedicalDoctorDuffel
+
+- type: loadoutGroup
+  id: MedicalTeacherOuterClothing
+  name: loadout-group-medical-teacher-outerclothing
+  minLimit: 0
+  loadouts:
+  - MedicalTeacherOuterClothing
+
+- type: loadoutGroup
+  id: MedicalTeacherShoes
+  name: loadout-group-medical-teacher-shoes
+  loadouts:
+  - WhiteShoes
+  - MedicalWinterBoots
+
+# Cargo
+- type: loadoutGroup
+  id: CargoTeacherHead
+  name: loadout-group-cargo-teacher-head
+  minLimit: 0
+  loadouts:
+  - QuartermasterBeret
+
+- type: loadoutGroup
+  id: CargoTeacherOuterClothing
+  name: loadout-group-cargo-teacher-outerclothing
+  minLimit: 0
+  loadouts:
+  - CargoTechnicianWintercoat
+  - SalvageSpecialistWintercoat
+
+- type: loadoutGroup
+  id: CargoTeacherBackpack
+  name: loadout-group-cargo-teacher-backpack
+  loadouts:
+  - CargoTechnicianBackpack
+  - CargoTechnicianSatchel
+  - CargoTechnicianDuffel
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistSatchel
+  - SalvageSpecialistDuffel
+
+- type: loadoutGroup
+  id: CargoTeacherShoes
+  name: loadout-group-cargo-teacher-shoes
+  loadouts:
+  - SalvageBoots
+  - CargoWinterBoots

@@ -1,0 +1,14 @@
+- type: playTimeTracker
+  id: JobCargoTeacher
+
+- type: playTimeTracker
+  id: JobEngTeacher
+
+- type: playTimeTracker
+  id: JobSecTeacher
+
+- type: playTimeTracker
+  id: JobSciTeacher
+
+- type: playTimeTracker
+  id: JobMedTeacher

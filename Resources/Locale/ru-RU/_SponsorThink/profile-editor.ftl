@@ -1,2 +1,2 @@
-﻿humanoid-profile-editor-sponsor-only = Данный трейт только для спонсоров
-role-player-not-sponsor = Данная роль только для спонсоров
+﻿humanoid-profile-editor-sponsor-only = Доступно по подписке на Boosty!
+role-player-not-sponsor = Роль доступна по подписке на Boosty!

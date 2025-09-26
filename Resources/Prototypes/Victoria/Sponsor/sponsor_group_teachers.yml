@@ -1,0 +1,9 @@
+- type: sponsorGroup
+  id: LjeSponsorGroupTeachers
+  serverPriorityJoin: true
+  prototypes:
+  - CargoTeacher
+  - EngTeacher
+  - SecTeacher
+  - SciTeacher
+  - MedTeacher

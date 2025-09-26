@@ -584,7 +584,7 @@
 - type: entity
   parent: SecurityPDA
   id: SSPDA
-  name: КПК "Синий щит"
+  name: КПК офицера "Синий щит"
   description: Показывает суть величия и силы корпорации НТ.
   components:
   - type: Pda

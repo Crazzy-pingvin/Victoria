@@ -1,0 +1,19 @@
+- type: loadout
+  id: MedicalTeacherHead
+  equipment:
+    head: ClothingHeadHatBeretMedicalTeacher
+
+- type: loadout
+  id: MedicalTeacherJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalTeacher
+
+- type: loadout
+  id: MedicalTeacherJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtMedicalTeacher
+
+- type: loadout
+  id: MedicalTeacherOuterClothing
+  equipment:
+    outerClothing: ClothingOuterCoatLabMedicalTeacher

@@ -1,0 +1,64 @@
+# Cargo
+- type: entity
+  id: SpawnPointCargoTeacher
+  parent: SpawnPointJobBase
+  name: бригадир
+  components:
+  - type: SpawnPoint
+    job_id: CargoTeacher
+  - type: Sprite
+    layers:
+      - state: green
+      - state: qm
+
+# Engineering
+- type: entity
+  id: SpawnPointEngTeacher
+  parent: SpawnPointJobBase
+  name: ведущий инженер
+  components:
+  - type: SpawnPoint
+    job_id: EngTeacher
+  - type: Sprite
+    layers:
+      - state: green
+      - state: seniorengineer
+
+# Security
+- type: entity
+  id: SpawnPointSecTeacher
+  parent: SpawnPointJobBase
+  name: инструктор СБ
+  components:
+  - type: SpawnPoint
+    job_id: SecTeacher
+  - type: Sprite
+    layers:
+      - state: green
+      - state: seniorofficer
+
+# Science
+- type: entity
+  id: SpawnPointSciTeacher
+  parent: SpawnPointJobBase
+  name: доцент
+  components:
+  - type: SpawnPoint
+    job_id: SciTeacher
+  - type: Sprite
+    layers:
+      - state: green
+      - state: roboticist
+
+# Medical
+- type: entity
+  id: SpawnPointMedTeacher
+  parent: SpawnPointJobBase
+  name: заведующий интернатурой
+  components:
+  - type: SpawnPoint
+    job_id: MedTeacher
+  - type: Sprite
+    layers:
+      - state: green
+      - state: geneticist

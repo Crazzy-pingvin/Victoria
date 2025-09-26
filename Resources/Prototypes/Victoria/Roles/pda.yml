@@ -1,0 +1,120 @@
+# Cargo
+- type: entity
+  parent: BasePDA
+  id: PDACargoTeacher
+  name: КПК бригадира
+  suffix: Наставники
+  description: КПК для парня, указывающий другим парням заказать пиццу.
+  components:
+    - type: Sprite
+      sprite: Victoria/Teach/pda_teacher.rsi
+    - type: Pda
+      id: CargoTeacherIDCard
+    - type: Icon
+      sprite: Victoria/Teach/pda_teacher.rsi
+      state: pda-cargoteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-cargoteacher
+    - type: PdaBorderColor
+      borderColor: "#e39751"
+
+# Engineering
+- type: entity
+  parent: BasePDA
+  id: PDAEngTeacher
+  name: КПК ведущего инженера
+  suffix: Наставники
+  description: Прочный и выглядит так, будто им почти не пользовались.
+  components:
+    - type: Sprite
+      sprite: Victoria/Teach/pda_teacher.rsi
+    - type: Pda
+      id: EngTeacherIDCard
+    - type: Icon
+      sprite: Victoria/Teach/pda_teacher.rsi
+      state: pda-engteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-engteacher
+    - type: PdaBorderColor
+      borderColor: "#949137"
+      accentVColor: "#A32D26"
+
+# Security
+- type: entity
+  parent: BasePDA
+  id: PDASecTeacher
+  name: КПК инструктора СБ
+  suffix: Наставники
+  description: Красный, чтобы скрыть пятна крови ассистентов. Белый, чтобы показать свой опыт и авторитет.
+  components:
+    - type: Sprite
+      sprite: Victoria/Teach/pda_teacher.rsi
+    - type: Pda
+      id: SecTeacherIDCard
+    - type: Icon
+      sprite: Victoria/Teach/pda_teacher.rsi
+      state: pda-secteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-secteacher
+    - type: PdaBorderColor
+      borderColor: "#A32D26"
+      accentHColor: "#447987"
+
+# Science
+- type: entity
+  parent: BasePDA
+  id: PDASciTeacher
+  name: КПК доцента
+  suffix: Наставники
+  description: Он кажется удивительно обычным и он покрыт неизвестными липким веществом.
+  components:
+    - type: Sprite
+      sprite: Victoria/Teach/pda_teacher.rsi
+    - type: Pda
+      id: SciTeacherIDCard
+    - type: Icon
+      sprite: Victoria/Teach/pda_teacher.rsi
+      state: pda-scienceteacher
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-scienceteacher
+    - type: PdaBorderColor
+      borderColor: "#d7d7d0"
+      accentHColor: "#447987"
+      accentVColor: "#8900c9"
+
+# Medical
+- type: entity
+  parent: BaseMedicalPDA
+  id: PDAMedTeacher
+  name: КПК заведующего интернатурой
+  suffix: Наставники
+  description: КПК не необычайно блестящ и стерилен, но и не просто блестящ и стерилен.
+  components:
+    - type: Sprite
+      sprite: Victoria/Teach/pda_teacher.rsi
+    - type: Pda
+      id: MedTeacherIDCard
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda-medteacher
+    - type: PdaBorderColor
+      borderColor: "#d7d7d0"
+      accentHColor: "#447987"
+      accentVColor: "#447987"
+    - type: Icon
+      sprite: Victoria/Teach/pda_teacher.rsi
+      state: pda-scienceteacher

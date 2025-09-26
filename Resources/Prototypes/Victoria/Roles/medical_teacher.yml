@@ -1,0 +1,91 @@
+- type: job
+  id: MedTeacher
+  name: заведующий интернатурой
+  description: Врач, несущий ответственность за всех интернов и пациентов. Он учит не просто ставить диагнозы, а сохранять хладнокровие, когда в приёмку одновременно везут и избитого до полусмерти клоуна, и офицера, неудачно подскользнувшийся на кожурке от банана.
+  playTimeTracker: JobMedTeacher
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 18000
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 43200 
+  startingGear: MedTeacherGear
+  icon: "JobIconMedTeacher"
+  supervisors: job-supervisors-cmo
+  access:
+  - Teacher
+  - Medical
+  - Chemistry
+  - External
+  - Maintenance
+  sponsorOnly: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedTeacher
+  icon:
+    sprite: /Textures/Victoria/Teach/job_icons_teacher.rsi
+    state: TeacherMed
+  jobName: медицинский консультант
+
+- type: startingGear
+  id: MedTeacherGear
+  equipment:
+    id: PDAMedTeacher
+    belt: ClothingBeltMedicalFilled
+    ears: ClothingHeadsetMedical
+
+# Clothing
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpsuitMedicalTeacher
+  name: комбинезон заведующего интернатурой
+  suffix: Наставники
+  description: С этим комбинезоном все ваши интерны должны забыть о цвете их дипломов и о том, что написано в них слово "врач". Это ложь — они ни хрена не знают!
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/uniform_medical_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/uniform_medical_teacher.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtMedicalTeacher
+  name: юбка-комбинезон заведующего интернатурой
+  suffix: Наставники
+  description: С этой юбкой-комбинезоном все ваши интерны должны забыть о цвете их дипломов и о том, что написано в них слово "врач". Это ложь — они ни хрена не знают!
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/women's_uniform_medical_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/women's_uniform_medical_teacher.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretMedicalTeacher
+  name: берет заведующего интернатурой
+  suffix: Наставники
+  description: Нося этот берет, вы чувствуете невыносимую тяжесть бытия даже на собственной голове...
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/beret_medical_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/beret_medical_teacher.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingOuterCoatLab
+  id: ClothingOuterCoatLabMedicalTeacher
+  name: лабораторный халат заведующего интернатурой
+  suffix: Наставники
+  description: Его владелец не лечит — он воспитывает. Жестко, бескомпромиссно, но, как ни парадоксально, ради их же блага.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/labcoat_medical_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/labcoat_medical_teacher.rsi
