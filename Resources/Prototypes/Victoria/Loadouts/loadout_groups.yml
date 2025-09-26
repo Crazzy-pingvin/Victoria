@@ -1,21 +1,21 @@
 # Engineering
 - type: loadoutGroup
   id: EngineerTeacherHead
-  name: Ведущий инженер, голова
+  name: loadout-group-engineer-teacher-head
   minLimit: 0
   loadouts:
   - ChiefEngineerBeret
 
 - type: loadoutGroup
   id: EnginneerTeacherJumpsuit
-  name: Ведущий инженер, комбинезон
+  name: loadout-group-engineer-teacher-jumpsuit
   loadouts:
   - EngineerTeacherJumpsuit
   - EngineerTeacherJumpskirt
 
 - type: loadoutGroup
   id: EnginneerTeacherBackpack
-  name: Ведущий инженер, рюкзак
+  name: loadout-group-engineer-teacher-backpack
   loadouts:
   - StationEngineerBackpack
   - StationEngineerSatchel
@@ -26,7 +26,7 @@
 
 - type: loadoutGroup
   id: EnginneerTeacherOuterClothing
-  name: Ведущий инженер, верхняя одежда
+  name: loadout-group-engineer-teacher-outerclothing
   minLimit: 0
   loadouts:
   - StationEngineerOuterVest
@@ -35,7 +35,7 @@
 
 - type: loadoutGroup
   id: EnginneerTeacherShoes
-  name: Ведущий инженер, обувь
+  name: loadout-group-engineer-teacher-shoes
   loadouts:
   - WorkBoots
   - EngineeringWinterBoots
@@ -43,21 +43,21 @@
 # Science
 - type: loadoutGroup
   id: ScienceTeacherHead
-  name: Доцент, голова
+  name: loadout-group-scientist-teacher-head
   minLimit: 0
   loadouts:
   - ResearchDirectorBeret
 
 - type: loadoutGroup
   id: ScienceTeacherJumpsuit
-  name: Доцент, комбинезон
+  name: loadout-group-scientist-teacher-jumpsuit
   loadouts:
   - ScienceTeacherJumpsuit
   - ScienceTeacherJumpskirt
 
 - type: loadoutGroup
   id: ScienceTeacherBackpack
-  name: Доцент, рюкзак
+  name: loadout-group-scientist-teacher-backpack
   loadouts:
   - ScientistBackpack
   - ScientistSatchel
@@ -65,14 +65,14 @@
 
 - type: loadoutGroup
   id: ScienceTeacherOuterClothing
-  name: Доцент, вехрняя одежда
+  name: loadout-group-scientist-teacher-outerclothing 
   minLimit: 0
   loadouts:
   - ScienceTeacherOuterClothing
 
 - type: loadoutGroup
   id: ScienceTeacherShoes
-  name: Доцент, обувь
+  name: loadout-group-scientist-teacher-shoes
   loadouts:
   - WhiteShoes
   - BlackShoes
@@ -80,7 +80,7 @@
 
 - type: loadoutGroup
   id: ScienceTeacherGloves
-  name: Доцент, перчатки
+  name: loadout-group-scientist-teacher-gloves
   minLimit: 0
   loadouts:
   - LatexGloves
@@ -90,21 +90,21 @@
 # Security
 - type: loadoutGroup
   id: SecurityTeacherHead
-  name: Инструктор СБ, голова
+  name: loadout-group-security-teacher-head
   minLimit: 0
   loadouts:
   - SecurityBeret
 
 - type: loadoutGroup
   id: SecurityTeacherJumpsuit
-  name: Инструктор СБ, комбинезон
+  name: loadout-group-security-teacher-jumpsuit
   loadouts:
   - SecurityTeacherJumpsuit
   - SecurityTeacherJumpskirt
 
 - type: loadoutGroup
   id: SecurityTeacherBackpack
-  name: Инструктор СБ, рюкзак
+  name: loadout-group-security-teacher-backpack
   loadouts:
   - SecurityBackpack
   - SecuritySatchel
@@ -112,14 +112,14 @@
 
 - type: loadoutGroup
   id: SecurityTeacherBelt
-  name: Инструктор СБ, пояс
+  name: loadout-group-security-teacher-belt
   loadouts:
   - SecurityBelt
   - SecurityWebbing
 
 - type: loadoutGroup
   id: SecurityTeacherOuterClothing
-  name: Инструктор СБ, верхняя одежда
+  name: loadout-group-security-teacher-outerclothing
   loadouts:
   - ArmorVest
   - ArmorVestSlim
@@ -127,7 +127,7 @@
 
 - type: loadoutGroup
   id: SecurityTeacherShoes
-  name: Инструктор СБ, обувь
+  name: loadout-group-security-teacher-shoes
   loadouts:
   - JackBoots
   - SecurityWinterBoots
@@ -135,21 +135,21 @@
 # Medical
 - type: loadoutGroup
   id: MedicalTeacherHead
-  name: Заведующий интернатурой, голова
+  name: loadout-group-medical-teacher-head
   minLimit: 0
   loadouts:
   - MedicalTeacherHead
 
 - type: loadoutGroup
   id: MedicalTeacherJumpsuit
-  name: Заведующий интернатурой, комбинезон
+  name: loadout-group-medical-teacher-jumpsuit
   loadouts:
   - MedicalTeacherJumpsuit
   - MedicalTeacherJumpskirt
 
 - type: loadoutGroup
   id: MedicalTeacherBackpack
-  name: Заведующий интернатурой, рюкзак
+  name: loadout-group-medical-teacher-backpack
   loadouts:
   - MedicalDoctorBackpack
   - MedicalDoctorSatchel
@@ -157,14 +157,14 @@
 
 - type: loadoutGroup
   id: MedicalTeacherOuterClothing
-  name: Заведующий интернатурой, вехрняя одежда
+  name: loadout-group-medical-teacher-outerclothing
   minLimit: 0
   loadouts:
   - MedicalTeacherOuterClothing
 
 - type: loadoutGroup
   id: MedicalTeacherShoes
-  name: Заведующий интернатурой, обувь
+  name: loadout-group-medical-teacher-shoes
   loadouts:
   - WhiteShoes
   - MedicalWinterBoots
@@ -172,14 +172,14 @@
 # Cargo
 - type: loadoutGroup
   id: CargoTeacherHead
-  name: Бригадир, голова
+  name: loadout-group-cargo-teacher-head
   minLimit: 0
   loadouts:
   - QuartermasterBeret
 
 - type: loadoutGroup
   id: CargoTeacherOuterClothing
-  name: Бригадир, верхняя одежда
+  name: loadout-group-cargo-teacher-outerclothing
   minLimit: 0
   loadouts:
   - CargoTechnicianWintercoat
@@ -187,7 +187,7 @@
 
 - type: loadoutGroup
   id: CargoTeacherBackpack
-  name: Бригадир, рюкзак
+  name: loadout-group-cargo-teacher-backpack
   loadouts:
   - CargoTechnicianBackpack
   - CargoTechnicianSatchel
@@ -198,7 +198,7 @@
 
 - type: loadoutGroup
   id: CargoTeacherShoes
-  name: Бригадир, обувь
+  name: loadout-group-cargo-teacher-shoes
   loadouts:
   - SalvageBoots
   - CargoWinterBoots
