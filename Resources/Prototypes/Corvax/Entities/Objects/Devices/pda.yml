@@ -28,9 +28,9 @@
       appearanceDataInit:
        enum.PdaVisuals.PdaType:
          !type:String
-         pda-secteacher
+         pda-seniorofficer
     - type: PdaBorderColor
       borderColor: "#A32D26"
       accentVColor: "#DFDFDF"
     - type: Icon
-      state: pda-secteacher
+      state: pda-seniorofficer
