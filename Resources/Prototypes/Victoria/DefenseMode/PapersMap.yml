@@ -20,7 +20,7 @@
     mirt: MirtPaperMapDesrtPlatform
     cdc: CDCPaperMapDesrtPlatform
     nt: MirtPaperMapDesrtPlatform
-    ussp: CDCPaperMapDesrtPlatform
+    ussp: USSPPaperMapDesrtPlatform
 #---------------------------------------Пустынная платформа---------------------
 #---------------------------Умпорское------------------------
 - type: entity
@@ -218,7 +218,7 @@
     mirt: MirtPaperMapFrozenTown
     cdc: CDCPaperMapFrozenTown
     nt: MirtPaperMapFrozenTown
-    ussp: CDCPaperMapFrozenTown
+    ussp: USSPPaperMapFrozenTown
 #---------------------------Умпорское------------------------
 - type: entity
   id: UmporPaperMapFrozenTown
