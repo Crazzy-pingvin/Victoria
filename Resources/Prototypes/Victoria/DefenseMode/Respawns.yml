@@ -1781,7 +1781,7 @@
 #------------------------------------------------Советский-------------------------------------------
 - type: entity
   name: Сборщик поставок
-  suffix: Оборона, Умпорский, Малый
+  suffix: Оборона, СССП, Малый
   parent: [BaseItem, PresetStoreRespawnsMap1USSP]
   id: ProviderDefSuppliesMap1USSP
   description: Небольшое устройсво, получающее чипы поставок и пополнение.
