@@ -742,7 +742,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearOffi
-  name: чип экипировки командора 
+  name: чип экипировки офицера 
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -783,7 +783,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearOffiDop
-  name: чип экипировки командора 
+  name: чип экипировки офицера доп.отряда 
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -824,7 +824,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSpc
-  name: чип экипировки командора 
+  name: чип экипировки специалиста
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -865,7 +865,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSpcDop
-  name: чип экипировки командора 
+  name: чип экипировки специалиста  доп.отряда
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -906,7 +906,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearEnge
-  name: чип экипировки командора 
+  name: чип экипировки инженера
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -947,7 +947,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearMed
-  name: чип экипировки командора 
+  name: чип экипировки медика
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -988,7 +988,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearLogi
-  name: чип экипировки командора 
+  name: чип экипировки снабженца
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -1029,7 +1029,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSolder
-  name: чип экипировки командора 
+  name: чип экипировки солдата
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   components:
   - type: PhysicalComposition
@@ -1069,7 +1069,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSolderDop
-  name: чип экипировки командора 
+  name: чип экипировки солдата  доп.отряда 
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   components:
   - type: PhysicalComposition

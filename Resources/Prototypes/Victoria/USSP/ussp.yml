@@ -1405,9 +1405,6 @@
           tags:
             - USSPBatteryPistCarab
             - USSPBatterySMG
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1449,9 +1446,6 @@
           tags:
             - USSPBatteryPistCarab
             - USSPBatterySMG
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1495,9 +1489,6 @@
             - USSPBatteryPistCarab
             - USSPBatterySMG
             - USSPBatteryCarabSnipe
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1533,6 +1524,12 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPCarabineSnipe
+  - type: Scope
+    useInHand: true
+    allowMovement: true
+    delay: 0
+    zoom: 2.2
+    offset: 14
 #----------------------------------Винтовка----------------------------
 #--------------------------Обычная--------------------
 - type: entity
@@ -1572,9 +1569,6 @@
             - USSPBatteryRif
             - USSPBatteryAuto
             - USSPBatteryRifSnipe
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1610,6 +1604,12 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPRifleSnipe
+  - type: Scope
+    useInHand: true
+    allowMovement: true
+    delay: 0
+    zoom: 2.2
+    offset: 14
 #----------------------------------Автомат----------------------------
 - type: entity
   name: Советский автомат "Лебедев"
@@ -1646,9 +1646,6 @@
           tags:
             - USSPBatteryRif
             - USSPBatteryAuto
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1691,9 +1688,6 @@
         whitelist:
           tags:
             - USSPBatteryShot
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1735,9 +1729,6 @@
             - USSPBatteryLMG
             - USSPBatteryRif
             - USSPBatteryAuto
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1777,9 +1768,6 @@
         whitelist:
           tags:
             - USSPBatterySing
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1833,9 +1821,6 @@
         whitelist:
           tags:
             - USSPBatteryRadio
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
