@@ -1,0 +1,70 @@
+- type: job
+  id: SecTeacher
+  name: инструктор СБ
+  description: Ветеран службы, чья задача — превратить кадетов с дубинками в дисциплинированных офицеров. Он учит не только уставам, но и тому, как выжить, когда вся станция катится в тартарары.
+  playTimeTracker: JobSecTeacher
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 36000
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 36000
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 90000
+  startingGear: SecTeacherGear
+  icon: "JobIconSecTeacher"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Teacher
+  - Security
+  - Brig
+  - External
+  - Maintenance
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  sponsorOnly: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSecTeacher
+  icon:
+    sprite: /Textures/Victoria/Teach/job_icons_teacher.rsi
+    state: TeacherOfficer
+  jobName: инструктор
+
+- type: startingGear
+  id: SecTeacherGear
+  equipment:
+    id: PDASecTeacher
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    eyes: ClothingEyesGlassesSecurity
+
+# Clothing
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpsuitSecurityTeacher
+  name: комбинезон инструктора СБ
+  suffix: Наставники
+  description: На этом комбинезоне больше зашитых дыр от пуль, чем у клоуна кожурок от банана.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/uniform_security_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/uniform_security_teacher.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSecurityTeacher
+  name: юбка-комбинезон инструктора СБ
+  suffix: Наставники
+  description: На этой юбке-комбинезоне больше зашитых дыр от пуль, чем у клона кожурок от банана.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/women's_uniform_security_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/women's_uniform_security_teacher.rsi

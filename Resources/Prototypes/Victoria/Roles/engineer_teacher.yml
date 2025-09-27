@@ -1,0 +1,63 @@
+- type: job
+  id: EngTeacher
+  name: ведущий инженер
+  description: Его задача — не допустить, чтобы попытка починить ЛКП не закончилась испепелением ассистента.
+  playTimeTracker: JobEngTeacher
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 36000
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 43200
+  startingGear: EngTeacherGear
+  icon: "JobIconEngTeacher"
+  supervisors: job-supervisors-ce
+  access:
+  - Teacher
+  - Engineering
+  - Atmospherics
+  - External
+  - Maintenance
+  sponsorOnly: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconEngTeacher
+  icon:
+    sprite: /Textures/Victoria/Teach/job_icons_teacher.rsi
+    state: TeacherEngineer
+  jobName: ведущий инженер
+
+- type: startingGear
+  id: EngTeacherGear
+  equipment:
+    id: PDAEngTeacher
+    eyes: ClothingEyesGlassesMeson
+    ears: ClothingHeadsetEngineering 
+    belt: ClothingBeltUtilityEngineering
+
+# Clothing
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpsuitEngineerTeacher
+  name: комбинезон ведущего инженера
+  suffix: Наставники
+  description: Комбинезон, созданный для тех, чей рабочий день колеблется между скучной прокладкой кабелей и героическим спасением станции от выпущенной ассистентом Сингулярности.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/uniform_engineering_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/uniform_engineering_teacher.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtEngineerTeacher
+  name: юбка-комбинезон ведущего инженера
+  suffix: Наставники
+  description: Юбка-комбинезон, созданный для тех, чей рабочий день колеблется между скучной прокладкой кабелей и героическим спасением станции от выпущенной ассистентом Сингулярности.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/women's_uniform_engineering_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/women's_uniform_engineering_teacher.rsi
