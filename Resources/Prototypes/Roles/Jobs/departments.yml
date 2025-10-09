@@ -88,6 +88,7 @@
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
+  - SeniorEngineer # Corvax-MentorRoles
   - StationEngineer
   - TechnicalAssistant
   - EngTeacher # Victoria-Job
@@ -117,6 +118,7 @@
   - HeadOfSecurity
   - SecurityCadet
   - SecurityOfficer
+  - SeniorOfficer # Corvax-MentorRoles
   - Pilot # Corvax-Pilot
   - Detective
   - Warden
@@ -129,6 +131,7 @@
   color: "#D381C9"
   roles:
   - ResearchDirector
+  - SeniorResearcher # Corvax-MentorRoles
   - Scientist
   - ResearchAssistant
   - SciTeacher # Victoria-Job

@@ -1,5 +1,5 @@
-﻿- type: entity
-  parent: ClothingHeadBase
+- type: entity
+  parent: [ClothingHeadBase, BaseChameleon]
   id: ClothingHeadHatChameleon
   name: beret
   description: A beret, an artists favorite headwear.
@@ -14,10 +14,6 @@
     - type: ChameleonClothing
       slot: [HEAD]
       default: ClothingHeadHatBeret
-    - type: UserInterface
-      interfaces:
-        enum.ChameleonUiKey.Key:
-          type: ChameleonBoundUserInterface
 # Corvax-HiddenDesc-Start
     - type: HiddenDescription
       entries:
@@ -33,3 +29,34 @@
           - Scientist
           - Borg
 # Corvax-HiddenDesc-End
+
+- type: entity
+  parent: ClothingHeadHatFedoraBrown
+  id: ClothingHeadHatDetGadget
+  name: go go hat
+  description: A novel hat with a built in toolkit. Automatically stores and retrieves items at the say of a phrase!
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+  - type: TriggerOnVoice
+    keyPhrase: "go go gadget"
+    listenRange: 0
+  - type: ActiveListener
+    range: 0
+  - type: StorageVoiceControl
+    allowedSlots:
+    - HEAD
+  - type: Storage
+    showVerb: false
+    grid:
+    - 0,0,3,2
+    maxItemSize: Small
+    blacklist:
+      tags:
+      - HighRiskItem # no hiding objectives or trolling nukies
+      - FakeNukeDisk # no disk checking
+      - QuantumSpinInverter # avoid the morbillionth QSI bug
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]

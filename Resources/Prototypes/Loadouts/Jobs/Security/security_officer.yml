@@ -52,7 +52,7 @@
 
 - type: loadout
   id: TrooperUniform
-  equipment: 
+  equipment:
     jumpsuit: ClothingUniformSecurityTrooper
 
 # Back
@@ -119,7 +119,6 @@
   id: SecurityPDA
   equipment:
     id: SecurityPDA
-    
 # Misc
 - type: loadout
   id: SecStar

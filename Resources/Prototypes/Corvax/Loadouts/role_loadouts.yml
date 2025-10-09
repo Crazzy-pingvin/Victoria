@@ -1,3 +1,4 @@
+# Command
 - type: roleLoadout
   id: JobIAA
   groups:
@@ -9,15 +10,97 @@
   - Trinkets
   - GroupSpeciesBreathTool
 
+# Engineering
+- type: roleLoadout
+  id: JobSeniorEngineer
+  groups:
+  - Inventory # Corvax-Loadouts
+  - GroupTankHarness
+  - SeniorEngineerHead
+  - SeniorEngineerJumpsuit
+  - SeniorEngineerBackpack
+  - SeniorEngineerOuterClothing
+  - SeniorEngineerShoes
+  - SurvivalExtended
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+# Science
+- type: roleLoadout
+  id: JobSeniorResearcher
+  groups:
+  - Inventory # Corvax-Loadouts
+  - GroupTankHarness
+  - SeniorResearcherHead
+  - SeniorResearcherJumpsuit
+  - SeniorResearcherBackpack
+  - SeniorResearcherOuterClothing
+  - SeniorResearcherGloves
+  - SeniorResearcherShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+# Security
 - type: roleLoadout
   id: JobPilot
   groups:
   - Inventory # Corvax-Loadouts
-  - SecurityJumpsuit
+  - PilotHead
+  - PilotJumpsuit
   - SecurityBackpack
-  - SecurityOuterClothing
+  - PilotOuterClothing
   - SecurityBelt
   - SecurityShoes
-  - Survival
+  - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobBrigmedic
+  groups:
+  - Inventory # Corvax-Loadouts
+  - BrigmedicHead
+  - BrigmedicMask
+  - BrigmedicJumpsuit
+  - BrigmedicGloves
+  - BrigmedicBackpack
+  - BrigmedicOuterClothing
+  - BrigmedicShoes
+  - SurvivalMedical
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobSeniorOfficer
+  groups:
+  - Inventory # Corvax-Loadouts
+  - SeniorOfficerHead
+  - SeniorOfficerJumpsuit
+  - SeniorOfficerBackpack
+  - SeniorOfficerOuterClothing
+  - SeniorOfficerShoes
+  - SeniorOfficerBelt
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityStar
+  - GroupSpeciesBreathToolSecurity
+
+# Medical
+- type: roleLoadout
+  id: JobSeniorPhysician
+  groups:
+  - Inventory # Corvax-Loadouts
+  - GroupTankHarness
+  - SeniorPhysicianHead
+  - MedicalMask
+  - SeniorPhysicianJumpsuit
+  - MedicalGloves
+  - SeniorPhysicianBackpack
+  - SeniorPhysicianOuterClothing
+  - SeniorPhysicianShoes
+  - Glasses
+  - SurvivalMedical
+  - Trinkets
+  - GroupSpeciesBreathToolMedical

@@ -2,7 +2,8 @@
 - type: latheRecipe
   abstract: true
   id: BasePartRecipe
-  category: Parts
+  categories:
+  - Parts
   completetime: 2
   materials:
     Steel: 300
@@ -36,16 +37,6 @@
     Steel: 70
     Plastic: 70
     Gold: 50
-
-- type: latheRecipe
-  parent: BaseStockPartRecipe
-  id: CapacitorStockPart
-  result: CapacitorStockPart
-
-- type: latheRecipe
-  parent: BaseStockPartRecipe
-  id: MatterBinStockPart
-  result: MatterBinStockPart
 
 - type: latheRecipe
   parent: BaseStockPartRecipe

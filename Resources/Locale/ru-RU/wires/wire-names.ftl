@@ -21,7 +21,7 @@ wires-board-name-anomalygenerator = Генератор аномалий
 wires-board-name-cloningpod = Капсула клонирования
 wires-board-name-cryopod = Криокапсула
 wires-board-name-chemdispenser = Раздатчик химикатов
-wires-board-name-chemmaster = Мастер химикатов
+wires-board-name-chemmaster = ХимМастер
 wires-board-name-generator = Генератор
 wires-board-name-vendingmachine = Торгомат
 wires-board-name-intercom = Интерком
@@ -43,6 +43,8 @@ wires-board-name-jukebox = Музыкальный автомат
 wires-board-name-computer = Компьютер
 wires-board-name-holopad = Голопад
 wires-board-name-barsign = Барная вывеска
+wires-board-name-weapon-energy-turret = Охранная турель
+wires-board-name-turret-controls = Панель управления охранной турелью
 
 # Имена проводов, показываемые пр ивзломе и в админлогах.
 

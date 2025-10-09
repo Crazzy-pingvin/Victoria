@@ -47,4 +47,11 @@
   - HoundAccessWorker
   - HoundAccessOper
   - HoundAccessCom
-  
+
+  - GenpopEnter
+  - GenpopLeave
+
+- type: accessGroup
+  id: General
+  tags:
+  - Maintenance

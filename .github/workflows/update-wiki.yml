@@ -18,11 +18,11 @@ on:
 jobs:
   update-wiki:
     name: Build and Publish JSON blobs to wiki
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
 
     steps:
     - name: Checkout Master
-      uses: actions/checkout@v3.6.0
+      uses: actions/checkout@v4.2.2
 
     - name: Setup Submodule
       run: |
@@ -37,9 +37,19 @@ jobs:
         git submodule update --init --recursive
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v3.2.0
+      uses: actions/setup-dotnet@v4.1.0
       with:
-        dotnet-version: 7.0.x
+        dotnet-version: 9.0.x
+      env:
+        DOTNET_INSTALL_DIR: ${{ runner.temp }}/.dotnet
+
+    - name: Set DOTNET_ROOT and PATH
+      run: |
+        echo "DOTNET_ROOT=${{ runner.temp }}/.dotnet" >> $GITHUB_ENV
+        echo "${{ runner.temp }}/.dotnet" >> $GITHUB_PATH
+
+    - name: Check .NET installation
+      run: dotnet --info
 
     - name: Install Dependencies
       run: dotnet restore

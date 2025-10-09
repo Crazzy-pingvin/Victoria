@@ -6,9 +6,11 @@ trait-poor-vision-desc = Ваши глаза уже не те, что раньш
 trait-narcolepsy-desc = Вас одолевают приступы сонливости
 trait-pacifist-name = Пацифист
 trait-pacifist-desc = Вы не можете нападать и причинять вред живым существам.
-permanent-blindness-trait-examined = [color=lightblue]{ CAPITALIZE(POSS-PRONOUN($target)) } глаза остекленелые и расфокусированные. Не похоже, что { SUBJECT($target) } может хорошо вас видеть, если может вообще.[/color]
+permanent-blindness-trait-examined = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } глаза остекленелые и расфокусированные. Не похоже, что { SUBJECT($target) } может хорошо вас видеть, если может вообще.[/color]
 trait-lightweight-name = Быстрое опьянение
 trait-lightweight-desc = Алкоголь оказывает на вас более сильное воздействие
+trait-monochromacy-name = Монохромазия
+trait-monochromacy-desc = Вы полный дальтоник, всё, что вы видите, сводится к оттенкам от чёрного до белого.
 trait-muted-name = Немота
 trait-muted-desc = Вы не можете говорить
 trait-paracusia-name = Паракузия
@@ -40,4 +42,4 @@ trait-french-desc = Ваш акцент, похоже, имеет определ
 trait-spanish-name = Испанский акцент
 trait-spanish-desc = Hola señor, как пройти в la biblioteca.
 trait-painnumbness-name = Нечувствительность к боли
-trait-painnumbness-desc = Вы не чувствуете боли. Совсем. может показаться даром, но на деле является проклятием.
+trait-painnumbness-desc = Вы не чувствуете боли. Совсем. Может показаться даром, но на деле является проклятием.

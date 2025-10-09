@@ -13,16 +13,15 @@
           !type:PhysShapeCircle
           radius: 0.25
         mask:
-        - SubfloorMask
-        layer:
-        - LowImpassable
-        hard: false
+        - Impassable
   - type: ApcPowerReceiver
     powerLoad: 300
   - type: StationAiVision
+    range: 1
+    needsAnchoring: true
   - type: Sprite
     sprite: Structures/Machines/holopad.rsi
-    drawdepth: FloorObjects
+    drawdepth: HighFloorObjects
     snapCardinals: true
     layers:
     - state: base
@@ -150,8 +149,7 @@
 - type: entity
   id: HolopadHologram
   name: hologram
-  categories: [ HideSpawnMenu ]
-  suffix: DO NOT MAP
+  categories: [ HideSpawnMenu, DoNotMap ]
   components:
   - type: Transform
     anchored: true
@@ -367,6 +365,22 @@
 
 - type: entity
   parent: Holopad
+  id: HolopadScienceArtifactNorth
+  suffix: Artifact North
+  components:
+  - type: Label
+    currentLabel: holopad-science-artifact-north
+
+- type: entity
+  parent: Holopad
+  id: HolopadScienceArtifactSouth
+  suffix: Artifact South
+  components:
+  - type: Label
+    currentLabel: holopad-science-artifact-south
+
+- type: entity
+  parent: Holopad
   id: HolopadScienceRobotics
   suffix: Robotics
   components:
@@ -511,6 +525,14 @@
   - type: Label
     currentLabel: holopad-cargo-breakroom
 
+- type: entity
+  parent: Holopad
+  id: HolopadCargoMailroom
+  suffix: Cargo Mailroom
+  components:
+  - type: Label
+    currentLabel: holopad-cargo-mailroom
+
 # Engineering
 - type: entity
   parent: Holopad
@@ -576,6 +598,30 @@
   - type: Label
     currentLabel: holopad-engineering-tech-vault
 
+- type: entity
+  parent: Holopad
+  id: HolopadEngineeringAME
+  suffix: AME
+  components:
+  - type: Label
+    currentLabel: holopad-engineering-ame
+
+- type: entity
+  parent: Holopad
+  id: HolopadEngineeringPower
+  suffix: Power
+  components:
+  - type: Label
+    currentLabel: holopad-engineering-power
+
+- type: entity
+  parent: Holopad
+  id: HolopadEngineeringMain
+  suffix: Engi Main
+  components:
+  - type: Label
+    currentLabel: holopad-engineering-main
+
 # Security
 - type: entity
   parent: Holopad
@@ -612,7 +658,7 @@
 - type: entity
   parent: Holopad
   id: HolopadSecurityBreakroom
-  suffix: Breakroom
+  suffix: Sec Breakroom
   components:
   - type: Label
     currentLabel: holopad-security-breakroom
@@ -656,6 +702,38 @@
   components:
   - type: Label
     currentLabel: holopad-security-armory
+
+- type: entity
+  parent: Holopad
+  id: HolopadSecurityLockerRoom
+  suffix: Sec Locker Room
+  components:
+  - type: Label
+    currentLabel: holopad-security-locker-room
+
+- type: entity
+  parent: Holopad
+  id: HolopadSecurityBrigMed
+  suffix: Brig Med
+  components:
+  - type: Label
+    currentLabel: holopad-security-brig-med
+
+- type: entity
+  parent: Holopad
+  id: HolopadSecurityEvacCheckpoint
+  suffix: Sec Evac Checkpoint
+  components:
+  - type: Label
+    currentLabel: holopad-security-evac-checkpoint
+
+- type: entity
+  parent: Holopad
+  id: HolopadSecurityArrivalsCheckpoint
+  suffix: Sec Arrivals Checkpoint
+  components:
+  - type: Label
+    currentLabel: holopad-security-arrivals-checkpoint
 
 # Service
 - type: entity
@@ -705,6 +783,14 @@
   components:
   - type: Label
     currentLabel: holopad-service-library
+
+- type: entity
+  parent: Holopad
+  id: HolopadServiceGameRoom
+  suffix: Game Room
+  components:
+  - type: Label
+    currentLabel: holopad-service-gameroom
 
 - type: entity
   parent: Holopad

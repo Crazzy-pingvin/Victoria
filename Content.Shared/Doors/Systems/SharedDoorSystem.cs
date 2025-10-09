@@ -23,7 +23,7 @@ using Robust.Shared.Timing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Map.Components;
-using Robust.Shared.Physics;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Doors.Systems;
 
@@ -34,6 +34,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] protected readonly SharedPhysicsSystem PhysicsSystem = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
+    [Dependency] private readonly EmagSystem _emag = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
     [Dependency] protected readonly TagSystem Tags = default!;
     [Dependency] protected readonly SharedAudioSystem Audio = default!;
@@ -46,9 +47,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiver = default!;
 
-
-    [ValidatePrototypeId<TagPrototype>]
-    public const string DoorBumpTag = "DoorBumpOpener";
+    public static readonly ProtoId<TagPrototype> DoorBumpTag = "DoorBumpOpener";
 
     /// <summary>
     ///     A set of doors that are currently opening, closing, or just queued to open/close after some delay.
@@ -77,8 +76,6 @@ public abstract partial class SharedDoorSystem : EntitySystem
         SubscribeLocalEvent<DoorComponent, WeldableAttemptEvent>(OnWeldAttempt);
         SubscribeLocalEvent<DoorComponent, WeldableChangedEvent>(OnWeldChanged);
         SubscribeLocalEvent<DoorComponent, GetPryTimeModifierEvent>(OnPryTimeModifier);
-
-        SubscribeLocalEvent<DoorComponent, OnAttemptEmagEvent>(OnAttemptEmag);
         SubscribeLocalEvent<DoorComponent, GotEmaggedEvent>(OnEmagged);
     }
 
@@ -118,31 +115,24 @@ public abstract partial class SharedDoorSystem : EntitySystem
         _activeDoors.Remove(door);
     }
 
-    private void OnAttemptEmag(EntityUid uid, DoorComponent door, ref OnAttemptEmagEvent args)
-    {
-        if (!TryComp<AirlockComponent>(uid, out var airlock))
-        {
-            args.Handled = true;
-            return;
-        }
-
-        if (IsBolted(uid) || !airlock.Powered)
-        {
-            args.Handled = true;
-            return;
-        }
-
-        if (door.State != DoorState.Closed)
-        {
-            args.Handled = true;
-        }
-    }
-
     private void OnEmagged(EntityUid uid, DoorComponent door, ref GotEmaggedEvent args)
     {
+        if (!_emag.CompareFlag(args.Type, EmagType.Access))
+            return;
+
+        if (!TryComp<AirlockComponent>(uid, out var airlock))
+            return;
+
+        if (IsBolted(uid) || !airlock.Powered)
+            return;
+
+        if (door.State != DoorState.Closed)
+            return;
+
         if (!SetState(uid, DoorState.Emagging, door))
             return;
-        Audio.PlayPredicted(door.SparkSound, uid, args.UserUid, AudioParams.Default.WithVolume(8));
+
+        args.Repeatable = true;
         args.Handled = true;
     }
 
@@ -158,7 +148,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
         RaiseLocalEvent(ent, new DoorStateChangedEvent(door.State));
     }
 
-    protected bool SetState(EntityUid uid, DoorState state, DoorComponent? door = null)
+    public bool SetState(EntityUid uid, DoorState state, DoorComponent? door = null)
     {
         if (!Resolve(uid, ref door))
             return false;
@@ -544,7 +534,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
             if (door.CrushDamage != null)
                 _damageableSystem.TryChangeDamage(entity, door.CrushDamage, origin: uid);
 
-            _stunSystem.TryParalyze(entity, stunTime, true);
+            _stunSystem.TryUpdateParalyzeDuration(entity, stunTime);
         }
 
         if (door.CurrentlyCrushing.Count == 0)
@@ -777,10 +767,13 @@ public abstract partial class SharedDoorSystem : EntitySystem
         var door = ent.Comp;
         door.NextStateChange = null;
 
-        if (door.CurrentlyCrushing.Count > 0)
+        if (door.CurrentlyCrushing.Count > 0 && door.State != DoorState.Opening)
+        {
             // This is a closed door that is crushing people and needs to auto-open. Note that we don't check "can open"
             // here. The door never actually finished closing and we don't want people to get stuck inside of doors.
             StartOpening(ent, door);
+            return;
+        }
 
         switch (door.State)
         {
