@@ -2021,7 +2021,7 @@
               prototype: UmporMechValiantEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 15
           steps:
             - tool: Cutting
@@ -2050,7 +2050,7 @@
               prototype: UmporMechValiantGenerator
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 5
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2085,7 +2085,7 @@
               prototype: UmporMechValiantEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 20
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2125,7 +2125,7 @@
               prototype: UmporMechValiantArm
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 5
           steps:
             - tool: Cutting
@@ -2147,7 +2147,7 @@
               prototype: UmporMechValiantLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 10
           steps:
             - tool: Cutting
@@ -2526,7 +2526,7 @@
               prototype: MirtMechNibbleEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 15
           steps:
             - tool: Cutting
@@ -2555,7 +2555,7 @@
               prototype: MirtMechNibbleGenerator
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 5
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2598,7 +2598,7 @@
               prototype: MirtMechNibbleEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 20
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2623,7 +2623,7 @@
               prototype: MirtMechNibbleLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 10
           steps:
             - tool: Cutting
@@ -2953,7 +2953,7 @@
               prototype: CDCMechScorpioGenerator
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 5
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -3025,7 +3025,7 @@
               prototype: CDCMechScorpioTeil
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 15
           steps:
             - tool: Cutting
@@ -3059,7 +3059,7 @@
               prototype: CDCMechScorpioLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 10
           steps:
             - tool: Cutting
@@ -3416,7 +3416,7 @@
               prototype: USSPMechSKHolder
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 15
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -3456,7 +3456,7 @@
               prototype: USSPMechSKShield
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 15
           steps:
             - tool: Cutting
@@ -3478,7 +3478,7 @@
               prototype: USSPMechSKLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: Steel
+              prototype: SheetSteel1
               amount: 10
           steps:
             - tool: Cutting
