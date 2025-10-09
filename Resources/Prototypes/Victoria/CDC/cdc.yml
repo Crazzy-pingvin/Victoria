@@ -3902,3 +3902,142 @@
         reagents:
         - ReagentId: Aluminium
           Quantity: 50
+#--------------------------------малый метатель---------------------------------
+#--------------------------------малый огонёк---------------------------------
+- type: entity
+  id: CDCPlasmaFireMini
+  parent: CDCPlasmaFireStd
+  suffix: Мини
+  components:
+  - type: DamageContacts
+    damage:
+      types:
+        Heat: 20
+  - type: TimedDespawn
+    lifetime: 15
+#--------------------------------пуля---------------------------------
+- type: entity
+  id: CDCBulletPlasmaFireMini
+  name: Огненный заряд
+  suffix: Конгломерат
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+        Heat: 11
+        Shock: 2
+        Piercing: 5
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi
+    layers:
+      - state: plasma_hot
+  - type: RandomChangeTime
+    time: 0.3
+    prob: 1
+    entity: CDCPlasmaFireMini
+  - type: IgnitionSource
+    temperature: 1000
+    ignited: true
+  - type: IgniteOnCollide
+    fireStacks: 0.25 
+#--------------------------------картридж---------------------------------
+- type: Tag
+  id: CDCCartridgePlasmaFireMini
+
+- type: entity
+  id: CDCCartridgePlasmaFireMini
+  name: Огненный заряд
+  suffix: Конгломерат
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: CDCBulletPlasmaFireMini
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - CDCCartridgePlasmaFireMini
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi
+    layers:
+    - state: plasma_hot
+      map: ["enum.AmmoVisualLayers.Base"]
+#--------------------------------магазин-канистра---------------------------------
+- type: Tag
+  id: CDCMagazineFireMini 
+
+- type: entity
+  id: CDCMagazineFireMini
+  name: баллон к малому плазменному метателю "Таки-ад-Дин"
+  suffix: Конгломерат
+  parent: BaseMagazinePistol
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CDCCartridgePlasmaFireMini
+    proto: CDCCartridgePlasmaFireMini
+    capacity: 6
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_magazine.rsi
+    layers:
+    - state: beakerlarge
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - CDCMagazineFireMini
+      - CDCMagazine
+#--------------------------------ствол---------------------------------
+- type: entity
+  name: Малый плазменный метатель "Таки-ад-Дин"
+  parent: BaseWeaponLauncher
+  id: CDCThrowerBeakerPlasmaMini
+  suffix: Конгломерат
+  description: Жуткая поражающая способность оружейной плазмы натолкнула на мысль о том, что можно использовать её, как временные жидкие препятствия на пути противника.
+  components:
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_thrower_mini.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Victoria/CDC/Weapon/cdc_thrower_mini.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CDCMagazineFireMini
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CDCMagazineFireMini
+      gun_chamber:
+        name: Chamber
+        startingItem: CDCCartridgePlasmaFireMini
+        priority: 1
+        whitelist:
+          tags:
+            - CDCCartridgePlasmaFireMini
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

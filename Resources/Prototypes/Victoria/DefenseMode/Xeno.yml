@@ -237,7 +237,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      130: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -280,7 +280,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      130: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -371,7 +371,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      250: Dead
+      300: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -427,7 +427,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      70: Dead
+      120: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -487,7 +487,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      700: Dead
+      800: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -547,7 +547,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      250: Dead
+      300: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -590,7 +590,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      250: Dead
+      300: Dead
   - type: MeleeWeapon
     damage:
       types:
@@ -818,7 +818,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      70: Dead
+      100: Dead
   - type: MeleeWeapon
     damage:
       types:

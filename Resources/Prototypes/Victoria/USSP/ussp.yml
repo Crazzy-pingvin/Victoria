@@ -946,8 +946,8 @@
         Slash: 3
         Radiation: 5
   - type: SpeedModifierContacts
-    walkSpeedModifier: 0
-    sprintSpeedModifier: 0
+    walkSpeedModifier: 0.01
+    sprintSpeedModifier: 0.01
   - type: Sprite
     sprite: Victoria/USSP/Weapon/ussp_projectiles.rsi
     layers:
@@ -1806,9 +1806,9 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
       params:
-        volume: -50
+        volume: 3
   - type: MagazineAmmoProvider
   - type: ItemSlots
     slots:

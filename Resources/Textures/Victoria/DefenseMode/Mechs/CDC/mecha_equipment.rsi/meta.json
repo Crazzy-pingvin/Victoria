@@ -1,0 +1,17 @@
+{
+  "copyright" : "Create by Crazzy_Pingvin",
+  "license" : "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "scorpio_rifle"
+    },
+    {
+      "name": "scorpio_machinegun"
+    }
+  ]
+}
