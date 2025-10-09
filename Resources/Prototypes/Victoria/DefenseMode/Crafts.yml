@@ -2021,7 +2021,7 @@
               prototype: UmporMechValiantEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 15
           steps:
             - tool: Cutting
@@ -2050,7 +2050,7 @@
               prototype: UmporMechValiantGenerator
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 5
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2085,7 +2085,7 @@
               prototype: UmporMechValiantEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 20
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2125,7 +2125,7 @@
               prototype: UmporMechValiantArm
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 5
           steps:
             - tool: Cutting
@@ -2147,7 +2147,7 @@
               prototype: UmporMechValiantLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 10
           steps:
             - tool: Cutting
@@ -2267,7 +2267,7 @@
 #----------------------------------------------------Конструкции--------------------------
 #---------------------------------------------Корпус----------------------------------
 - type: Tag
-  id: MirtMechValiantCorpus
+  id: MirtMechNibbleCorpus
 
 - type: entity
   parent: BaseRipleyPartItem
@@ -2492,7 +2492,7 @@
               amount: 1
             - tool: Screwing
               doAfter: 5
-            - material: SheetSteel1
+            - material: Steel
               amount: 5
             - tool: Welding
               doAfter: 5
@@ -2526,7 +2526,7 @@
               prototype: MirtMechNibbleEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 15
           steps:
             - tool: Cutting
@@ -2555,7 +2555,7 @@
               prototype: MirtMechNibbleGenerator
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 5
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2598,7 +2598,7 @@
               prototype: MirtMechNibbleEngine
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 20
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -2623,7 +2623,7 @@
               prototype: MirtMechNibbleLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 10
           steps:
             - tool: Cutting
@@ -2883,7 +2883,7 @@
   id: CDCMechScorpioCpGe
   name: Корпус УБР "Скорпион" c генератором
   icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: cp_ge }
-  spawn: CDCMechValiantCpGe
+  spawn: CDCMechScorpioCpGe
   maxCount: 1
 
 - type: entity
@@ -2900,14 +2900,14 @@
     node: cp_ge_tl
     defaultTarget: scorpio
   - type: Stack
-    stackType: CDCMechScorpioCpGeEn
+    stackType: CDCMechScorpioCpGeTl
     count: 1
     
 - type: stack
   id: CDCMechScorpioCpGeTl
   name: Корпус УБР "Скорпион" c полной начинкой
   icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: cp_ge_tl }
-  spawn: CDCMechScorpioCpGeEn
+  spawn: CDCMechScorpioCpGeTl
   maxCount: 1
 #----------------------------------------------------Граф---------------------------------
 - type: constructionGraph
@@ -2953,7 +2953,7 @@
               prototype: CDCMechScorpioGenerator
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 5
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -3025,7 +3025,7 @@
               prototype: CDCMechScorpioTeil
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 15
           steps:
             - tool: Cutting
@@ -3059,7 +3059,7 @@
               prototype: CDCMechScorpioLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 10
           steps:
             - tool: Cutting
@@ -3315,8 +3315,8 @@
 - type: stack
   id: USSPMechSKCpHol
   name: Корпус ШТ "СК-4" c держателями
-  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: cp_ge }
-  spawn: USSPMechValiantCpHol
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: cp_hol }
+  spawn: USSPMechSKCpHol
   maxCount: 1
 
 - type: entity
@@ -3339,7 +3339,7 @@
 - type: stack
   id: USSPMechSKCpHolSh
   name: Корпус ШТ "СК-4" c держателями и щитом
-  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: cp_ge_tl }
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: cp_hol_sh }
   spawn: USSPMechSKCpHolSh
   maxCount: 1
 #----------------------------------------------------Граф---------------------------------
@@ -3416,7 +3416,7 @@
               prototype: USSPMechSKHolder
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 15
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -3456,7 +3456,7 @@
               prototype: USSPMechSKShield
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 15
           steps:
             - tool: Cutting
@@ -3478,7 +3478,7 @@
               prototype: USSPMechSKLeg
               amount: 1
             - !type:SpawnPrototype
-              prototype: SheetSteel1
+              prototype: Steel
               amount: 10
           steps:
             - tool: Cutting
