@@ -154,10 +154,14 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         if (!CheckRoleRequirements(reqs, profile, out reason))
             return false;
 
-        if (!CheckSponsor(job, player.UserId, out reason)) // SponsorThink
+        var player = _playerManager.LocalSession; // SponsorThink
+        if (player == null)
+            return true;
+
+        if (!CheckSponsor(job, player.UserId, out reason))
             return false; // SponsorThink
 
-        return CheckRoleRequirements(job, profile, out reason);
+        return true;
     }
 
     /// <summary>
