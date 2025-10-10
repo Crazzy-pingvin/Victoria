@@ -169,6 +169,10 @@
   - type: BureaucraticErrorRule
     ignoredJobs:
     - StationAi
+    - ResearchAssistant
+    - MedicalIntern
+    - SecurityCadet
+    - TechnicalAssistant
 
 - type: entity
   id: ClericalError
@@ -343,7 +347,7 @@
     duration: 1
     earliestStart: 40 # Corvax-MRP # 30
     reoccurrenceDelay: 60
-    minimumPlayers: 10
+    minimumPlayers: 30
   - type: AntagSelection
     agentName: wizard-round-end-name
     definitions:
@@ -487,7 +491,6 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    reoccurrenceDelay: 35
     minimumPlayers: 15
     weight: 4
     duration: 60
@@ -530,7 +533,7 @@
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
-    earliestStart: 30
+    earliestStart: 20
     minimumPlayers: 15
     weight: 4
     duration: 60
