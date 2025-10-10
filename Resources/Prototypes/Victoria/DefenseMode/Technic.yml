@@ -45,6 +45,17 @@
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
       state: valiant
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.95,1.25,0.9,-1.5"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
   - type: Mech
     baseState: valiant
     openState: valiant-open
@@ -355,6 +366,17 @@
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
       state: nibble
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.95,0.5,0.95,-1.5"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
   - type: Mech
     baseState: nibble
     openState: nibble-open
@@ -602,6 +624,17 @@
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
       state: scorpio
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.4
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
   - type: Mech
     baseState: scorpio
     openState: scorpio-open
@@ -892,6 +925,17 @@
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
       state: sk4
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.75,1,1,-1.5"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
   - type: Mech
     baseState: sk4
     openState: sk4-open
