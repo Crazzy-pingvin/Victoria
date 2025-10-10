@@ -1,0 +1,25 @@
+{
+  "copyright" : "Create by Crazzy_Pingvin",
+  "license" : "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "sk4",
+      "directions": 4
+    },
+    {
+      "name": "sk4-empty",
+      "directions": 4
+    },
+    {
+      "name": "sk4-open"
+    },
+    {
+      "name": "sk4-broken"
+    }
+  ]
+}

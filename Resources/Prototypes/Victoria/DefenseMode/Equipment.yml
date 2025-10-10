@@ -847,7 +847,7 @@
 - type: thiefBackpackSet
   id: CDCThrowerBeakerPlasma
   name: Набор Огнеметателя
-  description: Включает в себя метатель "Салах-ад-Дин", 4 мёмкости с плазмой, 3 с сенсебилизатором, 1 с пенообразомателем, мензурку с алюминием, бронекомплект, бинокль и саблю.
+  description: Включает в себя метатели "Салах-ад-Дин" и "Таки-ад-Дин", 4 ёмкости с плазмой, 3 с сенсебилизатором, 1 с пенообразомателем, 2 баллона, мензурку с алюминием, бронекомплект, бинокль и саблю.
   sprite:
     sprite: Victoria/CDC/Weapon/cdc_thrower.rsi
     state: icon
@@ -865,6 +865,9 @@
   - CDCArmorMiddle
   - Binoculars
   - CDCSaber
+  - CDCThrowerBeakerPlasma
+  - CDCMagazineFireMini
+  - CDCMagazineFireMini
   
 - type: thiefBackpackSet
   id: SetCDCRunner

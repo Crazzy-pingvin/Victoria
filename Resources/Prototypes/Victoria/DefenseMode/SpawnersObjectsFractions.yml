@@ -165,3 +165,19 @@
     cdc: DefClothLatheCDC
     nt: DefClothLatheMirt
     ussp: DefClothLatheUSSP
+#----------------------------------------Заводской фабрикатор---------------------
+- type: entity
+  name: Спавнер заводского фабрикатора
+  id: SpawnFactoryFab
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    state: icon
+  - type: StateChoiceSpawner
+    umpor: DefUmporFactoryFab
+    mirt: DefMirtFactoryFab
+    cdc: DefCDCFactoryFab
+    nt: DefMirtFactoryFab
+    ussp: DefUSSPFactoryFab

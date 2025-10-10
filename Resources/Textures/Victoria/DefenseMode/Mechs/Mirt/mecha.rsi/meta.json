@@ -1,0 +1,25 @@
+{
+  "copyright" : "Create by Crazzy_Pingvin",
+  "license" : "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "nibble",
+      "directions": 4
+    },
+    {
+      "name": "nibble-empty",
+      "directions": 4
+    },
+    {
+      "name": "nibble-open"
+    },
+    {
+      "name": "nibble-broken"
+    }
+  ]
+}

@@ -29,6 +29,15 @@
   materials:
     Steel: 1500 
     Plastic: 1500    
+    
+- type: latheRecipe
+  id: DefClothingEyesHudMedical
+  result: ClothingEyesHudMedical
+  completetime: 5
+  materials:
+    Steel: 200 
+    Plastic: 200 
+    Glass: 200
 #-----------------------------------------Умпорский----------------------------------------
 #-------------------------------Рецепты-------------------------
 #-------------------Патроны-------------    
@@ -201,6 +210,7 @@
       - DefUmporRocketFrag
       - DefUmporRocketFar
       - DefDefCellRechargerCircuitboard
+      - DefClothingEyesHudMedical
   - type: MaterialStorage
     whitelist:
       tags:
@@ -436,6 +446,7 @@
       - DefFoodBowlBig
       - DefBeaker
       - DefMirtMagazineZenit
+      - DefClothingEyesHudMedical
   - type: MaterialStorage
     whitelist:
       tags:
@@ -661,6 +672,15 @@
   materials:
     Steel: 20 
     Plasma: 40 
+    
+- type: latheRecipe
+  id: DefCDCMagazineFireMini
+  result: CDCMagazineFireMini
+  category: Ammo
+  completetime: 0.4
+  materials:
+    Glass: 300
+    Plasma: 50 
 #-------------------Коробки патронов-------------    
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaRif
@@ -790,6 +810,7 @@
       - DefCDCMagazineDefocStd
       - DefCDCMagazineDefocHot
       - DefCDCMagazineDefocLig
+      - DefCDCMagazineFireMini
       - DefCDCBoxCartridgePlasmaRif
       - DefCDCBoxCartridgePlasmaHotRif
       - DefCDCBoxCartridgePlasmaLigRif
@@ -806,6 +827,7 @@
       - DefCDCBeakerPlasmaHot
       - DefCDCBeakerPlasmaCold
       - DefDefCellRechargerCircuitboard
+      - DefClothingEyesHudMedical
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1148,6 +1170,7 @@
       - DefUSSPWirecutter
       - DefUSSPScrewdriver
       - DefDefCellRechargerCircuitboard
+      - DefClothingEyesHudMedical
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1563,3 +1586,1902 @@
     SheepWoolCleanMaterial: 700
     ElastaneClothMaterial: 500
   result: USSPCoat
+#-------------------------------------------------------------------Шагатели----------------------
+#----------------------------------------------------------Умпорский--------------------------
+#----------------------------------------------------Детали-------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: Tag
+  id: UmporMechValiantLeg
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: UmporMechValiantLeg
+  name: Нога ШБМ "Храбрец"
+  description: Бронированная нога умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi
+    state: leg
+  - type: Tag
+    tags:
+    - UmporMechValiantLeg
+  - type: Stack
+    stackType: UmporMechValiantLeg
+    count: 1
+    
+- type: stack
+  id: UmporMechValiantLeg
+  name: Нога ШБМ "Храбрец"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: leg }
+  spawn: UmporMechValiantLeg
+  maxCount: 1
+#------------------------------------------------Рука---------------------------------
+- type: Tag
+  id: UmporMechValiantArm
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: UmporMechValiantArm
+  name: Левая рука ШБМ "Храбрец"
+  description: Бронированный манипулятор-рука умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi
+    state: arm
+  - type: Tag
+    tags:
+    - UmporMechValiantArm
+  - type: Stack
+    stackType: UmporMechValiantArm
+    count: 1
+    
+- type: stack
+  id: UmporMechValiantArm
+  name: Левая рука ШБМ "Храбрец"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: arm }
+  spawn: UmporMechValiantArm
+  maxCount: 1
+#----------------------------------------------------Рецепты------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: latheRecipe
+  id: RecipeUmporMechValiantLeg
+  materials:
+    Steel: 4500
+    PlumbumMaterial: 3000
+  result: UmporMechValiantLeg
+#------------------------------------------------Рука---------------------------------
+- type: latheRecipe
+  id: RecipeUmporMechValiantArm
+  materials:
+    Steel: 3000
+    PlumbumMaterial: 1500
+  result: UmporMechValiantArm
+#--------------------------------------------Винтовка---------------------------------
+- type: latheRecipe
+  id: RecipeUmporMechGunRifle
+  materials:
+    Steel: 700
+    PlumbumMaterial: 300
+    Plastic: 200
+    Wood: 1500
+    DefChipCraftMechWeapon: 1
+  result: UmporMechGunRifle
+#---------------------------------------------Пулемёт---------------------------------
+- type: latheRecipe
+  id: RecipeUmporMechGunAuto
+  materials:
+    Steel: 800
+    PlumbumMaterial: 1000
+    Wood: 1500
+    DefChipCraftMechWeapon: 1
+  result: UmporMechGunAuto
+#----------------------------------------------Обойма---------------------------------
+- type: latheRecipe
+  id: RecipeUmporMagazineMechRifle
+  materials:
+    Steel: 200
+    PlumbumMaterial: 300
+    Plastic: 200
+  result: UmporMagazineMechRifle
+#---------------------------------------------Магазин---------------------------------
+- type: latheRecipe
+  id: RecipeUmporMagazineMechAuto
+  materials:
+    Steel: 300
+    PlumbumMaterial: 1000
+  result: UmporMagazineMechAuto
+#----------------------------------------------------Заводской техфаб---------------------
+- type: entity
+  id: DefUmporFactoryFab
+  parent: BaseLathe
+  name: Умпорский заводской фабрикатор
+  suffix: Умпорский, Оборона
+  description: Мобильная промышленная машина, способная производить боеприпасы, оружие и детали для умпорских боевых машин.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: umpor
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SecurityTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - RecipeUmporMechValiantLeg
+      - RecipeUmporMechValiantArm
+      - RecipeUmporMechGunRifle
+      - RecipeUmporMechGunAuto
+      - RecipeUmporMagazineMechRifle
+      - RecipeUmporMagazineMechAuto
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Plastid
+        - DefChipCraftMechWeapon
+  - type: Anchorable
+    flags: Anchorable
+#----------------------------------------------------Конструкции--------------------------
+#---------------------------------------------Корпус----------------------------------
+- type: Tag
+  id: UmporMechValiantCorpus
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: UmporMechValiantCorpus
+  name: Корпус ШБМ "Храбрец"
+  description: Бронированная кабина умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi
+    state: corpus
+  - type: Tag
+    tags:
+    - UmporMechValiantCorpus
+  - type: Construction
+    graph: Valiant
+    node: start
+    defaultTarget: valiant
+  - type: Machine
+    board: UmporMechValiantCorpusCircuitboard
+  - type: Anchorable
+    
+- type: entity
+  id: UmporMechValiantCorpusCircuitboard
+  parent: BaseMachineCircuitboard
+  name: корпус ШБМ "Храбрец" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: UmporMechValiantCorpus
+      stackRequirements:
+        Steel: 60
+        Plumbum: 30
+        Cable: 30
+#---------------------------------------------Силовая установка-----------------------
+- type: Tag
+  id: UmporMechValiantGenerator
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: UmporMechValiantGenerator
+  name: Силовая установка ШБМ "Храбрец"
+  description: Система агрегатов, поставляющая электроснабжение и сигналы управления в разные части умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi
+    state: generator
+  - type: Tag
+    tags:
+    - UmporMechValiantGenerator
+  - type: Stack
+    stackType: UmporMechValiantGenerator
+    count: 1
+  - type: Machine
+    board: UmporMechValiantGeneratorCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: UmporMechValiantGenerator
+  name: Силовая установка ШБМ "Храбрец"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: generator }
+  spawn: UmporMechValiantGenerator
+  maxCount: 1
+  
+- type: entity
+  id: UmporMechValiantGeneratorCircuitboard
+  parent: BaseMachineCircuitboard
+  name: силовая установка ШБМ "Храбрец" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: UmporMechValiantGenerator
+      stackRequirements:
+        Steel: 30
+        Plumbum: 30
+        Cable: 60
+#---------------------------------------------Движок---------------------------------
+- type: Tag
+  id: UmporMechValiantEngine
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: UmporMechValiantEngine
+  name: Двигатель ШБМ "Храбрец"
+  description: Система агрегатов приводящая в движение конечности и системы умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi
+    state: engine
+  - type: Tag
+    tags:
+    - UmporMechValiantEngine
+  - type: Stack
+    stackType: UmporMechValiantEngine
+    count: 1
+  - type: Machine
+    board: UmporMechValiantEngineCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: UmporMechValiantEngine
+  name: Двигатель ШБМ "Храбрец"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: engine }
+  spawn: UmporMechValiantEngine
+  maxCount: 1
+  
+- type: entity
+  id: UmporMechValiantEngineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: двигатель ШБМ "Храбрец" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: UmporMechValiantEngine
+      stackRequirements:
+        Steel: 60
+        Cable: 30
+#---------------------------------------------Промежуточные состояния---------------------------------
+- type: entity
+  parent: UmporMechValiantCorpus
+  id: UmporMechValiantCpEn
+  name: Корпус ШБМ "Храбрец" c двигателем
+  description: Соединённые корпус и двигатель умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    state: cp_en
+  - type: Construction
+    graph: Valiant
+    node: cp_en
+    defaultTarget: valiant
+  - type: Stack
+    stackType: UmporMechValiantEngine
+    count: 1
+    
+- type: stack
+  id: UmporMechValiantCpEn
+  name: Корпус ШБМ "Храбрец" c двигателем
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: cp_en }
+  spawn: UmporMechValiantCpEn
+  maxCount: 1
+
+- type: entity
+  parent: UmporMechValiantCorpus
+  id: UmporMechValiantCpGe
+  name: Корпус ШБМ "Храбрец" c генератором
+  description: Соединённые корпус и генератор умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    state: cp_ge
+  - type: Construction
+    graph: Valiant
+    node: cp_ge
+    defaultTarget: valiant
+  - type: Stack
+    stackType: UmporMechValiantCpGe
+    count: 1
+    
+- type: stack
+  id: UmporMechValiantCpGe
+  name: Корпус ШБМ "Храбрец" c генератором
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: cp_ge }
+  spawn: UmporMechValiantCpGe
+  maxCount: 1
+
+- type: entity
+  parent: UmporMechValiantCorpus
+  id: UmporMechValiantCpGeEn
+  name: Корпус ШБМ "Храбрец" c полной начинкой
+  description: Соединённые корпус, генератор и двигатель умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    state: cp_ge_en
+  - type: Construction
+    graph: Valiant
+    node: cp_ge_en
+    defaultTarget: valiant
+  - type: Stack
+    stackType: UmporMechValiantCpGeEn
+    count: 1
+    
+- type: stack
+  id: UmporMechValiantCpGeEn
+  name: Корпус ШБМ "Храбрец" c полной начинкой
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: cp_ge_en }
+  spawn: UmporMechValiantCpGeEn
+  maxCount: 1
+
+- type: entity
+  parent: UmporMechValiantCorpus
+  id: UmporMechValiantCpGeEnAr
+  name: Верхня часть ШБМ "Храбрец"
+  description: Соединённые корпус с рукой, генератор и двигатель умпорской шагающей боевой машины "Храбрец".
+  suffix: Умпорский
+  components:
+  - type: Sprite
+    state: cp_ge_en_ar
+  - type: Construction
+    graph: Valiant
+    node: cp_ge_en_ar
+    defaultTarget: valiant
+  - type: Stack
+    stackType: UmporMechValiantCpGeEnAr
+    count: 1
+    
+- type: stack
+  id: UmporMechValiantCpGeEnAr
+  name: Верхня часть ШБМ "Храбрец"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Umpor/mecha_parts.rsi, state: cp_ge_en_ar }
+  spawn: UmporMechValiantCpGeEnAr
+  maxCount: 1
+#----------------------------------------------------Граф---------------------------------
+- type: constructionGraph
+  id: Valiant
+  start: start
+  graph:
+    - node: start
+      entity: UmporMechValiantCorpus
+      edges:
+        - to: cp_en
+          steps:
+            - material: UmporMechValiantEngine
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: cp_ge
+          steps:
+            - material: UmporMechValiantGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+              
+    - node: cp_en
+      entity: UmporMechValiantCpEn
+      edges:
+        - to: cp_ge_en
+          steps:
+            - material: UmporMechValiantGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantEngine
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+          steps:
+            - tool: Cutting
+              doAfter: 5
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge
+      entity: UmporMechValiantCpGe
+      edges:
+        - to: cp_ge_en
+          steps:
+            - material: UmporMechValiantEngine
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 15
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge_en
+      entity: UmporMechValiantCpGeEn
+      edges:
+        - to: cp_ge_en_ar
+          steps:
+            - material: UmporMechValiantArm
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 10
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantEngine
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 20
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 25
+            - tool: Welding
+              doAfter: 20
+              
+    - node: cp_ge_en_ar
+      entity: UmporMechValiantCpGeEnAr
+      edges:
+        - to: valiant
+          steps:
+            - material: UmporMechValiantLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: UmporMechValiantLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+        - to: cp_ge_en_ar
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantArm
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+          steps:
+            - tool: Cutting
+              doAfter: 10
+            - tool: Welding
+              doAfter: 5
+              
+    - node: valiant
+      entity: UmporMechValiant
+      edges:
+        - to: cp_ge_en_ar
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: UmporMechValiantLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 20
+            - tool: Welding
+              doAfter: 10
+#----------------------------------------------------------Миртан--------------------------
+#----------------------------------------------------Детали-------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: Tag
+  id: MirtMechNibbleLeg
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: MirtMechNibbleLeg
+  name: Нога Шагателя "Грызь"
+  description: Бронированная нога миртанийского шагателя "Грызь".
+  suffix: Миртан
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi
+    state: leg
+  - type: Tag
+    tags:
+    - MirtMechNibbleLeg
+  - type: Stack
+    stackType: MirtMechNibbleLeg
+    count: 1
+    
+- type: stack
+  id: MirtMechNibbleLeg
+  name: Нога Шагателя "Грызь"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi, state: leg }
+  spawn: MirtMechNibbleLeg
+  maxCount: 1
+#----------------------------------------------------Рецепты------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: latheRecipe
+  id: RecipeMirtMechNibbleLeg
+  materials:
+    Steel: 4500
+    PlumbumMaterial: 3000
+  result: MirtMechNibbleLeg
+#------------------------------------------------Рука---------------------------------
+- type: latheRecipe
+  id: RecipeMirtMechGunArm
+  materials:
+    Steel: 3000
+    PlumbumMaterial: 1500
+    DefChipCraftMechWeapon: 1
+  result: MirtMechGunArm
+#--------------------------------------------Гранатомёт---------------------------------
+- type: latheRecipe
+  id: RecipeMirtMechGunGran
+  materials:
+    Steel: 1300
+    PlumbumMaterial: 1000
+    DefChipCraftMechWeapon: 1
+  result: MirtMechGunGran
+#---------------------------------------------Пулемёт---------------------------------
+- type: latheRecipe
+  id: RecipeMirtMechGunAuto
+  materials:
+    Steel: 1500
+    PlumbumMaterial: 700
+    DefChipCraftMechWeapon: 1
+  result: MirtMechGunAuto
+#---------------------------------------------Магазин---------------------------------
+- type: latheRecipe
+  id: RecipeMirtMagazineLMGMech
+  materials:
+    Steel: 1100
+    PlumbumMaterial: 300
+  result: MirtMagazineLMGMech
+#----------------------------------------------------Заводской техфаб---------------------
+- type: entity
+  id: DefMirtFactoryFab
+  parent: BaseLathe
+  name: Миртанийский заводской фабрикатор
+  suffix: Миртан, Оборона
+  description: Мобильная промышленная машина, способная производить боеприпасы, оружие и детали для миртанских боевых машин.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: mirt
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SecurityTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - RecipeMirtMechNibbleLeg
+      - RecipeMirtMechGunArm
+      - RecipeMirtMechGunAuto
+      - RecipeMirtMechGunGran
+      - RecipeMirtMagazineLMGMech
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Plastid
+        - DefChipCraftMechWeapon
+  - type: Anchorable
+    flags: Anchorable
+#----------------------------------------------------Конструкции--------------------------
+#---------------------------------------------Корпус----------------------------------
+- type: Tag
+  id: MirtMechNibbleCorpus
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: MirtMechNibbleCorpus
+  name: Корпус Шагателя "Грызь"
+  description: Бронированная кабина миртанийского шагателя "Грызь".
+  suffix: Миртан
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi
+    state: corpus
+  - type: Tag
+    tags:
+    - MirtMechNibbleCorpus
+  - type: Construction
+    graph: Nibble
+    node: start
+    defaultTarget: nibble
+  - type: Machine
+    board: MirtMechNibbleCorpusCircuitboard
+  - type: Anchorable
+    
+- type: entity
+  id: MirtMechNibbleCorpusCircuitboard
+  parent: BaseMachineCircuitboard
+  name: корпус Шагателя "Грызь" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: MirtMechNibbleCorpus
+      stackRequirements:
+        Steel: 60
+        Plumbum: 30
+        Cable: 30
+#---------------------------------------------Силовая установка-----------------------
+- type: Tag
+  id: MirtMechNibbleGenerator
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: MirtMechNibbleGenerator
+  name: Силовая установка Шагателя "Грызь"
+  description: Система агрегатов, поставляющая электроснабжение и сигналы управления в разные части миртанийского шагателя "Грызь".
+  suffix: Миртан
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi
+    state: generator
+  - type: Tag
+    tags:
+    - MirtMechNibbleGenerator
+  - type: Stack
+    stackType: MirtMechNibbleGenerator
+    count: 1
+  - type: Machine
+    board: MirtMechNibbleGeneratorCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: MirtMechNibbleGenerator
+  name: Силовая установка Шагателя "Грызь"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi, state: generator }
+  spawn: MirtMechNibbleGenerator
+  maxCount: 1
+  
+- type: entity
+  id: MirtMechNibbleGeneratorCircuitboard
+  parent: BaseMachineCircuitboard
+  name: силовая установка Шагателя "Грызь" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: MirtMechNibbleGenerator
+      stackRequirements:
+        Steel: 30
+        Plumbum: 30
+        Cable: 60
+#---------------------------------------------Движок---------------------------------
+- type: Tag
+  id: MirtMechNibbleEngine
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: MirtMechNibbleEngine
+  name: Двигатель ШБМ "Грызь"
+  description: Система агрегатов приводящая в движение конечности и системы умпорской шагающей боевой машины "Грызь".
+  suffix: Миртан
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi
+    state: engine
+  - type: Tag
+    tags:
+    - MirtMechNibbleEngine
+  - type: Stack
+    stackType: MirtMechNibbleEngine
+    count: 1
+  - type: Machine
+    board: MirtMechNibbleEngineCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: MirtMechNibbleEngine
+  name: Двигатель Шагателя "Грызь"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi, state: engine }
+  spawn: MirtMechNibbleEngine
+  maxCount: 1
+  
+- type: entity
+  id: MirtMechNibbleEngineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: двигатель Шагателя "Грызь" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: MirtMechNibbleEngine
+      stackRequirements:
+        Steel: 60
+        Cable: 30
+#---------------------------------------------Промежуточные состояния---------------------------------
+- type: entity
+  parent: MirtMechNibbleCorpus
+  id: MirtMechNibbleCpEn
+  name: Корпус Шагателя "Грызь" c двигателем
+  description: Соединённые корпус и двигатель миртанийского шагателя "Грызь.
+  suffix: Миртан
+  components:
+  - type: Sprite
+    state: cp_en
+  - type: Construction
+    graph: Nibble
+    node: cp_en
+    defaultTarget: nibble
+  - type: Stack
+    stackType: MirtMechNibbleEngine
+    count: 1
+    
+- type: stack
+  id: MirtMechNibbleCpEn
+  name: Корпус Шагателя "Грызь" c двигателем
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi, state: cp_en }
+  spawn: MirtMechNibbleCpEn
+  maxCount: 1
+
+- type: entity
+  parent: MirtMechNibbleCorpus
+  id: MirtMechNibbleCpGe
+  name: Корпус Шагателя "Грызь" c генератором
+  description: Соединённые корпус и генератор миртанийского шагателя "Грызь.
+  suffix: Миртан
+  components:
+  - type: Sprite
+    state: cp_ge
+  - type: Construction
+    graph: Nibble
+    node: cp_ge
+    defaultTarget: nibble
+  - type: Stack
+    stackType: MirtMechNibbleCpGe
+    count: 1
+    
+- type: stack
+  id: MirtMechNibbleCpGe
+  name: Корпус Шагателя "Грызь" c генератором
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi, state: cp_ge }
+  spawn: MirtMechNibbleCpGe
+  maxCount: 1
+
+- type: entity
+  parent: MirtMechNibbleCorpus
+  id: MirtMechNibbleCpGeEn
+  name: Корпус Шагателя "Грызь" c полной начинкой
+  description: Соединённые корпус, генератор и двигатель миртанийского шагателя "Грызь.
+  suffix: Миртан
+  components:
+  - type: Sprite
+    state: cp_ge_en
+  - type: Construction
+    graph: Nibble
+    node: cp_ge_en
+    defaultTarget: nibble
+  - type: Stack
+    stackType: MirtMechNibbleCpGeEn
+    count: 1
+    
+- type: stack
+  id: MirtMechNibbleCpGeEn
+  name: Корпус Шагателя "Грызь" c полной начинкой
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Mirt/mecha_parts.rsi, state: cp_ge_en }
+  spawn: MirtMechNibbleCpGeEn
+  maxCount: 1
+#----------------------------------------------------Граф---------------------------------
+- type: constructionGraph
+  id: Nibble
+  start: start
+  graph:
+    - node: start
+      entity: MirtMechNibbleCorpus
+      edges:
+        - to: cp_en
+          steps:
+            - material: MirtMechNibbleEngine
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: cp_ge
+          steps:
+            - material: MirtMechNibbleGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+              
+    - node: cp_en
+      entity: MirtMechNibbleCpEn
+      edges:
+        - to: cp_ge_en
+          steps:
+            - material: MirtMechNibbleGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: MirtMechNibbleEngine
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+          steps:
+            - tool: Cutting
+              doAfter: 5
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge
+      entity: MirtMechNibbleCpGe
+      edges:
+        - to: cp_ge_en
+          steps:
+            - material: MirtMechNibbleEngine
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: MirtMechNibbleGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 15
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge_en
+      entity: MirtMechNibbleCpGeEn
+      edges:
+        - to: nibble
+          steps:
+            - material: MirtMechNibbleLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: MirtMechNibbleLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: MirtMechNibbleGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: MirtMechNibbleEngine
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 20
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 25
+            - tool: Welding
+              doAfter: 20
+
+    - node: nibble
+      entity: MirtMechNibble
+      edges:
+        - to: cp_ge_en
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: MirtMechNibbleLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: MirtMechNibbleLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 20
+            - tool: Welding
+              doAfter: 10
+#----------------------------------------------------------Конгломерат--------------------------
+#----------------------------------------------------Детали-------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: Tag
+  id: CDCMechScorpioLeg
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: CDCMechScorpioLeg
+  name: Нога УБР "Скорпион"
+  description: Бронированная нога конгломератского УБР "Скорпион".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi
+    state: leg
+  - type: Tag
+    tags:
+    - CDCMechScorpioLeg
+  - type: Stack
+    stackType: CDCMechScorpioLeg
+    count: 1
+    
+- type: stack
+  id: CDCMechScorpioLeg
+  name: Нога УБР "Скорпион"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: leg }
+  spawn: CDCMechScorpioLeg
+  maxCount: 1
+#------------------------------------------------Хвост---------------------------------
+- type: Tag
+  id: CDCMechScorpioTeil
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: CDCMechScorpioTeil
+  name: Хвост УБР "Скорпион"
+  description: Подвижный хвост с крепление для оружия конгломератского УБР "Скорпион".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi
+    state: teil
+  - type: Tag
+    tags:
+    - CDCMechScorpioTeil
+  - type: Stack
+    stackType: CDCMechScorpioTeil
+    count: 1
+    
+- type: stack
+  id: CDCMechScorpioTeil
+  name: Хвост УБР "Скорпион"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: teil }
+  spawn: CDCMechScorpioTeil
+  maxCount: 1
+#----------------------------------------------------Рецепты------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: latheRecipe
+  id: RecipeCDCMechScorpioLeg
+  materials:
+    Steel: 4500
+    PlumbumMaterial: 3000
+  result: CDCMechScorpioLeg
+#------------------------------------------------Хвост---------------------------------
+- type: latheRecipe
+  id: RecipeCDCMechScorpioTeil
+  materials:
+    Steel: 4500
+    PlumbumMaterial: 3000
+  result: CDCMechScorpioTeil
+#--------------------------------------------Орудие---------------------------------
+- type: latheRecipe
+  id: RecipeCDCMechGunRifle
+  materials:
+    Steel: 1200
+    Plasma: 200
+    Plastic: 200
+    DefChipCraftMechWeapon: 1
+  result: CDCMechGunRifle
+#---------------------------------------------Пулемёт---------------------------------
+- type: latheRecipe
+  id: RecipeCDCMechGunAuto
+  materials:
+    Steel: 1300
+    Plasma: 800
+    Plastic: 200
+    DefChipCraftMechWeapon: 1
+  result: CDCMechGunAuto
+#---------------------------------------------Магазин орудие---------------------------------
+- type: latheRecipe
+  id: RecipeCDCMagazineRifleStdMech
+  materials:
+    Steel: 500
+    Plasma: 100
+  result: CDCMagazineRifleStdMech
+#---------------------------------------------Магазин пулемёт---------------------------------
+- type: latheRecipe
+  id: RecipeCDCMagazineAutomatStdMech
+  materials:
+    Steel: 500
+    Plasma: 700
+  result: CDCMagazineAutomatStdMech
+#----------------------------------------------------Заводской техфаб---------------------
+- type: entity
+  id: DefCDCFactoryFab
+  parent: BaseLathe
+  name: Конгломератский заводской фабрикатор
+  suffix: Конгломерат, Оборона
+  description: Мобильная промышленная машина, способная производить боеприпасы, оружие и детали для конгломератских боевых машин.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: cdc
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SecurityTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - RecipeCDCMechScorpioLeg
+      - RecipeCDCMechScorpioTeil
+      - RecipeCDCMechGunRifle
+      - RecipeCDCMechGunAuto
+      - RecipeCDCMagazineRifleStdMech
+      - RecipeCDCMagazineAutomatStdMech
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Plastid
+        - DefChipCraftMechWeapon
+  - type: Anchorable
+    flags: Anchorable
+#----------------------------------------------------Конструкции--------------------------
+#---------------------------------------------Корпус----------------------------------
+- type: Tag
+  id: CDCMechScorpioCorpus
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: CDCMechScorpioCorpus
+  name: Корпус УБР "Скорпион"
+  description: Бронированная кабина конгломератского управляемого боевого робота "Скорпион".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi
+    state: corpus
+  - type: Tag
+    tags:
+    - CDCMechScorpioCorpus
+  - type: Construction
+    graph: Scorpio
+    node: start
+    defaultTarget: scorpio
+  - type: Machine
+    board: CDCMechScorpioCorpusCircuitboard
+  - type: Anchorable
+    
+- type: entity
+  id: CDCMechScorpioCorpusCircuitboard
+  parent: BaseMachineCircuitboard
+  name: корпус УБР "Скорпион" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: CDCMechScorpioCorpus
+      stackRequirements:
+        Steel: 60
+        Plumbum: 30
+        Cable: 30
+#---------------------------------------------Силовая установка-----------------------
+- type: Tag
+  id: CDCMechScorpioGenerator
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: CDCMechScorpioGenerator
+  name: Силовая установка УБР "Скорпион"
+  description: Система агрегатов, поставляющая электроснабжение и сигналы управления в разные части конгломератского управляемого боевого робота "Скорпион".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi
+    state: generator
+  - type: Tag
+    tags:
+    - CDCMechScorpioGenerator
+  - type: Stack
+    stackType: CDCMechScorpioGenerator
+    count: 1
+  - type: Machine
+    board: CDCMechScorpioGeneratorCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: CDCMechScorpioGenerator
+  name: Силовая установка УБР "Скорпион"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: generator }
+  spawn: CDCMechScorpioGenerator
+  maxCount: 1
+  
+- type: entity
+  id: CDCMechScorpioGeneratorCircuitboard
+  parent: BaseMachineCircuitboard
+  name: силовая установка УБР "Скорпион" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: CDCMechScorpioGenerator
+      stackRequirements:
+        Steel: 30
+        Plumbum: 30
+        Cable: 60
+#---------------------------------------------Промежуточные состояния-----------------------------
+- type: entity
+  parent: CDCMechScorpioCorpus
+  id: CDCMechScorpioCpGe
+  name: Корпус УБР "Скорпион" c генератором
+  description: Соединённые корпус и генератор умпорской шагающей боевой машины "Храбрец".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    state: cp_ge
+  - type: Construction
+    graph: Scorpio
+    node: cp_ge
+    defaultTarget: scorpio
+  - type: Stack
+    stackType: CDCMechScorpioCpGe
+    count: 1
+    
+- type: stack
+  id: CDCMechScorpioCpGe
+  name: Корпус УБР "Скорпион" c генератором
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: cp_ge }
+  spawn: CDCMechScorpioCpGe
+  maxCount: 1
+
+- type: entity
+  parent: CDCMechScorpioCorpus
+  id: CDCMechScorpioCpGeTl
+  name: Корпус УБР "Скорпион" c полной начинкой
+  description: Соединённые корпус, генератор и двигатель умпорской шагающей боевой машины "Храбрец".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    state: cp_ge_tl
+  - type: Construction
+    graph: Scorpio
+    node: cp_ge_tl
+    defaultTarget: scorpio
+  - type: Stack
+    stackType: CDCMechScorpioCpGeTl
+    count: 1
+    
+- type: stack
+  id: CDCMechScorpioCpGeTl
+  name: Корпус УБР "Скорпион" c полной начинкой
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/CDC/mecha_parts.rsi, state: cp_ge_tl }
+  spawn: CDCMechScorpioCpGeTl
+  maxCount: 1
+#----------------------------------------------------Граф---------------------------------
+- type: constructionGraph
+  id: Scorpio
+  start: start
+  graph:
+    - node: start
+      entity: CDCMechScorpioCorpus
+      edges:
+        - to: cp_ge
+          steps:
+            - material: CDCMechScorpioGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+
+    - node: cp_ge
+      entity: CDCMechScorpioCpGe
+      edges:
+        - to: cp_ge_tl
+          steps:
+            - material: CDCMechScorpioTeil
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 15
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge_tl
+      entity: CDCMechScorpioCpGeTl
+      edges:
+        - to: scorpio
+          steps:
+            - material: CDCMechScorpioLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: CDCMechScorpioLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: CDCMechScorpioLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: CDCMechScorpioLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: CDCMechScorpioLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: CDCMechScorpioLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+        - to: cp_ge
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioTeil
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+          steps:
+            - tool: Cutting
+              doAfter: 25
+            - tool: Welding
+              doAfter: 20
+              
+    - node: scorpio
+      entity: CDCMechScorpio
+      edges:
+        - to: cp_ge_tl
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: CDCMechScorpioLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 20
+            - tool: Welding
+              doAfter: 10
+#----------------------------------------------------------СССП--------------------------
+#----------------------------------------------------Детали-------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: Tag
+  id: USSPMechSKLeg
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: USSPMechSKLeg
+  name: Нога ШТ "СК-4"
+  description: Бронированная нога советского шагающего танка "СК-4".
+  suffix: СССП
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi
+    state: leg
+  - type: Tag
+    tags:
+    - USSPMechSKLeg
+  - type: Stack
+    stackType: USSPMechSKLeg
+    count: 1
+    
+- type: stack
+  id: USSPMechSKLeg
+  name: Нога ШТ "СК-4"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: leg }
+  spawn: USSPMechSKLeg
+  maxCount: 1
+#------------------------------------------------Держатель---------------------------------
+- type: Tag
+  id: USSPMechSKHolder
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: USSPMechSKHolder
+  name: Держатель ШТ "СК-4"
+  description: Держатель советского шагающего танка "СК-4".
+  suffix: СССП
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi
+    state: holder
+  - type: Tag
+    tags:
+    - USSPMechSKHolder
+  - type: Stack
+    stackType: USSPMechSKHolder
+    count: 1
+    
+- type: stack
+  id: USSPMechSKHolder
+  name: Держатель ШТ "СК-4"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: holder }
+  spawn: USSPMechSKHolder
+  maxCount: 1
+#------------------------------------------------Щит---------------------------------
+- type: Tag
+  id: USSPMechSKShield
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: USSPMechSKShield
+  name: Щит ШТ "СК-4"
+  description: Щит советского шагающего танка "СК-4".
+  suffix: СССП
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi
+    state: shield
+  - type: Tag
+    tags:
+    - USSPMechSKShield
+  - type: Stack
+    stackType: USSPMechSKShield
+    count: 1
+    
+- type: stack
+  id: USSPMechSKShield
+  name: Щит ШТ "СК-4"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: shield }
+  spawn: USSPMechSKShield
+  maxCount: 1
+#----------------------------------------------------Рецепты------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPMechSKLeg
+  materials:
+    Steel: 4000
+    PlumbumMaterial: 3000
+  result: USSPMechSKLeg
+#------------------------------------------------Держатель---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPMechSKHolder
+  materials:
+    Steel: 3000
+    PlumbumMaterial: 1000
+  result: USSPMechSKHolder
+#------------------------------------------------Щит---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPMechSKShield
+  materials:
+    Steel: 5000
+    PlumbumMaterial: 500
+  result: USSPMechSKShield
+#--------------------------------------------Притяжитель---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPMechGunAttraction
+  materials:
+    Steel: 10000
+    PlumbumMaterial: 700
+    Plasma: 800
+    DefChipCraftMechWeapon: 1
+  result: USSPMechGunAttraction
+#---------------------------------------------Излучатель---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPMechGunRadiator
+  materials:
+    Steel: 15000
+    PlumbumMaterial: 700
+    Plasma: 800
+    DefChipCraftMechWeapon: 1
+  result: USSPMechGunRadiator
+#---------------------------------------------Магазин притяжителя---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPBatterySingMech
+  materials:
+    PlumbumMaterial: 500
+    Plasma: 600
+  result: USSPBatterySingMech
+#---------------------------------------------Магазин излучателя---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPBatteryRadioMech
+  materials:
+    PlumbumMaterial: 500
+    Plasma: 600
+  result: USSPBatteryRadioMech
+#--------------------------------------------Гравицапа---------------------------------
+- type: latheRecipe
+  id: RecipeUSSPMechGunTetherGun
+  materials:
+    Steel: 8000
+    PlumbumMaterial: 300
+    Plasma: 200
+    DefChipCraftMechWeapon: 1
+  result: USSPMechGunTetherGun
+#----------------------------------------------------Заводской техфаб---------------------
+- type: entity
+  id: DefUSSPFactoryFab
+  parent: BaseLathe
+  name: Советский заводской фабрикатор
+  suffix: СССП, Оборона
+  description: Мобильная промышленная машина, способная производить боеприпасы, оружие и детали для советских боевых машин.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: ussp
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SecurityTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - RecipeUSSPMechSKLeg
+      - RecipeUSSPMechSKHolder
+      - RecipeUSSPMechSKShield
+      - RecipeUSSPMechGunAttraction
+      - RecipeUSSPMechGunRadiator
+      - RecipeUSSPBatterySingMech
+      - RecipeUSSPBatteryRadioMech
+      - RecipeUSSPMechGunTetherGun
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Plastid
+        - DefChipCraftMechWeapon
+  - type: Anchorable
+    flags: Anchorable
+#----------------------------------------------------Конструкции--------------------------
+#---------------------------------------------Корпус----------------------------------
+- type: Tag
+  id: USSPMechSKCorpus
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: USSPMechSKCorpus
+  name: Корпус ШТ "СК-4"
+  description: Бронированная кабина советского шагающего танка "Слава Комунизка" 4ой модели.
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi
+    state: corpus
+  - type: Tag
+    tags:
+    - USSPMechSKCorpus
+  - type: Construction
+    graph: SK
+    node: start
+    defaultTarget: sk
+  - type: Machine
+    board: USSPMechSKCorpusCircuitboard
+  - type: Anchorable
+    
+- type: entity
+  id: USSPMechSKCorpusCircuitboard
+  parent: BaseMachineCircuitboard
+  name: корпус ШТ "СК-4" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: USSPMechSKCorpus
+      stackRequirements:
+        Steel: 60
+        Plumbum: 30
+        Cable: 30
+#---------------------------------------------Промежуточные состояния-----------------------------
+- type: entity
+  parent: USSPMechSKCorpus
+  id: USSPMechSKCpHol
+  name: Корпус ШТ "СК-4" c держателями
+  description: Соединённые корпус и генератор умпорской шагающей боевой машины "Храбрец".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    state: cp_hol
+  - type: Construction
+    graph: SK
+    node: cp_hol
+    defaultTarget: sk
+  - type: Stack
+    stackType: USSPMechSKCpHol
+    count: 1
+    
+- type: stack
+  id: USSPMechSKCpHol
+  name: Корпус ШТ "СК-4" c держателями
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: cp_hol }
+  spawn: USSPMechSKCpHol
+  maxCount: 1
+
+- type: entity
+  parent: USSPMechSKCorpus
+  id: USSPMechSKCpHolSh
+  name: Корпус ШТ "СК-4" c держателями и щитом
+  description: Соединённые корпус, генератор и двигатель умпорской шагающей боевой машины "Храбрец".
+  suffix: Конгломерат
+  components:
+  - type: Sprite
+    state: cp_hol_sh
+  - type: Construction
+    graph: SK
+    node: cp_hol_sh
+    defaultTarget: sk
+  - type: Stack
+    stackType: USSPMechSKCpHolSh
+    count: 1
+    
+- type: stack
+  id: USSPMechSKCpHolSh
+  name: Корпус ШТ "СК-4" c держателями и щитом
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/USSP/mecha_parts.rsi, state: cp_hol_sh }
+  spawn: USSPMechSKCpHolSh
+  maxCount: 1
+#----------------------------------------------------Граф---------------------------------
+- type: constructionGraph
+  id: SK
+  start: start
+  graph:
+    - node: start
+      entity: USSPMechSKCorpus
+      edges:
+        - to: cp_hol
+          steps:
+            - material: USSPMechSKHolder
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+            - material: USSPMechSKHolder
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+            - material: USSPMechSKHolder
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+
+    - node: cp_hol
+      entity: USSPMechSKCpHol
+      edges:
+        - to: cp_hol_sh
+          steps:
+            - material: USSPMechSKShield
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 15
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: USSPMechSKHolder
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: USSPMechSKHolder
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: USSPMechSKHolder
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 30
+          steps:
+            - tool: Cutting
+              doAfter: 15
+            - tool: Welding
+              doAfter: 20
+              
+    - node: cp_hol_sh
+      entity: USSPMechSKCpHolSh
+      edges:
+        - to: sk
+          steps:
+            - material: USSPMechSKLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: USSPMechSKLeg
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+        - to: cp_hol
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: USSPMechSKShield
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+          steps:
+            - tool: Cutting
+              doAfter: 25
+            - tool: Welding
+              doAfter: 20
+              
+    - node: sk
+      entity: USSPMechSK
+      edges:
+        - to: cp_hol_sh
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: USSPMechSKLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: USSPMechSKLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 20
+            - tool: Welding
+              doAfter: 10

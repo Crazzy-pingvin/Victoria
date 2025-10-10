@@ -1,0 +1,25 @@
+{
+  "copyright" : "Create by Crazzy_Pingvin",
+  "license" : "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "valiant",
+      "directions": 4
+    },
+    {
+      "name": "valiant-empty",
+      "directions": 4
+    },
+    {
+      "name": "valiant-open"
+    },
+    {
+      "name": "valiant-broken"
+    }
+  ]
+}
