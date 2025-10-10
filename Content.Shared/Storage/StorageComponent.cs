@@ -184,19 +184,6 @@ namespace Content.Shared.Storage
     }
 
     [Serializable, NetSerializable]
-    public sealed class OpenNestedStorageEvent : EntityEventArgs
-    {
-        public readonly NetEntity InteractedItemUid;
-        public readonly NetEntity StorageUid;
-
-        public OpenNestedStorageEvent(NetEntity interactedItemUid, NetEntity storageUid)
-        {
-            InteractedItemUid = interactedItemUid;
-            StorageUid = storageUid;
-        }
-    }
-
-    [Serializable, NetSerializable]
     public sealed class StorageInteractWithItemEvent : EntityEventArgs
     {
         public readonly NetEntity InteractedItemUid;

@@ -239,7 +239,7 @@ public sealed class BarricadeSystem : EntitySystem
         var coordinates = GetCoordinates(args.Coordinates);
         if (!_mapManager.TryFindGridAt(_transform.ToMapCoordinates(coordinates), out var gridId, out var gridComp) ||
             !_interaction.InRangeUnobstructed(full, coordinates, popup: false) ||
-            !coordinates.TryGetTileRef(out var turf, EntityManager) ||
+            !_turf.TryGetTileRef(coordinates, out var turf) ||
             !CanBuild(full, (gridId, gridComp), args.User, turf.Value, args.Direction))
         {
             return;
@@ -325,7 +325,7 @@ public sealed class BarricadeSystem : EntitySystem
     private bool Build(Entity<FullSandbagComponent> full, EntityUid user, EntityCoordinates coordinates, Direction direction)
     {
         if (!_mapManager.TryFindGridAt(_transform.ToMapCoordinates(coordinates), out var gridId, out var gridComp) ||
-            !coordinates.TryGetTileRef(out var tile) ||
+            !_turf.TryGetTileRef(coordinates,out var tile) ||
             !CanBuild(full, (gridId, gridComp), user, tile.Value, direction))
         {
             return false;
@@ -382,8 +382,8 @@ public sealed class BarricadeSystem : EntitySystem
 
     private bool TileSolidAndNotBlocked(TileRef tile)
     {
-        return !tile.IsSpace() &&
-               tile.GetContentTileDefinition().Sturdy &&
+        return !_turf.IsSpace(tile) &&
+               _turf.GetContentTileDefinition(tile).Sturdy &&
                !_turf.IsTileBlocked(tile, Impassable);
     }
 

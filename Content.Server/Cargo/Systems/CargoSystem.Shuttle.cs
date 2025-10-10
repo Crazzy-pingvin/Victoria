@@ -268,3 +268,4 @@ public sealed partial class CargoSystem
 /// </summary>
 [ByRefEvent]
 public readonly record struct EntitySoldEvent(HashSet<EntityUid> Sold, EntityUid Station);
+#endregion

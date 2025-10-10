@@ -150,7 +150,7 @@ public abstract class SharedChatSystem : EntitySystem
         string channelKey = input[1..3];
         output = SanitizeMessageCapital(input[3..].TrimStart());
 
-        if (channelKey == DefaultChannelKey)
+        if (channelKey.StartsWith(DefaultChannelKey))
         {
             var ev = new GetDefaultRadioChannelEvent();
             RaiseLocalEvent(source, ev);

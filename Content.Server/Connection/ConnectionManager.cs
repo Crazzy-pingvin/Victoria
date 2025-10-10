@@ -5,7 +5,6 @@ using System.Runtime.InteropServices;
 using Content.Server.Administration.Managers;
 using Content.Corvax.Interfaces.Server;
 using Content.Corvax.Interfaces.Shared;
-using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection.IPIntel;
 using Content.Server.Database;
@@ -70,8 +69,6 @@ namespace Content.Server.Connection
         [Dependency] private readonly IEntityManager _entityManager = default!;
         private ISharedSponsorsManager? _sponsorsMgr; // Corvax-Sponsors
         private IServerVPNGuardManager? _vpnGuardMgr; // Corvax-VPNGuard
-        [Dependency] private readonly IHttpClientHolder _http = default!;
-        [Dependency] private readonly IAdminManager _adminManager = default!;
 
         private GameTicker? _ticker;
 

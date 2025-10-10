@@ -529,15 +529,15 @@ public sealed class ArrivalsSystem : EntitySystem
         if (_cfgManager.GetCVar(CCVars.ArrivalsPlanet))
         {
             var template = _random.Pick(_arrivalsBiomeOptions);
-            _biomes.EnsurePlanet(map.Value, _protoManager.Index(template));
+            _biomes.EnsurePlanet(mapUid, _protoManager.Index(template));
             var restricted = new RestrictedRangeComponent
             {
                 Range = 32f
             };
-            AddComp(map.Value, restricted);
+            AddComp(mapUid, restricted);
         }
 
-        _mapSystem.InitializeMap(map.Value.Comp.MapId);
+        _mapSystem.InitializeMap(mapId);
 
         // Handle roundstart stations.
         var query = AllEntityQuery<StationArrivalsComponent>();

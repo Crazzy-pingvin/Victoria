@@ -1,11 +1,11 @@
-using Content.Shared.Roles;
+using Robust.Shared.GameStates;
 
-namespace Content.Server.Roles;
+namespace Content.Shared.Roles.Components;
 
 /// <summary>
 ///     Added to mind role entities to tag that they are a Revolutionary.
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class PetrRoleComponent : BaseMindRoleComponent
 {
 

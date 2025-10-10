@@ -114,9 +114,6 @@ public abstract class SharedImplanterSystem : EntitySystem
         Dirty(uid, component);
     }
 
-        var implantPrototype = Prototype(implant);
-        return implanted.ImplantContainer.ContainedEntities.Any(entity => Prototype(entity) == implantPrototype);
-    }
     //Instantly implant something and add all necessary components and containers.
     //Set to draw mode if not implant only
     public void Implant(EntityUid user, EntityUid target, EntityUid implanter, ImplanterComponent component)
