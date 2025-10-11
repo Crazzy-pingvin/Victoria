@@ -174,9 +174,6 @@
       "name": "pda-syndi"
     },
     {
-      "name": "pda-syndi-agent"
-    },
-    {
       "name": "pda-centcom",
       "delays": [
         [
@@ -222,18 +219,6 @@
     },
     {
       "name": "pda-cluwne"
-    },
-    {
-      "name": "pda-seniorengineer"
-    },
-    {
-      "name": "pda-seniorresearcher"
-    },
-    {
-      "name": "pda-seniorphysician"
-    },
-    {
-      "name": "pda-seniorofficer"
     },
 	{
       "name": "pda-wizard",

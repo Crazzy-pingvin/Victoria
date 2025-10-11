@@ -51,8 +51,6 @@
   - ClothingUniformJumpskirtChiefEngineerTurtle
   - ClothingUniformJumpsuitEngineering
   - ClothingUniformJumpskirtEngineering
-  - ClothingUniformJumpsuitSeniorEngineer
-  - ClothingUniformJumpskirtSeniorEngineer
 
 - type: latheRecipePack
   id: ClothingMedical
@@ -64,11 +62,8 @@
   - ClothingUniformJumpskirtCMO
   - ClothingUniformJumpsuitCMOTurtle
   - ClothingUniformJumpskirtCMOTurtle
-  - ClothingHeadHatBeretSeniorPhysician
   - ClothingUniformJumpsuitMedicalDoctor
   - ClothingUniformJumpskirtMedicalDoctor
-  - ClothingUniformJumpsuitSeniorPhysician
-  - ClothingUniformJumpskirtSeniorPhysician
   - ClothingUniformJumpsuitParamedic
   - ClothingUniformJumpskirtParamedic
   - ClothingHeadHatParamedicsoft
@@ -81,8 +76,6 @@
   - ClothingUniformJumpskirtResearchDirector
   - ClothingUniformJumpsuitScientist
   - ClothingUniformJumpskirtScientist
-  - ClothingUniformJumpsuitSeniorResearcher
-  - ClothingUniformJumpskirtSeniorResearcher
 
 - type: latheRecipePack
   id: ClothingSecurity
@@ -101,8 +94,6 @@
   - ClothingUniformJumpsuitHoSGrey
   - ClothingUniformJumpsuitHoSParadeMale
   - ClothingUniformJumpskirtHoSParadeMale
-  - ClothingUniformJumpsuitSeniorOfficer
-  - ClothingUniformJumpskirtSeniorOfficer
   - ClothingUniformJumpsuitPrisoner
   - ClothingUniformJumpskirtPrisoner
   - ClothingHeadHatBeretSecurity

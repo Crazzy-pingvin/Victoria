@@ -689,6 +689,16 @@
   result: MicrowaveMachineCircuitboard
 
 - type: latheRecipe
+  parent: BaseRecipeFiberglass_6
+  id: SmartFridgeCircuitboard
+  result: SmartFridgeCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_6
+  id: SheetifierMachineCircuitboard
+  result: SheetifierMachineCircuitboard
+
+- type: latheRecipe
   parent: BaseRecipeFiberglass_2
   id: ElectricGrillMachineCircuitboard
   result: ElectricGrillMachineCircuitboard

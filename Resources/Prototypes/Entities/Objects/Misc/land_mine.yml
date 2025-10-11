@@ -5,7 +5,8 @@
   - type: Clickable
   - type: InteractionOutline
   - type: Anchorable
-    flags: Unanchorable
+    flags:
+    - Unanchorable
   - type: ItemToggle
     soundActivate:
       path: /Audio/Weapons/click.ogg
@@ -25,7 +26,8 @@
         hard: false
         layer:
           - LowImpassable
-  - type: Icon
+  - type: Sprite
+    drawdepth: Items
     sprite: Objects/Misc/landmine.rsi
     layers:
     - state: landmine

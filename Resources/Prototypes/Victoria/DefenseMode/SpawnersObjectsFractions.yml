@@ -16,7 +16,7 @@
     cdc: CDCBannerStd
     nt: MirtBannerStd
     ussp: CDCBannerStd
-#----------------------------------------Сборщик чипов--------------------------------    
+#----------------------------------------Сборщик чипов--------------------------------
 - type: entity
   name: Спавнер сборщика поставок
   id: SpawnProviderDefSuppliesMap1
@@ -142,7 +142,7 @@
   components:
   - type: Sprite
     sprite: Structures/Machines/telecomms.rsi
-    state: icon
+    state: telecom-nopower
   - type: StateChoiceSpawner
     umpor: DefTelecomServerFilledUmpor
     mirt: DefTelecomServerFilledMirt
