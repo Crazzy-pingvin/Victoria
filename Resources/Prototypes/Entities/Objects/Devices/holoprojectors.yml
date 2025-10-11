@@ -112,6 +112,8 @@
   name: integrated holofan
   description: Stops idiots from causing more crew harm during atmospheric emergencies. Installed directly into an engineering cyborg, it recharges over time.
   components:
+  - type: HolosignProjector
+    chargeUse: 240
   - type: ItemSlots
     slots:
       cell_slot:

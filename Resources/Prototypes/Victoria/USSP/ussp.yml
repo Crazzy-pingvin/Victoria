@@ -153,11 +153,11 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.9
-        Cold: 0.65  
+        Cold: 0.65
 #---------------------------------------------------------Зимняя шапка---------------------------------------------
 - type: entity
   parent: ClothingHeadHatHoodWinterDefault
@@ -319,12 +319,12 @@
     sprite: Victoria/USSP/Armor/ussp_armor_light.rsi
   - type: Clothing
     sprite: Victoria/USSP/Armor/ussp_armor_light.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.8
         Slash: 0.8
-        Piercing: 0.75 
+        Piercing: 0.75
         Heat: 0.8
         Radiation: 0.85
   - type: ExplosionResistance
@@ -382,7 +382,7 @@
     damageCoefficient: 0.5
 #---------------------------------------------------------Шлем боевого скафандра---------------------------------------------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: USSPHelmetHardsuit
   name: Советский шлем скафандра
   suffix: СССП
@@ -499,9 +499,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: Gauze 
+      - id: Gauze
       - id: USSPBaton
-#-----------------------офицера---------------------------------------      
+#-----------------------офицера---------------------------------------
 - type: entity
   id: USSPBeltOffiFilled
   parent: USSPBeltOffi
@@ -515,7 +515,7 @@
       - id: USSPPaperForm
       - id: USSPPaperForm
       - id: USSPPaperForm
-#-----------------------инженера---------------------------------------     
+#-----------------------инженера---------------------------------------
 - type: entity
   id: USSPBeltEngeFilled
   parent: USSPBeltEngeMed
@@ -529,8 +529,8 @@
       - id: USSPScrewdriver
       - id: USSPWirecutter
       - id: USSPWelder
-      - id: Multitool 
-#-----------------------снабженца---------------------------------------     
+      - id: Multitool
+#-----------------------снабженца---------------------------------------
 - type: entity
   id: USSPBeltCargoFilled
   parent: USSPBeltEngeMed
@@ -544,7 +544,7 @@
       - id: USSPScythe
       - id: USSPHoe
       - id: USSPScrewdriver
-#-----------------------медика---------------------------------------     
+#-----------------------медика---------------------------------------
 - type: entity
   id: USSPBeltMedFilled
   parent: USSPBeltEngeMed
@@ -690,7 +690,7 @@
   id: USSPHealthAnalyzerUnpowered
   parent: UmporHealthAnalyzerUnpowered
   name: Советкий анализатор здоровья
-  description: ПАЗ-23. Доступный инструмент для каждого полевого медика 
+  description: ПАЗ-23. Доступный инструмент для каждого полевого медика
   components:
   - type: Sprite
     sprite: Victoria/USSP/Equipment/ussp_healthanalyzer.rsi
@@ -726,17 +726,17 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
-      От: 
-      
+
+      От:
+
       Кому: 28-ая дивизия
-      
+
       Полное содержание документа со всей необходимой инфорамацией и описанием
-      
+
       Срочность: (Крайня, Сильная, Средняя, Малая, Незначительная)
-      
+
       =============================================
-      
+
              [italic]Место для печатей[/italic]
 #--------------------------------------------------------------------------Знамёна------------------------------------
 #---------------------------------------------------------Герб---------------------------------------------
@@ -749,7 +749,7 @@
   components:
   - type: Sprite
     sprite: Victoria/USSP/ussp_banner.rsi
-    state: banner_ussp_gerb 
+    state: banner_ussp_gerb
 #---------------------------------------------------------Флаг---------------------------------------------
 - type: entity
   id: USSPBannerFlag
@@ -760,7 +760,7 @@
   components:
   - type: Sprite
     sprite: Victoria/USSP/ussp_banner.rsi
-    state: banner_ussp_flag 
+    state: banner_ussp_flag
 #--------------------------------------------------------------------------Оружие------------------------------------
 #---------------------------------------------------------Рукопашное---------------------------------------------
 #---------------------------------------------Дубинка------------------------------------
@@ -932,7 +932,7 @@
   - type: RandomChangeTime
     time: 0.4
     prob: 1
-    entity: USSPSing      
+    entity: USSPSing
 #----------------------------------Чёрная дыра----------------------------
 - type: entity
   id: USSPSing
@@ -973,7 +973,7 @@
   - type: RadiationSource
     slope: 1 # its emit really far away
     intensity: 3
-#----------------------------------Радиолуч----------------------------    
+#----------------------------------Радиолуч----------------------------
 - type: hitscan
   id: USSPRadioLaser
   damage:
@@ -987,7 +987,7 @@
     state: xray
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_xray   
+    state: impact_xray
 #---------------------------------------------Патроны------------------------------------
 #----------------------------------Лёгкий----------------------------
 - type: Tag
@@ -1857,17 +1857,17 @@
   - type: Construction
     graph: USSPWeapon
     node: start
-    
+
 - type: stack
   id: USSPWeaponPartWeb
   name: оружейный блок
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web }
   spawn: USSPWeaponPartWeb
   maxCount: 1
-#--------    
+#--------
 - type: entity
   name: слаботочный блок
-  description: Оружейная деталь, способная преобразовывать энергию маломощных батарей для питания оружейного блока. 
+  description: Оружейная деталь, способная преобразовывать энергию маломощных батарей для питания оружейного блока.
   suffix: СССП
   id: USSPWeaponPartSlb
   parent: BaseItem
@@ -1881,17 +1881,17 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartSlb
-    
+
 - type: stack
   id: USSPWeaponPartSlb
   name: слаботочный блок
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: slb }
   spawn: USSPWeaponPartSlb
   maxCount: 1
-#--------     
+#--------
 - type: entity
   name: силовой блок
-  description: Оружейная деталь, способная преобразовывать энергию мощных батарей для питания оружейного блока. 
+  description: Оружейная деталь, способная преобразовывать энергию мощных батарей для питания оружейного блока.
   suffix: СССП
   id: USSPWeaponPartSib
   parent: BaseItem
@@ -1905,17 +1905,17 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartSib
-    
+
 - type: stack
   id: USSPWeaponPartSib
   name: силовой блок
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: sib }
   spawn: USSPWeaponPartSib
   maxCount: 1
-#--------    
+#--------
 - type: entity
   name: рукоять
-  description: Оружейная деталь, без которой держать оружие будет просто неудобно. 
+  description: Оружейная деталь, без которой держать оружие будет просто неудобно.
   suffix: СССП
   id: USSPWeaponPartRuk
   parent: BaseItem
@@ -1929,17 +1929,17 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartRuk
-    
+
 - type: stack
   id: USSPWeaponPartRuk
   name: рукоять
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: ruk }
   spawn: USSPWeaponPartRuk
   maxCount: 1
-#--------       
+#--------
 - type: entity
   name: цевьё
-  description: Оружейная деталь, без которой держать оружие будет просто неудобно. 
+  description: Оружейная деталь, без которой держать оружие будет просто неудобно.
   suffix: СССП
   id: USSPWeaponPartCev
   parent: BaseItem
@@ -1953,14 +1953,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartCev
-    
+
 - type: stack
   id: USSPWeaponPartCev
   name: цевьё
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: cev }
   spawn: USSPWeaponPartCev
   maxCount: 1
-#--------    
+#--------
 - type: entity
   name: стабилизатор
   description: Оружейная деталь, способная выравнивать уровни режимов работы оружейного блока, в мощных скоростельных или малых конструкциях.
@@ -1977,14 +1977,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartStb
-    
+
 - type: stack
   id: USSPWeaponPartStb
   name: стабилизатор
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: stb }
   spawn: USSPWeaponPartStb
   maxCount: 1
-#--------      
+#--------
 - type: entity
   name: ускоритель
   description: Оружейная деталь, представляющая собой энергозатратный блок, позволяющий увеличить темп физических взаимодействий в оружейном блоке, что повышает темп стрельбы.
@@ -2001,14 +2001,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartUsk
-    
+
 - type: stack
   id: USSPWeaponPartUsk
   name: ускоритель
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: usk }
   spawn: USSPWeaponPartUsk
   maxCount: 1
-#--------       
+#--------
 - type: entity
   name: компенсатор
   description: Оружейная деталь, перераспределяющая энергию для достижения повышения кучности боя у оружия.
@@ -2025,14 +2025,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartKmp
-    
+
 - type: stack
   id: USSPWeaponPartKmp
   name: стабилизатор
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: kmp }
   spawn: USSPWeaponPartKmp
   maxCount: 1
-#--------  
+#--------
 - type: entity
   name: приклад
   description: Оружейная деталь, повышающая удобство использования оружия, посредстов создания дополнительной точки опоры и амортизации.
@@ -2049,14 +2049,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartPrk
-    
+
 - type: stack
   id: USSPWeaponPartPrk
   name: приклад
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: prk }
   spawn: USSPWeaponPartPrk
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: охлаждающий контур
   description: Оружейная деталь, позволяющая распределить диссипативную энергию в другие системы для ускорения темпа стрельбы и охлаждения ствола.
@@ -2073,14 +2073,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartHld
-    
+
 - type: stack
   id: USSPWeaponPartHld
   name: охлаждающий контур
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: hld }
   spawn: USSPWeaponPartHld
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: защитный кожух
   description: Оружейная деталь, предотвращающая утечки радиации из некоторых деталей.
@@ -2097,7 +2097,7 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartZkg
-    
+
 - type: stack
   id: USSPWeaponPartZkg
   name: защитный кожух
@@ -2122,14 +2122,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSlb
-    
+
 - type: stack
   id: USSPWeaponPartWebSlb
   name: оружейный слаботочный блок
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_slb }
   spawn: USSPWeaponPartWebSlb
   maxCount: 1
-#--------      
+#--------
 - type: entity
   name: недоделаный пистолет
   description: Практически готовое оружие.
@@ -2146,14 +2146,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSlbRuk
-    
+
 - type: stack
   id: USSPWeaponPartWebSlbRuk
   name: недоделаный пистолет
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_slb_ruk }
   spawn: USSPWeaponPartWebSlbRuk
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: оружейный слаботочный блок с цевьём
   description: Система из которой можно получить пистолет-пулемёт или карабин. Фонит радиацией. Скорей нужно его дособрать.
@@ -2173,14 +2173,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSlbRukCev
-    
+
 - type: stack
   id: USSPWeaponPartWebSlbRukCev
   name: оружейный слаботочный блок с цевьём
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_slb_ruk_cev }
   spawn: USSPWeaponPartWebSlbRukCev
   maxCount: 1
-#--------  
+#--------
 - type: entity
   name: недоделаный карабин
   description: Практически готовое оружие. Фонит радиацией. Скорей нужно его дособрать.
@@ -2200,7 +2200,7 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSlbRukCevKmp
-    
+
 - type: stack
   id: USSPWeaponPartWebSlbRukCevKmp
   name: недоделаный карабин
@@ -2224,14 +2224,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSib
-    
+
 - type: stack
   id: USSPWeaponPartWebSib
   name: оружейный силовой блок
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib }
   spawn: USSPWeaponPartWebSib
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: оружейный силовой блок с рукоятью
   description: Система из которой можно получить винтовку, автомат, пулемёт или дробовик.
@@ -2248,14 +2248,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRuk
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRuk
   name: оружейный силовой блок с рукоятью
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk }
   spawn: USSPWeaponPartWebSibRuk
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: оружейный силовой блок с эргономикой
   description: Система из которой можно получить винтовку или автомат.
@@ -2272,14 +2272,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukCev
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukCev
   name: оружейный силовой блок с эргономикой
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_cev }
   spawn: USSPWeaponPartWebSibRukCev
   maxCount: 1
-#--------    
+#--------
 - type: entity
   name: недоделаная винтовка
   description: Практически готовое оружие. Фонит радиацией. Скорей нужно его дособрать.
@@ -2299,14 +2299,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukCevKmp
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukCevKmp
   name: недоделаная винтовка
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_cev_kmp }
   spawn: USSPWeaponPartWebSibRukCevKmp
   maxCount: 1
-#--------    
+#--------
 - type: entity
   name: оружейный силовой блок с эргономикой и ускорителем
   description: Система из которой можно получить автомат. Фонит радиацией. Скорей нужно его дособрать.
@@ -2326,14 +2326,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukCevUsk
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukCevUsk
   name: оружейный силовой блок с эргономикой и ускорителем
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_cev_usk }
   spawn: USSPWeaponPartWebSibRukCevUsk
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: недоделаный автомат
   description: Практически готовое оружие. Фонит радиацией. Скорей нужно его дособрать.
@@ -2353,14 +2353,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukCevUskStb
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukCevUskStb
   name: недоделаный автомат
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_cev_usk_stb }
   spawn: USSPWeaponPartWebSibRukCevUskStb
   maxCount: 1
-#--------    
+#--------
 - type: entity
   name: оружейный силовой блок с рукоятью и охлаждающим контуром
   description: Система из которой можно получить пулемёт или дробовик. Фонит радиацией. Скорей нужно его дособрать.
@@ -2380,14 +2380,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukHld
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukHld
   name: оружейный силовой блок с рукоятью и охлаждающим контуром
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_hld }
   spawn: USSPWeaponPartWebSibRukHld
   maxCount: 1
-#--------   
+#--------
 - type: entity
   name: оружейный силовой блок с рукоятью, охлаждающим контуром и компенсатором
   description: Система из которой можно получить пулемёт. Фонит радиацией. Скорей нужно его дособрать.
@@ -2407,14 +2407,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukHldKmp
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukHldKmp
   name: оружейный силовой блок с рукоятью, охлаждающим контуром и компенсатором
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_hld_kmp }
   spawn: USSPWeaponPartWebSibRukHldKmp
   maxCount: 1
-#--------  
+#--------
 - type: entity
   name: недоделаный пулемёт
   description: Практически готовое оружие. Фонит радиацией. Скорей нужно его дособрать.
@@ -2434,14 +2434,14 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukHldKmpStb
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukHldKmpStb
   name: недоделаный пулемёт
   icon: { sprite: /Textures/Victoria/USSP/Weapon/ussp_weapon_parts.rsi, state: web_sib_ruk_hld_kmp_stb }
   spawn: USSPWeaponPartWebSibRukHldKmpStb
   maxCount: 1
-#--------  
+#--------
 - type: entity
   name: недоделаный дробовик
   description: Практически готовое оружие. Фонит радиацией. Скорей нужно его дособрать.
@@ -2461,7 +2461,7 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPWeaponPartWebSibRukHldRuk
-    
+
 - type: stack
   id: USSPWeaponPartWebSibRukHldRuk
   name: недоделаный дробовик
@@ -2487,8 +2487,8 @@
             - material: USSPWeaponPartSib
               amount: 1
             - tool: Screwing
-              doAfter: 1              
-            
+              doAfter: 1
+
     - node: USSPWeaponPartWebSlb
       entity: USSPWeaponPartWebSlb
       edges:
@@ -2541,7 +2541,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1 
+              doAfter: 1
 
     - node: USSPPistol
       entity: USSPPistol
@@ -2559,8 +2559,8 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1    
-              
+              doAfter: 1
+
     - node: USSPWeaponPartWebSlbRukCev
       entity: USSPWeaponPartWebSlbRukCev
       edges:
@@ -2575,7 +2575,7 @@
             - material: USSPWeaponPartKmp
               amount: 1
             - tool: Screwing
-              doAfter: 1      
+              doAfter: 1
         - to: USSPWeaponPartWebSlbRuk
           completed:
             - !type:AdminLog
@@ -2589,8 +2589,8 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1 
-              
+              doAfter: 1
+
     - node: USSPSMG
       entity: USSPSMG
       edges:
@@ -2607,8 +2607,8 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1 
-              
+              doAfter: 1
+
     - node: USSPWeaponPartWebSlbRukCevKmp
       entity: USSPWeaponPartWebSlbRukCevKmp
       edges:
@@ -2617,7 +2617,7 @@
             - material: USSPWeaponPartPrk
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSlbRukCev
           completed:
             - !type:AdminLog
@@ -2631,8 +2631,8 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1 
-              
+              doAfter: 1
+
     - node: USSPCarabine
       entity: USSPCarabine
       edges:
@@ -2641,7 +2641,7 @@
             - material: OpticalSight
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSlbRukCevKmp
           completed:
             - !type:AdminLog
@@ -2659,7 +2659,7 @@
 
     - node: USSPCarabineSnipe
       entity: USSPCarabineSnipe
-      edges:   
+      edges:
         - to: USSPCarabine
           completed:
             - !type:AdminLog
@@ -2673,7 +2673,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1  
+              doAfter: 1
 
     - node: USSPWeaponPartWebSib
       entity: USSPWeaponPartWebSib
@@ -2683,7 +2683,7 @@
             - material: USSPWeaponPartRuk
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: start
           completed:
             - !type:AdminLog
@@ -2713,7 +2713,7 @@
             - material: USSPWeaponPartHld
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSib
           completed:
             - !type:AdminLog
@@ -2727,7 +2727,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1   
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukCev
       entity: USSPWeaponPartWebSibRukCev
@@ -2743,7 +2743,7 @@
             - material: USSPWeaponPartUsk
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSibRuk
           completed:
             - !type:AdminLog
@@ -2757,7 +2757,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1    
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukCevKmp
       entity: USSPWeaponPartWebSibRukCevKmp
@@ -2767,7 +2767,7 @@
             - material: USSPWeaponPartPrk
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukCev
           completed:
             - !type:AdminLog
@@ -2781,7 +2781,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1     
+              doAfter: 1
 
     - node: USSPRifle
       entity: USSPRifle
@@ -2791,7 +2791,7 @@
             - material: OpticalSight
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukCevKmp
           completed:
             - !type:AdminLog
@@ -2805,11 +2805,11 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1   
+              doAfter: 1
 
     - node: USSPRifleSnipe
       entity: USSPRifleSnipe
-      edges:   
+      edges:
         - to: USSPWeaponPartWebSibRukCevKmp
           completed:
             - !type:AdminLog
@@ -2823,7 +2823,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1  
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukCevUsk
       entity: USSPWeaponPartWebSibRukCevUsk
@@ -2833,7 +2833,7 @@
             - material: USSPWeaponPartStb
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukCev
           completed:
             - !type:AdminLog
@@ -2847,8 +2847,8 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1  
-    
+              doAfter: 1
+
     - node: USSPWeaponPartWebSibRukCevUskStb
       entity: USSPWeaponPartWebSibRukCevUskStb
       edges:
@@ -2857,7 +2857,7 @@
             - material: USSPWeaponPartPrk
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukCevUsk
           completed:
             - !type:AdminLog
@@ -2872,10 +2872,10 @@
           steps:
             - tool: Cutting
               doAfter: 1
-    
+
     - node: USSPAuto
       entity: USSPAuto
-      edges:   
+      edges:
         - to: USSPWeaponPartWebSibRukCevUskStb
           completed:
             - !type:AdminLog
@@ -2889,7 +2889,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1 
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukHld
       entity: USSPWeaponPartWebSibRukHld
@@ -2905,7 +2905,7 @@
             - material: USSPWeaponPartRuk
               amount: 1
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
         - to: USSPWeaponPartWebSibRuk
           completed:
             - !type:AdminLog
@@ -2919,7 +2919,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1   
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukHldKmp
       entity: USSPWeaponPartWebSibRukHldKmp
@@ -2929,7 +2929,7 @@
             - material: USSPWeaponPartStb
               amount: 1
             - tool: Screwing
-              doAfter: 1   
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukHld
           completed:
             - !type:AdminLog
@@ -2943,7 +2943,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1    
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukHldKmpStb
       entity: USSPWeaponPartWebSibRukHldKmpStb
@@ -2953,7 +2953,7 @@
             - material: USSPWeaponPartZkg
               amount: 1
             - tool: Screwing
-              doAfter: 1   
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukHldKmp
           completed:
             - !type:AdminLog
@@ -2967,11 +2967,11 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1  
+              doAfter: 1
 
     - node: USSPLMG
       entity: USSPLMG
-      edges:   
+      edges:
         - to: USSPWeaponPartWebSibRukHldKmpStb
           completed:
             - !type:AdminLog
@@ -2985,7 +2985,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1 
+              doAfter: 1
 
     - node: USSPWeaponPartWebSibRukHldRuk
       entity: USSPWeaponPartWebSibRukHldRuk
@@ -2995,7 +2995,7 @@
             - material: USSPWeaponPartPrk
               amount: 1
             - tool: Screwing
-              doAfter: 1   
+              doAfter: 1
         - to: USSPWeaponPartWebSibRukHld
           completed:
             - !type:AdminLog
@@ -3009,11 +3009,11 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1   
+              doAfter: 1
 
     - node: USSPShotgun
       entity: USSPShotgun
-      edges:   
+      edges:
         - to: USSPWeaponPartWebSibRukHldRuk
           completed:
             - !type:AdminLog
@@ -3027,7 +3027,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Cutting
-              doAfter: 1   
+              doAfter: 1
 
 - type: entity
   parent: BookLoreBase
@@ -3043,27 +3043,27 @@
 
 
         К особому оружию относятся излучатели и притяжители. Их собрать в полевых условиях нельзя.
-      
+
         Слаботочные и силовые собрать можно. Имейте в виду, что при соединении каждой детали, конструкцию нужно закрепить отвёрткой. А при разборке откусывать кусачками.
 
 
         Среди слаботочных выделяют пистолет, пистолет-пулемёт и карабин.
 
-        Пистолет = Оружейный блок + слаботочный блок + рукоять + стабилизатор   
+        Пистолет = Оружейный блок + слаботочный блок + рукоять + стабилизатор
 
         Пистолет-пулемёт = Оружейный блок + слаботочный блок + рукоять + цевьё + ускоритель
-      
+
         Карабин = Оружейный блок + слаботочный блок + рукоять + цевьё + компенсатор + приклад
-      
-      
+
+
         Среди слаботочных выделяют винтовку, втомат, пулемёт и дробовик.
-      
+
         Винтовка = Оружейный блок + силовой блок + рукоять + цевьё + компенсатор + приклад
-      
+
         Автомат = Оружейный блок + силовой блок + рукоять + цевьё + ускоритель + стабилизатор + приклад
-      
+
         Пулемёт = Оружейный блок + силовой блок + рукоять + охлаждающий контур + компенсатор + стабилизатор + защитный кожух
-      
+
         Дробовик = Оружейный блок + силовой блок + рукоять + охлаждающий контур + рукоять + приклад
 #--------------------------------------------------------------------------Электроника------------------------------------
 #---------------------------------------------------------Доступы---------------------------------------------
@@ -3114,7 +3114,7 @@
     - state: offi
   - type: PresetIdCard
     name: командир СССП
-    
+
 - type: entity
   parent: USSPIDCard
   id: USSPIDCardSold
@@ -3127,7 +3127,7 @@
     - state: sold
   - type: PresetIdCard
     name: солдат СССП
-    
+
 - type: entity
   parent: USSPIDCard
   id: USSPIDCardEnge
@@ -3140,7 +3140,7 @@
     - state: enge
   - type: PresetIdCard
     name: инженер СССП
-    
+
 - type: entity
   parent: USSPIDCard
   id: USSPIDCardMed
@@ -3177,7 +3177,7 @@
   - type: Icon
     sprite: Victoria/USSP/Equipment/ussp_pda.rsi
     state: pda
-    
+
 - type: entity
   parent: USSPPDA
   id: USSPPDAOffi
@@ -3192,7 +3192,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-         
+
 - type: entity
   parent: USSPPDA
   id: USSPPDAEnge
@@ -3207,7 +3207,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-         
+
 - type: entity
   parent: USSPPDA
   id: USSPPDAMed
@@ -3241,7 +3241,7 @@
       board: [ DoorElectronicsUSSPAccess ]
   - type: Sprite
     sprite: Victoria/USSP/ussp_airlock.rsi
-    
+
 - type: entity
   parent: Airlock
   id: USSPAirlock
@@ -3260,8 +3260,8 @@
       board: [ DoorElectronicsUSSPAccess ]
   - type: Sprite
     sprite: Victoria/USSP/ussp_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass 
+  - type: Paintable
+    group: null
 
 - type: entity
   parent: AirlockGlass
@@ -3270,8 +3270,8 @@
   components:
   - type: Sprite
     sprite: Victoria/USSP/ussp_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass  
+  - type: Paintable
+    group: null
 #----------------------------------Стыковочный шлюз----------------------------
 - type: entity
   parent: AirlockExternalShuttleLocked
@@ -3289,7 +3289,7 @@
 - type: radioChannel
   id: USSPRadio
   name: name-of-USSPRadio
-  keycode: 'сс' 
+  keycode: 'сс'
   frequency: 1991
   color: "#d80000"
   longRange: false
@@ -3311,9 +3311,9 @@
     - state: crypt_gray
     - state: label
   - type: StealTarget
-    stealGroup: EncryptionKey 
+    stealGroup: EncryptionKey
   - type: Item
-    sprite: Victoria/USSP/Equipment/ussp_encryption_keys.rsi    
+    sprite: Victoria/USSP/Equipment/ussp_encryption_keys.rsi
 #----------------------------------Ключ борговский----------------------------
 - type: entity
   parent: BaseItem
@@ -3332,9 +3332,9 @@
     - state: crypt_gray
     - state: label_sint
   - type: StealTarget
-    stealGroup: EncryptionKey 
+    stealGroup: EncryptionKey
   - type: Item
-    sprite: Victoria/USSP/Equipment/ussp_encryption_keys.rsi 
+    sprite: Victoria/USSP/Equipment/ussp_encryption_keys.rsi
 #----------------------------------Гарнитура----------------------------
 - type: entity
   parent: ClothingHeadset
@@ -3367,7 +3367,7 @@
       - id: Gauze
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
-      
+
 - type: entity
   parent: USSPDuffel
   id: USSPDuffelFilledEmpty
@@ -3464,7 +3464,7 @@
     sprite: Victoria/USSP/ussp_crates.rsi
   - type: Sprite
     sprite: Victoria/USSP/ussp_crates.rsi
-#-----------------------------Ящик лёгкого оружия------------------  
+#-----------------------------Ящик лёгкого оружия------------------
 - type: entity
   id: USSPCrateWeaponsL
   parent: USSPCrate
@@ -3480,7 +3480,7 @@
       - id: USSPSMG
       - id: USSPCarabine
       - id: USSPCarabine
-#-----------------------------Ящик тяжёлого оружия------------------  
+#-----------------------------Ящик тяжёлого оружия------------------
 - type: entity
   id: USSPCrateWeaponsH
   parent: USSPCrate
@@ -3494,7 +3494,7 @@
       - id: USSPRifle
       - id: USSPAuto
       - id: USSPAuto
-#-----------------------------Ящик усиленного тяжёлого оружия------------------ 
+#-----------------------------Ящик усиленного тяжёлого оружия------------------
 - type: entity
   id: USSPCrateWeaponsSH
   parent: USSPCrate
@@ -3508,7 +3508,7 @@
       - id: USSPShotgun
       - id: USSPLMG
       - id: USSPLMG
-#-----------------------------Ящик особого оружия------------------ 
+#-----------------------------Ящик особого оружия------------------
 - type: entity
   id: USSPCrateWeaponsS
   parent: USSPCrate
@@ -3522,7 +3522,7 @@
       - id: USSPAttraction
       - id: USSPRadiator
       - id: USSPRadiator
-#-----------------------------Ящик батарей лёгкого оружия------------------  
+#-----------------------------Ящик батарей лёгкого оружия------------------
 - type: entity
   id: USSPCrateBatteryL
   parent: USSPCrate
@@ -3544,7 +3544,7 @@
       - id: USSPBatterySMG
       - id: USSPBatterySMG
       - id: USSPBatterySMG
-#-----------------------------Ящик батарей тяжёлого оружия------------------  
+#-----------------------------Ящик батарей тяжёлого оружия------------------
 - type: entity
   id: USSPCrateBatteryH
   parent: USSPCrate
@@ -3566,7 +3566,7 @@
       - id: USSPBatteryAuto
       - id: USSPBatteryAuto
       - id: USSPBatteryAuto
-#-----------------------------Ящик батарей для дробовика------------------ 
+#-----------------------------Ящик батарей для дробовика------------------
 - type: entity
   id: USSPCrateBatteryShot
   parent: USSPCrate
@@ -3580,7 +3580,7 @@
       - id: USSPBatteryShot
       - id: USSPBatteryShot
       - id: USSPBatteryShot
-#-----------------------------Ящик батарей для пулемёта------------------ 
+#-----------------------------Ящик батарей для пулемёта------------------
 - type: entity
   id: USSPCrateBatteryLMG
   parent: USSPCrate
@@ -3593,7 +3593,7 @@
       - id: USSPBatteryLMG
       - id: USSPBatteryLMG
       - id: USSPBatteryLMG
-#-----------------------------Ящик батарей для притяжителя------------------ 
+#-----------------------------Ящик батарей для притяжителя------------------
 - type: entity
   id: USSPCrateBatterySing
   parent: USSPCrate
@@ -3606,7 +3606,7 @@
       - id: USSPBatterySing
       - id: USSPBatterySing
       - id: USSPBatterySing
-#-----------------------------Ящик батарей для излучателя------------------ 
+#-----------------------------Ящик батарей для излучателя------------------
 - type: entity
   id: USSPCrateBatteryRadio
   parent: USSPCrate
@@ -3619,7 +3619,7 @@
       - id: USSPBatteryRadio
       - id: USSPBatteryRadio
       - id: USSPBatteryRadio
-#-----------------------------Ящик армейской экипировки------------------ 
+#-----------------------------Ящик армейской экипировки------------------
 - type: entity
   id: USSPCrateUniform
   parent: USSPCrate
@@ -3693,7 +3693,7 @@
       - id: USSPHardsuitArm
       - id: USSPHardsuitTech
       - id: USSPHardsuitTech
-#-----------------------------Ящик основных оружейных деталей------------------ 
+#-----------------------------Ящик основных оружейных деталей------------------
 - type: entity
   id: USSPCrateWeaponPieseBase
   parent: USSPCrate
@@ -3721,7 +3721,7 @@
       - id: USSPWeaponPartRuk
       - id: USSPWeaponPartRuk
       - id: USSPWeaponPartRuk
-#-----------------------------Ящик вспомогательных оружейных деталей------------------ 
+#-----------------------------Ящик вспомогательных оружейных деталей------------------
 - type: entity
   id: USSPCrateWeaponPieseDif
   parent: USSPCrate

@@ -297,7 +297,7 @@
     clothingPrototype: NoocHelmetHardsuit
 #------------------------------------шлем скафандра среднего класса----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: NoocHelmetHardsuit
   name: шлем ноократского скафандра
   description: Стандартный шлем скафандра для военных средних классов Ноократии Эранта
@@ -408,7 +408,7 @@
     clothingPrototype: NoocHelmetHardsuitDozer
 #------------------------------------шлем скафандра дозера----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: NoocHelmetHardsuitDozer
   name: шлем ноократского скафандра
   description: В отличие от обычных скафандровых шлемов Ноократии с широким лобовым визором, этот сделан более закрытым и укреплённым.
@@ -2523,8 +2523,8 @@
       board: [ DoorElectronicsNoocAccess ]
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -2534,8 +2534,8 @@
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------------КПК, карты----------------------------------------
 #------------------------------------стандарт карты----------
 - type: entity
@@ -3280,14 +3280,14 @@
   result: NoocCloak
   completetime: 1
   materials:
-    ElastaneClothMaterial: 300 
+    ElastaneClothMaterial: 300
 
 - type: latheRecipe
   id: NoocCloakStelth
   result: NoocCloakStelth
   completetime: 3
   materials:
-    ElastaneClothMaterial: 400  
+    ElastaneClothMaterial: 400
     Gold: 100
 #-------------------Пояса-------------
 - type: latheRecipe
@@ -4206,7 +4206,7 @@
       visible: false
   - type: BorgChassis
     maxModules: 2
-      # moduleWhitelist: 
+      # moduleWhitelist:
         # tags:
           # - BorgModuleGeneric
           # - BorgModuleNoocraty
@@ -4286,17 +4286,6 @@
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 150
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
   - type: MovementSpeedModifier
     baseWalkSpeed : 3.5
     baseSprintSpeed : 5
@@ -4349,10 +4338,10 @@
     - state: generic
     - state: icon-fire-extinguisher
   - type: ItemBorgModule
-    items:
-    - NoocRifleBorgSnowdrop
-    - GrenadeFlashBang
-    - Omnitool
-    - NoocSnowdropSmoke
+    hands:
+    - item: NoocRifleBorgSnowdrop
+    - item: GrenadeFlashBang
+    - item: Omnitool
+    - item: NoocSnowdropSmoke
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: extinguisher-module }

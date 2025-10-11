@@ -18,30 +18,10 @@
           emergencyShuttlePath: /Maps/Corvax/Shuttles/emergency_corvaxchloris.yml
         - type: StationJobs
           availableJobs:
-            CargoTechnician: [ 6, 6 ]
-            Passenger: [ -1, -1 ]
-            Bartender: [ 2, 2 ]
-            Botanist: [ 3, 3 ]
-            Chef: [ 2, 2 ]
-            Clown: [ 1, 1 ]
-            Janitor: [ 3, 3 ]
-            Mime: [ 1, 1 ]
-            Zookeeper: [ 1, 1 ]
+            # command
             Captain: [ 1, 1 ]
             IAA: [ 1, 1 ]
-            HeadOfPersonnel: [ 1, 1 ]
-            ChiefEngineer: [ 1, 1 ]
-            StationEngineer: [ 7, 7 ]
-            ChiefMedicalOfficer: [ 1, 1 ]
-            MedicalDoctor: [ 6, 6 ]
-            Chemist: [ 2, 2 ]
-            ResearchDirector: [ 1, 1 ]
-            Scientist: [ 5, 5 ]
-            HeadOfSecurity: [ 1, 1 ]
-            SecurityOfficer: [ 7, 7 ]
-            Chaplain: [ 1, 1 ]
-            Warden: [ 1, 1 ]
-            Librarian: [ 1, 1 ]
+            # cargo
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
             CargoTechnician: [ 5, 6 ]

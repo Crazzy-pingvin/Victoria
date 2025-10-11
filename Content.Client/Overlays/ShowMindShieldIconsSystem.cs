@@ -15,7 +15,6 @@ public sealed class ShowMindShieldIconsSystem : EquipmentHudSystem<ShowMindShiel
         base.Initialize();
 
         SubscribeLocalEvent<MindShieldComponent, GetStatusIconsEvent>(OnGetStatusIconsEvent);
-        SubscribeLocalEvent<FakeMindShieldComponent, GetStatusIconsEvent>(OnGetStatusIconsEventFake);
     }
     // TODO: Probably need to get this OFF of client since this can be read by bad actors rather easily
     //  ...imagine cheating in a game about silly paper dolls

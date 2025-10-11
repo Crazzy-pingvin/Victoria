@@ -21,11 +21,11 @@
   components:
   - type: Sprite
     sprite: Victoria/Teach/mantle_teacher.rsi
-#-------------------------Доступ--------------    
+#-------------------------Доступ--------------
 - type: accessLevel
   id: Teacher
   name: accessl-teacher
-#-----закрытый шлюз---------- 
+#-----закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsTeacherAccess
@@ -46,10 +46,10 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/cargo.rsi
-#-----закрытый стеклянный шлюз---------- 
+#-----закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
-  id: AirlockCargoTeatcherLockedGlass
+  id: AirlockCargoTeacherLockedGlass
   name: стеклянный шлюз
   suffix: Наставники, Locked
   description: Он открывается, он закрывается, он может вас раздавить
@@ -59,8 +59,8 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/cargo.rsi
-  - type: PaintableAirlock
-    group: Glass  
+  - type: Paintable
+    group: null
 #-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
@@ -108,11 +108,11 @@
     head: ClothingHeadHatCargosoft
     id: PDACargoTeacher
     ears: ClothingHeadsetCargo
-    neck: MantelTeacher  
+    neck: MantelTeacher
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobCargoTeacher
-  
+
 - type: jobIcon
   parent: JobIcon
   id: JobIconCargoTeacher
@@ -157,7 +157,7 @@
   - type: Clothing
     sprite: Victoria/Teach/uniform_engineering_teacher.rsi
 #-------------------------Шлюз--------------
-#-----закрытый шлюз---------- 
+#-----закрытый шлюз----------
 - type: entity
   parent: Airlock
   id: AirlockEngTeatcherLocked
@@ -170,7 +170,7 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/engineering.rsi
-#-----закрытый стеклянный шлюз---------- 
+#-----закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: AirlockEngTeatcherLockedGlass
@@ -183,8 +183,8 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/engineering.rsi
-  - type: PaintableAirlock
-    group: Glass 
+  - type: Paintable
+    group: null
 #-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
@@ -249,12 +249,12 @@
     head: EngTeacherBeret
     id: PDAEngTeacher
     ears: ClothingHeadsetEngineering
-    neck: MantelTeacher  
+    neck: MantelTeacher
     belt: ClothingBeltUtilityEngineering
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobEngTeacher
-  
+
 - type: jobIcon
   parent: JobIcon
   id: JobIconEngTeacher
@@ -299,7 +299,7 @@
   - type: Clothing
     sprite: Victoria/Teach/uniform_security_teacher.rsi
 #-------------------------Шлюз--------------
-#-----закрытый шлюз---------- 
+#-----закрытый шлюз----------
 - type: entity
   parent: Airlock
   id: AirlockSecTeatcherLocked
@@ -312,7 +312,7 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/security.rsi
-#-----закрытый стеклянный шлюз---------- 
+#-----закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: AirlockSecTeatcherLockedGlass
@@ -325,8 +325,8 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/security.rsi
-  - type: PaintableAirlock
-    group: Glass 
+  - type: Paintable
+    group: null
 #-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
@@ -391,14 +391,14 @@
     head: SecTeacherCap
     id: PDASecTeacher
     ears: ClothingHeadsetSecurity
-    neck: MantelTeacher  
+    neck: MantelTeacher
     belt: ClothingBeltSecurityFilled
     outerClothing: ClothingOuterArmorBasic
     eyes: ClothingEyesGlassesSecurity
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobSecTeacher
-  
+
 - type: jobIcon
   parent: JobIcon
   id: JobIconSecTeacher
@@ -450,7 +450,7 @@
   - type: Clothing
     sprite: Victoria/Teach/uniform_scientist_teacher.rsi
 #-------------------------Шлюз--------------
-#-----закрытый шлюз---------- 
+#-----закрытый шлюз----------
 - type: entity
   parent: Airlock
   id: AirlockSciTeatcherLocked
@@ -463,7 +463,7 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/science.rsi
-#-----закрытый стеклянный шлюз---------- 
+#-----закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: AirlockSciTeatcherLockedGlass
@@ -476,8 +476,8 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/science.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
@@ -537,13 +537,13 @@
     back: ClothingBackpackScience
     shoes: ClothingShoesColorBlack
     id: PDASciTeacher
-    neck: MantelTeacher  
+    neck: MantelTeacher
     outerClothing: ClothingOuterCoatLabTeacher
     ears: ClothingHeadsetScience
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobSciTeacher
-  
+
 - type: jobIcon
   parent: JobIcon
   id: JobIconSciTeacher
@@ -587,7 +587,7 @@
     sprite: Victoria/Teach/uniform_medical_teacher.rsi
   - type: Clothing
     sprite: Victoria/Teach/uniform_medical_teacher.rsi
-#-----закрытый шлюз---------- 
+#-----закрытый шлюз----------
 - type: entity
   parent: Airlock
   id: AirlockMedTeatcherLocked
@@ -600,7 +600,7 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/medical.rsi
-#-----закрытый стеклянный шлюз---------- 
+#-----закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: AirlockMedTeatcherLockedGlass
@@ -613,8 +613,8 @@
       board: [ DoorElectronicsTeacherAccess ]
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/medical.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #-------------------------ID карта--------------
 - type: entity
   parent: CargoIDCard
@@ -662,14 +662,14 @@
     back: ClothingBackpackMedical
     shoes: ClothingShoesColorBlack
     id: PDAMedTeacher
-    neck: MantelTeacher  
+    neck: MantelTeacher
     outerClothing: ClothingOuterCoatLabTeacher
     belt: ClothingBeltMedicalFilled
     ears: ClothingHeadsetMedical
 #-------------------------Трекер и иконка--------------
 - type: playTimeTracker
   id: JobMedTeacher
-  
+
 - type: jobIcon
   parent: JobIcon
   id: JobIconMedTeacher
@@ -689,7 +689,7 @@
       time: 18000
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 43200 
+      time: 43200
   startingGear: MedTeacherGear
   icon: "JobIconMedTeacher"
   supervisors: job-supervisors-cmo
@@ -713,7 +713,7 @@
     layers:
       - state: green
       - state: qm
-#-------------------------Ведущий инженер--------------     
+#-------------------------Ведущий инженер--------------
 - type: entity
   id: SpawnPointEngTeacher
   parent: SpawnPointJobBase
@@ -762,7 +762,7 @@
       - state: green
       - state: geneticist
 #-------------------------------------------Шлюзы----------------------------
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: Airlock
   id: AirlockTeacherLocked
@@ -773,7 +773,7 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsTeacherAccess ]
-#------------------------------------Закрытый стеклянный шлюз---------- 
+#------------------------------------Закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: AirlockTeacherGlassLocked
@@ -783,7 +783,7 @@
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsTeacherAccess ]  
+      board: [ DoorElectronicsTeacherAccess ]
 
 - type: sponsorGroup
   id: LjeSponsorGroupTeachers

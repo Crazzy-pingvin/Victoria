@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------ефрейтор---------- 
+#------------------------------------ефрейтор----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: VitzUniformEfreitor
@@ -15,7 +15,7 @@
     modifiers:
       coefficients:
         Heat: 0.9
-#------------------------------------старшина----------     
+#------------------------------------старшина----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: VitzUniformStarshina
@@ -31,7 +31,7 @@
     modifiers:
       coefficients:
         Heat: 0.9
-#------------------------------------старший----------     
+#------------------------------------старший----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: VitzUniformStarshiy
@@ -45,7 +45,7 @@
     sprite: Victoria/Viteztvi/Equipment/vitz_uniform_p.rsi
   - type: UseDelay
     delay: 0.5
-#------------------------------------звеньевой---------- 
+#------------------------------------звеньевой----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: VitzUniformZvenievoi
@@ -60,7 +60,7 @@
   - type: UseDelay
     delay: 0.5
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
-#------------------------------------рюкзак---------- 
+#------------------------------------рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: VitzBackpack
@@ -73,7 +73,7 @@
   - type: Storage
     grid:
     - 0,0,7,4
-#------------------------------------сапоги---------- 
+#------------------------------------сапоги----------
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: VitzBoots
@@ -85,7 +85,7 @@
     sprite: Victoria/Viteztvi/Equipment/vitz_boots.rsi
   - type: Clothing
     sprite: Victoria/Viteztvi/Equipment/vitz_boots.rsi
-#------------------------------------беретка ефрейтора---------- 
+#------------------------------------беретка ефрейтора----------
 - type: entity
   parent: ClothingHeadBase
   id: VitzBeretEfreitor
@@ -101,7 +101,7 @@
     tags:
     - ClothMade
     - WhitelistChameleon
-#------------------------------------беретка старшины---------- 
+#------------------------------------беретка старшины----------
 - type: entity
   parent: ClothingHeadBase
   id: VitzBeretStarshina
@@ -117,7 +117,7 @@
     tags:
     - ClothMade
     - WhitelistChameleon
-#------------------------------------пилотка пилота----------     
+#------------------------------------пилотка пилота----------
 - type: entity
   parent: ClothingHeadBase
   id: VitzCapStarsiy
@@ -134,7 +134,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------пилотка звеньевого----------     
+#------------------------------------пилотка звеньевого----------
 - type: entity
   parent: ClothingHeadBase
   id: VitzCapZvenievoi
@@ -151,7 +151,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------армейские перчатки---------- 
+#------------------------------------армейские перчатки----------
 - type: entity
   parent: ClothingHandsBase
   id: VitzGlovesFingerless
@@ -166,7 +166,7 @@
   - type: Fiber
     fiberMaterial: fibers-synthetic
     fiberColor: fibers-black
-#------------------------------------шлем ефрейтора---------- 
+#------------------------------------шлем ефрейтора----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: VitzHelmetEfreitor
@@ -185,7 +185,7 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.8
-#------------------------------------шлем старшины---------- 
+#------------------------------------шлем старшины----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: VitzHelmetStarshina
@@ -205,7 +205,7 @@
         Piercing: 0.75
         Heat: 0.8
   - type: ShowJobIcons
-#------------------------------------шлем флота---------- 
+#------------------------------------шлем флота----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: VitzHelmetPilots
@@ -223,7 +223,7 @@
         Blunt: 0.8
         Slash: 0.85
         Piercing: 0.85
-#------------------------------------патрульный броник----------     
+#------------------------------------патрульный броник----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: VitzArmorBasic
@@ -235,16 +235,16 @@
     sprite: Victoria/Viteztvi/Armor/vitz_armor_light.rsi
   - type: Clothing
     sprite: Victoria/Viteztvi/Armor/vitz_armor_light.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
-        Piercing: 0.65 
+        Piercing: 0.65
         Heat: 0.70
   - type: ExplosionResistance
     damageCoefficient: 0.80
-#------------------------------------броник мистера Хилла----------     
+#------------------------------------броник мистера Хилла----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: VitzArmorMrHill
@@ -256,16 +256,16 @@
     sprite: Victoria/Viteztvi/Armor/vitz_armor_verb.rsi
   - type: Clothing
     sprite: Victoria/Viteztvi/Armor/vitz_armor_verb.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.55
         Slash: 0.55
-        Piercing: 0.55 
+        Piercing: 0.55
         Heat: 0.60
   - type: ExplosionResistance
     damageCoefficient: 0.75
-#------------------------------------пехотный скафандр----------      
+#------------------------------------пехотный скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: VitzHardsuitPehot
@@ -294,9 +294,9 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: VitzHelmetHardsuitPehot
-#------------------------------------шлем пехотного скафандра----------  
+#------------------------------------шлем пехотного скафандра----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: VitzHelmetHardsuitPehot
   name: Шлем пехотного бронескафандра Витезтви
   suffix: Витезтви
@@ -323,7 +323,7 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.8
-#------------------------------------флотской скафандр----------      
+#------------------------------------флотской скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: VitzHardsuitPilot
@@ -351,9 +351,9 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: VitzHelmetHardsuitPilot
-#------------------------------------шлем флотского скафандра----------  
+#------------------------------------шлем флотского скафандра----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: VitzHelmetHardsuitPilot
   name: Шлем флотского скафандра Витезтви
   suffix: Витезтви
@@ -400,19 +400,19 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
+
       Дата:
       Составитель документа:
       Должность составителя:
-      
-      
+
+
       Полное содержание документа со всей необходимой информацией и описанием
-      
+
       =============================================
-      
+
                                   [italic]Место для печатей[/italic]
 
-#-------------------------------------печать-----------------      
+#-------------------------------------печать-----------------
 - type: entity
   name: Печать корпорации Витезтви
   suffix: Витезтви
@@ -426,7 +426,7 @@
   - type: Sprite
     sprite: Victoria/Viteztvi/Equipment/vitz_stamp.rsi
     state: stamp
-#-------------------------------------джетпак---------------------------------------   
+#-------------------------------------джетпак---------------------------------------
 - type: entity
   id: VitzJetpack
   parent: BaseJetpack
@@ -459,7 +459,7 @@
       moles:
         - 1.025689525 # oxygen
         - 1.025689525 # nitrogen
-#-------------------------------------пояс--------------------------------------- 
+#-------------------------------------пояс---------------------------------------
 - type: entity
   parent: ClothingBeltStorageBase
   id: VitzeBelt
@@ -526,7 +526,7 @@
       - id: MagazinePistolHighCapacity
 #-------------------------------------оружие-------------------------------------------------------------------------------
 #-------------------------------------магазины---------------------------------------------------------------------------------
-#------------------------------------к пистолет-пулемёту----------   
+#------------------------------------к пистолет-пулемёту----------
 - type: Tag
   id: MagazineSMGViteztvi
 
@@ -582,7 +582,7 @@
     - state: base
       map: ["enum.GunVisualLayers.Base"]
 #-------------------------------------стволы---------------------------------------------------------------------------------
-#------------------------------------пистолет-пулемёт----------     
+#------------------------------------пистолет-пулемёт----------
 - type: entity
   name: Пистолет-пулемёт "Орлик"
   suffix: Витезтви
@@ -629,25 +629,25 @@
       steps: 1
       zeroVisible: true
     - type: Appearance
-#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: VitzAccessSolder
   name: access-vitz-solder
-#-----------------------------------------  
+#-----------------------------------------
 - type: accessLevel
   id: VitzAccessPilot
   name: access-vitz-pilot
-#-----------------------------------------   
+#-----------------------------------------
 - type: accessLevel
   id: VitzAccessOfficer
   name: access-vitz-officer
-#-----------------------------------------   
+#-----------------------------------------
 - type: accessLevel
   id: VitzAccessZven
   name: access-vitz-zven
-#------------------------------------закрытый шлюз солдат---------- 
+#------------------------------------закрытый шлюз солдат----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsVitzSoldAccess
@@ -666,7 +666,7 @@
       board: [ DoorElectronicsVitzSoldAccess ]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_s.rsi
-#------------------------------------закрытый шлюз пилотов---------- 
+#------------------------------------закрытый шлюз пилотов----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsVitzPilotAccess
@@ -685,7 +685,7 @@
       board: [ DoorElectronicsVitzPilotAccess ]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_p.rsi
-#------------------------------------закрытый шлюз офицеров---------- 
+#------------------------------------закрытый шлюз офицеров----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsVitzOffiAccess
@@ -704,7 +704,7 @@
       board: [ DoorElectronicsVitzOffiAccess ]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_o.rsi
-#------------------------------------закрытый шлюз командиров звена---------- 
+#------------------------------------закрытый шлюз командиров звена----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsVitzZvenAccess
@@ -723,7 +723,7 @@
       board: [ DoorElectronicsVitzZvenAccess ]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_po.rsi
-#------------------------------------свободный шлюз солдат---------- 
+#------------------------------------свободный шлюз солдат----------
 - type: entity
   parent: Airlock
   id: VitzAirlockSolder
@@ -731,7 +731,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_s.rsi
-#------------------------------------закрытый стеклянный шлюз солдат---------- 
+#------------------------------------закрытый стеклянный шлюз солдат----------
 - type: entity
   parent: AirlockGlass
   id: VitzAirlockSolderLockedGlass
@@ -741,9 +741,9 @@
     access: [["VitzAccessSolder"], ["VitzAccessOfficer"]]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_glass_s.rsi
-  - type: PaintableAirlock
-    group: Glass
-#------------------------------------закрытый стеклянный шлюз пилот---------- 
+  - type: Paintable
+    group: null
+#------------------------------------закрытый стеклянный шлюз пилот----------
 - type: entity
   parent: AirlockGlass
   id: VitzAirlockPilotLockedGlass
@@ -753,9 +753,9 @@
     access: [["VitzAccessPilot"], ["VitzAccessZven"]]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_glass_p.rsi
-  - type: PaintableAirlock
-    group: Glass
-#------------------------------------закрытый стеклянный шлюз офицер---------- 
+  - type: Paintable
+    group: null
+#------------------------------------закрытый стеклянный шлюз офицер----------
 - type: entity
   parent: AirlockGlass
   id: VitzAirlockOfficerLockedGlass
@@ -765,9 +765,9 @@
     access: [["VitzAccessOfficer"]]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_glass_o.rsi
-  - type: PaintableAirlock
-    group: Glass
-#------------------------------------закрытый стеклянный шлюз командира звена---------- 
+  - type: Paintable
+    group: null
+#------------------------------------закрытый стеклянный шлюз командира звена----------
 - type: entity
   parent: AirlockGlass
   id: VitzAirlockPiloOffiLockedGlass
@@ -777,8 +777,8 @@
     access: [["VitzAccessZven"]]
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_glass_po.rsi
-  - type: PaintableAirlock
-    group: Glass    
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз солдат----------
 - type: entity
   parent: AirlockGlass
@@ -787,9 +787,9 @@
   components:
   - type: Sprite
     sprite: Victoria/Viteztvi/vitz_airlock_glass_s.rsi
-  - type: PaintableAirlock
-    group: Glass  
-#------------------------------------стыковочный---------- 
+  - type: Paintable
+    group: null
+#------------------------------------стыковочный----------
 - type: entity
   parent: AirlockExternalShuttleLocked
   name: Стыковочный шлюз
@@ -800,8 +800,8 @@
   - type: PryUnpowered
   - type: AccessReader
     access: [["VitzAccessPilot"]]
-#------------------------------------------КПК, карты----------------------------------------  
-#------------------------------------стандарт карты---------- 
+#------------------------------------------КПК, карты----------------------------------------
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: VitzIDCard
@@ -828,8 +828,8 @@
     - DoorBumpOpener
     - WhitelistChameleon
   - type: StealTarget
-    stealGroup: IDCard    
-#------------------------------------карта ефрейтор---------- 
+    stealGroup: IDCard
+#------------------------------------карта ефрейтор----------
 - type: entity
   parent: VitzIDCard
   id: VitzIDCardEfreitor
@@ -845,7 +845,7 @@
     - External
   - type: PresetIdCard
     name: стрелок Витезтви
-#------------------------------------карта старшина----------    
+#------------------------------------карта старшина----------
 - type: entity
   parent: VitzIDCard
   id: VitzIDCardStarshina
@@ -862,7 +862,7 @@
     - External
   - type: PresetIdCard
     name: старшина Витезтви
-#------------------------------------карта пилот----------     
+#------------------------------------карта пилот----------
 - type: entity
   parent: VitzIDCard
   id: VitzIDCardPilot
@@ -879,7 +879,7 @@
     - External
   - type: PresetIdCard
     name: пилот Витезтви
-#------------------------------------карта звеньевой----------     
+#------------------------------------карта звеньевой----------
 - type: entity
   parent: VitzIDCard
   id: VitzIDCardZvenievoi
@@ -897,7 +897,7 @@
     - External
   - type: PresetIdCard
     name: ком.звена Витезтви
-#------------------------------------мистер хилл----------     
+#------------------------------------мистер хилл----------
 - type: entity
   parent: VitzIDCard
   id: VitzIDCardMrHill
@@ -915,7 +915,7 @@
     - External
   - type: PresetIdCard
     name: сотрудник Витезтви
-#------------------------------------стандарт КПК---------- 
+#------------------------------------стандарт КПК----------
 - type: entity
   abstract: true
   parent: BasePDA
@@ -939,7 +939,7 @@
   - type: Icon
     sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
     state: pda
-#------------------------------------КПК ефрейтора----------    
+#------------------------------------КПК ефрейтора----------
 - type: entity
   parent: VitzPDA
   id: VitzPDAEfreitor
@@ -957,7 +957,7 @@
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
-#------------------------------------КПК пилота----------       
+#------------------------------------КПК пилота----------
 - type: entity
   parent: VitzPDA
   id: VitzPDAPilot
@@ -975,7 +975,7 @@
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
-#------------------------------------КПК старшина----------       
+#------------------------------------КПК старшина----------
 - type: entity
   parent: VitzPDA
   id: VitzPDAStarshina
@@ -993,7 +993,7 @@
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
-#------------------------------------КПК звеньевой----------       
+#------------------------------------КПК звеньевой----------
 - type: entity
   parent: VitzPDA
   id: VitzPDAZvenievoi
@@ -1011,7 +1011,7 @@
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
       state: pda
-#------------------------------------КПК мистер Хилл----------       
+#------------------------------------КПК мистер Хилл----------
 - type: entity
   parent: VitzPDA
   id: VitzPDAMrHill
@@ -1028,34 +1028,34 @@
          pda
     - type: Icon
       sprite: Victoria/Viteztvi/Equipment/vitz_pda.rsi
-      state: pda            
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+      state: pda
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: VitzRadioPeh
   name: name-of-VitzRadioPeh
-  keycode: 'вп' 
+  keycode: 'вп'
   frequency: 8855
   color: "#FFFDD0"
   longRange: true
-  
+
 - type: radioChannel
   id: VitzRadioFlot
   name: name-of-VitzRadioFlot
-  keycode: 'пф' 
+  keycode: 'пф'
   frequency: 8856
   color: "#86821d"
   longRange: true
-  
+
 - type: radioChannel
   id: VitzRadioComm
   name: name-of-VitzRadioComm
-  keycode: 'вк' 
+  keycode: 'вк'
   frequency: 8857
   color: "#b3ae4b"
   longRange: true
 #-------------------------------------------------------------------ключи---------------------------------------------------------------------
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -1072,8 +1072,8 @@
   - type: Sprite
     sprite: Victoria/Viteztvi/Equipment/vitz_encryption_keys.rsi
   - type: StealTarget
-    stealGroup: EncryptionKey   
-#-----------------------------ключ пехотный----------------------------------------      
+    stealGroup: EncryptionKey
+#-----------------------------ключ пехотный----------------------------------------
 - type: entity
   parent: VitzBaseEncryptionKey
   id: VitzEncryptionKeyPeh
@@ -1088,8 +1088,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label_sold 
-#-----------------------------ключ пилотов----------------------------------------      
+    - state: label_sold
+#-----------------------------ключ пилотов----------------------------------------
 - type: entity
   parent: VitzBaseEncryptionKey
   id: VitzEncryptionKeyPil
@@ -1104,8 +1104,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label_pil 
-#-----------------------------ключ офицеров----------------------------------------      
+    - state: label_pil
+#-----------------------------ключ офицеров----------------------------------------
 - type: entity
   parent: VitzBaseEncryptionKey
   id: VitzEncryptionKeyCom
@@ -1120,9 +1120,9 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label_com 
+    - state: label_com
 #-----------------------------------------------------------------гарнитуры-----------------------------------------------
-#-----------------------------гарнитура пехоты----------------------------------------  
+#-----------------------------гарнитура пехоты----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: VitzHeadsetPeh
@@ -1137,7 +1137,7 @@
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
   - type: Clothing
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
-#-----------------------------гарнитура флота----------------------------------------  
+#-----------------------------гарнитура флота----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: VitzHeadsetFlt
@@ -1152,7 +1152,7 @@
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
   - type: Clothing
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
-#-----------------------------гарнитура старшины----------------------------------------  
+#-----------------------------гарнитура старшины----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: VitzHeadsetStr
@@ -1167,8 +1167,8 @@
   - type: Sprite
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
   - type: Clothing
-    sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi   
-#-----------------------------гарнитура звеньевого----------------------------------------  
+    sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
+#-----------------------------гарнитура звеньевого----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: VitzHeadsetZvn
@@ -1183,8 +1183,8 @@
   - type: Sprite
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
   - type: Clothing
-    sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi 
-#-----------------------------гарнитура Мистера Хилла----------------------------------------  
+    sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
+#-----------------------------гарнитура Мистера Хилла----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: VitzHeadsetMHl
@@ -1200,26 +1200,26 @@
   - type: Sprite
     sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
   - type: Clothing
-    sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi 
-#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------  
-#--------------------------------------------роли------------------------------------  
-#------------------------------------ефрейтор--------------------- 
+    sprite: Victoria/Viteztvi/Equipment/vitz_garniture.rsi
+#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------
+#--------------------------------------------роли------------------------------------
+#------------------------------------ефрейтор---------------------
 - type: playTimeTracker
   id: JobEventVitzEfreitor
-#------------------------------------пилот--------------------- 
+#------------------------------------пилот---------------------
 - type: playTimeTracker
   id: JobEventVitzPilot
-#------------------------------------старшина--------------------- 
+#------------------------------------старшина---------------------
 - type: playTimeTracker
   id: JobEventVitzStarshina
-#------------------------------------звеньевой--------------------- 
+#------------------------------------звеньевой---------------------
 - type: playTimeTracker
   id: JobEventVitzZven
-#------------------------------------Мистер Хилл---------------------   
+#------------------------------------Мистер Хилл---------------------
 - type: playTimeTracker
   id: JobEventVitzMrHill
-#--------------------------------------------сумки------------------------------------  
-#------------------------------------ефрейтор--------------------- 
+#--------------------------------------------сумки------------------------------------
+#------------------------------------ефрейтор---------------------
 - type: entity
   parent: VitzBackpack
   id: VitzBackpackFilledEfreitor
@@ -1236,7 +1236,7 @@
       - id: DrinkWaterBottleFull
       - id: Gauze
       - id: OxygenTankFilled
-#------------------------------------пилот---------------------       
+#------------------------------------пилот---------------------
 - type: entity
   parent: VitzBackpack
   id: VitzBackpackFilledPilot
@@ -1253,7 +1253,7 @@
       - id: DrinkWaterBottleFull
       - id: Gauze
       - id: OxygenTankFilled
-#------------------------------------старшина--------------------- 
+#------------------------------------старшина---------------------
 - type: entity
   parent: VitzBackpack
   id: VitzBackpackFilledStarshina
@@ -1273,7 +1273,7 @@
       - id: DrinkWaterBottleFull
       - id: Gauze
       - id: OxygenTankFilled
-#------------------------------------звеньевой---------------------       
+#------------------------------------звеньевой---------------------
 - type: entity
   parent: VitzBackpack
   id: VitzBackpackFilledZvenievoi
@@ -1293,7 +1293,7 @@
       - id: DrinkWaterBottleFull
       - id: Gauze
       - id: OxygenTankFilled
-#------------------------------------мистер хилл---------------------       
+#------------------------------------мистер хилл---------------------
 - type: entity
   parent: VitzBackpack
   id: VitzBackpackFilledMrHill
@@ -1310,7 +1310,7 @@
       - id: Gauze
       - id: OxygenTankFilled
 #-----------------------------------------------гиры---------------------------------------
-#------------------------------------ефрейтор----------  
+#------------------------------------ефрейтор----------
 - type: startingGear
   id: VitzEfreitorGear
   equipment:
@@ -1324,7 +1324,7 @@
     belt: VitzeBeltFilled
     gloves: VitzGlovesFingerless
     pocket1: VitzPaperEfreitor
-#------------------------------------пилот---------- 
+#------------------------------------пилот----------
 - type: startingGear
   id: VitzPilotGear
   equipment:
@@ -1338,7 +1338,7 @@
     belt: VitzeBeltFilled
     gloves: VitzGlovesFingerless
     pocket1: VitzPaperPilot
-#------------------------------------старшина---------- 
+#------------------------------------старшина----------
 - type: startingGear
   id: VitzStarshinaGear
   equipment:
@@ -1353,7 +1353,7 @@
     gloves: VitzGlovesFingerless
     pocket1: VitzPaperStarshina
     pocket2: VitzRubberStamp
-#------------------------------------звеньевой---------- 
+#------------------------------------звеньевой----------
 - type: startingGear
   id: VitzZvenGear
   equipment:
@@ -1441,7 +1441,7 @@
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------ефрейтор----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: VitzEfreitor
@@ -1484,7 +1484,7 @@
     - type: NpcFactionMember
       factions:
       - Vitz
-  
+
 - type: entity
   name: Спавнер солдата Витезтви
   suffix: GOST, Витезтви
@@ -1506,7 +1506,7 @@
     - Vitz
 #---------------------------------пилот----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: VitzPilot
@@ -1549,7 +1549,7 @@
     - type: NpcFactionMember
       factions:
       - Vitz
-  
+
 - type: entity
   name: Спавнер пилота Витезтви
   id: VitzMobHumanPilot
@@ -1571,7 +1571,7 @@
     - Vitz
 #---------------------------------старшина----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: VitzStarshina
@@ -1614,7 +1614,7 @@
     - type: NpcFactionMember
       factions:
       - Vitz
-  
+
 - type: entity
   name: Спавнер старшины Витезтви
   id: VitzMobHumanStarshina
@@ -1636,7 +1636,7 @@
     - Vitz
 #---------------------------------звеньевой----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: VitzZven
@@ -1679,7 +1679,7 @@
     - type: NpcFactionMember
       factions:
       - Vitz
-  
+
 - type: entity
   name: Звеньевой Витезтви
   id: VitzMobHumanZven
@@ -1701,7 +1701,7 @@
     - Vitz
 #---------------------------------мистер Хилл----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: VitzMrHill
   randomizeName: false
@@ -1743,7 +1743,7 @@
     - type: NpcFactionMember
       factions:
       - Vitz
-  
+
 - type: entity
   name: Спавнер Мистера Хилла Витезтви
   id: VitzMobHumanMrHill
@@ -1854,8 +1854,8 @@
       Ваши навыки: Базовые навыки, владение оружием, готовка, барное дело, управление шаттлом
       Руководство к отыгрышу: Будьте спокойным, сдержанным, вежливым. Говорите о делах со всеми, но продавайте лишь тем, кто может заплатить. Вы тут самый крутой парень, но пусть об этом говорит не бравада и бурная возня, а ваше хладнокровное спокойствие и крутость. Вы имеете право командовать рядовым и младшим офицерским составом бойцов корпорации.
       Краткий лор корпорации: Уже более 350 лет корпорация Vitezstvi предлагает всем желающим услуги найми боевых подразделений, но сдаёт в аренду не группы и отряды спецназа, как многие их конкуренты, а роты, дивизии, полки и армии хорошо обученных пехотинцев, а также эскадрильи, авиаполки и целые флоты космолётов. Кроме того, Vitezstvi является крупным производителем и поставщиком самого разного пехотного вооружения, снаряжения, а также оружия для бронетехники и космических кораблей. Подавляющее большинство оружия службы безопасности NanoTrasen вышло с конвейеров заводов Vitezstvi.
-#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------        
-#-----------------------------Базовый ящик------------------ 
+#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------
+#-----------------------------Базовый ящик------------------
 - type: entity
   parent: CrateBaseSecure
   id: VitzCrate
@@ -1868,7 +1868,7 @@
     sprite: Victoria/Viteztvi/vitz_crates.rsi
   - type: AccessReader
     access: [["VitzAccessSolder"]]
-#-----------------------------Ящик строевого пехотного оружия------------------    
+#-----------------------------Ящик строевого пехотного оружия------------------
 - type: entity
   id: VitzCrateWeaponsBase
   parent: VitzCrate
@@ -1890,7 +1890,7 @@
       - id: WeaponLaserCarbine
       - id: WeaponLaserCarbine
       - id: WeaponLaserCarbine
-#-----------------------------Ящик вспомогательного пехотного оружия------------------    
+#-----------------------------Ящик вспомогательного пехотного оружия------------------
 - type: entity
   id: VitzCrateWeaponsHelp
   parent: VitzCrate
@@ -1905,8 +1905,8 @@
       - id: WeaponSniperHristov
       - id: WeaponLightMachineGunL6
       - id: WeaponLightMachineGunL6
-      - id: WeaponLightMachineGunL6   
-#-----------------------------Ящик лёгкого и флотского оружия------------------    
+      - id: WeaponLightMachineGunL6
+#-----------------------------Ящик лёгкого и флотского оружия------------------
 - type: entity
   id: VitzCrateWeaponsLight
   parent: VitzCrate
@@ -1926,7 +1926,7 @@
       - id: WeaponRevolverInspector
       - id: WeaponRevolverInspector
       - id: WeaponRevolverMateba
-#-----------------------------Ящик основных боеприпасов------------------ 
+#-----------------------------Ящик основных боеприпасов------------------
 - type: entity
   id: VitzCrateAmmoBase
   parent: VitzCrate
@@ -1946,7 +1946,7 @@
       - id: BoxLethalshot
       - id: BoxLethalshot
       - id: WeaponCapacitorRechargerCircuitboard
-#-----------------------------Ящик вспомогательных боеприпасов------------------ 
+#-----------------------------Ящик вспомогательных боеприпасов------------------
 - type: entity
   id: VitzCrateAmmoHelp
   parent: VitzCrate
@@ -1961,7 +1961,7 @@
       - id: MagazineBoxLightRifleBig
       - id: MagazineBoxAntiMaterielBig
       - id: MagazineBoxAntiMaterielBig
-#-----------------------------Ящик дополнительных боеприпасов------------------ 
+#-----------------------------Ящик дополнительных боеприпасов------------------
 - type: entity
   id: VitzCrateAmmoLight
   parent: VitzCrate
@@ -1980,7 +1980,7 @@
       - id: MagazineBoxMagnum
       - id: MagazineBoxMagnum
       - id: MagazineBoxMagnum
-#-----------------------------Ящик пехотной военной формы------------------ 
+#-----------------------------Ящик пехотной военной формы------------------
 - type: entity
   id: VitzCrateFormPeh
   parent: VitzCrate
@@ -2008,7 +2008,7 @@
       - id: VitzeBelt
       - id: VitzeBelt
       - id: VitzeBelt
-#-----------------------------Ящик флотской военной формы------------------ 
+#-----------------------------Ящик флотской военной формы------------------
 - type: entity
   id: VitzCrateFormFlt
   parent: VitzCrate
@@ -2036,7 +2036,7 @@
       - id: VitzeBelt
       - id: VitzeBelt
       - id: VitzeBelt
-#-----------------------------Ящик брони------------------ 
+#-----------------------------Ящик брони------------------
 - type: entity
   id: VitzCrateArmor
   parent: VitzCrate
@@ -2061,7 +2061,7 @@
       - id: VitzHardsuitPilot
       - id: VitzHardsuitPilot
       - id: VitzHardsuitPilot
-#-----------------------------Ящик связи------------------ 
+#-----------------------------Ящик связи------------------
 - type: entity
   id: VitzCrateRadio
   parent: VitzCrate
@@ -2086,7 +2086,7 @@
       - id: VitzEncryptionKeyPil
       - id: VitzEncryptionKeyPil
       - id: VitzEncryptionKeyCom
-#-----------------------------Ящик оптики------------------ 
+#-----------------------------Ящик оптики------------------
 - type: entity
   id: VitzCrateOptic
   parent: VitzCrate
@@ -2100,7 +2100,7 @@
       - id: Binoculars
       - id: OpticalSight
       - id: OpticalSight
-#-------------------------------------------------Радио призыва------------------ 
+#-------------------------------------------------Радио призыва------------------
 - type: entity
   parent: ReinforcementRadio
   id: ReinforcementRadioVitzEfreitor
@@ -2116,7 +2116,7 @@
       settings: default
   - type: GhostRoleMobSpawner
     prototype: VitzMobHumanEfreitor
-    
+
 - type: entity
   parent: ReinforcementRadio
   id: ReinforcementRadioVitzStarshina

@@ -36,7 +36,6 @@
             ServiceWorker: [ 2, 2 ]
             Tailor: [ 1, 1 ]
             #Engineering (8)
-            ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 3, 3 ]
             StationEngineer: [ 5, 5 ]
             TechnicalAssistant: [ 4, 4 ] #intern, exclude from dept count

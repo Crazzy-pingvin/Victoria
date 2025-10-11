@@ -106,7 +106,7 @@
   unit: materials-unit-boll
   icon: { sprite: Objects/Materials/materials.rsi, state: cotton }
   color: "#cccccc"
-  price: 0.01 #Who knew cotton was infinitely more valuable than silk
+  price: 0.05 #Who knew cotton was infinitely more valuable than silk
 
 - type: material
   id: Bones

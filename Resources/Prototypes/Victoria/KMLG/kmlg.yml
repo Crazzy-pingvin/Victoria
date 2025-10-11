@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------грузчик---------- 
+#------------------------------------грузчик----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformCargotech
@@ -14,7 +14,7 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.20
     sprintModifier: 1.20
-#------------------------------------старший снабженец---------- 
+#------------------------------------старший снабженец----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformCc
@@ -26,7 +26,7 @@
     sprite: Victoria/KMLG/Equipment/kmlg_uniform_qm.rsi
   - type: Clothing
     sprite: Victoria/KMLG/Equipment/kmlg_uniform_qm.rsi
-#------------------------------------ремонтник---------- 
+#------------------------------------ремонтник----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformRepairman
@@ -38,7 +38,7 @@
     sprite: Victoria/KMLG/Equipment/kmlg_uniform_repairman.rsi
   - type: Clothing
     sprite: Victoria/KMLG/Equipment/kmlg_uniform_repairman.rsi
-#------------------------------------инженер---------- 
+#------------------------------------инженер----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformEngineer
@@ -54,11 +54,11 @@
     modifiers:
       coefficients:
         Blunt: 0.95
-        Shock: 0.9 
+        Shock: 0.9
         Caustic: 0.9
         Heat: 0.95
         Cold: 0.95
-#------------------------------------старший инженер---------- 
+#------------------------------------старший инженер----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformCE
@@ -74,11 +74,11 @@
     modifiers:
       coefficients:
         Blunt: 0.9
-        Shock: 0.9 
+        Shock: 0.9
         Caustic: 0.9
         Heat: 0.9
         Cold: 0.9
-#------------------------------------пилот---------- 
+#------------------------------------пилот----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformPilot
@@ -96,8 +96,8 @@
         Cold: 0.9
   - type: TemperatureProtection
     heatingCoefficient: 1.1
-    coolingCoefficient: 0.1        
-#------------------------------------сервисник---------- 
+    coolingCoefficient: 0.1
+#------------------------------------сервисник----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformServise
@@ -109,7 +109,7 @@
     sprite: Victoria/KMLG/Equipment/kmlg_uniform_servise.rsi
   - type: Clothing
     sprite: Victoria/KMLG/Equipment/kmlg_uniform_servise.rsi
-#------------------------------------охранник---------- 
+#------------------------------------охранник----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: KMLGUniformSecurity
@@ -156,8 +156,8 @@
     sprite: Victoria/KMLG/Equipment/kmlg_boots_work.rsi
   - type: Clothing
     sprite: Victoria/KMLG/Equipment/kmlg_boots_work.rsi
-#---------------------------------------------перчатки------------------------------    
-#------------------------------------перчатки охраны---------- 
+#---------------------------------------------перчатки------------------------------
+#------------------------------------перчатки охраны----------
 - type: entity
   parent: ClothingHandsBase
   id: KMLGGlovesSec
@@ -178,8 +178,8 @@
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.9
-#---------------------------------------------------головняк--------------------------------------------       
-#------------------------------------пилотка----------     
+#---------------------------------------------------головняк--------------------------------------------
+#------------------------------------пилотка----------
 - type: entity
   parent: ClothingHeadBase
   id: KMLGCapP
@@ -196,7 +196,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------беретка---------- 
+#------------------------------------беретка----------
 - type: entity
   parent: ClothingHeadBase
   id: KMLGBeret
@@ -213,7 +213,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------фуражка---------- 
+#------------------------------------фуражка----------
 - type: entity
   parent: ClothingHeadBase
   id: KMLGCap
@@ -263,7 +263,7 @@
     - ClothMade
     - WhitelistChameleon
 #---------------------------------------------------------рюкзаки----------------------------------
-#------------------------------------стандартный рюкзак---------- 
+#------------------------------------стандартный рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: KMLGBackpackStd
@@ -276,7 +276,7 @@
   - type: Storage
     grid:
     - 0,0,6,4
-#------------------------------------радиорюкзак---------- 
+#------------------------------------радиорюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: KMLGBackpackRad
@@ -303,7 +303,7 @@
     grid:
     - 0,0,6,3
 #-----------------------------------------------------------------------эполеты--------------------------
-#------------------------------------10---------- 
+#------------------------------------10----------
 - type: entity
   parent: ClothingNeckBase
   id: KMLGEpolets10
@@ -313,7 +313,7 @@
   components:
   - type: Sprite
     sprite: Victoria/KMLG/Equipment/kmlg_epaulet_10.rsi
-#------------------------------------20---------- 
+#------------------------------------20----------
 - type: entity
   parent: ClothingNeckBase
   id: KMLGEpolets20
@@ -323,7 +323,7 @@
   components:
   - type: Sprite
     sprite: Victoria/KMLG/Equipment/kmlg_epaulet_20.rsi
-#------------------------------------30---------- 
+#------------------------------------30----------
 - type: entity
   parent: ClothingNeckBase
   id: KMLGEpolets30
@@ -361,12 +361,12 @@
     sprite: Victoria/KMLG/Armor/kmlg_armor.rsi
   - type: Clothing
     sprite: Victoria/KMLG/Armor/kmlg_armor.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.55
         Slash: 0.65
-        Piercing: 0.65 
+        Piercing: 0.65
         Heat: 0.65
         Cold: 0.8
   - type: ExplosionResistance
@@ -394,7 +394,7 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.9
@@ -420,8 +420,8 @@
   - type: TemperatureProtection
     heatingCoefficient: 1.1
     coolingCoefficient: 0.1
-#-------------------------------------------------------------скафандры----------------------------    
-#------------------------------------атмосферный щит----------      
+#-------------------------------------------------------------скафандры----------------------------
+#------------------------------------атмосферный щит----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: KMLGNoocHardsuitField
@@ -451,7 +451,7 @@
   - type: PointLight
     color: "#00f0fb"
     radius: 1.5
-#------------------------------------голова атмосферного щита----------  
+#------------------------------------голова атмосферного щита----------
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: KMLGNoocHelmetHardsuitField
@@ -472,7 +472,7 @@
         Radiation: 0.1
   - type: ExplosionResistance
     damageCoefficient: 0.8
-#------------------------------------скафандр----------      
+#------------------------------------скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: KMLGHardsuit
@@ -502,9 +502,9 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: KMLGHelmetHardsuit
-#------------------------------------шлем скафандра----------  
+#------------------------------------шлем скафандра----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: KMLGHelmetHardsuit
   name: Шлем скафандра Космологистики
   description: Стандартный простой шлем скафандра корпорации Космологистика
@@ -529,7 +529,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.8
 #-----------------------------------------снаряга и пояса------------------------------------------
-#-------------------------------------печать-----------------    
+#-------------------------------------печать-----------------
 - type: entity
   name: Печать Космологистики
   suffix: KMLG
@@ -563,7 +563,7 @@
       Дата:
       Составитель документа:
       Должность составителя:
-      
+
       Полное содержание документа со всей необходимой информацией и описанием
       =============================================
                                   [italic]Место для печатей[/italic]
@@ -583,12 +583,12 @@
   - type: Storage
     maxItemSize: Normal
   - type: Appearance
-  
+
 - type: entity
   id: KMLGBeltFilledEng
   parent: KMLGBelt
   suffix: Заполненный, Инструменты, Космологистика
-  components:    
+  components:
   - type: StorageFill
     contents:
       - id: CrowbarYellow
@@ -597,25 +597,25 @@
       - id: Wirecutter
       - id: Welder
       - id: Multitool
-      
+
 - type: entity
   id: KMLGBeltFilledSec
   parent: KMLGBelt
   suffix: Заполненный, Охрана, Космологистика
-  components:    
+  components:
   - type: StorageFill
     contents:
       - id: WeaponPistolMk58
       - id: MagazinePistol
       - id: MagazinePistol
       - id: MagazinePistol
-#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: KMLGAccess
   name: access-kmlg
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsKMLGAccess
@@ -634,7 +634,7 @@
       board: [ DoorElectronicsKMLGAccess ]
   - type: Sprite
     sprite: Victoria/KMLG/kmlg_airlock.rsi
-#------------------------------------свободный шлюз---------- 
+#------------------------------------свободный шлюз----------
 - type: entity
   parent: Airlock
   id: KMLGAirlock
@@ -642,7 +642,7 @@
   components:
   - type: Sprite
     sprite: Victoria/KMLG/kmlg_airlock.rsi
-#------------------------------------закрытый стеклянный шлюз---------- 
+#------------------------------------закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: KMLGAirlockLockedGlass
@@ -653,8 +653,8 @@
       board: [ DoorElectronicsKMLGAccess ]
   - type: Sprite
     sprite: Victoria/KMLG/kmlg_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass     
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -663,9 +663,9 @@
   components:
   - type: Sprite
     sprite: Victoria/KMLG/kmlg_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass  
-#------------------------------------стыковочный---------- 
+  - type: Paintable
+    group: null
+#------------------------------------стыковочный----------
 - type: entity
   parent: AirlockExternalShuttleLocked
   name: Стыковочный шлюз
@@ -680,7 +680,7 @@
 #-----------------------------------роль--------------------------------------
 - type: playTimeTracker
   id: JobEventKMLG
-#------------------------------------стандарт карты---------- 
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: KMLGIDCard
@@ -707,8 +707,8 @@
     - DoorBumpOpener
     - WhitelistChameleon
   - type: StealTarget
-    stealGroup: IDCard    
-#------------------------------------карта грузчика---------- 
+    stealGroup: IDCard
+#------------------------------------карта грузчика----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardCt
@@ -725,7 +725,7 @@
     - External
   - type: PresetIdCard
     name: грузчик КМЛГ
-#------------------------------------карта старшего снабженца---------- 
+#------------------------------------карта старшего снабженца----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardCc
@@ -742,7 +742,7 @@
     - External
   - type: PresetIdCard
     name: ст.снабженец КМЛГ
-#------------------------------------карта ремонтника---------- 
+#------------------------------------карта ремонтника----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardRm
@@ -759,7 +759,7 @@
     - External
   - type: PresetIdCard
     name: ремонтник КМЛГ
-#------------------------------------карта инженера---------- 
+#------------------------------------карта инженера----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardE
@@ -776,7 +776,7 @@
     - External
   - type: PresetIdCard
     name: инженер КМЛГ
-#------------------------------------карта старшего инженера---------- 
+#------------------------------------карта старшего инженера----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardCe
@@ -793,7 +793,7 @@
     - External
   - type: PresetIdCard
     name: ст.инженер КМЛГ
-#------------------------------------карта охранника---------- 
+#------------------------------------карта охранника----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardS
@@ -810,7 +810,7 @@
     - External
   - type: PresetIdCard
     name: охранник КМЛГ
-#------------------------------------карта сержанта-охранника---------- 
+#------------------------------------карта сержанта-охранника----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardCs
@@ -827,7 +827,7 @@
     - External
   - type: PresetIdCard
     name: сержант-охранник КМЛГ
-#------------------------------------карта сервисника---------- 
+#------------------------------------карта сервисника----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardSw
@@ -844,7 +844,7 @@
     - External
   - type: PresetIdCard
     name: сервисный работник КМЛГ
-#------------------------------------карта пилота---------- 
+#------------------------------------карта пилота----------
 - type: entity
   parent: KMLGIDCard
   id: KMLGIDCardP
@@ -861,7 +861,7 @@
     - External
   - type: PresetIdCard
     name: пилот КМЛГ
-#------------------------------------стандарт КПК---------- 
+#------------------------------------стандарт КПК----------
 - type: entity
   abstract: true
   parent: BasePDA
@@ -886,7 +886,7 @@
   - type: Icon
     sprite: Victoria/KMLG/Equipment/kmlg_pda.rsi
     state: pda
-#------------------------------------КПК грузчика----------    
+#------------------------------------КПК грузчика----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDACt
@@ -899,7 +899,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК старшего снабженца----------    
+#------------------------------------КПК старшего снабженца----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDACc
@@ -912,7 +912,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК ремонтника----------    
+#------------------------------------КПК ремонтника----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDARm
@@ -925,7 +925,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК инженер----------    
+#------------------------------------КПК инженер----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDAE
@@ -938,7 +938,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК старшего инженера----------    
+#------------------------------------КПК старшего инженера----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDACe
@@ -951,7 +951,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК охранникаа----------    
+#------------------------------------КПК охранникаа----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDAS
@@ -964,7 +964,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК сержанта----------    
+#------------------------------------КПК сержанта----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDACs
@@ -977,7 +977,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК сервисника----------    
+#------------------------------------КПК сервисника----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDASw
@@ -990,7 +990,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК пилота----------    
+#------------------------------------КПК пилота----------
 - type: entity
   parent: KMLGPDA
   id: KMLGPDAP
@@ -1003,17 +1003,17 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: KMLGRadio
   name: name-of-KMLGRadio
-  keycode: 'кл' 
+  keycode: 'кл'
   frequency: 3456
   color: "#394e35"
   longRange: false
 #-------------------------------------------------------------------ключи---------------------------------------------------------------------
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -1030,8 +1030,8 @@
   - type: Sprite
     sprite: Victoria/KMLG/Equipment/kmlg_encryption_keys.rsi
   - type: StealTarget
-    stealGroup: EncryptionKey   
-#-----------------------------ключ шифрования----------------------------------------      
+    stealGroup: EncryptionKey
+#-----------------------------ключ шифрования----------------------------------------
 - type: entity
   parent: KMLGBaseEncryptionKey
   id: KMLGEncryptionKey
@@ -1047,7 +1047,7 @@
     layers:
     - state: crypt_gray
     - state: label
-#-----------------------------гарнитура----------------------------------------  
+#-----------------------------гарнитура----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: KMLGHeadset
@@ -1062,7 +1062,7 @@
     sprite: Victoria/KMLG/Equipment/kmlg_garniture.rsi
   - type: Clothing
     sprite: Victoria/KMLG/Equipment/kmlg_garniture.rsi
-#--------------------------------------------сумки------------------------------------ 
+#--------------------------------------------сумки------------------------------------
 #------------------------------------гражданские-------
 - type: entity
   parent: KMLGBackpackStd
@@ -1295,7 +1295,7 @@
       ------------------------------------------------------------------------
       Краткий лор организации: Корпорация Большой Пятёрки, что решила занять нишу транспорта во всех возможных областях. Крупнейший грузовой и пассажирский перевозчик в Галактике. Также это корпорация прокладчик магистралей, большой спонсор колонизации, строитель инфраструктуры транспорта, крупный производитель самого разного транспорта и деталей для него же, разработчик всего перечисленного и самая богатая корпорация в изведанном Космосе.
 #-----------------------------------------------гиры---------------------------------------
-#------------------------------------грузчик---------- 
+#------------------------------------грузчик----------
 - type: startingGear
   id: KMLGGearCt
   equipment:
@@ -1307,7 +1307,7 @@
     ears: KMLGHeadset
     gloves: ClothingHandsGlovesFingerless
     pocket1: KMLGPaperCt
-#------------------------------------старший снабженец---------- 
+#------------------------------------старший снабженец----------
 - type: startingGear
   id: KMLGGearCc
   equipment:
@@ -1319,7 +1319,7 @@
     ears: KMLGHeadset
     neck: KMLGEpolets10
     pocket1: KMLGPaperCc
-#------------------------------------ремонтник---------- 
+#------------------------------------ремонтник----------
 - type: startingGear
   id: KMLGGearRm
   equipment:
@@ -1334,7 +1334,7 @@
     outerClothing: KMLGCoat
     eyes: ClothingEyesGlassesMeson
     pocket1: KMLGPaperRm
-#------------------------------------инженер---------- 
+#------------------------------------инженер----------
 - type: startingGear
   id: KMLGGearE
   equipment:
@@ -1348,7 +1348,7 @@
     belt: KMLGBeltFilledEng
     eyes: ClothingEyesGlassesMeson
     pocket1: KMLGPaperE
-#------------------------------------старший инженер---------- 
+#------------------------------------старший инженер----------
 - type: startingGear
   id: KMLGGearCe
   equipment:
@@ -1363,7 +1363,7 @@
     eyes: ClothingEyesGlassesMeson
     neck: KMLGEpolets10
     pocket1: KMLGPaperCe
-#------------------------------------охрана---------- 
+#------------------------------------охрана----------
 - type: startingGear
   id: KMLGGearS
   equipment:
@@ -1378,7 +1378,7 @@
     outerClothing: KMLGArmor
     eyes: ClothingEyesGlassesSecurity
     pocket1: KMLGPaperS
-#------------------------------------сержант---------- 
+#------------------------------------сержант----------
 - type: startingGear
   id: KMLGGearCs
   equipment:
@@ -1394,7 +1394,7 @@
     eyes: ClothingEyesGlassesSecurity
     neck: KMLGEpolets10
     pocket1: KMLGPaperCs
-#------------------------------------сервисник---------- 
+#------------------------------------сервисник----------
 - type: startingGear
   id: KMLGGearSw
   equipment:
@@ -1405,7 +1405,7 @@
     id: KMLGPDASw
     ears: KMLGHeadset
     pocket1: KMLGPaperSw
-#------------------------------------пилот---------- 
+#------------------------------------пилот----------
 - type: startingGear
   id: KMLGGearP
   equipment:
@@ -1430,7 +1430,7 @@
   - Орландо
   - Энди
   - Джон
-  - Мартин  
+  - Мартин
   - Ричард
   - Кен
   - Грем
@@ -1491,7 +1491,7 @@
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------грузчик----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGCtR
   randomizeName: false
@@ -1533,7 +1533,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Грузчик Космологистики Спавнер
   id: KMLGMobCt
@@ -1555,7 +1555,7 @@
     - KMLG
 #---------------------------------старший снабженец----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGCcR
   randomizeName: false
@@ -1597,7 +1597,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Старший снабженец Космологистики Спавнер
   id: KMLGMobCc
@@ -1619,7 +1619,7 @@
     - KMLG
 #---------------------------------ремонтник----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGRmR
   randomizeName: false
@@ -1661,7 +1661,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Ремонтник Космологистики Спавнер
   id: KMLGMobRm
@@ -1683,7 +1683,7 @@
     - KMLG
 #---------------------------------инженер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGER
   randomizeName: false
@@ -1725,7 +1725,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Инженер Космологистики Спавнер
   id: KMLGMobE
@@ -1747,7 +1747,7 @@
     - KMLG
 #---------------------------------старший инженер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGCeR
   randomizeName: false
@@ -1789,7 +1789,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Старший инженер Космологистики Спавнер
   id: KMLGMobCe
@@ -1811,7 +1811,7 @@
     - KMLG
 #---------------------------------охранник----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGSR
   randomizeName: false
@@ -1853,7 +1853,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Охранник Космологистики Спавнер
   id: KMLGMobS
@@ -1875,7 +1875,7 @@
     - KMLG
 #---------------------------------сержант----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGCsR
   randomizeName: false
@@ -1917,7 +1917,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Сержант Космологистики Спавнер
   id: KMLGMobCs
@@ -1939,7 +1939,7 @@
     - KMLG
 #---------------------------------сервисник----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGSwR
   randomizeName: false
@@ -1981,7 +1981,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Сервисный работник Космологистики Спавнер
   id: KMLGMobSw
@@ -2003,7 +2003,7 @@
     - KMLG
 #---------------------------------пилот----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
   id: KMLGPR
   randomizeName: false
@@ -2045,7 +2045,7 @@
     - type: NpcFactionMember
       factions:
       - KMLG
-  
+
 - type: entity
   name: Пилот Космологистики Спавнер
   id: KMLGMobP
@@ -2065,7 +2065,7 @@
   - type: NpcFactionMember
     factions:
     - KMLG
-#-------------------------------------Спавнер потеряных-----------------------------------  
+#-------------------------------------Спавнер потеряных-----------------------------------
 - type: entity
   name: name-of-LostKMLGCt
   id: LostKMLGCtSpawner
@@ -2080,7 +2080,7 @@
       prototypes:
       - RandomKMLGCt
       chance: 1
-      
+
 - type: entity
   id: RandomKMLGCt
   name: name-of-RandomKMLGCt

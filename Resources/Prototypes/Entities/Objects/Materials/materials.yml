@@ -437,10 +437,6 @@
         reagents:
         - ReagentId: Fiber
           Quantity: 5
-  - type: Material
-  - type: PhysicalComposition
-    materialComposition:
-      CottonMaterial: 100
   - type: Extractable
     juiceSolution:
       reagents:
@@ -468,13 +464,6 @@
     state: cotton
   - type: Stack
     count: 1
-
-- type: material
-  id: CottonMaterial
-  stackEntity: MaterialCotton1
-  name: хлопок
-  icon: { sprite: Objects/Materials/materials.rsi, state: cotton }
-  price: 0.05
 
 - type: entity
   parent: MaterialBase

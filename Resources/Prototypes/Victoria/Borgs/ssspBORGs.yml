@@ -9,7 +9,7 @@
 - type: radioChannel
   id: Bifaze
   name: name-of-SSSPborgs-radio
-  keycode: 'би' 
+  keycode: 'би'
   frequency: 0110
   color: "#ac0000"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
@@ -138,10 +138,10 @@
     - state: petr
     - state: icon-combat
   - type: ItemBorgModule
-    items:
-    - PetrSMGBorg
-    - Emag
-    - CombatKnife
+    hands:
+    - item: PetrSMGBorg
+    - item: Emag
+    - item: CombatKnife
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/petr_modules.rsi, state: combat-petr }
 
@@ -157,12 +157,12 @@
     - state: petr
     - state: icon-spy
   - type: ItemBorgModule
-    items:
-    - PetrPistolBorg
-    - Emag
-    - PetrRubberStamp
-    - Brutepack10Lingering
-    - CombatKnife
+    hands:
+    - item: PetrPistolBorg
+    - item: Emag
+    - item: PetrRubberStamp
+    - item: Brutepack10Lingering
+    - item: CombatKnife
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/petr_modules.rsi, state: spy-petr }
 

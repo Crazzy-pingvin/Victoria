@@ -217,14 +217,6 @@
     implant: RadioImplant
 
 - type: entity
-  id: RadioImplanter
-  suffix: radio Syndicate
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: RadioImplant
-
-- type: entity
   id: UplinkImplanter
   name: uplink implanter
   parent: BaseImplantOnlyImplanterSyndi

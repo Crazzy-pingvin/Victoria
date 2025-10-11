@@ -68,46 +68,6 @@
           - MachineLayer
 
 - type: entity
-  parent: BaseStructure
-  id: BaseScrapLarge
-  abstract: true
-  name: scrap
-  description: Worthless junk. You could probably get some materials out of it though.
-  suffix: Scrap
-  components:
-  - type: InteractionOutline
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: FlimsyMetallic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - Recyclable
-  - type: Transform
-    anchored: False
-    noRot: true
-  - type: Physics
-    bodyType: Dynamic
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.40,-0.40,0.40,0.40"
-        density: 200
-        mask:
-          - MachineMask
-        layer:
-          - MachineLayer
-
-- type: entity
   parent: BaseScrap
   id: ScrapSteel
   name: blasted steel pile
