@@ -3077,13 +3077,13 @@
     - type: Sprite
       sprite: Victoria/CDC/Sintetic/cdc_borg_module.rsi
       layers:
-      - state: generic
+      - state: cdc
       - state: icon-plasm_pistol
     - type: ItemBorgModule
       items:
         - CDCPistolBorg
     - type: BorgModuleIcon
-      icon: { sprite: Victoria/CDC/Weapon/cdc_pistol.rsi, state: icon }
+      icon: { sprite: Victoria/CDC/Sintetic/cdc_borg_module.rsi, state: gun-cdc }
     - type: Tag
       tags:
       - BorgModuleCDC
@@ -3098,14 +3098,14 @@
     - type: Sprite
       sprite: Victoria/CDC/Sintetic/cdc_borg_module.rsi
       layers:
-      - state: generic
+      - state: cdc
       - state: icon-saber
     - type: ItemBorgModule
       items:
         - CDCSaber
         - CDCSaberHigh
     - type: BorgModuleIcon
-      icon: { sprite: Victoria/CDC/Weapon/cdc_saber.rsi, state: icon }
+      icon: { sprite: Victoria/CDC/Sintetic/cdc_borg_module.rsi, state: scorpion-cdc }
     - type: Tag
       tags:
       - BorgModuleCDC
@@ -3250,6 +3250,7 @@
     makeSentient: true
     name: Борг "Завет" Конгломерата
     description: Халифатский Божественный Конгломерат не готов отправлять слишком большое количество солдат в бой. На замену приходят борги. Будьте преданы своей стране, народу и Аллаху! Слушайтесь командира, защищайте свои земли и несите смерть всем врагам!
+  - type: GhostTakeoverAvailable #поправка чтоб гостролька бралась
 #---------------------------------------------ВИ Исмаил------------------------
 - type: siliconLaw
   id: CDC_AI1

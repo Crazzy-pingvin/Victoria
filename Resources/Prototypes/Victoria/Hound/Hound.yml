@@ -3596,7 +3596,7 @@
   id: HoundBannerStd
   parent: BannerBase
   name: знамя Хаунд
-  suffix: Ноократия
+  suffix: Хаунд
   description: Кажется эти парни очень любят собак. И окроплять знамёна кровью.
   components:
   - type: Sprite
