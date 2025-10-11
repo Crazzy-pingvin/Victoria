@@ -4243,12 +4243,12 @@
   - type: PointLight
     color: "#ffffff"
 
-#Подснежник
+#Адмем Подснежник
 - type: entity
   id: NoocBorgSnowdrop
   parent: BaseBorgChassisNooc
   name: Диверсионный борг "Подснежник"
-  description: Довольно компактный борг, предназначенный для поддержки диверсионных групп. Снаряжён устройством активной маскировки, дымовой завесой, снайперским лазером и омнитулом. (Для получения свободной руки- взорвите флешку И НЕ МЕНЯЙТЕ МОДУЛИ, ЭТО ПРИВЕДЁТ К ЕЁ ИСЧЕЗНОВЕНИЮ)
+  description: Довольно компактный борг, предназначенный для поддержки диверсионных групп. Снаряжён устройством активной маскировки, дымовой завесой, снайперским лазером и омнитулом.
   # abstract: true
   components:
   - type: Destructible
@@ -4308,6 +4308,9 @@
     # sprite:
       # sprite: Mobs/Silicon/chassis.rsi
       # state: robot
+
+
+
 #Спавнер
 - type: entity
   id: NoocBorgSnowdropSpawner
@@ -4338,16 +4341,20 @@
   - type: Tag
     tags:
     - BorgModuleNooc
-#Модуль подснежника
+
+#Адмем Модуль подснежника
+
 - type: entity
-  id: BorgModuleNoocSnowdrop
+  id: BorgModuleNoocSnowdropAdmem
   parent: [ BaseBorgModuleNooc, BaseProviderBorgModule ]
+  suffix: Адмемы
   name: Оборудование "Подснежника"
   components:
   - type: Sprite
+    sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi
     layers:
-    - state: generic
-    - state: icon-fire-extinguisher
+    - state: nooc
+    - state: icon-nooc
   - type: ItemBorgModule
     items:
     - NoocRifleBorgSnowdrop
@@ -4355,4 +4362,24 @@
     - Omnitool
     - NoocSnowdropSmoke
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: extinguisher-module }
+    icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }
+
+#Модуль подснежника
+
+- type: entity
+  id: BorgModuleNoocSnowdrop
+  parent: [ BaseBorgModuleNooc, BaseProviderBorgModule ]
+  name: Оборудование "Подснежника"
+  components:
+  - type: Sprite
+    sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi
+    layers:
+    - state: nooc
+    - state: icon-nooc
+  - type: ItemBorgModule
+    items:
+    - NoocRifleBorgSnowdrop
+    - Omnitool
+    - NoocSnowdropSmoke
+  - type: BorgModuleIcon
+    icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }
