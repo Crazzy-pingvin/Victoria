@@ -608,7 +608,7 @@
       map: ["enum.PaperVisualLayers.Stamp"]
       visible: false
   - type: StateChoiceSpawner
-    umpor: UmporPaperMapForestCordonn
+    umpor: UmporPaperMapForestCordon
     mirt: MirtPaperMapForestCordon
     cdc: CDCPaperMapForestCordon
     nt: MirtPaperMapForestCordon
