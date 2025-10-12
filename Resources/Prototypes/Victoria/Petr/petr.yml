@@ -479,7 +479,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 21
+        Piercing: 30
 #------------------------------------пистолет---------- 
 - type: entity
   id: PetrBulletPistol
@@ -491,7 +491,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 13
+        Piercing: 15
 #------------------------------------револьвер----------         
 - type: entity
   id: PetrBulletRevolver
@@ -503,7 +503,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17 
+        Piercing: 15 
         Heat: 5
 #-------------------------------------картриджи---------------------------------------------------------------------------------
 #------------------------------------винтовка---------- 

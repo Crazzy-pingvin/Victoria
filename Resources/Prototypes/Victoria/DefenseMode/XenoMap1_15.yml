@@ -1,6 +1,6 @@
 #------------------------------------------Спавнеры 5 фазы------------------------
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 5
   id: SpawnMobXenoDroneDefAlfaPeriod5Map1D1
   parent: SpawnMobXenoDroneDefAlfa
   categories: [ HideSpawnMenu ]
@@ -11,7 +11,7 @@
     lifetime: 940
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 5
   id: SpawnMobXenoDefAlfaPeriod5Map1DB1B2
   parent: SpawnMobXenoDefAlfa
   categories: [ HideSpawnMenu ]
@@ -22,7 +22,7 @@
     lifetime: 940
 
 - type: entity
-  suffix: Оборона, Бета, Карта 2-10, Фаза 5
+  suffix: Оборона, Бета, Карта 1-15, Фаза 5
   id: SpawnMobXenoDroneDefBetaPeriod5Map1D2
   parent: SpawnMobXenoDroneDefBeta
   categories: [ HideSpawnMenu ]
@@ -33,7 +33,7 @@
     lifetime: 940
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 5
   id: SpawnMobXenoSpitterDefAlfaPeriod5Map1Pl1
   parent: SpawnMobXenoSpitterDefAlfa
   categories: [ HideSpawnMenu ]
@@ -44,7 +44,7 @@
     lifetime: 940
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 5
   id: SpawnMobXenoRunnerDefBetaPeriod5Map1Be1
   parent: SpawnMobXenoRunnerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -55,7 +55,7 @@
     lifetime: 730
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 5
   id: SpawnMobXenoRounyDefAlfaPeriod5Map1Ru1
   parent: SpawnMobXenoRounyDefAlfa
   categories: [ HideSpawnMenu ]
@@ -66,7 +66,7 @@
     lifetime: 730
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 5
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 5
   id: SpawnMobXenoRavagerDefAlfaPeriod5Map1Rz1
   parent: SpawnMobXenoRavagerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -77,7 +77,7 @@
     lifetime: 490
     
 - type: entity
-  suffix: Оборона, Бета, Карта 2-10, Фаза 4
+  suffix: Оборона, Бета, Карта 1-15, Фаза 4
   id: SpawnMobXenoRunnerDefBetaPeriod5Map1Be2
   parent: SpawnMobXenoRunnerDefBeta
   categories: [ HideSpawnMenu ]
@@ -88,7 +88,7 @@
     lifetime: 490
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr1
   parent: SpawnMobXenoPraetorianDefAlfa
   categories: [ HideSpawnMenu ]
@@ -99,7 +99,7 @@
     lifetime: 250
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr2
   parent: SpawnMobXenoPraetorianDefAlfa
   categories: [ HideSpawnMenu ]
@@ -110,7 +110,7 @@
     lifetime: 250
 #------------------------------------------Спавнеры 4 фазы------------------------
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoDroneDefAlfaPeriod4Map1D1
   parent: SpawnMobXenoDroneDefAlfa
   categories: [ HideSpawnMenu ]
@@ -125,7 +125,7 @@
     entity: SpawnMobXenoDroneDefAlfaPeriod5Map1D1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoDefAlfaPeriod4Map1DB1B2
   parent: SpawnMobXenoDefAlfa
   categories: [ HideSpawnMenu ]
@@ -140,7 +140,7 @@
     entity: SpawnMobXenoDefAlfaPeriod5Map1DB1B2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoDroneDefBetaPeriod4Map1D2
   parent: SpawnMobXenoDroneDefBeta
   categories: [ HideSpawnMenu ]
@@ -155,7 +155,7 @@
     entity: SpawnMobXenoDroneDefBetaPeriod5Map1D2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoSpitterDefAlfaPeriod4Map1Pl1
   parent: SpawnMobXenoSpitterDefAlfa
   categories: [ HideSpawnMenu ]
@@ -170,7 +170,7 @@
     entity: SpawnMobXenoSpitterDefAlfaPeriod5Map1Pl1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoRunnerDefAlfaPeriod4Map1Be1
   parent: SpawnMobXenoRunnerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -183,7 +183,7 @@
     entity: SpawnMobXenoRunnerDefAlfaPeriod5Map1Be1
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoRounyDefAlfaPeriod4Map1Ru1
   parent: SpawnMobXenoRounyDefAlfa
   categories: [ HideSpawnMenu ]
@@ -196,7 +196,7 @@
     entity: SpawnMobXenoRounyDefAlfaPeriod5Map1Ru1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoRavagerDefAlfaPeriod4Map1Rz1
   parent: SpawnMobXenoRavagerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -211,7 +211,7 @@
     entity: SpawnMobXenoRavagerDefAlfaPeriod5Map1Rz1
     
 - type: entity
-  suffix: Оборона, Бета, Карта 2-10, Фаза 4
+  suffix: Оборона, Бета, Карта 1-15, Фаза 4
   id: SpawnMobXenoRunnerDefBetaPeriod4Map1Be2
   parent: SpawnMobXenoRunnerDefBeta
   categories: [ HideSpawnMenu ]
@@ -224,7 +224,7 @@
     entity: SpawnMobXenoRunnerDefBetaPeriod5Map1Be2
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr1
   parent: SpawnMobXenoPraetorianDefAlfa
   categories: [ HideSpawnMenu ]
@@ -239,7 +239,7 @@
     entity: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr2
   parent: SpawnMobXenoPraetorianDefAlfa
   categories: [ HideSpawnMenu ]
@@ -252,7 +252,7 @@
     entity: SpawnMobXenoPraetorianDefAlfaPeriod5Map1Pr2
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 4
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 4
   id: SpawnMobXenoQueenDefAlfaPeriod3Map1Cor1
   parent: SpawnMobXenoQueenDefAlfa
   categories: [ HideSpawnMenu ]
@@ -263,7 +263,7 @@
     lifetime: 310
 #------------------------------------------Спавнеры 3 фазы------------------------
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoDroneDefAlfaPeriod3Map1D1
   parent: SpawnMobXenoDroneDefAlfa
   categories: [ HideSpawnMenu ]
@@ -276,7 +276,7 @@
     entity: SpawnMobXenoDroneDefAlfaPeriod4Map1D1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoDefAlfaPeriod3Map1DB1B2
   parent: SpawnMobXenoDefAlfa
   categories: [ HideSpawnMenu ]
@@ -289,7 +289,7 @@
     entity: SpawnMobXenoDefAlfaPeriod4Map1DB1B2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoDroneDefBetaPeriod3Map1D2
   parent: SpawnMobXenoDroneDefBeta
   categories: [ HideSpawnMenu ]
@@ -302,7 +302,7 @@
     entity: SpawnMobXenoDroneDefBetaPeriod4Map1D2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoSpitterDefAlfaPeriod3Map1Pl1
   parent: SpawnMobXenoSpitterDefAlfa
   categories: [ HideSpawnMenu ]
@@ -315,7 +315,7 @@
     entity: SpawnMobXenoSpitterDefAlfaPeriod4Map1Pl1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoRunnerDefAlfaPeriod3Map1Be1
   parent: SpawnMobXenoRunnerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -328,7 +328,7 @@
     entity: SpawnMobXenoRunnerDefAlfaPeriod4Map1Be1
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoRounyDefAlfaPeriod3Map1Ru1
   parent: SpawnMobXenoRounyDefAlfa
   categories: [ HideSpawnMenu ]
@@ -341,7 +341,7 @@
     entity: SpawnMobXenoRounyDefAlfaPeriod4Map1Ru1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoRavagerDefAlfaPeriod3Map1Rz1
   parent: SpawnMobXenoRavagerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -354,7 +354,7 @@
     entity: SpawnMobXenoRavagerDefAlfaPeriod4Map1Rz1
     
 - type: entity
-  suffix: Оборона, Бета, Карта 2-10, Фаза 3
+  suffix: Оборона, Бета, Карта 1-15, Фаза 3
   id: SpawnMobXenoRunnerDefBetaPeriod3Map1Be2
   parent: SpawnMobXenoRunnerDefBeta
   categories: [ HideSpawnMenu ]
@@ -369,7 +369,7 @@
     entity: SpawnMobXenoRunnerDefBetaPeriod4Map1Be2
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoPraetorianDefAlfaPeriod3Map1Pr1
   parent: SpawnMobXenoPraetorianDefAlfa
   categories: [ HideSpawnMenu ]
@@ -382,7 +382,7 @@
     entity: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr1
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 3
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 3
   id: SpawnMobXenoPraetorianDefAlfaPeriod3Map1Pr2
   parent: SpawnMobXenoPraetorianDefAlfa
   categories: [ HideSpawnMenu ]
@@ -395,7 +395,7 @@
     entity: SpawnMobXenoPraetorianDefAlfaPeriod4Map1Pr2
 #------------------------------------------Спавнеры 2 фазы------------------------
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoDroneDefAlfaPeriod2Map1D1
   parent: SpawnMobXenoDroneDefAlfa
   categories: [ HideSpawnMenu ]
@@ -408,7 +408,7 @@
     entity: SpawnMobXenoDroneDefAlfaPeriod3Map1D1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoDefAlfaPeriod2Map1DB1B2
   parent: SpawnMobXenoDefAlfa
   categories: [ HideSpawnMenu ]
@@ -421,7 +421,7 @@
     entity: SpawnMobXenoDefAlfaPeriod3Map1DB1B2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoDroneDefBetaPeriod2Map1D2
   parent: SpawnMobXenoDroneDefBeta
   categories: [ HideSpawnMenu ]
@@ -434,7 +434,7 @@
     entity: SpawnMobXenoDroneDefBetaPeriod3Map1D2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoSpitterDefAlfaPeriod2Map1Pl1
   parent: SpawnMobXenoSpitterDefAlfa
   categories: [ HideSpawnMenu ]
@@ -447,7 +447,7 @@
     entity: SpawnMobXenoSpitterDefAlfaPeriod3Map1Pl1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoRunnerDefAlfaPeriod2Map1Be1
   parent: SpawnMobXenoRunnerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -460,7 +460,7 @@
     entity: SpawnMobXenoRunnerDefAlfaPeriod3Map1Be1
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoRounyDefAlfaPeriod2Map1Ru1
   parent: SpawnMobXenoRounyDefAlfa
   categories: [ HideSpawnMenu ]
@@ -473,7 +473,7 @@
     entity: SpawnMobXenoRounyDefAlfaPeriod3Map1Ru1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 2
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 2
   id: SpawnMobXenoRavagerDefAlfaPeriod2Map1Rz1
   parent: SpawnMobXenoRavagerDefAlfa
   categories: [ HideSpawnMenu ]
@@ -486,7 +486,7 @@
     entity: SpawnMobXenoRavagerDefAlfaPeriod3Map1Rz1
 #------------------------------------------Спавнеры 1 фазы------------------------
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 1
   id: SpawnMobXenoDroneDefAlfaPeriod1Map1D1
   parent: SpawnMobXenoDroneDefAlfa
   categories: [ HideSpawnMenu ]
@@ -499,7 +499,7 @@
     entity: SpawnMobXenoDroneDefAlfaPeriod2Map1D1
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 1
   id: SpawnMobXenoDefAlfaPeriod1Map1DB1
   parent: SpawnMobXenoDefAlfa
   categories: [ HideSpawnMenu ]
@@ -512,7 +512,7 @@
     entity: SpawnMobXenoDefAlfaPeriod2Map1DB1B2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 1
   id: SpawnMobXenoDroneDefBetaPeriod1Map1D2
   parent: SpawnMobXenoDroneDefBeta
   categories: [ HideSpawnMenu ]
@@ -525,7 +525,7 @@
     entity: SpawnMobXenoDroneDefBetaPeriod2Map1D2
     
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 1
   id: SpawnMobXenoDefAlfaPeriod1Map1DB2
   parent: SpawnMobXenoDefAlfa
   categories: [ HideSpawnMenu ]
@@ -538,7 +538,7 @@
     entity: SpawnMobXenoDefAlfaPeriod2Map1DB1B2
 
 - type: entity
-  suffix: Оборона, Альфа, Карта 2-10, Фаза 1
+  suffix: Оборона, Альфа, Карта 1-15, Фаза 1
   id: SpawnMobXenoSpitterDefAlfaPeriod1Map1Pl1
   parent: SpawnMobXenoSpitterDefAlfa
   categories: [ HideSpawnMenu ]
@@ -553,7 +553,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1D1
-  suffix: Оборона, Д1
+  suffix: Оборона, Д1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 1500
@@ -563,7 +563,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1B1
-  suffix: Оборона, Бу1
+  suffix: Оборона, Бу1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 1500
@@ -573,7 +573,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggBetaMap1D2
-  suffix: Оборона, Д2
+  suffix: Оборона, Д2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 2100
@@ -583,7 +583,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1B2
-  suffix: Оборона, Бу2
+  suffix: Оборона, Бу2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 2700
@@ -593,7 +593,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Pl1
-  suffix: Оборона, Пл1
+  suffix: Оборона, Пл1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 3000
@@ -603,7 +603,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Be1
-  suffix: Оборона, Бе1
+  suffix: Оборона, Бе1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 3605
@@ -613,7 +613,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Ru1
-  suffix: Оборона, Ру1
+  suffix: Оборона, Ру1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 4145
@@ -623,7 +623,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Rz1
-  suffix: Оборона, Рз1
+  suffix: Оборона, Рз1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 4685
@@ -633,7 +633,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggBetaMap1Be2
-  suffix: Оборона, Бе2
+  suffix: Оборона, Бе2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 5230
@@ -643,7 +643,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Pr1
-  suffix: Оборона, Пр1
+  suffix: Оборона, Пр1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 5860
@@ -653,7 +653,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Pr2
-  suffix: Оборона, Пр2
+  suffix: Оборона, Пр2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 6490
@@ -663,7 +663,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Cor1
-  suffix: Оборона, Кор1
+  suffix: Оборона, Кор1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 7140

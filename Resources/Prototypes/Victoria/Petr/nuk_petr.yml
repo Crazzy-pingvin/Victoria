@@ -249,6 +249,7 @@
     - petr
   name: Петрищевский налёт
   description: Экстремисты-Петрищевцы летят в атаку на станцию, дабы уничтожить глав, учёных и сотрудников СБ. Они готовы даже взорвать станцию! Защищайтесь!
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
     - NukPetr

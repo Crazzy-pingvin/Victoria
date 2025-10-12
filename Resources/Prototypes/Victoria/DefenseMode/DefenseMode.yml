@@ -729,9 +729,7 @@
   showInVote: false
   rules:
     - Defense
-    - SubGamemodesRule
     - BasicStationEventScheduler
-    - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     
 - type: department

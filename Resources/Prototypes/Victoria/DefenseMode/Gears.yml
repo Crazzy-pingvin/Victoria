@@ -694,6 +694,7 @@
     - UmporMechValiantEngineCircuitboard
     - PowerCellHigh
     - PowerCellHigh
+    - WelderIndustrial
 
 - type: entity
   parent: UmporIDCardEngener
@@ -738,6 +739,7 @@
   - UmporMechValiantEngineCircuitboard
   - PowerCellHigh
   - PowerCellHigh
+  - WelderIndustrial
   
 - type: entity
   id: ToolboxGearDefUmporPil
@@ -1370,6 +1372,7 @@
     - MirtMechNibbleEngineCircuitboard
     - PowerCellHigh
     - PowerCellHigh
+    - WelderIndustrial
 
 - type: entity
   parent: MirtIDCardSolder
@@ -1405,6 +1408,7 @@
   - MirtMechNibbleEngineCircuitboard
   - PowerCellHigh
   - PowerCellHigh
+  - WelderIndustrial
   
 - type: entity
   id: ToolboxGearDefMirtPil
@@ -2084,6 +2088,7 @@
     - CDCMechScorpioGeneratorCircuitboard
     - PowerCellHigh
     - PowerCellHigh
+    - WelderIndustrial
 
 - type: entity
   parent: CDCIDCardSolder
@@ -2119,6 +2124,7 @@
   - CDCMechScorpioGeneratorCircuitboard
   - PowerCellHigh
   - PowerCellHigh
+  - WelderIndustrial
   
 - type: entity
   id: ToolboxGearDefCDCPil
@@ -2908,6 +2914,7 @@
     - USSPMechSKCorpusCircuitboard
     - PowerCellHigh
     - PowerCellHigh
+    - WelderIndustrial
 
 - type: entity
   parent: USSPIDCardSold
@@ -2951,6 +2958,7 @@
   - USSPMechSKCorpusCircuitboard
   - PowerCellHigh
   - PowerCellHigh
+  - WelderIndustrial
   
 - type: entity
   id: ToolboxGearDefUSSPPil
