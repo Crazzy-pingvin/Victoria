@@ -1080,6 +1080,31 @@
   isSubfloor: true
   indestructible: true
   canDig: true
+  
+- type: tile
+  id: DefFloorDarkSand
+  name: tiles-darksand-floor-def
+  sprite: /Textures/Tiles/Planet/darksand/darksand.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/darksand/single_edge_SE.png
+    NorthEast: /Textures/Tiles/Planet/darksand/single_edge_NE.png
+    NorthWest: /Textures/Tiles/Planet/darksand/single_edge_NW.png
+    SouthWest: /Textures/Tiles/Planet/darksand/single_edge_SW.png
+    South: /Textures/Tiles/Planet/darksand/double_edge_S.png
+    East: /Textures/Tiles/Planet/darksand/double_edge_E.png
+    North: /Textures/Tiles/Planet/darksand/double_edge_N.png
+    West: /Textures/Tiles/Planet/darksand/double_edge_W.png
+  footstepSounds:
+    collection: FootstepGrass
+  isSubfloor: true
+  indestructible: true
+  canDig: true
 
 # Asteroid
 
@@ -1373,6 +1398,30 @@
   id: DefFloorJungleAstroGrass
   name: tiles-jungle-astro-grass-def
   parent: FloorGrassJungle
+  isSubfloor: true
+  indestructible: true
+  canDig: true
+  
+- type: tile
+  id: DefFloorDarkGrass
+  name: tiles-dark-grass-def
+  sprite: /Textures/Tiles/Planet/darkgrass/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/Tiles/Planet/darkgrass/single_edge.png
+    NorthEast: /Textures/Tiles/Planet/darkgrass/single_edge.png
+    NorthWest: /Textures/Tiles/Planet/darkgrass/single_edge.png
+    SouthWest: /Textures/Tiles/Planet/darkgrass/single_edge.png
+    South: /Textures/Tiles/Planet/darkgrass/double_edge.png
+    East: /Textures/Tiles/Planet/darkgrass/double_edge.png
+    North: /Textures/Tiles/Planet/darkgrass/double_edge.png
+    West: /Textures/Tiles/Planet/darkgrass/double_edge.png
   isSubfloor: true
   indestructible: true
   canDig: true

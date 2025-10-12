@@ -845,9 +845,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 17
-        Piercing: 15
-        Radiation: 20
+        Blunt: 20
+        Piercing: 50
+        Radiation: 30
 #----------------------------------Клинья----------------------------
 - type: entity
   id: USSPBulletWedgeStd
@@ -876,8 +876,8 @@
     damage:
       types:
         Blunt: 30
-        Piercing: 35
-        Radiation: 30
+        Piercing: 70
+        Radiation: 40
 #----------------------------------Дробовиковый----------------------------
 - type: entity
   id: USSPBulletWedgeShotgan

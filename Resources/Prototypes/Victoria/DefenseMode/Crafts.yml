@@ -1289,7 +1289,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 75
+        Piercing: 130
         
 - type: entity
   id: MirtSniperBulletHeavy
@@ -1301,7 +1301,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 85
+        Piercing: 150
   - type: Sprite
     sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
     layers:
@@ -1319,9 +1319,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 10
-        Heat: 70
-        Shock: 15
+        Blunt: 20
+        Heat: 110
+        Shock: 30
 
 - type: entity
   id: CDCSniperBulletPlasmaHotRif
@@ -1333,9 +1333,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 10
-        Heat: 100
-        Shock: 15
+        Blunt: 20
+        Heat: 130
+        Shock: 30
 
 - type: entity
   id: CDCSniperBulletPlasmaLigRif
@@ -1347,8 +1347,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 5
-        Heat: 40
+        Blunt: 10
+        Heat: 80
         Shock: 10    
 #--------------------------------------картриджи------------------------
 - type: Tag
@@ -2866,7 +2866,7 @@
   parent: CDCMechScorpioCorpus
   id: CDCMechScorpioCpGe
   name: Корпус УБР "Скорпион" c генератором
-  description: Соединённые корпус и генератор умпорской шагающей боевой машины "Храбрец".
+  description: Соединённые корпус и генератор конгломератского УБР "Скорпион".
   suffix: Конгломерат
   components:
   - type: Sprite
@@ -2890,7 +2890,7 @@
   parent: CDCMechScorpioCorpus
   id: CDCMechScorpioCpGeTl
   name: Корпус УБР "Скорпион" c полной начинкой
-  description: Соединённые корпус, генератор и двигатель умпорской шагающей боевой машины "Храбрец".
+  description: Соединённые корпус, генератор и двигатель конгломератского УБР "Скорпион".
   suffix: Конгломерат
   components:
   - type: Sprite
@@ -3266,7 +3266,7 @@
   parent: BaseRipleyPartItem
   id: USSPMechSKCorpus
   name: Корпус ШТ "СК-4"
-  description: Бронированная кабина советского шагающего танка "Слава Комунизка" 4ой модели.
+  description: Бронированная кабина советского шагающего танка "Слава Комунизма" 4ой модели.
   suffix: Конгломерат
   components:
   - type: Sprite
@@ -3299,7 +3299,7 @@
   parent: USSPMechSKCorpus
   id: USSPMechSKCpHol
   name: Корпус ШТ "СК-4" c держателями
-  description: Соединённые корпус и генератор умпорской шагающей боевой машины "Храбрец".
+  description: Соединённые корпус и держатели советского шагающего танка "СК-4".
   suffix: Конгломерат
   components:
   - type: Sprite
@@ -3323,7 +3323,7 @@
   parent: USSPMechSKCorpus
   id: USSPMechSKCpHolSh
   name: Корпус ШТ "СК-4" c держателями и щитом
-  description: Соединённые корпус, генератор и двигатель умпорской шагающей боевой машины "Храбрец".
+  description: Соединённые корпус, держатели и щит советского шагающего танка "СК-4".
   suffix: Конгломерат
   components:
   - type: Sprite
