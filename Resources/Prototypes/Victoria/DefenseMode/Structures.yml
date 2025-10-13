@@ -69,7 +69,7 @@
   - type: NpcFactionMember
     factions:
     - DefenseStructureBase
-#------------------------------------------------------------Ключевая подстанция------------------------------------------------------------------    
+#------------------------------------------------------------Ключевая подстанция------------------------------------------------------------------
 - type: entity
   parent: AdminSubstation
   id: SubstationObjective
@@ -120,7 +120,7 @@
   components:
   - type: JourneyTarget
     journeyGroup: Beta
-    
+
 - type: entity
   parent: SubstationObjective
   id: SubstationObjectiveGamma
@@ -173,7 +173,7 @@
   - type: JourneyTarget
     priority: -80
     maxRange: 45
-#------------------------------------------------------------Сервера связи------------------------------------------------------------------   
+#------------------------------------------------------------Сервера связи------------------------------------------------------------------
 #-----------------------------------------Умпорский-------------------------------
 - type: entity
   parent: TelecomServer
@@ -219,7 +219,7 @@
       - USSPEncryptionKey
       - PetrEncryptionKey
       - USSPEncryptionKeyBifaze
-#------------------------------------------------------------Портфабы------------------------------------------------------------------   
+#------------------------------------------------------------Портфабы------------------------------------------------------------------
 #-----------------------------------------Умпорский-------------------------------
 - type: entity
   parent: ClothLathe
@@ -227,13 +227,13 @@
   suffix: Оборона, Умпорский
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeUmporCoat      
+    staticPacks:
+      - PackDefClothLatheUmpor
+
+- type: latheRecipePack
+  id: PackDefClothLatheUmpor
+  recipes:
+  - RecipeUmporCoat
 #-----------------------------------------Миртан-------------------------------
 - type: entity
   parent: ClothLathe
@@ -242,12 +242,12 @@
   components:
   - type: Lathe
     staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeMirtCoat 
+      - PackDefClothLatheMirt
+
+- type: latheRecipePack
+  id: PackDefClothLatheMirt
+  recipes:
+  - RecipeMirtCoat
 #-----------------------------------------Конгломерат-------------------------------
 - type: entity
   parent: ClothLathe
@@ -261,7 +261,7 @@
       - RecipeCottonPaperCloth
       - RecipeNubuck
       - RecipeVelour
-      - RecipeCDCCoat 
+      - RecipeCDCCoat
 #-----------------------------------------Корпорации-------------------------------
 
 #-----------------------------------------СССП-------------------------------
@@ -277,8 +277,8 @@
       - RecipeCottonPaperCloth
       - RecipeNubuck
       - RecipeVelour
-      - RecipeUSSPCoat 
-#------------------------------------------------------------Вечные кабели------------------------------------------------------------------   
+      - RecipeUSSPCoat
+#------------------------------------------------------------Вечные кабели------------------------------------------------------------------
 - type: entity
   parent: CableMV
   id: AdminCableMV
@@ -290,7 +290,7 @@
     time: 99999
     prob: 0
     entity: CableMV
-#------------------------------------------------------------Железная дорога------------------------------------------------------------------    
+#------------------------------------------------------------Железная дорога------------------------------------------------------------------
 - type: entity
   id: FloorRailwayEntity
   name: железная дорога
@@ -300,12 +300,12 @@
     snap:
     - Wall
   components:
-  - type: FloorOccluder   
+  - type: FloorOccluder
   - type: Sprite
     sprite: Victoria/DefenseMode/railway.rsi
     drawdepth: BelowFloor
     layers:
-      - state: railway  
+      - state: railway
   - type: Transform
     anchored: true
   - type: SyncSprite
@@ -342,7 +342,7 @@
   - type: IconSmooth
     key: walls
     base: reinf_over
-    
+
 - type: entity
   parent: BaseWall
   id: WallRockDef
@@ -388,7 +388,7 @@
   components:
   - type: TimedDespawn
     lifetime: 600
-    
+
 - type: entity
   parent: WallRockDef5Min
   id: WallRockDef40Min

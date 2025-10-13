@@ -3260,7 +3260,18 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
+    staticPacks:
+    - PackNoocTechFab
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackNoocTechFab
+  recipes:
       - NoocShieldStd
       - ExplosiveMineBase
       - FragmentationMineBase
@@ -3286,12 +3297,6 @@
       - NoocPistol
       - NoocMG
       - NoocGlassesMed
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #-----------------------------Швейник------------------
 - type: entity
   parent: BaseLathe
@@ -3314,7 +3319,18 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticRecipes:
+    staticPacks:
+    - PackNoocmUniformPrinter
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackNoocmUniformPrinter
+  recipes:
       - NoocUniformNiz
       - NoocUniformVis
       - NoocUniformSr
@@ -3329,12 +3345,6 @@
       - NoocHardsuitField
       - NoocArmorBasic
       - NoocBeret
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #---------------------------------Стандартная форма---------------------
 - type: entity
   id: NoocPaperForm

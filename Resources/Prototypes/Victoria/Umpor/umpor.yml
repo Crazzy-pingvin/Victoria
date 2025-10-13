@@ -3187,7 +3187,18 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
+    staticPacks:
+    - PackUmporTechFab
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackUmporTechFab
+  recipes:
       - RecipeSteelWire
       - RecipeCord
       - ExplosiveMineBase
@@ -3224,18 +3235,12 @@
       - UmporLightRifle
       - UmporPistol
       - UmporShotgun
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #-----------------------------Швейник------------------
 - type: entity
   parent: BaseLathe
-  id: UmpormUniformPrinter
-  name: name-of-UmpormUniformPrinter
-  description: description-of-UmpormUniformPrinter
+  id: UmporUniformPrinter
+  name: name-of-UmporUniformPrinter
+  description: description-of-UmporUniformPrinter
   components:
   - type: Transform
     noRot: false
@@ -3251,7 +3256,18 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticRecipes:
+    staticPacks:
+    - PackUmporUniformPrinter
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackUmporUniformPrinter
+  recipes:
       - UmporUniformSoldier
       - UmporUniformOficier
       - UmporUniformMedic
@@ -3269,12 +3285,6 @@
       - UmporArmorBasic
       - UmporArmorMiddle
       - UmporHelmet
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #---------------------------------Стандартная форма---------------------
 - type: entity
   id: UmporPaperForm

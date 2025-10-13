@@ -10,7 +10,7 @@
     sprite: Victoria/Special_crystals/crystal_rock.rsi
   - type: Item
     sprite: Victoria/Special_crystals/crystal_rock.rsi
-#----------------------------------База камня с рудой--------------------------------        
+#----------------------------------База камня с рудой--------------------------------
 - type: entity
   id: CrystalWallRock
   parent: WallRock
@@ -230,7 +230,7 @@
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_west
         - state: cosm
-#----------------------------------Сапфир--------------------------------------        
+#----------------------------------Сапфир--------------------------------------
 #------------------Сам кристалл--------------------------
 - type: entity
   parent: CrystalOreBase
@@ -274,7 +274,7 @@
   components:
   - type: Stack
     count: 1
-#------------------Реакция получения--------------------------    
+#------------------Реакция получения--------------------------
 - type: reaction
   id: CreateSapphireCrystall
   impact: Low
@@ -287,8 +287,8 @@
       amount: 15
   effects:
     - !type:CreateEntityReactionEffect
-      entity: SapphireCrystall1   
-#----------------------------------Хром--------------------------------------        
+      entity: SapphireCrystall1
+#----------------------------------Хром--------------------------------------
 #------------------Сам кристалл--------------------------
 - type: entity
   parent: CrystalOreBase
@@ -325,8 +325,8 @@
   suffix: Особые кристаллы, Single
   components:
   - type: Stack
-    count: 1   
-#----------------------------------Кремний--------------------------------------        
+    count: 1
+#----------------------------------Кремний--------------------------------------
 #------------------Сам кристалл--------------------------
 - type: entity
   parent: CrystalOreBase
@@ -371,7 +371,7 @@
   components:
   - type: Stack
     count: 1
-#------------------Реакция получения--------------------------    
+#------------------Реакция получения--------------------------
 - type: reaction
   id: CreateSiCrystall
   impact: Low
@@ -382,7 +382,7 @@
       amount: 20
   effects:
     - !type:CreateEntityReactionEffect
-      entity: SiCrystall1       
+      entity: SiCrystall1
 #-----------------------------------------------------Материалы--------------------------------
 #----------------------------------Блюспейс кристалл--------------------------------
 - type: material
@@ -435,21 +435,21 @@
   materials:
     CosmCrystalMaterial: 1000
     SapphireMaterial: 1000
-    
+
 - type: latheRecipe
   id: RecipeСhromeCrystall
-  result: СhromeCrystall1  
+  result: СhromeCrystall1
   completetime: 5
   materials:
     RawIron: 1000
-    
+
 - type: latheRecipe
   id: RecipeSiCrystall
-  result: SiCrystall1  
+  result: SiCrystall1
   completetime: 1
   materials:
     RawQuartz: 1000
-    
+
 - type: latheRecipe
   id: RecipeRSCrystall
   result: Telecrystal1
@@ -504,22 +504,8 @@
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
-    staticRecipes:
-    - RecipeBSCrystall
-    - RecipeСhromeCrystall
-    - RecipeSiCrystall
-    - RecipeRSCrystall
-    - RecipeСeramicsMaterial
-    - RecipePlazСeramicsMaterial_1
-    - RecipePlazСeramicsMaterial_2
-    - RecipeSiСeramicsMaterial_1
-    - RecipeSiСeramicsMaterial_2
-    - RecipePolymerPitch
-    - RecipeFiberglass
-    - RecipeGethinax
-    - RecipeSiPlazMaterial
-    - GoldOreTransmutator
-    - GoldTransmutator
+    staticPacks:
+    - PackTransmutator
 #----------------------------------Рецепты на модули с кристаллами-----------------------
 - type: latheRecipe
   id: BSModuleRecipe
@@ -529,7 +515,7 @@
     Steel: 1000
     Plasma: 500
     BSCrystalMaterial: 1000
-    
+
 - type: latheRecipe
   id: RSModuleRecipe
   result: RSModule
@@ -538,7 +524,7 @@
     Steel: 1000
     Plasma: 500
     RSCrystalMaterial: 1000
-    
+
 - type: latheRecipe
   id: CSCoreRecipe
   result: CMCore
@@ -581,9 +567,9 @@
     - type: Item
       size: Small
     - type: Stack
-      stackType: BSModuleStack  
-      count: 1 
-#------------------Редспейс-модуль---------------------------------      
+      stackType: BSModuleStack
+      count: 1
+#------------------Редспейс-модуль---------------------------------
 - type: Tag
   id: RSModule
 
@@ -593,7 +579,7 @@
   icon: { sprite: Victoria/Special_crystals/module.rsi, state: rs_module }
   spawn: RSModule
   maxCount: 6
-  
+
 - type: material
   id: RSModuleMaterial
   stackEntity: RSModule
@@ -616,9 +602,9 @@
     - type: Item
       size: Small
     - type: Stack
-      stackType: RSModuleStack  
-      count: 1 
-#------------------Ядро космеция---------------------------------     
+      stackType: RSModuleStack
+      count: 1
+#------------------Ядро космеция---------------------------------
 - type: Tag
   id: CMCore
 
@@ -628,13 +614,13 @@
   icon: { sprite: Victoria/Special_crystals/module.rsi, state: cosm_core }
   spawn: CMCore
   maxCount: 6
-  
+
 - type: material
   id: CMCoreMaterial
   stackEntity: CMCore
   name: ядро космеция
   icon: { sprite: Victoria/Special_crystals/module.rsi, state: cosm_core }
-  price: 6 
+  price: 6
 
 - type: entity
   id: CMCore
@@ -651,5 +637,24 @@
     - type: Item
       size: Small
     - type: Stack
-      stackType: CMCoreStack  
-      count: 1 
+      stackType: CMCoreStack
+      count: 1
+
+- type: latheRecipePack
+  id: PackTransmutator
+  recipes:
+    - RecipeBSCrystall
+    - RecipeСhromeCrystall
+    - RecipeSiCrystall
+    - RecipeRSCrystall
+    - RecipeСeramicsMaterial
+    - RecipePlazСeramicsMaterial_1
+    - RecipePlazСeramicsMaterial_2
+    - RecipeSiСeramicsMaterial_1
+    - RecipeSiСeramicsMaterial_2
+    - RecipePolymerPitch
+    - RecipeFiberglass
+    - RecipeGethinax
+    - RecipeSiPlazMaterial
+    - GoldOreTransmutator
+    - GoldTransmutator
