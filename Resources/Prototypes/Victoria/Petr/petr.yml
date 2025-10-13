@@ -479,7 +479,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 21
+        Piercing: 30
 #------------------------------------пистолет----------
 - type: entity
   id: PetrBulletPistol
@@ -491,7 +491,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 13
+        Piercing: 15
 #------------------------------------револьвер----------
 - type: entity
   id: PetrBulletRevolver
@@ -503,7 +503,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17
+        Piercing: 15
         Heat: 5
 #-------------------------------------картриджи---------------------------------------------------------------------------------
 #------------------------------------винтовка----------
@@ -3040,20 +3040,20 @@
   categories: [ HideSpawnMenu ]
   parent: SpawnPointLoneNukeOperative
   id: SpawnPointNukPetrCommander
-  name: Спавн-точка Командир Петрищевец
+  name: Спавн-точка командира петрищевцев
   components:
   - type: GhostRole
-    name: Командир Петрищевец
+    name: Командир петрищевцев
     description: Руководите своим революционным штурмовым отрядом, дабы свергнуть всех капиталистических наймитов и буржуазных узурпаторов.
 
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: SpawnPointLoneNukeOperative
   id: SpawnPointNukPetr
-  name: Спавн-точка Боевик Петрищевец
+  name: Спавн-точка боевика петрищевцев
   components:
   - type: GhostRole
-    name: Боевик Петрищевец
+    name: Боевик петрищевцев
     description: С идеями Ленина в сердце очистите космос от проклятых акул капитализма.
 
 - type: entity

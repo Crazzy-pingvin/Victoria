@@ -1,32 +1,1213 @@
+# - type: entity
+  # id: MechEquipmentGun
+  # parent: BaseMechEquipment
+  # name: мех пушка
+  # description: Gives the mech the ability to shoot things
+  # components:
+  # - type: Sprite
+    # state: mecha_clamp
+  # - type: MechGun
+    # comps:
+    # - type: Gun
+      ## настройки самой пушки
+  # - type: UIFragment
+    # ui: !type:MechGunUi
+  ## патроны через магазины
+  # - type: MagazineAmmoProvider
+  # - type: ItemSlots
+    # slots:
+      # gun_magazine:
+        # name: Magazine
+        # startingItem: MagazineLightRifle
+        # insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        # ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        # priority: 2
+        # whitelist:
+          # tags:
+            # - MagazineLightRifle
+        # whitelistFailPopup: gun-magazine-whitelist-fail
+  # - type: ContainerContainer
+    # containers:
+      # gun_magazine: !type:ContainerSlot
+#------------------------------------------------------------------------------Шагатели---------------------------------
+#--------------------------------------------------------------Умпорский--------------------
+#----------------------------------------------Храбрец-------------------------
 - type: entity
-  id: MechEquipmentGun
-  parent: BaseMechEquipment
-  name: мех пушка
-  description: Gives the mech the ability to shoot things
+  id: UmporMechValiant
+  parent: BaseMech
+  name: ШБМ "Храбрец"
+  description: Шагающая Боевая Машина "Храбрец". Одна из новых разработак военной промышленности Умпорской Федерации, призванная переломить исход любого боя.
   components:
   - type: Sprite
-    state: mecha_clamp
+    drawdepth: Mobs
+    noRot: true
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: valiant
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.9,0.9,0.9,-0.9"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Mech
+    baseState: valiant
+    openState: valiant-open
+    brokenState: valiant-broken
+    mechToPilotDamageMultiplier: 0.4
+    maxEquipmentAmount: 1
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 15
+        Piercing: 5
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseSprintSpeed: 6
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Repairable
+    fuelCost: 210
+    doAfterDelay: 40
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - Umpor
+  - type: DamageContacts
+    damage:
+      types:
+        Blunt: 15
+  - type: Construction
+    graph: Valiant
+    node: valiant
+    defaultTarget: valiant
+#----------------------------------------------Пушки---------------------------
+#------------------------------Винтовка "Смелый"---------------------
+#---------------------пуля--------------------
+- type: entity
+  id: UmporBulletMechRifle
+  name: Винтовочный снаряд техники
+  suffix: Умпорский
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 300
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_projectaile.rsi
+    layers:
+      - state: bullet
+  - type: StaminaDamageOnCollide
+    damage: 50
+  - type: ProjectileGrenade
+    fillPrototype: UmporPelletClusterLethal
+    capacity: 15
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: TriggerOnCollide
+    fixtureID: projectile  
+
+- type: entity
+  id: UmporPelletClusterLethal
+  name: pellet (ball, lethal)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    state: buckshot
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Piercing: 20
+  - type: TimedDespawn
+    lifetime: 0.1 
+  - type: StaminaDamageOnCollide
+    damage: 5    
+#---------------------картридж--------------------
+- type: Tag
+  id: UmporCartridgeMechRifle
+
+- type: entity
+  id: UmporCartridgeMechRifle
+  name: Винтовочный снаряд техники
+  suffix: Умпорский
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: UmporBulletMechRifle
+  - type: Tag
+    tags:
+      - UmporCartridgeMechRifle
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_projectaile.rsi
+    layers:
+      - state: bullet
+#---------------------магазин--------------------
+- type: Tag
+  id: UmporMagazineMechRifle
+
+- type: entity
+  id: UmporMagazineMechRifle
+  name: Обойма к винтовке ШБМ "Смелый"
+  suffix: Умпорский
+  parent: BaseMagazineLightRifle
+  components:
+  - type: Tag
+    tags:
+      - UmporMagazineMechRifle
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - UmporCartridgeMechRifle
+    proto: UmporCartridgeMechRifle
+    capacity: 7
+  - type: Item
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_magazines.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+#---------------------ствол--------------------
+- type: entity
+  id: UmporMechGunRifle
+  parent: BaseMechEquipment
+  name: Винтовка ШБМ "Смелый"
+  description: Крупнокалиберная винтовка для шагающей боевой машины "Храбрец". Либо делает во враге дырку размером с врага, либо снаряд разрывается на десяток опасных осколков.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_equipment.rsi
+    state: valiant_rifle
   - type: MechGun
     comps:
     - type: Gun
-      # настройки самой пушки
+      fireRate: 0.33
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: UIFragment
     ui: !type:MechGunUi
-
-  # патроны через магазины
   - type: MagazineAmmoProvider
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: UmporMagazineMechRifle
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - UmporMagazineMechRifle
         whitelistFailPopup: gun-magazine-whitelist-fail
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Slash: 15
+        Piercing: 15
+#------------------------------Пулемёт "Стражник"--------------------
+#---------------------пуля--------------------
+- type: entity
+  id: UmporBulletMechAuto
+  name: Останавливающий заряд
+  suffix: Умпорский
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 7
+  - type: StaminaDamageOnCollide
+    damage: 25
+#---------------------картридж--------------------
+- type: Tag
+  id: UmporCartridgeMechAuto
+
+- type: entity
+  id: UmporCartridgeMechAuto
+  name: Останавливающий заряд
+  suffix: Умпорский
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: UmporBulletMechAuto
+  - type: Tag
+    tags:
+      - UmporCartridgeMechAuto
+#---------------------магазин--------------------
+- type: Tag
+  id: UmporMagazineMechAuto
+  
+- type: entity
+  id: UmporMagazineMechAuto
+  name: Магазин к пулемёту ШБМ "Стражник"
+  suffix: Умпорский
+  parent: UmporBaseMagazineLightRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: UmporCartridgeMechAuto
+    capacity: 500
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_magazines.rsi
+    layers:
+    - state: valiant_machinegun
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - UmporMagazineMechAuto
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+#---------------------ствол--------------------
+- type: entity
+  id: UmporMechGunAuto
+  parent: BaseMechEquipment
+  name: Пулемёт ШБМ "Стражник"
+  description: Мелкокалиберный, но скорострельный пулемёт шагающей боевой машины "Храбрец". Подавляет живую силу противника и обладает высоким останавливающим действием.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_equipment.rsi
+    state: valiant_machinegun
+  - type: MechGun
+    comps:
+    - type: Gun
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      fireRate: 8
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+        params:
+          volume: 3
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: UmporMagazineMechAuto
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - UmporMagazineMechAuto
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Slash: 15
+        Piercing: 15
+#--------------------------------------------------------------Миртан--------------------
+#----------------------------------------------Грызь-------------------------
+- type: entity
+  id: MirtMechNibble
+  parent: BaseMech
+  name: Шагатель "Грызь"
+  description: Миртанийский шагатель "Грызь". Давняя ездовая лошадка Империи Миртана. Она и воюет, и оказывает поддержку и работает в снабжении. Многии шутят про "ЖИЛЕТКУ" этого здоровяка, но это важный элемент защищающий сочленения копруса от прониктновения едкой кислоты.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: nibble
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.95,0.95,0.95,-0.95"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Mech
+    baseState: nibble
+    openState: nibble-open
+    brokenState: nibble-broken
+    mechToPilotDamageMultiplier: 0.3
+    maxEquipmentAmount: 2
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 20
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Repairable
+    fuelCost: 200
+    doAfterDelay: 50
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - Mirt
+  - type: DamageContacts
+    damage:
+      types:
+        Blunt: 15
+  - type: Construction
+    graph: Nibble
+    node: nibble
+    defaultTarget: nibble
+#----------------------------------------------Пушки---------------------------
+#------------------------------Гранатомёт "Ревун"---------------------
+#---------------------картридж--------------------
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ProjectileDragonsBreath
+  id: ProjectileMirtGranMech
+  name: зажигательный гранотомётный заряд.
+  components:
+  - type: TimedDespawn
+    lifetime: 4
+  - type: Explosive
+    maxIntensity: 4
+#---------------------ствол--------------------
+- type: entity
+  id: MirtMechGunGran
+  parent: BaseMechEquipment
+  name: Гранатомёт Шагателя "Ревун"
+  description: Модификация гранатомёта "Медведка". Имеет больше зарядов, стреляет быстрее, дальше. Ускорена перезарядка. Но габариты не позволяют использовать его в качестве ручного оружия.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_equipment.rsi
+    state: nibble_bomber
+  - type: MechGun
+    comps:
+    - type: Gun
+      soundEmpty: null
+      projectileSpeed: 8
+      fireRate: 0.5
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 4
+  - type: BasicEntityAmmoProvider
+    proto: ProjectileMirtGranMech
+    capacity: 2
+    count: 2
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Slash: 5
+        Blunt: 30
+#------------------------------Пулемёт "Источник"--------------------
+#---------------------пуля--------------------
+- type: entity
+  id: MirtBulletLightMech
+  name: Лёгкий заряд техники (lhc)
+  parent: MirtBulletLight
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45
+#---------------------картридж--------------------
+- type: Tag
+  id: MirtCartridgeLightMech
+
+- type: entity
+  id: MirtCartridgeLightMech
+  name: Лёгкий заряд техники (lhc)
+  suffix: Миртан
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: MirtBulletLightMech
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - MirtCartridgeLightMech
+#---------------------магазин--------------------
+- type: Tag
+  id: MirtMagazineLMGMech
+
+- type: entity
+  id: MirtMagazineLMGMech
+  name: Магазин к пулемёту "Источник" (lhc)
+  suffix: Миртан
+  parent: BaseMagazinePistol
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - MirtCartridgeLightMech
+    proto: MirtCartridgeLight
+    capacity: 200
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_magazines.rsi
+    layers:
+    - state: nibble_machinegun
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - MirtMagazineLMGMech
+      - MirtMagazine
+#---------------------ствол--------------------
+- type: entity
+  id: MirtMechGunAuto
+  parent: BaseMechEquipment
+  name: Пулемёт Шагателя "Источник"
+  description: Мелкокалиберный, но скорострельный пулемёт шагателя "Грызь". Способин разрывать ивую плоть полчища врагов в считанные секунды.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_equipment.rsi
+    state: nibble_machinegun
+  - type: MechGun
+    comps:
+    - type: Gun
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      fireRate: 6
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+        params:
+          volume: 3
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MirtMagazineLMGMech
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MirtMagazineLMGMech
+            - MirtMagazineLMG
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Slash: 20
+        Piercing: 20
+#------------------------------Манипулятор--------------------
+- type: entity
+  id: MirtMechGunArm
+  parent: BaseMechEquipment
+  name: Грузовой манипулятор
+  description: Подвижная роботехническая грузовая рука, способная носить тяжёлые ящики с поставками.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Mirt/mecha_equipment.rsi
+    state: nibble_arm
+  - type: MechGrabber
+    maxContents: 2
+  - type: UIFragment
+    ui: !type:MechGrabberUi
+  - type: ContainerContainer
+    containers:
+      item-container: !type:Container
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 30
+#--------------------------------------------------------------Конгломерат--------------------
+#----------------------------------------------Скорпион-------------------------
+- type: entity
+  id: CDCMechScorpio
+  parent: BaseMech
+  name: УБР "Скорпион"
+  description: Управляемый Боевой Робот "Скопион". Крупная, но удобная боевая машина Халифатского Божественного Конгломерата, сочетающая в себе и хорошую проходимость, и умеренную бронированность. Но может нести на себе только одно оружие.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: scorpio
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.3
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Mech
+    baseState: scorpio
+    openState: scorpio-open
+    brokenState: scorpio-broken
+    mechToPilotDamageMultiplier: 0.2
+    maxEquipmentAmount: 1
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Slash: 5
+        Piercing: 15
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 4
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Repairable
+    fuelCost: 200
+    doAfterDelay: 50
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - CDC
+  - type: DamageContacts
+    damage:
+      types:
+        Piercing: 15
+  - type: Construction
+    graph: Scorpio
+    node: scorpio
+    defaultTarget: scorpio
+#----------------------------------------------Пушки---------------------------
+#------------------------------Орудие "Тарик"---------------------
+#---------------------пуля--------------------
+- type: entity
+  id: CDCBulletPlasmaRifMech
+  name: Тяжёлый плазменый заряд техники (sprh)
+  suffix: Конгломерат
+  parent: CDCBulletPlasmaStd
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 20
+        Heat: 120
+        Shock: 40
+  - type: IgnitionSource
+    temperature: 1000
+    ignited: true
+  - type: IgniteOnCollide
+    fireStacks: 0.25 
+#---------------------картридж--------------------
+- type: Tag
+  id: CDCCartridgePlasmaRifMech
+
+- type: entity
+  id: CDCCartridgePlasmaRifMech
+  name: Тяжёлый плазменый заряд (sprh)
+  suffix: Конгломерат
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: CDCBulletPlasmaRifMech
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - CDCCartridgePlasmaRifMech
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+#---------------------магазин--------------------
+- type: Tag
+  id: CDCMagazineRifleMech
+
+- type: entity
+  id: CDCMagazineRifleStdMech
+  name: Магазин к орудию "Тарик" (sprh)
+  suffix: Конгломерат
+  parent: BaseMagazinePistol
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CDCCartridgePlasmaRifMech
+    proto: CDCCartridgePlasmaRifMech
+    capacity: 10
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_magazines.rsi
+    layers:
+    - state: scorpio_rifle
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - CDCMagazineRifleMech
+      - CDCMagazine
+#---------------------ствол--------------------
+- type: entity
+  id: CDCMechGunRifle
+  parent: BaseMechEquipment
+  name: Орудие УБР "Тарик"
+  description: Крупнокалиберное плазменное орудие, способное быстро успокоить даже самых мощных врагов.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_equipment.rsi
+    state: scorpio_rifle
+  - type: MechGun
+    comps:
+    - type: Gun
+      fireRate: 0.5
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CDCMagazineRifleStdMech
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CDCMagazineRifleMech
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Slash: 5
+        Blunt: 15
+#------------------------------Пулемёт "Бейбарс"--------------------
+#---------------------пуля--------------------
+- type: entity
+  id: CDCBulletPlasmaStdMech
+  name: плазменый заряд техники (spsh)
+  suffix: Конгломерат
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+        Heat: 25
+        Shock: 15
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi
+    layers:
+      - state: plasma_base
+#---------------------картридж--------------------
+- type: Tag
+  id: CDCCartridgePlasmaStdMech
+
+- type: entity
+  id: CDCCartridgePlasmaStdMech
+  name: Плазменый заряд (spsh)
+  suffix: Конгломерат
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: CDCBulletPlasmaStdMech
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - CDCCartridgePlasmaStdMech
+  - type: Sprite
+    sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+#---------------------магазин--------------------
+- type: Tag
+  id: CDCMagazineAutomatMech
+
+- type: entity
+  id: CDCMagazineAutomatStdMech
+  name: Магазин к пулемёту "Бейбарс" (spsh)
+  suffix: Конгломерат
+  parent: CDCMagazinePistolStd
+  components:
+  - type: BallisticAmmoProvider
+    proto: CDCCartridgePlasmaStdMech
+    capacity: 60
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_magazines.rsi
+    layers:
+    - state: scorpio_machinegun
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - CDCMagazineAutomatMech
+      - CDCMagazine
+#---------------------ствол--------------------
+- type: entity
+  id: CDCMechGunAuto
+  parent: BaseMechEquipment
+  name: Пулемёт УБР "Бейбарс"
+  description: Этот пулемёт был создан не для подавления. основная его цель - шквалом плазмы расплавить укрытия и зажарить врага.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/CDC/mecha_equipment.rsi
+    state: scorpio_machinegun
+  - type: MechGun
+    comps:
+    - type: Gun
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      fireRate: 3
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+        params:
+          volume: 4
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: CDCMagazineAutomatStdMech
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - CDCMagazineAutomatMech
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: MeleeWeapon
+    wideAnimationRotation: -90
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1
+    damage:
+      types:
+        Slash: 5
+        Blunt: 15
+#--------------------------------------------------------------СССП--------------------
+#----------------------------------------------СК-4-------------------------
+- type: entity
+  id: USSPMechSK
+  parent: BaseMech
+  name: ШТ "СК-4"
+  description: Шагающий Танк "Слава Кммунизму" четвёртой модели. Неповоротливая, медленная, но очень прочная боевая машина, способная своим телом становиться остриём копья прорыва или надёжным щитом обороны.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: sk4
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.75,0.75,0.75,-1.5"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Mech
+    baseState: sk4
+    openState: sk4-open
+    brokenState: sk4-broken
+    mechToPilotDamageMultiplier: 0.1
+    maxEquipmentAmount: 2
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Repairable
+    fuelCost: 200
+    doAfterDelay: 50
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - USSP
+  - type: DamageContacts
+    damage:
+      types:
+        Blunt: 15
+  - type: Construction
+    graph: SK
+    node: sk
+    defaultTarget: sk
+#----------------------------------------------Пушки---------------------------
+#------------------------------Излучатель СБИ-М "Флёров"---------------------
+#---------------------луч--------------------
+- type: hitscan
+  id: USSPRadioLaserMech
+  damage:
+    types:
+      Radiation: 15
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_xray
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: xray
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_xray  
+#---------------------магазин--------------------
+- type: Tag
+  id: USSPBatteryRadioMech
+
+- type: entity
+  id: USSPBatteryRadioMech
+  name: Батарея ОЗ-8РЛ -Излучатель
+  suffix: СССП
+  description: Батарея особых зарядов 8ой модели радиационно-лучевая. Совместима с  излучателем СБИ-М "Флёров".
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Victoria/USSP/Weapon/ussp_magazine.rsi
+    layers:
+    - state: xray
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - USSPBatteryRadioMech
+  - type: Appearance
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: HitscanBatteryAmmoProvider
+    proto: USSPRadioLaserMech
+    fireCost: 13
+  - type: Battery
+    maxCharge: 3250
+    startingCharge: 3250
+  - type: PowerCell
+#---------------------ствол--------------------
+- type: entity
+  id: USSPMechGunRadiator
+  parent: BaseMechEquipment
+  name: Излучатель ШТ СБИ-М "Флёров"
+  description: Комплексная система совместимая с ШТ "СК-4", способная создавать стабильные длительные потоки ионизирующего излучения.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_equipment.rsi
+    state: sk4_radi
+  - type: MechGun
+    comps:
+    - type: Gun
+      fireRate: 7
+      minAngle: 0
+      maxAngle: 0
+      angleIncrease: 0
+      angleDecay: 0
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+        params:
+          volume: 3
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: USSPBatteryRadioMech
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - USSPBatteryRadioMech
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+#------------------------------Притяжитель СБИ-М "Циалковский"--------------------
+#---------------------пуля--------------------
+- type: entity
+  id: USSPSingMech
+  name: Сингулярный удар
+  suffix: СССП, Большой
+  parent: USSPSing
+  components:
+  - type: DamageContacts
+    damage:
+      types:
+        Slash: 9
+        Radiation: 15
+  - type: EventHorizon # To make the singularity consume things.
+    radius: 5
+    consumeTiles: false
+    consumeEntities: false
+    canBreachContainment: false
+    colliderFixtureId: EventHorizonCollider
+    consumerFixtureId: EventHorizonConsumer
+  - type: GravityWell # To make the singularity attract things.
+    baseRadialAcceleration: 20
+    maxRange: 9
+  - type: RadiationSource
+    slope: 1 # its emit really far away
+    intensity: 5
+    
+- type: entity
+  id: USSPBulletSingMech
+  name: Сингулярный-заряд техники (cзот)
+  suffix: СССП
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 45
+        Radiation: 30
+  - type: Sprite
+    sprite: Victoria/USSP/Weapon/ussp_projectiles.rsi
+    layers:
+      - state: wedge
+  - type: RandomChangeTime
+    time: 0.4
+    prob: 1
+    entity: USSPSingMech
+#---------------------картридж--------------------
+- type: Tag
+  id: USSPCartridgeSingMech
+
+- type: entity
+  id: USSPCartridgeSingMech
+  name: Сингулярный-заряд техники (cзот)
+  suffix: СССП
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: USSPBulletSingMech
+    deleteOnSpawn: true
+  - type: Tag
+    tags:
+      - USSPCartridgeSingMech
+  - type: Sprite
+    sprite: Victoria/USSP/Weapon/ussp_projectiles.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+#---------------------магазин--------------------
+- type: Tag
+  id: USSPBatterySingMech
+
+- type: entity
+  id: USSPBatterySingMech
+  name: Батарея ОЗ-8С -Притяжитель
+  suffix: СССП
+  description: Батарея особых зарядов 8ой модели сингулярная. Совместима с притяжителем СБИ-М "Циалковский".
+  parent: USSPBatteryPistCarab
+  components:
+  - type: Sprite
+    layers:
+    - state: sing
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - USSPBatterySingMech
+  - type: ProjectileBatteryAmmoProvider
+    proto: USSPCartridgeSingMech
+    fireCost: 400
+  - type: Battery
+    maxCharge: 2800
+    startingCharge: 2800
+#---------------------ствол--------------------
+- type: entity
+  id: USSPMechGunAttraction
+  parent: BaseMechEquipment
+  name: Притяжитель ШТ СБИ-М "Циалковский"
+  description: Сложное гвавитационное устройство совместимое с ШТ "СК-4", выпускающее сингулярные заряды, способные буквально искажать материю, тянуть к себе противников и выжигать их радиацией.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_equipment.rsi
+    state: sk4_sing
+  - type: MechGun
+    comps:
+    - type: Gun
+      fireRate: 0.5
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: USSPBatterySingMech
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - USSPBatterySingMech
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+#------------------------------Гравитационный Манипулятор--------------------
+- type: entity
+  id: USSPMechGunTetherGun
+  parent: BaseMechEquipment
+  name: Гравитационный Манипулятор
+  description: Сложное гвавитационное устройство совместимое с ШТ "СК-4", способное манипулировать гравитационными полями для перемещения объектов различных габаритов.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/USSP/mecha_equipment.rsi
+    state: sk4_gravy
+  - type: MechGrabber
+    maxContents: 1
+  - type: ContainerContainer
+    containers:
+      item-container: !type:Container
+  - type: UIFragment
+    ui: !type:MechGunUi

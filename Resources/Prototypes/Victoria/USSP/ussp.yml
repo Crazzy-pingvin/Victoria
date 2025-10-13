@@ -845,9 +845,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 17
-        Piercing: 15
-        Radiation: 20
+        Blunt: 20
+        Piercing: 50
+        Radiation: 30
 #----------------------------------Клинья----------------------------
 - type: entity
   id: USSPBulletWedgeStd
@@ -876,8 +876,8 @@
     damage:
       types:
         Blunt: 30
-        Piercing: 35
-        Radiation: 30
+        Piercing: 70
+        Radiation: 40
 #----------------------------------Дробовиковый----------------------------
 - type: entity
   id: USSPBulletWedgeShotgan
@@ -932,7 +932,7 @@
     layers:
       - state: wedge
   - type: RandomChangeTime
-    time: 0.4
+    time: 0.3
     prob: 1
     entity: USSPSing
 #----------------------------------Чёрная дыра----------------------------
@@ -948,8 +948,8 @@
         Slash: 3
         Radiation: 5
   - type: SpeedModifierContacts
-    walkSpeedModifier: 0
-    sprintSpeedModifier: 0
+    walkSpeedModifier: 0.01
+    sprintSpeedModifier: 0.01
   - type: Sprite
     sprite: Victoria/USSP/Weapon/ussp_projectiles.rsi
     layers:
@@ -965,7 +965,9 @@
   - type: TimedDespawn
     lifetime: 15
   - type: EventHorizon # To make the singularity consume things.
-    radius: 0.5
+    radius: 3
+    consumeTiles: false
+    consumeEntities: false
     canBreachContainment: false
     colliderFixtureId: EventHorizonCollider
     consumerFixtureId: EventHorizonConsumer
@@ -980,7 +982,7 @@
   id: USSPRadioLaser
   damage:
     types:
-      Radiation: 6
+      Radiation: 7
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_xray
@@ -1214,7 +1216,7 @@
     tags:
       - USSPBatteryRif
   - type: ProjectileBatteryAmmoProvider
-    proto: USSPCartridgeOliveSnipe
+    proto: USSPBulletWedgeStd
     fireCost: 90
   - type: Battery
     maxCharge: 1080
@@ -1405,9 +1407,6 @@
           tags:
             - USSPBatteryPistCarab
             - USSPBatterySMG
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1434,7 +1433,7 @@
   - type: Clothing
     sprite: Victoria/USSP/Weapon/ussp_smg.rsi
   - type: Gun
-    fireRate: 3
+    fireRate: 4
     projectileSpeed: 30
   - type: MagazineAmmoProvider
   - type: ItemSlots
@@ -1449,9 +1448,6 @@
           tags:
             - USSPBatteryPistCarab
             - USSPBatterySMG
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1495,9 +1491,6 @@
             - USSPBatteryPistCarab
             - USSPBatterySMG
             - USSPBatteryCarabSnipe
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1533,6 +1526,12 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPCarabineSnipe
+  - type: Scope
+    useInHand: true
+    allowMovement: true
+    delay: 0
+    zoom: 2.2
+    offset: 14
 #----------------------------------Винтовка----------------------------
 #--------------------------Обычная--------------------
 - type: entity
@@ -1572,9 +1571,6 @@
             - USSPBatteryRif
             - USSPBatteryAuto
             - USSPBatteryRifSnipe
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1610,6 +1606,12 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPRifleSnipe
+  - type: Scope
+    useInHand: true
+    allowMovement: true
+    delay: 0
+    zoom: 2.2
+    offset: 14
 #----------------------------------Автомат----------------------------
 - type: entity
   name: Советский автомат "Лебедев"
@@ -1628,7 +1630,7 @@
   - type: Clothing
     sprite: Victoria/USSP/Weapon/ussp_automat.rsi
   - type: Gun
-    fireRate: 4.5
+    fireRate: 3.5
     selectedMode: Burst
     availableModes:
       - Burst
@@ -1646,9 +1648,6 @@
           tags:
             - USSPBatteryRif
             - USSPBatteryAuto
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1691,9 +1690,6 @@
         whitelist:
           tags:
             - USSPBatteryShot
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1735,9 +1731,6 @@
             - USSPBatteryLMG
             - USSPBatteryRif
             - USSPBatteryAuto
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1777,9 +1770,6 @@
         whitelist:
           tags:
             - USSPBatterySing
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -1809,7 +1799,7 @@
     - Back
   - type: AmmoCounter
   - type: Gun
-    fireRate: 5
+    fireRate: 6
     minAngle: 0
     maxAngle: 0
     angleIncrease: 0
@@ -1818,9 +1808,9 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
       params:
-        volume: -50
+        volume: 3
   - type: MagazineAmmoProvider
   - type: ItemSlots
     slots:
@@ -1833,9 +1823,6 @@
         whitelist:
           tags:
             - USSPBatteryRadio
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
     steps: 1

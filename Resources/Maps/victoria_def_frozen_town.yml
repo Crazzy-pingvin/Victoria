@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 247.0.0
+  engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 09/18/2025 15:32:11
-  entityCount: 5719
+  time: 10/11/2025 23:10:12
+  entityCount: 5722
 maps:
 - 1
 grids:
@@ -30,7 +30,9 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Map Entity
+      name: FrozenTown
+    - type: Parallax
+      parallax: IceWater
     - type: Transform
     - type: Map
       mapPaused: True
@@ -58,6 +60,8 @@ entities:
         - 0
   - uid: 2
     components:
+    - type: Parallax
+      parallax: IceWater
     - type: MetaData
       name: FrozenTown
     - type: Transform
@@ -26096,6 +26100,13 @@ entities:
       parent: 2
     - type: JourneyTarget
       maxRange: 68
+  - uid: 5720
+    components:
+    - type: Transform
+      pos: 65.5,6.5
+      parent: 2
+    - type: JourneyTarget
+      journeyGroup: Beta
 - proto: WaypointThree
   entities:
   - uid: 5680
@@ -26105,6 +26116,13 @@ entities:
       parent: 2
     - type: JourneyTarget
       maxRange: 50
+  - uid: 5722
+    components:
+    - type: Transform
+      pos: 20.5,12.5
+      parent: 2
+    - type: JourneyTarget
+      journeyGroup: Beta
 - proto: WaypointTwo
   entities:
   - uid: 5679
@@ -26112,6 +26130,13 @@ entities:
     - type: Transform
       pos: 43.5,0.5
       parent: 2
+  - uid: 5721
+    components:
+    - type: Transform
+      pos: 43.5,11.5
+      parent: 2
+    - type: JourneyTarget
+      journeyGroup: Beta
 - proto: WeaponCapacitorRecharger
   entities:
   - uid: 4671

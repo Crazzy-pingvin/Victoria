@@ -263,7 +263,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporSPC
-  name: Набор умпорского офицера специалиста
+  name: Набор умпорского специалиста
   description: Одежда и базовое снаряжение специалиста Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -331,7 +331,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporSPCD
-  name: Набор умпорского офицера специалиста доп.отряда
+  name: Набор умпорского специалиста доп.отряда
   description: Одежда и базовое снаряжение специалиста доп.отряда Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -399,7 +399,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporSol
-  name: Набор умпорского офицера солдата
+  name: Набор умпорского солдата
   description: Одежда и базовое снаряжение солдата Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -467,7 +467,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporSolD
-  name: Набор умпорского офицера солдата доп.отряда
+  name: Набор умпорского солдата доп.отряда
   description: Одежда и базовое снаряжение солдата доп.отряда Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -533,7 +533,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporEng
-  name: Набор умпорского офицера инженера
+  name: Набор умпорского инженера
   description: Одежда и базовое снаряжение инженера Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -597,7 +597,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporMed
-  name: Набор умпорского офицера медика
+  name: Набор умпорского медика
   description: Одежда и базовое снаряжение медика Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -663,7 +663,7 @@
   
 - type: entity
   id: ToolboxGearDefUmporLog
-  name: Набор умпорского офицера снабженца
+  name: Набор умпорского снабженца
   description: Одежда и базовое снаряжение снабженца Умпорской Федерации.
   suffix: Умпорский, Оборона
   parent: ToolboxGearDefUmporCom
@@ -672,6 +672,86 @@
     maxSelectedSets: 1
     possibleSets:
     - SetGearDefUmporLog
+#----------------------------------------------------Пилот--------------------------
+- type: startingGear
+  id: GearDefUmporPilot
+  equipment:
+    jumpsuit: UmporUniformEngineer
+    back: UmporBackpackFilled
+    shoes: UmporBoots
+    head: UmporCapP
+    id: DefPDAPilotUmpor
+    ears: UmporHeadset
+    belt: UmporBeltEngFilled
+    gloves: UmporGlovesFingerless
+    outerClothing: UmporArmorBasic
+    eyes: DefGlass
+    pocket2: DefChipCraftMechWeapon2
+  storage:
+    back:
+    - UmporMechValiantCorpusCircuitboard
+    - UmporMechValiantGeneratorCircuitboard
+    - UmporMechValiantEngineCircuitboard
+    - PowerCellHigh
+    - PowerCellHigh
+    - WelderIndustrial
+
+- type: entity
+  parent: UmporIDCardEngener
+  id: DefIDCardPilotUmpor
+  name: ID-карта пилота
+  suffix: Оборона, Умпорский
+  components:
+  - type: PresetIdCard
+    job: DefPilot
+    name: пилот
+
+- type: entity
+  parent: UmporPDAEngener
+  id: DefPDAPilotUmpor
+  name: КПК умпорского пилота
+  suffix: Оборона, Умпорский
+  components:
+    - type: Pda
+      id: DefIDCardPilotUmpor
+
+- type: thiefBackpackSet
+  id: SetGearDefUmporPil
+  name: Набор умпорского пилота
+  description: Одежда и базовое снаряжение пилота Умпорской Федерации.
+  sprite:
+    sprite: Victoria/Umpor/Equipment/umpor_cap_p.rsi
+    state: icon
+  content:
+  - UmporUniformEngineer
+  - UmporBackpackFilled
+  - UmporBoots
+  - UmporCapP
+  - DefPDAPilotUmpor
+  - UmporHeadset
+  - UmporBeltEngFilled
+  - UmporArmorBasic
+  - UmporGlovesFingerless
+  - DefGlass
+  - DefChipCraftMechWeapon2
+  - UmporMechValiantCorpusCircuitboard
+  - UmporMechValiantGeneratorCircuitboard
+  - UmporMechValiantEngineCircuitboard
+  - PowerCellHigh
+  - PowerCellHigh
+  - WelderIndustrial
+  
+- type: entity
+  id: ToolboxGearDefUmporPil
+  name: Набор умпорского пилота
+  description: Одежда и базовое снаряжение пилота Умпорской Федерации.
+  suffix: Умпорский, Оборона
+  parent: ToolboxGearDefUmporCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUmporPil
 #--------------------------------------------------------------------Миртанийские-----------------------------------------
 #----------------------------------------------------Командор--------------------------
 - type: startingGear
@@ -1109,7 +1189,7 @@
     head: MirtHelmetGr
     outerClothing: MirtArmorGr
     id: DefIDCardEngenerMirt
-    belt: MirtBelt
+    belt: MirtBeltEngFilled
     gloves: MirtGlovesFingerless
     eyes: DefGlass
     ears: MirtHeadset
@@ -1139,7 +1219,7 @@
   - MirtHelmetGr
   - MirtArmorGr
   - DefIDCardEngenerMirt
-  - MirtBelt
+  - MirtBeltEngFilled
   - MirtGlovesFingerless
   - DefGlass
   - FlashlightLantern
@@ -1270,6 +1350,77 @@
     maxSelectedSets: 1
     possibleSets:
     - SetGearDefMirtLog
+#----------------------------------------------------Пилот--------------------------
+- type: startingGear
+  id: GearDefMirtPilot
+  equipment:
+    jumpsuit: MirtUniformTg
+    back: MirtBackpackLFilled
+    shoes: MirtBoots
+    head: MirtHelmetGr
+    outerClothing: MirtArmorGr
+    id: DefIDCardPilotMirt
+    belt: MirtBeltEngFilled
+    gloves: MirtGlovesFingerless
+    eyes: DefGlass
+    ears: MirtHeadset
+    pocket2: DefChipCraftMechWeapon3
+  storage:
+    back:
+    - MirtMechNibbleCorpusCircuitboard
+    - MirtMechNibbleGeneratorCircuitboard
+    - MirtMechNibbleEngineCircuitboard
+    - PowerCellHigh
+    - PowerCellHigh
+    - WelderIndustrial
+
+- type: entity
+  parent: MirtIDCardSolder
+  id: DefIDCardPilotMirt
+  name: Чип миртанского пилота
+  suffix: Оборона, Миртан
+  components:
+  - type: PresetIdCard
+    job: DefPilot
+    name: пилот
+    
+- type: thiefBackpackSet
+  id: SetGearDefMirtPil
+  name: Набор миртанийского пилота
+  description: Одежда и базовое снаряжение пилота Империи Миртана.
+  sprite:
+    sprite: Victoria/Mirt/Weapon/mirt_knife.rsi
+    state: icon
+  content:
+  - MirtUniformRear
+  - MirtBackpackLFilled
+  - MirtBoots
+  - MirtHelmetGr
+  - MirtArmorGr
+  - DefIDCardPilotMirt
+  - MirtBelt
+  - MirtGlovesFingerless
+  - DefGlass
+  - DefChipCraftMechWeapon3
+  - MirtHeadset
+  - MirtMechNibbleCorpusCircuitboard
+  - MirtMechNibbleGeneratorCircuitboard
+  - MirtMechNibbleEngineCircuitboard
+  - PowerCellHigh
+  - PowerCellHigh
+  - WelderIndustrial
+  
+- type: entity
+  id: ToolboxGearDefMirtPil
+  name: Набор миртанийского пилота
+  description: Одежда и базовое снаряжение пилота Империи Миртана.
+  suffix: Миртан, Оборона
+  parent: ToolboxGearDefMirtCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefMirtPil
 #--------------------------------------------------------------------Конгломератские-----------------------------------------
 #----------------------------------------------------Командор--------------------------
 - type: startingGear
@@ -1526,6 +1677,7 @@
   - CDCPaperSold
   - ToolboxCDCSPC
   - FlashlightLantern
+  - CDCHeadset
   
 - type: entity
   id: ToolboxGearDefCDCSPC
@@ -1587,6 +1739,7 @@
   - CDCPaperSold
   - ToolboxCDCDSPC
   - FlashlightLantern
+  - CDCHeadset
   
 - type: entity
   id: ToolboxGearDefCDCSPCD
@@ -1725,7 +1878,7 @@
     head: CDCCepka
     id: DefIDCardEngenerCDC
     ears: CDCHeadset
-    belt: CDCBeltTech
+    belt: CDCBeltTechFilled
     gloves: CDCGlovesTech
     eyes: DefGlass
     pocket1: FlashlightLantern
@@ -1761,7 +1914,7 @@
   - CDCCepka
   - DefIDCardEngenerCDC
   - CDCHeadset
-  - CDCBeltTech
+  - CDCBeltTechFilled
   - CDCGlovesTech
   - DefGlass
   - Crowbar
@@ -1914,6 +2067,76 @@
     maxSelectedSets: 1
     possibleSets:
     - SetGearDefCDCLog
+#----------------------------------------------------Пилот--------------------------
+- type: startingGear
+  id: GearDefCDCPilot
+  equipment:
+    jumpsuit: CDCUniformEng
+    back: CDCBackpackFilled
+    shoes: CDCBoots
+    head: CDCCepka
+    outerClothing: CDCHardsuitTech
+    id: DefIDCardCargoCDC
+    ears: CDCHeadset
+    belt: CDCBeltTechFilled
+    gloves: CDCGlovesTech
+    eyes: DefGlass
+    pocket1: DefChipCraftMechWeapon2
+  storage:
+    back:
+    - CDCMechScorpioCorpusCircuitboard
+    - CDCMechScorpioGeneratorCircuitboard
+    - PowerCellHigh
+    - PowerCellHigh
+    - WelderIndustrial
+
+- type: entity
+  parent: CDCIDCardSolder
+  id: DefIDCardPilotCDC
+  name: Чип пилота Конгломерата
+  suffix: Оборона, Конгломерат
+  components:
+  - type: PresetIdCard
+    job: DefPilot
+    name: пилот
+    
+- type: thiefBackpackSet
+  id: SetGearDefCDCPil
+  name: Набор пилота конгломерата
+  description: Одежда и базовое снаряжение пилота Халифатского Божественного Конгломерата.
+  sprite:
+    sprite: Victoria/CDC/Equipment/cdc_cepka.rsi
+    state: icon
+  content:
+  - CDCUniformEng
+  - CDCBackpackFilled
+  - CDCBoots
+  - CDCCepka
+  - CDCHardsuitTech
+  - DefIDCardCargoCDC
+  - CDCHeadset
+  - CDCBeltTechFilled
+  - CDCGlovesTech
+  - DefGlass
+  - DefChip
+  - FlashlightLantern
+  - CDCMechScorpioCorpusCircuitboard
+  - CDCMechScorpioGeneratorCircuitboard
+  - PowerCellHigh
+  - PowerCellHigh
+  - WelderIndustrial
+  
+- type: entity
+  id: ToolboxGearDefCDCPil
+  name: Набор пилота конгломерата
+  description: Одежда и базовое снаряжение пилота Халифатского Божественного Конгломерата.
+  suffix: Конгломерат, Оборона
+  parent: ToolboxGearDefCDCCom
+  components:
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefCDCPil
 #--------------------------------------------------------------------Советские-----------------------------------------
 #----------------------------------------------------Командор--------------------------
 - type: startingGear
@@ -2670,6 +2893,93 @@
     interfaces:
       enum.ThiefBackpackUIKey.Key:
         type: ThiefBackpackBoundUserInterface
+#----------------------------------------------------Пилот--------------------------
+- type: startingGear
+  id: GearDefUSSPPil
+  equipment:
+    jumpsuit: USSPUniformSold
+    back: USSPDuffelFilledEmpty
+    shoes: USSPBoots
+    head: USSPCapP
+    id: DefPDALogUSSP
+    ears: USSPHeadset
+    belt: USSPBeltEngeFilled
+    outerClothing: USSPArmorLight
+    eyes: DefGlass
+    gloves: USSPGlovesEnge
+    pocket1: BookWeaponUSSP
+    pocket2: DefChipCraftMechWeapon3
+  storage:
+    back:
+    - USSPMechSKCorpusCircuitboard
+    - PowerCellHigh
+    - PowerCellHigh
+    - WelderIndustrial
+
+- type: entity
+  parent: USSPIDCardSold
+  id: DefIDCardPilUSSP
+  name: ID-карта пилота
+  suffix: Оборона, СССП
+  components:
+  - type: PresetIdCard
+    job: DefPilot
+    name: пилот
+
+- type: entity
+  parent: USSPPDAEnge
+  id: DefPDAPilUSSP
+  name: КПК пилота СССП
+  suffix: Оборона, СССП
+  components:
+    - type: Pda
+      id: DefIDCardPilUSSP
+
+- type: thiefBackpackSet
+  id: SetGearDefUSSPPil
+  name: Набор пилота СССП
+  description: Одежда и базовое снаряжение пилота СССП.
+  sprite:
+    sprite: Victoria/USSP/Equipment/ussp_cepka.rsi
+    state: icon
+  content:
+  - USSPUniformSold
+  - USSPDuffelFilledEmpty
+  - USSPBoots
+  - USSPCapP
+  - DefPDALogUSSP
+  - USSPHeadset
+  - USSPBeltEngeFilled
+  - USSPArmorLight
+  - DefGlass
+  - USSPGlovesEnge
+  - BookWeaponUSSP
+  - DefChipCraftMechWeapon3
+  - USSPMechSKCorpusCircuitboard
+  - PowerCellHigh
+  - PowerCellHigh
+  - WelderIndustrial
+  
+- type: entity
+  id: ToolboxGearDefUSSPPil
+  name: Набор пилота СССП
+  description: Одежда и базовое снаряжение пилота СССП.
+  suffix: СССП, Оборона
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: ThiefUndeterminedBackpack
+    maxSelectedSets: 1
+    possibleSets:
+    - SetGearDefUSSPPil
+  - type: ActivatableUI
+    key: enum.ThiefBackpackUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ThiefBackpackUIKey.Key:
+        type: ThiefBackpackBoundUserInterface
 #--------------------------------------------------------------------Корпоративные-----------------------------------------
 #----------------------------------------------------Командор--------------------------
 
@@ -2690,3 +3000,62 @@
 #----------------------------------------------------Медик--------------------------
 
 #----------------------------------------------------Снабженец--------------------------
+
+#----------------------------------------------------Пилот--------------------------
+
+#--------------------------------------------------------------------для пилотов--------------------------
+- type: Tag
+  id: DefChipCraftMechWeapon
+
+- type: entity
+  parent: NTChip
+  id: DefChipCraftMechWeapon
+  name: орудийный чип 
+  description: Кодирующее устройство, открывающее доступ к производству необходимой экипировки техники.
+  suffix: один
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      DefChipCraftMechWeapon: 1
+  - type: Stack
+    stackType: DefChipCraftMechWeapon
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: def_gear_chip
+  - type: Material
+  - type: Tag
+    tags:
+      - DefChipCraftMechWeapon
+      
+- type: material
+  id: DefChipCraftMechWeapon
+  name: орудийный чип  
+  stackEntity: DefChipCraftMechWeapon
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: def_gear_chip }
+  price: 0
+
+- type: stack
+  id: DefChipCraftMechWeapon
+  name: орудийный чип   
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: def_gear_chip }
+  spawn: DefChipCraftMechWeapon
+  maxCount: 3
+  
+- type: entity
+  parent: DefChipCraftMechWeapon
+  id: DefChipCraftMechWeapon2
+  suffix: два
+  components:
+  - type: Stack
+    stackType: DefChipCraftMechWeapon
+    count: 2
+    
+- type: entity
+  parent: DefChipCraftMechWeapon
+  id: DefChipCraftMechWeapon3
+  suffix: три
+  components:
+  - type: Stack
+    stackType: DefChipCraftMechWeapon
+    count: 3

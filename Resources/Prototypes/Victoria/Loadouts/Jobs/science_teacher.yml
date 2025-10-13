@@ -1,0 +1,14 @@
+- type: loadout
+  id: ScienceTeacherJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitScienceTeacher
+
+- type: loadout
+  id: ScienceTeacherJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtScienceTeacher
+
+- type: loadout
+  id: ScienceTeacherOuterClothing
+  equipment:
+    outerClothing: ClothingOuterCoatLabScienceTeacher

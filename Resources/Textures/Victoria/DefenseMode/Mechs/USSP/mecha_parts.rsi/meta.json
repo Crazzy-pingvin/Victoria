@@ -1,0 +1,29 @@
+{
+  "copyright" : "Create by Crazzy_Pingvin",
+  "license" : "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "shield"
+    },
+    {
+      "name": "corpus"
+    },
+    {
+      "name": "holder"
+    },
+    {
+      "name": "leg"
+    },
+    {
+      "name": "cp_hol"
+    },
+    {
+      "name": "cp_hol_sh"
+    }
+  ]
+}

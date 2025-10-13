@@ -24,3 +24,4 @@
             DefSpecialistDop: [ 0, 0 ]
             DefSolder: [ -1, -1 ]
             DefSolderDop: [ 1, 1 ]
+            DefPilot: [ 0, 0 ]

@@ -702,7 +702,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 45
 #------------------------------------автомат----------
 - type: entity
   id: UmporBulletLightRifle
@@ -714,7 +714,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 23
+        Piercing: 31
 #------------------------------------пистолет----------
 - type: entity
   id: UmporBulletPistol
@@ -726,7 +726,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 11
+        Piercing: 17
 #-------------------------------------картриджи---------------------------------------------------------------------------------
 #------------------------------------винтовка----------
 - type: Tag
@@ -846,6 +846,7 @@
     whitelist:
       tags:
         - UmporCartridgeLightRifle
+        - UmporCartridgeMechAuto
     proto: UmporCartridgeLightRifle
     capacity: 25
   - type: Item
@@ -899,6 +900,7 @@
     whitelist:
       tags:
         - UmporCartridgePistol
+        - UmporCartridgeMechAuto
     proto: UmporCartridgePistol
     capacity: 9
   - type: Item
@@ -952,6 +954,9 @@
     size: Large
   - type: Clothing
     sprite: Victoria/Umpor/Weapon/umpor_rifle.rsi
+    slots:
+    - Back
+    - suitStorage
   - type: Gun
     fireRate: 0.75
     soundGunshot:
@@ -1011,6 +1016,9 @@
     size: Large
   - type: Clothing
     sprite: Victoria/Umpor/Weapon/umpor_automat.rsi
+    slots:
+    - Back
+    - suitStorage
   - type: Gun
     fireRate: 5
     soundGunshot:
@@ -1036,6 +1044,7 @@
         whitelist:
           tags:
             - UmporCartridgeLightRifle
+            - UmporCartridgeMechAuto
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -1090,6 +1099,7 @@
         whitelist:
           tags:
             - UmporCartridgePistol
+            - UmporCartridgeMechAuto
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -1785,7 +1795,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 15
+        Piercing: 23
 
 - type: entity
   id: UmporPelletShotgunSpread
@@ -1794,7 +1804,7 @@
   components:
   - type: ProjectileSpread
     proto: UmporPelletShotgun
-    count: 7
+    count: 12
     spread: 15
 #-----------------------картридж----------------------
 - type: Tag

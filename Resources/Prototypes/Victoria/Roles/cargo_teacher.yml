@@ -1,0 +1,50 @@
+- type: job
+  id: CargoTeacher
+  name: бригадир
+  description: Бригадир учит грузчиков выживать в условиях смехотворного бюджета, который был истрачен на лотерею.
+  playTimeTracker: JobCargoTeacher
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 18000
+    - !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 36000
+  startingGear: CargoTeacherGear
+  icon: "JobIconCargoTeacher"
+  supervisors: job-supervisors-qm
+  access:
+  - Teacher
+  - Cargo
+  - Salvage
+  - External
+  - Maintenance
+  sponsorOnly: true
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCargoTeacher
+  icon:
+    sprite: /Textures/Victoria/Teach/job_icons_teacher.rsi
+    state: TeacherCargo
+  jobName: бригадир
+
+- type: startingGear
+  id: CargoTeacherGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCargoTeacher
+    id: PDACargoTeacher
+    ears: ClothingHeadsetCargo
+
+# Clothing
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpsuitCargoTeacher
+  name: комбинезон бригадира
+  suffix: Наставники
+  description: Комбинезон был создан для бригадиров, видящих, как каждую новую смену рождаются и умирают независимые Каргонии.
+  components:
+  - type: Sprite
+    sprite: Victoria/Teach/uniform_cargo_teacher.rsi
+  - type: Clothing
+    sprite: Victoria/Teach/uniform_cargo_teacher.rsi

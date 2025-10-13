@@ -15,7 +15,7 @@
     mirt: MirtBannerStd
     cdc: CDCBannerStd
     nt: MirtBannerStd
-    ussp: CDCBannerStd
+    ussp: USSPBannerGerb
 #----------------------------------------Сборщик чипов--------------------------------
 - type: entity
   name: Спавнер сборщика поставок
@@ -31,7 +31,7 @@
     mirt: ProviderDefSuppliesMap1Mirt
     cdc: ProviderDefSuppliesMap1CDC
     nt: ProviderDefSuppliesMap1Mirt
-    ussp: ProviderDefSuppliesMap1CDC
+    ussp: ProviderDefSuppliesMap1USSP
 #----------------------------------------Консоль поставок--------------------------------
 - type: entity
   name: Спавнер консоли армейских поставок
@@ -47,7 +47,7 @@
     mirt: ComputerCargoDefMirt
     cdc: ComputerCargoDefCDC
     nt: ComputerCargoDefMirt
-    ussp: ComputerCargoDefCDC
+    ussp: ComputerCargoDefUSSP
 #----------------------------------------шлюз--------------------------------
 - type: entity
   name: Спавнер шлюза
@@ -63,7 +63,7 @@
     mirt: MirtAirlockLocked
     cdc: CDCAirlockLocked
     nt: MirtAirlockLocked
-    ussp: CDCAirlockLocked
+    ussp: USSPAirlockLocked
 #----------------------------------------стеклянный щлюз--------------------------------
 - type: entity
   name: Спавнер стеклянного шлюза
@@ -79,7 +79,7 @@
     mirt: MirtAirlockLocked
     cdc: CDCAirlockLockedGlass
     nt: MirtAirlockLocked
-    ussp: CDCAirlockLockedGlass
+    ussp: USSPAirlockLockedGlass
 #----------------------------------------Оборонный фабрикатор--------------------------------
 - type: entity
   name: Спавнер оборонного фабрикатора
@@ -98,7 +98,7 @@
     mirt: DefMirtTechFab
     cdc: DefCDCTechFab
     nt: DefMirtTechFab
-    ussp: DefCDCTechFab
+    ussp: DefUSSPTechFab
 #----------------------------------------Автомат со снарягой--------------------------------
 - type: entity
   name: Спавнер машины поставки снаряжения
@@ -116,8 +116,8 @@
     mirt: VendingMachineDefGearMirt
     cdc: VendingMachineDefGearCDC
     nt: VendingMachineDefGearMirt
-    ussp: VendingMachineDefGearCDC
-#----------------------------------------Автомат со снарягой---------------------
+    ussp: VendingMachineDefGearUSSP
+#----------------------------------------Пояс с инструментами---------------------
 - type: entity
   name: Спавнер пояса с инструментами
   id: SpawnBeltEngFilled
@@ -132,7 +132,7 @@
     mirt: MirtBeltEngFilled
     cdc: CDCBeltTechFilled
     nt: MirtBeltEngFilled
-    ussp: CDCBeltTechFilled
+    ussp: USSPBeltEngeFilled
 #----------------------------------------Сервер связи---------------------
 - type: entity
   name: Спавнер сервера связи
@@ -148,7 +148,7 @@
     mirt: DefTelecomServerFilledMirt
     cdc: DefTelecomServerFilledCDC
     nt: DefTelecomServerFilledMirt
-    ussp: DefTelecomServerFilledCDC
+    ussp: DefTelecomServerFilledUSSP
 #----------------------------------------Портфаб---------------------
 - type: entity
   name: Спавнер портфаба
@@ -164,4 +164,20 @@
     mirt: DefClothLatheMirt
     cdc: DefClothLatheCDC
     nt: DefClothLatheMirt
-    ussp: DefClothLatheCDC
+    ussp: DefClothLatheUSSP
+#----------------------------------------Заводской фабрикатор---------------------
+- type: entity
+  name: Спавнер заводского фабрикатора
+  id: SpawnFactoryFab
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    state: icon
+  - type: StateChoiceSpawner
+    umpor: DefUmporFactoryFab
+    mirt: DefMirtFactoryFab
+    cdc: DefCDCFactoryFab
+    nt: DefMirtFactoryFab
+    ussp: DefUSSPFactoryFab

@@ -78,6 +78,14 @@
     sprite: /Textures/Victoria/DefenseMode/job_icons.rsi
     state: dsol
   jobName: Солдат доп.отряда  
+  
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDefPilot
+  icon:
+    sprite: /Textures/Victoria/DefenseMode/job_icons.rsi
+    state: pil
+  jobName: Пилот
 #-----------------------------------таймтрекеры-------------------------
 - type: playTimeTracker
   id: JobDefComander
@@ -108,6 +116,9 @@
   
 - type: playTimeTracker
   id: JobDefSolderDop
+  
+- type: playTimeTracker
+  id: JobDefPilot
 #-----------------------------------стартовая одёжа для гиров-------------------------  
 #-------------------униформа-----
 - type: entity
@@ -115,7 +126,7 @@
   id: DefStartGearUniformSoldier
   name: форма мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/uniform.rsi
@@ -129,7 +140,7 @@
   id: DefStartGearBoots
   name: сапоги мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/boots.rsi
@@ -143,7 +154,7 @@
   id: DefStartGearCloakOf
   name: плащ мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/cloak.rsi
@@ -155,7 +166,7 @@
   id: DefStartGearHelmet
   name: шлем мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/helmet.rsi
@@ -169,7 +180,7 @@
   id: DefStartGearBeret
   name: берет мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/beret.rsi
@@ -186,7 +197,7 @@
   id: DefStartGearCap
   name: фуражка мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/cap.rsi
@@ -203,7 +214,7 @@
   id: DefStartGearCapP
   name: пилотка мертвеца
   suffix: Оборона
-  description: Вы умрёте. Или уже умерли. Не важно есть это на самомо деле, было или будет. Итогда для всех живых один.
+  description: Вы умрёте. Или уже умерли. Не важно есть это на самом деле, было или будет. И тогда для всех живых один.
   components:
   - type: Sprite
     sprite: Victoria/DefenseMode/Start_Clothes/cap_p.rsi
@@ -295,6 +306,14 @@
     shoes: DefStartGearBoots
     head: DefStartGearHelmet
     pocket1: DefChipGearSolderDop
+    
+- type: startingGear
+  id: DefPilotGear
+  equipment:
+    jumpsuit: DefStartGearUniformSoldier
+    shoes: DefStartGearBoots
+    head: DefStartGearCapP
+    pocket1: DefChipGearPilot
 #-----------------------------------роли-------------------------
 - type: job
   id: DefComander
@@ -510,6 +529,28 @@
   # - !type:AddComponentSpecial
     # components:
       # - type: DefSolder
+      
+- type: job
+  id: DefPilot
+  name: Пилот 
+  description: Боец обученый инженерным навыкам для сборки, обслуживания, ремонта и пилотирования боевой техники.
+  playTimeTracker: JobDefPilot
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobDefSolder
+      time: 10800
+    - !type:RoleTimeRequirement
+      role: JobDefSpecialist
+      time: 10800
+    - !type:RoleTimeRequirement
+      role: JobDefEngener
+      time: 18000
+  startingGear: DefPilotGear #!!!!!!!!!!!!!!!!!!!!!!!
+  icon: "JobIconDefPilot"
+  supervisors: job-def-supervisors-dop-officer
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
 #-----------------------------------спавн-поинты-------------------------
 - type: entity
   id: SpawnPointDefComander
@@ -641,6 +682,19 @@
     layers:
       - state: green
       - state: dsol
+      
+- type: entity
+  id: SpawnPointDefPilot
+  parent: SpawnPointDefComander
+  name: Пилот
+  suffix: Job Spawn, Оборона
+  components:
+  - type: SpawnPoint
+    job_id: DefPilot
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dspc
 #-----------------------------------Прото карт-------------------------
 - type: entity
   id: StandardDefenseMap
@@ -675,9 +729,7 @@
   showInVote: false
   rules:
     - Defense
-    - SubGamemodesRule
     - BasicStationEventScheduler
-    - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
     
 - type: department
@@ -696,6 +748,7 @@
   - DefSpecialistDop
   - DefSolder
   - DefSolderDop
+  #- DefPilot
 #--------------------------------------------------Стартовые чипы-------------------------
 #---------------------------Командор---------------------------
 - type: entity
@@ -742,7 +795,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearOffi
-  name: чип экипировки командора 
+  name: чип экипировки офицера 
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -783,7 +836,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearOffiDop
-  name: чип экипировки командора 
+  name: чип экипировки офицера доп.отряда 
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -824,7 +877,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSpc
-  name: чип экипировки командора 
+  name: чип экипировки специалиста
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -865,7 +918,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSpcDop
-  name: чип экипировки командора 
+  name: чип экипировки специалиста  доп.отряда
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -906,7 +959,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearEnge
-  name: чип экипировки командора 
+  name: чип экипировки инженера
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -947,7 +1000,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearMed
-  name: чип экипировки командора 
+  name: чип экипировки медика
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -988,7 +1041,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearLogi
-  name: чип экипировки командора 
+  name: чип экипировки снабженца
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   suffix: Оборона
   components:
@@ -1029,7 +1082,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSolder
-  name: чип экипировки командора 
+  name: чип экипировки солдата
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   components:
   - type: PhysicalComposition
@@ -1069,7 +1122,7 @@
 - type: entity
   parent: NTChip
   id: DefChipGearSolderDop
-  name: чип экипировки командора 
+  name: чип экипировки солдата  доп.отряда 
   description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
   components:
   - type: PhysicalComposition
@@ -1104,6 +1157,46 @@
   displayName: чип поставок 
   cash:
     1: DefChipGearSolderDop
+  canWithdraw: true   
+#---------------------------Пилот---------------------------
+- type: entity
+  parent: NTChip
+  id: DefChipGearPilot
+  name: чип экипировки пилота 
+  description: Кодирующее устройство, открывающее доступ к необходимой экипировке.
+  components:
+  - type: PhysicalComposition
+    materialComposition:
+      DefChipGearPilot: 1
+  - type: Stack
+    stackType: DefChipGearPilot
+    count: 1
+  - type: Sprite
+    sprite: Victoria/Corp_chips/chips.rsi
+    state: def_gear_chip
+  - type: Currency
+    price:
+      DefChipGearPilot: 1
+      
+- type: material
+  id: DefChipGearPilot
+  name: чип поставок 
+  stackEntity: DefChipGearPilot
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: def_gear_chip }
+  price: 0
+
+- type: stack
+  id: DefChipGearPilot
+  name: чип поставок  
+  icon: { sprite: /Textures/Victoria/Corp_chips/chips.rsi, state: def_gear_chip }
+  spawn: DefChipGearPilot
+  maxCount: 1
+  
+- type: currency
+  id: DefChipGearPilot
+  displayName: чип поставок 
+  cash:
+    1: DefChipGearPilot
   canWithdraw: true 
 #--------------------------------------------------Автоматы с одёжей-------------------------  
 #---------------------------Паки снаряги---------------------------
@@ -1145,6 +1238,7 @@
     - DefChipGearEnge
     - DefChipGearMed
     - DefChipGearLogi
+    - DefChipGearPilot
     balance:
       DefChipGearCommander: 0
       DefChipGearOffi: 0
@@ -1156,6 +1250,7 @@
       DefChipGearEnge: 0
       DefChipGearMed: 0
       DefChipGearLogi: 0
+      DefChipGearPilot: 0
 #------------Листинги---------     
 - type: listing
   id: ToolboxGearDefUmporCom
@@ -1256,6 +1351,16 @@
     DefChipGearLogi: 1
   categories:
   - DefShopGearUmporWork
+  
+- type: listing
+  id: ToolboxGearDefUmporPil
+  name: Набор умпорского пилота
+  description: Одежда и базовое снаряжение пилота Умпорской Федерации.
+  productEntity: ToolboxGearDefUmporPil
+  cost:
+    DefChipGearPilot: 1
+  categories:
+  - DefShopGearUmporSold
 #--------------------Миртан------------
 #------------Магаз------------
 - type: storeCategory
@@ -1294,6 +1399,7 @@
     - DefChipGearEnge
     - DefChipGearMed
     - DefChipGearLogi
+    - DefChipGearPilot
     balance:
       DefChipGearCommander: 0
       DefChipGearOffi: 0
@@ -1305,6 +1411,7 @@
       DefChipGearEnge: 0
       DefChipGearMed: 0
       DefChipGearLogi: 0
+      DefChipGearPilot: 0
 #------------Листинги---------
 - type: listing
   id: ToolboxGearDefMirtCom
@@ -1405,6 +1512,16 @@
     DefChipGearLogi: 1
   categories:
   - DefShopGearMirtWork
+  
+- type: listing
+  id: ToolboxGearDefMirtPil
+  name: Набор миртанского пилота
+  description: Одежда и базовое снаряжение пилота Империи Миртана.
+  productEntity: ToolboxGearDefMirtPil
+  cost:
+    DefChipGearPilot: 1
+  categories:
+  - DefShopGearMirtSold
 #--------------------Конгломерат------------
 #------------Магаз------------
 - type: storeCategory
@@ -1443,6 +1560,7 @@
     - DefChipGearEnge
     - DefChipGearMed
     - DefChipGearLogi
+    - DefChipGearPilot
     balance:
       DefChipGearCommander: 0
       DefChipGearOffi: 0
@@ -1454,6 +1572,7 @@
       DefChipGearEnge: 0
       DefChipGearMed: 0
       DefChipGearLogi: 0
+      DefChipGearPilot: 0
 #------------Листинги---------
 - type: listing
   id: ToolboxGearDefCDCCom
@@ -1554,6 +1673,16 @@
     DefChipGearLogi: 1
   categories:
   - DefShopGearCDCWork
+  
+- type: listing
+  id: ToolboxGearDefCDCPil
+  name: Набор пилота конгломерата
+  description: Одежда и базовое снаряжение пилота Халифатского Божественного Конгломерата.
+  productEntity: ToolboxGearDefCDCPil
+  cost:
+    DefChipGearPilot: 1
+  categories:
+  - DefShopGearCDCSold
 #--------------------Корпорации------------
 #------------Магаз------------
 
@@ -1597,6 +1726,7 @@
     - DefChipGearEnge
     - DefChipGearMed
     - DefChipGearLogi
+    - DefChipGearPilot
     balance:
       DefChipGearCommander: 0
       DefChipGearOffi: 0
@@ -1608,6 +1738,7 @@
       DefChipGearEnge: 0
       DefChipGearMed: 0
       DefChipGearLogi: 0
+      DefChipGearPilot: 0
 #------------Листинги---------
 - type: listing
   id: ToolboxGearDefUSSPCom
@@ -1708,6 +1839,16 @@
     DefChipGearLogi: 1
   categories:
   - DefShopGearUSSPWork
+  
+- type: listing
+  id: ToolboxGearDefUSSPPil
+  name: Набор советского пилота
+  description: Одежда и базовое снаряжение пилота Советского Союза.
+  productEntity: ToolboxGearDefUSSPPil
+  cost:
+    DefChipGearPilot: 1
+  categories:
+  - DefShopGearUSSPSold
 #---------------------------------Автоматы---------------------------
 #---------------------------Умпор---------------------------
 - type: entity

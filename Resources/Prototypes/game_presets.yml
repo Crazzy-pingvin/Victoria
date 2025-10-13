@@ -5,6 +5,7 @@
   name: survival-title
   showInVote: false # secret
   description: survival-description
+  supportedMaps: VictoriaDefaultMapPool
   rules:
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
@@ -19,6 +20,7 @@
     - junk
     - meteorhell
   name: kessler-syndrome-title
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false # secret
   description: kessler-syndrome-description
   rules:
@@ -33,6 +35,7 @@
   - all
   name: all-at-once-title
   description: all-at-once-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
     - Nukeops
@@ -55,6 +58,7 @@
   - punishment
   name: aller-at-once-title
   description: aller-at-once-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false #Please god dont do this
   rules:
     - Nukeops
@@ -80,6 +84,7 @@
   name: extended-title
   showInVote: false #2boring2vote
   description: extended-description
+  supportedMaps: VictoriaDefaultMapPool
   rules:
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
@@ -94,6 +99,7 @@
   name: greenshift-title
   showInVote: false #4boring4vote
   description: greenshift-description
+  supportedMaps: VictoriaDefaultMapPool
   rules:
   - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
@@ -127,11 +133,38 @@
     - Secret
 
 - type: gamePreset
+  id: SecretExtended #For Admin Use: Runs Extended but shows "Secret" in lobby.
+  alias:
+    - secretextended
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  supportedMaps: VictoriaDefaultMapPool
+  rules:
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+
+- type: gamePreset
+  id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
+  alias:
+  - secretgreenshift
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  supportedMaps: VictoriaDefaultMapPool
+  rules:
+  - SpaceTrafficControlFriendlyEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
   id: Sandbox
   alias:
     - sandbox
   name: sandbox-title
   description: sandbox-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
   maxPlayers: 5
   rules:
@@ -144,6 +177,7 @@
     - tator
   name: traitor-title
   description: traitor-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
   - DummyNonAntagChance
@@ -173,6 +207,7 @@
     - nukeops
   name: nukeops-title
   description: nukeops-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
   - Nukeops
@@ -191,6 +226,7 @@
     - revolutionaries
   name: rev-title
   description: rev-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
   - DummyNonAntagChance
@@ -227,6 +263,7 @@
   - zomber
   name: zombie-title
   description: zombie-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
   - Zombie
@@ -243,6 +280,7 @@
   - meteombies
   name: zombieteors-title
   description: zombieteors-description
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
   - Zombie

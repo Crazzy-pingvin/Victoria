@@ -1,0 +1,27 @@
+- type: gameMap
+  id: VictoriaForestCordon
+  mapName: 'Forest Cordon'
+  mapPath: /Maps/victoria_def_forest_cordon.yml
+  minPlayers: 0
+  maxPlayers: 20
+  stations:
+    VictoriaForestCordon:
+      stationProto: StandardDefenseMap
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Лесной кордон'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/shuttle_def_emergency.yml
+        - type: StationJobs
+          availableJobs:
+            DefComander: [ 0, 0 ]
+            DefOfficer: [ 1, 1 ]
+            DefOfficerDop: [ 0, 0 ]
+            DefEngener: [ 1, 1 ]
+            DefMedic: [ 1, 1 ]
+            DefCargo: [ 1, 1 ]
+            DefSpecialist: [ 1, 1 ]
+            DefSpecialistDop: [ 0, 0 ]
+            DefSolder: [ -1, -1 ]
+            DefSolderDop: [ 0, 0 ]
+            DefPilot: [ 0, 0 ]

@@ -93,7 +93,7 @@
 #-----------------------------------------------антаги-----------------------------
 - type: antag
   id: NukPetr
-  name: Боевик Петрищевец
+  name: Боевик петрищевцев
   antagonist: true
   setPreference: true
   objective: Уничтожте всех глав, сотрудников безопасности и учёных НТ.
@@ -106,7 +106,7 @@
 
 - type: antag
   id: NukPetrSpec
-  name: Специалист Петрищевец
+  name: Специалист петрищевцев
   antagonist: true
   setPreference: true
   objective: Уничтожьте всех глав, сотрудников безопасности и учёных НТ, делая упор на технические средства.
@@ -122,7 +122,7 @@
 
 - type: antag
   id: NukPetrCommander
-  name: Командир Петрищевец
+  name: Командир петрищевцев
   antagonist: true
   setPreference: true
   objective: Руководите отрядом, дабы избавить пролетариев НТ от капиталистического гнёта их глав, сотрудников безопасности и учёных.
@@ -136,7 +136,7 @@
 - type: entity
   parent: BaseMindRoleAntag
   id: MindRoleNukPetr
-  name: Боевик Петрищевец
+  name: Боевик петрищевцев
   components:
   - type: MindRole
     exclusiveAntag: true
@@ -148,7 +148,7 @@
 - type: entity
   parent: MindRoleNukPetr
   id: MindRoleNukPetrSpec
-  name: Специалист Петрищевец
+  name: Специалист петрищевцев
   components:
   - type: MindRole
     exclusiveAntag: true
@@ -157,7 +157,7 @@
 - type: entity
   parent: MindRoleNukPetr
   id: MindRoleNukPetrCommander
-  name: Командир Петрищевец
+  name: Командир петрищевцев
   components:
   - type: MindRole
     exclusiveAntag: true
@@ -249,6 +249,7 @@
     - petr
   name: Петрищевский налёт
   description: Экстремисты-Петрищевцы летят в атаку на станцию, дабы уничтожить глав, учёных и сотрудников СБ. Они готовы даже взорвать станцию! Защищайтесь!
+  supportedMaps: VictoriaDefaultMapPool
   showInVote: false
   rules:
     - NukPetr

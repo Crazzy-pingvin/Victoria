@@ -32,6 +32,8 @@
   - Chapel
   - Hydroponics
   - Atmospherics
+  - GenpopEnter
+  - GenpopLeave
 #Лорные
   - KMLGAccess
   - PetrAccess
@@ -47,11 +49,11 @@
   - HoundAccessWorker
   - HoundAccessOper
   - HoundAccessCom
-
-  - GenpopEnter
-  - GenpopLeave
+  - USSP
 
 - type: accessGroup
   id: General
   tags:
   - Maintenance
+
+

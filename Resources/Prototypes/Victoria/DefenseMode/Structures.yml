@@ -398,3 +398,13 @@
   components:
   - type: TimedDespawn
     lifetime: 1800
+    
+- type: entity
+  parent: WallRockDef5Min
+  id: WallRockDef15MinReal
+  name: камень
+  suffix: Неразрушаемый, 15 минут
+  description: Временная стена на базе. Должна исчезнуть через 15 минут.
+  components:
+  - type: TimedDespawn
+    lifetime: 900

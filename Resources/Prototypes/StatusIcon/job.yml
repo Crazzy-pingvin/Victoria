@@ -439,40 +439,6 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSeniorPhysician
-  icon:
-    sprite: *icon-rsi
-    state: SeniorPhysician
-  allowSelection: false
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconSeniorOfficer
-  icon:
-    sprite: *icon-rsi
-    state: SeniorOfficer
-  allowSelection: false
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconSeniorEngineer
-  icon:
-    sprite: *icon-rsi
-    state: SeniorEngineer
-  allowSelection: false
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconSeniorResearcher
-  icon:
-    sprite: *icon-rsi
-    state: SeniorResearcher
-  allowSelection: false
-
-# Other
-
-- type: jobIcon
-  parent: JobIcon
   id: JobIconNoId
   icon:
     sprite: *icon-rsi

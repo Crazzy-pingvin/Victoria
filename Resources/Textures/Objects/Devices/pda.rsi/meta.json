@@ -229,16 +229,8 @@
     {
       "name": "pda-cluwne"
     },
-	{
-      "name": "pda-wizard",
-      "delays": [
-        [
-          0.3,
-          0.3,
-          0.3,
-          0.3
-        ]
-      ]
+    {
+      "name": "pda-seniorofficer"
     },
     {
       "name": "equipped-IDCARD",
