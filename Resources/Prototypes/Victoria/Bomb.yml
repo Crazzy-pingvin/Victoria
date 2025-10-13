@@ -1243,6 +1243,9 @@
         path: /Audio/Effects/beep_landmine.ogg
         params:
             maxDistance: 10
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -1260,6 +1263,8 @@
   - type: StepTrigger
     requiredTriggeredSpeed: 0
     stepOn: true
+  - type: TriggerOnStepTrigger
+    keyOut: timer
   - type: ProjectileGrenade
     fillPrototype: PelletClusterLethal
     capacity: 30

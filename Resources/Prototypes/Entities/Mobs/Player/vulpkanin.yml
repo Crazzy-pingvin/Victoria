@@ -3,3 +3,5 @@
   name: Urist McBark
   parent: BaseMobVulpkanin
   id: MobVulpkanin
+  components:
+  - type: Chockable

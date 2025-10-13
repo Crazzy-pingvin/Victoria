@@ -52,9 +52,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
     - type: MapAtmosphere
@@ -1580,15 +1578,6 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: ActionToggleScope
-  entities:
-  - uid: 3413
-    components:
-    - type: Transform
-      parent: 2965
-    - type: InstantAction
-      originalIconColor: '#FFFFFFFF'
-      container: 2965
 - proto: AdminAPC
   entities:
   - uid: 1522

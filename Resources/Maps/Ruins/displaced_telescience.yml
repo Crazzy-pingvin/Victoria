@@ -2031,15 +2031,6 @@ entities:
       anchored: True
       pos: -5.5,-7.5
       parent: 1
-- proto: BlueprintFulton
-  entities:
-  - uid: 382
-    components:
-    - type: MetaData
-      name: blueprint
-    - type: Transform
-      pos: 1.579378,-6.642523
-      parent: 1
 - proto: BluespaceBeaker
   entities:
   - uid: 471

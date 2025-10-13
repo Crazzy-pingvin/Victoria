@@ -1619,44 +1619,35 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------Новобранец----------
-- type: dataset
+- type: localizedDataset
   id: PetrName-nov
   values:
-  - Пионер
+    prefix: petr-name-nov-
+    count: 1
 #---------------------------------Товарищ----------
-- type: dataset
+- type: localizedDataset
   id: PetrName-tov
   values:
-  - Товарищ
+    prefix: petr-name-tov-
+    count: 1
 #---------------------------------Ветеран----------
-- type: dataset
+- type: localizedDataset
   id: PetrName-vet
   values:
-  - Старший Товарищ
+    prefix: petr-name-vet-
+    count: 1
 #---------------------------------Командир----------
-- type: dataset
+- type: localizedDataset
   id: PetrName-com
   values:
-  - Командир
+    prefix: petr-name-com-
+    count: 1
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: PetrNameTwo
   values:
-  - Киров
-  - Железин
-  - Левин
-  - Гевара
-  - Молотов
-  - Серпов
-  - Ежов
-  - Ягода
-  - Марксненко
-  - Либерти
-  - Комрадин
-  - Союзнов
-  - Правдин
-  - Горячев
-  - Огнесердцен
+    prefix: petr-name-two-
+    count: 15
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------новобранец----------
 - type: randomHumanoidSettings

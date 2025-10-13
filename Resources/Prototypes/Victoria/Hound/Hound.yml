@@ -2297,51 +2297,35 @@
 #-----------------------------------------------------Спавнеры
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------звания оперов----------
-- type: dataset
+- type: localizedDataset
   id: HoundName-op
   values:
-  - Новобранец
-  - Рядовой
+    prefix: KMLG-name-one-dataset-
+    count: 2
 #---------------------------------звания командиров----------
-- type: dataset
+- type: localizedDataset
   id: HoundName-com
   values:
-  - Старшина
+    prefix: hound-name-com-
+    count: 1
 #---------------------------------звания работников----------
-- type: dataset
+- type: localizedDataset
   id: HoundName-worker
   values:
-  - Работник
+    prefix: hound-name-worker-
+    count: 1
 #---------------------------------Представитель----------
-- type: dataset
+- type: localizedDataset
   id: HoundName-off
   values:
-  - Полковник
-  - Подполковник
+    prefix: hound-name-off-
+    count: 2
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: HoundNameTwo
   values:
-  - Энгельс
-  - Фриц
-  - Топорин
-  - Бивер
-  - Пушкин
-  - Тачанкин
-  - Ружьин
-  - Ганзель
-  - Сворд
-  - Пикель
-  - Спир
-  - Мейс
-  - Палкат
-  - Мек
-  - Остеп
-  - Спуд
-  - Окс
-  - Швертен
-  - Акстер
-  - Койле
+    prefix: hound-name-two-
+    count: 20
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #------------------------------------Новичок
 - type: randomHumanoidSettings

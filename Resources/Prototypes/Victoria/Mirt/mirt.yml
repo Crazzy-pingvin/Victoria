@@ -1260,9 +1260,12 @@
   components:
   - type: RepeatingTrigger
     delay: 0.6 # line of fire as well as if it hits something
+    keyOut: timer
   - type: ProjectileGrenade
     fillPrototype: MirtBulletLightFrag
     capacity: 20
+    keysIn:
+    - timer
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container
@@ -1270,6 +1273,7 @@
     lifetime: 0.7
   - type: TriggerOnCollide
     fixtureID: projectile
+    keyOut: timer
   - type: Projectile
     damage:
       types:
@@ -3299,79 +3303,35 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------имена----------
-- type: dataset
+- type: localizedDataset
   id: MirtName
   values:
-  - Юрий
-  - Марк
-  - Гай
-  - Октавий
-  - Виктор
-  - Габриэль
-  - Игноциус
-  - Артур
-  - Питер
-  - Чеслав
-  - Козимеж
-  - Августин
-  - Давид
-  - Марек
-  - Джаромил
-  - Гюстав
-  - Отто
-  - Альбрехт
-  - Освальд
-  - Тронд
-  - Харольд
-  - Кнуд
-  - Свен
-  - Кшиштоф
-  - Исмаил
-  - Константин
+    prefix: mirt-name-one-
+    count: 26
 #---------------------------------звания пацанов----------
-- type: dataset
+- type: localizedDataset
   id: MirtName-s
   values:
-  - Велит
-  - Гастат
+    prefix: mirt-name-s-
+    count: 2
 #---------------------------------звания тяжей----------
-- type: dataset
+- type: localizedDataset
   id: MirtName-t
   values:
-  - Принцип
-  - Триарий
+    prefix: mirt-name-t-
+    count: 2
 #---------------------------------звания младших офицеров----------
-- type: dataset
+- type: localizedDataset
   id: MirtName-o
   values:
-  - Турман
-  - Декур
+    prefix: mirt-name-o-
+    count: 2
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: MirtNameTwo
   values:
-  - Зубин
-  - Щитов
-  - Стилли
-  - Стронг
-  - Лапин
-  - Пушкарёв
-  - Прорывин
-  - Бронин
-  - Сворд
-  - Сабери
-  - Сильнов
-  - Боговеров
-  - Спасский
-  - Штутц
-  - Пилгер
-  - Ретунг
-  - Рустинг
-  - Скольд
-  - Фестниг
-  - Грофт
-  - Сник
-  - Магевер
+    prefix: mirt-name-two-
+    count: 22
 #---------------------------------ополченец----------
 - type: randomHumanoidSettings
   speciesBlacklist:

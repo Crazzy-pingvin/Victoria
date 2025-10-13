@@ -25554,23 +25554,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BlueprintFulton
-  entities:
-  - uid: 4429
-    components:
-    - type: MetaData
-      desc: A highly detailed schematic for an older shuttle. A skilled engineer might discern the rough layout of an exploration shuttle - modified nearly beyond recognition.
-      name: shuttle blueprint
-    - type: Transform
-      pos: -55.51698,-77.4413
-      parent: 2
-    - type: Item
-      size: Huge
-    missingComponents:
-    - Blueprint
-    - StaticPrice
-    - DamageOnHighSpeedImpact
-    - DamageExaminable
 - proto: Bonfire
   entities:
   - uid: 19780

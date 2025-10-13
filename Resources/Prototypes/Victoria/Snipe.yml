@@ -4,18 +4,6 @@
   categories:
   - HideSpawnMenu
 
-- type: entity
-  parent: ActionMarineBase
-  id: ActionToggleScope
-  name: Переключение оптики
-  description: Переключитесь на обзор через оптический прицел.
-  components:
-  - type: InstantAction
-    icon:
-      sprite: Victoria/Snipe/scope_action.rsi
-      state: sniperscope
-    event: !type:ToggleActionEvent
-    useDelay: 0.25
 #-----------------------------------------------------бинокль-----------------------------------
 - type: entity
   parent: BaseItem
@@ -55,7 +43,7 @@
   - type: Stack
     stackType: OpticalSight
     count: 1
-    
+
 - type: stack
   id: OpticalSight
   name: оптический прицел
@@ -85,8 +73,8 @@
   - type: Construction
     graph: MosinSniper
     node: MosinSniper
-    
-    
+
+
 - type: constructionGraph
   id: MosinSniper
   start: Mosin
@@ -100,8 +88,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: MosinSniper
       entity: WeaponSniperMosinSniper
@@ -119,7 +107,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1 
+              doAfter: 1
 #-----------------------------------------------------Снайперский Лазерный карабин-----------------------------------
 - type: entity
   name: Лазерная винтовка Снайперская
@@ -143,8 +131,8 @@
   - type: Construction
     graph: LaserCarbineSniper
     node: LaserCarbineSniper
-    
-    
+
+
 - type: constructionGraph
   id: LaserCarbineSniper
   start: LaserCarbine
@@ -158,8 +146,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: LaserCarbineSniper
       entity: WeaponLaserCarbineSniper
@@ -177,7 +165,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1 
+              doAfter: 1
 #-----------------------------------------------------Снайперская Импульсная пуха-----------------------------------
 - type: entity
   name: импульсная винтовка Снайперская
@@ -201,8 +189,8 @@
   - type: Construction
     graph: PulseRifleSniper
     node: PulseRifleSniper
-    
-    
+
+
 - type: constructionGraph
   id: PulseRifleSniper
   start: PulseRifle
@@ -216,8 +204,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: PulseRifleSniper
       entity: WeaponPulseRifleSniper
@@ -235,7 +223,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1 
+              doAfter: 1
 #-----------------------------------------------------Снайперская Умпорская винтовка-----------------------------------
 - type: entity
   name: умпорская винтовка "Окопник" Снайперская
@@ -275,8 +263,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: UmporRifleSniper
       entity: UmporHeavyRifleSniper
@@ -294,7 +282,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1 
+              doAfter: 1
 #-----------------------------------------------------Снайперская Ноократская винтовка-----------------------------------
 #--------------------------------------------Ноократская------------------
 - type: entity
@@ -320,8 +308,8 @@
   - type: Construction
     graph: NoocRifleSniper
     node: NoocRifleSniper
-    
-    
+
+
 - type: constructionGraph
   id: NoocRifleSniper
   start: NoocRifle
@@ -335,8 +323,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: NoocRifleSniper
       entity: NoocRifleSniper
@@ -354,13 +342,13 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1 
+              doAfter: 1
 #--------------------------------------------Миртанийская-----------------
 - type: entity
   name: Ноократская винтовка "Господин" Снайперская
   suffix: Миртан
   parent: MirtNoocRifle
-  id: MirtNoocRifleSniper 
+  id: MirtNoocRifleSniper
   description: Опасное и дальнобойное оружие Ноократии Эранта для ликвидации защитников важных точек обороны и убийства ключевых бойцов противника
   components:
   - type: Sprite
@@ -378,7 +366,7 @@
     offset: 14
   - type: Construction
     graph: MirtNoocRifleSniper
-    node: MirtNoocRifleSniper  
+    node: MirtNoocRifleSniper
 
 - type: constructionGraph
   id: MirtNoocRifleSniper
@@ -387,16 +375,16 @@
     - node: MirtNoocRifle
       entity: MirtNoocRifle
       edges:
-        - to: MirtNoocRifleSniper 
+        - to: MirtNoocRifleSniper
           steps:
             - material: OpticalSight
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
 
-    - node: MirtNoocRifleSniper 
+
+    - node: MirtNoocRifleSniper
       entity: MirtNoocRifleSniper
       edges:
         - to: MirtNoocRifle
@@ -412,7 +400,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1    
+              doAfter: 1
 #-----------------------------------------------------Снайперская миртанийская винтовка-----------------------------------
 - type: entity
   name: Блюспейс винтовка "Чаровница" Снайперская
@@ -436,7 +424,7 @@
     offset: 14
   - type: Construction
     graph: MirtRifleSniper
-    node: MirtRifleSniper  
+    node: MirtRifleSniper
 
 - type: constructionGraph
   id: MirtRifleSniper
@@ -451,8 +439,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: MirtRifleSniper
       entity: MirtRifleSniper
@@ -470,7 +458,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1   
+              doAfter: 1
 #-----------------------------------------------------Снайперская лазерная винтовка СНК-----------------------------------
 - type: entity
   name: Лазерный карабин "Котжи" Снайперский
@@ -494,7 +482,7 @@
     offset: 14
   - type: Construction
     graph: SNKLaserCarbineSniper
-    node: SNKLaserCarbineSniper  
+    node: SNKLaserCarbineSniper
 
 - type: constructionGraph
   id: SNKLaserCarbineSniper
@@ -509,8 +497,8 @@
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
+
 
     - node: SNKLaserCarbineSniper
       entity: SNKLaserCarbineSniper
@@ -528,13 +516,13 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1   
+              doAfter: 1
 #-----------------------------------------------------Снайперская тяжёлая винтовка СНК-----------------------------------
 - type: entity
   name: Винтовка СНК "Нитро" Снайперская
   suffix: СНК
   parent: SNKHeavyRifle
-  id: SNKHeavyRifleSniper 
+  id: SNKHeavyRifleSniper
   description: Очень мощная винтовка СНК. Никогда не знаешь когда от неё прилетит, но когда прилетит будет очень-очень плохо. Использует патроны СНК .55
   components:
   - type: Sprite
@@ -551,27 +539,27 @@
     zoom: 2.2
     offset: 14
   - type: Construction
-    graph: SNKHeavyRifleSniper 
-    node: SNKHeavyRifleSniper   
+    graph: SNKHeavyRifleSniper
+    node: SNKHeavyRifleSniper
 
 - type: constructionGraph
-  id: SNKHeavyRifleSniper 
+  id: SNKHeavyRifleSniper
   start: SNKHeavyRifle
   graph:
     - node: SNKHeavyRifle
       entity: SNKHeavyRifle
       edges:
-        - to: SNKHeavyRifleSniper 
+        - to: SNKHeavyRifleSniper
           steps:
             - material: OpticalSight
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
 
-    - node: SNKHeavyRifleSniper 
-      entity: SNKHeavyRifleSniper 
+
+    - node: SNKHeavyRifleSniper
+      entity: SNKHeavyRifleSniper
       edges:
         - to: SNKHeavyRifle
           completed:
@@ -586,7 +574,7 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1  
+              doAfter: 1
 #-----------------------------------------------------Снайперская винтовка конгломерата-----------------------------------
 - type: entity
   name: Винтовка Конгломерата "Силла" Снайперская
@@ -609,8 +597,8 @@
     zoom: 2.2
     offset: 14
   - type: Construction
-    graph: CDCRifleSniper 
-    node: CDCRifleSniper   
+    graph: CDCRifleSniper
+    node: CDCRifleSniper
 
 - type: constructionGraph
   id: CDCRifleSniper
@@ -619,17 +607,17 @@
     - node: CDCRifle
       entity: CDCRifle
       edges:
-        - to: CDCRifleSniper 
+        - to: CDCRifleSniper
           steps:
             - material: OpticalSight
               amount: 1
               doAfter: 2
             - tool: Screwing
-              doAfter: 1 
-            
+              doAfter: 1
 
-    - node: CDCRifleSniper 
-      entity: CDCRifleSniper 
+
+    - node: CDCRifleSniper
+      entity: CDCRifleSniper
       edges:
         - to: CDCRifle
           completed:
@@ -644,6 +632,6 @@
             - !type:DeleteEntity
           steps:
             - tool: Screwing
-              doAfter: 1  
+              doAfter: 1
 
 

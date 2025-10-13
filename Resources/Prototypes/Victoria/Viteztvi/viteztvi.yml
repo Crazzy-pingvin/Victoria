@@ -1384,60 +1384,41 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------звания рядовых----------
-- type: dataset
+- type: localizedDataset
   id: VitzName-ef
   values:
-  - Новобранец
-  - Ефрейтор
+    prefix: vitz-name-ef-
+    count: 1
 #---------------------------------звания старшина----------
-- type: dataset
+- type: localizedDataset
   id: VitzName-st
   values:
-  - Старшина
+    prefix: vitz-name-st-
+    count: 1
 #---------------------------------звания пилоты----------
-- type: dataset
+- type: localizedDataset
   id: VitzName-pi
   values:
-  - Пилот
-  - Старший Пилот
+    prefix: vitz-name-pi-
+    count: 2
 #---------------------------------звеньевой----------
-- type: dataset
+- type: localizedDataset
   id: VitzName-zv
   values:
-  - Звеньевой
+    prefix: vitz-name-zv-
+    count: 1
 #---------------------------------Мистер----------
-- type: dataset
+- type: localizedDataset
   id: VitzName-mr
   values:
-  - Мистер
+    prefix: vitz-name-mr-
+    count: 1
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: VitzNameTwo
   values:
-  - Мечников
-  - Кинжалов
-  - Топорин
-  - Пушкин
-  - Тачанкин
-  - Ружьин
-  - Ганзель
-  - Сворд
-  - Пикель
-  - Спир
-  - Мейс
-  - Палкат
-  - Мек
-  - Остеп
-  - Спуд
-  - Окс
-  - Швертен
-  - Акстер
-  - Койле
-#---------------------------------фамилии----------
-- type: dataset
-  id: VitzNameTwoHill
-  values:
-  - Хилл
+    prefix: vitz-name-two-
+    count: 19
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------ефрейтор----------
 - type: randomHumanoidSettings
@@ -1715,7 +1696,6 @@
     - type: RandomMetadata
       nameSegments:
       - VitzName-mr
-      - VitzNameTwoHill
     - type: NpcFactionMember
       factions:
       - Vitz
@@ -1757,7 +1737,6 @@
   - type: RandomMetadata
     nameSegments:
     - VitzName-mr
-    - VitzNameTwoHill
   - type: RandomHumanoidSpawner
     settings: VitzMrHill
   - type: NpcFactionMember
