@@ -26,6 +26,29 @@
   - Holoprojector
   - WetFloorSign
   - WireBrush
+  - DrinkVacuumFlask
+  - DrinkFlaskBar
+  - DrinkShaker
+  - DrinkJigger
+  - Spoon
+  - Fork
+  - SpoonPlastic
+  - RollingPin
+  - ForkPlastic
+  - KnifePlastic
+  - PairedChopsticks
+  - DrinkIceBucket
+  - BarSpoon
+  - ButchCleaver
+  - KitchenKnife
+  - Plunger
+  - Mousetrap
+  - HydroponicsToolSpade
+  - BikeHorn
+  - ClownRecorder
+  - LauncherCreamPie
+  - HydroponicsToolScythe
+  - HydroponicsToolHatchet
 
 - type: latheRecipePack
   id: ServiceBoardsStatic
@@ -40,6 +63,10 @@
   - SmartFridgeCircuitboard
   - PrinterDocMachineCircuitboard # Corvax-Printer
 
+- type: latheRecipePack
+  id: ServiceEmagStatic
+  recipes:
+  - CluwneHorn
 ## Dynamic
 
 - type: latheRecipePack
@@ -49,6 +76,9 @@
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
   - MegaSprayBottle
+  - TrashBagBlue
+  - BlueSpaceLightReplacer
+  - BorgModuleAdvancedCleaning
 
 - type: latheRecipePack
   id: Instruments

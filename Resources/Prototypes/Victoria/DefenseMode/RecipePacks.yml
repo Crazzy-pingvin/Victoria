@@ -135,3 +135,23 @@
       - USSPBatteryCarabSnipe
       - USSPBatteryRifSnipe
       - DefClothingEyesHudMedical
+
+- type: latheRecipePack
+  id: PackDefClothLatheUmpor
+  recipes:
+  - RecipeUmporCoat
+
+- type: latheRecipePack
+  id: PackDefClothLatheMirt
+  recipes:
+  - RecipeMirtCoat
+
+- type: latheRecipePack
+  id: PackDefClothLatheCDC
+  recipes:
+  - RecipeCDCCoat
+
+- type: latheRecipePack
+  id: PackDefClothLatheUSSP
+  recipes:
+  - RecipeUSSPCoat

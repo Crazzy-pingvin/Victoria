@@ -524,25 +524,12 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - Pickaxe
-      - OreBag
-      - Flare
-      - HandheldGPSBasic
-      - WeaponGrapplingGun
-      - WeaponProtoKineticAccelerator
-      - SurvivalKnife
-      - AppraisalTool
-    dynamicRecipes:
-      - FultonBeacon
-      - AdvancedMineralScannerEmpty
-      - SeismicCharge
-      - MineralScannerEmpty
-      - Fulton
-      - MiningDrill
-      - MiningDrillDiamond
-      - ClothingMaskWeldingGas
-      - OreBagOfHolding
+    staticPacks:
+      - CargoStatic
+    dynamicPacks:
+      - Mining
+      - Equipment
+      - AdvancedTools
   - type: MaterialStorage
     whitelist:
       tags:
@@ -575,33 +562,14 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - Crowbar
-      - Wrench
-      - Screwdriver
-      - Wirecutter
-      - Welder
-      - Multitool
-      - NetworkConfigurator
-      - ClothingHeadHatWelding
-      - ClothingHeadHatCone
-      - TRayScanner
-      - GeigerCounter
-      - GasAnalyzer
-      - RCD
-      - RCDAmmo
-      - CableStack
-      - CableMVStack
-      - CableHVStack
-      - SprayPainter
-      - ClothingBeltUtility
-      - ClothingShoesBootsMag
+    staticPacks:
+      - ToolsStatic
+      - AtmosStatic
+      - CablesStatic
+      - EngineeringStatic
     dynamicRecipes:
-      - ClothingBeltBlueSpace
-      - HolofanProjector
-      - JawsOfLife
-      - WelderExperimental
-      - PowerDrill
+      - AtmosTools
+      - AdvancedTools
   - type: MaterialStorage
     whitelist:
       tags:
@@ -634,61 +602,15 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - DrinkGlass
-      - DrinkShotGlass
-      - DrinkGlassCoupeShaped
-      - DrinkVacuumFlask
-      - DrinkFlaskBar
-      - DrinkShaker
-      - DrinkJigger
-      - DrinkIceBucket
-      - BarSpoon
-      - CustomDrinkJug
-      - ButchCleaver
-      - KitchenKnife
-      - RollingPin
-      - Spoon
-      - Fork
-      - SpoonPlastic
-      - ForkPlastic
-      - KnifePlastic
-      - PairedChopsticks
-      - FoodBowlBig
-      - FoodPlate
-      - FoodPlateSmall
-      - FoodPlateTin
-      - FoodPlateMuffinTin
-      - FoodKebabSkewer
-      - Plunger
-      - WetFloorSign
-      - Mousetrap
-      - LightReplacer
-      - TrashBag
-      - Holoprojector
-      - MopItem
-      - SprayBottle
-      - Bucket
-      - HydroponicsToolSpade
-      - HydroponicsToolMiniHoe
-      - PlantBag
-      - BikeHorn
-      - ClownRecorder
-      - LauncherCreamPie
-      - HydroponicsToolScythe
-      - HydroponicsToolHatchet
-    dynamicRecipes:
-      - TrashBagBlue
-      - BlueSpaceLightReplacer
-      - AdvMopItem
-      - ClothingBackpackWaterTank
-      - SynthesizerInstrument
-      - ClothingShoesBootsSpeed
-      - WeaponSprayNozzle
-      - MegaSprayBottle
+    staticPacks:
+      - ServiceStatic
+    dynamicPack:
+      - Janitor
+      - Instruments
+      #- ClothingShoesBootsSpeed
   - type: EmagLatheRecipes
-    emagStaticRecipes:
-      - CluwneHorn
+    emagStaticPacks:
+      - ServiceEmagStatic
   - type: MaterialStorage
     whitelist:
       tags:

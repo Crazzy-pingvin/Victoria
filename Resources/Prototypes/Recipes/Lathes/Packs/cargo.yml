@@ -5,6 +5,12 @@
   recipes:
   - AppraisalTool
   - Pickaxe
+  - OreBag
+  - Flare
+  - HandheldGPSBasic
+  - WeaponGrapplingGun
+  - WeaponProtoKineticAccelerator
+  - SurvivalKnife
 
 - type: latheRecipePack
   id: CargoBoardsStatic
@@ -22,6 +28,7 @@
   - MineralScannerEmpty
   - AdvancedMineralScannerEmpty
   - OreBagOfHolding
+  - SeismicCharge
 
 - type: latheRecipePack
   id: CargoBoards

@@ -35,6 +35,7 @@
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
+  - ClothingBeltBlueSpace
 
 - type: latheRecipePack
   id: PowerCells

@@ -38,14 +38,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: DigitalCircuitMaterial
   stackEntity: DigitalCircuit1
   name: цифровой компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: digital }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeDigitalCircuit
@@ -87,14 +87,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: AnalogCircuitMaterial
   stackEntity: AnalogCircuit1
   name: аналоговый компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: analog }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeAnalogCircuit
@@ -135,14 +135,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: PulseCircuitMaterial
   stackEntity: PulseCircuit1
   name: импульсный компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: pulse }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipePulseCircuit
@@ -184,14 +184,14 @@
   suffix: электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: PowerCircuitMaterial
   stackEntity: PowerCircuit1
   name: силовой компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: power }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipePowerCircuit
@@ -232,14 +232,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: ProgrammableCircuitMaterial
   stackEntity: ProgrammableCircuit1
   name: ПЛИС компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: programmable }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeProgrammableCircuit
@@ -281,14 +281,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: MicrowaveCircuitMaterial
   stackEntity: MicrowaveCircuit1
   name: СВЧ компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: microwave }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeMicrowaveCircuit
@@ -330,14 +330,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: DiscreteCircuitMaterial
   stackEntity: DiscreteCircuit1
   name: дискретный компонент
   icon: { sprite: Victoria/Electron/components_circuit.rsi, state: discrete }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeDiscreteCircuit
@@ -394,7 +394,12 @@
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
-    staticRecipes:
+    staticPacks:
+    - PackLithograph
+
+- type: latheRecipePack
+  id: PackLithograph
+  recipes:
     - RecipeDigitalCircuit
     - RecipeAnalogCircuit
     - RecipePulseCircuit

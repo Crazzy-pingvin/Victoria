@@ -1601,13 +1601,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - RecipeUmporMechValiantLeg
-      - RecipeUmporMechValiantArm
-      - RecipeUmporMechGunRifle
-      - RecipeUmporMechGunAuto
-      - RecipeUmporMagazineMechRifle
-      - RecipeUmporMagazineMechAuto
+    staticPacks:
+    - PackDefUmporFactoryFab
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1618,6 +1613,16 @@
         - DefChipCraftMechWeapon
   - type: Anchorable
     flags: Anchorable
+#Пак
+- type: latheRecipePack
+  id: PackDefUmporFactoryFab
+  recipes:
+      - RecipeUmporMechValiantLeg
+      - RecipeUmporMechValiantArm
+      - RecipeUmporMechGunRifle
+      - RecipeUmporMechGunAuto
+      - RecipeUmporMagazineMechRifle
+      - RecipeUmporMagazineMechAuto
 #----------------------------------------------------Конструкции--------------------------
 #---------------------------------------------Корпус----------------------------------
 - type: Tag
@@ -2131,12 +2136,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - RecipeMirtMechNibbleLeg
-      - RecipeMirtMechGunArm
-      - RecipeMirtMechGunAuto
-      - RecipeMirtMechGunGran
-      - RecipeMirtMagazineLMGMech
+    staticPacks:
+    - PackDefMirtFactoryFab
   - type: MaterialStorage
     whitelist:
       tags:
@@ -2147,6 +2148,15 @@
         - DefChipCraftMechWeapon
   - type: Anchorable
     flags: Anchorable
+#Пак
+- type: latheRecipePack
+  id: PackDefMirtFactoryFab
+  recipes:
+      - RecipeMirtMechNibbleLeg
+      - RecipeMirtMechGunArm
+      - RecipeMirtMechGunAuto
+      - RecipeMirtMechGunGran
+      - RecipeMirtMagazineLMGMech
 #----------------------------------------------------Конструкции--------------------------
 #---------------------------------------------Корпус----------------------------------
 - type: Tag
@@ -2642,13 +2652,9 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - RecipeCDCMechScorpioLeg
-      - RecipeCDCMechScorpioTeil
-      - RecipeCDCMechGunRifle
-      - RecipeCDCMechGunAuto
-      - RecipeCDCMagazineRifleStdMech
-      - RecipeCDCMagazineAutomatStdMech
+    staticPacks:
+    - PackDefCDCFactoryFab
+
   - type: MaterialStorage
     whitelist:
       tags:
@@ -2659,6 +2665,16 @@
         - DefChipCraftMechWeapon
   - type: Anchorable
     flags: Anchorable
+#Пак
+- type: latheRecipePack
+  id: PackDefCDCFactoryFab
+  recipes:
+      - RecipeCDCMechScorpioLeg
+      - RecipeCDCMechScorpioTeil
+      - RecipeCDCMechGunRifle
+      - RecipeCDCMechGunAuto
+      - RecipeCDCMagazineRifleStdMech
+      - RecipeCDCMagazineAutomatStdMech
 #----------------------------------------------------Конструкции--------------------------
 #---------------------------------------------Корпус----------------------------------
 - type: Tag
@@ -3121,15 +3137,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
-      - RecipeUSSPMechSKLeg
-      - RecipeUSSPMechSKHolder
-      - RecipeUSSPMechSKShield
-      - RecipeUSSPMechGunAttraction
-      - RecipeUSSPMechGunRadiator
-      - RecipeUSSPBatterySingMech
-      - RecipeUSSPBatteryRadioMech
-      - RecipeUSSPMechGunTetherGun
+    staticPacks:
+    - PackDefUSSPFactoryFab
   - type: MaterialStorage
     whitelist:
       tags:
@@ -3140,6 +3149,18 @@
         - DefChipCraftMechWeapon
   - type: Anchorable
     flags: Anchorable
+#пак
+- type: latheRecipePack
+  id: PackDefUSSPFactoryFab
+  recipes:
+      - RecipeUSSPMechSKLeg
+      - RecipeUSSPMechSKHolder
+      - RecipeUSSPMechSKShield
+      - RecipeUSSPMechGunAttraction
+      - RecipeUSSPMechGunRadiator
+      - RecipeUSSPBatterySingMech
+      - RecipeUSSPBatteryRadioMech
+      - RecipeUSSPMechGunTetherGun
 #----------------------------------------------------Конструкции--------------------------
 #---------------------------------------------Корпус----------------------------------
 - type: Tag

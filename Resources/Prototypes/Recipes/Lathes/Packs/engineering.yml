@@ -21,6 +21,7 @@
   - HandheldStationMap
   - ClothingHeadHatWelding
   - ClothingHeadHatCone
+  - GeigerCounter
 
 - type: latheRecipePack
   id: AtmosStatic
@@ -52,6 +53,13 @@
   recipes:
   - SpaceHeaterMachineCircuitBoard
 
+- type: latheRecipePack
+  id: EngineeringStatic
+  recipes:
+  - ClothingBeltUtility
+  - ClothingShoesBootsMag
+  - RCD
+  - RCDAmmo
 ## Dynamic
 
 - type: latheRecipePack

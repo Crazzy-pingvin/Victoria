@@ -228,12 +228,9 @@
   components:
   - type: Lathe
     staticPacks:
+      - PackCloth
       - PackDefClothLatheUmpor
 
-- type: latheRecipePack
-  id: PackDefClothLatheUmpor
-  recipes:
-  - RecipeUmporCoat
 #-----------------------------------------Миртан-------------------------------
 - type: entity
   parent: ClothLathe
@@ -241,13 +238,10 @@
   suffix: Оборона, Миртан
   components:
   - type: Lathe
-    staticRecipes:
+    staticPacks:
+      - PackCloth
       - PackDefClothLatheMirt
 
-- type: latheRecipePack
-  id: PackDefClothLatheMirt
-  recipes:
-  - RecipeMirtCoat
 #-----------------------------------------Конгломерат-------------------------------
 - type: entity
   parent: ClothLathe
@@ -255,13 +249,9 @@
   suffix: Оборона, Конгломерат
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeCDCCoat
+    staticPacks:
+    - PackCloth
+    - PackDefClothLatheCDC
 #-----------------------------------------Корпорации-------------------------------
 
 #-----------------------------------------СССП-------------------------------
@@ -271,13 +261,9 @@
   suffix: Оборона, СССП
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeUSSPCoat
+    staticPacks:
+      - PackCloth
+      - PackDefClothLatheUSSP
 #------------------------------------------------------------Вечные кабели------------------------------------------------------------------
 - type: entity
   parent: CableMV
@@ -398,7 +384,7 @@
   components:
   - type: TimedDespawn
     lifetime: 1800
-    
+
 - type: entity
   parent: WallRockDef5Min
   id: WallRockDef15MinReal
