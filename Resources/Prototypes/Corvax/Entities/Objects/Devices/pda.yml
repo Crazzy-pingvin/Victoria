@@ -8,16 +8,16 @@
       id: IAAIDCard
     - type: Appearance
       appearanceDataInit:
-       enum.PdaVisuals.PdaType:
-         !type:String
-         pda-lawyer
+        enum.PdaVisuals.PdaType:
+          !type:String
+          pda-lawyer
     - type: PdaBorderColor
       borderColor: "#6f6192"
     - type: Icon
       state: pda-lawyer
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: PilotPDA
   name: pilot PDA
   description: Нas protection from cosmic radiation.
@@ -26,9 +26,9 @@
       id: PilotIDCard
     - type: Appearance
       appearanceDataInit:
-       enum.PdaVisuals.PdaType:
-         !type:String
-         pda-seniorofficer
+        enum.PdaVisuals.PdaType:
+          !type:String
+          pda-seniorofficer
     - type: PdaBorderColor
       borderColor: "#A32D26"
       accentVColor: "#DFDFDF"

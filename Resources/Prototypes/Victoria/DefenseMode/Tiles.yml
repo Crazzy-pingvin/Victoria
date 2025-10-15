@@ -1,4 +1,4 @@
-#------------------------------------------------------------Тайлы------------------------------------------------------------------  
+#------------------------------------------------------------Тайлы------------------------------------------------------------------
 - type: tile
   id: DefPlating
   name: tiles-plating-def
@@ -38,7 +38,7 @@
   sprite: /Textures/Tiles/snow_plating.png
   isSubfloor: true
   indestructible: true
-  
+
 - type: tile
   id: DefFloorSteel
   name: tiles-steel-floor-def
@@ -495,7 +495,7 @@
 - type: tile
   id: DefFloorSteelDirty
   name: tiles-dirty-steel-floor-def
-  sprite: /Textures/Tiles/steel_dirty.png
+  parent: FloorSteelDirty
   isSubfloor: true
   indestructible: true
 

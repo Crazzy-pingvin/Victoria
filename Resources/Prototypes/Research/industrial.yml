@@ -17,6 +17,7 @@
   - SeismicCharge
   - Fulton
   - FultonBeacon
+  - ClothingShoesBootsJump
 
 - type: technology
   id: SpaceScanning
@@ -30,7 +31,6 @@
   recipeUnlocks:
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
-  - BorgModuleGPS
 
 - type: technology
   id: AdvancedPowercells
@@ -77,7 +77,7 @@
 - type: technology
   id: TechnicalFabricators
   name: research-technology-technical-fabricators
-  icon: 
+  icon:
     sprite: Structures/Machines/techfab.rsi
     state: techfab_research_icon
   discipline: Industrial
@@ -104,7 +104,6 @@
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
   - PortableGeneratorJrPacmanMachineCircuitboard
-  - PowerComputerCircuitboard #the actual solar panel itself should be in here
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
   - EmitterCircuitboard
@@ -188,6 +187,8 @@
     - PowerDrill
     - JawsOfLife
     - BorgModuleAdvancedTool
+    - Fulton
+    - FultonBeacon
 
 - type: technology
   id: MassExcavation
@@ -202,6 +203,7 @@
     - OreBagOfHolding
     - MiningDrillDiamond
     - AdvancedMineralScannerEmpty
+    - BorgModuleAdvancedMining
     - SalvageExpeditionsComputerCircuitboard # Corvax-Cringe
 
 # Tier 3
@@ -222,8 +224,8 @@
   - ClothingBeltBlueSpace
 
 - type: technology
-  id: PortableFission
-  name: research-technology-portable-fission
+  id: OptimizedMicrogalvanism
+  name: research-technology-optimized-microgalvanism
   icon:
     sprite: Objects/Power/power_cells.rsi
     state: microreactor
@@ -232,5 +234,6 @@
   cost: 10000
   recipeUnlocks:
   - PowerCellMicroreactor
+  - PowerCellHyper
   technologyPrerequisites:
   - AdvancedPowercells

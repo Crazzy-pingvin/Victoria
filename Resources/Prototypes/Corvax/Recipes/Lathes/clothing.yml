@@ -82,3 +82,11 @@
   materials:
     CottonClothMaterial: 300
     AnilineMaterial: 100
+
+- type: latheRecipe
+  id: ClothingNeckMantleHOSShoulder
+  result: ClothingNeckMantleHOSShoulder
+  completetime: 4
+  materials:
+    CottonClothMaterial: 300
+    AnilineMaterial: 100

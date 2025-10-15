@@ -1,1 +1,3 @@
-species-name-vulpkanin = Вульпакин
+species-name-vulpkanin = Вульпканин
+species-name-tajaran = Таяран
+species-name-Ipc = КПБ
