@@ -2451,14 +2451,6 @@ entities:
     - type: Transform
       pos: 7.6471405,2.0846972
       parent: 2
-    - type: Scope
-      scopingToggleActionEntity: 3413
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 3413
 - proto: BookshelfFilled
   entities:
   - uid: 602

@@ -157,7 +157,7 @@
 #===модули щита(разрушаемый щит и не разрушаемый)============
 
 - type: entity
-  id: BorgModulShealdWeek
+  id: BorgModulShealdWeak
   parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
   name: слабый защитный модуль киборга
   description: Техническая деталь, дающая киборгам новые способности.

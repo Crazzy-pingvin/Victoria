@@ -4281,9 +4281,9 @@
     - state: nooc
     - state: icon-nooc
   - type: ItemBorgModule
-    items:
-    - NoocRifleBorgSnowdrop
-    - Omnitool
-    - NoocSnowdropSmoke
+    hands:
+    - item: NoocRifleBorgSnowdrop
+    - item: Omnitool
+    - item: SnowdropSmoke
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }

@@ -16,12 +16,16 @@
   - type: Sprite
     sprite: Victoria/Snipe/binoculars.rsi
     state: binoculars
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 1.6
-    offset: 14
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.0
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
 #-----------------------------------------------------Прицел-----------------------------------
 - type: entity
   parent: BaseItem
@@ -34,12 +38,16 @@
   - type: Sprite
     sprite: Victoria/Snipe/optical_sight.rsi
     state: sight
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.0
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Stack
     stackType: OpticalSight
     count: 1
@@ -64,12 +72,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: MosinSniper
     node: MosinSniper
@@ -122,12 +131,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: LaserCarbineSniper
     node: LaserCarbineSniper
@@ -180,12 +190,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: PulseRifleSniper
     node: PulseRifleSniper
@@ -239,12 +250,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: UmporRifleSniper
     node: UmporRifleSniper
@@ -299,12 +311,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: NoocRifleSniper
     node: NoocRifleSniper
@@ -358,12 +371,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: MirtNoocRifleSniper
     node: MirtNoocRifleSniper
@@ -416,12 +430,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: MirtRifleSniper
     node: MirtRifleSniper
@@ -474,12 +489,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: SNKLaserCarbineSniper
     node: SNKLaserCarbineSniper
@@ -532,12 +548,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: SNKHeavyRifleSniper
     node: SNKHeavyRifleSniper
@@ -590,12 +607,13 @@
     maxAngle: 2
     angleIncrease: 1
     angleDecay: 0.5
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
   - type: Construction
     graph: CDCRifleSniper
     node: CDCRifleSniper

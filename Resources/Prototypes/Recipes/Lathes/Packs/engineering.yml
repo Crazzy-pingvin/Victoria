@@ -96,3 +96,6 @@
   - EmitterCircuitboard
   - TelecomServerCircuitboard
   - HolopadMachineCircuitboard
+  - ReliableSubstationMachineCircuitboard
+  - ReliableSMESMachineCircuitboard
+  - ReliableAPCElectronics

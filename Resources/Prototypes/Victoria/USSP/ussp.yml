@@ -1526,12 +1526,13 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPCarabineSnipe
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
 #----------------------------------Винтовка----------------------------
 #--------------------------Обычная--------------------
 - type: entity
@@ -1606,12 +1607,13 @@
   - type: Construction
     graph: USSPWeapon
     node: USSPRifleSnipe
-  - type: Scope
-    useInHand: true
-    allowMovement: true
-    delay: 0
-    zoom: 2.2
-    offset: 14
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3.5
+    pvsIncrease: 0.35
 #----------------------------------Автомат----------------------------
 - type: entity
   name: Советский автомат "Лебедев"

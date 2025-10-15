@@ -83,3 +83,24 @@
     Glass: 500
     Plastic: 250
     Bananium: 375
+
+# Security
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleHoloprojector
+  result: BorgModuleHoloprojector
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModulShealdWeak
+  result: BorgModulShealdWeak
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleDisabler
+  result: BorgModuleDisabler
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuSheald
+  result: BorgModuSheald
