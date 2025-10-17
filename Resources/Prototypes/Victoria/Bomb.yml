@@ -1266,6 +1266,7 @@
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container
+  - type: DeleteOnTrigger
 
 - type: construction
   name: land mine fragmentation
