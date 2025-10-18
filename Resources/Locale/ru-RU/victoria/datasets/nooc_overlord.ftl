@@ -1,0 +1,13 @@
+nooc-command-stay-1 = Тихо!
+nooc-command-stay-2 = Ждём!
+nooc-command-stay-3 = Стоп!
+nooc-command-stay-4 = Тсс!
+nooc-command-follow-1 = Взвод, ко мне!
+nooc-command-follow-2 = За мной!
+nooc-command-follow-3 = В ногу!
+nooc-command-cheese-1 = В атаку!
+nooc-command-cheese-2 = Снять!
+nooc-command-cheese-3 = Ликвидировать!
+nooc-command-cheese-4 = Уничтожить!
+nooc-command-loose-1 = Вольно!
+nooc-command-loose-2 = Свободно!

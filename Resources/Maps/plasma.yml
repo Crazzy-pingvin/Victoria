@@ -68240,7 +68240,7 @@ entities:
     - type: Transform
       pos: -116.5,-38.5
       parent: 2
-- proto: CrateMaterialTextiles
+- proto: CratePolymerizer
   entities:
   - uid: 14585
     components:

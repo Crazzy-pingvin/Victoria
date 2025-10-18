@@ -1666,6 +1666,7 @@
       nameSegments:
       - PetrName-nov
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -1708,6 +1709,7 @@
     nameSegments:
     - PetrName-nov
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrNovob
   - type: NpcFactionMember
@@ -1730,6 +1732,7 @@
       nameSegments:
       - PetrName-tov
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -1772,6 +1775,7 @@
     nameSegments:
     - PetrName-tov
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrBoevi
   - type: NpcFactionMember
@@ -1794,6 +1798,7 @@
       nameSegments:
       - PetrName-tov
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -1836,6 +1841,7 @@
     nameSegments:
     - PetrName-tov
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrCpeci
   - type: NpcFactionMember
@@ -1858,6 +1864,7 @@
       nameSegments:
       - PetrName-tov
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -1901,6 +1908,7 @@
     nameSegments:
     - PetrName-tov
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrSaper
   - type: NpcFactionMember
@@ -1923,6 +1931,7 @@
       nameSegments:
       - PetrName-com
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -1965,6 +1974,7 @@
     nameSegments:
     - PetrName-com
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrOffi
   - type: NpcFactionMember
@@ -1987,6 +1997,7 @@
       nameSegments:
       - PetrName-vet
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -2029,6 +2040,7 @@
     nameSegments:
     - PetrName-vet
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrSerp
   - type: NpcFactionMember
@@ -2051,6 +2063,7 @@
       nameSegments:
       - PetrName-vet
       - PetrNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Petr
@@ -2093,6 +2106,7 @@
     nameSegments:
     - PetrName-vet
     - PetrNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: PetrMolot
   - type: NpcFactionMember

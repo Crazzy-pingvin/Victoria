@@ -147,7 +147,16 @@ public abstract class SharedChatSystem : EntitySystem
         if (!(input.StartsWith(RadioChannelPrefix) || input.StartsWith(RadioChannelAltPrefix)))
             return false;
 
-        string channelKey = input[1..3];
+        if (input.Length < 3 || char.IsWhiteSpace(input[1]))
+        {
+            output = SanitizeMessageCapital(input[1..].TrimStart());
+            if (!quiet)
+                _popup.PopupEntity(Loc.GetString("chat-manager-no-radio-key"), source, source);
+            return true;
+        }
+
+        var channelKey = input[1..3];
+        //channelKey = string.ToLower(channelKey);
         output = SanitizeMessageCapital(input[3..].TrimStart());
 
         if (channelKey.StartsWith(DefaultChannelKey))

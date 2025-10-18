@@ -3355,6 +3355,7 @@
       nameSegments:
       - MirtName
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtGrReady
@@ -3394,6 +3395,7 @@
     nameSegments:
     - MirtName
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtGrR
 #---------------------------------солдат----------
@@ -3419,6 +3421,7 @@
       nameSegments:
       - MirtName-s
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtSoldReady
@@ -3458,6 +3461,7 @@
     nameSegments:
     - MirtName-s
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtSoldR
 #---------------------------------тяж----------
@@ -3483,6 +3487,7 @@
       nameSegments:
       - MirtName-t
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtTgReady
@@ -3522,6 +3527,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtTgR
 #---------------------------------офицер----------
@@ -3547,6 +3553,7 @@
       nameSegments:
       - MirtName-o
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtOffiReady
@@ -3586,6 +3593,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtOffiR
 #---------------------------------инквизитор----------
@@ -3611,6 +3619,7 @@
       nameSegments:
       - MirtName-t
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtInkReady
@@ -3650,6 +3659,7 @@
     nameSegments:
     - MirtName-t
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtInkR
 #---------------------------------старший инквизитор----------
@@ -3675,6 +3685,7 @@
       nameSegments:
       - MirtName-o
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtOffiInkReady
@@ -3714,6 +3725,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtOffiInkR
 #---------------------------------скаут----------
@@ -3739,6 +3751,7 @@
       nameSegments:
       - MirtName-o
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtRazReady
@@ -3778,6 +3791,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtRazR
 #---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------

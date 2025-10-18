@@ -1,6 +1,6 @@
-unmor-name-s-1 = Рядовой
-unmor-name-s-2 = Мл.Капрал
-unmor-name-s-3 = Ст.Капрал
+umpor-name-s-1 = Рядовой
+umpor-name-s-2 = Мл.Капрал
+umpor-name-s-3 = Ст.Капрал
 
 umpor-name-o-1 = Мл.Сержант
 umpor-name-o-2 = Сержант

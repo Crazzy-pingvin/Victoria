@@ -306,6 +306,7 @@
   - type: RandomMetadata
     nameSegments:
     - VitzName-mr
+    nameFormat: random-metadata-name-format-default
   - type: NpcFactionMember
     factions:
       - VitzBitMrHill

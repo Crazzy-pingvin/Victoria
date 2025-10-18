@@ -3511,13 +3511,13 @@
 - type: localizedDataset
   id: SNKName-sol
   values:
-    prefix: snk-name-sol
+    prefix: snk-name-sol-
     count: 4
 #---------------------------------Командир----------
 - type: localizedDataset
   id: SNKName-ofi
   values:
-    prefix: snk-name-off
+    prefix: snk-name-off-
     count: 3
 #---------------------------------фамилии----------
 - type: localizedDataset
@@ -3547,6 +3547,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKSolderReady
@@ -3589,6 +3590,7 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKSolderR
 #---------------------------------офицер----------
@@ -3612,6 +3614,7 @@
       nameSegments:
       - SNKName-ofi
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKOffiReady
@@ -3654,6 +3657,7 @@
     nameSegments:
     - SNKName-ofi
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKOffiR
 #---------------------------------инженер----------
@@ -3677,6 +3681,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKEngenerReady
@@ -3719,6 +3724,7 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKEngenerR
 #---------------------------------медик----------
@@ -3742,6 +3748,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKMedicReady
@@ -3784,6 +3791,7 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKMedicR
 #---------------------------------медик----------
@@ -3807,6 +3815,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKRadistReady
@@ -3849,6 +3858,7 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKRadistR
 #---------------------------------------------------------------Ящики и шкафы со снарягой------------------------------------------------------------

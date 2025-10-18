@@ -2519,6 +2519,7 @@
       nameSegments:
       - CDCName-s
       - CDCName
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: CDCSoldReady
@@ -2558,6 +2559,7 @@
     nameSegments:
     - CDCName-s
     - CDCName
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: CDCSoldR
 #---------------------------------техник----------
@@ -2578,6 +2580,7 @@
       nameSegments:
       - CDCName-s
       - CDCName
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: CDCTechReady
@@ -2617,6 +2620,7 @@
     nameSegments:
     - CDCName-s
     - CDCName
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: CDCTechR
 #---------------------------------офицер----------
@@ -2637,6 +2641,7 @@
       nameSegments:
       - CDCName-o
       - CDCName
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: CDCOffiReady
@@ -2676,6 +2681,7 @@
     nameSegments:
     - CDCName-o
     - CDCName
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: CDCOffiR
 #---------------------------------оператор----------
@@ -2696,6 +2702,7 @@
       nameSegments:
       - CDCName-s
       - CDCName
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: CDCOperatorReady
@@ -2735,6 +2742,7 @@
     nameSegments:
     - CDCName-s
     - CDCName
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: CDCOperatorR
 #---------------------------------имам----------
@@ -2756,6 +2764,7 @@
       nameSegments:
       - CDCName-i
       - CDCName
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: CDCImamReady
@@ -2796,6 +2805,7 @@
     nameSegments:
     - CDCName-i
     - CDCName
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: CDCImamR
 #---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------
@@ -3918,7 +3928,7 @@
     temperature: 1000
     ignited: true
   - type: IgniteOnCollide
-    fireStacks: 0.25 
+    fireStacks: 0.25
 #--------------------------------картридж---------------------------------
 - type: Tag
   id: CDCCartridgePlasmaFireMini
@@ -3942,7 +3952,7 @@
       map: ["enum.AmmoVisualLayers.Base"]
 #--------------------------------магазин-канистра---------------------------------
 - type: Tag
-  id: CDCMagazineFireMini 
+  id: CDCMagazineFireMini
 
 - type: entity
   id: CDCMagazineFireMini

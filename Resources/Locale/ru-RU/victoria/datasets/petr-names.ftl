@@ -1,10 +1,10 @@
-petr-name-nov = Пионер
+petr-name-nov-1 = Пионер
 
-petr-name-tov = Товарищ
+petr-name-tov-1 = Товарищ
 
-petr-name-vet = Старший Товарищ
+petr-name-vet-1 = Старший Товарищ
 
-petr-name-com = Командир
+petr-name-com-1 = Командир
 
 petr-name-two-1 = Киров
 petr-name-two-2 = Железин

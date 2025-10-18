@@ -364,7 +364,7 @@
         - GasAnalyzer
         - Explosive
         - EmpOnTrigger
-        - OnUseTimerTrigger
+        - TimerTrigger
 
   - type: Appearance
 
@@ -2300,7 +2300,7 @@
 - type: localizedDataset
   id: HoundName-op
   values:
-    prefix: KMLG-name-one-dataset-
+    prefix: hound-name-op-
     count: 2
 #---------------------------------звания командиров----------
 - type: localizedDataset
@@ -2345,6 +2345,7 @@
       nameSegments:
       - HoundName-op
       - HoundNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Hound
@@ -2385,6 +2386,7 @@
     nameSegments:
     - HoundName-op
     - HoundNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: HoundNewbie
   - type: NpcFactionMember
@@ -2408,6 +2410,7 @@
       nameSegments:
       - HoundName-op
       - HoundNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Hound
@@ -2450,6 +2453,7 @@
     nameSegments:
     - HoundName-op
     - HoundNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: HoundOp
   - type: NpcFactionMember
@@ -2473,6 +2477,7 @@
       nameSegments:
       - HoundName-com
       - HoundNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Hound
@@ -2515,6 +2520,7 @@
     nameSegments:
     - HoundName-com
     - HoundNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: HoundCom
   - type: NpcFactionMember
@@ -2538,6 +2544,7 @@
       nameSegments:
       - HoundName-worker
       - HoundNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Hound
@@ -2580,6 +2587,7 @@
     nameSegments:
     - HoundName-worker
     - HoundNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: HoundWorker
   - type: NpcFactionMember

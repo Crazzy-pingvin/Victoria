@@ -6,9 +6,9 @@ vitz-name-st-1 = Старшина
 vitz-name-pi-1 = Пилот
 vitz-name-pi-2 = Старший пилот
 
-vitz-name-zv = Звеньевой
+vitz-name-zv-1 = Звеньевой
 
-vitz-name-mr = Мистер Хилл
+vitz-name-mr-1 = Мистер Хилл
 
 vitz-name-two-1 = Мечников
 vitz-name-two-2 = Кинжалов

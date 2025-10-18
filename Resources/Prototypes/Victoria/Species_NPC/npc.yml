@@ -1,6 +1,6 @@
 # Любой
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
   id: SimpleHumanoidHostile
   components:
@@ -39,6 +39,7 @@
     nameSegments:
     - names_first
     - names_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -47,16 +48,16 @@
   - type: HTN
     rootTask:
       task: SimpleHumanoidHostileCompound
-      
+
 # Унатх
 # Траблы с наименованием :p
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
     - Arachnid
     - Diona
     - Dwarf
-    - Human 
+    - Human
     - Moth
     - SlimePerson
     - Vulpkanin
@@ -97,6 +98,7 @@
     nameSegments:
     - names_moth_first_male
     - names_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -119,6 +121,7 @@
     nameSegments:
     - names_arachnid_first
     - names_arachnid_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -127,7 +130,7 @@
   - type: HTN
     rootTask:
       task: SimpleHumanoidHostileCompound
-      
+
 # Слаймолюд
 - type: entity
   name: простой враждебный NPC
@@ -141,6 +144,7 @@
     nameSegments:
     - names_first
     - names_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -163,6 +167,7 @@
     nameSegments:
     - names_first
     - names_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -185,6 +190,7 @@
     nameSegments:
     - skeletonNamesFirst
     - names_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -206,6 +212,7 @@
   - type: RandomMetadata
     nameSegments:
     - names_vox
+    nameFormat: random-metadata-name-format-default
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -228,6 +235,7 @@
     nameSegments:
     - names_vulp_first_male
     - names_vulp_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate

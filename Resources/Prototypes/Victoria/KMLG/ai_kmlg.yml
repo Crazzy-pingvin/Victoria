@@ -573,6 +573,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -619,6 +620,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -665,6 +667,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLGEnemy
@@ -727,6 +730,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -773,6 +777,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG

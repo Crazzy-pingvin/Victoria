@@ -256,6 +256,7 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - UmporBot
@@ -503,6 +504,7 @@
     nameSegments:
     - UmporName-o
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - UmporOfficerGear
@@ -517,6 +519,7 @@
     nameSegments:
     - UmporName-o
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - UmporOfficerGear

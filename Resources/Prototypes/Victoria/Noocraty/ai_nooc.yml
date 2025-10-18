@@ -196,6 +196,7 @@
     nameSegments:
     - NoocName-niz
     - NoocNameTwo-niz
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - NoocratyBot
@@ -277,8 +278,9 @@
   components:
   - type: RandomMetadata
     nameSegments:
-    - NoocName-o
-    - NoocNameTwo
+    - NoocName-vis
+    - NoocNameTwo-vis
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - NoocVisGear
@@ -291,8 +293,9 @@
   components:
   - type: RandomMetadata
     nameSegments:
-    - NoocName-o
-    - NoocNameTwo
+    - NoocName-vis
+    - NoocNameTwo-vis
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - NoocVisGear

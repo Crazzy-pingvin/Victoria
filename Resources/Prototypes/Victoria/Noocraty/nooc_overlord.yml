@@ -1,223 +1,223 @@
-- type: entity
-  id: ActionNoocOfiRaiseArmy
-  name: Призвать солдат
-  description: Призывает ноократского солдата низкого класса под ваше командование
-  components:
-  - type: InstantAction
-    useDelay: 4
-    icon:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: NoocArmySold
-    event: !type:RatKingRaiseArmyActionEvent
+# - type: entity
+  # id: ActionNoocOfiRaiseArmy
+  # parent: BaseAction
+  # name: Призвать солдат
+  # description: Призывает ноократского солдата низкого класса под ваше командование
+  # components:
+  # - type: InstantAction
+    # useDelay: 4
+    # icon:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: NoocArmySold
+    # event: !type:RatKingRaiseArmyActionEvent
 
-- type: entity
-  id: ActionNoocOfiOrderStay
-  name: Стоять на месте
-  description: Прикажите вашим бойцам остановиться и ждать
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: stayOff
-    iconOn:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: stay
-    event:
-      !type:RatKingOrderActionEvent
-        type: Stay
-    priority: 5
+# - type: entity
+  # id: ActionNoocOfiOrderStay
+  # parent: BaseAction
+  # name: Стоять на месте
+  # description: Прикажите вашим бойцам остановиться и ждать
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: stayOff
+    # iconOn:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: stay
+    # event:
+      # !type:RatKingOrderActionEvent
+        # type: Stay
+    # priority: 5
 
-- type: entity
-  id: ActionNoocOfiOrderFollow
-  name: Следовать
-  description: Прикажите вашим бойцам идти за вами
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: followOff
-    iconOn:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: follow
-    event:
-      !type:RatKingOrderActionEvent
-      type: Follow
-    priority: 6
+# - type: entity
+  # id: ActionNoocOfiOrderFollow
+  # parent: BaseAction
+  # name: Следовать
+  # description: Прикажите вашим бойцам идти за вами
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: followOff
+    # iconOn:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: follow
+    # event:
+      # !type:RatKingOrderActionEvent
+      # type: Follow
+    # priority: 6
 
-- type: entity
-  id: ActionNoocOfiOrderCheeseEm
-  name: Атаковать
-  description: Прикажите вашим бойцам атаковать того, на кого вы укажите
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: attackOff
-    iconOn:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: attack
-    event:
-      !type:RatKingOrderActionEvent
-      type: CheeseEm
-    priority: 7
+# - type: entity
+  # id: ActionNoocOfiOrderCheeseEm
+  # parent: BaseAction
+  # name: Атаковать
+  # description: Прикажите вашим бойцам атаковать того, на кого вы укажите
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: attackOff
+    # iconOn:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: attack
+    # event:
+      # !type:RatKingOrderActionEvent
+      # type: CheeseEm
+    # priority: 7
 
-- type: entity
-  id: ActionNoocOfiOrderLoose
-  name: Вольно
-  description: Отдайте команду "Вольно", тогда ваши бойцы начнут обыскивать территорию
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: looseOff
-    iconOn:
-      sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
-      state: loose
-    event:
-      !type:RatKingOrderActionEvent
-      type: Loose
-    priority: 8
+# - type: entity
+  # id: ActionNoocOfiOrderLoose
+  # parent: BaseAction
+  # name: Вольно
+  # description: Отдайте команду "Вольно", тогда ваши бойцы начнут обыскивать территорию
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: looseOff
+    # iconOn:
+      # sprite: Victoria/Noocraty/nooc_actions_nooc_ofi.rsi
+      # state: loose
+    # event:
+      # !type:RatKingOrderActionEvent
+      # type: Loose
+    # priority: 8
 
-- type: dataset
-  id: NoocOfiCommandStay
-  values:
-    - "Тихо!"
-    - "Ждём!"
-    - "Стоп!"
-    - "Тссс!"
+# - type: localizedDataset
+  # id: NoocOfiCommandStay
+  # values:
+    # prefix: nooc-command-stay-
+    # count: 4
 
-- type: dataset
-  id: NoocOfiCommandFollow
-  values:
-    - "Взвод, ко мне!"
-    - "За мной!"
-    - "В ногу!"
+# - type: localizedDataset
+  # id: NoocOfiCommandFollow
+  # values:
+    # prefix: nooc-command-follow-
+    # count: 3
 
-- type: dataset
-  id: NoocOfiCommandCheeseEm
-  values:
-    - "В атаку!"
-    - "Снять!"
-    - "Ликвидировать!"
-    - "Уничтожить!"
+# - type: localizedDataset
+  # id: NoocOfiCommandCheeseEm
+  # values:
+    # prefix: nooc-command-cheese-
+    # count: 4
 
-- type: dataset
-  id: NoocOfiCommandLoose
-  values:
-    - "Вольно!"
-    - "Свободны!"
+# - type: localizedDataset
+  # id: NoocOfiCommandLoose
+  # values:
+    # prefix: nooc-command-loose-
+    # count: 2
 
-- type: htnCompound
-  id: NoocSimpleHostileCompound
-  branches:
-    - tasks:
-        - !type:HTNCompoundTask
-          task: RangedCombatCompoundBotNooc
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompound
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompound
+# - type: htnCompound
+  # id: NoocSimpleHostileCompound
+  # branches:
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: RangedCombatCompoundBotNooc
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: MeleeCombatCompound
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: IdleCompound
 
-- type: htnCompound
-  id: NoocBattleCompound
-  branches:
-    - tasks:
-        - !type:HTNCompoundTask
-          task: RangedCombatCompoundBotNooc
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompound
+# - type: htnCompound
+  # id: NoocBattleCompound
+  # branches:
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: RangedCombatCompoundBotNooc
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: MeleeCombatCompound
     
-- type: htnCompound
-  id: BotNoocOverR
-  branches:
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.Stay
-    tasks:
-      - !type:HTNCompoundTask
-        task: WaitCompound
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.Follow
-    tasks:
-      - !type:HTNCompoundTask
-        task: FollowCompound
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.CheeseEm
-    tasks:
-      - !type:HTNCompoundTask
-        task: NoocBattleCompound
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.Loose
-    tasks:
-      - !type:HTNCompoundTask
-        task: NoocSimpleHostileCompound
+# - type: htnCompound
+  # id: BotNoocOverR
+  # branches:
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.Stay
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: WaitCompound
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.Follow
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: FollowCompound
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.CheeseEm
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: NoocBattleCompound
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.Loose
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: NoocSimpleHostileCompound
 
-- type: entity
-  suffix: Бот, Ноократский, Овер(крыса)
-  parent: MobNoocWeapon
-  id: MobNoocWeaponOverR
-  components:
-  - type: TimedDespawn
-    lifetime: 60
-  - type: StatusEffects
-    allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
-    - Stutter
-    - Electrocution
-    - ForcedSleep
-    - TemporaryBlindness
-    - Pacified
-    - StaminaModifier
-    - Flashed
-    - RadiationProtection
-    - Drowsiness
-    - Adrenaline
-  - type: InputMover
-  - type: MobMover
-  - type: HTN
-    rootTask:
-      task: RatServantCompound
-    blackboard:
-      IdleRange: !type:Single
-        3.5
-      FollowCloseRange: !type:Single
-        2.0
-      FollowRange: !type:Single
-        3.0
-  - type: NpcFactionMember
-    factions:
-      - NoocratyBot
+# - type: entity
+  # suffix: Бот, Ноократский, Овер(крыса)
+  # parent: MobNoocWeapon
+  # id: MobNoocWeaponOverR
+  # components:
+  # - type: TimedDespawn
+    # lifetime: 60
+  # - type: StatusEffects
+    # allowed:
+    # - Stun
+    # - KnockedDown
+    # - SlowedDown
+    # - Stutter
+    # - Electrocution
+    # - ForcedSleep
+    # - TemporaryBlindness
+    # - Pacified
+    # - StaminaModifier
+    # - Flashed
+    # - RadiationProtection
+    # - Drowsiness
+    # - Adrenaline
+  # - type: InputMover
+  # - type: MobMover
+  # - type: HTN
+    # rootTask:
+      # task: RatServantCompound
+    # blackboard:
+      # IdleRange: !type:Single
+        # 3.5
+      # FollowCloseRange: !type:Single
+        # 2.0
+      # FollowRange: !type:Single
+        # 3.0
+  # - type: NpcFactionMember
+    # factions:
+      # - NoocratyBot
 
-- type: entity
-  name: Офицер Ноократ
-  suffix: Ноократский, Оверлорд (крыса)
-  parent: MobNoocOfiStop
-  id: MobNoocOfiOverlordR
-  components:
-    - type: RatKing
-      hungerPerArmyUse: 30
-      hungerPerDomainUse: 2
-      actionRaiseArmy: "ActionNoocOfiRaiseArmy"
-      armyMobSpawnId: MobNoocWeaponOverR
-      orderCallouts:
-        Stay: "NoocOfiCommandStay"
-        Follow: "NoocOfiCommandFollow"
-        CheeseEm: "NoocOfiCommandCheeseEm"
-        Loose: "NoocOfiCommandLoose"
-      actionOrderStay: "ActionNoocOfiOrderStay"
-      actionOrderFollow: "ActionNoocOfiOrderFollow"
-      actionOrderCheeseEm: "ActionNoocOfiOrderCheeseEm"
-      actionOrderLoose: "ActionNoocOfiOrderLoose"
-      molesAmmoniaPerDomain: 0
+# - type: entity
+  # name: Офицер Ноократ
+  # suffix: Ноократский, Оверлорд (крыса)
+  # parent: MobNoocOfiStop
+  # id: MobNoocOfiOverlordR
+  # components:
+    # - type: RatKing
+      # hungerPerArmyUse: 30
+      # hungerPerDomainUse: 2
+      # actionRaiseArmy: "ActionNoocOfiRaiseArmy"
+      # armyMobSpawnId: MobNoocWeaponOverR
+      # orderCallouts:
+        # Stay: "NoocOfiCommandStay"
+        # Follow: "NoocOfiCommandFollow"
+        # CheeseEm: "NoocOfiCommandCheeseEm"
+        # Loose: "NoocOfiCommandLoose"
+      # actionOrderStay: "ActionNoocOfiOrderStay"
+      # actionOrderFollow: "ActionNoocOfiOrderFollow"
+      # actionOrderCheeseEm: "ActionNoocOfiOrderCheeseEm"
+      # actionOrderLoose: "ActionNoocOfiOrderLoose"
+      # molesAmmoniaPerDomain: 0

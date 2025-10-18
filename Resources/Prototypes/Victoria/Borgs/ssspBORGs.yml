@@ -442,6 +442,7 @@
     nameSegments:
       - SSSP-borg-rab-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
@@ -473,6 +474,7 @@
     nameSegments:
       - SSSP-borg-acad-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
@@ -502,6 +504,7 @@
     nameSegments:
       - SSSP-borg-rab-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
@@ -533,6 +536,7 @@
     nameSegments:
       - SSSP-borg-acad-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:

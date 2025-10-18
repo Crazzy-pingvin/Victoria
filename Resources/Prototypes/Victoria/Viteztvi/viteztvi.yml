@@ -1438,6 +1438,7 @@
       nameSegments:
       - VitzName-ef
       - VitzNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Vitz
@@ -1480,6 +1481,7 @@
     nameSegments:
     - VitzName-ef
     - VitzNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: VitzEfreitor
   - type: NpcFactionMember
@@ -1503,6 +1505,7 @@
       nameSegments:
       - VitzName-pi
       - VitzNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Vitz
@@ -1545,6 +1548,7 @@
     nameSegments:
     - VitzName-pi
     - VitzNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: VitzPilot
   - type: NpcFactionMember
@@ -1568,6 +1572,7 @@
       nameSegments:
       - VitzName-st
       - VitzNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Vitz
@@ -1610,6 +1615,7 @@
     nameSegments:
     - VitzName-st
     - VitzNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: VitzStarshina
   - type: NpcFactionMember
@@ -1633,6 +1639,7 @@
       nameSegments:
       - VitzName-zv
       - VitzNameTwo
+      nameFormat: name-format-ert
     - type: NpcFactionMember
       factions:
       - Vitz
@@ -1675,6 +1682,7 @@
     nameSegments:
     - VitzName-zv
     - VitzNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: VitzZven
   - type: NpcFactionMember
@@ -1696,6 +1704,7 @@
     - type: RandomMetadata
       nameSegments:
       - VitzName-mr
+      nameFormat: random-metadata-name-format-default
     - type: NpcFactionMember
       factions:
       - Vitz
@@ -1737,6 +1746,7 @@
   - type: RandomMetadata
     nameSegments:
     - VitzName-mr
+    nameFormat: random-metadata-name-format-default
   - type: RandomHumanoidSpawner
     settings: VitzMrHill
   - type: NpcFactionMember
