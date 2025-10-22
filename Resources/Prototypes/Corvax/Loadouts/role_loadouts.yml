@@ -11,16 +11,16 @@
   - GroupSpeciesBreathTool
 
 # Security
-- type: roleLoadout
-  id: JobPilot
-  groups:
-  - Inventory # Corvax-Loadouts
-  - PilotHead
-  - PilotJumpsuit
-  - SecurityBackpack
-  - PilotOuterClothing
-  - SecurityBelt
-  - SecurityShoes
-  - SurvivalSecurity
-  - Trinkets
-  - GroupSpeciesBreathTool
+#- type: roleLoadout
+#  id: JobPilot
+# groups:
+# - Inventory # Corvax-Loadouts
+# - PilotHead
+# - PilotJumpsuit
+# - SecurityBackpack
+# - PilotOuterClothing
+#  - SecurityBelt
+# - SecurityShoes
+#  - SurvivalSecurity
+# - Trinkets
+#  - GroupSpeciesBreathTool

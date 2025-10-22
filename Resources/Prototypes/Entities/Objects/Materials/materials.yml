@@ -450,7 +450,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Cotton: 100
+      CottonMaterial: 100
   - type: Item
     heldPrefix: cotton
 

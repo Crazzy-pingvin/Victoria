@@ -1,14 +1,14 @@
-- type: entity
-  id: SpawnPointPilot
-  parent: SpawnPointJobBase
-  name: pilot
-  components:
-  - type: SpawnPoint
-    job_id: Pilot
-  - type: Sprite
-    layers:
-    - state: green
-    - state: seniorofficer
+#- type: entity
+#  id: SpawnPointPilot
+#  parent: SpawnPointJobBase
+# name: pilot
+#  components:
+#  - type: SpawnPoint
+#    job_id: Pilot
+#  - type: Sprite
+#    layers:
+#   - state: green
+#    - state: seniorofficer
 
 - type: entity
   id: SpawnPointSurgeon

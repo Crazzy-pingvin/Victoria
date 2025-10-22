@@ -9,6 +9,8 @@
   - ExosuitFabricatorMachineCircuitboard
   - CutterMachineCircuitboard
   - BorgChargerCircuitboard
+  - VacuumMachineMachineCircuitboard
+  - LithographMachineCircuitboard
 
 ## Dynamic
 
@@ -70,6 +72,7 @@
   id: ScienceBoards
   recipes:
   - TurboItemRechargerCircuitboard
+  - TurboBatteryRechargerCircuitboard
   - AutolatheHyperConvectionMachineCircuitboard
   - ProtolatheHyperConvectionMachineCircuitboard
   - CircuitImprinterHyperConvectionMachineCircuitboard
@@ -84,6 +87,13 @@
   - APECircuitboard
   - ArtifactAnalyzerMachineCircuitboard
   - ArtifactCrusherMachineCircuitboard
+  - IndustrialLithographMachineCircuitboard
+  - IndustrialVacuumMachineMachineCircuitboard
+  - IndustrialLithographMachineCircuitboard
+  - MachineCircuitboardCosmMachine
+  - MachineCircuitboardCosmAccum
+  - MachineCircuitboardCosmBeacon
+  - MachineCircuitboardCosmScanner
 
 - type: latheRecipePack
   id: CameraBoards

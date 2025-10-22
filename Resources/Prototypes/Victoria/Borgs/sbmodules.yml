@@ -174,7 +174,7 @@
     icon: { sprite: Victoria/Borgs/module.rsi, state: shield-module-week }
 
 - type: entity
-  id: BorgModuSheald
+  id: BorgModuleSheald
   parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
   name: защитный модуль киборга
   description: Техническая деталь, дающая киборгам новые способности.

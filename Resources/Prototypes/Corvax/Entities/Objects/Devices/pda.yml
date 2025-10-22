@@ -16,21 +16,21 @@
     - type: Icon
       state: pda-lawyer
 
-- type: entity
-  parent: BaseSecurityPDA
-  id: PilotPDA
-  name: pilot PDA
-  description: Нas protection from cosmic radiation.
-  components:
-    - type: Pda
-      id: PilotIDCard
-    - type: Appearance
-      appearanceDataInit:
-        enum.PdaVisuals.PdaType:
-          !type:String
-          pda-seniorofficer
-    - type: PdaBorderColor
-      borderColor: "#A32D26"
-      accentVColor: "#DFDFDF"
-    - type: Icon
-      state: pda-seniorofficer
+#- type: entity
+#  parent: BaseSecurityPDA
+#  id: PilotPDA
+#  name: pilot PDA
+#  description: Нas protection from cosmic radiation.
+#  components:
+#    - type: Pda
+#      id: PilotIDCard
+#    - type: Appearance
+#      appearanceDataInit:
+#        enum.PdaVisuals.PdaType:
+#          !type:String
+#          pda-seniorofficer
+#    - type: PdaBorderColor
+#     borderColor: "#A32D26"
+#      accentVColor: "#DFDFDF"
+#   - type: Icon
+#      state: pda-seniorofficer

@@ -102,5 +102,5 @@
 
 - type: latheRecipe
   parent: BaseGoldBorgModuleRecipe
-  id: BorgModuSheald
-  result: BorgModuSheald
+  id: BorgModuleSheald
+  result: BorgModuleSheald

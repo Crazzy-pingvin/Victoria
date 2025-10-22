@@ -41,6 +41,8 @@
   - BorgModuleAdvancedClowning
   - BorgModuleAdvancedChemical
   - BorgModuleAdvancedMining
+  - BorgModulShealdWeak
+  - BorgModuleSheald
 
 - type: latheRecipePack
   id: MechParts

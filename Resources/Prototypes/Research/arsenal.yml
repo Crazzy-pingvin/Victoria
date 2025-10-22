@@ -218,7 +218,7 @@
   tier: 2
   cost: 5000
   recipeUnlocks:
-  - BorgModuSheald
+  - BorgModuleSheald
 
 - type: technology
   id: DualWieldingTechnology
