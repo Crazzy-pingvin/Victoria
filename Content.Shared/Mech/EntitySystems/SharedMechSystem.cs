@@ -60,6 +60,14 @@ public abstract partial class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechPilotComponent, CanAttackFromContainerEvent>(OnCanAttackFromContainer);
         SubscribeLocalEvent<MechPilotComponent, AttackAttemptEvent>(OnAttackAttempt);
 
+        #region Equipment events relays
+        SubscribeLocalEvent<MechComponent, GunShotEvent>(RelayMechEvent);
+        SubscribeLocalEvent<MechComponent, TakeAmmoEvent>(RelayMechEvent);
+        SubscribeLocalEvent<MechComponent, GetAmmoCountEvent>(RelayMechEvent);
+
+        SubscribeLocalEvent<MechPilotComponent, GetGunEvent>(RelayPilotEvent);
+        #endregion
+
         InitializeRelay();
     }
 
