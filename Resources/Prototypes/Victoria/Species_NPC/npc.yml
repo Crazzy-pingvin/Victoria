@@ -37,8 +37,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_first
-    - names_last
+    - NamesFirst
+    - NamesLast
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
@@ -96,8 +96,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_moth_first_male
-    - names_last
+    - NamesMothFirstMale
+    - NamesLast
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
@@ -119,8 +119,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_arachnid_first
-    - names_arachnid_last
+    - NamesArachnidFirst
+    - NamesArachnidLast
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
@@ -142,8 +142,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_first
-    - names_last
+    - NamesFirst
+    - NamesLast
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
@@ -165,8 +165,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_first
-    - names_last
+    - NamesFirst
+    - NamesLast
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
@@ -188,8 +188,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - skeletonNamesFirst
-    - names_last
+    - NamesSkeletonFirst
+    - NamesLast
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
@@ -211,7 +211,7 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_vox
+    - NamesVox
     nameFormat: random-metadata-name-format-default
   - type: NpcFactionMember
     factions:
@@ -233,8 +233,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_vulp_first_male
-    - names_vulp_last
+    - names_vulpkanin_male
+    - names_vulpkanin_last
     nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:

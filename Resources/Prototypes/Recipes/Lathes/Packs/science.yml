@@ -78,7 +78,7 @@
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - TechDiskComputerCircuitboard
   - FlatpackerMachineCircuitboard
-  - SheetifierMachineCircuitboard
+  #- SheetifierMachineCircuitboard
   - PowerCageRechargerCircuitboard
   - AnalysisComputerCircuitboard
   - AnomalyVesselCircuitboard
