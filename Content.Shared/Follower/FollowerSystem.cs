@@ -49,8 +49,8 @@ public sealed class FollowerSystem : EntitySystem
         SubscribeLocalEvent<FollowerComponent, GotEquippedHandEvent>(OnGotEquippedHand);
         SubscribeLocalEvent<FollowedComponent, EntityTerminatingEvent>(OnFollowedTerminating);
         SubscribeLocalEvent<BeforeSerializationEvent>(OnBeforeSave);
-        //SubscribeLocalEvent<FollowedComponent, PolymorphedEvent>(OnFollowedPolymorphed);
-        //SubscribeLocalEvent<FollowedComponent, StationAiRemoteEntityReplacementEvent>(OnFollowedStationAiRemoteEntityReplaced);
+        SubscribeLocalEvent<FollowedComponent, PolymorphedEvent>(OnFollowedPolymorphed);
+        SubscribeLocalEvent<FollowedComponent, StationAiRemoteEntityReplacementEvent>(OnFollowedStationAiRemoteEntityReplaced);
     }
 
     private void OnFollowedAttempt(Entity<FollowedComponent> ent, ref ComponentGetStateAttemptEvent args)
@@ -156,25 +156,25 @@ public sealed class FollowerSystem : EntitySystem
         StopAllFollowers(uid, component);
     }
 
-    //private void OnFollowedPolymorphed(Entity<FollowedComponent> entity, ref PolymorphedEvent args)
-    //{
-        //foreach (var follower in entity.Comp.Following)
-        //{
-            //// Stop following the target's old entity and start following the new one
-            //StartFollowingEntity(follower, args.NewEntity);
-        //}
-    //}
+    private void OnFollowedPolymorphed(Entity<FollowedComponent> entity, ref PolymorphedEvent args)
+    {
+        foreach (var follower in entity.Comp.Following)
+        {
+            // Stop following the target's old entity and start following the new one
+            StartFollowingEntity(follower, args.NewEntity);
+        }
+    }
 
     // TODO: Slartibarfast mentioned that ideally this should be generalized and made part of SetRelay in SharedMoverController.Relay.cs.
     // This would apply to polymorphed entities as well
-    //private void OnFollowedStationAiRemoteEntityReplaced(Entity<FollowedComponent> entity, ref StationAiRemoteEntityReplacementEvent args)
-    //{
-        //if (args.NewRemoteEntity == null)
-            //return;
+    private void OnFollowedStationAiRemoteEntityReplaced(Entity<FollowedComponent> entity, ref StationAiRemoteEntityReplacementEvent args)
+    {
+        if (args.NewRemoteEntity == null)
+            return;
 
-        //foreach (var follower in entity.Comp.Following)
-            //StartFollowingEntity(follower, args.NewRemoteEntity.Value);
-    //}
+        foreach (var follower in entity.Comp.Following)
+            StartFollowingEntity(follower, args.NewRemoteEntity.Value);
+    }
 
     /// <summary>
     ///     Makes an entity follow another entity, by parenting to it.

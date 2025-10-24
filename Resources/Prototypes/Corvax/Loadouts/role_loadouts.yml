@@ -1,3 +1,4 @@
+# Command
 - type: roleLoadout
   id: JobIAA
   groups:
@@ -9,15 +10,17 @@
   - Trinkets
   - GroupSpeciesBreathTool
 
-- type: roleLoadout
-  id: JobPilot
-  groups:
-  - Inventory # Corvax-Loadouts
-  - SecurityJumpsuit
-  - SecurityBackpack
-  - SecurityOuterClothing
-  - SecurityBelt
-  - SecurityShoes
-  - Survival
-  - Trinkets
-  - GroupSpeciesBreathTool
+# Security
+#- type: roleLoadout
+#  id: JobPilot
+# groups:
+# - Inventory # Corvax-Loadouts
+# - PilotHead
+# - PilotJumpsuit
+# - SecurityBackpack
+# - PilotOuterClothing
+#  - SecurityBelt
+# - SecurityShoes
+#  - SurvivalSecurity
+# - Trinkets
+#  - GroupSpeciesBreathTool

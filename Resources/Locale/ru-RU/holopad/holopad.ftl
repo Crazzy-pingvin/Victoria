@@ -1,4 +1,4 @@
-﻿# Window headers
+# Window headers
 holopad-window-title = { CAPITALIZE($title) }
 holopad-window-subtitle = [color=white][bold]Система голографической связи[/bold][/color]
 holopad-window-options = [color=darkgray][font size=10][italic]Пожалуйста, выберите вариант из списка ниже[/italic][/font][/color]
@@ -109,7 +109,7 @@ holopad-security-breakroom = СБ — Комната отдыха
 holopad-security-detective = СБ — Детектив
 holopad-security-perma = СБ — Перма
 holopad-security-courtroom = СБ — Зал суда
-holopad-security-lawyer = СБ — Адвокат
+holopad-security-lawyer = СБ — АВД
 holopad-security-armory = СБ — Оружейная
 holopad-security-locker-room = СБ — Раздевалка
 holopad-security-brig-med = СБ — Бригмед

@@ -1,0 +1,33 @@
+snk-name-sol-1 = Новобранец
+snk-name-sol-2 = Рядовой
+snk-name-sol-3 = Капрал
+snk-name-sol-4 = Старшина
+
+snk-name-off-1 = Сержант
+snk-name-off-2 = Ст.Сержант
+snk-name-off-3 = Мл.Лейтенант
+
+snk-name-two-1 = Свободин
+snk-name-two-2 = Востунов
+snk-name-two-3 = Бунтарски
+snk-name-two-4 = Бойченко
+snk-name-two-5 = Отделянов
+snk-name-two-6 = Крылов
+snk-name-two-7 = Мечин
+snk-name-two-8 = Никин
+snk-name-two-9 = Афинин
+snk-name-two-10 = Либерти
+snk-name-two-11 = Марсов
+snk-name-two-12 = Арес
+snk-name-two-13 = Риоти
+snk-name-two-14 = Винг
+snk-name-two-15 = Пилар
+snk-name-two-16 = Стек
+snk-name-two-17 = Риби
+snk-name-two-18 = Солид
+snk-name-two-19 = Хели
+snk-name-two-20 = Фрихет
+snk-name-two-21 = Вапаута
+snk-name-two-22 = Миека
+snk-name-two-23 = Сипи
+snk-name-two-24 = Соат

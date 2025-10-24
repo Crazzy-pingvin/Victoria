@@ -44,14 +44,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: RawCooper
   stackEntity: OreCooper1
   name: медная руда
   icon: { sprite: Victoria/Electron/ore_electronic.rsi, state: cooper }
-  price: 0.1 
+  price: 0.1
 #-----------------------------------руда--------------------------
 - type: ore
   id: OreCooper
@@ -87,16 +87,16 @@
           state: rock_north
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_west
-        - state: cooper 
-          map: [ "enum.MiningScannerVisualLayers.Overlay" ]        
-#------------------Переплавка-------------------------        
+        - state: cooper
+          map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+#------------------Переплавка-------------------------
 - type: latheRecipe
   id: MeltingCooper
   result: Cooper1
   completetime: 2
   materials:
     RawCooper: 30
-    Coal: 30    
+    Coal: 30
 #------------------Сам-------------------------
 - type: entity
   parent: CrystalOreBase
@@ -142,14 +142,14 @@
   components:
   - type: Stack
     stackType: Cooper
-    count: 1 
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: CooperMaterial
   stackEntity: Cooper1
   name: медный слиток
   icon: { sprite: Victoria/Electron/contact_crystal.rsi, state: copper }
-  price: 0.1   
+  price: 0.1
 #------------------Рецепт--------------------------
 - type: reaction
   id: CreateCooper
@@ -205,14 +205,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: RawAluminium
   stackEntity: OreAluminium1
   name: алюминиевая руда
   icon: { sprite: Victoria/Electron/ore_electronic.rsi, state: aluminium }
-  price: 0.1 
+  price: 0.1
 #-----------------------------------Руда--------------------------
 - type: ore
   id: OreAluminium
@@ -242,16 +242,16 @@
           state: rock_north
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_west
-        - state: aluminium  
+        - state: aluminium
           map: [ "enum.MiningScannerVisualLayers.Overlay" ]
-#------------------Переплавка-------------------------        
+#------------------Переплавка-------------------------
 - type: latheRecipe
   id: MeltingAluminium
   result: Aluminium1
   completetime: 2
   materials:
     RawAluminium: 30
-    Coal: 20     
+    Coal: 20
 #------------------Сам-------------------------
 - type: entity
   parent: CrystalOreBase
@@ -296,14 +296,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: AluminiumMaterial
   stackEntity: Aluminium1
   name: алюминиевый слиток
   icon: { sprite: Victoria/Electron/contact_crystal.rsi, state: aluminum }
-  price: 0.1   
+  price: 0.1
 #------------------Рецепт--------------------------
 - type: reaction
   id: CreateAluminium
@@ -315,7 +315,7 @@
       amount: 20
   effects:
     - !type:CreateEntityReactionEffect
-      entity: Aluminium1               
+      entity: Aluminium1
 #--------------------------------------Сапфир------------------------------------------
 #------------------Сам-------------------------
 - type: entity
@@ -353,14 +353,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: SapphireCircuitBordMaterial
   stackEntity: SapphireCircuitBord1
   name: сапфирная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: sapphire }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeSapphireCircuitBord
@@ -400,14 +400,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: PlazСeramicsCircuitBordMaterial
   stackEntity: PlazСeramicsCircuitBord1
   name: плазкерамовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: plazсeram }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipePlazСeramicsCircuitBord
@@ -447,14 +447,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: SiСeramicsCircuitBordMaterial
   stackEntity: SiСeramicsCircuitBord1
   name: кремнекерамовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: siсeramics }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeSiСeramicsCircuitBord
@@ -494,14 +494,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: FiberglassCircuitBordMaterial
   stackEntity: FiberglassCircuitBord1
   name: стеклотекстолитная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: fiberglass }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeFiberglassCircuitBord
@@ -541,14 +541,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: GethinaxCircuitBordMaterial
   stackEntity: GethinaxCircuitBord1
   name: гетинаксная плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: gethinax }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeGethinaxCircuitBord
@@ -588,14 +588,14 @@
   suffix: Электроника, Single
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: SiPlazCircuitBordMaterial
   stackEntity: SiPlazCircuitBord1
   name: Кремнеплазовая плата
   icon: { sprite: Victoria/Electron/raw_circuit_bord.rsi, state: siplaz }
-  price: 0.05    
+  price: 0.05
 #------------------Рецепт--------------------------
 - type: latheRecipe
   id: RecipeSiPlazCircuitBord
@@ -651,7 +651,12 @@
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
-    staticRecipes:
+    staticPacks:
+    - PackVacuumMachine
+
+- type: latheRecipePack
+  id: PackVacuumMachine
+  recipes:
     - RecipeSapphireCircuitBord
     - RecipePlazСeramicsCircuitBord
     - RecipeSiСeramicsCircuitBord

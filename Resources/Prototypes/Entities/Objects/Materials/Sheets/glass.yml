@@ -16,6 +16,7 @@
     tags:
     - CrystalMaterial
     - Sheet
+    - ConstructionMaterial
   - type: Material
   - type: Damageable
     damageContainer: Inorganic
@@ -108,15 +109,6 @@
   - type: Stack
     stackType: Glass
     count: 1
-
-- type: entity
-  parent: SheetGlass
-  id: SheetGlassLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
 
 - type: entity
   parent: SheetGlassBase

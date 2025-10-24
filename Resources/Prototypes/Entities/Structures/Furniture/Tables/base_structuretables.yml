@@ -5,6 +5,7 @@
   description: A square piece of metal standing on four metal legs.
   abstract: true
   components:
+  - type: Animateable
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -45,6 +46,9 @@
   - type: NpcFactionMember
     factions:
     - DefenseStructure
+  - type: Tag
+    tags:
+    - ForceFixRotations
 
 - type: entity
   id: CounterBase

@@ -1,4 +1,4 @@
-/* using Robust.Shared.Serialization;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Chat.TypingIndicator;
 
@@ -9,4 +9,3 @@ public enum TypingIndicatorState
     Idle = 1,
     Typing = 2,
 }
- */
