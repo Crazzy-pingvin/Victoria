@@ -17,4 +17,12 @@ public sealed partial class DamageContactsComponent : Component
     /// </summary>
     [DataField("ignoreWhitelist")]
     public EntityWhitelist? IgnoreWhitelist;
+
+    // Victoria-DamageContactsOnMove-Start
+    /// <summary>
+    /// Whether or not the damage should be applied only while moving
+    /// </summary>
+    [DataField]
+    public bool OnMove;
+    // Victoria-DamageContactsOnMove-End
 }
