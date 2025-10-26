@@ -1,4 +1,5 @@
 using Content.Shared.Damage.Components;
+using Content.Shared.Movement.Events;
 using Content.Shared.Whitelist;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
@@ -19,6 +20,9 @@ public sealed class DamageContactsSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<DamageContactsComponent, StartCollideEvent>(OnEntityEnter);
         SubscribeLocalEvent<DamageContactsComponent, EndCollideEvent>(OnEntityExit);
+        // Victoria-DamageContactsOnMove-Start
+        SubscribeLocalEvent<DamageContactsComponent, MoveInputEvent>(OnMoveInput);
+        // Victoria-DamageContactsOnMove-End
     }
 
     public override void Update(float frameTime)
@@ -62,6 +66,11 @@ public sealed class DamageContactsSystem : EntitySystem
     {
         var otherUid = args.OtherEntity;
 
+        // Victoria-DamageContactsOnMove-Start
+        if (component.OnMove)
+            return;
+        // Victoria-DamageContactsOnMove-End
+
         if (HasComp<DamagedByContactComponent>(otherUid))
             return;
 
@@ -71,4 +80,38 @@ public sealed class DamageContactsSystem : EntitySystem
         var damagedByContact = EnsureComp<DamagedByContactComponent>(otherUid);
         damagedByContact.Damage = component.Damage;
     }
+
+    // Victoria-DamageContactsOnMove-Start
+    private void OnMoveInput(EntityUid uid, DamageContactsComponent comp, ref MoveInputEvent ev)
+    {
+        if (!_timing.IsFirstTimePredicted)
+            return;
+
+        if (!TryComp<PhysicsComponent>(uid, out var body))
+            return;
+
+        foreach (var ent in _physics.GetContactingEntities(uid, body))
+        {
+            if (ent == uid)
+                continue;
+
+            if (ev.HasDirectionalMovement)
+            {
+                if (HasComp<DamagedByContactComponent>(ent))
+                    continue;
+
+                if (_whitelistSystem.IsWhitelistPass(comp.IgnoreWhitelist, ent))
+                    continue;
+
+                var damagedByContact = EnsureComp<DamagedByContactComponent>(ent);
+                damagedByContact.Damage = comp.Damage;
+            }
+            else
+            {
+                if (HasComp<DamagedByContactComponent>(ent))
+                    RemComp<DamagedByContactComponent>(ent);
+            }
+        }
+    }
+    // Victoria-DamageContactsOnMove-End
 }
