@@ -1190,7 +1190,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 50
   - type: Sprite
     sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
     layers:
@@ -2597,7 +2597,7 @@
   description: Заряды к миртанийским автомату "Развратник" и пистолету "Клык" (shc)
   components:
   - type: BallisticAmmoProvider
-    capacity: 42
+    capacity: 49
     proto: MirtCartridgePistol
   - type: Sprite
     layers:
