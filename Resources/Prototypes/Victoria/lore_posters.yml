@@ -4,7 +4,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Victoria/Posters.rsi
+    sprite: Victoria/posters.rsi
     state: poster54_legit
 #Легальные
 - type: entity
