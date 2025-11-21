@@ -257,7 +257,7 @@
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа
-  parent: [MobXeno, MobXenoDefBase]
+  parent: MobXeno #Магия для респавна
   id: MobXenoDefAlfa
   components:
   - type: NpcFactionMember
@@ -279,6 +279,24 @@
     time: 30
     prob: 1
     entity: MobXenoDefAlfaAlter    
+  - type: GhostRole
+    prob: 0
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Bloodstream
+    bloodMaxVolume: 25 
+  - type: TimedDespawn
+    lifetime: 600
 
 - type: entity
   name: Бурильщик
@@ -302,7 +320,7 @@
   - type: RandomChangeTime
     time: 30
     prob: 1
-    entity: MobXenoDefAlfa 
+    entity: MobXenoDefAlfa
 
 - type: entity
   suffix: Оборона, Бета

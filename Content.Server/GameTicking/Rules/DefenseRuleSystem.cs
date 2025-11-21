@@ -79,7 +79,7 @@ public sealed class DefenseRuleSystem : GameRuleSystem<DefenseRuleComponent>
             _end = true;
     }
 
-    private void OnRoundRestart()
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         _end = false;
         _enemyKilled = 0;

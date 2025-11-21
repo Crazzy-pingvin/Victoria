@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------солдат---------- 
+#------------------------------------солдат----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MirtUniformSold
@@ -11,7 +11,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_s.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_uniform_s.rsi
-#------------------------------------офицер----------     
+#------------------------------------офицер----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MirtUniformOffi
@@ -23,7 +23,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_o.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_uniform_o.rsi
-#------------------------------------тяж----------     
+#------------------------------------тяж----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MirtUniformTg
@@ -35,7 +35,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_h.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_uniform_h.rsi
-#------------------------------------скаут----------     
+#------------------------------------скаут----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MirtUniformRaz
@@ -47,7 +47,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_r.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_uniform_r.rsi
-#------------------------------------медик----------     
+#------------------------------------медик----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MirtUniformMed
@@ -59,7 +59,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_m.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_uniform_m.rsi
-#------------------------------------тыловой боец----------     
+#------------------------------------тыловой боец----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: MirtUniformRear
@@ -73,7 +73,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_uniform_t.rsi
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
 #---------------------------------------------------------рюкзаки----------------------------------
-#------------------------------------малый рюкзак---------- 
+#------------------------------------малый рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: MirtBackpackS
@@ -89,7 +89,7 @@
   - type: Storage
     grid:
     - 0,0,4,4
-#------------------------------------средний рюкзак---------- 
+#------------------------------------средний рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: MirtBackpackM
@@ -99,7 +99,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Equipment/mirt_backpack_std.rsi
-#------------------------------------крупный рюкзак---------- 
+#------------------------------------крупный рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: MirtBackpackL
@@ -115,7 +115,7 @@
   - type: Storage
     grid:
     - 0,0,7,5
-#------------------------------------рюкзак скаута---------- 
+#------------------------------------рюкзак скаута----------
 - type: entity
   parent: ClothingBackpack
   id: MirtBackpackRaz
@@ -186,8 +186,8 @@
       coefficients:
         Blunt: 0.8
         Slash: 0.8
-        Piercing: 0.8 
-        Shock: 1.1 
+        Piercing: 0.8
+        Shock: 1.1
         Caustic: 0.95
         Poison: 0.95
   - type: ClothingSpeedModifier
@@ -271,9 +271,9 @@
   - type: Sprite
     sprite: Victoria/Mirt/Armor/mirt_helmet_ink.rsi
   - type: Clothing
-    sprite: Victoria/Mirt/Armor/mirt_helmet_ink.rsi  
-#---------------------------------------------перчатки------------------------------    
-#------------------------------------обычные перчатки---------- 
+    sprite: Victoria/Mirt/Armor/mirt_helmet_ink.rsi
+#---------------------------------------------перчатки------------------------------
+#------------------------------------обычные перчатки----------
 - type: entity
   parent: ClothingHandsBase
   id: MirtGlovesFingerless
@@ -293,7 +293,7 @@
       coefficients:
         Caustic: 0.95
         Poison: 0.95
-#------------------------------------бронированные перчатки----------     
+#------------------------------------бронированные перчатки----------
 - type: entity
   parent: ClothingHandsBase
   id: MirtGlovesStrong
@@ -319,12 +319,12 @@
       coefficients:
         Blunt: 0.8
         Slash: 0.8
-        Piercing: 0.8 
-        Shock: 1.1 
+        Piercing: 0.8
+        Shock: 1.1
         Caustic: 0.95
         Poison: 0.95
-#--------------------------------------------------плащи-------------------------------------- 
-#------------------------------------офицерский---------- 
+#--------------------------------------------------плащи--------------------------------------
+#------------------------------------офицерский----------
 - type: entity
   parent: ClothingNeckBase
   id: MirtCloakOf
@@ -339,7 +339,7 @@
       coefficients:
         Caustic: 0.9
         Poison: 0.9
-#------------------------------------старше офицерский---------- 
+#------------------------------------старше офицерский----------
 - type: entity
   parent: ClothingNeckBase
   id: MirtCloakOfCom
@@ -354,7 +354,7 @@
       coefficients:
         Caustic: 0.85
         Poison: 0.85
-#------------------------------------специалиста---------- 
+#------------------------------------специалиста----------
 - type: entity
   parent: ClothingNeckBase
   id: MirtCloakSP
@@ -364,7 +364,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Equipment/mirt_cloak_sp.rsi
-#------------------------------------инквизиторский---------- 
+#------------------------------------инквизиторский----------
 - type: entity
   parent: ClothingNeckBase
   id: MirtEpolets
@@ -374,7 +374,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Equipment/mirt_cloak_ink.rsi
-#------------------------------------специалиста-инквизитора---------- 
+#------------------------------------специалиста-инквизитора----------
 - type: entity
   parent: ClothingNeckBase
   id: MirtCloakSPInk
@@ -384,7 +384,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/Equipment/mirt_cloak_sp_ink.rsi
-#------------------------------------офицерский-инквизиторский--------- 
+#------------------------------------офицерский-инквизиторский---------
 - type: entity
   parent: ClothingNeckBase
   id: MirtCloakOfInk
@@ -399,8 +399,8 @@
       coefficients:
         Caustic: 0.95
         Poison: 0.95
-#------------------------------------плащ скаута----------   
-#-----------------------сам плащ----------------  
+#------------------------------------плащ скаута----------
+#-----------------------сам плащ----------------
 - type: entity
   parent: ClothingNeckBase
   id: MirtCloakRaz
@@ -440,7 +440,7 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellMedium
-#-----------------------капюшон плаща---------------- 
+#-----------------------капюшон плаща----------------
 - type: entity
   parent: [ClothingHeadHardsuitBase, BaseToggleClothing]
   id: MirtHoodCloakRaz
@@ -489,7 +489,7 @@
         startingItem: PowerCellSmall
         disableEject: true
 #--------------------------------------------------бронь-----------------------------
-#------------------------------------лёгкий броник----------     
+#------------------------------------лёгкий броник----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: MirtArmorGr
@@ -501,18 +501,18 @@
     sprite: Victoria/Mirt/Armor/mirt_armor_gr.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Armor/mirt_armor_gr.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
-        Piercing: 0.75 
+        Piercing: 0.75
         Heat: 0.75
         Caustic: 0.8
         Poison: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.80
-#------------------------------------броня----------     
+#------------------------------------броня----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: MirtArmorMiddle
@@ -535,7 +535,7 @@
         Poison: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.75
-#------------------------------------жилет скаута----------     
+#------------------------------------жилет скаута----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: MirtArmorRaz
@@ -547,12 +547,12 @@
     sprite: Victoria/Mirt/Armor/mirt_armor_vest.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Armor/mirt_armor_vest.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.9
         Slash: 0.9
-        Piercing: 0.95 
+        Piercing: 0.95
         Heat: 0.7
         Cold: 0.7
         Caustic: 0.7
@@ -560,7 +560,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
 #---------------------------------------------------------скафандры--------------------------------------
-#------------------------------------обычный скафандр----------      
+#------------------------------------обычный скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: MirtHardsuitStd
@@ -589,7 +589,7 @@
     clothingPrototype: MirtHelmetHardsuitStd
   - type: ExplosionResistance
     damageCoefficient: 0.7
-#------------------------------------шлем обычного скафандра----------  
+#------------------------------------шлем обычного скафандра----------
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: MirtHelmetHardsuitStd
@@ -616,7 +616,7 @@
         Poison: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.8
-#------------------------------------бронированный скафандр----------      
+#------------------------------------бронированный скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: MirtHardsuitHig
@@ -645,7 +645,7 @@
     clothingPrototype: MirtHelmetHardsuitHig
   - type: ExplosionResistance
     damageCoefficient: 0.6
-#------------------------------------шлем бронированного скафандра----------  
+#------------------------------------шлем бронированного скафандра----------
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: MirtHelmetHardsuitHig
@@ -672,7 +672,7 @@
         Poison: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.8
-#------------------------------------инквизиторский скафандр----------      
+#------------------------------------инквизиторский скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: MirtHardsuitInk
@@ -701,13 +701,13 @@
     clothingPrototype: MirtHelmetHardsuitInk
   - type: ExplosionResistance
     damageCoefficient: 0.65
-#------------------------------------шлем инквизиторского скафандра----------  
+#------------------------------------шлем инквизиторского скафандра----------
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: MirtHelmetHardsuitInk
   name: Шлем инквизиторского скафандра
   suffix: Миртан
-  description: Гермметичный шлем, что защитит инквизитора от физических- смерти от когтей и зубов- и ментальных- чужих смертей- угроз
+  description: Герметичный шлем, что защитит инквизитора от физических- смерти от когтей и зубов- и ментальных- чужих смертей- угроз.
   categories: [ HideSpawnMenu ]
   components:
   - type: BreathMask
@@ -731,7 +731,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.8
 #-----------------------------------------снаряга и пояса------------------------------------------
-#------------------------------------маска скаута----------   
+#------------------------------------маска скаута----------
 - type: entity
   parent: ClothingMaskGasSecurity
   id: MirtMaskGas
@@ -768,7 +768,7 @@
   - type: SolutionScanner
   - type: ContentEye
     targetZoom: "1.125, 1.125"
-    maxZoom: "1.5, 1.5"  
+    maxZoom: "1.5, 1.5"
   - type: RadarConsole
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
@@ -795,7 +795,7 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellMedium
-#-------------------------------------печать офицера-----------------    
+#-------------------------------------печать офицера-----------------
 - type: entity
   name: Печать армии Империи Миртана
   suffix: Миртан
@@ -809,7 +809,7 @@
   - type: Sprite
     sprite: Victoria/Mirt/Equipment/mirt_stamp.rsi
     state: stamp
-#-------------------------------------печать инквизитора-----------------    
+#-------------------------------------печать инквизитора-----------------
 - type: entity
   name: Печать инквизиции Империи Миртана
   suffix: Миртан
@@ -840,19 +840,19 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
-      От: 
-      
+
+      От:
+
       Кому: 94ая когорта
-      
+
       Полное sодержание документа sо всей необходимой инфоrмацией и опиsанием
-      
+
       Срочность: (Крайня, Сильная, Средняя, Малая, Незначительная)
-      
+
       =============================================
-      
-             [italic]Место для печатей[/italic]      
-      
+
+             [italic]Место для печатей[/italic]
+
 #---------------------------------Сумка фаеров---------------------
 - type: entity
   parent: BaseAmmoProvider
@@ -901,14 +901,14 @@
           Slash: 0.55
           Caustic: 0.8
           Poison: 0.8
-          Piercing: 0.7 
+          Piercing: 0.7
       activeBlockModifier:
         coefficients:
           Blunt: 0.3
           Slash: 0.3
           Caustic: 0.7
           Poison: 0.7
-          Piercing: 0.5 
+          Piercing: 0.5
         flatReductions:
           Blunt: 1
           Slash: 1
@@ -935,14 +935,14 @@
           Slash: 0.4
           Caustic: 0.7
           Poison: 0.7
-          Piercing: 0.55 
+          Piercing: 0.55
       activeBlockModifier:
         coefficients:
           Blunt: 0.1
           Slash: 0.1
           Caustic: 0.6
           Poison: 0.6
-          Piercing: 0.4 
+          Piercing: 0.4
         flatReductions:
           Blunt: 1
           Slash: 1
@@ -982,7 +982,7 @@
       Heat: -5
       groups:
         Brute: -15
-        
+
 - type: entity
   parent: MirtMedpackBase
   id: MirtMedpack
@@ -991,8 +991,8 @@
   - type: Stack
     lingering: true
     count: 20
-#-------------------------------------знамёна-------------------------------   
-#------------------------стандартное------------------  
+#-------------------------------------знамёна-------------------------------
+#------------------------стандартное------------------
 - type: entity
   id: MirtBannerStd
   parent: BannerBase
@@ -1002,8 +1002,8 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/mirt_banner.rsi
-    state: banner_mirt_std 
-#------------------------религиозное------------------ 
+    state: banner_mirt_std
+#------------------------религиозное------------------
 - type: entity
   id: MirtBannerReg
   parent: MirtBannerStd
@@ -1012,14 +1012,14 @@
   description: Знамя, изображающее Золотого орла - самого Императора Миртана, Бога в этой тёмной галактике, Спасителя и осветителя судьб, великого правителя! А так же три стены планет-крепостей, что являются последним оплотом галактики, отделяющим спокойную жизнь от всепоглощающего роя ксеноморфов.
   components:
   - type: Sprite
-    state: banner_mirt_reg 
-#------------------------инквизиторское------------------ 
+    state: banner_mirt_reg
+#------------------------инквизиторское------------------
 - type: entity
   id: MirtBannerInk
   parent: MirtBannerStd
   name: Знамя Империи Миртана
   suffix: Миртан, Инквизитрское
-  description: Знамя, изображающее Золотого орла - самого Императора Миртана, Бога в этой тёмной галактике, Спасителя и осветителя судьб, великого правителя! А так же карающий меч, что низвергает черепа предателей, еретиков и отступников к ногам Его! 
+  description: Знамя, изображающее Золотого орла - самого Императора Миртана, Бога в этой тёмной галактике, Спасителя и осветителя судьб, великого правителя! А так же карающий меч, что низвергает черепа предателей, еретиков и отступников к ногам Его!
   components:
   - type: Sprite
     state: banner_mirt_ink
@@ -1062,11 +1062,11 @@
       - id: Screwdriver
       - id: Wirecutter
       - id: Welder
-      - id: Multitool 
+      - id: Multitool
       - id: MirtnKnife
       - id: MirtProviderFlare
       - id: MirtMedpack
-      
+
 - type: entity
   id: MirtBeltOffiFilled
   parent: MirtBelt
@@ -1080,7 +1080,7 @@
       - id: MirtRubberStampArm
       - id: MirtnSaber
       - id: MirtPaperForm
-      
+
 - type: entity
   id: MirtBeltInkFilled
   parent: MirtBelt
@@ -1094,7 +1094,7 @@
       - id: MirtnSword
       - id: MirtPaperForm
 #-------------------------------------ближнее-------------------------------------------------------------------------------
-#------------------------------------нож---------- 
+#------------------------------------нож----------
 - type: Tag
   id: MirtnKnife
 
@@ -1114,7 +1114,7 @@
     state: icon
   - type: Item
     sprite: Victoria/Mirt/Weapon/mirt_knife.rsi
-#------------------------------------меч---------- 
+#------------------------------------меч----------
 - type: Tag
   id: MirtnSword
 
@@ -1144,7 +1144,7 @@
     damage:
       types:
         Slash: 13
-#------------------------------------сабля---------- 
+#------------------------------------сабля----------
 - type: Tag
   id: MirtnSaber
 
@@ -1179,7 +1179,7 @@
 #--------------------------------------------------------------------------дальнее-------------------------------------------------
 #----------------------------------------------------------миртанские-----------------------------------------------------
 #-------------------------------------пули и лазеры--------------------------------------------------------------
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 - type: entity
   id: MirtBulletHeavy
   name: Тяжёлый заряд (hhc)
@@ -1197,7 +1197,7 @@
       - state: tip
   - type: StaminaDamageOnCollide
     damage: 5
-#------------------------------------пп-пулемёт----------         
+#------------------------------------пп-пулемёт----------
 - type: entity
   id: MirtBulletLight
   name: Лёгкий заряд  (lhc)
@@ -1215,7 +1215,7 @@
       - state: tip
   - type: StaminaDamageOnCollide
     damage: 5
-#------------------------------------пистолет-автомат---------- 
+#------------------------------------пистолет-автомат----------
 - type: entity
   id: MirtBulletPistol
   name: Стандартный заряд (shc)
@@ -1231,8 +1231,8 @@
     layers:
       - state: tip
   - type: StaminaDamageOnCollide
-    damage: 5   
-#------------------------------------зенитный осколок----------         
+    damage: 5
+#------------------------------------зенитный осколок----------
 - type: entity
   id: MirtBulletLightFrag
   suffix: Миртан
@@ -1248,10 +1248,10 @@
     layers:
       - state: tip
   - type: StaminaDamageOnCollide
-    damage: 5 
+    damage: 5
   - type: TimedDespawn
-    lifetime: 0.3    
-#------------------------------------зенитка---------- 
+    lifetime: 0.3
+#------------------------------------зенитка----------
 - type: entity
   id: MirtBulletFrag
   name: Осколочный заряд (zhc)
@@ -1277,8 +1277,8 @@
   - type: Sprite
     sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
     layers:
-      - state: tip     
-#------------------------------------пожарный лазер---------- 
+      - state: tip
+#------------------------------------пожарный лазер----------
 - type: Tag
   id: MirtFireLaser
 
@@ -1300,9 +1300,9 @@
     temperature: 1000
     ignited: true
   - type: IgniteOnCollide
-    fireStacks: 0.25 
+    fireStacks: 0.25
 #-------------------------------------картриджи---------------------------------------------------------------------------------
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 - type: Tag
   id: MirtCartridgeHeavy
 
@@ -1322,7 +1322,7 @@
   - type: PhysicalComposition
     materialComposition:
       MirtCartridgeHeavy: 1
-#------------------------------------пп-пулемёт---------- 
+#------------------------------------пп-пулемёт----------
 - type: Tag
   id: MirtCartridgeLight
 
@@ -1338,7 +1338,7 @@
   - type: Tag
     tags:
       - MirtCartridgeLight
-#------------------------------------пистолет-автомат---------- 
+#------------------------------------пистолет-автомат----------
 - type: Tag
   id: MirtCartridgePistol
 
@@ -1354,7 +1354,7 @@
   - type: Tag
     tags:
       - MirtCartridgePistol
-#------------------------------------зенитка----------      
+#------------------------------------зенитка----------
 - type: Tag
   id: MirtCartridgeFrag
 
@@ -1375,7 +1375,7 @@
 #--------------------------------------------------------миртанские------------------------------------
 - type: Tag
   id: MirtMagazine
-#-----------------------------------гражданский--------- 
+#-----------------------------------гражданский---------
 - type: Tag
   id: MirtMagazineGr
 
@@ -1401,13 +1401,13 @@
     tags:
       - MirtMagazineGr
       - MirtMagazine
-#-----------------------------------винтовочный--------- 
+#-----------------------------------винтовочный---------
 - type: Tag
   id: MirtMagazineRifle
 
 - type: entity
   id: MirtMagazineRifle
-  name: Магазин к винтовке "Чаровница" 
+  name: Магазин к винтовке "Чаровница"
   suffix: Миртан
   parent: BaseMagazinePistol
   components:
@@ -1428,7 +1428,7 @@
     tags:
       - MirtMagazineRifle
       - MirtMagazine
-#-----------------------------------пп--------- 
+#-----------------------------------пп---------
 - type: Tag
   id: MirtMagazineSMG
 
@@ -1454,7 +1454,7 @@
     tags:
       - MirtMagazineSMG
       - MirtMagazine
-#-----------------------------------пулемёт--------- 
+#-----------------------------------пулемёт---------
 - type: Tag
   id: MirtMagazineLMG
 
@@ -1480,13 +1480,13 @@
     tags:
       - MirtMagazineLMG
       - MirtMagazine
-#-----------------------------------пистолет--------- 
+#-----------------------------------пистолет---------
 - type: Tag
-  id: MirtMagazinePistol 
+  id: MirtMagazinePistol
 
 - type: entity
   id: MirtMagazinePistol
-  name: Магазин к пистолету "Клык" 
+  name: Магазин к пистолету "Клык"
   suffix: Миртан
   parent: BaseMagazinePistol
   components:
@@ -1506,13 +1506,13 @@
     tags:
       - MirtMagazinePistol
       - MirtMagazine
-#-----------------------------------автомат--------- 
+#-----------------------------------автомат---------
 - type: Tag
   id: MirtMagazineAutomat
 
 - type: entity
   id: MirtMagazineAutomat
-  name: Магазин к автомату "Развратник" 
+  name: Магазин к автомату "Развратник"
   suffix: Миртан
   parent: BaseMagazinePistol
   components:
@@ -1532,13 +1532,13 @@
     tags:
       - MirtMagazineAutomat
       - MirtMagazine
-#-----------------------------------пожарный лазер--------- 
+#-----------------------------------пожарный лазер---------
 - type: Tag
-  id: MirtPowerCell 
-   
+  id: MirtPowerCell
+
 - type: entity
-  id: MirtPowerCell 
-  name: Батарея пожарного лазера "Месяц" 
+  id: MirtPowerCell
+  name: Батарея пожарного лазера "Месяц"
   suffix: Миртан
   parent: BaseMagazinePistol
   components:
@@ -1546,8 +1546,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - MirtFireLaser 
-    proto: MirtFireLaser 
+        - MirtFireLaser
+    proto: MirtFireLaser
     capacity: 70
   - type: Sprite
     sprite: Victoria/Mirt/Weapon/mirt_laser_magazine.rsi
@@ -1556,7 +1556,7 @@
       map: ["enum.GunVisualLayers.Base"]
   - type: Tag
     tags:
-      - MirtPowerCell 
+      - MirtPowerCell
       - MirtMagazine
 #-----------------------------------зенитка---------
 - type: Tag
@@ -1576,7 +1576,7 @@
   - type: Tag
     tags:
       - MirtMagazineZenit
-      - MirtMagazine 
+      - MirtMagazine
   - type: ProjectileBatteryAmmoProvider
     proto: MirtCartridgeFrag
     fireCost: 100000
@@ -1584,13 +1584,13 @@
   - type: Riggable
   - type: Battery
     maxCharge: 5000000
-    startingCharge: 5000000 
+    startingCharge: 5000000
   - type: Appearance
 #-------------------------------------стволы---------------------------------------------------------------------------------
 #---------------------------------------------------миртан-----------------------------------
 #-----------------------гражданская-----------------------
 - type: entity
-  name: Гражданский автомат "Вдова" 
+  name: Гражданский автомат "Вдова"
   suffix: Миртан
   parent: BaseWeaponRifle
   id: MirtAutoRifleGr
@@ -1654,10 +1654,10 @@
     damage:
       types:
         Slash: 7
-        Piercing: 3 
+        Piercing: 3
 #-----------------------пистолет-----------------------
 - type: entity
-  name: Блюспейс пистолет "Клык" 
+  name: Блюспейс пистолет "Клык"
   suffix: Миртан
   parent: BaseWeaponPistol
   id: MirtPistol
@@ -1721,10 +1721,10 @@
     damage:
       types:
         Slash: 7
-        Piercing: 3 
+        Piercing: 3
 #-----------------------автомат-----------------------
 - type: entity
-  name: Блюспейс автомат "Развратник" 
+  name: Блюспейс автомат "Развратник"
   suffix: Миртан
   parent: BaseWeaponRifle
   id: MirtAutoRifle
@@ -1790,10 +1790,10 @@
     damage:
       types:
         Slash: 7
-        Piercing: 3 
+        Piercing: 3
 #-----------------------пп-----------------------
 - type: entity
-  name: Блюспейс пистолет-пулемёт "Шершень" 
+  name: Блюспейс пистолет-пулемёт "Шершень"
   suffix: Миртан
   parent: BaseWeaponSubMachineGun
   id: MirtSMG
@@ -1860,10 +1860,10 @@
     damage:
       types:
         Blunt: 4
-        Piercing: 1 
+        Piercing: 1
 #-----------------------пулемёт-----------------------
 - type: entity
-  name: Блюспейс пулемёт "Молот" 
+  name: Блюспейс пулемёт "Молот"
   suffix: Миртан
   parent: BaseWeaponLightMachineGun
   id: MirtLMG
@@ -1919,7 +1919,7 @@
     price: 750
 #-----------------------винтовка---------------------------------------
 - type: entity
-  name: Блюспейс винтовка "Чаровница" 
+  name: Блюспейс винтовка "Чаровница"
   suffix: Миртан
   parent: BaseWeaponRifle
   id: MirtRifle
@@ -1993,7 +1993,7 @@
     node: MirtRifle
 #-----------------------зенитка-----------------------
 - type: entity
-  name: Зенитный пулемёт "Носорог" 
+  name: Зенитный пулемёт "Носорог"
   suffix: Миртан
   parent: BaseWeaponLightMachineGun
   id: MirtZenit
@@ -2077,10 +2077,10 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MirtPowerCell 
+        startingItem: MirtPowerCell
         whitelist:
           tags:
-            - MirtPowerCell 
+            - MirtPowerCell
   - type: StaticPrice
     price: 500
 #-----------------------гранатомёт-----------------------
@@ -2093,7 +2093,7 @@
   - type: TimedDespawn
     lifetime: 3
 
-- type: entity  
+- type: entity
   name: Гранатомёт "Медведка"
   suffix: Миртан
   parent: [BaseItem, BaseGunWieldable]
@@ -2164,7 +2164,7 @@
             - NoocPowerCellOne
             - NoocPowerCellTwo
             - NoocPowerCellThree
-            - NoocPowerCellFour 
+            - NoocPowerCellFour
             - MirtPowerCell
             - NoocPowerCellOneSnipe
   - type: Appearance
@@ -2218,7 +2218,7 @@
   - type: Construction
     graph: MirtNoocRifleSniper
     node: MirtNoocRifle
-#------------------------------------автомат----------     
+#------------------------------------автомат----------
 - type: entity
   id: MirtNoocPowerGan
   parent: BaseItem
@@ -2248,7 +2248,7 @@
             - NoocPowerCellOne
             - NoocPowerCellTwo
             - NoocPowerCellThree
-            - NoocPowerCellFour 
+            - NoocPowerCellFour
   - type: Appearance
   - type: StaticPrice
     price: 500
@@ -2297,7 +2297,7 @@
       types:
         Slash: 7
         Piercing: 3
-#------------------------------------пистолет----------   
+#------------------------------------пистолет----------
 - type: entity
   id: MirtNoocPowerPistol
   parent: BaseItem
@@ -2326,7 +2326,7 @@
             - NoocPowerCellOne
             - NoocPowerCellTwo
             - NoocPowerCellThree
-            - NoocPowerCellFour 
+            - NoocPowerCellFour
   - type: Appearance
   - type: StaticPrice
     price: 250
@@ -2375,7 +2375,7 @@
       types:
         Slash: 7
         Piercing: 3
-#------------------------------------пулемёт----------   
+#------------------------------------пулемёт----------
 - type: entity
   id: MirtNoocPowerMG
   parent: BaseItem
@@ -2401,7 +2401,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: NoocPowerCellFour 
+        startingItem: NoocPowerCellFour
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         whitelist:
@@ -2452,7 +2452,7 @@
       types:
         Slash: 7
         Piercing: 3
-#------------------------------------хладопушка----------     
+#------------------------------------хладопушка----------
 - type: entity
   id: MirtNoocPowerGanCold
   parent: BaseItem
@@ -2516,7 +2516,7 @@
   - type: Clothing
     sprite: Victoria/Mirt/Weapon/mirt_nooc_cold_gun.rsi
   - type: StaticPrice
-    price: 500    
+    price: 500
   - type: AltFireMelee
     attackType: Heavy
   - type: MeleeWeapon
@@ -2588,7 +2588,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------пистолетные----------------      
+#------------------------------пистолетные----------------
 - type: entity
   parent: BaseMirtBox
   id: MirtBoxPistol
@@ -2606,13 +2606,13 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------------------карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+#------------------------------------------карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: MirtAccess
   name: access-mirt
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsMirtAccess
@@ -2631,7 +2631,7 @@
       board: [ DoorElectronicsMirtAccess ]
   - type: Sprite
     sprite: Victoria/Mirt/mirt_airlock.rsi
-#------------------------------------свободный шлюз---------- 
+#------------------------------------свободный шлюз----------
 - type: entity
   parent: Airlock
   id: MirtAirlock
@@ -2639,7 +2639,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Mirt/mirt_airlock.rsi
-#------------------------------------стыковочный----------     
+#------------------------------------стыковочный----------
 - type: entity
   parent: AirlockExternalShuttleLocked
   name: Стыковочный шлюз
@@ -2650,9 +2650,9 @@
   - type: PryUnpowered
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsMirtAccess ]   
-#------------------------------------------ карты----------------------------------------  
-#------------------------------------стандарт карты---------- 
+      board: [ DoorElectronicsMirtAccess ]
+#------------------------------------------ карты----------------------------------------
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: MirtIDCard
@@ -2679,7 +2679,7 @@
     - WhitelistChameleon
   - type: StealTarget
     stealGroup: IDCard
-#------------------------------------карта офицера---------- 
+#------------------------------------карта офицера----------
 - type: entity
   parent: MirtIDCard
   id: MirtIDCardOfficer
@@ -2696,7 +2696,7 @@
     - External
   - type: PresetIdCard
     name: миртанийский офицер
-#------------------------------------карта солдата----------    
+#------------------------------------карта солдата----------
 - type: entity
   parent: MirtIDCard
   id: MirtIDCardSolder
@@ -2713,7 +2713,7 @@
     - External
   - type: PresetIdCard
     name: миртанийский воин
-#------------------------------------карта инквизитора----------     
+#------------------------------------карта инквизитора----------
 - type: entity
   parent: MirtIDCard
   id: MirtIDCardEngener
@@ -2747,16 +2747,16 @@
     - External
   - type: PresetIdCard
     name: миртанийский ст.инквизитор
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: MirtRadio
   name: name-of-MirtRadio
-  keycode: 'им' 
+  keycode: 'им'
   frequency: 1939
   color: "#a73800"
   longRange: true
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -2774,7 +2774,7 @@
     sprite: Victoria/Mirt/Equipment/mirt_encryption_keys.rsi
   - type: StealTarget
     stealGroup: EncryptionKey
-#-----------------------------ключ----------------------------------------      
+#-----------------------------ключ----------------------------------------
 - type: entity
   parent: MirtBaseEncryptionKey
   id: MirtEncryptionKey
@@ -2789,8 +2789,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label 
-#-----------------------------гарнитура----------------------------------------  
+    - state: label
+#-----------------------------гарнитура----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: MirtHeadset
@@ -2805,8 +2805,8 @@
     sprite: Victoria/Mirt/Equipment/mirt_garniture.rsi
   - type: Clothing
     sprite: Victoria/Mirt/Equipment/mirt_garniture.rsi
-#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------  
-#--------------------------------------------сумки------------------------------------ 
+#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------
+#--------------------------------------------сумки------------------------------------
 #------------------------------------малые----------------------------------
 - type: entity
   parent: MirtBackpackS
@@ -3061,7 +3061,7 @@
       - id: DrinkWaterBottleFull
       - id: Gauze
       - id: OxygenTankFilled
-#-----------------------------------------------------роли------------------------------------------------------      
+#-----------------------------------------------------роли------------------------------------------------------
 - type: playTimeTracker
   id: JobEventMirtan
 #---------------------------------------------------------------Бумаги------------------------------------------------------------
@@ -3077,10 +3077,10 @@
   - type: Paper
     content: |
       Вы: Вы преданный гражданин Империи Миртана. Вы любите свою страну, свой народ, своего Императора! Но сейчас у вашей планеты большие проблемы. Сражайтесь за то, что вам дорого!
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, владение оружием, готовка, разделка туш, базовая ботаника
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Будьте готовы умереть, но никогда не сдавайтесь. Сражайтесь до последней гранаты, до последнего патрона! Бейтесь, пока не сломается нож, пока в жилах есть хотя бы капля крови! А если вас проглотят целиком, то выгрызайте путь наружу! Задача одна - отсрочить полное поражение хотя бы... на пару секунд... Помните, что у вас другой родной язык. Отыгрывайте что не умеете склонять и спрягать, когда говорите на общегалактическом. Никаких падежей и родов. Можете отыграть и полное непонимание ничего, кроме жестов.
 
@@ -3096,10 +3096,10 @@
   - type: Paper
     content: |
       Вы: Честный, смелый, верный, солдат Империи Миртана. Вы любите свою страну, свой народ, своего Императора!
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, владение оружием, готовка, разделка туш
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Будьте готовы умереть, но никогда не сдавайтесь. Сражайтесь до последней гранаты, до последнего патрона! Бейтесь, пока не сломается нож, пока в жилах есть хотя бы капля крови! А если вас проглотят целиком, то выгрызайте путь наружу! Задача одна - отсрочить полное поражение хотя бы... на пару секунд... Помните, что у вас другой родной язык. Отыгрывайте забывание слов. Или можете отыграть, что умеете говорить только на миртанийском. Когда попадаете на станцию NanoTrasen, придумайте некий акцент и пишите с ним.
 #-----------------------------------офицер-----------------------------
@@ -3114,10 +3114,10 @@
   - type: Paper
     content: |
       Вы: Храбрый, верный и хладнокровный полевой командир Империи Миртана. Вы любите свою страну, свой народ, своего Императора! Но вы видели слишком много смертей...
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, владение оружием, готовка, разделка туш, управление шаттлом
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Будьте готовы умереть, но никогда не сдавайтесь. Сражайтесь до последней гранаты, до последнего патрона! Бейтесь, пока не сломается нож, пока в жилах есть хотя бы капля крови! А если вас проглотят целиком, то выгрызайте путь наружу! Задача одна - отсрочить полное поражение хотя бы... на пару секунд... Помните, что у вас другой родной язык. Отыгрывайте забывание слов. Или можете отыграть, что умеете говорить только на миртанийском. Когда попадаете на станцию NanoTrasen, придумайте некий акцент и пишите с ним.
 #-----------------------------------инквизитор-----------------------------
@@ -3132,10 +3132,10 @@
   - type: Paper
     content: |
       Вы: Хладнокровный и преданный вере инквизитор Империи Миртана. Вы любите свою страну, свой народ, своего Императора! И вы ненавидите предателей...
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, владение оружием, готовка, разделка туш, управление шаттлом
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Будьте готовы умереть, но никогда не сдавайтесь. Сражайтесь до последней гранаты, до последнего патрона! Бейтесь, пока не сломается нож, пока в жилах есть хотя бы капля крови! А если вас проглотят целиком, то выгрызайте путь наружу! Задача одна - отсрочить полное поражение хотя бы... на пару секунд... Помните, что у вас другой родной язык. Отыгрывайте забывание слов. Или можете отыграть, что умеете говорить только на миртанийском. Когда попадаете на станцию NanoTrasen, придумайте некий акцент и пишите с ним. Будьте готовы к предателям страны и веры. Карайте их. Нет пощады тем, кто отринул Императора!
 #-----------------------------------разведчик-----------------------------
@@ -3150,14 +3150,14 @@
   - type: Paper
     content: |
       Вы: Честный, смелый, верный, а ещё хитрый, умный и изворотливый скаут Империи Миртана. Вы любите свою страну, свой народ, своего Императора!
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, владение оружием, готовка, разделка туш
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Будьте готовы умереть, но никогда не сдавайтесь и не стремитесь к этому. Будьте хитрей, опережайте противника на шаг. Поставляйте сведения вашим товарищам. Когда попадаете на станцию NanoTrasen, придумайте некий акцент и пишите с ним.
-      
-#--------------------------------------------------------------------гиры----------------------------------------------- 
+
+#--------------------------------------------------------------------гиры-----------------------------------------------
 #--------------------------------------------ополченец---------------------------------
 - type: startingGear
   id: MirtGrGear
@@ -3181,7 +3181,7 @@
     belt: MirtBeltFilled
     gloves: MirtGlovesFingerless
     pocket1: MirtPaperSold
-    
+
 - type: startingGear
   id: MirtSoldGearRifle
   equipment:
@@ -3209,7 +3209,7 @@
     gloves: MirtGlovesFingerless
     pocket1: MirtPaperSold
     pocket2: MirtProviderFlare
-    
+
 - type: startingGear
   id: MirtTgGearNoocLMG
   equipment:
@@ -3223,7 +3223,7 @@
     gloves: MirtGlovesFingerless
     pocket1: MirtPaperSold
     pocket2: MirtProviderFlare
-    
+
 - type: startingGear
   id: MirtTgGearLaser
   equipment:
@@ -3374,7 +3374,7 @@
   - Магевер
 #---------------------------------ополченец----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3416,7 +3416,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtGrGear ]
-  
+
 - type: entity
   name: Миртанский ополченец Спавнер
   id: MirtMobHumanGr
@@ -3438,7 +3438,7 @@
     settings: MirtGrR
 #---------------------------------солдат----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3480,7 +3480,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtSoldGearAuto ]
-  
+
 - type: entity
   name: Миртанский солдат Спавнер
   id: MirtMobHumanSold
@@ -3502,7 +3502,7 @@
     settings: MirtSoldR
 #---------------------------------тяж----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3544,7 +3544,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtTgGearLMG ]
-      
+
 - type: entity
   name: Миртанский боец тяжёлого оружия Спавнер
   id: MirtMobHumanTg
@@ -3566,7 +3566,7 @@
     settings: MirtTgR
 #---------------------------------офицер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3608,7 +3608,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtOffiGear ]
-  
+
 - type: entity
   name: Миртанский младший офицер Спавнер
   id: MirtMobHumanOffi
@@ -3630,7 +3630,7 @@
     settings: MirtOffiR
 #---------------------------------инквизитор----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3672,7 +3672,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtInkGear ]
-  
+
 - type: entity
   name: Миртанский инквизитор Спавнер
   id: MirtMobHumanInk
@@ -3694,7 +3694,7 @@
     settings: MirtInkR
 #---------------------------------старший инквизитор----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3736,7 +3736,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtOffiInkGear ]
-  
+
 - type: entity
   name: Миртанский старший инквизитор Спавнер
   id: MirtMobHumanOffiInk
@@ -3758,7 +3758,7 @@
     settings: MirtOffiInkR
 #---------------------------------скаут----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -3800,7 +3800,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ MirtRazGear ]
-  
+
 - type: entity
   name: Миртанский скаут Спавнер
   id: MirtMobHumanRaz
@@ -3820,8 +3820,8 @@
     - MirtNameTwo
   - type: RandomHumanoidSpawner
     settings: MirtRazR
-#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------        
-#-----------------------------Базовый ящик------------------ 
+#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------
+#-----------------------------Базовый ящик------------------
 - type: entity
   parent: CrateBaseSecure
   id: MirtCrate
@@ -3830,7 +3830,7 @@
   components:
   - type: AccessReader
     access: [["MirtAccess"], ["Research"]]
-#-----------------------------Ящик лёгкого оружия------------------    
+#-----------------------------Ящик лёгкого оружия------------------
 - type: entity
   id: MirtCrateWeaponsL
   parent: MirtCrate
@@ -4126,8 +4126,8 @@
       - id: MirtProviderFlare
       - id: MirtMedpack
       - id: MirtMedpack
-#---------------------------------------------------------------Структуры------------------------------------------------------------        
-#-----------------------------Мешки с песком------------------ 
+#---------------------------------------------------------------Структуры------------------------------------------------------------
+#-----------------------------Мешки с песком------------------
 - type: entity
   id: SandBarricade
   parent: BaseStructure
@@ -4216,7 +4216,7 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.9
