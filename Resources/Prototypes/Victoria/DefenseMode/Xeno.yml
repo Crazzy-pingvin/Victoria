@@ -529,7 +529,7 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный
-  parent: [MobXenoRavager, MobXenoDefBase]
+  parent: [MobXenoRavagerDefAlfa, MobXenoDefBase]
   id: MobXenoRavagerDefAlfaAlter
   components:
   - type: Journey
