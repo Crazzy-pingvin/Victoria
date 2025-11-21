@@ -717,7 +717,7 @@
   components:
   - type: DefenseRule
   - type: GameRule
-    minPlayers: 0
+    minPlayers: 1
 #Пресет
 - type: gamePreset
   id: Defense
@@ -726,7 +726,7 @@
   name: Оборона
   description: Волны врагов прут в атаку! Берите пушки и защищайтесь!
   supportedMaps: VictoriaDefenseMapPool
-  showInVote: false
+  showInVote: true
   rules:
     - Defense
     - BasicStationEventScheduler

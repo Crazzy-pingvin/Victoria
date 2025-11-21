@@ -651,7 +651,7 @@
   id: MirtHelmetHardsuitHig
   name: Шлем бронированного скафандра
   suffix: Миртан
-  description: Стандартный простой шлем скафандра для армии Умпорской Федерации
+  description: Тяжёлый шлем, способоный защитить глаза и мозги верного служителя Миртана от (почти) всего.
   categories: [ HideSpawnMenu ]
   components:
   - type: BreathMask
@@ -707,7 +707,7 @@
   id: MirtHelmetHardsuitInk
   name: Шлем инквизиторского скафандра
   suffix: Миртан
-  description: Стандартный простой шлем скафандра для армии Умпорской Федерации
+  description: Гермметичный шлем, что защитит инквизитора от физических- смерти от когтей и зубов- и ментальных- чужих смертей- угроз
   categories: [ HideSpawnMenu ]
   components:
   - type: BreathMask

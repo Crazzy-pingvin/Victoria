@@ -4,6 +4,7 @@ using Content.Server.RoundEnd;
 using Content.Server.Defense;
 using Content.Shared.Database;
 using Content.Shared.GameTicking.Components;
+using Content.Shared.GameTicking;
 using Content.Shared.Mobs;
 using Content.Shared.Destructible;
 using Content.Shared.RandomChangeTime;
@@ -28,10 +29,8 @@ public sealed class DefenseRuleSystem : GameRuleSystem<DefenseRuleComponent>
     {
         base.Initialize();
         SubscribeLocalEvent<DefenseTargetComponent, DestructionEventArgs>(OnTargetDestroyed);
-
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         SubscribeLocalEvent<DefenseEnemyComponent, MobStateChangedEvent>(OnEnemyDeath);
-
-        //SubscribeLocalEvent<PetrRoleComponent, GetBriefingEvent>(OnGetBriefing);
 
     }
 
@@ -53,10 +52,10 @@ public sealed class DefenseRuleSystem : GameRuleSystem<DefenseRuleComponent>
         base.Started(uid, component, gameRule, args);
         _adminLog.Add(LogType.Action, LogImpact.Extreme, $"СТАРТУЕМ!!!");
         component.NextCheck = _timing.CurTime + component.TimerWait;
-        var targets = AllEntityQuery<DefenseSettingsComponent>();
+        var targets = AllEntityQuery<DefenseTargetComponent>();
         while (targets.MoveNext(out var id, out var comp))
         {
-            _startDefenseNodes = comp.StartNodes;
+            _startDefenseNodes += 1;
         }
         _adminLog.Add(LogType.Action, LogImpact.Extreme, $"Кол-во узлов обороны- {_startDefenseNodes}");
         _defenseNodes = _startDefenseNodes;
@@ -71,9 +70,6 @@ public sealed class DefenseRuleSystem : GameRuleSystem<DefenseRuleComponent>
         args.AddLine($"Осталось {_defenseNodes} узлов из {_startDefenseNodes}.");
         args.AddLine(Loc.GetString(DetermineOutcomes()));
         args.AddLine($"Было уничтожено {_enemyKilled} ксеносов.");
-        _end = false;
-        _enemyKilled = 0;
-
     }
     private void OnTargetDestroyed(EntityUid uid, DefenseTargetComponent comp, DestructionEventArgs args)
     {
@@ -81,6 +77,12 @@ public sealed class DefenseRuleSystem : GameRuleSystem<DefenseRuleComponent>
         _adminLog.Add(LogType.Action, LogImpact.Extreme, $"Защита потеряла узел обороны! Осталось {_defenseNodes} из {_startDefenseNodes}");
         if (comp.Flag)
             _end = true;
+    }
+
+    private void OnRoundRestart()
+    {
+        _end = false;
+        _enemyKilled = 0;
     }
     private void OnEnemyDeath(EntityUid uid, DefenseEnemyComponent comp, MobStateChangedEvent ev)
     {
