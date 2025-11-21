@@ -205,10 +205,23 @@
   - type: Tag
     tags:
     - ClothMade
+#Карта
+- type: entity
+  parent: [IDCardStandard, DefStartGearBase]
+  id: DefStartIDCard
+  name: карта мертвеца
+  description:
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+  - type: PresetIdCard
+    job: Passenger
 #-----------------------------------гиры-------------------------
 - type: startingGear
   id: DefComanderGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearCap
@@ -218,6 +231,7 @@
 - type: startingGear
   id: DefOfficerGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearCap
@@ -226,6 +240,7 @@
 - type: startingGear
   id: DefOfficerDopGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearCap
@@ -234,6 +249,7 @@
 - type: startingGear
   id: DefEngenerGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearCapP
@@ -242,6 +258,7 @@
 - type: startingGear
   id: DefMedicGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearBeret
@@ -250,6 +267,7 @@
 - type: startingGear
   id: DefCargoGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearCapP
@@ -258,6 +276,7 @@
 - type: startingGear
   id: DefSpecialistGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearHelmet
@@ -266,6 +285,7 @@
 - type: startingGear
   id: DefSpecialistDopGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearBeret
@@ -274,6 +294,7 @@
 - type: startingGear
   id: DefSolderGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearHelmet
@@ -282,6 +303,7 @@
 - type: startingGear
   id: DefSolderDopGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearHelmet
@@ -290,6 +312,7 @@
 - type: startingGear
   id: DefPilotGear
   equipment:
+    id: DefStartIDCard
     jumpsuit: DefStartGearUniformSoldier
     shoes: DefStartGearBoots
     head: DefStartGearCapP
