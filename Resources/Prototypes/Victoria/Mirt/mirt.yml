@@ -1190,7 +1190,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 50
+        Piercing: 35
   - type: Sprite
     sprite: Victoria/Mirt/Weapon/mirt_projectiles.rsi
     layers:

@@ -235,7 +235,7 @@
 
 - type: entity
   description: Обычно они приходят ночью. Обычно.
-  suffix: БАЗА
+  suffix: БАЗА, дальний
   abstract: true
   parent: MobXenoDefBase
   id: MobXenoDefRangedBase
@@ -754,7 +754,6 @@
   components:
   - type: Journey
     journeyGroup: Beaver
-#------------------------------------------Спавнеры ботов------------------------------
 #------------------------------------------Плевок плевальщика------------------------------
 - type: entity
   id: BulletAcidDef
