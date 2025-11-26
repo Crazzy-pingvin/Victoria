@@ -720,7 +720,7 @@
   components:
   - type: DefenseRule
   - type: GameRule
-    minPlayers: 1
+    minPlayers: 0
 #Пресет
 - type: gamePreset
   id: Defense
