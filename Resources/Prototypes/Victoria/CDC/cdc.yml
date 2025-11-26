@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------солдат---------- 
+#------------------------------------солдат----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformSold
@@ -11,7 +11,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_s.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_uniform_s.rsi
-#------------------------------------офицер----------     
+#------------------------------------офицер----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformOffi
@@ -23,7 +23,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_o.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_uniform_o.rsi
-#------------------------------------техник----------     
+#------------------------------------техник----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformEng
@@ -35,7 +35,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_e.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_uniform_e.rsi
-#------------------------------------имам----------     
+#------------------------------------имам----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformImam
@@ -47,7 +47,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_i.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_uniform_i.rsi
-#------------------------------------медик----------     
+#------------------------------------медик----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformMedic
@@ -59,7 +59,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_m.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_uniform_m.rsi
-#------------------------------------специалист----------     
+#------------------------------------специалист----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformSPC
@@ -71,7 +71,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_p.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_uniform_p.rsi
-#------------------------------------командор----------     
+#------------------------------------командор----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: CDCUniformComander
@@ -85,7 +85,7 @@
     sprite: Victoria/CDC/Equipment/cdc_uniform_c.rsi
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
 #---------------------------------------------------------рюкзаки----------------------------------
-#------------------------------------сумка----------- 
+#------------------------------------сумка-----------
 - type: entity
   parent: [ClothingBackpack, DrinkBase]
   id: CDCSatchels
@@ -99,7 +99,7 @@
     solutions:
       drink:
         maxVol: 100
-#------------------------------------рюкзак---------- 
+#------------------------------------рюкзак----------
 - type: entity
   parent: [ClothingBackpack, DrinkBase]
   id: CDCBackpack
@@ -113,7 +113,7 @@
     solutions:
       drink:
         maxVol: 100
-#-------------------------рюкзак-радиостанция-------------------------    
+#-------------------------рюкзак-радиостанция-------------------------
 - type: entity
   parent: ClothingBackpack
   id: CDCRadioBackpack
@@ -137,7 +137,7 @@
   - type: ApcPowerReceiver
     needsPower: false
   - type: LightningTarget
-    priority: 1 
+    priority: 1
   - type: SolutionContainerManager
     solutions:
       drink:
@@ -145,7 +145,7 @@
         - ReagentId: Water
           Quantity: 0
         maxVol: 50
-#--------------------------------------------------плащ-------------------------------------- 
+#--------------------------------------------------плащ--------------------------------------
 - type: entity
   parent: ClothingNeckBase
   id: CDCCloakOf
@@ -229,7 +229,7 @@
         Piercing: 0.85
         Heat: 0.9
         Caustic: 0.9
-#------------------------------------шапки---------- 
+#------------------------------------шапки----------
 #-------------------солдатская феска-----------
 - type: entity
   parent: ClothingHeadBase
@@ -298,8 +298,8 @@
     - ClothMade
     - WhitelistChameleon
     - HamsterWearable
-#---------------------------------------------перчатки------------------------------    
-#------------------------------------солдатские---------- 
+#---------------------------------------------перчатки------------------------------
+#------------------------------------солдатские----------
 - type: entity
   parent: ClothingHandsBase
   id: CDCGloves
@@ -319,7 +319,7 @@
       coefficients:
         Blunt: 0.95
         Slash: 0.95
-#------------------------------------техника----------     
+#------------------------------------техника----------
 - type: entity
   parent: ClothingHandsGlovesColorYellow
   id: CDCGlovesTech
@@ -340,12 +340,12 @@
       coefficients:
         Blunt: 0.9
         Slash: 0.9
-        Piercing: 0.95 
-        Shock: 0.9 
+        Piercing: 0.95
+        Shock: 0.9
         Caustic: 0.95
         Poison: 0.95
 #--------------------------------------------------бронь-----------------------------
-#------------------------------------лёгкий броник----------     
+#------------------------------------лёгкий броник----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: CDCArmorLight
@@ -357,18 +357,18 @@
     sprite: Victoria/CDC/Armor/cdc_armor_light.rsi
   - type: Clothing
     sprite: Victoria/CDC/Armor/cdc_armor_light.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
-        Piercing: 0.75 
+        Piercing: 0.75
         Heat: 0.75
         Caustic: 0.85
         Poison: 0.85
   - type: ExplosionResistance
     damageCoefficient: 0.80
-#------------------------------------броня----------     
+#------------------------------------броня----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: CDCArmorMiddle
@@ -392,7 +392,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.75
 #---------------------------------------------------------скафандры--------------------------------------
-#------------------------------------скафандр техника----------      
+#------------------------------------скафандр техника----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: CDCHardsuitTech
@@ -421,7 +421,7 @@
     clothingPrototype: CDCHelmetHardsuitTech
   - type: ExplosionResistance
     damageCoefficient: 0.9
-#------------------------------------шлем скафандра техника----------  
+#------------------------------------шлем скафандра техника----------
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: CDCHelmetHardsuitTech
@@ -450,7 +450,7 @@
         Poison: 0.95
   - type: ExplosionResistance
     damageCoefficient: 0.9
-#------------------------------------боевой скафандр----------      
+#------------------------------------боевой скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: CDCHardsuitArm
@@ -479,13 +479,13 @@
     clothingPrototype: CDCHelmetHardsuitArm
   - type: ExplosionResistance
     damageCoefficient: 0.6
-#------------------------------------шлем боевого скафандра----------  
+#------------------------------------шлем боевого скафандра----------
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: CDCHelmetHardsuitArm
   name: Шлем бронированного скафандра
   suffix: Конгломерат
-  description: Стандартный простой шлем скафандра для армии Умпорской Федерации
+  description: Бронированный шлем скафандра Конгломерата.
   categories: [ HideSpawnMenu ]
   components:
   - type: BreathMask
@@ -509,7 +509,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.8
 #-----------------------------------------снаряга и пояса------------------------------------------
-#-------------------------------------печать офицера-----------------    
+#-------------------------------------печать офицера-----------------
 - type: entity
   name: Печать армии Конгломерата
   suffix: Конгломерат
@@ -540,20 +540,20 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
-      От: 
-      
+
+      От:
+
       Кому: 19-ая дивизия
-      
+
       Полное sодерjание документа sо всей необходимой инфоrмацией и опиsанием
-      
+
       Срочность: (Крайня, Сильная, Средняя, Малая, Незначительная)
-      
+
       =============================================
-      
-             [italic]Место для печатей[/italic]      
-      
-#-------------------------------------знамя-------------------------------   
+
+             [italic]Место для печатей[/italic]
+
+#-------------------------------------знамя-------------------------------
 - type: entity
   id: CDCBannerStd
   parent: BannerBase
@@ -563,7 +563,7 @@
   components:
   - type: Sprite
     sprite: Victoria/CDC/cdc_banner.rsi
-    state: banner_cdc 
+    state: banner_cdc
 #-------------------------------------Коран-------------------------------
 - type: entity
   name: Коран
@@ -634,10 +634,10 @@
     contents:
       - id: Ointment
       - id: Bloodpack
-      - id: Gauze 
+      - id: Gauze
       - id: CDCSaber
       - id: CDCHelmetSld
-#-----------------------офицера---------------------------------------      
+#-----------------------офицера---------------------------------------
 - type: entity
   id: CDCBeltOffiFilled
   parent: CDCBeltOffi
@@ -654,7 +654,7 @@
       - id: CDCPaperForm
       - id: CDCPaperForm
       - id: CDCHelmetOffi
-#-----------------------техника---------------------------------------     
+#-----------------------техника---------------------------------------
 - type: entity
   id: CDCBeltTechFilled
   parent: CDCBeltTech
@@ -670,9 +670,9 @@
       - id: Screwdriver
       - id: Wirecutter
       - id: Welder
-      - id: Multitool 
+      - id: Multitool
       - id: CDCHelmetSld
-#-----------------------оператора---------------------------------------     
+#-----------------------оператора---------------------------------------
 - type: entity
   id: CDCBeltOperatorFilled
   parent: CDCBeltTech
@@ -693,7 +693,7 @@
       - id: CDCMagazinePistolStd
       - id: CDCMagazinePistolStd
 #-------------------------------------ближнее-------------------------------------------------------------------------------
-#------------------------------------сабля малая---------- 
+#------------------------------------сабля малая----------
 - type: Tag
   id: CDCSaber
 
@@ -723,7 +723,7 @@
     damage:
       types:
         Slash: 12
-#------------------------------------сабля тяжёлая---------- 
+#------------------------------------сабля тяжёлая----------
 - type: Tag
   id: CDCSaberHigh
 
@@ -772,12 +772,12 @@
         coefficients:
           Blunt: 0.75
           Slash: 0.75
-          Piercing: 0.75 
+          Piercing: 0.75
       activeBlockModifier:
         coefficients:
           Blunt: 0.55
           Slash: 0.55
-          Piercing: 0.55 
+          Piercing: 0.55
         flatReductions:
           Blunt: 1
           Slash: 1
@@ -791,7 +791,7 @@
       state: metal-icon
 #--------------------------------------------------------------------------дальнее-------------------------------------------------
 #--------------------------------------------заряды-----------------------
-#------------------------------------пистолет-автомат---------- 
+#------------------------------------пистолет-автомат----------
 #-------------------------плазма----------------
 - type: entity
   id: CDCBulletPlasmaStd
@@ -846,7 +846,7 @@
     sprite: Victoria/CDC/Weapon/cdc_projectiles.rsi
     layers:
       - state: plasma_light
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 #-------------------------плазма----------------
 - type: entity
   id: CDCBulletPlasmaRif
@@ -873,7 +873,7 @@
     damage:
       types:
         Blunt: 5
-        Heat: 50
+        Heat: 60
         Shock: 10
 #-------------------------слабая плазма----------------
 - type: entity
@@ -889,7 +889,7 @@
         Blunt: 3
         Heat: 20
         Shock: 5
-#------------------------------------дефокусировщик---------- 
+#------------------------------------дефокусировщик----------
 #-------------------------плазма----------------
 - type: entity
   id: CDCPlasmaDefoc
@@ -911,10 +911,10 @@
     temperature: 5000
     ignited: true
   - type: IgniteOnCollide
-    fireStacks: 0.25 
+    fireStacks: 0.25
   - type: TimedDespawn
     lifetime: 4
-    
+
 - type: entity
   id: CDCPlasmaDefocSpread
   categories: [ HideSpawnMenu ]
@@ -945,10 +945,10 @@
     temperature: 7000
     ignited: true
   - type: IgniteOnCollide
-    fireStacks: 0.25 
+    fireStacks: 0.25
   - type: TimedDespawn
     lifetime: 4
-    
+
 - type: entity
   id: CDCPlasmaHotDefocSpread
   categories: [ HideSpawnMenu ]
@@ -957,8 +957,8 @@
   - type: ProjectileSpread
     proto: CDCPlasmaHotDefoc
     count: 4
-    spread: 20  
-#-------------------------горячая плазма----------------
+    spread: 20
+#-------------------------холодная плазма----------------
 - type: entity
   id: CDCPlasmaLigDefoc
   name: Дефокусированный слабоплазменный заряд (lpd)
@@ -979,10 +979,10 @@
     temperature: 7000
     ignited: true
   - type: IgniteOnCollide
-    fireStacks: 0.25 
+    fireStacks: 0.25
   - type: TimedDespawn
     lifetime: 4
-    
+
 - type: entity
   id: CDCPlasmaLigDefocSpread
   categories: [ HideSpawnMenu ]
@@ -993,7 +993,7 @@
     count: 4
     spread: 20
 #-------------------------------------картриджи---------------------------------------------------------------------------------
-#------------------------------пистолет-автомат---------- 
+#------------------------------пистолет-автомат----------
 #--------------------------плазма---------------
 - type: Tag
   id: CDCCartridgePlasmaStd
@@ -1057,7 +1057,7 @@
     layers:
     - state: base_light
       map: ["enum.AmmoVisualLayers.Base"]
-#------------------------------винтовка---------- 
+#------------------------------винтовка----------
 #--------------------------плазма---------------
 - type: Tag
   id: CDCCartridgePlasmaRif
@@ -1133,7 +1133,7 @@
   - type: PhysicalComposition
     materialComposition:
       CDCCartridgePlasmaLigRif: 1
-#------------------------------расфокусировщик---------- 
+#------------------------------расфокусировщик----------
 #--------------------------плазма---------------
 - type: Tag
   id: CDCCartridgePlasmaDefoc
@@ -1200,9 +1200,9 @@
 #-------------------------------------------------------магазины------------------------------------------------
 - type: Tag
   id: CDCMagazine
-#-----------------------------------пистолет--------- 
+#-----------------------------------пистолет---------
 - type: Tag
-  id: CDCMagazinePistol 
+  id: CDCMagazinePistol
 #-------------------------плазма---------
 - type: entity
   id: CDCMagazinePistolStd
@@ -1256,7 +1256,7 @@
     layers:
     - state: light_pist
       map: ["enum.GunVisualLayers.Base"]
-#-----------------------------------автомат--------- 
+#-----------------------------------автомат---------
 - type: Tag
   id: CDCMagazineAutomat
 #-------------------------плазма---------
@@ -1305,7 +1305,7 @@
     layers:
     - state: light_auto
       map: ["enum.GunVisualLayers.Base"]
-#-----------------------------------винтовочный--------- 
+#-----------------------------------винтовочный---------
 - type: Tag
   id: CDCMagazineRifle
 #-------------------------плазма---------
@@ -1366,10 +1366,10 @@
     layers:
     - state: light_rifle
       map: ["enum.GunVisualLayers.Base"]
-#-----------------------------------дефокусировщик--------- 
+#-----------------------------------дефокусировщик---------
 - type: Tag
   id: CDCMagazineDefoc
-#-------------------------плазма---------   
+#-------------------------плазма---------
 - type: entity
   id: CDCMagazineDefocStd
   name: Магазин плазменного дефокусировщика "Ифрит" (spd)
@@ -1392,8 +1392,8 @@
       map: ["enum.GunVisualLayers.Base"]
   - type: Tag
     tags:
-      - CDCMagazineDefoc 
-      - CDCMagazine 
+      - CDCMagazineDefoc
+      - CDCMagazine
 #-------------------------горячая плазма---------
 - type: entity
   id: CDCMagazineDefocHot
@@ -1427,7 +1427,7 @@
 #-------------------------------------стволы---------------------------------------------------------------------------------
 #-----------------------пистолет-----------------------
 - type: entity
-  name: Плазменный пистолет "Гул" 
+  name: Плазменный пистолет "Гул"
   suffix: Конгломерат
   parent: BaseWeaponPistol
   id: CDCPistol
@@ -1517,7 +1517,7 @@
         whitelist:
           tags:
             - CDCMagazineAutomat
-            - CDCMagazinePistol 
+            - CDCMagazinePistol
       gun_chamber:
         name: Chamber
         startingItem: CDCCartridgePlasmaStd
@@ -1599,7 +1599,7 @@
   - type: StaticPrice
     price: 2000
   - type: Construction
-    graph: CDCRifleSniper 
+    graph: CDCRifleSniper
     node: CDCRifle
 #-----------------------пожарный лазер-----------------------
 - type: entity
@@ -1706,7 +1706,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-    
+
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaHotRif
@@ -1724,7 +1724,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-    
+
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaLigRif
@@ -1760,7 +1760,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-    
+
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaHotStd
@@ -1778,7 +1778,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-    
+
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaLigStd
@@ -1796,7 +1796,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------дефокусировщик----------------      
+#------------------------------дефокусировщик----------------
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaDefoc
@@ -1814,7 +1814,7 @@
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-    
+
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaHotDefoc
@@ -1832,7 +1832,7 @@
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-    
+
 - type: entity
   parent: BaseCDCBox
   id: CDCBoxCartridgePlasmaLigDefoc
@@ -1850,13 +1850,13 @@
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------------------карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+#------------------------------------------карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: CDCAccess
   name: access-cdc
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsCDCAccess
@@ -1875,7 +1875,7 @@
       board: [ DoorElectronicsCDCAccess ]
   - type: Sprite
     sprite: Victoria/CDC/cdc_airlock.rsi
-#------------------------------------свободный шлюз---------- 
+#------------------------------------свободный шлюз----------
 - type: entity
   parent: Airlock
   id: CDCAirlock
@@ -1883,7 +1883,7 @@
   components:
   - type: Sprite
     sprite: Victoria/CDC/cdc_airlock.rsi
-#------------------------------------закрытый стеклянный шлюз---------- 
+#------------------------------------закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: CDCAirlockLockedGlass
@@ -1895,7 +1895,7 @@
   - type: Sprite
     sprite: Victoria/CDC/cdc_airlock_glass.rsi
   - type: PaintableAirlock
-    group: Glass     
+    group: Glass
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -1905,8 +1905,8 @@
   - type: Sprite
     sprite: Victoria/CDC/cdc_airlock_glass.rsi
   - type: PaintableAirlock
-    group: Glass  
-#------------------------------------стыковочный----------     
+    group: Glass
+#------------------------------------стыковочный----------
 - type: entity
   parent: AirlockExternalShuttleLocked
   name: Стыковочный шлюз
@@ -1917,9 +1917,9 @@
   - type: PryUnpowered
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCDCAccess ]   
-#------------------------------------------ карты----------------------------------------  
-#------------------------------------стандарт карты---------- 
+      board: [ DoorElectronicsCDCAccess ]
+#------------------------------------------ карты----------------------------------------
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: CDCIDCard
@@ -1949,7 +1949,7 @@
     - WhitelistChameleon
   - type: StealTarget
     stealGroup: IDCard
-#------------------------------------карта офицера---------- 
+#------------------------------------карта офицера----------
 - type: entity
   parent: CDCIDCard
   id: CDCIDCardOfficer
@@ -1962,7 +1962,7 @@
     - state: offi
   - type: PresetIdCard
     name: офицер Конгломерата
-#------------------------------------карта солдата----------    
+#------------------------------------карта солдата----------
 - type: entity
   parent: CDCIDCard
   id: CDCIDCardSolder
@@ -1979,7 +1979,7 @@
     - External
   - type: PresetIdCard
     name: солдат Конгломерата
-#------------------------------------карта инженера----------     
+#------------------------------------карта инженера----------
 - type: entity
   parent: CDCIDCard
   id: CDCIDCardEngener
@@ -2038,7 +2038,7 @@
   - type: Icon
     sprite: Victoria/CDC/Equipment/cdc_pda.rsi
     state: pda
-#------------------------------------КПК офицера----------       
+#------------------------------------КПК офицера----------
 - type: entity
   parent: CDCPDA
   id: CDCPDAOfficer
@@ -2053,7 +2053,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------КПК имама----------       
+#------------------------------------КПК имама----------
 - type: entity
   parent: CDCPDAOfficer
   id: CDCPDAImam
@@ -2066,24 +2066,24 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: CDCRadio
   name: name-of-CDCRadio
-  keycode: 'бк' 
+  keycode: 'бк'
   frequency: 1204
   color: "#b68448"
   longRange: false
-  
+
 - type: radioChannel
   id: CDCRadioVI
   name: name-of-CDCRadioVI
-  keycode: 'ис' 
+  keycode: 'ис'
   frequency: 0412
   color: "#b68448"
   longRange: false
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -2101,7 +2101,7 @@
     sprite: Victoria/CDC/Equipment/cdc_encryption_keys.rsi
   - type: StealTarget
     stealGroup: EncryptionKey
-#-----------------------------ключ----------------------------------------      
+#-----------------------------ключ----------------------------------------
 - type: entity
   parent: CDCBaseEncryptionKey
   id: CDCEncryptionKey
@@ -2116,8 +2116,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label 
-    
+    - state: label
+
 - type: entity
   parent: CDCBaseEncryptionKey
   id: CDCEncryptionKeyVI
@@ -2132,8 +2132,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label 
-#-----------------------------гарнитура----------------------------------------  
+    - state: label
+#-----------------------------гарнитура----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: CDCHeadset
@@ -2148,8 +2148,8 @@
     sprite: Victoria/CDC/Equipment/cdc_garniture.rsi
   - type: Clothing
     sprite: Victoria/CDC/Equipment/cdc_garniture.rsi
-#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------  
-#--------------------------------------------сумки------------------------------------ 
+#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------
+#--------------------------------------------сумки------------------------------------
 - type: entity
   parent: CDCSatchels
   id: CDCSatchelsFilled
@@ -2299,7 +2299,7 @@
         reagents:
         - ReagentId: Water
           Quantity: 50
-#-----------------------------------------------------роли------------------------------------------------------      
+#-----------------------------------------------------роли------------------------------------------------------
 - type: playTimeTracker
   id: JobEventCDC
 #---------------------------------------------------------------Бумаги------------------------------------------------------------
@@ -2315,10 +2315,10 @@
   - type: Paper
     content: |
       Вы: Честный, смелый, верный, солдат Халифатского Божественного Конгломерата. Вы верные своей стране, своему Халифу и своей вере в Аллаха!
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, оружейные механизмы, разделка туш
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Ваша страна на отшибе. Ваши отцы и деды построили райский уголок для тех, кто искренне верит в Аллаха. Но вы зажаты между ксеноморфами, миртанийцами и мафией. Будьте верны своей стране, молитесь Аллаху, самосовершенствуйтесь, будьте вежливым, не пейте алкоголь, уточняйте, что за мясо вам дают.
 #-----------------------------------офицер-----------------------------
@@ -2333,10 +2333,10 @@
   - type: Paper
     content: |
       Вы: Вы уверенный в себе, смелый и отважный офицер Халифатского Божественного Конгломерата. Вы видели много ужасов воин и смертей. Не дайте своим людям раньше срока встретить Аллаха.
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, оружейные механизмы, разделка туш, управление шаттлом, продвинутое лечение
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Ваша страна на отшибе. Ваши отцы и деды построили райский уголок для тех, кто искренне верит в Аллаха. Но вы зажаты между ксеноморфами, миртанийцами и мафией. Будьте верны своей стране, молитесь Аллаху, самосовершенствуйтесь, будьте вежливым, не пейте алкоголь, уточняйте, что за мясо вам дают.#-----------------------------------техник-----------------------------
 #-----------------------------------техник-----------------------------
@@ -2351,10 +2351,10 @@
   - type: Paper
     content: |
       Вы: Умелый, образованный и находчивый армейский техник Халифатского Божественного Конгломерата. Вам нужно укреплять оборону, готовить атаку, следить за вооружением и снаряжением.
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, оружейные механизмы, разделка туш, управление шаттлом, энергетические установки, электрика, оборудование, газовая техника, постройка электронных приборов
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Ваша страна на отшибе. Ваши отцы и деды построили райский уголок для тех, кто искренне верит в Аллаха. Но вы зажаты между ксеноморфами, миртанийцами и мафией. Будьте верны своей стране, молитесь Аллаху, самосовершенствуйтесь, будьте вежливым, не пейте алкоголь, уточняйте, что за мясо вам дают.#-----------------------------------оператор-----------------------------
 #-----------------------------------оператор-----------------------------
@@ -2369,10 +2369,10 @@
   - type: Paper
     content: |
       Вы: Сила армии Халифатского Божественного Конгломерата. Оператор МСУ. Вы командир армии боргов или ботов. Повелитель Роя.
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, оружейные механизмы, разделка туш, управление шаттлом, электрика, постройка электронных приборов
-      
+
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Ваша страна на отшибе. Ваши отцы и деды построили райский уголок для тех, кто искренне верит в Аллаха. Но вы зажаты между ксеноморфами, миртанийцами и мафией. Будьте верны своей стране, молитесь Аллаху, самосовершенствуйтесь, будьте вежливым, не пейте алкоголь, уточняйте, что за мясо вам дают.
 #-----------------------------------проповедник-----------------------------
@@ -2387,13 +2387,13 @@
   - type: Paper
     content: |
       Вы: Добрый, миролюбивый и мудрый проповедник Халифатского Божественного Конгломерата. Несите слова Аллаха, призывайте людей к улучшению самих себя и мира вокруг. Соберите последователей и преведите к ЕГО свету.
-      
+
       ------------------------------------------------------------------------
       Ваши навыки: Базовые навыки, владение оружием, готовка, разделка туш, работа с животными
-      
+
       ------------------------------------------------------------------------
-      Руководство к отыгрышу: Ваша страна на отшибе. Ваши отцы и деды построили райский уголок для тех, кто искренне верит в Аллаха. Но вы зажаты между ксеноморфами, миртанийцами и мафией. Будьте верны своей стране, молитесь Аллаху, самосовершенствуйтесь, будьте вежливым, не пейте алкоголь, уточняйте, что за мясо вам дают.     
-#--------------------------------------------------------------------гиры----------------------------------------------- 
+      Руководство к отыгрышу: Ваша страна на отшибе. Ваши отцы и деды построили райский уголок для тех, кто искренне верит в Аллаха. Но вы зажаты между ксеноморфами, миртанийцами и мафией. Будьте верны своей стране, молитесь Аллаху, самосовершенствуйтесь, будьте вежливым, не пейте алкоголь, уточняйте, что за мясо вам дают.
+#--------------------------------------------------------------------гиры-----------------------------------------------
 #--------------------------------------------имам---------------------------------
 - type: startingGear
   id: CDCImamGear
@@ -2419,7 +2419,7 @@
     belt: CDCBeltSoldFilled
     gloves: CDCGloves
     pocket1: CDCPaperSold
-    
+
 - type: startingGear
   id: CDCSoldGearRifle
   equipment:
@@ -2448,7 +2448,7 @@
     gloves: CDCGlovesTech
     pocket1: CDCPaperTech
     pocket2: CDCEncryptionKey
-#---------------------------------------------оператор--------------------------------------    
+#---------------------------------------------оператор--------------------------------------
 - type: startingGear
   id: CDCOperatorGear
   equipment:
@@ -2528,7 +2528,7 @@
   - Эфенди
 #---------------------------------солдат----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: CDCSoldR
@@ -2565,7 +2565,7 @@
       critThreshold: 110
     - type: Loadout
       prototypes: [ CDCSoldGearAuto ]
-  
+
 - type: entity
   name: Конгломерат солдат Спавнер
   id: CDCMobHumanSold
@@ -2587,7 +2587,7 @@
     settings: CDCSoldR
 #---------------------------------техник----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: CDCTechR
@@ -2624,7 +2624,7 @@
       critThreshold: 100
     - type: Loadout
       prototypes: [ CDCTechGear ]
-      
+
 - type: entity
   name: Техник Конгломерата Спавнер
   id: CDCMobHumanTech
@@ -2646,7 +2646,7 @@
     settings: CDCTechR
 #---------------------------------офицер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: CDCOffiR
@@ -2683,7 +2683,7 @@
       critThreshold: 120
     - type: Loadout
       prototypes: [ CDCOffiGear ]
-  
+
 - type: entity
   name: Младший офицер Конгломерата Спавнер
   id: CDCMobHumanOffi
@@ -2705,7 +2705,7 @@
     settings: CDCOffiR
 #---------------------------------оператор----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: CDCOperatorR
@@ -2742,7 +2742,7 @@
       critThreshold: 100
     - type: Loadout
       prototypes: [ CDCOperatorGear ]
-      
+
 - type: entity
   name: Оператор Конгломерата Спавнер
   id: CDCMobHumanOperator
@@ -2764,7 +2764,7 @@
     settings: CDCOperatorR
 #---------------------------------имам----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: CDCImamR
@@ -2803,7 +2803,7 @@
       critThreshold: 90
     - type: Loadout
       prototypes: [ CDCImamGear ]
-  
+
 - type: entity
   name: Проповедник Конгломерата
   id: CDCMobHumanImam
@@ -2823,8 +2823,8 @@
     - CDCName
   - type: RandomHumanoidSpawner
     settings: CDCImamR
-#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------        
-#-----------------------------Базовый ящик------------------ 
+#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------
+#-----------------------------Базовый ящик------------------
 - type: entity
   parent: CrateBaseSecure
   id: CDCCrate
@@ -2837,7 +2837,7 @@
     sprite: Victoria/CDC/cdc_crates.rsi
   - type: Sprite
     sprite: Victoria/CDC/cdc_crates.rsi
-#-----------------------------Ящик лёгкого оружия------------------    
+#-----------------------------Ящик лёгкого оружия------------------
 - type: entity
   id: CDCCrateWeaponsL
   parent: CDCCrate
@@ -3027,11 +3027,11 @@
       - id: NitrogenTankFilled
       - id: NitrogenTankFilled
       - id: NitrogenTankFilled
-#---------------------------------------------------------------Синтетики------------------------------------------------------------  
+#---------------------------------------------------------------Синтетики------------------------------------------------------------
 #---------------------------------------------Модули боргов------------------------
 - type: Tag
   id: BorgModuleCDC
-#------------------------------------Пистолет------------------------      
+#------------------------------------Пистолет------------------------
 - type: entity
   name: Плазменный пистолет "Гул"
   parent: BaseItem
@@ -3087,7 +3087,7 @@
     - type: Tag
       tags:
       - BorgModuleCDC
-#------------------------------------Сабля------------------------      
+#------------------------------------Сабля------------------------
 - type: entity
   id: BorgModuleCDCSaber
   parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule, BaseSyndicateContraband ]
@@ -3125,7 +3125,7 @@
   - "Болтун"
   - "Каратель"
   - "Благодетель"
-#-----------------------------------Законы----------------- 
+#-----------------------------------Законы-----------------
 - type: siliconLaw
   id: CDC1
   order: 1
@@ -3140,12 +3140,12 @@
   id: CDC3
   order: 3
   lawString: law-cdc-3
-  
+
 - type: siliconLaw
   id: CDC4
   order: 4
   lawString: law-cdc-4
-  
+
 - type: siliconLaw
   id: CDC5
   order: 5
@@ -3160,7 +3160,7 @@
   - CDC4
   - CDC5
   obeysTo: laws-owner-cdc
-#-----------------------------------Сам борг----------------- 
+#-----------------------------------Сам борг-----------------
 - type: entity
   id: BaseCDCBorg
   parent: BaseBorgChassis
@@ -3191,7 +3191,7 @@
       - BorgModuleGeneric
       - BorgModuleCDC
     - type: StationAiVision
-     
+
 - type: entity
   id: CDCBorg
   name: Борг Конгломерата "Завет"
@@ -3266,12 +3266,12 @@
   id: CDC_AI3
   order: 3
   lawString: law-cdc-vi-3
-  
+
 - type: siliconLaw
   id: CDC_AI4
   order: 4
   lawString: law-cdc-vi-4
-  
+
 - type: siliconLaw
   id: CDC_AI5
   order: 5
@@ -3304,7 +3304,7 @@
   requirements:
   - !type:RoleTimeRequirement
     role: JobBorg
-    time: 0  
+    time: 0
   canBeAntag: false
   icon: JobIconStationAi
   supervisors: job-supervisors-rd
@@ -3349,7 +3349,7 @@
     tags:
     - StationAi
     - NoConsoleSound
-#--------------------------------------------------МСУ-------------------------------------- 
+#--------------------------------------------------МСУ--------------------------------------
 - type: entity
   id: CDCMSU
   parent: [Clothing, ContentsExplosionResistanceBase, ClothingHeadset]
@@ -3361,7 +3361,7 @@
     size: Huge
   - type: Clothing
     quickEquip: false
-    slots: 
+    slots:
     - Back
     - Head
     sprite: Victoria/CDC/Sintetic/cdc_msu.rsi
@@ -3389,7 +3389,7 @@
   - type: ApcPowerReceiver
     needsPower: false
   - type: LightningTarget
-    priority: 1 
+    priority: 1
   - type: ContainerFill
     containers:
       key_slots:
@@ -3475,7 +3475,7 @@
   - type: SiliconLawProvider
     laws: CDC_AIStatic
   - type: SiliconLawBound
-#-------------------------------------Спавнер потеряных-----------------------------------  
+#-------------------------------------Спавнер потеряных-----------------------------------
 - type: entity
   name: Странствующий проповедник
   id: LostImamSpawner
@@ -3490,7 +3490,7 @@
       prototypes:
       - RandomImam
       chance: 1
-      
+
 - type: entity
   id: RandomImam
   name: Странствующий проповедник
@@ -3513,7 +3513,7 @@
         settings: short
     - type: Loadout
       prototypes: [ CDCImamGear]
-#----------------------------------------------------------------Событие шаттл------------------------------------------     
+#----------------------------------------------------------------Событие шаттл------------------------------------------
 - type: preloadedGrid
   id: ShuttleImamLost
   path: /Maps/Shuttles/ShuttleEvent/cdc_shuttle_imam_lost.yml
@@ -3545,7 +3545,7 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.9
@@ -3598,7 +3598,7 @@
           types:
             Asphyxiation: 5
             Heat: 30
-            
+
 - type: reaction
   id: CDCPlasmaStdFire
   reactants:
@@ -3628,7 +3628,7 @@
           types:
             Asphyxiation: 5
             Heat: 60
-            
+
 - type: reaction
   id: CDCPlasmaStdHot
   reactants:
@@ -3658,7 +3658,7 @@
           types:
             Asphyxiation: 5
             Heat: 15
-            
+
 - type: reaction
   id: CDCPlasmaStdCold
   reactants:
@@ -3774,7 +3774,7 @@
         - ReagentId: FluorosulfuricAcid
           Quantity: 150
         - ReagentId: FoamingAgent
-          Quantity: 150  
+          Quantity: 150
 #--------------------------------метатель---------------------------------
 - type: entity
   name: Плазменный метатель "Салах-ад-Дин"
@@ -3861,7 +3861,7 @@
       temperature: 1000
       ignited: true
     - type: IgniteOnCollide
-      fireStacks: 0.25 
+      fireStacks: 0.25
 
 - type: entity
   id: CDCPlasmaFireHot
@@ -3874,7 +3874,7 @@
         Heat: 75
   - type: TimedDespawn
     lifetime: 15
-      
+
 - type: entity
   id: CDCPlasmaFireCold
   parent: CDCPlasmaFireStd
@@ -3886,7 +3886,7 @@
         Heat: 25
   - type: TimedDespawn
     lifetime: 25
-    
+
 - type: entity
   suffix: Алюминий
   parent: Beaker
@@ -3943,7 +3943,7 @@
     temperature: 1000
     ignited: true
   - type: IgniteOnCollide
-    fireStacks: 0.25 
+    fireStacks: 0.25
 #--------------------------------картридж---------------------------------
 - type: Tag
   id: CDCCartridgePlasmaFireMini
@@ -3967,7 +3967,7 @@
       map: ["enum.AmmoVisualLayers.Base"]
 #--------------------------------магазин-канистра---------------------------------
 - type: Tag
-  id: CDCMagazineFireMini 
+  id: CDCMagazineFireMini
 
 - type: entity
   id: CDCMagazineFireMini

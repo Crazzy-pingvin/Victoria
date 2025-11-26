@@ -257,6 +257,9 @@
     delay: 0
     zoom: 2.2
     offset: 14
+  - type: GunWieldBonus
+    minAngle: 0
+    maxAngle: 0
   - type: Construction
     graph: UmporRifleSniper
     node: UmporRifleSniper
