@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Sprite created by Askolot",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "poster_mirt"
+    },
+	{
+      "name": "poster_mirt_old"
+    },
+	{
+      "name": "poster_mirt_ervin"
+    },
+	{
+      "name": "poster_mirt_sold"
+    },
+	{
+      "name": "poster_mirt_347"
+    }
+  ]
+}

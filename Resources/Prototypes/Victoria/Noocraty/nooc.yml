@@ -568,7 +568,7 @@
   id: NoocRedLaserRifleSnipe
   damage:
     types:
-      Heat: 60
+      Heat: 130
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy
