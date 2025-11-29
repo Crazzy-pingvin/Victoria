@@ -871,7 +871,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      150: Dead
+      130: Dead
   - type: BasicEntityAmmoProvider
     proto: BulletAcidDef
     capacity: 3
