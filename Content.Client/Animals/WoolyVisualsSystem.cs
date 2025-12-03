@@ -6,6 +6,7 @@ namespace Content.Client.Animals;
 
 public sealed class WoolyStateVisualizerSystem : VisualizerSystem<WoolyVisualsComponent>
 {
+    [Dependency] private readonly SpriteSystem _sprite = default!;
     protected override void OnAppearanceChange(EntityUid uid, WoolyVisualsComponent component, ref AppearanceChangeEvent args)
     {
         var sprite = args.Sprite;
@@ -13,7 +14,9 @@ public sealed class WoolyStateVisualizerSystem : VisualizerSystem<WoolyVisualsCo
         if (sprite == null)
             return;
 
-        if (!sprite.LayerMapTryGet(WoolyVisualLayers.Base, out var layer))
+        //        if (!sprite.LayerMapTryGet(WoolyVisualLayers.Base, out var layer))
+        //            return;
+        if (!_sprite.LayerMapTryGet((uid, sprite), WoolyVisualLayers.Base, out var layer, false))
             return;
 
         var state = component.SpritePrefix;
@@ -28,7 +31,9 @@ public sealed class WoolyStateVisualizerSystem : VisualizerSystem<WoolyVisualsCo
             state += "-" + mobState.ToString().ToLower();
         }
 
-        sprite.LayerSetState(layer, state);
-        sprite.LayerSetVisible(layer, true);
+        //sprite.LayerSetState(layer, state);
+        _sprite.LayerSetRsiState((uid, args.Sprite), layer, state);
+        //sprite.LayerSetVisible(layer, true);
+        _sprite.LayerSetVisible((uid, args.Sprite), layer, true);
     }
 }

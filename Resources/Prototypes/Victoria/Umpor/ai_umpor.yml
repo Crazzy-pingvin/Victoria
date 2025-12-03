@@ -134,7 +134,7 @@
         - !type:HTNPrimitiveTask
           operator: !type:SpeakOperator
             speech: Патроны на нуле!
-#---------------------------------------Вкалывать медицину-------------------------            
+#---------------------------------------Вкалывать медицину-------------------------
 - type: htnCompound
   id: UmporInjectNearbyCompound
   branches:
@@ -170,7 +170,7 @@
   id: SpeakingMobUmporBot
   values:
     prefix: advertisement-bot-umpor-
-    count: 34  
+    count: 34
 #--------------------------------------Сочетание правил ВИ-----------------------------------------
 #-----------------С ходить-бродить----------
 #------обыч-----------
@@ -203,7 +203,7 @@
         - !type:HTNCompoundTask
           task: IdleCompoundBot
 #-----------------Без ходить-бродить----------
-#------обыч-----------          
+#------обыч-----------
 - type: htnCompound
   id: BotUmporStop
   branches:
@@ -213,7 +213,7 @@
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompoundBotUmpor
-#------медик--------          
+#------медик--------
 - type: htnCompound
   id: BotUmporMedStop
   branches:
@@ -228,25 +228,26 @@
           task: MeleeCombatCompoundBotUmpor
 #---------------------------------------Сами боты----------------------------------------
 #-------------------------------Солдат----------------------
-#-------------Без оружия бегающий---------------  
+#-------------Без оружия бегающий---------------
 - type: entity
   name: Солдат Умпорец
   suffix: Бот, Умпорский, безОруж, бег
   parent: BaseMobHuman
   id: MobUmpor
   components:
-  - type: Advertise
-    minimumWait: 40
-    maximumWait: 100
-    prewarm: false
-    pack: SpeakingMobUmporBot
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobUmporBot
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -255,6 +256,7 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - UmporBot
@@ -268,20 +270,16 @@
       task: BotUmpor
   - type: NPCRetaliation
     attackMemoryLength: 100
-#-------------Без оружия ждущий---------------  
+#-------------Без оружия ждущий---------------
 - type: entity
   suffix: Бот, Умпорский, безОруж, стоп
   parent: MobUmpor
   id: MobUmporStop
   components:
-  - type: Advertise
-    pack: SpeakingMobUmporBot
-    minimumWait: 40
-    maximumWait: 100
   - type: HTN
     rootTask:
       task: BotUmporStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, бег
   parent: MobUmpor
@@ -303,16 +301,12 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, стоп
   parent: MobUmporWeapon
   id: MobUmporWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobUmporBot
-    minimumWait: 40
-    maximumWait: 100
   - type: HTN
     rootTask:
       task: BotUmporStop
@@ -327,7 +321,7 @@
   - type: Loadout
     prototypes:
       - UmporEngenerGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Инженер Умпорец
   suffix: Бот, Умпорский, безОруж, стоп
@@ -337,7 +331,7 @@
   - type: Loadout
     prototypes:
       - UmporEngenerGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, бег
   parent: MobUmporEng
@@ -359,16 +353,12 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, стоп
   parent: MobUmporEngWeapon
   id: MobUmporEngWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobUmporBot
-    minimumWait: 40
-    maximumWait: 100
   - type: HTN
     rootTask:
       task: BotUmporStop
@@ -396,7 +386,7 @@
   - type: HTN
     rootTask:
       task: BotUmporMed
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Медик Умпорец
   suffix: Бот, Умпорский, безОруж, стоп
@@ -419,7 +409,7 @@
   - type: HTN
     rootTask:
       task: BotUmporMedStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, бег
   parent: MobUmporMed
@@ -441,16 +431,12 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, стоп
   parent: MobUmporMedWeapon
   id: MobUmporMedWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobUmporBot
-    minimumWait: 40
-    maximumWait: 100
   - type: HTN
     rootTask:
       task: BotUmporStop
@@ -465,7 +451,7 @@
   - type: Loadout
     prototypes:
       - UmporLogistGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Логист Умпорец
   suffix: Бот, Умпорский, безОруж, стоп
@@ -475,7 +461,7 @@
   - type: Loadout
     prototypes:
       - UmporLogistGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, бег
   parent: MobUmporLog
@@ -497,16 +483,12 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, стоп
   parent: MobUmporLogWeapon
   id: MobUmporLogWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobUmporBot
-    minimumWait: 40
-    maximumWait: 100
   - type: HTN
     rootTask:
       task: BotUmporStop
@@ -522,10 +504,11 @@
     nameSegments:
     - UmporName-o
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - UmporOfficerGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Офицер Умпорец
   suffix: Бот, Умпорский, безОруж, стоп
@@ -536,10 +519,11 @@
     nameSegments:
     - UmporName-o
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - UmporOfficerGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, бег
   parent: MobUmporOfi
@@ -561,20 +545,16 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Умпорский, Оруж, стоп
   parent: MobUmporOfiWeapon
   id: MobUmporOfiWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobUmporBot
-    minimumWait: 40
-    maximumWait: 100
   - type: HTN
     rootTask:
       task: BotUmporStop
-#---------------------------------------Спавнеры ботов-------------------      
+#---------------------------------------Спавнеры ботов-------------------
 #-------------------------------Солдат----------------------
 #-------------Без оружия бегающий---------------
 - type: entity
@@ -591,7 +571,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmpor
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobUmpor
   id: SpawnMobUmporStop
@@ -600,7 +580,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobUmpor
   id: SpawnMobUmporWeapon
@@ -609,7 +589,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobUmpor
   id: SpawnMobUmporWeaponStop
@@ -634,7 +614,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporEng
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobUmporEng
   id: SpawnMobUmporEngStop
@@ -643,7 +623,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporEngStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobUmporEng
   id: SpawnMobUmporEngWeapon
@@ -652,7 +632,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporEngWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobUmporEng
   id: SpawnMobUmporEngWeaponStop
@@ -677,7 +657,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporMed
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobUmporMed
   id: SpawnMobUmporMedStop
@@ -686,7 +666,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporMedStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobUmporMed
   id: SpawnMobUmporMedWeapon
@@ -695,7 +675,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporMedWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobUmporMed
   id: SpawnMobUmporMedWeaponStop
@@ -720,7 +700,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporLog
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobUmporLog
   id: SpawnMobUmporLogStop
@@ -729,7 +709,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporLogStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobUmporLog
   id: SpawnMobUmporLogWeapon
@@ -738,7 +718,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporLogWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobUmporLog
   id: SpawnMobUmporLogWeaponStop
@@ -763,7 +743,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporOfi
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobUmporOfi
   id: SpawnMobUmporOfiStop
@@ -772,7 +752,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporOfiStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobUmporOfi
   id: SpawnMobUmporOfiWeapon
@@ -781,7 +761,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobUmporOfiWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobUmporOfi
   id: SpawnMobUmporOfiWeaponStop

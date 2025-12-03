@@ -81,7 +81,7 @@
   suffix: Один
   components:
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: LinumMaterial
@@ -165,7 +165,7 @@
   - type: Sprite
     state: cloth
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: CottonClothMaterial
@@ -239,7 +239,7 @@
   - type: Sprite
     state: leather
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: SmoothSkinMaterial
@@ -321,7 +321,7 @@
   - type: Sprite
     state: cloth
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: CottonPaperClothMaterial
@@ -469,7 +469,7 @@
   - type: Sprite
     state: cloth
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: ElastaneClothMaterial
@@ -525,12 +525,8 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
+    staticPacks:
+      - PackCloth
   - type: MaterialStorage
     whitelist:
       tags:
@@ -613,7 +609,7 @@
   name: ягнёнок
   parent: SimpleMobBase
   id: MobSheepChild
-  description: Чоп-чоп-чопает себе по жизни и горя не знает. Если не лень, можешь подождать пока подойдёт к тебе, и убить его. 
+  description: Чоп-чоп-чопает себе по жизни и горя не знает. Если не лень, можешь подождать пока подойдёт к тебе, и убить его.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -686,7 +682,7 @@
   name: козлёнок
   parent: SimpleMobBase
   id: MobGoatChild
-  description: Он съел твою куртку, зачётку и мысль о прекрасном. Теперь у него несварение. 
+  description: Он съел твою куртку, зачётку и мысль о прекрасном. Теперь у него несварение.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -825,7 +821,7 @@
   - type: Sprite
     state: wool
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: SheepWoolCleanMaterial
@@ -896,7 +892,7 @@
   - type: Sprite
     state: leather
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: KidskinMaterial
@@ -963,7 +959,7 @@
   - type: Sprite
     state: cloth
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: NubuckMaterial
@@ -1038,7 +1034,7 @@
   - type: Sprite
     state: cloth
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: VelourMaterial
@@ -1113,7 +1109,7 @@
   - type: Sprite
     state: leather
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: СheprakMaterial
@@ -1180,7 +1176,7 @@
   - type: Sprite
     state: leather
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: ChamoisMaterial
@@ -1257,7 +1253,7 @@
   - type: Sprite
     state: wool
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: GoatWoolCleanMaterial
@@ -1324,7 +1320,7 @@
   - type: Sprite
     state: leather
   - type: Stack
-    count: 1  
+    count: 1
 #----------------------------------Материал----------------------------------
 - type: material
   id: AnilineMaterial
@@ -1416,3 +1412,12 @@
   materials:
     СheprakMaterial: 200
   result: ClothingBackpackSatchel
+#-------------------------Пак
+- type: latheRecipePack
+  id: PackCloth
+  recipes:
+      - RecipeLinumCloth
+      - RecipeCottonCloth
+      - RecipeCottonPaperCloth
+      - RecipeNubuck
+      - RecipeVelour

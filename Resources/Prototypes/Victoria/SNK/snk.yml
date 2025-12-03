@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------Солдат-стандарт---------- 
+#------------------------------------Солдат-стандарт----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformSoldStd
@@ -11,7 +11,7 @@
     sprite: Victoria/SNK/Equipment/snk_uniform_std.rsi
   - type: Clothing
     sprite: Victoria/SNK/Equipment/snk_uniform_std.rsi
-#------------------------------------Солдат-лес---------- 
+#------------------------------------Солдат-лес----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformSoldLes
@@ -23,7 +23,7 @@
     sprite: Victoria/SNK/Equipment/snk_uniform_les.rsi
   - type: Clothing
     sprite: Victoria/SNK/Equipment/snk_uniform_les.rsi
-#------------------------------------Солдат-песок---------- 
+#------------------------------------Солдат-песок----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformSoldPes
@@ -39,7 +39,7 @@
     modifiers:
       coefficients:
         Heat: 0.9
-#------------------------------------Солдат-зима---------- 
+#------------------------------------Солдат-зима----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformSoldZim
@@ -55,7 +55,7 @@
     modifiers:
       coefficients:
         Cold: 0.9
-#------------------------------------Солдат-лава---------- 
+#------------------------------------Солдат-лава----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformSoldLav
@@ -71,7 +71,7 @@
     modifiers:
       coefficients:
         Heat: 0.9
-#------------------------------------Офицер-стандарт---------- 
+#------------------------------------Офицер-стандарт----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformOffiStd
@@ -83,7 +83,7 @@
     sprite: Victoria/SNK/Equipment/snk_uniform_std_offi.rsi
   - type: Clothing
     sprite: Victoria/SNK/Equipment/snk_uniform_std_offi.rsi
-#------------------------------------Офицер-зима---------- 
+#------------------------------------Офицер-зима----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformOffiZim
@@ -99,7 +99,7 @@
     modifiers:
       coefficients:
         Cold: 0.8
-#------------------------------------Офицер-лава---------- 
+#------------------------------------Офицер-лава----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: SNKUniformOffiLav
@@ -116,7 +116,7 @@
       coefficients:
         Heat: 0.85
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
-#------------------------------------сумка----------- 
+#------------------------------------сумка-----------
 - type: entity
   parent: ClothingBackpack
   id: SNKSatchels
@@ -126,7 +126,7 @@
   components:
   - type: Sprite
     sprite: Victoria/SNK/Equipment/snk_satchels.rsi
-#------------------------------------рюкзак---------- 
+#------------------------------------рюкзак----------
 #--------------стандартный---------
 - type: entity
   parent: [Clothing, ContentsExplosionResistanceBase, BaseItem]
@@ -198,7 +198,7 @@
   components:
   - type: Sprite
     sprite: Victoria/SNK/Equipment/snk_back_zim.rsi
-#-------------------------рюкзак-радиостанция-------------------------    
+#-------------------------рюкзак-радиостанция-------------------------
 - type: entity
   parent: ClothingBackpack
   id: SNKRadioBackpack
@@ -224,8 +224,8 @@
   - type: ApcPowerReceiver
     needsPower: false
   - type: LightningTarget
-    priority: 1 
-#--------------------------------------------сапоги------------------------------------- 
+    priority: 1
+#--------------------------------------------сапоги-------------------------------------
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: SNKBoots
@@ -237,7 +237,7 @@
     sprite: Victoria/SNK/Equipment/snk_boots.rsi
   - type: Clothing
     sprite: Victoria/SNK/Equipment/snk_boots.rsi
-#------------------------------------солдатские шапки---------- 
+#------------------------------------солдатские шапки----------
 #-------------------стандартная-----------
 - type: entity
   parent: ClothingHeadBase
@@ -301,8 +301,8 @@
   - type: Tag
     tags:
     - ClothMade
-    - WhitelistChameleon  
-#------------------------------------офицерские кепки---------- 
+    - WhitelistChameleon
+#------------------------------------офицерские кепки----------
 #-------------------стандартная-----------
 - type: entity
   parent: ClothingHeadBase
@@ -366,9 +366,9 @@
   - type: Tag
     tags:
     - ClothMade
-    - WhitelistChameleon  
-#--------------------------------------------------плащи-------------------------------------- 
-#------------------------------------лесной---------- 
+    - WhitelistChameleon
+#--------------------------------------------------плащи--------------------------------------
+#------------------------------------лесной----------
 - type: entity
   parent: ClothingNeckBase
   id: SNKCloakLes
@@ -378,7 +378,7 @@
   components:
   - type: Sprite
     sprite: Victoria/SNK/Equipment/snk_cloak_les.rsi
-#------------------------------------песочный---------- 
+#------------------------------------песочный----------
 - type: entity
   parent: ClothingNeckBase
   id: SNKCloakPes
@@ -391,8 +391,8 @@
   - type: Armor
     modifiers:
       coefficients:
-        Heat: 0.95  
-#------------------------------------зимний---------- 
+        Heat: 0.95
+#------------------------------------зимний----------
 - type: entity
   parent: ClothingNeckBase
   id: SNKCloakZim
@@ -406,8 +406,8 @@
     modifiers:
       coefficients:
         Cold: 0.95
-#--------------------------------------------------шлема-------------------------------------- 
-#------------------------------------стандартный---------- 
+#--------------------------------------------------шлема--------------------------------------
+#------------------------------------стандартный----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: SNKHelmetStd
@@ -425,8 +425,8 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.75
-        Heat: 0.8        
-#------------------------------------лавовый---------- 
+        Heat: 0.8
+#------------------------------------лавовый----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: SNKHelmetLav
@@ -444,8 +444,8 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.85
-        Heat: 0.6    
-#------------------------------------лесной---------- 
+        Heat: 0.6
+#------------------------------------лесной----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: SNKHelmetLes
@@ -463,8 +463,8 @@
         Blunt: 0.8
         Slash: 0.75
         Piercing: 0.9
-        Heat: 0.8    
-#------------------------------------песочный---------- 
+        Heat: 0.8
+#------------------------------------песочный----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: SNKHelmetPes
@@ -482,8 +482,8 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.8
-        Heat: 0.7    
-#------------------------------------зимний---------- 
+        Heat: 0.7
+#------------------------------------зимний----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: SNKHelmetZim
@@ -503,7 +503,7 @@
         Piercing: 0.8
         Heat: 0.7
         Cold: 0.7
-#-------------------------------------------------броня----------------------------   
+#-------------------------------------------------броня----------------------------
 #--------------------------------лёгкая-------------------------
 #----------------стандартная-----------------
 - type: entity
@@ -517,12 +517,12 @@
     sprite: Victoria/SNK/Armor/snk_armor_light_std.rsi
   - type: Clothing
     sprite: Victoria/SNK/Armor/snk_armor_light_std.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.7
         Slash: 0.7
-        Piercing: 0.7 
+        Piercing: 0.7
         Heat: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.80
@@ -538,12 +538,12 @@
     sprite: Victoria/SNK/Armor/snk_armor_light_lav.rsi
   - type: Clothing
     sprite: Victoria/SNK/Armor/snk_armor_light_lav.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.7
         Slash: 0.7
-        Piercing: 0.7 
+        Piercing: 0.7
         Heat: 0.5
   - type: ExplosionResistance
     damageCoefficient: 0.70
@@ -559,12 +559,12 @@
     sprite: Victoria/SNK/Armor/snk_armor_light_les.rsi
   - type: Clothing
     sprite: Victoria/SNK/Armor/snk_armor_light_les.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.7
         Slash: 0.6
-        Piercing: 0.7 
+        Piercing: 0.7
         Heat: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.80
@@ -580,12 +580,12 @@
     sprite: Victoria/SNK/Armor/snk_armor_light_pes.rsi
   - type: Clothing
     sprite: Victoria/SNK/Armor/snk_armor_light_pes.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.7
         Slash: 0.7
-        Piercing: 0.7 
+        Piercing: 0.7
         Heat: 0.6
   - type: ExplosionResistance
     damageCoefficient: 0.80
@@ -601,12 +601,12 @@
     sprite: Victoria/SNK/Armor/snk_armor_light_zim.rsi
   - type: Clothing
     sprite: Victoria/SNK/Armor/snk_armor_light_zim.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.7
         Slash: 0.7
-        Piercing: 0.7 
+        Piercing: 0.7
         Heat: 0.6
         Cold: 0.6
   - type: ExplosionResistance
@@ -717,7 +717,7 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.90
     sprintModifier: 0.90
-#------------------------------------скафандр----------      
+#------------------------------------скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: SNKHardsuit
@@ -746,9 +746,9 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: SNKHelmetHardsuit
-#------------------------------------шлем скафандра----------  
+#------------------------------------шлем скафандра----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: SNKHelmetHardsuit
   name: Шлем боевого скафандра СНК
   suffix: СНК
@@ -779,7 +779,7 @@
     damageCoefficient: 0.75
   - type: ShowJobIcons
 #---------------------------------------------------пояс и снаряжение---------------------------------------
-#-------------------------------------печать-----------------    
+#-------------------------------------печать-----------------
 - type: entity
   name: Печать СНКцев
   suffix: СНК
@@ -810,18 +810,18 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
-      От: 
+
+      От:
       Кому: 5й Штаб операции
-      Запрос: 
+      Запрос:
       Срочность: (Крайня, Сильная, Средняя, Малая, Незначительная)
-      
+
       Полное содержание документа со всей необходимой информацией и описанием
-      
+
       =============================================
-      
+
                                   [italic]Место для печатей[/italic]
-#-------------------------------------пояс стрелка--------------------------------------- 
+#-------------------------------------пояс стрелка---------------------------------------
 - type: entity
   parent: ClothingBeltStorageBase
   id: SNKBeltSold
@@ -913,7 +913,7 @@
       - id: Gauze
       - id: Bloodpack
       - id: Gauze
-      
+
 - type: entity
   id: SNKBeltEngFilled
   parent: SNKBeltEnge
@@ -927,10 +927,10 @@
       - id: Screwdriver
       - id: Wirecutter
       - id: Welder
-      - id: Multitool       
+      - id: Multitool
 #-------------------------------------------------оружие------------------------------------------------------
 #-------------------------------------------пули----------------------------------------------
-#---------------------------------пистолет------------- 
+#---------------------------------пистолет-------------
 #---------------обычные---------------------
 - type: entity
   id: SNKBulletPistolStd
@@ -956,7 +956,7 @@
       types:
         Piercing: 5
         Poison: 11
-#---------------------------------винтовка------------- 
+#---------------------------------винтовка-------------
 #---------------обычные---------------------
 - type: entity
   id: SNKBulletRifleStd
@@ -995,7 +995,7 @@
       types:
         Piercing: 5
         Radiation: 13
-#---------------------------------тяжёлая винтовка------------- 
+#---------------------------------тяжёлая винтовка-------------
 #---------------обычные---------------------
 - type: entity
   id: SNKBulletHighRifleStd
@@ -1008,7 +1008,7 @@
     damage:
       types:
         Piercing: 33
-#---------------------------------дробовик------------- 
+#---------------------------------дробовик-------------
 #---------------обычные---------------------
 - type: entity
   id: SNKBulletDrobStd
@@ -1021,7 +1021,7 @@
     damage:
       types:
         Piercing: 8
-    
+
 - type: entity
   id: SNKBulletDrobStdSpread
   categories: [ HideSpawnMenu ]
@@ -1044,7 +1044,7 @@
       types:
         Piercing: 7
         Blunt: 6
-    
+
 - type: entity
   id: SNKBulletDrobPulSpread
   categories: [ HideSpawnMenu ]
@@ -1067,7 +1067,7 @@
       types:
         Piercing: 3
         Heat: 10
-      
+
 - type: entity
   id: SNKBulletDrobHeaSpread
   categories: [ HideSpawnMenu ]
@@ -1078,7 +1078,7 @@
     count: 4
     spread: 11
 #-------------------------------------------лучи----------------------------------------------
-#---------------------------------лазер карабин------------- 
+#---------------------------------лазер карабин-------------
 - type: hitscan
   id: SNKRedLaserRifle
   damage:
@@ -1125,7 +1125,7 @@
     sprite: Victoria/SNK/Weapon/snk_projectiles.rsi
     layers:
       - state: lazer
-    
+
 - type: entity
   id: SNKRedLaserDrobSpread
   categories: [ HideSpawnMenu ]
@@ -1156,9 +1156,9 @@
     layers:
       - state: electro
   - type: StaminaDamageOnCollide
-    damage: 15  
+    damage: 15
 #-----------------------------------------------------картриджи-----------------------------
-#---------------------------------пистолет------------- 
+#---------------------------------пистолет-------------
 #---------------обычные---------------------
 - type: Tag
   id: SNKCartridgePistolStd
@@ -1189,7 +1189,7 @@
   - type: Tag
     tags:
       - SNKCartridgePistolPoi
-#---------------------------------винтовка------------- 
+#---------------------------------винтовка-------------
 #---------------обычные---------------------
 - type: Tag
   id: SNKCartridgeRifleStd
@@ -1235,7 +1235,7 @@
   - type: Tag
     tags:
       - SNKCartridgeRifleUrn
-#---------------------------------тяжёлая винтовка------------- 
+#---------------------------------тяжёлая винтовка-------------
 #---------------обычные---------------------
 - type: Tag
   id: SNKCartridgeHighRifleStd
@@ -1251,7 +1251,7 @@
   - type: Tag
     tags:
       - SNKCartridgeHighRifleStd
-#---------------------------------дробовик------------- 
+#---------------------------------дробовик-------------
 #---------------обычные---------------------
 - type: Tag
   id: SNKCartridgeDrobStd
@@ -1322,7 +1322,7 @@
   - type: Tag
     tags:
       - SNKCartridgeElectro
-#---------------лазерная дробь---------------------      
+#---------------лазерная дробь---------------------
 - type: Tag
   id: SNKCartridgeDrobLazer
 
@@ -1348,9 +1348,9 @@
 #-----------------обычые--------------
 - type: Tag
   id: SNKMagazine
-  
+
 - type: Tag
-  id: SNKMagazinePistolPistStd 
+  id: SNKMagazinePistolPistStd
 
 - type: entity
   id: SNKMagazinePistolPistStd
@@ -1650,10 +1650,10 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
- 
+
 - type: Tag
   id: SNKMagazineLightRifleStd
- 
+
 - type: entity
   id: SNKMagazineLightRifleStd
   name: Магазин к автомату СНК "Пингвин" (.34)
@@ -1743,7 +1743,7 @@
 
 - type: Tag
   id: SNKMagazineHighAutoRifle
-  
+
 - type: entity
   id: SNKMagazineHighAutoRifle
   name: Магазин к автомату СНК "Хрост" (.55)
@@ -1762,7 +1762,7 @@
       - SNKMagazine
 #--------------------винтовка-тяж.винтовочные-------------------------------------
 #----------обычные----------------------
-- type: entity  
+- type: entity
   id: SNKBaseMagazineHighRifle
   name: Магазин к винтовке СНК "Нитро" (.55)
   suffix: СНК
@@ -1793,7 +1793,7 @@
 
 - type: Tag
   id: SNKMagazineHighRifle
-  
+
 - type: entity
   id: SNKMagazineHighRifle
   name: Магазин к винтовке СНК "Нитро" (.55)
@@ -1843,7 +1843,7 @@
 
 - type: Tag
   id: SNKMagazineHighLMG
-  
+
 - type: entity
   id: SNKMagazineHighLMG
   name: Магазин к пулемёту СНК "Худвинг" (.55)
@@ -1895,7 +1895,7 @@
 
 - type: Tag
   id: SNKMagazineDrobLMGStd
-  
+
 - type: entity
   id: SNKMagazineDrobLMGStd
   name: Магазин к пулемёту СНК "Друба" (.45)
@@ -1975,10 +1975,10 @@
   - type: Gun
     fireRate: 3.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg 
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
   - type: ChamberMagazineAmmoProvider
     soundRack:
-      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg      
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -2034,10 +2034,10 @@
   - type: Gun
     fireRate: 2.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg 
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
   - type: ChamberMagazineAmmoProvider
     soundRack:
-      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg      
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -2398,7 +2398,7 @@
   - type: StaticPrice
     price: 500
   - type: Construction
-    graph: SNKHeavyRifleSniper 
+    graph: SNKHeavyRifleSniper
     node: SNKHeavyRifle
 #--------------------------------пулемёт-тяжёлый-----------------------------------
 - type: Tag
@@ -2422,7 +2422,7 @@
     magState: mag
     steps: 4
     zeroVisible: true
-  - type: Appearance   
+  - type: Appearance
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -2440,7 +2440,7 @@
         priority: 1
         whitelist:
           tags:
-            - SNKCartridgeRifleStd  
+            - SNKCartridgeRifleStd
   - type: Tag
     tags:
       - SNKHighLMG
@@ -2463,7 +2463,7 @@
     - state: mag-3
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
-    fireRate: 3      
+    fireRate: 3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
     soundEmpty:
@@ -2472,7 +2472,7 @@
     magState: mag
     steps: 4
     zeroVisible: true
-  - type: Appearance   
+  - type: Appearance
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -2494,7 +2494,7 @@
           tags:
             - SNKCartridgeDrobStd
             - SNKCartridgeDrobBul
-            - SNKCartridgeDrobHea            
+            - SNKCartridgeDrobHea
   - type: Tag
     tags:
       - SNKDrobLMG
@@ -2600,7 +2600,7 @@
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxPistolStd
-  name: Коробка стандартных пистолетных патронов .24 
+  name: Коробка стандартных пистолетных патронов .24
   suffix: СНК, стандартные
   description: Стандартная коробка на 40 стандартных патронов к пистолетам СНК .24
   components:
@@ -2613,12 +2613,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false    
-#----------------ядовитые--------- 
+    zeroVisible: false
+#----------------ядовитые---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxPistolPoi
-  name: Коробка отравленных пистолетных патронов .24 
+  name: Коробка отравленных пистолетных патронов .24
   suffix: СНК, ядовитые
   description: Стандартная коробка на 40 отравленных патронов к пистолетам СНК .24
   components:
@@ -2631,13 +2631,13 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false   
+    zeroVisible: false
 #-------------------------------винтовка-лёгк-------------------
 #----------------стандартные---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxRifleStd
-  name: Коробка стандартных лёгких патронов .34 
+  name: Коробка стандартных лёгких патронов .34
   suffix: СНК, стандартные
   description: Стандартная коробка на 60 стандартных лёгких патронов к автоматам СНК .34
   components:
@@ -2650,12 +2650,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false   
+    zeroVisible: false
 #----------------зажигательные---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxRifleHea
-  name: Коробка зажигательных лёгких патронов .34 
+  name: Коробка зажигательных лёгких патронов .34
   suffix: СНК, зажигательные
   description: Стандартная коробка на 60 зажигательных лёгких патронов к автоматам СНК .34
   components:
@@ -2668,12 +2668,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false   
+    zeroVisible: false
 #----------------урановые---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxRifleUrn
-  name: Коробка урановых лёгких патронов .34 
+  name: Коробка урановых лёгких патронов .34
   suffix: СНК, урановые
   description: Стандартная коробка на 60 урановых лёгких патронов к автоматам СНК .34
   components:
@@ -2686,13 +2686,13 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false   
+    zeroVisible: false
 #-------------------------------винтовка-тяжёлая-------------------
 #----------------маленькая---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxHighRifleStd
-  name: Малая коробка тяжёлых патронов .55 
+  name: Малая коробка тяжёлых патронов .55
   suffix: СНК, маленькая
   description: Небольшая коробка на 30 тяжёлых патронов к оружию СНК .55
   components:
@@ -2705,12 +2705,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false 
+    zeroVisible: false
 #----------------большая-----------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxHighRifleBig
-  name: Большая коробка тяжёлых патронов .55 
+  name: Большая коробка тяжёлых патронов .55
   suffix: СНК, большая
   description: Крупная коробка на 150 тяжёлых патронов к оружию СНК .55
   components:
@@ -2723,13 +2723,13 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false 
+    zeroVisible: false
 #-------------------------------дробовик-------------------
 #----------------стандартные---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxHighDrobStd
-  name: Коробка ружейных зарядов дроби .45 
+  name: Коробка ружейных зарядов дроби .45
   suffix: СНК, дробь
   description: Коробка на 50 ружейных зарядов дроби к оружию СНК .45
   components:
@@ -2742,12 +2742,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false  
+    zeroVisible: false
 #----------------зажигательные---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxHighDrobHea
-  name: Коробка ружейных зажигательных зарядов .45 
+  name: Коробка ружейных зажигательных зарядов .45
   suffix: СНК, зажигательные
   description: Коробка на 50 ружейных зажигательных зарядов к оружию СНК .45
   components:
@@ -2760,12 +2760,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false  
+    zeroVisible: false
 #----------------пули---------
 - type: entity
   parent: BaseSNKBox
   id: SNKBoxHighDrobBul
-  name: Коробка ружейных зарядов пуль .45 
+  name: Коробка ружейных зарядов пуль .45
   suffix: СНК, пули
   description: Коробка на 50 ружейных зарядов пуль к оружию СНК .45
   components:
@@ -2778,7 +2778,7 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false  
+    zeroVisible: false
 #-------------------------------энергетическое-------------------
 #-----------------электро---------------
 - type: entity
@@ -2797,7 +2797,7 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-3
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false  
+    zeroVisible: false
 #-----------------лазер-дробь---------------
 #----------------пули---------
 - type: entity
@@ -2816,14 +2816,14 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-3
       map: ["enum.GunVisualLayers.Mag"]
-    zeroVisible: false 
-#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+    zeroVisible: false
+#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: SNKAccess
   name: accessl-snk
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsSNKAccess
@@ -2844,7 +2844,7 @@
       board: [ DoorElectronicsSNKAccess ]
   - type: Sprite
     sprite: Victoria/SNK/snk_airlock.rsi
-#------------------------------------свободный шлюз---------- 
+#------------------------------------свободный шлюз----------
 - type: entity
   parent: Airlock
   id: SNKAirlockSolder
@@ -2854,7 +2854,7 @@
   components:
   - type: Sprite
     sprite: Victoria/SNK/snk_airlock.rsi
-#------------------------------------закрытый стеклянный шлюз---------- 
+#------------------------------------закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: SNKAirlockSolderLockedGlass
@@ -2867,8 +2867,8 @@
       board: [ DoorElectronicsSNKAccess ]
   - type: Sprite
     sprite: Victoria/SNK/snk_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -2879,9 +2879,9 @@
   components:
   - type: Sprite
     sprite: Victoria/SNK/snk_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass  
-#------------------------------------стыковочный---------- 
+  - type: Paintable
+    group: null
+#------------------------------------стыковочный----------
 - type: entity
   parent: AirlockExternalShuttleLocked
   name: Стыковочный шлюз
@@ -2892,8 +2892,8 @@
   - type: PryUnpowered
   - type: AccessReader
     access: [["SNKAccess"]]
-#------------------------------------------КПК, карты----------------------------------------  
-#------------------------------------стандарт карты---------- 
+#------------------------------------------КПК, карты----------------------------------------
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: SNKIDCard
@@ -2920,8 +2920,8 @@
     - DoorBumpOpener
     - WhitelistChameleon
   - type: StealTarget
-    stealGroup: IDCard    
-#------------------------------------карта рядового---------- 
+    stealGroup: IDCard
+#------------------------------------карта рядового----------
 - type: entity
   parent: SNKIDCard
   id: SNKIDCardSold
@@ -2938,7 +2938,7 @@
     - External
   - type: PresetIdCard
     name: стрелок СНК
-#------------------------------------карта командира----------    
+#------------------------------------карта командира----------
 - type: entity
   parent: SNKIDCard
   id: SNKIDCardOffi
@@ -2955,7 +2955,7 @@
     - External
   - type: PresetIdCard
     name: командир СНК
-#------------------------------------карта медика---------- 
+#------------------------------------карта медика----------
 - type: entity
   parent: SNKIDCard
   id: SNKIDCardMed
@@ -2972,7 +2972,7 @@
     - External
   - type: PresetIdCard
     name: медик СНК
-#------------------------------------карта инженера----------    
+#------------------------------------карта инженера----------
 - type: entity
   parent: SNKIDCard
   id: SNKIDCardEng
@@ -2989,7 +2989,7 @@
     - External
   - type: PresetIdCard
     name: техник СНК
-#------------------------------------стандарт КПК---------- 
+#------------------------------------стандарт КПК----------
 - type: entity
   abstract: true
   parent: BasePDA
@@ -3016,7 +3016,7 @@
   - type: PdaBorderColor
     borderColor: "#5b71be"
     accentHColor: "##478851"
-#------------------------------------КПК солдата----------    
+#------------------------------------КПК солдата----------
 - type: entity
   parent: SNKPDA
   id: SNKPDASold
@@ -3033,7 +3033,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda_s
-#------------------------------------КПК командир----------       
+#------------------------------------КПК командир----------
 - type: entity
   parent: SNKPDA
   id: SNKPDAOffi
@@ -3079,7 +3079,7 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda_m
-#------------------------------------КПК инженера----------       
+#------------------------------------КПК инженера----------
 - type: entity
   parent: SNKPDA
   id: SNKPDAEng
@@ -3106,17 +3106,17 @@
        enum.PdaVisuals.PdaType:
          !type:String
          pda_e
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: SNKRadio
   name: name-of-SNKRadio
-  keycode: 'нк' 
+  keycode: 'нк'
   frequency: 1527
   color: "#123ec1"
   longRange: false
 #-------------------------------------------------------------------ключи---------------------------------------------------------------------
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -3133,8 +3133,8 @@
   - type: Sprite
     sprite: Victoria/SNK/Equipment/snk_encryption_keys.rsi
   - type: StealTarget
-    stealGroup: EncryptionKey   
-#-----------------------------ключ шифрования----------------------------------------      
+    stealGroup: EncryptionKey
+#-----------------------------ключ шифрования----------------------------------------
 - type: entity
   parent: SNKBaseEncryptionKey
   id: SNKEncryptionKey
@@ -3150,7 +3150,7 @@
     layers:
     - state: crypt_gray
     - state: label
-#-----------------------------гарнитура----------------------------------------  
+#-----------------------------гарнитура----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: SNKHeadset
@@ -3165,11 +3165,11 @@
     sprite: Victoria/SNK/Equipment/snk_garniture.rsi
   - type: Clothing
     sprite: Victoria/SNK/Equipment/snk_garniture.rsi
-#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------  
-#--------------------------------------------роли------------------------------------ 
+#-----------------------------------------------------роли, полные сумки и гиры------------------------------------------------------
+#--------------------------------------------роли------------------------------------
 - type: playTimeTracker
   id: JobEventSNK
-#--------------------------------------------сумки------------------------------------ 
+#--------------------------------------------сумки------------------------------------
 #------------------------------------пистолет-пистолет-------
 - type: entity
   parent: SNKSatchels
@@ -3365,7 +3365,7 @@
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Подчиняйтесь своему командиру. Не стреляйте по мирным жителям. Всегда будьте готовы атаковать своего врага, но до последнего старайтесь не доводить до боя. Помните главный принцип вашей войны: "Живи и дай жить другим"
       ------------------------------------------------------------------------
-      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело. 
+      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.
 #-----------------------------------офицер-----------------------------
 - type: entity
   id: SNKPaperOffi
@@ -3383,7 +3383,7 @@
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Вы воевали за свободу для всех, а потому не стреляйте по мирным жителям, и не приказывайте солдатам стрелять по ним без крайней необходимости. Командуйте своими подчинёнными, стройте их и наводите порядок. Будьте умны, строги, добрый. Станьте лицом своей достойной страны!
       ------------------------------------------------------------------------
-      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело. 
+      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.
 #-----------------------------------медик-----------------------------
 - type: entity
   id: SNKPaperMed
@@ -3401,7 +3401,7 @@
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Вы можете объявить себя пацифистом. В вопросах здоровья и лечения вы можете руководить даже офицером. Никогда не атакуйте мирных жителей. Спасайте своих товарищей. Именно вы отделяете их от смерти.
       ------------------------------------------------------------------------
-      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело. 
+      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.
 #-----------------------------------инженер-----------------------------
 - type: entity
   id: SNKPaperEng
@@ -3419,7 +3419,7 @@
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Подчиняйтесь своему командиру. Находите необычные пути решения проблем. Предлагайте идеи. Шутите и хохмите. Станьте тем о ком потом скажут: "Служил я с одним сукиным сыном! Вот это был лучший парень на земле!"
       ------------------------------------------------------------------------
-      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.      
+      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.
 #-----------------------------------радист-----------------------------
 - type: entity
   id: SNKPaperRad
@@ -3437,10 +3437,10 @@
       ------------------------------------------------------------------------
       Руководство к отыгрышу: Подчиняйтесь своему командиру. Обеспечивайте связь. Активно используйте электрику и электронику. Не спускайте глаз со своей радиостанции. Всегда знайте где факс и имейте при себе пачку бумаги для отправки запросов.
       ------------------------------------------------------------------------
-      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.      
+      Краткий лор организации: СНК уже три века как подняло восстание и отделилось от ОПЗ, но ОПЗ не может это так оставить. Идут регулярные бои с применением самого разного оружия. Солдаты обеих армий гибнут ни за что. Все устали. Вы маленький винтик в этой беспощадной войне, но любовь к вашей свободе, к вашим гражданам, к вашей стране не даёт солдатам бросить это дело.
 
 #-----------------------------------------------гиры---------------------------------------
-#------------------------------------солдат---------- 
+#------------------------------------солдат----------
 - type: startingGear
   id: SNKSoldGear
   equipment:
@@ -3453,7 +3453,7 @@
     ears: SNKHeadset
     belt: SNKBeltSoldFilled
     pocket1: SNKPaperSold
-#------------------------------------офицер---------- 
+#------------------------------------офицер----------
 - type: startingGear
   id: SNKOffiGear
   equipment:
@@ -3466,7 +3466,7 @@
     ears: SNKHeadset
     belt: SNKBeltOffiFilled
     pocket1: SNKPaperOffi
-#------------------------------------медик---------- 
+#------------------------------------медик----------
 - type: startingGear
   id: SNKMediGear
   equipment:
@@ -3479,7 +3479,7 @@
     ears: SNKHeadset
     belt: SNKBeltMedicFilled
     pocket1: SNKPaperMed
-#------------------------------------инженер---------- 
+#------------------------------------инженер----------
 - type: startingGear
   id: SNKEngeGear
   equipment:
@@ -3492,7 +3492,7 @@
     ears: SNKHeadset
     belt: SNKBeltEngFilled
     pocket1: SNKPaperEng
-#------------------------------------радист---------- 
+#------------------------------------радист----------
 - type: startingGear
   id: SNKRadioGear
   equipment:
@@ -3508,52 +3508,27 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------Бойцы----------
-- type: dataset
+- type: localizedDataset
   id: SNKName-sol
   values:
-  - Новобранец
-  - Рядовой
-  - Капрал
-  - Старшина
+    prefix: snk-name-sol-
+    count: 4
 #---------------------------------Командир----------
-- type: dataset
+- type: localizedDataset
   id: SNKName-ofi
   values:
-  - Сержант
-  - Ст.Сержант
-  - Мл.Лейтенант
+    prefix: snk-name-off-
+    count: 3
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: SNKNameTwo
   values:
-  - Свободин
-  - Востунов
-  - Бунтарски
-  - Бойченко
-  - Отделянов
-  - Крылов
-  - Мечин
-  - Никин
-  - Афинин
-  - Либерти
-  - Марсов
-  - Арес
-  - Риоти
-  - Винг
-  - Пилар
-  - Стек
-  - Риби
-  - Солид
-  - Хели
-  - Фрихет
-  - Вапаута
-  - Миека
-  - Сипи
-  - Соат
+    prefix: snk-name-two-
+    count: 24
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------солдат----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: SNKSolderR
@@ -3572,6 +3547,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKSolderReady
@@ -3596,7 +3572,7 @@
     - type: NpcFactionMember
       factions:
       - SNK
-  
+
 - type: entity
   name: Солдат СНК Спавнер
   id: SNKMobHumanSolder
@@ -3614,11 +3590,12 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKSolderR
 #---------------------------------офицер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: SNKOffiR
@@ -3637,6 +3614,7 @@
       nameSegments:
       - SNKName-ofi
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKOffiReady
@@ -3661,7 +3639,7 @@
     - type: NpcFactionMember
       factions:
       - SNK
-  
+
 - type: entity
   name: Офицер СНК Спавнер
   id: SNKMobHumanOffi
@@ -3679,11 +3657,12 @@
     nameSegments:
     - SNKName-ofi
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKOffiR
 #---------------------------------инженер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: SNKEngenerR
@@ -3693,7 +3672,7 @@
       factions:
       - SNK
     - type: GhostRole
-      name: Гост-роль инженера СНК 
+      name: Гост-роль инженера СНК
       description: "Вы инженер армии СНК. Ваша задача строить укрепления, ремонтировать транспорт и налаживать инфраструктуру для своих товарищей"
     - type: GhostTakeoverAvailable
     - type: Loadout
@@ -3702,6 +3681,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKEngenerReady
@@ -3726,7 +3706,7 @@
     - type: NpcFactionMember
       factions:
       - SNK
-  
+
 - type: entity
   name: СНК инженер Спавнер
   id: SNKMobHumanEngener
@@ -3744,11 +3724,12 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKEngenerR
 #---------------------------------медик----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: SNKMedicR
@@ -3767,6 +3748,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKMedicReady
@@ -3791,7 +3773,7 @@
     - type: NpcFactionMember
       factions:
       - SNK
-  
+
 - type: entity
   name: Медик СНК Спавнер
   id: SNKMobHumanMedic
@@ -3809,11 +3791,12 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKMedicR
 #---------------------------------медик----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: SNKRadistR
@@ -3823,7 +3806,7 @@
       factions:
       - SNK
     - type: GhostRole
-      name: Гост-роль радиста СНК 
+      name: Гост-роль радиста СНК
       description: "Вы радист армии СНК. Ваша задача спасать обеспечивать связью свой отряд и беречь свою рацию"
     - type: GhostTakeoverAvailable
     - type: Loadout
@@ -3832,6 +3815,7 @@
       nameSegments:
       - SNKName-sol
       - SNKNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: SNKRadistReady
@@ -3856,7 +3840,7 @@
     - type: NpcFactionMember
       factions:
       - SNK
-  
+
 - type: entity
   name: Радист СНК Спавнер
   id: SNKMobHumanRadist
@@ -3874,9 +3858,10 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: SNKRadistR
-#---------------------------------------------------------------Ящики и шкафы со снарягой------------------------------------------------------------        
+#---------------------------------------------------------------Ящики и шкафы со снарягой------------------------------------------------------------
 #------------------------------------------------------Шкафы----------------------------
 #-----------------------------шкаф солдат стандарт-----------------
 - type: entity
@@ -4191,7 +4176,7 @@
       - id: SNKArmorLightZim
       - id: SNKBeltOffi
       - id: SNKBoots
-#-----------------------------Базовый ящик------------------ 
+#-----------------------------Базовый ящик------------------
 - type: entity
   parent: CrateBaseSecure
   id: SNKCrate
@@ -4204,7 +4189,7 @@
     sprite: Victoria/SNK/snk_crates.rsi
   - type: AccessReader
     access: [["SNKAccess"]]
-#-----------------------------Ящик массового лёгкого оружия------------------ 
+#-----------------------------Ящик массового лёгкого оружия------------------
 - type: entity
   id: SNKCrateMasLigWeapons
   parent: SNKCrate
@@ -4226,7 +4211,7 @@
       - id: SNKSMGPist
       - id: SNKSMGPist
       - id: SNKSMGPist
-#-----------------------------Ящик массового строевого оружия------------------ 
+#-----------------------------Ящик массового строевого оружия------------------
 - type: entity
   id: SNKCrateMasWeapons
   parent: SNKCrate
@@ -4248,7 +4233,7 @@
       - id: SNKHeavyRifle
       - id: SNKHeavyRifle
       - id: SNKHeavyRifle
-#-----------------------------Ящик массового энергетического оружия------------------ 
+#-----------------------------Ящик массового энергетического оружия------------------
 - type: entity
   id: SNKCrateMasRayWeapons
   parent: SNKCrate
@@ -4270,7 +4255,7 @@
       - id: SNKRadioCarbine
       - id: SNKRadioCarbine
       - id: SNKRadioCarbine
-#-----------------------------Ящик редкого строевого оружия------------------ 
+#-----------------------------Ящик редкого строевого оружия------------------
 - type: entity
   id: SNKCrateNonMasWeapons
   parent: SNKCrate
@@ -4287,7 +4272,7 @@
       - id: SNKDrobLMG
       - id: SNKShotgunLazer
       - id: SNKShotgunLazer
-#-----------------------------Ящик боеприпасов------------------ 
+#-----------------------------Ящик боеприпасов------------------
 - type: entity
   id: SNKCrateAmmo
   parent: SNKCrate
@@ -4307,7 +4292,7 @@
       - id: SNKBoxHighDrobStd
       - id: SNKBoxHighDrobHea
       - id: SNKBoxHighDrobBul
-#-----------------------------Ящик брони------------------ 
+#-----------------------------Ящик брони------------------
 - type: entity
   id: SNKCrateArmor
   parent: SNKCrate

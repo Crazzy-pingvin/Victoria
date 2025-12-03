@@ -138,7 +138,7 @@ public sealed partial class SharedGarotteSystem : EntitySystem
 
         var ev = new GarotteSetEvent(args.User);
         RaiseLocalEvent(uid, ref ev);
-        _stun.TryStun(uid, comp.Duration, true);
+        _stun.TryUpdateParalyzeDuration(uid, comp.Duration);
         _stun.TryKnockdown(uid, comp.Duration, true);
         _damage.TryChangeDamage(uid, comp.Damage);
         _statusEffect.TryAddStatusEffect<MutedComponent>(uid, "Muted", comp.Duration, true);

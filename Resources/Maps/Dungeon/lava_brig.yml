@@ -28,10 +28,6 @@ entities:
     - type: MetaData
     - type: Transform
     - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
     - type: MapGrid
@@ -2687,6 +2683,7 @@ entities:
     - type: RadiationGridResistance
     - type: LoadedMap
     - type: SpreaderGrid
+    - type: GridTree
     - type: GridPathfinding
 - proto: AirlockBrigGlassLocked
   entities:

@@ -116,7 +116,7 @@
   - HeadOfSecurity
   - SecurityCadet
   - SecurityOfficer
-  - Pilot # Corvax-Pilot
+#  - Pilot # Corvax-Pilot
   - Detective
   - Warden
   - SecTeacher # Victoria-Job
@@ -153,5 +153,5 @@
   - Reporter
   - Zookeeper
   - Psychologist
-  - Pilot # Corvax-Pilot
+#  - Pilot # Corvax-Pilot
   primary: false

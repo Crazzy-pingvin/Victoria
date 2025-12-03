@@ -2,7 +2,7 @@
 #------------------------------------------------Умпорские-------------------------------------------
 #-------------------------------------Специалист-----------------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: DefHumanoidSettingsUmporSPC
@@ -31,7 +31,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
-
+      nameFormat: name-format-ert
 - type: entity
   name: Умпорский специалист Спавнер
   id: DefSpawnerUmporSPC
@@ -194,7 +194,7 @@
 #------------------------------------------------Миртанийские-------------------------------------------
 #-------------------------------------Специалист-----------------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Arachnid
     - Moth
@@ -218,6 +218,7 @@
       nameSegments:
       - MirtName-t
       - MirtNameTwo
+      nameFormat: name-format-ert
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -287,6 +288,7 @@
       nameSegments:
       - MirtName-s
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: entity
   name: Миртанский солдат Спавнер
@@ -395,7 +397,7 @@
 #------------------------------------------------Конгломератские-------------------------------------------
 #-------------------------------------Специалист-----------------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: DefHumanoidSettingsCDCSPC
@@ -414,6 +416,8 @@
       nameSegments:
       - CDCName-s
       - CDCName
+      nameFormat: name-format-ert
+
     - type: MobThresholds
       thresholds:
         0: Alive
@@ -424,7 +428,7 @@
     - type: NpcFactionMember
       factions:
         - CDC
-  
+
 - type: entity
   name: Конгломерат специалист Спавнер
   id: DefSpawnerCDCSPC
@@ -579,7 +583,7 @@
 #------------------------------------------------Советские-------------------------------------------
 #-------------------------------------Специалист-----------------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: DefHumanoidSettingsUSSPSPC
@@ -608,6 +612,7 @@
       nameSegments:
       - USSPName-ems
       - USSPName
+      nameFormat: name-format-ert
 
 - type: entity
   name: Советский специалист Спавнер
@@ -637,6 +642,7 @@
       nameSegments:
       - PetrName-vet
       - PetrNameTwo
+      nameFormat: name-format-ert
 
 - type: entity
   name: Петрищевский доп.специалист Спавнер
@@ -664,6 +670,7 @@
       nameSegments:
       - USSPName-s
       - USSPName
+      nameFormat: name-format-ert
 
 - type: entity
   name: Советский солдат Спавнер
@@ -691,6 +698,7 @@
       nameSegments:
       - PetrName-tov
       - PetrNameTwo
+      nameFormat: name-format-ert
 
 - type: entity
   name: Петрищевский доп.солдат Спавнер
@@ -764,6 +772,7 @@
       nameSegments:
       - USSPName-s
       - USSPName
+      nameFormat: name-format-ert
 
 - type: entity
   name: Советский логист Спавнер
@@ -798,7 +807,7 @@
   id: StoreRespawnsMap1Umpor
   name: "Сборщик пополнения"
   priority: 1
-  
+
 - type: entity
   id: PresetStoreRespawnsMap1Umpor
   abstract: true
@@ -812,7 +821,7 @@
     - DefChip_currency
     balance:
       DefChip_currency: 0
-      
+
 - type: listing
   id: DefRespawnsMap1Umpor60Sol
   name: Первое пополнение
@@ -827,7 +836,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 2
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor70SPC
   name: Второе пополнение
@@ -842,7 +851,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor70Log
   name: Второе пополнение
@@ -857,7 +866,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor80Eng
   name: Третье пополнение
@@ -902,7 +911,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-   
+
 - type: listing
   id: DefRespawnsMap1Umpor90Sol
   name: Четвёртое пополнение
@@ -917,7 +926,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor90SolD
   name: Четвёртое пополнение
@@ -932,7 +941,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor100SPC
   name: Пятое пополнение
@@ -947,7 +956,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor100Log
   name: Пятое пополнение
@@ -962,7 +971,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor110Sol
   name: Шестое пополнение
@@ -977,7 +986,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor110Log
   name: Шестое пополнение
@@ -992,7 +1001,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor120Eng
   name: Шестое пополнение
@@ -1007,7 +1016,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Umpor120Sol
   name: Шестое пополнение
@@ -1027,7 +1036,7 @@
   id: StoreRespawnsMap1Mirt
   name: "Сборщик пополнения"
   priority: 1
-  
+
 - type: entity
   id: PresetStoreRespawnsMap1Mirt
   abstract: true
@@ -1041,7 +1050,7 @@
     - DefChip_currency
     balance:
       DefChip_currency: 0
-      
+
 - type: listing
   id: DefRespawnsMap1Mirt60Sol
   name: Первое пополнение
@@ -1056,7 +1065,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 2
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt70SPC
   name: Второе пополнение
@@ -1071,7 +1080,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt70Log
   name: Второе пополнение
@@ -1086,7 +1095,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt80Eng
   name: Третье пополнение
@@ -1131,7 +1140,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-   
+
 - type: listing
   id: DefRespawnsMap1Mirt90Sol
   name: Четвёртое пополнение
@@ -1146,7 +1155,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt90SolD
   name: Четвёртое пополнение
@@ -1161,7 +1170,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt100SPC
   name: Пятое пополнение
@@ -1176,7 +1185,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt100Log
   name: Пятое пополнение
@@ -1191,7 +1200,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt110Sol
   name: Шестое пополнение
@@ -1206,7 +1215,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt110Log
   name: Шестое пополнение
@@ -1221,7 +1230,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt120Eng
   name: Шестое пополнение
@@ -1236,7 +1245,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1Mirt120Sol
   name: Шестое пополнение
@@ -1256,7 +1265,7 @@
   id: StoreRespawnsMap1CDC
   name: "Сборщик пополнения"
   priority: 1
-  
+
 - type: entity
   id: PresetStoreRespawnsMap1CDC
   abstract: true
@@ -1270,7 +1279,7 @@
     - DefChip_currency
     balance:
       DefChip_currency: 0
-      
+
 - type: listing
   id: DefRespawnsMap1CDC60Sol
   name: Первое пополнение
@@ -1285,7 +1294,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 2
-    
+
 - type: listing
   id: DefRespawnsMap1CDC70SPC
   name: Второе пополнение
@@ -1300,7 +1309,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC70Log
   name: Второе пополнение
@@ -1315,7 +1324,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC80Eng
   name: Третье пополнение
@@ -1360,7 +1369,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-   
+
 - type: listing
   id: DefRespawnsMap1CDC90Sol
   name: Четвёртое пополнение
@@ -1375,7 +1384,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC90SolD
   name: Четвёртое пополнение
@@ -1390,7 +1399,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC100SPC
   name: Пятое пополнение
@@ -1405,7 +1414,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC100Log
   name: Пятое пополнение
@@ -1420,7 +1429,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC110Sol
   name: Шестое пополнение
@@ -1435,7 +1444,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC110Log
   name: Шестое пополнение
@@ -1450,7 +1459,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC120Eng
   name: Шестое пополнение
@@ -1465,7 +1474,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1CDC120Sol
   name: Шестое пополнение
@@ -1485,7 +1494,7 @@
   id: StoreRespawnsMap1USSP
   name: "Сборщик пополнения"
   priority: 1
-  
+
 - type: entity
   id: PresetStoreRespawnsMap1USSP
   abstract: true
@@ -1499,7 +1508,7 @@
     - DefChip_currency
     balance:
       DefChip_currency: 0
-      
+
 - type: listing
   id: DefRespawnsMap1USSP60Sol
   name: Первое пополнение
@@ -1514,7 +1523,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 2
-    
+
 - type: listing
   id: DefRespawnsMap1USSP70SPC
   name: Второе пополнение
@@ -1529,7 +1538,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP70Log
   name: Второе пополнение
@@ -1544,7 +1553,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP80Eng
   name: Третье пополнение
@@ -1589,7 +1598,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-   
+
 - type: listing
   id: DefRespawnsMap1USSP90Sol
   name: Четвёртое пополнение
@@ -1604,7 +1613,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP90SolD
   name: Четвёртое пополнение
@@ -1619,7 +1628,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP100SPC
   name: Пятое пополнение
@@ -1634,7 +1643,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP100Log
   name: Пятое пополнение
@@ -1649,7 +1658,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP110Sol
   name: Шестое пополнение
@@ -1664,7 +1673,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP110Log
   name: Шестое пополнение
@@ -1679,7 +1688,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP120Eng
   name: Шестое пополнение
@@ -1694,7 +1703,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-    
+
 - type: listing
   id: DefRespawnsMap1USSP120Sol
   name: Шестое пополнение
@@ -1732,7 +1741,7 @@
     - type: ActivatableUI
       key: enum.StoreUiKey.Key
     - type: Store
-      balance: 
+      balance:
         DefChip_currency: 0
 #------------------------------------------------Миртанийский-------------------------------------------
 - type: entity
@@ -1754,7 +1763,7 @@
     - type: ActivatableUI
       key: enum.StoreUiKey.Key
     - type: Store
-      balance: 
+      balance:
         DefChip_currency: 0
 #------------------------------------------------Конгломератский-------------------------------------------
 - type: entity
@@ -1776,7 +1785,7 @@
     - type: ActivatableUI
       key: enum.StoreUiKey.Key
     - type: Store
-      balance: 
+      balance:
         DefChip_currency: 0
 #------------------------------------------------Советский-------------------------------------------
 - type: entity
@@ -1798,6 +1807,6 @@
     - type: ActivatableUI
       key: enum.StoreUiKey.Key
     - type: Store
-      balance: 
+      balance:
         DefChip_currency: 0
 #------------------------------------------------Корпоративный-------------------------------------------

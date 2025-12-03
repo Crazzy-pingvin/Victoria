@@ -1,0 +1,945 @@
+#----------------------------------------------Базовые Рецепты------------------------------------------
+#--------------------------------Плазкерамовые (СБ - красные)--------------------------
+#-----------------------------Маленькие------------------------------
+#---------------------Орудия---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipePlazСeramics_1
+  category: Circuitry
+  completetime: 2
+  materials:
+    PlazСeramicsCircuitBordMaterial: 500
+    PowerCircuitMaterial: 200
+    PulseCircuitMaterial: 200
+    DiscreteCircuitMaterial: 200
+#---------------------Техфабы---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipePlazСeramics_2
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    PlazСeramicsCircuitBordMaterial: 500
+    ProgrammableCircuitMaterial: 300
+    DiscreteCircuitMaterial: 200
+#-----------------------------Большая--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipePlazСeramics_3
+  category: Circuitry
+  completetime: 5
+  materials:
+    PlazСeramicsCircuitBordMaterial: 1000
+    DigitalCircuitMaterial: 800
+    PulseCircuitMaterial: 200
+#--------------------------------Кремнекерамовые (Инж - жёлтые)--------------------------
+#-----------------------------Маленькие------------------------------
+#---------------------УЧ---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiСeramics_1
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiСeramicsCircuitBordMaterial: 500
+    MicrowaveCircuitMaterial: 800
+    PowerCircuitMaterial: 800
+    DigitalCircuitMaterial: 400
+#---------------------Термо---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiСeramics_2
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiСeramicsCircuitBordMaterial: 500
+    AnalogCircuitMaterial: 400
+    PulseCircuitMaterial: 200
+#---------------------Гены---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiСeramics_3
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiСeramicsCircuitBordMaterial: 500
+    AnalogCircuitMaterial: 200
+    PulseCircuitMaterial: 400
+#---------------------Прочее---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiСeramics_4
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiСeramicsCircuitBordMaterial: 500
+    AnalogCircuitMaterial: 400
+    DigitalCircuitMaterial: 400
+#-----------------------------Большие--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiСeramics_5
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    SiСeramicsCircuitBordMaterial: 1000
+    DigitalCircuitMaterial: 800
+    PulseCircuitMaterial: 200
+#-----------------------------ТехФаб--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipesSiCeramics_6
+  parent: BaseRecipeSiСeramics_2
+  materials:
+    SiСeramicsCircuitBordMaterial: 500
+    AnalogCircuitMaterial: 300
+    PulseCircuitMaterial: 200
+#--------------------------------Стеклотекстолитовые (Общие - сервис - зелёные)--------------------------
+#-----------------------------Маленькие------------------------------
+#---------------------Шлюзы---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_1
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    DiscreteCircuitMaterial: 300
+#---------------------Энергопитание, гриль, плитка, подстанция, якорь, двигатель, гравген---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_2
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 300
+    PulseCircuitMaterial: 300
+#---------------------Законы---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_3
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    DigitalCircuitMaterial: 300
+    ProgrammableCircuitMaterial: 200
+#---------------------Принтеры, латы, маршрутизаторы, сервера, солнечный трекер---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_4
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    DigitalCircuitMaterial: 500
+#---------------------Камеры, музыкалки, экстракторы, переработчики, гироскоп, измельчители, интерком-------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_5
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PulseCircuitMaterial: 100
+    DiscreteCircuitMaterial: 100
+    AnalogCircuitMaterial: 200
+#---------------------Микроволновки--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_6
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PulseCircuitMaterial: 100
+    MicrowaveCircuitMaterial: 300
+#---------------------Прочее---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_7
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PulseCircuitMaterial: 200
+    DiscreteCircuitMaterial: 200
+    AnalogCircuitMaterial: 200
+#-----------------------------Большие--------------------------------
+#---------------------Консоли---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_8
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    FiberglassCircuitBordMaterial: 1000
+    DigitalCircuitMaterial: 800
+    PulseCircuitMaterial: 200
+#---------------------Аркады, карта и телик---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_9
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    FiberglassCircuitBordMaterial: 1000
+    DiscreteCircuitMaterial: 200
+    PulseCircuitMaterial: 100
+#---------------------Сигналка и пожарный---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeFiberglass_10
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    FiberglassCircuitBordMaterial: 1000
+    DiscreteCircuitMaterial: 500
+#--------------------------------Сапфировые (Мед - Командование - синие)--------------------------
+#-----------------------------Маленькие------------------------------
+#---------------------Исследование---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSapphire_1
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SapphireCircuitBordMaterial: 500
+    DigitalCircuitMaterial: 500
+    AnalogCircuitMaterial: 200
+#---------------------Содержание тела---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSapphire_2
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SapphireCircuitBordMaterial: 500
+    DiscreteCircuitMaterial: 300
+    AnalogCircuitMaterial: 300
+#---------------------Производство---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSapphire_3
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SapphireCircuitBordMaterial: 500
+    ProgrammableCircuitMaterial: 300
+    DiscreteCircuitMaterial: 200
+#-----------------------------Большие--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSapphire_4
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    SapphireCircuitBordMaterial: 1000
+    DigitalCircuitMaterial: 800
+    PulseCircuitMaterial: 200
+#--------------------------------Гетинаксовые (Карго - коричневые)--------------------------
+#-----------------------------Маленькие------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeGethinax_1
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    GethinaxCircuitBordMaterial: 500
+    PowerCircuitMaterial: 300
+    PulseCircuitMaterial: 300
+#-----------------------------Большие--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeGethinax_2
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    GethinaxCircuitBordMaterial: 1000
+    DigitalCircuitMaterial: 800
+    PulseCircuitMaterial: 200
+#--------------------------------Кремнеплазовые (РНД - фиолетовые)--------------------------
+#-----------------------------Маленькие------------------------------
+#---------------------Редспейс---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiPlaz_1
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiPlazCircuitBordMaterial: 500
+    AnalogCircuitMaterial: 400
+    DiscreteCircuitMaterial: 400
+#---------------------Производство---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiPlaz_2
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiPlazCircuitBordMaterial: 500
+    ProgrammableCircuitMaterial: 300
+    DiscreteCircuitMaterial: 200
+#---------------------Макак и космециевые машины---------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiPlaz_3
+  parent: BaseRecipePlazСeramics_1
+  materials:
+    SiPlazCircuitBordMaterial: 500
+    DiscreteCircuitMaterial: 200
+    PowerCircuitMaterial: 200
+    MicrowaveCircuitMaterial: 100
+#-----------------------------Большие--------------------------------
+- type: latheRecipe
+  abstract: true
+  id: BaseRecipeSiPlaz_4
+  parent: BaseRecipePlazСeramics_3
+  materials:
+    SiPlazCircuitBordMaterial: 1000
+    DigitalCircuitMaterial: 800
+    PulseCircuitMaterial: 200
+#----------------------------------------------Фактические Рецепты------------------------------------------
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_10
+  id: FirelockElectronics
+  result: FirelockElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: MailingUnitElectronics
+  result: MailingUnitElectronics
+
+## Non-circuit imprinter (no second category)
+
+# Autolathe
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: CellRechargerCircuitboard
+  result: CellRechargerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: BorgChargerCircuitboard
+  result: BorgChargerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: WeaponCapacitorRechargerCircuitboard
+  result: WeaponCapacitorRechargerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: TurboItemRechargerCircuitboard
+  result: TurboItemRechargerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: TurboBatteryRechargerCircuitboard
+  result: TurboBatteryRechargerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_1
+  id: DoorElectronics
+  result: DoorElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: FreezerElectronics
+  result: FreezerElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_10
+  id: AirAlarmElectronics
+  result: AirAlarmElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_9
+  id: StationMapElectronics
+  result: StationMapCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: IntercomElectronics
+  result: IntercomElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_10
+  id: FireAlarmElectronics
+  result: FireAlarmElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: SignalTimerElectronics
+  result: SignalTimerElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_2
+  id: CloningPodMachineCircuitboard
+  result: CloningPodMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_2
+  id: ThermomachineFreezerMachineCircuitBoard
+  result: ThermomachineFreezerMachineCircuitBoard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_2
+  id: HellfireFreezerMachineCircuitBoard
+  result: HellfireFreezerMachineCircuitBoard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_2
+  id: CondenserMachineCircuitBoard
+  result: CondenserMachineCircuitBoard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_4
+  id: PortableScrubberMachineCircuitBoard
+  result: PortableScrubberMachineCircuitBoard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_2
+  id: SpaceHeaterMachineCircuitBoard
+  result: SpaceHeaterMachineCircuitBoard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_1
+  id: MedicalScannerMachineCircuitboard
+  result: MedicalScannerMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_2
+  id: CryoPodMachineCircuitboard
+  result: CryoPodMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_3
+  id: ChemMasterMachineCircuitboard
+  result: ChemMasterMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_3
+  id: ChemDispenserMachineCircuitboard
+  result: ChemDispenserMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: BiomassReclaimerMachineCircuitboard
+  result: BiomassReclaimerMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: BiofabricatorMachineCircuitboard
+  result: BiofabricatorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: HydroponicsTrayMachineCircuitboard
+  result: HydroponicsTrayMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: AutolatheMachineCircuitboard
+  result: AutolatheMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: ProtolatheMachineCircuitboard
+  result: ProtolatheMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: AutolatheHyperConvectionMachineCircuitboard
+  result: AutolatheHyperConvectionMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: ProtolatheHyperConvectionMachineCircuitboard
+  result: ProtolatheHyperConvectionMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: CircuitImprinterMachineCircuitboard
+  result: CircuitImprinterMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: CircuitImprinterHyperConvectionMachineCircuitboard
+  result: CircuitImprinterHyperConvectionMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: ExosuitFabricatorMachineCircuitboard
+  result: ExosuitFabricatorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: UniformPrinterMachineCircuitboard
+  result: UniformPrinterMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: BiogeneratorMachineCircuitboard
+  result: BiogeneratorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_3
+  id: VaccinatorMachineCircuitboard
+  result: VaccinatorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_1
+  id: DiagnoserMachineCircuitboard
+  result: DiagnoserMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_1
+  id: ArtifactAnalyzerMachineCircuitboard
+  result: ArtifactAnalyzerMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: ArtifactCrusherMachineCircuitboard
+  result: ArtifactCrusherMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_1
+  id: AnomalyVesselCircuitboard
+  result: AnomalyVesselCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_1
+  id: AnomalyVesselExperimentalCircuitboard
+  result: AnomalyVesselExperimentalCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_1
+  id: AnomalySynchronizerCircuitboard
+  result: AnomalySynchronizerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_3
+  id: APECircuitboard
+  result: APECircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: ReagentGrinderMachineCircuitboard
+  result: ReagentGrinderMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: HotplateMachineCircuitboard
+  result: HotplateMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_4
+  id: AnalysisComputerCircuitboard
+  result: AnalysisComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_4
+  id: TechDiskComputerCircuitboard
+  result: TechDiskComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: ShuttleConsoleCircuitboard
+  result: ShuttleConsoleCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: RadarConsoleCircuitboard
+  result: RadarConsoleCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: DawInstrumentMachineCircuitboard
+  result: DawInstrumentMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_2
+  id: StasisBedMachineCircuitboard
+  result: StasisBedMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_1
+  id: ElectrolysisUnitMachineCircuitboard
+  result: ElectrolysisUnitMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_1
+  id: CentrifugeMachineCircuitboard
+  result: CentrifugeMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeGethinax_1
+  id: OreProcessorMachineCircuitboard
+  result: OreProcessorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeGethinax_1
+  id: OreProcessorIndustrialMachineCircuitboard
+  result: OreProcessorIndustrialMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeGethinax_1
+  id: SalvageMagnetMachineCircuitboard
+  result: SalvageMagnetMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: RipleyCentralElectronics
+  result: RipleyCentralElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: RipleyPeripheralsElectronics
+  result: RipleyPeripheralsElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: HonkerCentralElectronics
+  result: HonkerCentralElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: HonkerPeripheralsElectronics
+  result: HonkerPeripheralsElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: HonkerTargetingElectronics
+  result: HonkerTargetingElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: HamtrCentralElectronics
+  result: HamtrCentralElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: HamtrPeripheralsElectronics
+  result: HamtrPeripheralsElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: APCElectronics
+  result: APCElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: SubstationMachineCircuitboard
+  result: SubstationMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: WallmountSubstationElectronics
+  result: WallmountSubstationElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: SMESMachineCircuitboard
+  result: SMESMachineCircuitboard
+
+# Security techfab
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ReliableSubstationMachineCircuitboard
+  result: ReliableSubstationMachineCircuitboard
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 400
+    PulseCircuitMaterial: 400
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ReliableAPCElectronics
+  result: ReliableAPCElectronics
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 300
+    PulseCircuitMaterial: 500
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ReliableSMESMachineCircuitboard
+  result: ReliableSMESMachineCircuitboard
+  materials:
+    FiberglassCircuitBordMaterial: 500
+    PowerCircuitMaterial: 500
+    PulseCircuitMaterial: 300
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_3
+  id: PortableGeneratorPacmanMachineCircuitboard
+  result: PortableGeneratorPacmanMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_3
+  id: PortableGeneratorSuperPacmanMachineCircuitboard
+  result: PortableGeneratorSuperPacmanMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_3
+  id: PortableGeneratorJrPacmanMachineCircuitboard
+  result: PortableGeneratorJrPacmanMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_5
+  id: SolarControlComputerCircuitboard
+  result: SolarControlComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: SolarTrackerElectronics
+  result: SolarTrackerElectronics
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_5
+  id: PowerComputerCircuitboard
+  result: PowerComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_4
+  id: CloningConsoleComputerCircuitboard
+  result: CloningConsoleComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_6
+  id: MicrowaveMachineCircuitboard
+  result: MicrowaveMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_6
+  id: SmartFridgeCircuitboard
+  result: SmartFridgeCircuitboard
+
+#- type: latheRecipe
+#  parent: BaseRecipeFiberglass_6
+#  id: SheetifierMachineCircuitboard
+#  result: SheetifierMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ElectricGrillMachineCircuitboard
+  result: ElectricGrillMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: FatExtractorMachineCircuitboard
+  result: FatExtractorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: FlatpackerMachineCircuitboard
+  result: FlatpackerMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: SurveillanceCameraRouterCircuitboard
+  result: SurveillanceCameraRouterCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: SurveillanceCameraWirelessRouterCircuitboard
+  result: SurveillanceCameraWirelessRouterCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: SurveillanceWirelessCameraAnchoredCircuitboard
+  result: SurveillanceWirelessCameraAnchoredCircuitboard
+
+# Bar
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: SurveillanceWirelessCameraMovableCircuitboard
+  result: SurveillanceWirelessCameraMovableCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: SurveillanceCameraMonitorCircuitboard
+  result: SurveillanceCameraMonitorCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: SurveillanceWirelessCameraMonitorCircuitboard
+  result: SurveillanceWirelessCameraMonitorCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_9
+  id: ComputerTelevisionCircuitboard
+  result: ComputerTelevisionCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiСeramics_4
+  id: EmitterCircuitboard
+  result: EmitterCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: ThrusterMachineCircuitboard
+  result: ThrusterMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: GyroscopeMachineCircuitboard
+  result: GyroscopeMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: GasRecyclerMachineCircuitboard
+  result: GasRecyclerMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: SeedExtractorMachineCircuitboard
+  result: SeedExtractorMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: BoozeDispenserMachineCircuitboard
+  result: BoozeDispenserMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeGethinax_1
+  id: CargoTelepadMachineCircuitboard
+  result: CargoTelepadMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: SodaDispenserMachineCircuitboard
+  result: SodaDispenserMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: TelecomServerCircuitboard
+  result: TelecomServerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: MassMediaCircuitboard
+  result: ComputerMassMediaCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: MiniGravityGeneratorCircuitboard
+  result: MiniGravityGeneratorCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_2
+  id: PowerCageRechargerCircuitboard
+  result: PowerCageRechargerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_1
+  id: ShuttleGunSvalinnMachineGunCircuitboard
+  result: ShuttleGunSvalinnMachineGunCircuitboard
+  completetime: 6
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_1
+  id: ShuttleGunPerforatorCircuitboard
+  result: ShuttleGunPerforatorCircuitboard
+  completetime: 10
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_1
+  id: ShuttleGunKineticCircuitboard
+  result: ShuttleGunKineticCircuitboard
+  completetime: 6
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_1
+  id: ShuttleGunFriendshipCircuitboard
+  result: ShuttleGunFriendshipCircuitboard
+  completetime: 8
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_1
+  id: ShuttleGunDusterCircuitboard
+  result: ShuttleGunDusterCircuitboard
+  completetime: 12
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: ReagentGrinderIndustrialMachineCircuitboard
+  result: ReagentGrinderIndustrialMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: JukeboxCircuitBoard
+  result: JukeboxCircuitBoard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_7
+  id: CutterMachineCircuitboard
+  result: CutterMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeGethinax_2
+  id: SalvageExpeditionsComputerCircuitboard
+  result: SalvageExpeditionsComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_8
+  id: PrinterDocMachineCircuitboard
+  result: PrinterDocMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: LithographMachineCircuitboard
+  result: LithographMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: VacuumMachineMachineCircuitboard
+  result: VacuumMachineMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: MachineCircuitboardCosmMachine
+  result: MachineCircuitboardCosmMachine
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_3
+  id: MachineCircuitboardCosmAccum
+  result: MachineCircuitboardCosmAccum
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_3
+  id: MachineCircuitboardCosmBeacon
+  result: MachineCircuitboardCosmBeacon
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_1
+  id: MachineCircuitboardCosmScanner
+  result: MachineCircuitboardCosmScanner
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_2
+  id: SecurityTechFabCircuitboard
+  result: SecurityTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipePlazСeramics_2
+  id: AmmoTechFabCircuitboard
+  result: AmmoTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSapphire_3
+  id: MedicalTechFabCircuitboard
+  result: MedicalTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeGethinax_1
+  id: CargoTechFabCircuitboard
+  result: CargoTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipesSiCeramics_6
+  id: EngineeringTechFabCircuitboard
+  result: EngineeringTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_3
+  id: ServiceTechFabCircuitboard
+  result: ServiceTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_4
+  id: ClothLatheMachineCircuitboard
+  result: ClothLatheMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: IndustrialVacuumMachineMachineCircuitboard
+  result: IndustrialVacuumMachineMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeSiPlaz_2
+  id: IndustrialLithographMachineCircuitboard
+  result: IndustrialLithographMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseRecipeFiberglass_5
+  id: HolopadMachineCircuitboard
+  result: HolopadMachineCircuitboard

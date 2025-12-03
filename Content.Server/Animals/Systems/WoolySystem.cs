@@ -1,5 +1,5 @@
 using Content.Server.DoAfter;
-using Content.Server.Kitchen.Components;
+using Content.Shared.Kitchen.Components;
 using Content.Server.Stack;
 using Content.Shared.Animals;
 using Content.Shared.DoAfter;
@@ -71,4 +71,3 @@ public sealed partial class WoolySystem : SharedWoolySystem
         _doAfter.TryStartDoAfter(doargs);
     }
 }
-

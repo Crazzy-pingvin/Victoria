@@ -1,13 +1,13 @@
-# ----------------------------------------------------резервный ключ шифрования СБ----------------------------------------  
-# -----------------------------канал----------------------------------------  
+# ----------------------------------------------------резервный ключ шифрования СБ----------------------------------------
+# -----------------------------канал----------------------------------------
 - type: radioChannel
   id: SecurityReservRadio
   name: name-securityreservradio
-  keycode: 'рк' 
+  keycode: 'рк'
   frequency: 9876
   color: "#ff0000"
   longRange: false
-# -----------------------------ключ----------------------------------------      
+# -----------------------------ключ----------------------------------------
 - type: entity
   parent: EncryptionKeySecurity
   id: SecurityReservEncryptionKey
@@ -21,8 +21,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: sec_label_reserv 
-# -----------------------------коробка----------------------------------------   
+    - state: sec_label_reserv
+# -----------------------------коробка----------------------------------------
 - type: entity
   name: коробка резревного шифрования
   parent: BoxCardboard
@@ -48,7 +48,7 @@
     layers:
       - state: box_medical
 #----------------------------------------------------------------часы глав ----------------------------------------------------
-#----------------------------------------------------часы капитана с консолью связи---------------------------------------- 
+#----------------------------------------------------часы капитана с консолью связи----------------------------------------
 - type: entity
   id: WristwatchCaptain
   parent: Wristwatch
@@ -249,7 +249,7 @@
     # transmitFrequencyId: Fax
   # - type: RequireProjectileTarget
   # - type: StationAiWhitelist
-          
+
 #Нихрена не вышло. Оно не хочет копировать и отправлять. Бумагу принимает, а достать нельзя.
 #-----------------------------------------------------------------мешки с песком----------------------------------------
 - type: entity
@@ -292,7 +292,7 @@
   name: пустые мешки
   spawn: SandbagEmpty
   maxCount: 50
-  
+
 - type: entity
   parent: BaseItem
   id: SandbagFull
@@ -322,13 +322,13 @@
   - type: Stack
     stackType: SandbagFull
     count: 50
-    
+
 - type: stack
   id: SandbagFull
   name: мешки с песком
   spawn: SandbagFull
   maxCount: 50
-  
+
 - type: soundCollection
   id: EntrenchingRustle
   files:
@@ -336,7 +336,7 @@
   - /Audio/Victoria/Entrenching/rustle2.ogg
   - /Audio/Victoria/Entrenching/rustle3.ogg
   - /Audio/Victoria/Entrenching/rustle4.ogg
-  
+
 - type: soundCollection
   id: EntrenchingThud
   files:
@@ -348,7 +348,7 @@
   graph:
     - node: start
       edges:
-        - to: SandbagEmptyLinum 
+        - to: SandbagEmptyLinum
           steps:
             - material: Cloth
               amount: 1
@@ -363,33 +363,33 @@
         - to: SandbagEmptyElastane
           steps:
             - material: ElastaneCloth
-              amount: 1    
+              amount: 1
         - to: SandbagEmptySheepWool
           steps:
             - material: SheepWoolClean
-              amount: 1  
-    - node: SandbagEmptyLinum 
-      entity: SandbagEmpty     
+              amount: 1
+    - node: SandbagEmptyLinum
+      entity: SandbagEmpty
     - node: SandbagEmptyCotton
-      entity: SandbagEmpty    
+      entity: SandbagEmpty
     - node: SandbagEmptyCottonPaper
       entity: SandbagEmpty
     - node: SandbagEmptyElastane
       entity: SandbagEmpty
     - node: SandbagEmptySheepWool
       entity: SandbagEmpty
-      
+
 - type: construction
   name: sandbag empty
   id: SandbagLinum
   graph: Sandbag
   startNode: start
-  targetNode: SandbagEmptyLinum 
+  targetNode: SandbagEmptyLinum
   category: construction-category-materials
   description: Мешок, который можно будет наполнить чем-то сыпучим.
-  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
   objectType: Item
-  
+
 - type: construction
   name: sandbag empty
   id: SandbagCotton
@@ -398,9 +398,9 @@
   targetNode: SandbagEmptyCotton
   category: construction-category-materials
   description: Мешок, который можно будет наполнить чем-то сыпучим.
-  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
   objectType: Item
-  
+
 - type: construction
   name: sandbag empty
   id: SandbagCottonPaper
@@ -409,9 +409,9 @@
   targetNode: SandbagEmptyCottonPaper
   category: construction-category-materials
   description: Мешок, который можно будет наполнить чем-то сыпучим.
-  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
   objectType: Item
-  
+
 - type: construction
   name: sandbag empty
   id: SandbagElastane
@@ -420,9 +420,9 @@
   targetNode: SandbagEmptyElastane
   category: construction-category-materials
   description: Мешок, который можно будет наполнить чем-то сыпучим.
-  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
   objectType: Item
-  
+
 - type: construction
   name: sandbag empty
   id: SandbagEmptySheepWool
@@ -431,24 +431,24 @@
   targetNode: SandbagEmptySheepWool
   category: construction-category-materials
   description: Мешок, который можно будет наполнить чем-то сыпучим.
-  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_pile }
   objectType: Item
-#---------------------------------------------рецепты мешка с песком----------------------------------------  
+#---------------------------------------------рецепты мешка с песком----------------------------------------
 - type: constructionGraph
   id: SandbagFull
   start: start
   graph:
     - node: start
       edges:
-        - to: SandbagFull 
+        - to: SandbagFull
           steps:
             - material: SandbagEmpty
               amount: 1
             - material: SandHandful
               amount: 4
-   
+
     - node: SandbagFull
-      entity: SandbagFull    
+      entity: SandbagFull
 
 - type: construction
   name: sandbag full
@@ -458,9 +458,9 @@
   targetNode: SandbagFull
   category: construction-category-materials
   description: Наполнение мешков песком.
-  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_stack }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sandbag_stack }
   objectType: Item
-#-----------------ящик мешков и карготовар--------------------------------   
+#-----------------ящик мешков и карготовар--------------------------------
 - type: entity
   id: CrateSandbagEmpty
   parent: CrateGenericSteel
@@ -483,7 +483,7 @@
   cost: 1200
   category: cargoproduct-category-name-materials
   group: market
-#---------------------------------------------баррикады----------------------------------------  
+#---------------------------------------------баррикады----------------------------------------
 - type: entity
   id: SandBarricadeWo
   parent: SandBarricade
@@ -521,7 +521,7 @@
   - type: Construction
     graph: SandbagBarricade
     node: SandBarricadeWo
-        
+
 - type: entity
   id: SandBarricadeSt
   parent: SandBarricade
@@ -559,7 +559,7 @@
   - type: Construction
     graph: SandbagBarricade
     node: SandBarricadeSt
-        
+
 - type: entity
   id: SandBarricadeWi
   parent: SandBarricade
@@ -582,7 +582,7 @@
   - type: Construction
     graph: SandbagBarricade
     node: SandBarricadeWi
-        
+
 - type: entity
   id: SandBarricadeWoWi
   parent: SandBarricadeWo
@@ -605,7 +605,7 @@
   - type: Construction
     graph: SandbagBarricade
     node: SandBarricadeWoWi
-        
+
 - type: entity
   id: SandBarricadeStWi
   parent: SandBarricadeSt
@@ -628,7 +628,7 @@
   - type: Construction
     graph: SandbagBarricade
     node: SandBarricadeStWi
-        
+
 - type: constructionGraph
   id: SandbagBarricade
   start: SandBarricade
@@ -663,7 +663,7 @@
           steps:
             - tool: Prying
               doAfter: 2
-              
+
     - node: SandBarricadeWo
       entity: SandBarricadeWo
       edges:
@@ -681,7 +681,7 @@
           steps:
             - tool: Prying
               doAfter: 1
-              
+
     - node: SandBarricadeWi
       entity: SandBarricadeWi
       edges:
@@ -704,7 +704,7 @@
               amount: 1
           steps:
             - tool: Cutting
-              doAfter: 1 
+              doAfter: 1
 
     - node: SandBarricadeSt
       entity: SandBarricadeSt
@@ -722,7 +722,7 @@
               amount: 2
           steps:
             - tool: Welding
-              doAfter: 1 
+              doAfter: 1
 
     - node: SandBarricadeStWi
       entity: SandBarricadeStWi
@@ -748,8 +748,8 @@
             - tool: Cutting
               doAfter: 1
 
-    - node: DeleteBarricade              
-              
+    - node: DeleteBarricade
+
 #Screwing - Отвёртка
 #Cutting - Кусачки
 #Prying - Лом
@@ -761,15 +761,15 @@
   graph:
     - node: start
       edges:
-        - to: Shovel 
+        - to: Shovel
           steps:
             - material: Steel
               amount: 1
             - material: WoodPlank
               amount: 1
-   
+
     - node: Shovel
-      entity: Shovel    
+      entity: Shovel
 
 - type: construction
   name: shovel
@@ -779,7 +779,7 @@
   targetNode: Shovel
   category: construction-category-tools
   description: Лопата. Просто лопата. Ей можно копать.
-  icon: { sprite: Objects/Tools/shovel.rsi, state: icon }
+#  icon: { sprite: Objects/Tools/shovel.rsi, state: icon }
   objectType: Item
 #---------------------------------------------песок----------------------------------------
 - type: Tag
@@ -821,7 +821,7 @@
 - type: stack
   id: SandHandful
   name: горсть песка
-  icon: { sprite: Victoria/sandbags.rsi, state: sand }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sand }
   spawn: SandHandful1
   maxCount: 100
 #------------------Одна--------------------------
@@ -837,16 +837,16 @@
   id: SandHandful
   stackEntity: SandHandful1
   name: песок
-  icon: { sprite: Victoria/sandbags.rsi, state: sand }
+#  icon: { sprite: Victoria/sandbags.rsi, state: sand }
   price: 0
-#-----------------Переплавка в кремний--------------------------------  
+#-----------------Переплавка в кремний--------------------------------
 - type: latheRecipe
   id: MeltingSiCrystallfromSand
   result: SiCrystall1
   completetime: 4
   materials:
     SandHandful: 1000
-    Coal: 30 
+    Coal: 30
 #-----------------Переплавка в стекло--------------------------------
 - type: latheRecipe
   id: MeltingSheetGlassfromSand
@@ -855,12 +855,12 @@
   materials:
     SandHandful: 300
     Coal: 30
-#-----------------ящик песка и карготовар--------------------------------   
+#-----------------ящик песка и карготовар--------------------------------
 - type: entity
   id: CrateSandHandful
   parent: CrateGenericSteel
   name: Ящик с песком
-  description: Ящик с обычным песком. Грязным. Непросеяным. 
+  description: Ящик с обычным песком. Грязным. Непросеяным.
   components:
     - type: StorageFill
       contents:
@@ -872,7 +872,7 @@
 - type: cargoProduct
   id: CrateSandHandful
   name: Ящик с песком
-  description: Ящик с обычным песком. Грязным. Непросеяным. 
+  description: Ящик с обычным песком. Грязным. Непросеяным.
   icon:
     sprite: Victoria/sandbags.rsi
     state: sand

@@ -101,6 +101,14 @@
   price: 0 # Maybe better for it to be priceless, knowing how greedy cargo is.
 
 - type: material
+  id: CottonMaterial
+  stackEntity: MaterialCotton1
+  name: хлопок
+  icon: { sprite: Objects/Materials/materials.rsi, state: cotton }
+  price: 0.05
+
+
+- type: material
   id: Bones
   name: materials-bones
   unit: materials-unit-piece
@@ -127,6 +135,7 @@
 
 - type: material
   id: Diamond
+  stackEntity: MaterialDiamond1
   name: materials-diamond
   unit: materials-unit-piece
   icon: { sprite: Objects/Materials/materials.rsi, state: diamond }

@@ -139,7 +139,7 @@
   id: SpeakingMobNoocBot
   values:
     prefix: advertisement-bot-nooc-
-    count: 34  
+    count: 34
 #--------------------------------------Сочетание правил ВИ-----------------------------------------
 #-----------------С ходить-бродить----------
 #------обыч-----------
@@ -156,7 +156,7 @@
         - !type:HTNCompoundTask
           task: IdleCompoundBot
 #-----------------Без ходить-бродить----------
-#------обыч-----------          
+#------обыч-----------
 - type: htnCompound
   id: BotNoocStop
   branches:
@@ -168,25 +168,26 @@
           task: MeleeCombatCompoundBotNooc
 #---------------------------------------Сами боты----------------------------------------
 #-------------------------------Солдат----------------------
-#-------------Без оружия бегающий---------------  
+#-------------Без оружия бегающий---------------
 - type: entity
   name: Солдат Ноократ
   suffix: Бот, Ноократский, безОруж, бег
   parent: BaseMobHuman
   id: MobNooc
   components:
-  - type: Advertise
-    minimumWait: 40
-    maximumWait: 100
-    prewarm: false
-    pack: SpeakingMobNoocBot
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobNoocBot
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -195,6 +196,7 @@
     nameSegments:
     - NoocName-niz
     - NoocNameTwo-niz
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - NoocratyBot
@@ -208,20 +210,24 @@
       task: BotNooc
   - type: NPCRetaliation
     attackMemoryLength: 100
-#-------------Без оружия ждущий---------------  
+#-------------Без оружия ждущий---------------
 - type: entity
   suffix: Бот, Ноократский, безОруж, стоп
   parent: MobNooc
   id: MobNoocStop
   components:
-  - type: Advertise
-    pack: SpeakingMobNoocBot
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobNoocBot
     minimumWait: 40
     maximumWait: 100
   - type: HTN
     rootTask:
       task: BotNoocStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Ноократский, Оруж, бег
   parent: MobNooc
@@ -245,14 +251,18 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Ноократский, Оруж, стоп
   parent: MobNoocWeapon
   id: MobNoocWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobNoocBot
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobNoocBot
     minimumWait: 40
     maximumWait: 100
   - type: HTN
@@ -268,12 +278,13 @@
   components:
   - type: RandomMetadata
     nameSegments:
-    - NoocName-o
-    - NoocNameTwo
+    - NoocName-vis
+    - NoocNameTwo-vis
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - NoocVisGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Офицер Ноократ
   suffix: Бот, Ноократский, безОруж, стоп
@@ -282,12 +293,13 @@
   components:
   - type: RandomMetadata
     nameSegments:
-    - NoocName-o
-    - NoocNameTwo
+    - NoocName-vis
+    - NoocNameTwo-vis
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - NoocVisGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, Ноократский, Оруж, бег
   parent: MobNoocOfi
@@ -311,20 +323,24 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, Ноократский, Оруж, стоп
   parent: MobNoocOfiWeapon
   id: MobNoocOfiWeaponStop
   components:
-  - type: Advertise
-    pack: SpeakingMobNoocBot
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobNoocBot
     minimumWait: 40
     maximumWait: 100
   - type: HTN
     rootTask:
       task: BotNoocStop
-#---------------------------------------Спавнеры ботов-------------------      
+#---------------------------------------Спавнеры ботов-------------------
 #-------------------------------Солдат----------------------
 #-------------Без оружия бегающий---------------
 - type: entity
@@ -341,7 +357,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobNooc
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobNooc
   id: SpawnMobNoocStop
@@ -350,7 +366,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobNoocStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobNooc
   id: SpawnMobNoocWeapon
@@ -359,7 +375,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobNoocWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobNooc
   id: SpawnMobNoocWeaponStop

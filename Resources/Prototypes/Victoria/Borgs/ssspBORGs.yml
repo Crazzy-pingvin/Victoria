@@ -9,7 +9,7 @@
 - type: radioChannel
   id: Bifaze
   name: name-of-SSSPborgs-radio
-  keycode: 'би' 
+  keycode: 'би'
   frequency: 0110
   color: "#ac0000"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
@@ -18,48 +18,27 @@
 #=======имена для боргов======================
 #----аббревиатура перед именем------------
 
-- type: dataset
+- type: localizedDataset
   id: SSSP-borg-rab-abb
   values:
-  - УРМоВИ
+    prefix: SSSP-borg-rab-abb-
+    count: 1
 #универсальная рабочая машина оснащённая витруальным интеллектом
 
-- type: dataset
+- type: localizedDataset
   id: SSSP-borg-acad-abb
   values:
-  - УАМоВИ
+    prefix: SSSP-borg-acad-abb-
+    count: 1
 #универсальная академическая машина оснащённая витруальным интеллектом
 
 #----уникалььное имя борга------------
 
-- type: dataset
+- type: localizedDataset
   id: SSSP-borg-name
   values:
-  - Винтик
-  - Шпунтик
-  - Электроник
-  - Алиса
-  - Зелёный
-  - Болтик
-  - Нехочуха
-  - Трудяга
-  - Юра
-  - Фасхи
-  - Мехсил
-  - Мишка
-  - Пегас
-  - Говорун
-  - Шелезяка
-  - Громозека
-  - Буран
-  - Фараб
-  - Мир
-  - Вертер
-  - Пионер
-  - Космонавт
-  - Вафельница
-  - Вафля
-  - Корунд
+    prefix: SSSP-borg-name-
+    count: 25
 
 #=======Модули петров и всё с ними связанное==========
 #----тэг для модулей-----------
@@ -138,10 +117,10 @@
     - state: petr
     - state: icon-combat
   - type: ItemBorgModule
-    items:
-    - PetrSMGBorg
-    - Emag
-    - CombatKnife
+    hands:
+    - item: PetrSMGBorg
+    - item: Emag
+    - item: CombatKnife
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/petr_modules.rsi, state: combat-petr }
 
@@ -157,12 +136,12 @@
     - state: petr
     - state: icon-spy
   - type: ItemBorgModule
-    items:
-    - PetrPistolBorg
-    - Emag
-    - PetrRubberStamp
-    - Brutepack10Lingering
-    - CombatKnife
+    hands:
+    - item: PetrPistolBorg
+    - item: Emag
+    - item: PetrRubberStamp
+#    - item: Brutepack10Lingering
+    - item: CombatKnife
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/petr_modules.rsi, state: spy-petr }
 
@@ -442,6 +421,7 @@
     nameSegments:
       - SSSP-borg-rab-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
@@ -449,7 +429,7 @@
       borg_module:
         - BorgModuleTool
         - BorgModuleMining
-        - BorgModuleGrapplingGun
+        - BorgModuleTraversal
         - BorgModuleGardening
         - BorgModuleHarvesting
   - type: ItemSlots
@@ -473,13 +453,14 @@
     nameSegments:
       - SSSP-borg-acad-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
         - PositronicBrain
       borg_module:
         - BorgModuleService
-        - BorgModuleLightReplacer
+        - BorgModuleCustodial
         - BorgModuleAdvancedCleaning
   - type: ItemSlots
     slots:
@@ -502,6 +483,7 @@
     nameSegments:
       - SSSP-borg-rab-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
@@ -509,7 +491,7 @@
       borg_module:
         - BorgModuleTool
         - BorgModuleMining
-        - BorgModuleGrapplingGun
+        - BorgModuleTraversal
         - BorgModuleHarvesting
         - BorgModulePetrCombat
   - type: ItemSlots
@@ -533,13 +515,14 @@
     nameSegments:
       - SSSP-borg-acad-abb
       - SSSP-borg-name
+    nameFormat: name-format-ert
   - type: ContainerFill
     containers:
       borg_brain:
         - PositronicBrain
       borg_module:
         - BorgModuleService
-        - BorgModuleLightReplacer
+        - BorgModuleCustodial
         - BorgModuleAdvancedCleaning
         -  BorgModulePetrSpy
   - type: ItemSlots

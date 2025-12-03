@@ -1,5 +1,5 @@
 #---------------------------униформа----------------------------------------------------------------------
-#------------------------------------солдат---------- 
+#------------------------------------солдат----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformSoldier
@@ -11,7 +11,7 @@
     sprite: Victoria/Umpor/Equipment/uniform_s.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_s.rsi
-#------------------------------------офицер----------     
+#------------------------------------офицер----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformOficier
@@ -23,7 +23,7 @@
     sprite: Victoria/Umpor/Equipment/uniform_o.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_o.rsi
-#------------------------------------медик----------     
+#------------------------------------медик----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformMedic
@@ -35,7 +35,7 @@
     sprite: Victoria/Umpor/Equipment/uniform_m.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_m.rsi
-#------------------------------------инженер---------- 
+#------------------------------------инженер----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformEngineer
@@ -47,7 +47,7 @@
     sprite: Victoria/Umpor/Equipment/uniform_e.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_e.rsi
-#------------------------------------логист----------     
+#------------------------------------логист----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformLogist
@@ -59,7 +59,7 @@
     sprite: Victoria/Umpor/Equipment/uniform_l.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_l.rsi
-#------------------------------------радист----------     
+#------------------------------------радист----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformRadist
@@ -71,7 +71,7 @@
     sprite: Victoria/Umpor/Equipment/uniform_r.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_r.rsi
-#------------------------------------сапёр----------     
+#------------------------------------сапёр----------
 - type: entity
   parent: ClothingUniformSkirtBase
   id: UmporUniformMine
@@ -84,7 +84,7 @@
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/uniform_min.rsi
 #-------------------------------одежда и снаряга----------------------------------------------------------------------
-#------------------------------------рюкзак---------- 
+#------------------------------------рюкзак----------
 - type: entity
   parent: ClothingBackpack
   id: UmporBackpack
@@ -94,7 +94,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Umpor/Equipment/umpor_back.rsi
-#------------------------------------рюкзак-радиостанция----------     
+#------------------------------------рюкзак-радиостанция----------
 - type: entity
   parent: ClothingBackpack
   id: UmporRadioBackpack
@@ -121,7 +121,7 @@
     needsPower: false
   - type: LightningTarget
     priority: 1
-#------------------------------------рюкзак сапёра---------- 
+#------------------------------------рюкзак сапёра----------
 - type: entity
   parent: ClothingBackpack
   id: UmporBackpackMine
@@ -134,8 +134,8 @@
   - type: Storage
     grid:
     - 0,0,7,4
-#------------------------------------сапоги---------- 
-#--------------------------обычные---------- 
+#------------------------------------сапоги----------
+#--------------------------обычные----------
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: UmporBoots
@@ -147,7 +147,7 @@
     sprite: Victoria/Umpor/Equipment/umpor_boots.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/umpor_boots.rsi
-#--------------------------ускоряющие---------- 
+#--------------------------ускоряющие----------
 - type: entity
   parent: ClothingShoesMilitaryBase
   id: UmporBootsFast
@@ -162,7 +162,7 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.25
     sprintModifier: 1.25
-#--------------------------------------------------плащ-------------------------------------- 
+#--------------------------------------------------плащ--------------------------------------
 - type: entity
   parent: ClothingNeckBase
   id: UmporCloakOf
@@ -177,7 +177,7 @@
       coefficients:
         Caustic: 0.9
         Poison: 0.9
-#------------------------------------шлем---------- 
+#------------------------------------шлем----------
 - type: entity
   parent: ClothingHeadHelmetBasic
   id: UmporHelmet
@@ -189,7 +189,7 @@
     sprite: Victoria/Umpor/Armor/umpor_helmet.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Armor/umpor_helmet.rsi
-#------------------------------------беретка---------- 
+#------------------------------------беретка----------
 - type: entity
   parent: ClothingHeadBase
   id: UmporBeret
@@ -206,7 +206,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------фуражка---------- 
+#------------------------------------фуражка----------
 - type: entity
   parent: ClothingHeadBase
   id: UmporCap
@@ -223,7 +223,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------армейские перчатки---------- 
+#------------------------------------армейские перчатки----------
 - type: entity
   parent: ClothingHandsBase
   id: UmporGlovesFingerless
@@ -238,7 +238,7 @@
   - type: Fiber
     fiberMaterial: fibers-synthetic
     fiberColor: fibers-black
-#------------------------------------изолирующие перчатки----------     
+#------------------------------------изолирующие перчатки----------
 - type: entity
   parent: ClothingHandsGlovesColorYellow
   id: UmporInsulativeGloves
@@ -254,7 +254,7 @@
   - type: Fiber
     fiberMaterial: fibers-insulative
     fiberColor: fibers-black
-#------------------------------------пилотка----------     
+#------------------------------------пилотка----------
 - type: entity
   parent: ClothingHeadBase
   id: UmporCapP
@@ -271,7 +271,7 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
-#------------------------------------лёгкий броник----------     
+#------------------------------------лёгкий броник----------
 - type: entity
   parent: ClothingOuterArmorBasic
   id: UmporArmorBasic
@@ -283,16 +283,16 @@
     sprite: Victoria/Umpor/Armor/umpor_armor_light.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Armor/umpor_armor_light.rsi
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
-        Piercing: 0.65 
+        Piercing: 0.65
         Heat: 0.65
   - type: ExplosionResistance
     damageCoefficient: 0.90
-#------------------------------------броня----------     
+#------------------------------------броня----------
 - type: entity
   parent: ClothingOuterBaseMedium
   id: UmporArmorMiddle
@@ -315,7 +315,7 @@
         Caustic: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.70
-#------------------------------------скафандр----------      
+#------------------------------------скафандр----------
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: UmporHardsuit
@@ -343,9 +343,9 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: UmporHelmetHardsuit
-#------------------------------------шлем скафандра----------  
+#------------------------------------шлем скафандра----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: UmporHelmetHardsuit
   name: name-of-UmporHelmetHardsuit
   description: description-of-UmporHelmetHardsuit
@@ -373,7 +373,7 @@
 #------------------------------------анализатор здоровья----------
 - type: entity
   id: UmporHealthAnalyzerUnpowered
-  parent: BaseItem
+  parent: HandheldHealthAnalyzerUnpowered
   name: name-of-UmporHealthAnalyzerUnpowered
   description: description-of-UmporHealthAnalyzerUnpowered
   components:
@@ -386,31 +386,7 @@
         shader: unshaded
         visible: true
         map: [ "enum.PowerDeviceVisualLayers.Powered" ]
-  - type: Item
-    storedRotation: -90
-  - type: ActivatableUI
-    key: enum.HealthAnalyzerUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.HealthAnalyzerUiKey.Key:
-        type: HealthAnalyzerBoundUserInterface
-  - type: HealthAnalyzer
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
-  - type: Tag
-    tags:
-      - DiscreteHealthAnalyzer
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.PowerCellSlotVisuals.Enabled:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-          False: { visible: false }
-  - type: GuideHelp
-    guides:
-      - Medical Doctor
-#------------------------------------топорик---------- 
+#------------------------------------топорик----------
 - type: Tag
   id: UmporHatchet
 
@@ -437,7 +413,7 @@
         Piercing: 5
   - type: Item
     sprite: Victoria/Umpor/Weapon/umpor_hatchet.rsi
-#------------------------------------лопатка----------     
+#------------------------------------лопатка----------
 - type: Tag
   id: UmporSpade
 
@@ -469,8 +445,8 @@
   - type: Item
     sprite: Victoria/Umpor/Weapon/umpor_spade.rsi
   - type: EntrenchingTool
-#---------------------------------------------РСУ---------------------    
-#------------------------сумка-------------- 
+#---------------------------------------------РСУ---------------------
+#------------------------сумка--------------
 - type: Tag
   id: BackpackRCD
 
@@ -497,8 +473,8 @@
     solutionId: tank
     proto: BulletWaterShot
   - type: RCDAmmo
-    charges: 1000
-#------------------------сам РСУ--------------     
+    Charges: 1000
+#------------------------сам РСУ--------------
 - type: entity
   id: UmporRCD
   parent: BaseItem
@@ -535,7 +511,7 @@
     - Deconstruct
   - type: LimitedCharges
     maxCharges: 50
-    charges: 50
+    lastCharges: 50
   - type: UseDelay
   - type: UserInterface
     interfaces:
@@ -548,7 +524,7 @@
     providerWhitelist:
       tags:
       - BackpackRCD
-#------------------------------------пояс инженера и логиста---------- 
+#------------------------------------пояс инженера и логиста----------
 - type: entity
   parent: ClothingBeltStorageBase
   id: UmporBeltEng
@@ -609,11 +585,11 @@
       - id: Screwdriver
       - id: Wirecutter
       - id: Welder
-      - id: Multitool 
+      - id: Multitool
       - id: UmporHatchet
       - id: UmporSpade
       - id: UmpornKnife
-#------------------------------------пояс-разгрузка---------- 
+#------------------------------------пояс-разгрузка----------
 - type: entity
   parent: ClothingBeltStorageBase
   id: UmporeBeltAssault
@@ -639,7 +615,7 @@
       - id: UmporMagazinePistol
       - id: UmpornKnife
       - id: UmporPistol
-#------------------------------------пояс медика---------- 
+#------------------------------------пояс медика----------
 - type: entity
   parent: ClothingBeltStorageBase
   id: UmporeBeltMed
@@ -669,7 +645,7 @@
       - id: Brutepack
       - id: UmporHealthAnalyzerUnpowered
 #-------------------------------------ближнее-------------------------------------------------------------------------------
-#------------------------------------нож---------- 
+#------------------------------------нож----------
 - type: Tag
   id: UmpornKnife
 
@@ -691,7 +667,7 @@
     sprite: Victoria/Umpor/Weapon/umpor_knife.rsi
 #-------------------------------------дальнее-------------------------------------------------------------------------------
 #-------------------------------------пули--------------------------------------------------------------
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 - type: entity
   id: UmporBulletHeavyRifle
   name: name-of-UmporBulletHeavyRifle
@@ -703,7 +679,7 @@
     damage:
       types:
         Piercing: 45
-#------------------------------------автомат----------         
+#------------------------------------автомат----------
 - type: entity
   id: UmporBulletLightRifle
   name: name-of-UmporBulletLightRifle
@@ -715,7 +691,7 @@
     damage:
       types:
         Piercing: 31
-#------------------------------------пистолет---------- 
+#------------------------------------пистолет----------
 - type: entity
   id: UmporBulletPistol
   name: Лёгкая пистолетная пуля (.15 rifle)
@@ -726,9 +702,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17       
+        Piercing: 17
 #-------------------------------------картриджи---------------------------------------------------------------------------------
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 - type: Tag
   id: UmporCartridgeHeavyRifle
 
@@ -747,7 +723,7 @@
   - type: PhysicalComposition
     materialComposition:
       UmporCartridgeHeavyRifle: 1
-#------------------------------------автомат---------- 
+#------------------------------------автомат----------
 - type: Tag
   id: UmporCartridgeLightRifle
 
@@ -762,7 +738,7 @@
   - type: Tag
     tags:
       - UmporCartridgeLightRifle
-#------------------------------------пистолет---------- 
+#------------------------------------пистолет----------
 - type: Tag
   id: UmporCartridgePistol
 
@@ -778,7 +754,7 @@
     tags:
       - UmporCartridgePistol
 #-------------------------------------магазины---------------------------------------------------------------------------------
-#-----------------------------------винтовочный--------- 
+#-----------------------------------винтовочный---------
 - type: entity
   id: UmporBaseMagazineHeavyRifle
   name: name-of-UmporBaseMagazineHeavyRifle
@@ -814,7 +790,7 @@
 
 - type: Tag
   id: UmporMagazineHeavyRifle
-  
+
 - type: entity
   id: UmporMagazineHeavyRifle
   name: name-of-UmporMagazineHeavyRifle
@@ -830,7 +806,7 @@
   - type: Tag
     tags:
       - UmporMagazineHeavyRifle
-#------------------------------------к автомату----------   
+#------------------------------------к автомату----------
 - type: entity
   id: UmporBaseMagazineLightRifle
   name: name-of-UmporBaseMagazineLightRifle
@@ -866,7 +842,7 @@
 
 - type: Tag
   id: UmporMagazineLightRifle
-  
+
 - type: entity
   id: UmporMagazineLightRifle
   name: name-of-UmporMagazineLightRifle
@@ -882,7 +858,7 @@
   - type: Tag
     tags:
       - UmporMagazineLightRifle
-#------------------------------------пистолетный---------- 
+#------------------------------------пистолетный----------
 - type: Tag
   id: UmporMagazinePistol
 
@@ -918,7 +894,7 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-  
+
 - type: entity
   id: UmporMagazinePistol
   name: name-of-UmporMagazinePistol
@@ -935,7 +911,7 @@
     tags:
       - UmporMagazinePistol
 #-------------------------------------стволы---------------------------------------------------------------------------------
-#------------------------------------винтовка---------- 
+#------------------------------------винтовка----------
 - type: entity
   name: name-of-UmporHeavyRifle
   suffix: Умпорский
@@ -997,7 +973,7 @@
   - type: Construction
     graph: UmporRifleSniper
     node: UmporRifle
-#------------------------------------автомат----------     
+#------------------------------------автомат----------
 - type: entity
   name: name-of-UmporLightRifle
   suffix: Умпорский
@@ -1056,7 +1032,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
-#------------------------------------пистолет----------   
+#------------------------------------пистолет----------
 - type: Tag
   id: UmporPistol
 
@@ -1077,10 +1053,10 @@
   - type: Gun
     fireRate: 3
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg 
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
   - type: ChamberMagazineAmmoProvider
     soundRack:
-      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg      
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -1175,7 +1151,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------пистолетные----------------      
+#------------------------------пистолетные----------------
 - type: entity
   parent: BaseUmporBox
   id: UmporBoxPistol
@@ -1193,7 +1169,7 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------дробовиковые----------------      
+#------------------------------дробовиковые----------------
 - type: entity
   parent: BaseUmporBox
   id: UmporBoxShotgan
@@ -1211,13 +1187,13 @@
     - state: mag-2
       map: ["enum.GunVisualLayers.Mag"]
     zeroVisible: false
-#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------    
-#------------------------------------------доступы и шлюзы---------------------------------------- 
-#------------------------------------доступ----------  
+#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------
+#------------------------------------------доступы и шлюзы----------------------------------------
+#------------------------------------доступ----------
 - type: accessLevel
   id: UmporAccess
   name: access-umpor
-#------------------------------------закрытый шлюз---------- 
+#------------------------------------закрытый шлюз----------
 - type: entity
   parent: DoorElectronics
   id: DoorElectronicsUmporAccess
@@ -1236,7 +1212,7 @@
       board: [ DoorElectronicsUmporAccess ]
   - type: Sprite
     sprite: Victoria/Umpor/umpor_airlock.rsi
-#------------------------------------свободный шлюз---------- 
+#------------------------------------свободный шлюз----------
 - type: entity
   parent: Airlock
   id: UmporAirlock
@@ -1244,7 +1220,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Umpor/umpor_airlock.rsi
-#------------------------------------закрытый стеклянный шлюз---------- 
+#------------------------------------закрытый стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
   id: UmporAirlockLockedGlass
@@ -1255,8 +1231,8 @@
       board: [ DoorElectronicsUmporAccess ]
   - type: Sprite
     sprite: Victoria/Umpor/umpor_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass     
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -1265,10 +1241,10 @@
   components:
   - type: Sprite
     sprite: Victoria/Umpor/umpor_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass  
-#------------------------------------------КПК, карты----------------------------------------  
-#------------------------------------стандарт карты---------- 
+  - type: Paintable
+    group: null
+#------------------------------------------КПК, карты----------------------------------------
+#------------------------------------стандарт карты----------
 - type: entity
   parent: Clothing
   id: UmporIDCard
@@ -1295,7 +1271,7 @@
     - WhitelistChameleon
   - type: StealTarget
     stealGroup: IDCard
-#------------------------------------карта офицера---------- 
+#------------------------------------карта офицера----------
 - type: entity
   parent: UmporIDCard
   id: UmporIDCardOfficer
@@ -1312,7 +1288,7 @@
     - External
   - type: PresetIdCard
     name: умпорский мл.офицер
-#------------------------------------карта солдата----------    
+#------------------------------------карта солдата----------
 - type: entity
   parent: UmporIDCard
   id: UmporIDCardSolder
@@ -1329,7 +1305,7 @@
     - External
   - type: PresetIdCard
     name: умпорский стрелок
-#------------------------------------карта медика----------     
+#------------------------------------карта медика----------
 - type: entity
   parent: UmporIDCard
   id: UmporIDCardMedic
@@ -1346,7 +1322,7 @@
     - External
   - type: PresetIdCard
     name: умпорский медик
-#------------------------------------карта инженера----------     
+#------------------------------------карта инженера----------
 - type: entity
   parent: UmporIDCard
   id: UmporIDCardEngener
@@ -1363,7 +1339,7 @@
     - External
   - type: PresetIdCard
     name: умпорский инженер
-#------------------------------------карта логиста---------- 
+#------------------------------------карта логиста----------
 - type: entity
   parent: UmporIDCard
   id: UmporIDCardLogist
@@ -1380,7 +1356,7 @@
     - External
   - type: PresetIdCard
     name: умпорский логист
-#------------------------------------стандарт КПК---------- 
+#------------------------------------стандарт КПК----------
 - type: entity
   abstract: true
   parent: BasePDA
@@ -1405,7 +1381,7 @@
   - type: Icon
     sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
     state: pda
-#------------------------------------КПК солдата----------    
+#------------------------------------КПК солдата----------
 - type: entity
   parent: UmporPDA
   id: UmporPDASolder
@@ -1423,7 +1399,7 @@
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
-#------------------------------------КПК офицера----------       
+#------------------------------------КПК офицера----------
 - type: entity
   parent: UmporPDA
   id: UmporPDAOfficer
@@ -1441,7 +1417,7 @@
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
-#------------------------------------КПК инженера----------       
+#------------------------------------КПК инженера----------
 - type: entity
   parent: UmporPDA
   id: UmporPDAEngener
@@ -1459,7 +1435,7 @@
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
-#------------------------------------КПК медика----------       
+#------------------------------------КПК медика----------
 - type: entity
   parent: UmporPDA
   id: UmporPDAMedic
@@ -1477,7 +1453,7 @@
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
-#------------------------------------КПК логиста----------       
+#------------------------------------КПК логиста----------
 - type: entity
   parent: UmporPDA
   id: UmporPDALogist
@@ -1495,16 +1471,16 @@
     - type: Icon
       sprite: Victoria/Umpor/Equipment/umpor_pda.rsi
       state: pda
-#------------------------------------------связь----------------------------------------  
-#-----------------------------канал----------------------------------------  
+#------------------------------------------связь----------------------------------------
+#-----------------------------канал----------------------------------------
 - type: radioChannel
   id: UmporRadio
   name: name-of-UmporRadio
-  keycode: 'уф' 
+  keycode: 'уф'
   frequency: 1678
   color: "#666666"
   longRange: false
-#-----------------------------стандарт ключа----------------------------------------   
+#-----------------------------стандарт ключа----------------------------------------
 - type: entity
   abstract: true
   parent: BaseItem
@@ -1522,7 +1498,7 @@
     sprite: Victoria/Umpor/Equipment/umpor_encryption_keys.rsi
   - type: StealTarget
     stealGroup: EncryptionKey
-#-----------------------------ключ----------------------------------------      
+#-----------------------------ключ----------------------------------------
 - type: entity
   parent: UmporBaseEncryptionKey
   id: UmporEncryptionKey
@@ -1537,8 +1513,8 @@
   - type: Sprite
     layers:
     - state: crypt_gray
-    - state: label 
-#-----------------------------гарнитура----------------------------------------  
+    - state: label
+#-----------------------------гарнитура----------------------------------------
 - type: entity
   parent: ClothingHeadset
   id: UmporHeadset
@@ -1553,7 +1529,7 @@
     sprite: Victoria/Umpor/Equipment/umpor_garniture.rsi
   - type: Clothing
     sprite: Victoria/Umpor/Equipment/umpor_garniture.rsi
-#-----------------------------------------------------роли------------------------------------------------------  
+#-----------------------------------------------------роли------------------------------------------------------
 - type: entity
   parent: UmporBackpack
   id: UmporBackpackFilled
@@ -1566,8 +1542,8 @@
       - id: FoodTinMRE
       - id: DrinkWaterBottleFull
       - id: Gauze
-      - id: OxygenTankFilled    
-#------------------------------------офицер---------- 
+      - id: OxygenTankFilled
+#------------------------------------офицер----------
 - type: playTimeTracker
   id: JobEventUmporOfficer
 
@@ -1601,7 +1577,7 @@
     belt: UmporeBeltAssaultFilled
     pocket1: UmporPaperOfficer
     pocket2: UmporRubberStamp
-#------------------------------------солдат---------- 
+#------------------------------------солдат----------
 - type: playTimeTracker
   id: JobEventUmporSolder
 
@@ -1635,7 +1611,7 @@
     belt: UmporeBeltAssaultFilled
     gloves: UmporGlovesFingerless
     pocket1: UmporPaperSolder
-#------------------------------------медик---------- 
+#------------------------------------медик----------
 - type: entity
   parent: UmporBackpack
   id: UmporBackpackFilledRifle
@@ -1666,7 +1642,7 @@
     belt: UmporeBeltMed
     gloves: UmporGlovesFingerless
     pocket1: UmporPaperMedic
-#------------------------------------инженер---------- 
+#------------------------------------инженер----------
 - type: startingGear
   id: UmporEngenerGear
   equipment:
@@ -1680,7 +1656,7 @@
     belt: UmporBeltEngFilled
     gloves: UmporInsulativeGloves
     pocket1: UmporPaperEngeneer
-#------------------------------------инженер-строитель---------- 
+#------------------------------------инженер-строитель----------
 - type: startingGear
   id: UmporBilderGear
   equipment:
@@ -1695,7 +1671,7 @@
     gloves: UmporInsulativeGloves
     pocket1: UmporPaperBilder
     pocket2: UmporRCD
-#------------------------------------радист---------- 
+#------------------------------------радист----------
 - type: entity
   parent: UmporRadioBackpack
   id: UmporRadioBackpackFilled
@@ -1725,7 +1701,7 @@
     gloves: UmporInsulativeGloves
     pocket1: UmporPaperRadist
     pocket2: UmporEncryptionKey
-#------------------------------------сапёр---------- 
+#------------------------------------сапёр----------
 - type: entity
   parent: UmporBackpackMine
   id: UmporBackpackMineFilled
@@ -1796,7 +1772,7 @@
     damage:
       types:
         Piercing: 23
-        
+
 - type: entity
   id: UmporPelletShotgunSpread
   categories: [ HideSpawnMenu ]
@@ -1805,7 +1781,7 @@
   - type: ProjectileSpread
     proto: UmporPelletShotgun
     count: 12
-    spread: 15        
+    spread: 15
 #-----------------------картридж----------------------
 - type: Tag
   id: UmporShellShotgun
@@ -1840,7 +1816,7 @@
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
-#-----------------------сам дробовик----------------------  
+#-----------------------сам дробовик----------------------
 - type: entity
   name: name-of-UmporBaseWeaponShotgun
   parent: BaseItem
@@ -1881,7 +1857,7 @@
 
 - type: Tag
   id: UmporShotgun
-  
+
 - type: entity
   name: name-of-UmporShotgun
   suffix: Умпорский
@@ -1908,78 +1884,27 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------звания пацанов----------
-- type: dataset
+- type: localizedDataset
   id: UmporName-s
   values:
-  - Рядовой
-  - Мл.Капрал
-  - Ст.Капрал
+    prefix: umpor-name-s-
+    count: 3
 #---------------------------------звания младших офицеров----------
-- type: dataset
+- type: localizedDataset
   id: UmporName-o
   values:
-  - Мл.Сержант
-  - Сержант
-  - Ст.Сержант
+    prefix: umpor-name-o-
+    count: 3
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: UmporNameTwo
   values:
-  - Кузнецов
-  - Плотников
-  - Стрелков
-  - Коваль
-  - Бондарь
-  - Бортник
-  - Валялько
-  - Лесорубченко
-  - Штольницкий
-  - Кравчик
-  - Возняк
-  - Шевчик
-  - Седлак
-  - Ворач
-  - Млинарж
-  - Фишер
-  - Кук
-  - Смит
-  - Груббер
-  - Миллер
-  - Шмидт
-  - Фурнье
-  - Мейнье
-  - Шарпенье
-  - Контадино
-  - Феррари
-  - Коломбо
-  - Каса
-  - Варис
-  - Уриши
-  - Перроси
-  - Скалоус
-  - Киркабород
-  - Молоторук
-  - Топоробород
-  - Серпоус
-  - Хамербрад
-  - Аксовал
-  - Вириши
-  - Сарвари
-  - Уриси
-  - Шахтоход
-  - Демонтажников
-  - Столяров
-  - Плотников
-  - Морковин
-  - Картохонос
-  - Пушнарёв
-  - Кожедубник
-  - Скобеник
-  - Цементов
+    prefix: umpor-name-two-
+    count: 51
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------офицер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporOfficerR
@@ -1998,6 +1923,7 @@
       nameSegments:
       - UmporName-o
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporOfficerReady
@@ -2022,7 +1948,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-# Код написал Crazzy_pingvin 
+# Код написал Crazzy_pingvin
 
 - type: entity
   name: Умпорский офицер Спавнер
@@ -2041,11 +1967,12 @@
     nameSegments:
     - UmporName-o
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporOfficerR
 #---------------------------------солдат----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporSolderR
@@ -2064,6 +1991,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporSolderReady
@@ -2088,7 +2016,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский солдат Спавнер
   id: UmporMobHumanSolder
@@ -2106,11 +2034,12 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporSolderR
 #---------------------------------инженер----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporEngenerR
@@ -2129,6 +2058,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporEngenerReady
@@ -2153,7 +2083,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский инженер Спавнер
   id: UmporMobHumanEngener
@@ -2171,11 +2101,12 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporEngenerR
 #---------------------------------инженер-строитель----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporBilderR
@@ -2194,6 +2125,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporEBilderReady
@@ -2218,7 +2150,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский инженер-строитель Спавнер
   id: UmporMobHumanBilder
@@ -2236,11 +2168,12 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporBilderR
 #---------------------------------инженер-радист----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporRadistR
@@ -2259,6 +2192,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporRadistReady
@@ -2283,7 +2217,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский радист Спавнер
   id: UmporMobHumanRadist
@@ -2301,11 +2235,12 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporRadistR
 #---------------------------------сапёр----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporMinesweeperR
@@ -2324,6 +2259,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporMinesweeperReady
@@ -2348,7 +2284,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский сапёр Спавнер
   id: UmporMobHumanMinesweeper
@@ -2366,11 +2302,12 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporMinesweeperR
 #---------------------------------медик----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporMedicR
@@ -2389,6 +2326,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporMedicReady
@@ -2413,7 +2351,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский медик Спавнер
   id: UmporMobHumanMedic
@@ -2431,11 +2369,12 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporMedicR
 #---------------------------------логист----------
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
     - Vox
   id: UmporLogistR
@@ -2454,6 +2393,7 @@
       nameSegments:
       - UmporName-s
       - UmporNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: UmporLogistReady
@@ -2478,7 +2418,7 @@
     - type: NpcFactionMember
       factions:
       - Umpor
-  
+
 - type: entity
   name: Умпорский логист Спавнер
   id: UmporMobHumanLogist
@@ -2496,6 +2436,7 @@
     nameSegments:
     - UmporName-s
     - UmporNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: UmporLogistR
 #---------------------------------------------------------------Бумаги------------------------------------------------------------
@@ -2511,15 +2452,15 @@
   - type: Paper
     content: |
       Форма: UMP-ARM-PLT-114
-      
+
       Кому: Офицеру 114-й пехотной дивизии
-      
-      Вы офицер Умпорской Федерации. Вашей задачей является командование своими подчинёнными, а также защита интересов вашей страны во всех краях галактики, где бы вы ни оказались. 
-      
+
+      Вы офицер Умпорской Федерации. Вашей задачей является командование своими подчинёнными, а также защита интересов вашей страны во всех краях галактики, где бы вы ни оказались.
+
       Ваши навыки: Базовые навыки, владение оружием, управление шаттлом
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Солдат-----------------------------
 - type: entity
@@ -2534,13 +2475,13 @@
     content: |
       Форма: UMP-ARM-PLT-114
       Кому: Солдату 114-й пехотной дивизии
-      
-      Вы солдат Умпроской Федерации. Трудолюбивый, верный и смелый. Ваша задача - следовать всем приказам офицера и бить указанных им врагов до последней капли крови. 
-      
+
+      Вы солдат Умпроской Федерации. Трудолюбивый, верный и смелый. Ваша задача - следовать всем приказам офицера и бить указанных им врагов до последней капли крови.
+
       Ваши навыки: Базовые навыки, Владение оружием
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Инженер-----------------------------
 - type: entity
@@ -2554,15 +2495,15 @@
   - type: Paper
     content: |
       Форма: UMP-ARM-PLT-114
-      
+
       Кому: Инженеру 114-й пехотной дивизии
-      
+
       Вы инженер Умпроской Федерации. Способный боец, занимающийся фортификацией, ремонтом, прокладкой коммуникаций и всего, что касается хорошей обороны и продуманной атаки.
-      
+
       Ваши навыки: Базовые навыки, владение оружием, постройка сложных объектов, постройка приборов, робототехника, продвинутые генераторы, разборка сложных объектов, базовый атмос
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта. В случае гибели офицера, примите командование на себя.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Инженер-----------------------------
 - type: entity
@@ -2576,15 +2517,15 @@
   - type: Paper
     content: |
       Форма: UMP-ARM-PLT-114
-      
+
       Кому: Сапёру 114-й пехотной дивизии
-      
+
       Вы сапёр Умпроской Федерации. Способный боец, занимающийся фортификацией, созданием ловушек, минных заграждений и прочих неприятных сюрпризов.
-      
+
       Ваши навыки: Базовые навыки, владение оружием, постройка сложных объектов, постройка приборов, разборка сложных объектов
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта. В случае гибели офицера, примите командование на себя.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Инженер-строитель-----------------------------
 - type: entity
@@ -2599,13 +2540,13 @@
     content: |
       Форма: UMP-ARM-PLT-114
       Кому: Инженеру-строителю 114-й пехотной дивизии
-      
+
       Вы: инженер-строитель Умпроской Федерации. Способный боец, занимающийся фортификацией, ремонтом, прокладкой коммуникаций и всего, что касается хорошей обороны.
-      
+
       Ваши навыки: Базовые навыки, владение оружием, постройка сложных объектов, продвинутые генераторы, разборка сложных объектов, базовый атмос
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Радист-----------------------------
 - type: entity
@@ -2619,15 +2560,15 @@
   - type: Paper
     content: |
       Форма: UMP-ARM-PLT-114
-      
+
       Кому: Радисту 114-й пехотной дивизии
-      
+
       Вы радист Умпроской Федерации. Вы хорошо образованы, отлично общаетесь с компьютерами, проводами и прочей электронной техникой.
-      
+
       Ваши навыки: Базовые навыки, владение оружием, постройка сложных объектов, постройка приборов, робототехника, разборка сложных объектов
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее,, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Медик-----------------------------
 - type: entity
@@ -2641,15 +2582,15 @@
   - type: Paper
     content: |
       Форма: UMP-ARM-PLT-114
-      
+
       Кому: Медику 114-й пехотной дивизии
-      
+
       Вы медик Умпроской Федерации. Ваша задача - защищать жизни своих товарищей от неминуемой смерти. Лечите, реанимируйте, убивайте врагов. Всё, чтобы спасти жизни.
-      
+
       Ваши навыки: Базовые навыки, владение оружием, базовая химия, вирусология, медицинское оборудование, продвинутое лечение, хирургия
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее,, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
 #-----------------------------------Логист-----------------------------
 - type: entity
@@ -2663,17 +2604,17 @@
   - type: Paper
     content: |
       Форма: UMP-ARM-PLT-114
-      
+
       Кому: Логисту 114-й пехотной дивизии
-      
+
       Вы логист Умпроской Федерации. Ваша задача - снабжать бойцов армии оружием, боеприпасами, снаряжением, медикаментами, стройматериалами, пищей и всем, что необходимо. И не важно, где вы их достанете.
-      
+
       Ваши навыки: Базовые навыки, владение оружием, управление шаттлом, разборка сложных объектов, готовка, барное дело, разделка туш, продвинутая ботаника
-      
+
       Руководство к отыгрышу: У умпорцев упрощённый язык. Допускается писать просторечия или написание слов с ошибками, писать с диалектом или с говором. Все умпорцы трудолюбивы, военные очень преданы своей стране. Они бедны, но переносят это стоически. Среди них сильно укреплены узы боевого товарищества. Они недолюбливают учёных и особенно презирают всех граждан Ноократии Эранта.
-      
+
       Краткий лор государства: Умпорская Федерация около трёхсот лет назад военным способом отделилась от Ноократии Эранта. Они считают, что Ноократия построена на угнетении бедных трудящихся, даже самых трудолюбивых, которым просто не повезло с природным талантом. Сами же упорцы восхваляют как раз достижения честного труда. За время своего существования Федерация пережила пару разрушительных войн с Ноократией Эранта, научный и образовательный регресс, бедность, разгул преступности и тяготы поствоенной разрухи. Тем не менее,, народ умудряется жить даже в условиях полных неудач. На данный момент пик всеобщего спада пройден и начался государственный подъём. Этого удалось достичь за счёт трудолюбия граждан смены курса правительства, гуманитарной помощи от других государств, а также из-за привлечения капиталов крупных корпораций, вроде NanoTrasen, Vitezstvi, Hephaestus.
-#---------------------------------------------------------------Печать------------------------------------------------------------      
+#---------------------------------------------------------------Печать------------------------------------------------------------
 - type: entity
   name: name-of-UmporRubberStamp
   suffix: Умпорский
@@ -2687,8 +2628,8 @@
   - type: Sprite
     sprite: Victoria/Umpor/Equipment/umpor_stamp.rsi
     state: stamp
-#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------        
-#-----------------------------Базовый ящик------------------ 
+#---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------
+#-----------------------------Базовый ящик------------------
 - type: entity
   parent: CrateBaseSecure
   id: UmporCrate
@@ -2701,7 +2642,7 @@
     sprite: Victoria/Umpor/umpor_crates.rsi
   - type: AccessReader
     access: [["UmporAccess"]]
-#-----------------------------Ящик оружия------------------    
+#-----------------------------Ящик оружия------------------
 - type: entity
   id: UmporCrateWeapons
   parent: UmporCrate
@@ -2729,7 +2670,7 @@
       - id: UmporHeavyRifle
       - id: UmporLightRifle
       - id: UmporPistol
-#-----------------------------Ящик дробовиков------------------    
+#-----------------------------Ящик дробовиков------------------
 - type: entity
   id: UmporCrateWeaponsShotgan
   parent: UmporCrate
@@ -2739,13 +2680,13 @@
   components:
   - type: StorageFill
     contents:
-      - id: UmporShotgun 
       - id: UmporShotgun
       - id: UmporShotgun
       - id: UmporShotgun
       - id: UmporShotgun
-      - id: UmporShotgun 
-#-----------------------------Ящик боеприпасов------------------ 
+      - id: UmporShotgun
+      - id: UmporShotgun
+#-----------------------------Ящик боеприпасов------------------
 - type: entity
   id: UmporCrateAmmo
   parent: UmporCrate
@@ -2779,7 +2720,7 @@
       - id: UmporMagazineLightRifle
       - id: UmporMagazinePistol
       - id: UmporBoxShotgan
-#-----------------------------Ящик военной формы------------------ 
+#-----------------------------Ящик военной формы------------------
 - type: entity
   id: UmporCrateForm
   parent: UmporCrate
@@ -2819,7 +2760,7 @@
       - id: UmporBackpack
       - id: UmporBackpack
       - id: UmporBackpack
-#----------------------------------------Техфаб и швейник----------------------------- 
+#----------------------------------------Техфаб и швейник-----------------------------
 #-----------------------------Рецепты техфаба---------------------------
 #-------------------Инструменты-------------
 - type: latheRecipe
@@ -2839,7 +2780,7 @@
   materials:
     Steel: 400
     Wood: 200
-    
+
 - type: latheRecipe
   id: UmpornKnife
   result: UmpornKnife
@@ -2848,7 +2789,7 @@
   materials:
     Steel: 200
     Wood: 100
-    
+
 - type: latheRecipe
   id: UmporHealthAnalyzerUnpowered
   result: UmporHealthAnalyzerUnpowered
@@ -2857,89 +2798,99 @@
   materials:
     Steel: 200
     Gold: 50
-#-------------------Патроны-------------    
+#-------------------Патроны-------------
 - type: latheRecipe
   id: UmporCartridgeHeavyRifle
   result: UmporCartridgeHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 40
-    
+
 - type: latheRecipe
   id: UmporCartridgeLightRifle
   result: UmporCartridgeLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 20
-    
+
 - type: latheRecipe
   id: UmporCartridgePistol
   result: UmporCartridgePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 15
-    
+
 - type: latheRecipe
   id: UmporShellShotgun
   result: UmporShellShotgun
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 10
     Plastic: 15
-#-------------------Магазины оружия-------------    
+#-------------------Магазины оружия-------------
 - type: latheRecipe
   id: UmporMagazineHeavyRifle
   result: UmporMagazineHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 600
     Plastic: 100
-    
+
 - type: latheRecipe
   id: UmporMagazineLightRifle
   result: UmporMagazineLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 700
     Plastic: 100
-    
+
 - type: latheRecipe
   id: UmporMagazinePistol
   result: UmporMagazinePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 250
     Plastic: 100
-#-------------------Коробки патронов-------------    
+#-------------------Коробки патронов-------------
 - type: latheRecipe
   id: UmporBoxHeavyRifle
   result: UmporBoxHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 1500
     Plastic: 200
-    
+
 - type: latheRecipe
   id: UmporBoxLightRifle
   result: UmporBoxLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 1000
-    Plastic: 200  
+    Plastic: 200
 
 - type: latheRecipe
   id: UmporBoxPistol
   result: UmporBoxPistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 700
@@ -2948,52 +2899,53 @@
 - type: latheRecipe
   id: UmporBoxShotgan
   result: UmporBoxShotgan
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 400
-    Plastic: 550    
-#-------------------ID-карты-------------    
+    Plastic: 550
+#-------------------ID-карты-------------
 - type: latheRecipe
   id: UmporIDCardOfficer
   result: UmporIDCardOfficer
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100  
-    
+    Plastic: 100
+
 - type: latheRecipe
   id: UmporIDCardSolder
   result: UmporIDCardSolder
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100 
-    
+    Plastic: 100
+
 - type: latheRecipe
   id: UmporIDCardMedic
   result: UmporIDCardMedic
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100  
-    
+    Plastic: 100
+
 - type: latheRecipe
   id: UmporIDCardEngener
   result: UmporIDCardEngener
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100 
-    
+    Plastic: 100
+
 - type: latheRecipe
   id: UmporIDCardLogist
   result: UmporIDCardLogist
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 100 
-#-------------------КПК-------------    
+    Plastic: 100
+#-------------------КПК-------------
 - type: latheRecipe
   id: UmporPDASolder
   result: UmporPDASolder
@@ -3001,8 +2953,8 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200  
-    
+    Plastic: 200
+
 - type: latheRecipe
   id: UmporPDAOfficer
   result: UmporPDAOfficer
@@ -3010,7 +2962,7 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200    
+    Plastic: 200
 
 - type: latheRecipe
   id: UmporPDAEngener
@@ -3019,8 +2971,8 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200   
-    
+    Plastic: 200
+
 - type: latheRecipe
   id: UmporPDAMedic
   result: UmporPDAMedic
@@ -3028,7 +2980,7 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200    
+    Plastic: 200
 
 - type: latheRecipe
   id: UmporPDALogist
@@ -3037,15 +2989,15 @@
   materials:
     Gold: 50
     Steel: 200
-    Plastic: 200  
-#-------------------Радиосвязь-------------  
+    Plastic: 200
+#-------------------Радиосвязь-------------
 - type: latheRecipe
   id: UmporEncryptionKey
   result: UmporEncryptionKey
   completetime: 4
   materials:
     Gold: 50
-    Plastic: 50  
+    Plastic: 50
 
 - type: latheRecipe
   id: UmporHeadset
@@ -3053,8 +3005,8 @@
   completetime: 6
   materials:
     Steel: 100
-    Plastic: 100  
-#-------------------Оружие-------------     
+    Plastic: 100
+#-------------------Оружие-------------
 - type: latheRecipe
   id: UmporHeavyRifle
   result: UmporHeavyRifle
@@ -3062,8 +3014,8 @@
   completetime: 6
   materials:
     Steel: 400
-    Wood: 500 
-    
+    Wood: 500
+
 - type: latheRecipe
   id: UmporLightRifle
   result: UmporLightRifle
@@ -3071,8 +3023,8 @@
   completetime: 6
   materials:
     Steel: 500
-    Wood: 500 
-    
+    Wood: 500
+
 - type: latheRecipe
   id: UmporPistol
   result: UmporPistol
@@ -3080,8 +3032,8 @@
   completetime: 4
   materials:
     Steel: 300
-    Wood: 200 
-    
+    Wood: 200
+
 - type: latheRecipe
   id: UmporShotgun
   result: UmporShotgun
@@ -3089,9 +3041,9 @@
   completetime: 6
   materials:
     Steel: 300
-    Wood: 500  
+    Wood: 500
 #-----------------------------Рецепты швейника---------------------------
-#-------------------Форма------------- 
+#-------------------Форма-------------
 - type: latheRecipe
   id: UmporUniformSoldier
   result: UmporUniformSoldier
@@ -3126,28 +3078,28 @@
   completetime: 3
   materials:
     SheepWoolCleanMaterial: 300
-    
+
 - type: latheRecipe
   id: UmporUniformMine
   result: UmporUniformMine
   completetime: 3
   materials:
     SheepWoolCleanMaterial: 300
-#-------------------Рюкзак------------- 
+#-------------------Рюкзак-------------
 - type: latheRecipe
   id: UmporBackpack
   result: UmporBackpack
   completetime: 2
   materials:
     SheepWoolCleanMaterial: 200
-    
+
 - type: latheRecipe
   id: UmporBackpackMine
   result: UmporBackpackMine
   completetime: 2
   materials:
     SheepWoolCleanMaterial: 300
-#-------------------Шапки------------- 
+#-------------------Шапки-------------
 - type: latheRecipe
   id: UmporBeret
   result: UmporBeret
@@ -3168,7 +3120,7 @@
   completetime: 1
   materials:
     SheepWoolCleanMaterial: 100
-#-------------------Пояса------------- 
+#-------------------Пояса-------------
 - type: latheRecipe
   id: UmporBeltEng
   result: UmporBeltEng
@@ -3189,7 +3141,7 @@
   completetime: 2
   materials:
     SheepWoolCleanMaterial: 100
-#-------------------Броня------------- 
+#-------------------Броня-------------
 - type: latheRecipe
   id: UmporArmorBasic
   result: UmporArmorBasic
@@ -3213,7 +3165,7 @@
   materials:
     SheepWoolCleanMaterial: 100
     Steel: 300
-#-----------------------------Техфаб------------------ 
+#-----------------------------Техфаб------------------
 - type: entity
   id: UmporTechFab
   parent: BaseLathe
@@ -3238,7 +3190,18 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
+    staticPacks:
+    - PackUmporTechFab
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackUmporTechFab
+  recipes:
       - RecipeSteelWire
       - RecipeCord
       - ExplosiveMineBase
@@ -3275,18 +3238,12 @@
       - UmporLightRifle
       - UmporPistol
       - UmporShotgun
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
-#-----------------------------Швейник------------------        
+#-----------------------------Швейник------------------
 - type: entity
   parent: BaseLathe
-  id: UmpormUniformPrinter
-  name: name-of-UmpormUniformPrinter
-  description: description-of-UmpormUniformPrinter
+  id: UmporUniformPrinter
+  name: name-of-UmporUniformPrinter
+  description: description-of-UmporUniformPrinter
   components:
   - type: Transform
     noRot: false
@@ -3302,7 +3259,18 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticRecipes:
+    staticPacks:
+    - PackUmporUniformPrinter
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackUmporUniformPrinter
+  recipes:
       - UmporUniformSoldier
       - UmporUniformOficier
       - UmporUniformMedic
@@ -3320,12 +3288,6 @@
       - UmporArmorBasic
       - UmporArmorMiddle
       - UmporHelmet
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #---------------------------------Стандартная форма---------------------
 - type: entity
   id: UmporPaperForm
@@ -3343,18 +3305,18 @@
       =============================================
                           НАИМЕНОВАНИЕ ДОКУМЕНТА
       =============================================
-      
+
       Дата:
       Составитель документа:
       Должность составителя:
-      
-      
+
+
       Полное содержание документа со всей необходимой информацией и описанием
-      
+
       =============================================
-      
+
                                   [italic]Место для печатей[/italic]
-#-------------------------------------Спавнер потеряных-----------------------------------  
+#-------------------------------------Спавнер потеряных-----------------------------------
 - type: entity
   name: name-of-LostUmporSpawner
   id: LostUmporSpawner
@@ -3369,7 +3331,7 @@
       prototypes:
       - RandomUmpor
       chance: 1
-      
+
 - type: entity
   id: RandomUmpor
   name: name-of-RandomUmpor
@@ -3386,13 +3348,13 @@
   components:
     - type: GhostRole
       name: Потрёпанный умпорец
-      description: Ваш шаттл подбили в бою, навигация дала сбой и вас отшвырнуло в район НТ. Прилетите на станцию к своим партнёрам, попросите поучиться навыкам. 
+      description: Ваш шаттл подбили в бою, навигация дала сбой и вас отшвырнуло в район НТ. Прилетите на станцию к своим партнёрам, попросите поучиться навыкам.
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
     - type: Loadout
       prototypes: [ UmporOfficerGear, UmporSolderGear, UmporMedicGear, UmporEngenerGear, UmporBilderGear, UmporRadistGear, UmporLogistGear, UmporMinesweeperGear]
-#------------------------знамя------------------  
+#------------------------знамя------------------
 - type: entity
   id: UmporBannerStd
   parent: BannerBase
@@ -3402,7 +3364,7 @@
   components:
   - type: Sprite
     sprite: Victoria/Umpor/umpor_banner.rsi
-    state: banner_umpor_std 
+    state: banner_umpor_std
 #------------------------------------------куртка---------------------------------
 - type: entity
   parent: ClothingOuterWinterCoat
@@ -3423,7 +3385,7 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
-  - type: Armor 
+  - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.9
@@ -3452,7 +3414,7 @@
 #-----------------------------------------гранатомёт-------------------------------
 - type: Tag
   id: UmporCartridgeRocket
-  
+
 - type: Tag
   id: UmporRocket
 #------------------------------разрывной заряд---------------
@@ -3502,9 +3464,11 @@
     sprite: Victoria/Umpor/Weapon/umpor_rockets.rsi
   - type: RepeatingTrigger
     delay: 0.6 # line of fire as well as if it hits something
+    keyOut: timer
   - type: ProjectileGrenade
     fillPrototype: PelletClusterLethal
     capacity: 60
+    TriggerKey: timer
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container
@@ -3515,6 +3479,7 @@
       - UmporCartridgeRocket
   - type: TriggerOnCollide
     fixtureID: projectile
+    keyOut: timer
   - type: Projectile
     damage:
       types:
@@ -3550,8 +3515,8 @@
     damage:
       types:
         Blunt: 5
-#------------------------------заряд для заряжания---------------  
-#------------------------------разрывной заряд---------------  
+#------------------------------заряд для заряжания---------------
+#------------------------------разрывной заряд---------------
 - type: entity
   id: UmporRocketExp
   parent: BaseItem
@@ -3619,7 +3584,7 @@
   - type: ProjectileBatteryAmmoProvider
     proto: UmporCartridgeRocketFrag
     fireCost: 5000000
-#------------------------------дальнобойный заряд---------------  
+#------------------------------дальнобойный заряд---------------
 - type: entity
   id: UmporRocketFar
   parent: BaseItem
@@ -3696,4 +3661,4 @@
     zeroVisible: false
   - type: Appearance
 
-    
+

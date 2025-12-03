@@ -1,11 +1,22 @@
+#- type: entity
+#  id: SpawnPointPilot
+#  parent: SpawnPointJobBase
+# name: pilot
+#  components:
+#  - type: SpawnPoint
+#    job_id: Pilot
+#  - type: Sprite
+#    layers:
+#   - state: green
+#    - state: seniorofficer
+
 - type: entity
-  id: SpawnPointPilot
+  id: SpawnPointSurgeon
   parent: SpawnPointJobBase
-  name: pilot
+  name: surgeon
   components:
-  - type: SpawnPoint
-    job_id: Pilot
   - type: Sprite
     layers:
-      - state: green
-      - state: seniorofficer
+    - state: green
+    - state: virologist
+

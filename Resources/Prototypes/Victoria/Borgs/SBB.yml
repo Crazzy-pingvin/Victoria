@@ -10,7 +10,7 @@
   defaultModules:
   - BorgModuleDisabler
   - BorgModuleHoloprojector
-  - BorgModulShildWeek
+  - BorgModulShealdWeak
   - BorgModuleTool
 
   radioChannels:

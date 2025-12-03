@@ -695,7 +695,7 @@
     intensitySlope: 4
     totalIntensity: 30
     canCreateVacuum: false
-  - type: OnUseTimerTrigger
+  - type: TimerTrigger
     beepSound:
       path: "/Audio/Effects/beep1.ogg"
       params:
@@ -908,8 +908,9 @@
   - type: Slippery
     slipSound:
       path: /Audio/Effects/fence_rattle2.ogg
-    launchForwardsMultiplier: 0
-  - type: DamageUserOnTrigger
+    slipData:
+      launchForwardsMultiplier: 0
+  - type: DamageOnTrigger
     damage:
       types:
         Piercing: 4
@@ -954,7 +955,7 @@
           steps:
             - tool: Prying
               doAfter: 2
-              
+
     - node: StumbleDamaged
       entity: StumbleDamaged
       edges:
@@ -1042,8 +1043,9 @@
   - type: Slippery
     slipSound:
       path: /Audio/Effects/fence_rattle2.ogg
-    launchForwardsMultiplier: 0
-  - type: DamageUserOnTrigger
+    slipData:
+      launchForwardsMultiplier: 0
+  - type: DamageOnTrigger
     damage:
       types:
         Piercing: 2
@@ -1243,6 +1245,9 @@
         path: /Audio/Effects/beep_landmine.ogg
         params:
             maxDistance: 10
+  - type: DeleteOnTrigger
+    keysIn:
+    - timer
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -1260,6 +1265,8 @@
   - type: StepTrigger
     requiredTriggeredSpeed: 0
     stepOn: true
+  - type: TriggerOnStepTrigger
+    keyOut: timer
   - type: ProjectileGrenade
     fillPrototype: PelletClusterLethal
     capacity: 30

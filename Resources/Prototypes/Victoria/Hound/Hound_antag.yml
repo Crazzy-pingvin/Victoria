@@ -52,8 +52,7 @@
     issuer: roles-antag-hound-objective
   - type: RoleRequirement
     roles:
-      mindRoles:
-      - HoundRole
+    - HoundRole
 
 - type: entity
   parent: [BaseHoundObjective, BaseKillObjective]
@@ -66,6 +65,12 @@
   - type: TargetObjective
     title: objective-condition-kill-person-title
   - type: PickRandomPerson
+    filters:
+    # Can't have multiple objectives to kill the same person.
+    - !type:TargetObjectiveMindFilter
+      blacklist:
+        components:
+        - KillPersonCondition
 
 - type: entity
   parent: [BaseHoundObjective, BaseKillObjective]
@@ -77,7 +82,12 @@
     unique: true
   - type: TargetObjective
     title: objective-condition-kill-head-title
-  - type: PickRandomHead
+  - type: PickRandomPerson
+    filters:
+    - !type:BodyMindFilter
+      whitelist:
+        components:
+        - CommandStaff
   - type: KillPersonCondition
     requireDead: true
 

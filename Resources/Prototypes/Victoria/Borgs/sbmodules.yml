@@ -15,24 +15,6 @@
     - BorgModuleDefender
 
 #===неразряжающиеся предметы для модуля борга========
-#---атмос голопроектор---------
-- type: entity
-  name: атмос голопроектор
-  description: Останавливает суицидально настроеных пассажиров от убийства остальных во время разгерметизации.
-  parent: HolofanProjector
-  id: HolofanProjectorBorg
-  suffix: Для боргов
-  components:
-  - type: HolosignProjector
-    chargeUse: 240
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellMicroreactor
-        disableEject: true
-        swap: false
-
 #---проектор голобарьера---------
 - type: entity
   name: проектор голобарьера
@@ -65,10 +47,10 @@
     - state: security
     - state: icon-golo
   - type: ItemBorgModule
-    items:
-    - HolofanProjectorBorg
-    - HoloprojectorBorg
-    - HoloprojectorSecurityBorg
+    hands:
+    - item: HolofanProjectorBorg
+    - item: HoloprojectorBorg
+    - item: HoloprojectorSecurityBorg
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/module.rsi, state: golo-module }
 
@@ -175,7 +157,7 @@
 #===модули щита(разрушаемый щит и не разрушаемый)============
 
 - type: entity
-  id: BorgModulShildWeek
+  id: BorgModulShealdWeak
   parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
   name: слабый защитный модуль киборга
   description: Техническая деталь, дающая киборгам новые способности.
@@ -186,13 +168,13 @@
     - state: security
     - state: icon-shield-week
   - type: ItemBorgModule
-    items:
-    - RiotBulletShieldDistruct
+    hands:
+    - item: RiotBulletShieldDistruct
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/module.rsi, state: shield-module-week }
 
 - type: entity
-  id: BorgModulShild
+  id: BorgModuleSheald
   parent: [ BaseBorgModuleDefender, BaseProviderBorgModule ]
   name: защитный модуль киборга
   description: Техническая деталь, дающая киборгам новые способности.
@@ -203,8 +185,8 @@
     - state: security
     - state: icon-shield
   - type: ItemBorgModule
-    items:
-    - RiotBulletShieldNotDistruct
+    hands:
+    - item: RiotBulletShieldNotDistruct
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/module.rsi, state: shield-module }
 
@@ -256,7 +238,7 @@
     - state: security
     - state: icon-disabler
   - type: ItemBorgModule
-    items:
-    - WeaponDisablerBorg
+    hands:
+    - item: WeaponDisablerBorg
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/module.rsi, state: disabler-module }

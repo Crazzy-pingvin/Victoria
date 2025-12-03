@@ -12,6 +12,7 @@
   - type: Tag
     tags:
     - Sheet
+    - ConstructionMaterial
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -114,6 +115,7 @@
     tags:
     - Sheet
     - CrystalMaterial
+    - ConstructionMaterial
 
 - type: entity
   parent: SheetPlasma
@@ -148,6 +150,7 @@
     - Sheet
     - CrystalMaterial
     - RawCircuitBord
+    - ConstructionMaterial
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -201,13 +204,13 @@
     count: 1
 
 - type: entity
-  parent: [SheetOtherBase, FoodBase]
+  parent: [SheetOtherBase, EdibleBase]
   id: SheetUranium
   name: uranium
   suffix: Full
   components:
   - type: Material
-  - type: Food
+  - type: Edible
     transferAmount: 10
   - type: BadFood
   - type: PhysicalComposition

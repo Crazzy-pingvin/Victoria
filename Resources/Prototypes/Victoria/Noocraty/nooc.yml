@@ -297,7 +297,7 @@
     clothingPrototype: NoocHelmetHardsuit
 #------------------------------------шлем скафандра среднего класса----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: NoocHelmetHardsuit
   name: шлем ноократского скафандра
   description: Стандартный шлем скафандра для военных средних классов Ноократии Эранта
@@ -408,7 +408,7 @@
     clothingPrototype: NoocHelmetHardsuitDozer
 #------------------------------------шлем скафандра дозера----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: NoocHelmetHardsuitDozer
   name: шлем ноократского скафандра
   description: В отличие от обычных скафандровых шлемов Ноократии с широким лобовым визором, этот сделан более закрытым и укреплённым.
@@ -1828,142 +1828,47 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------низкие классы----------
-- type: dataset
+- type: localizedDataset
   id: NoocName-niz
   values:
-  - 12 класс
-  - 11 класс
-  - 10 класс
+    prefix: nooc-name-niz-
+    count: 3
 #---------------------------------средний класс----------
-- type: dataset
+- type: localizedDataset
   id: NoocName-sr
   values:
-  - 9 класс
-  - 8 класс
-  - 7 класс
+    prefix: nooc-name-sr-
+    count: 3
 #---------------------------------высокий класс----------
-- type: dataset
+- type: localizedDataset
   id: NoocName-vis
   values:
-  - 6 класс
-  - 5 класс
+    prefix: nooc-name-viz-
+    count: 2
 #---------------------------------фамилии высокого----------
-- type: dataset
+- type: localizedDataset
   id: NoocNameTwo-vis
   values:
-  - Баронов
-  - Повеленский
-  - Умнов
-  - Господский
-  - Граф
-  - Владенко
-  - Брейн
-  - Кинг
-  - Квинти
-  - Кюрфюст
-  - Габсбург
-  - Людо
-  - Домин
-  - Помпаду
-  - Романов
-  - Королёв
-  - Царицин
-  - Барбаросса
+    prefix: nooc-name-two-viz-
+    count: 18
 #---------------------------------фамилии среднего----------
-- type: dataset
+- type: localizedDataset
   id: NoocNameTwo-sr
   values:
-  - Баринов
-  - Среднёв
-  - Умнов
-  - Бумажников
-  - Копиров
-  - Владенко
-  - Кворедж
-  - Компасси
-  - Квинти
-  - Ричи
-  - Бронин
-  - Людо
-  - Домин
-  - Леонхарт
-  - Романов
-  - Княжев
-  - Виторник
-  - Вашир
-  - Мечебой
-  - Щитохват
-  - Униса
-  - Пашир
-  - Гирсиш
+    prefix: nooc-name-two-sr-
+    count: 23
 #---------------------------------фамилии низкого----------
-- type: dataset
+- type: localizedDataset
   id: NoocNameTwo-niz
   values:
-  - Штольницкий
-  - Кравчик
-  - Возняк
-  - Шевчик
-  - Седлак
-  - Ворач
-  - Млинарж
-  - Фишер
-  - Кук
-  - Смит
-  - Груббер
-  - Миллер
-  - Шмидт
-  - Фурнье
-  - Мейнье
-  - Шарпенье
-  - Контадино
-  - Феррари
-  - Коломбо
-  - Каса
-  - Варис
-  - Уриши
-  - Перроси
-  - Скалоус
-  - Киркабород
-  - Молоторук
-  - Топоробород
-  - Серпоус
-  - Хамербрад
-  - Аксовал
-  - Вириши
-  - Сарвари
-  - Уриси
+    prefix: nooc-name-two-niz-
+    count: 33
 #---------------------------------имена диверсантов----------
-- type: dataset
+- type: localizedDataset
   id: NoocName-div
   values:
-  - Алекс
-  - Пол
-  - Лалли
-  - Джон
-  - Генрих
-  - Владислав
-  - Йорген
-  - Джонатан
-  - Андрей
-  - Питер
-  - Пётр
-  - Карл
-  - Вейч
-  - Вадиссон
-  - Август
-  - Марк
-  - Гай
-  - Максим
-  - Максимилиан
-  - Макс
-  - Эмиль
-  - Фредеррик
-  - Франсис
-  - Уейд
-  - Холден
-  - Ван
-  - Иван
+    prefix: nooc-name-div-
+    count: 27
 #-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
 #---------------------------------высокий класс----------
 - type: randomHumanoidSettings
@@ -1986,6 +1891,7 @@
       nameSegments:
       - NoocName-vis
       - NoocNameTwo-vis
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocVisReady
@@ -2029,6 +1935,7 @@
     nameSegments:
     - NoocName-vis
     - NoocNameTwo-vis
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocVisR
 #---------------------------------средний класс----------
@@ -2052,6 +1959,7 @@
       nameSegments:
       - NoocName-sr
       - NoocNameTwo-sr
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocSrReady
@@ -2094,6 +2002,7 @@
     nameSegments:
     - NoocName-sr
     - NoocNameTwo-sr
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocSrR
 #---------------------------------средний класс медик----------
@@ -2117,6 +2026,7 @@
       nameSegments:
       - NoocName-sr
       - NoocNameTwo-sr
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocSrMedReady
@@ -2156,6 +2066,7 @@
     nameSegments:
     - NoocName-sr
     - NoocNameTwo-sr
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocSrMedR
   - type: NpcFactionMember
@@ -2182,6 +2093,7 @@
       nameSegments:
       - NoocName-sr
       - NoocNameTwo-sr
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocSrTechReady
@@ -2221,6 +2133,7 @@
     nameSegments:
     - NoocName-sr
     - NoocNameTwo-sr
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocSrTechR
   - type: NpcFactionMember
@@ -2247,6 +2160,7 @@
       nameSegments:
       - NoocName-sr
       - NoocNameTwo-sr
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocSrScoReady
@@ -2286,6 +2200,7 @@
     nameSegments:
     - NoocName-sr
     - NoocNameTwo-sr
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocSrScoR
   - type: NpcFactionMember
@@ -2312,6 +2227,7 @@
       nameSegments:
       - NoocName-sr
       - NoocNameTwo-sr
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocSrDozReady
@@ -2351,6 +2267,7 @@
     nameSegments:
     - NoocName-sr
     - NoocNameTwo-sr
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocSrDozR
   - type: NpcFactionMember
@@ -2377,6 +2294,7 @@
       nameSegments:
       - NoocName-niz
       - NoocNameTwo-niz
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: NoocNizReady
@@ -2416,6 +2334,7 @@
     nameSegments:
     - NoocName-niz
     - NoocNameTwo-niz
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: NoocNizR
   - type: NpcFactionMember
@@ -2523,8 +2442,8 @@
       board: [ DoorElectronicsNoocAccess ]
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -2534,8 +2453,8 @@
   components:
   - type: Sprite
     sprite: Victoria/Noocraty/nooc_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------------КПК, карты----------------------------------------
 #------------------------------------стандарт карты----------
 - type: entity
@@ -3054,7 +2973,8 @@
 - type: latheRecipe
   id: NoocPowerCellOne
   result: NoocPowerCellOne
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 300
@@ -3063,7 +2983,8 @@
 - type: latheRecipe
   id: NoocPowerCellThree
   result: NoocPowerCellThree
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 200
@@ -3072,7 +2993,8 @@
 - type: latheRecipe
   id: NoocPowerCellTwo
   result: NoocPowerCellTwo
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 100
@@ -3081,7 +3003,8 @@
 - type: latheRecipe
   id: NoocPowerCellFour
   result: NoocPowerCellFour
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 400
@@ -3090,7 +3013,8 @@
 - type: latheRecipe
   id: NoocPowerCellFive
   result: NoocPowerCellFive
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 500
@@ -3280,14 +3204,14 @@
   result: NoocCloak
   completetime: 1
   materials:
-    ElastaneClothMaterial: 300 
+    ElastaneClothMaterial: 300
 
 - type: latheRecipe
   id: NoocCloakStelth
   result: NoocCloakStelth
   completetime: 3
   materials:
-    ElastaneClothMaterial: 400  
+    ElastaneClothMaterial: 400
     Gold: 100
 #-------------------Пояса-------------
 - type: latheRecipe
@@ -3355,7 +3279,18 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticRecipes:
+    staticPacks:
+    - PackNoocTechFab
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackNoocTechFab
+  recipes:
       - NoocShieldStd
       - ExplosiveMineBase
       - FragmentationMineBase
@@ -3381,12 +3316,6 @@
       - NoocPistol
       - NoocMG
       - NoocGlassesMed
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #-----------------------------Швейник------------------
 - type: entity
   parent: BaseLathe
@@ -3409,7 +3338,18 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticRecipes:
+    staticPacks:
+    - PackNoocmUniformPrinter
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+
+- type: latheRecipePack
+  id: PackNoocmUniformPrinter
+  recipes:
       - NoocUniformNiz
       - NoocUniformVis
       - NoocUniformSr
@@ -3424,12 +3364,6 @@
       - NoocHardsuitField
       - NoocArmorBasic
       - NoocBeret
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
 #---------------------------------Стандартная форма---------------------
 - type: entity
   id: NoocPaperForm
@@ -3973,7 +3907,7 @@
   id: NoocNocturineChemistryBottle
   name: Бутылочка ноктюрина
   description: 30u быстродействующего усыпляющего средства
-  productEntity: NocturineChemistryBottle
+  productEntity: ChemistryBottleNocturine
   cost:
     Telecrystal: 4
   categories:
@@ -4206,7 +4140,7 @@
       visible: false
   - type: BorgChassis
     maxModules: 2
-      # moduleWhitelist: 
+      # moduleWhitelist:
         # tags:
           # - BorgModuleGeneric
           # - BorgModuleNoocraty
@@ -4286,17 +4220,6 @@
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 150
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
   - type: MovementSpeedModifier
     baseWalkSpeed : 3.5
     baseSprintSpeed : 5
@@ -4356,11 +4279,11 @@
     - state: nooc
     - state: icon-nooc
   - type: ItemBorgModule
-    items:
-    - NoocRifleBorgSnowdrop
-    - GrenadeFlashBang
-    - Omnitool
-    - NoocSnowdropSmoke
+    hands:
+    - item: NoocRifleBorgSnowdrop
+    - item: GrenadeFlashBang
+    - item: Omnitool
+    - item: NoocSnowdropSmoke
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }
 
@@ -4377,9 +4300,9 @@
     - state: nooc
     - state: icon-nooc
   - type: ItemBorgModule
-    items:
-    - NoocRifleBorgSnowdrop
-    - Omnitool
-    - NoocSnowdropSmoke
+    hands:
+    - item: NoocRifleBorgSnowdrop
+    - item: Omnitool
+    - item: NoocSnowdropSmoke
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }

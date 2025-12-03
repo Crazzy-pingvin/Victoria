@@ -15,8 +15,8 @@ particle-accelerator-control-menu-status-incomplete = [font="Monospace"][color=r
 particle-accelerator-control-menu-draw = [bold]Мощность:[/bold]
 particle-accelerator-control-menu-draw-value = [font="Monospace"]{ $watts }/{ $lastReceive }[/font]
 particle-accelerator-control-menu-draw-not-available = [font="Monospace"][color=gray]Н/Д[/color][/font]
+particle-accelerator-control-menu-flavor-left = ДЕРЖИТЕ КЛОУНА КАК МОЖНО ДАЛЬШЕ ОТ ЭТОЙ КОНСОЛИ!
+particle-accelerator-control-menu-flavor-right = v 1.6
 particle-accelerator-radio-message-on = Питание УЧ было включено.
 particle-accelerator-radio-message-off = Питание УЧ было выключено.
 particle-accelerator-radio-message-num = Мощность УЧ установлена на уровень { $level }.
-particle-accelerator-control-menu-flavor-left = ДЕРЖИТЕ КЛОУНА КАК МОЖНО ДАЛЬШЕ ОТ ЭТОЙ КОНСОЛИ!
-particle-accelerator-control-menu-flavor-right = v 1.6
