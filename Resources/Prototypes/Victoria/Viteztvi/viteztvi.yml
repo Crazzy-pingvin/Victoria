@@ -1948,8 +1948,8 @@
     contents:
       - id: MagazineBoxLightRifleBig
       - id: MagazineBoxLightRifleBig
-      - id: MagazineBoxAntiMaterielBig
-      - id: MagazineBoxAntiMaterielBig
+      - id: MagazineBoxAntiMateriel
+      - id: MagazineBoxAntiMateriel
 #-----------------------------Ящик дополнительных боеприпасов------------------
 - type: entity
   id: VitzCrateAmmoLight

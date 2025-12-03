@@ -373,7 +373,7 @@
 #------------------------------------анализатор здоровья----------
 - type: entity
   id: UmporHealthAnalyzerUnpowered
-  parent: BaseItem
+  parent: HandheldHealthAnalyzerUnpowered
   name: name-of-UmporHealthAnalyzerUnpowered
   description: description-of-UmporHealthAnalyzerUnpowered
   components:
@@ -386,30 +386,6 @@
         shader: unshaded
         visible: true
         map: [ "enum.PowerDeviceVisualLayers.Powered" ]
-  - type: Item
-    storedRotation: -90
-  - type: ActivatableUI
-    key: enum.HealthAnalyzerUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.HealthAnalyzerUiKey.Key:
-        type: HealthAnalyzerBoundUserInterface
-  - type: HealthAnalyzer
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
-  - type: Tag
-    tags:
-      - DiscreteHealthAnalyzer
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.PowerCellSlotVisuals.Enabled:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-          False: { visible: false }
-  - type: GuideHelp
-    guides:
-      - Medical Doctor
 #------------------------------------топорик----------
 - type: Tag
   id: UmporHatchet
@@ -497,7 +473,7 @@
     solutionId: tank
     proto: BulletWaterShot
   - type: RCDAmmo
-    charges: 1000
+    Charges: 1000
 #------------------------сам РСУ--------------
 - type: entity
   id: UmporRCD
@@ -535,7 +511,7 @@
     - Deconstruct
   - type: LimitedCharges
     maxCharges: 50
-    charges: 50
+    lastCharges: 50
   - type: UseDelay
   - type: UserInterface
     interfaces:
@@ -2826,7 +2802,8 @@
 - type: latheRecipe
   id: UmporCartridgeHeavyRifle
   result: UmporCartridgeHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 40
@@ -2834,7 +2811,8 @@
 - type: latheRecipe
   id: UmporCartridgeLightRifle
   result: UmporCartridgeLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 20
@@ -2842,7 +2820,8 @@
 - type: latheRecipe
   id: UmporCartridgePistol
   result: UmporCartridgePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 15
@@ -2850,7 +2829,8 @@
 - type: latheRecipe
   id: UmporShellShotgun
   result: UmporShellShotgun
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 10
@@ -2859,7 +2839,8 @@
 - type: latheRecipe
   id: UmporMagazineHeavyRifle
   result: UmporMagazineHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 600
@@ -2868,7 +2849,8 @@
 - type: latheRecipe
   id: UmporMagazineLightRifle
   result: UmporMagazineLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 700
@@ -2877,7 +2859,8 @@
 - type: latheRecipe
   id: UmporMagazinePistol
   result: UmporMagazinePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 250
@@ -2886,7 +2869,8 @@
 - type: latheRecipe
   id: UmporBoxHeavyRifle
   result: UmporBoxHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 1500
@@ -2895,7 +2879,8 @@
 - type: latheRecipe
   id: UmporBoxLightRifle
   result: UmporBoxLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 1000
@@ -2904,7 +2889,8 @@
 - type: latheRecipe
   id: UmporBoxPistol
   result: UmporBoxPistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 700
@@ -2913,7 +2899,8 @@
 - type: latheRecipe
   id: UmporBoxShotgan
   result: UmporBoxShotgan
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2.5
   materials:
     Steel: 400
@@ -3481,8 +3468,7 @@
   - type: ProjectileGrenade
     fillPrototype: PelletClusterLethal
     capacity: 60
-    keysIn:
-    - timer
+    TriggerKey: timer
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container

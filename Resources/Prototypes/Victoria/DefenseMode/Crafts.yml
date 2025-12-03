@@ -44,7 +44,8 @@
 - type: latheRecipe
   id: DefUmporCartridgeHeavyRifle
   result: UmporCartridgeHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     PlumbumMaterial: 4
@@ -52,7 +53,8 @@
 - type: latheRecipe
   id: DefUmporCartridgeLightRifle
   result: UmporCartridgeLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     PlumbumMaterial: 3
@@ -60,7 +62,8 @@
 - type: latheRecipe
   id: DefUmporCartridgePistol
   result: UmporCartridgePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.3
   materials:
     PlumbumMaterial: 2
@@ -68,7 +71,8 @@
 - type: latheRecipe
   id: DefUmporShellShotgun
   result: UmporShellShotgun
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     PlumbumMaterial: 2
@@ -77,7 +81,8 @@
 - type: latheRecipe
   id: DefUmporRocketExp
   result: UmporRocketExp
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.8
   materials:
     PlumbumMaterial: 100
@@ -87,7 +92,8 @@
 - type: latheRecipe
   id: DefUmporRocketFrag
   result: UmporRocketFrag
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.8
   materials:
     PlumbumMaterial: 150
@@ -97,7 +103,8 @@
 - type: latheRecipe
   id: DefUmporRocketFar
   result: UmporRocketFar
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.8
   materials:
     PlumbumMaterial: 100
@@ -107,7 +114,8 @@
 - type: latheRecipe
   id: DefUmporMagazineHeavyRifle
   result: UmporMagazineHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     PlumbumMaterial: 55
@@ -116,7 +124,8 @@
 - type: latheRecipe
   id: DefUmporMagazineLightRifle
   result: UmporMagazineLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     PlumbumMaterial: 80
@@ -125,7 +134,8 @@
 - type: latheRecipe
   id: DefUmporMagazinePistol
   result: UmporMagazinePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     PlumbumMaterial: 20
@@ -134,7 +144,8 @@
 - type: latheRecipe
   id: DefUmporBoxHeavyRifle
   result: UmporBoxHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 13
   materials:
     PlumbumMaterial: 130
@@ -143,7 +154,8 @@
 - type: latheRecipe
   id: DefUmporBoxLightRifle
   result: UmporBoxLightRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 10
   materials:
     PlumbumMaterial: 120
@@ -152,7 +164,8 @@
 - type: latheRecipe
   id: DefUmporBoxPistol
   result: UmporBoxPistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     PlumbumMaterial: 70
@@ -161,7 +174,8 @@
 - type: latheRecipe
   id: DefUmporBoxShotgan
   result: UmporBoxShotgan
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 13
   materials:
     PlumbumMaterial: 35
@@ -209,7 +223,8 @@
 - type: latheRecipe
   id: DefMirtCartridgeHeavy
   result: MirtCartridgeHeavy
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Steel: 4
@@ -217,7 +232,8 @@
 - type: latheRecipe
   id: DefMirtCartridgeLight
   result: MirtCartridgeLight
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     Steel: 2
@@ -225,7 +241,8 @@
 - type: latheRecipe
   id: DefMirtCartridgePistol
   result: MirtCartridgePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.3
   materials:
     Steel: 3
@@ -233,7 +250,8 @@
 - type: latheRecipe
   id: DefMirtMagazineRifle
   result: MirtMagazineRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 60
@@ -242,7 +260,8 @@
 - type: latheRecipe
   id: DefMirtMagazineSMG
   result: MirtMagazineSMG
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     Steel: 40
@@ -251,7 +270,8 @@
 - type: latheRecipe
   id: DefMirtMagazineLMG
   result: MirtMagazineLMG
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 6
   materials:
     Steel: 280
@@ -260,7 +280,8 @@
 - type: latheRecipe
   id: DefMirtMagazinePistol
   result: MirtMagazinePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     Steel: 25
@@ -269,7 +290,8 @@
 - type: latheRecipe
   id: DefMirtMagazineAutomat
   result: MirtMagazineAutomat
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 115
@@ -278,7 +300,8 @@
 - type: latheRecipe
   id: DefMirtMagazineZenit
   result: MirtMagazineZenit
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 6
   materials:
     Steel: 250
@@ -287,7 +310,8 @@
 - type: latheRecipe
   id: DefMirtBoxHeavy
   result: MirtBoxHeavy
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 13
   materials:
     Steel: 140
@@ -296,7 +320,8 @@
 - type: latheRecipe
   id: DefMirtBoxLight
   result: MirtBoxLight
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 10
   materials:
     Steel: 100
@@ -305,7 +330,8 @@
 - type: latheRecipe
   id: DefMirtBoxPistol
   result: MirtBoxPistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     Steel: 110
@@ -314,7 +340,8 @@
 - type: latheRecipe
   id: DefMirtPowerCell
   result: MirtPowerCell
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 70
@@ -323,7 +350,8 @@
 - type: latheRecipe
   id: DefNoocPowerCellOne
   result: NoocPowerCellOne
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 65
@@ -332,7 +360,8 @@
 - type: latheRecipe
   id: DefNoocPowerCellThree
   result: NoocPowerCellThree
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 105
@@ -341,7 +370,8 @@
 - type: latheRecipe
   id: DefNoocPowerCellTwo
   result: NoocPowerCellTwo
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     Steel: 25
@@ -350,7 +380,8 @@
 - type: latheRecipe
   id: DefNoocPowerCellFour
   result: NoocPowerCellFour
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 230
@@ -359,7 +390,8 @@
 - type: latheRecipe
   id: DefNoocPowerCellFive
   result: NoocPowerCellFive
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 400
@@ -368,7 +400,8 @@
 - type: latheRecipe
   id: DefNoocPowerCellCold
   result: NoocPowerCellCold
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 110
@@ -423,7 +456,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaStd
   result: CDCCartridgePlasmaStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.3
   materials:
     Plasma: 4
@@ -431,7 +465,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaHotStd
   result: CDCCartridgePlasmaHotStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     Plasma: 8
@@ -439,7 +474,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaLigStd
   result: CDCCartridgePlasmaLigStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.3
   materials:
     Plasma: 2
@@ -447,7 +483,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaRif
   result: CDCCartridgePlasmaRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Plasma: 2
@@ -455,7 +492,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaHotRif
   result: CDCCartridgePlasmaHotRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.6
   materials:
     Plasma: 3
@@ -463,7 +501,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaLigRif
   result: CDCCartridgePlasmaLigRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     Plasma: 1
@@ -471,7 +510,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaDefoc
   result: CDCCartridgePlasmaDefoc
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     Plasma: 3
@@ -479,7 +519,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaHotDefoc
   result: CDCCartridgePlasmaHotDefoc
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Plasma: 6
@@ -487,7 +528,8 @@
 - type: latheRecipe
   id: DefCDCCartridgePlasmaLigDefoc
   result: CDCCartridgePlasmaLigDefoc
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.45
   materials:
     Plasma: 2
@@ -495,7 +537,8 @@
 - type: latheRecipe
   id: DefCDCBeakerPlasma
   result: CDCBeakerPlasma
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Glass: 300
@@ -503,7 +546,8 @@
 - type: latheRecipe
   id: DefCDCBeakerPlasmaStd
   result: CDCBeakerPlasmaStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Glass: 300
@@ -512,7 +556,8 @@
 - type: latheRecipe
   id: DefCDCBeakerPlasmaHot
   result: CDCBeakerPlasmaHot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Glass: 300
@@ -521,7 +566,8 @@
 - type: latheRecipe
   id: DefCDCBeakerPlasmaCold
   result: CDCBeakerPlasmaCold
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     Glass: 300
@@ -530,7 +576,8 @@
 - type: latheRecipe
   id: DefCDCMagazinePistolStd
   result: CDCMagazinePistolStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     Steel: 20
@@ -539,7 +586,8 @@
 - type: latheRecipe
   id: DefCDCMagazinePistolHot
   result: CDCMagazinePistolHot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 30
@@ -548,7 +596,8 @@
 - type: latheRecipe
   id: DefCDCMagazinePistolLig
   result: CDCMagazinePistolLig
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     Steel: 20
@@ -557,7 +606,8 @@
 - type: latheRecipe
   id: DefCDCMagazineAutomatStd
   result: CDCMagazineAutomatStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 30
@@ -566,7 +616,8 @@
 - type: latheRecipe
   id: DefCDCMagazineAutomatHot
   result: CDCMagazineAutomatHot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 40
@@ -575,7 +626,8 @@
 - type: latheRecipe
   id: DefCDCMagazineAutomatLig
   result: CDCMagazineAutomatLig
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 30
@@ -584,7 +636,8 @@
 - type: latheRecipe
   id: DefCDCMagazineRifleStd
   result: CDCMagazineRifleStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 30
@@ -593,7 +646,8 @@
 - type: latheRecipe
   id: DefCDCMagazineRifleHot
   result: CDCMagazineRifleHot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 6
   materials:
     Steel: 40
@@ -602,7 +656,8 @@
 - type: latheRecipe
   id: DefCDCMagazineRifleLig
   result: CDCMagazineRifleLig
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 30
@@ -611,7 +666,8 @@
 - type: latheRecipe
   id: DefCDCMagazineDefocStd
   result: CDCMagazineDefocStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 25
@@ -620,7 +676,8 @@
 - type: latheRecipe
   id: DefCDCMagazineDefocHot
   result: CDCMagazineDefocHot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     Steel: 35
@@ -629,7 +686,8 @@
 - type: latheRecipe
   id: DefCDCMagazineDefocLig
   result: CDCMagazineDefocLig
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     Steel: 20
@@ -638,7 +696,8 @@
 - type: latheRecipe
   id: DefCDCMagazineFireMini
   result: CDCMagazineFireMini
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.4
   materials:
     Glass: 300
@@ -647,7 +706,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaRif
   result: CDCBoxCartridgePlasmaRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 15
   materials:
     Steel: 50
@@ -656,7 +716,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaHotRif
   result: CDCBoxCartridgePlasmaHotRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 17
   materials:
     Steel: 50
@@ -665,7 +726,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaLigRif
   result: CDCBoxCartridgePlasmaLigRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 13
   materials:
     Steel: 50
@@ -674,7 +736,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaStd
   result: CDCBoxCartridgePlasmaStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 10
   materials:
     Steel: 35
@@ -683,7 +746,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaHotStd
   result: CDCBoxCartridgePlasmaHotStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 11
   materials:
     Steel: 35
@@ -692,7 +756,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaLigStd
   result: CDCBoxCartridgePlasmaLigStd
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 9
   materials:
     Steel: 35
@@ -701,7 +766,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaDefoc
   result: CDCBoxCartridgePlasmaDefoc
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 13
   materials:
     Steel: 40
@@ -710,7 +776,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaHotDefoc
   result: CDCBoxCartridgePlasmaHotDefoc
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 15
   materials:
     Steel: 40
@@ -719,7 +786,8 @@
 - type: latheRecipe
   id: DefCDCBoxCartridgePlasmaLigDefoc
   result: CDCBoxCartridgePlasmaLigDefoc
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 11
   materials:
     Steel: 40
@@ -766,7 +834,8 @@
 - type: latheRecipe
   id: DefPetrCartridgeRifle
   result: PetrCartridgeRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     PlumbumMaterial: 4
@@ -774,7 +843,8 @@
 - type: latheRecipe
   id: DefPetrCartridgePistol
   result: PetrCartridgePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     PlumbumMaterial: 2
@@ -782,7 +852,8 @@
 - type: latheRecipe
   id: DefPetrCartridgeRevolver
   result: PetrCartridgeRevolver
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     PlumbumMaterial: 3
@@ -790,7 +861,8 @@
 - type: latheRecipe
   id: DefShellShotgun
   result: ShellShotgun
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 0.5
   materials:
     PlumbumMaterial: 3
@@ -799,7 +871,8 @@
 - type: latheRecipe
   id: DefPetrMagazinePistol
   result: PetrMagazinePistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 3
   materials:
     PlumbumMaterial: 20
@@ -807,7 +880,8 @@
 - type: latheRecipe
   id: DefPetrMagazineSMG
   result: PetrMagazineSMG
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 5
   materials:
     PlumbumMaterial: 55
@@ -815,7 +889,8 @@
 - type: latheRecipe
   id: DefPetrSpeedLoader
   result: PetrSpeedLoader
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     PlumbumMaterial: 25
@@ -823,7 +898,8 @@
 - type: latheRecipe
   id: DefPetrMagazineRifle
   result: PetrMagazineRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 6
   materials:
     PlumbumMaterial: 140
@@ -831,7 +907,8 @@
 - type: latheRecipe
   id: DefPetrMagazineRifleBox
   result: PetrMagazineRifleBox
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 10
   materials:
     PlumbumMaterial: 520
@@ -839,7 +916,8 @@
 - type: latheRecipe
   id: DefPetrMagazineShotgun
   result: PetrMagazineShotgun
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     PlumbumMaterial: 30
@@ -848,7 +926,8 @@
 - type: latheRecipe
   id: DefUSSPBatteryPistCarab
   result: USSPBatteryPistCarab
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 4
   materials:
     PlumbumMaterial: 40
@@ -857,7 +936,8 @@
 - type: latheRecipe
   id: DefUSSPBatterySMG
   result: USSPBatterySMG
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 6
   materials:
     PlumbumMaterial: 100
@@ -866,7 +946,8 @@
 - type: latheRecipe
   id: DefUSSPBatteryRif
   result: USSPBatteryRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 6
   materials:
     PlumbumMaterial: 80
@@ -875,7 +956,8 @@
 - type: latheRecipe
   id: DefUSSPBatteryAuto
   result: USSPBatteryAuto
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     PlumbumMaterial: 200
@@ -884,7 +966,8 @@
 - type: latheRecipe
   id: DefUSSPBatteryLMG
   result: USSPBatteryLMG
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 12
   materials:
     PlumbumMaterial: 600
@@ -893,7 +976,8 @@
 - type: latheRecipe
   id: DefUSSPBatteryShot
   result: USSPBatteryShot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     PlumbumMaterial: 150
@@ -902,7 +986,8 @@
 - type: latheRecipe
   id: DefUSSPBatterySing
   result: USSPBatterySing
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     PlumbumMaterial: 150
@@ -911,7 +996,8 @@
 - type: latheRecipe
   id: DefUSSPBatteryRadio
   result: USSPBatteryRadio
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     PlumbumMaterial: 150
@@ -920,7 +1006,8 @@
 - type: latheRecipe
   id: DefPetrBoxRifle
   result: PetrBoxRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 15
   materials:
     PlumbumMaterial: 210
@@ -928,7 +1015,8 @@
 - type: latheRecipe
   id: DefPetrBoxRevolver
   result: PetrBoxRevolver
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 15
   materials:
     PlumbumMaterial: 135
@@ -936,7 +1024,8 @@
 - type: latheRecipe
   id: DefPetrBoxPistol
   result: PetrBoxPistol
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 15
   materials:
     PlumbumMaterial: 165
@@ -944,7 +1033,8 @@
 - type: latheRecipe
   id: DefBoxLethalshot
   result: BoxLethalshot
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 8
   materials:
     PlumbumMaterial: 40
@@ -953,7 +1043,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartSlb
   result: USSPWeaponPartSlb
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 250
@@ -963,7 +1054,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartSib
   result: USSPWeaponPartSib
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 750
@@ -973,7 +1065,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartCev
   result: USSPWeaponPartCev
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 200
@@ -982,7 +1075,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartStb
   result: USSPWeaponPartStb
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 300
@@ -992,7 +1086,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartUsk
   result: USSPWeaponPartUsk
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 200
@@ -1002,7 +1097,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartKmp
   result: USSPWeaponPartKmp
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 100
@@ -1012,7 +1108,8 @@
 - type: latheRecipe
   id: DefUSSPWeaponPartPrk
   result: USSPWeaponPartPrk
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     Steel: 100
@@ -1338,7 +1435,8 @@
 - type: latheRecipe
   id: UmporSniperCartridgeHeavyRifle
   result: UmporSniperCartridgeHeavyRifle
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     UmporCartridgeHeavyRifle: 1
@@ -1346,7 +1444,8 @@
 - type: latheRecipe
   id: MirtSniperCartridgeHeavy
   result: MirtSniperCartridgeHeavy
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     MirtCartridgeHeavy: 1
@@ -1354,7 +1453,8 @@
 - type: latheRecipe
   id: CDCSniperCartridgePlasmaRif
   result: CDCSniperCartridgePlasmaRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 50
   materials:
     CDCCartridgePlasmaRif: 1
@@ -1362,7 +1462,8 @@
 - type: latheRecipe
   id: CDCSniperCartridgePlasmaHotRif
   result: CDCSniperCartridgePlasmaHotRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 60
   materials:
     CDCCartridgePlasmaHotRif: 1
@@ -1370,7 +1471,8 @@
 - type: latheRecipe
   id: CDCSniperCartridgePlasmaLigRif
   result: CDCSniperCartridgePlasmaLigRif
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 40
   materials:
     CDCCartridgePlasmaLigRif: 1
@@ -1378,7 +1480,8 @@
 - type: latheRecipe
   id: NoocPowerCellOneSnipe
   result: NoocPowerCellOneSnipe
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 180
   materials:
     NoocPowerCellOne: 1
@@ -1386,7 +1489,8 @@
 - type: latheRecipe
   id: USSPBatteryCarabSnipe
   result: USSPBatteryCarabSnipe
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 180
   materials:
     USSPBatteryPistCarab: 1
@@ -1394,7 +1498,8 @@
 - type: latheRecipe
   id: USSPBatteryRifSnipe
   result: USSPBatteryRifSnipe
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 180
   materials:
     USSPBatteryRif: 1

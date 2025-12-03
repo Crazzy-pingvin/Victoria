@@ -908,7 +908,8 @@
   - type: Slippery
     slipSound:
       path: /Audio/Effects/fence_rattle2.ogg
-    launchForwardsMultiplier: 0
+    slipData:
+      launchForwardsMultiplier: 0
   - type: DamageOnTrigger
     damage:
       types:
@@ -1042,7 +1043,8 @@
   - type: Slippery
     slipSound:
       path: /Audio/Effects/fence_rattle2.ogg
-    launchForwardsMultiplier: 0
+    slipData:
+      launchForwardsMultiplier: 0
   - type: DamageOnTrigger
     damage:
       types:

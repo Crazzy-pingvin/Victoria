@@ -1,10 +1,10 @@
-- type: gameMapPool
-  id: CorvaxMapPool
-  maps:
-    - CorvaxDelta
-    - CorvaxSilly
-    - CorvaxPaper
-    - Box
+#- type: gameMapPool
+#  id: CorvaxMapPool
+#  maps:
+#    - CorvaxDelta
+#    - CorvaxSilly
+#    - CorvaxPaper
+#    - Box
   # Highpop 55+
 #  - CorvaxDelta
 #  - CorvaxAvrite

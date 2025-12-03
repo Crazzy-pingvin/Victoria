@@ -48,3 +48,33 @@ ussp-name-ems-1 = Мл.Сержант
 ussp-name-ems-2 = Сержант
 ussp-name-ems-3 = Ст.Сержант
 ussp-name-ems-4 = Старшина
+
+
+SSSP-borg-rab-abb-1 = УРМоВИ
+SSSP-borg-acad-abb-1 = УАМоВИ
+
+SSSP-borg-name-1 = Винтик
+SSSP-borg-name-2 = Шпунтик
+SSSP-borg-name-3 = Электроник
+SSSP-borg-name-4 = Алиса
+SSSP-borg-name-5 = Зелёный
+SSSP-borg-name-6 = Болтик
+SSSP-borg-name-7 = Нехочуха
+SSSP-borg-name-8 = Трудяга
+SSSP-borg-name-9 = Юра
+SSSP-borg-name-10 = Фасхи
+SSSP-borg-name-11 = Мехсил
+SSSP-borg-name-12 = Мишка
+SSSP-borg-name-13 = Пегас
+SSSP-borg-name-14 = Говорун
+SSSP-borg-name-15 = Шелезяка
+SSSP-borg-name-16 = Громозека
+SSSP-borg-name-17 = Буран
+SSSP-borg-name-18 = Фараб
+SSSP-borg-name-19 = Мир
+SSSP-borg-name-20 = Вертер
+SSSP-borg-name-21 = Пионер
+SSSP-borg-name-22 = Космонавт
+SSSP-borg-name-23 = Вафельница
+SSSP-borg-name-24 = Вафля
+SSSP-borg-name-25 = Корунд

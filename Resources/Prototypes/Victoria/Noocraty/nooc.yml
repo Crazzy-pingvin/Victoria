@@ -2973,7 +2973,8 @@
 - type: latheRecipe
   id: NoocPowerCellOne
   result: NoocPowerCellOne
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 300
@@ -2982,7 +2983,8 @@
 - type: latheRecipe
   id: NoocPowerCellThree
   result: NoocPowerCellThree
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 200
@@ -2991,7 +2993,8 @@
 - type: latheRecipe
   id: NoocPowerCellTwo
   result: NoocPowerCellTwo
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 100
@@ -3000,7 +3003,8 @@
 - type: latheRecipe
   id: NoocPowerCellFour
   result: NoocPowerCellFour
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 400
@@ -3009,7 +3013,8 @@
 - type: latheRecipe
   id: NoocPowerCellFive
   result: NoocPowerCellFive
-  category: Ammo
+  categories:
+  - Ammo
   completetime: 2
   materials:
     Steel: 500
@@ -3902,7 +3907,7 @@
   id: NoocNocturineChemistryBottle
   name: Бутылочка ноктюрина
   description: 30u быстродействующего усыпляющего средства
-  productEntity: NocturineChemistryBottle
+  productEntity: ChemistryBottleNocturine
   cost:
     Telecrystal: 4
   categories:
@@ -4298,6 +4303,6 @@
     hands:
     - item: NoocRifleBorgSnowdrop
     - item: Omnitool
-    - item: SnowdropSmoke
+    - item: NoocSnowdropSmoke
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }

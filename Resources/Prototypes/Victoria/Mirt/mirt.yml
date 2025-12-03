@@ -977,9 +977,10 @@
     damageContainers:
       - Biological
     damage:
-      Caustic: -10
-      Poison: -10
-      Heat: -5
+      types:
+        Caustic: -10
+        Poison: -10
+        Heat: -5
       groups:
         Brute: -15
 
@@ -989,7 +990,7 @@
   suffix: Миртан, Полный
   components:
   - type: Stack
-    lingering: true
+#    lingering: true
     count: 20
 #-------------------------------------знамёна-------------------------------
 #------------------------стандартное------------------
@@ -1264,8 +1265,7 @@
   - type: ProjectileGrenade
     fillPrototype: MirtBulletLightFrag
     capacity: 20
-    keysIn:
-    - timer
+    triggerKey: timer
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container

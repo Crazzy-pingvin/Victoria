@@ -18,48 +18,27 @@
 #=======имена для боргов======================
 #----аббревиатура перед именем------------
 
-- type: dataset
+- type: localizedDataset
   id: SSSP-borg-rab-abb
   values:
-  - УРМоВИ
+    prefix: SSSP-borg-rab-abb-
+    count: 1
 #универсальная рабочая машина оснащённая витруальным интеллектом
 
-- type: dataset
+- type: localizedDataset
   id: SSSP-borg-acad-abb
   values:
-  - УАМоВИ
+    prefix: SSSP-borg-acad-abb-
+    count: 1
 #универсальная академическая машина оснащённая витруальным интеллектом
 
 #----уникалььное имя борга------------
 
-- type: dataset
+- type: localizedDataset
   id: SSSP-borg-name
   values:
-  - Винтик
-  - Шпунтик
-  - Электроник
-  - Алиса
-  - Зелёный
-  - Болтик
-  - Нехочуха
-  - Трудяга
-  - Юра
-  - Фасхи
-  - Мехсил
-  - Мишка
-  - Пегас
-  - Говорун
-  - Шелезяка
-  - Громозека
-  - Буран
-  - Фараб
-  - Мир
-  - Вертер
-  - Пионер
-  - Космонавт
-  - Вафельница
-  - Вафля
-  - Корунд
+    prefix: SSSP-borg-name-
+    count: 25
 
 #=======Модули петров и всё с ними связанное==========
 #----тэг для модулей-----------
@@ -161,7 +140,7 @@
     - item: PetrPistolBorg
     - item: Emag
     - item: PetrRubberStamp
-    - item: Brutepack10Lingering
+#    - item: Brutepack10Lingering
     - item: CombatKnife
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Borgs/petr_modules.rsi, state: spy-petr }
@@ -450,7 +429,7 @@
       borg_module:
         - BorgModuleTool
         - BorgModuleMining
-        - BorgModuleGrapplingGun
+        - BorgModuleTraversal
         - BorgModuleGardening
         - BorgModuleHarvesting
   - type: ItemSlots
@@ -481,7 +460,7 @@
         - PositronicBrain
       borg_module:
         - BorgModuleService
-        - BorgModuleLightReplacer
+        - BorgModuleCustodial
         - BorgModuleAdvancedCleaning
   - type: ItemSlots
     slots:
@@ -512,7 +491,7 @@
       borg_module:
         - BorgModuleTool
         - BorgModuleMining
-        - BorgModuleGrapplingGun
+        - BorgModuleTraversal
         - BorgModuleHarvesting
         - BorgModulePetrCombat
   - type: ItemSlots
@@ -543,7 +522,7 @@
         - PositronicBrain
       borg_module:
         - BorgModuleService
-        - BorgModuleLightReplacer
+        - BorgModuleCustodial
         - BorgModuleAdvancedCleaning
         -  BorgModulePetrSpy
   - type: ItemSlots
