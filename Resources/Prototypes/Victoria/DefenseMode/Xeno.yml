@@ -323,7 +323,7 @@
     entity: MobXenoDefAlfa
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoDefAlfa
   id: MobXenoDefBeta
   components:
@@ -335,7 +335,7 @@
     entity: MobXenoDefBetaAlter
     
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoDefAlfaAlter
   id: MobXenoDefBetaAlter
   components:
@@ -347,7 +347,7 @@
     entity: MobXenoDefBeta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoDefAlfa
   id: MobXenoDefGamma
   components:
@@ -359,7 +359,7 @@
     entity: MobXenoDefGammaAlter
     
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoDefAlfaAlter
   id: MobXenoDefGammaAlter
   components:
@@ -373,7 +373,7 @@
 - type: entity
   name: Преторианец
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, ксено
   parent: [MobXenoPraetorian, MobXenoDefBase]
   id: MobXenoPraetorianDefAlfa
   components:
@@ -396,7 +396,7 @@
     bloodMaxVolume: 50
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoPraetorianDefAlfa
   id: MobXenoPraetorianDefBeta
   components:
@@ -404,7 +404,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoPraetorianDefAlfa
   id: MobXenoPraetorianDefGamma
   components:
@@ -435,7 +435,7 @@
     bloodMaxVolume: 50
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoDroneDefAlfa
   id: MobXenoDroneDefBeta
   components:
@@ -443,7 +443,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoDroneDefAlfa
   id: MobXenoDroneDefGamma
   components:
@@ -453,7 +453,7 @@
 - type: entity
   name: Королева
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoQueen, MobXenoDefBase]
   id: MobXenoQueenDefAlfa
   components:
@@ -480,7 +480,7 @@
     bloodMaxVolume: 100
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoQueenDefAlfa
   id: MobXenoQueenDefBeta
   components:
@@ -488,7 +488,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoQueenDefAlfa
   id: MobXenoQueenDefGamma
   components:
@@ -498,7 +498,7 @@
 - type: entity
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoRavager, MobXenoDefBase]
   id: MobXenoRavagerDefAlfa
   components:
@@ -528,7 +528,7 @@
 - type: entity
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Альтернативный
+  suffix: Оборона, Альфа, Альтернативный, Ксено
   parent: [MobXenoRavagerDefAlfa, MobXenoDefBase]
   id: MobXenoRavagerDefAlfaAlter
   components:
@@ -552,7 +552,7 @@
     entity: MobXenoRavagerDefBetaAlter
 
 - type: entity
-  suffix: Оборона, Бета, Альтернативный
+  suffix: Оборона, Бета, Альтернативный, Ксено
   parent: MobXenoRavagerDefAlfaAlter
   id: MobXenoRavagerDefBetaAlter
   components:
@@ -576,7 +576,7 @@
     entity: MobXenoRavagerDefGammaAlter
     
 - type: entity
-  suffix: Оборона, Гамма, Альтернативный
+  suffix: Оборона, Гамма, Альтернативный, Ксено
   parent: MobXenoRavagerDefAlfaAlter
   id: MobXenoRavagerDefGammaAlter
   components:
@@ -590,7 +590,7 @@
 - type: entity
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoRunner, MobXenoDefBase]
   id: MobXenoRunnerDefAlfa
   components:
@@ -614,7 +614,7 @@
 - type: entity
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Альтернативный
+  suffix: Оборона, Альфа, Альтернативный, Ксено
   parent: [MobXenoRunner, MobXenoDefBase]
   id: MobXenoRunnerDefAlfaAlter
   components:
@@ -639,7 +639,7 @@
     entity: MobXenoRunnerDefAlfa
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoRunnerDefAlfa
   id: MobXenoRunnerDefBeta
   components:
@@ -663,7 +663,7 @@
     entity: MobXenoRunnerDefBeta
         
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoRunnerDefAlfa
   id: MobXenoRunnerDefGamma
   components:
@@ -675,7 +675,7 @@
     entity: MobXenoRunnerDefGammaAlter
     
 - type: entity
-  suffix: Оборона, Гамма, Альтернативный
+  suffix: Оборона, Гамма, Альтернативный, Ксено
   parent: MobXenoRunnerDefAlfaAlter
   id: MobXenoRunnerDefGammaAlter
   components:
@@ -689,7 +689,7 @@
 - type: entity
   name: Руни
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoRouny, MobXenoDefBase]
   id: MobXenoRounyDefAlfa
   components:
@@ -707,7 +707,7 @@
         Poison: 10
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoRounyDefAlfa
   id: MobXenoRounyDefBeta
   components:
@@ -715,7 +715,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoRounyDefAlfa
   id: MobXenoRounyDefGamma
   components:
@@ -725,7 +725,7 @@
 - type: entity
   name: Плевальщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoSpitter, MobXenoDefRangedBase]
   id: MobXenoSpitterDefAlfa
   components:
@@ -734,13 +734,13 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      150: Dead
+      130: Dead
   - type: BasicEntityAmmoProvider
     proto: BulletAcidDef
     capacity: 3
     count: 3
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoSpitterDefAlfa
   id: MobXenoSpitterDefBeta
   components:
@@ -748,7 +748,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoSpitterDefAlfa
   id: MobXenoSpitterDefGamma
   components:

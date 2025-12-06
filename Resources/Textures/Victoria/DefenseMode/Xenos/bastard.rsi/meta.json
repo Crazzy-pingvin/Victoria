@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "license": "CLA",
+  "copyright": "Created by Askolots (788252896016990219)",
+  "size": {
+    "x": 160,
+    "y": 160
+  },
+  "states": [
+    {
+      "name": "running",
+      "directions": 4
+    },
+    {
+      "name": "dead"
+    },
+	{
+      "name": "running-wounds",
+      "directions": 4
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 - type: entity
   name: Тля
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoDefAlfa, MobXenoDefBase]
   id: MobXenoAphidDefAlfa
   components:
@@ -46,6 +46,7 @@
 - type: entity
   name: Мачеха
   parent: [MobXeno, MobXenoDefBase]
+  suffix: Оборона, Альфа, Ксено
   id: MobXenoStiefmutterAlpha
   components:
   - type: Sprite
@@ -101,7 +102,7 @@
 - type: entity
   name: Сабельщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoRavager, MobXenoDefBase]
   id: MobXenoSaberDefAlfa
   components:
@@ -129,4 +130,79 @@
         Caustic: 15
         Structural: 30
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodMaxVolume: 50  
+  - type: TimedDespawn
+    lifetime: 600
+#------------------------------------------Губитель------------------------------
+- type: entity
+  name: Губитель
+  description: Угроза неминуемой и всеобщей гибели.
+  suffix: Оборона, Альфа, Ксено
+  parent: MobXenoRavager [MobXeno, MobXenoDefBase]
+  id: MobXenoVerderberDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Victoria/DefenseMode/Xenos/bastard.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Journey
+    journeyGroup: Alpha
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30000: Dead
+  - type: MeleeWeapon
+    range: 4
+    damage:
+      types:
+        Slash: 60
+        Blunt: 80
+        Piercing: 60
+        Caustic: 50
+        Structural: 70
+  - type: Bloodstream
+    bloodMaxVolume: 200  
+  - type: DamageContacts
+    onMove: true
+    damage:
+      types:
+        Blunt: 50
+        Structural: 200
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 2.5
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepThud
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      75: 0.95
+      90: 0.85

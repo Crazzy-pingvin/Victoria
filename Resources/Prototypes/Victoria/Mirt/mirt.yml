@@ -4244,3 +4244,55 @@
   - type: TemperatureProtection
     heatingCoefficient: 1.1
     coolingCoefficient: 0.1
+#-----------------------------------------плакаты-------------------------------
+#---------------------------------Обычный-----------------
+- type: entity
+  parent: BaseSign
+  id: MirtSignStd
+  name: Миртанийское настенное знамя
+  description: Простое миртанийское знамя, которое вешается на стену, как предмет украшения и гордости.
+  suffix: Миртан, Плакат
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/sign.rsi
+    state: poster_mirt
+#---------------------------------Старый-----------------
+- type: entity
+  parent: MirtSignStd
+  id: MirtSignStdOld
+  name: Старое миртанийское настенное знамя
+  description: Простое миртанийское знамя, которое вешается на стену, как предмет украшения и гордости. Оно потрёпано и порвано.
+  suffix: Миртан, Плакат
+  components:
+  - type: Sprite
+    state: poster_mirt_old
+#---------------------------------Эрвин-----------------
+- type: entity
+  parent: MirtSignStd
+  id: MirtSignErvin
+  name: "Марий Эрвин указует путь к спасению!"
+  description: Плакат, изображающий национального героя Мария Эрвина, что своей коллосальной фигурой загораживет цивилизованный мир от угрозы ксеноморфов.
+  suffix: Миртан, Плакат
+  components:
+  - type: Sprite
+    state: poster_mirt_ervin
+#---------------------------------Солдат-----------------
+- type: entity
+  parent: MirtSignStd
+  id: MirtSignSold
+  name: "Помоги стране! Иди служить в армию!"
+  description: Плакат, призывающий любого подданного империи продолжить службу в армии.
+  suffix: Миртан, Плакат
+  components:
+  - type: Sprite
+    state: poster_mirt_sold
+#---------------------------------3.47-----------------
+- type: entity
+  parent: MirtSignStd
+  id: MirtSign347
+  name: Плакат вексиляции 3.47
+  description: "Вступай в вексиляцию 3.47 и стань сильнее смерти!"
+  suffix: Миртан, Плакат
+  components:
+  - type: Sprite
+    state: poster_mirt_347
