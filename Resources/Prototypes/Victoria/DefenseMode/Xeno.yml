@@ -296,8 +296,8 @@
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: MobXeno
-  id: MobXenoDefAlfaNoWalls
+  parent: MobXenoDefAlfaNoWalls
+  id: MobXenoDefAlfaAlter
   components:
   - type: RandomChangeTime
     time: 30
