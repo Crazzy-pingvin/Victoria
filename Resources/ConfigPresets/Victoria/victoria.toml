@@ -29,6 +29,9 @@ disable_with_admins = false
 [rules]
 time = 90
 
+[ic]
+flavor_text = true
+
 [hub]
 advertise = true
 tags = "lang:ru,rp:med,region:eu_e"
