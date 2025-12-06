@@ -2,7 +2,7 @@
 - type: entity
   name: Тля
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoDefAlfa
   id: MobXenoAphidDefAlfa
   components:
@@ -57,6 +57,7 @@
 #------------------------------------------мачеха------------------------------
 - type: entity
   name: Мачеха
+  suffix: Оборона, Альфа, Ксено
   parent: MobXeno
   id: MobXenoStiefmutterAlpha
   components:
@@ -130,7 +131,7 @@
 - type: entity
   name: Сабельщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoRavager
   id: MobXenoSaberDefAlfa
   components:
@@ -177,7 +178,7 @@
 - type: entity
   name: Губитель
   description: Угроза неминуемой и всеобщей гибели.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoRavager
   id: MobXenoVerderberDefAlfa
   components:

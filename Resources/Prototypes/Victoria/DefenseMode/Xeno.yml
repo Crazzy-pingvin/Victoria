@@ -211,7 +211,7 @@
 - type: entity
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXeno
   id: MobXenoDefAlfa
   components:
@@ -256,9 +256,9 @@
 - type: entity
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Альтернативный
+  suffix: Оборона, Альфа, Не-Ест-Стены, Ксено
   parent: MobXeno
-  id: MobXenoDefAlfaAlter
+  id: MobXenoDefAlfaNoWalls
   components:
   - type: GhostRole
     prob: 0
@@ -291,13 +291,21 @@
     bloodMaxVolume: 25 
   - type: TimedDespawn
     lifetime: 600
+
+- type: entity
+  name: Бурильщик
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Альтернативный, Ксено
+  parent: MobXeno
+  id: MobXenoDefAlfaNoWalls
+  components:
   - type: RandomChangeTime
     time: 30
     prob: 1
     entity: MobXenoDefAlfa 
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoDefAlfa
   id: MobXenoDefBeta
   components:
@@ -309,7 +317,7 @@
     entity: MobXenoDefBetaAlter
     
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoDefAlfaAlter
   id: MobXenoDefBetaAlter
   components:
@@ -321,7 +329,7 @@
     entity: MobXenoDefBeta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoDefAlfa
   id: MobXenoDefGamma
   components:
@@ -333,7 +341,7 @@
     entity: MobXenoDefGammaAlter
     
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoDefAlfaAlter
   id: MobXenoDefGammaAlter
   components:
@@ -347,7 +355,7 @@
 - type: entity
   name: Преторианец
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoPraetorian
   id: MobXenoPraetorianDefAlfa
   components:
@@ -385,7 +393,7 @@
     lifetime: 600
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoPraetorianDefAlfa
   id: MobXenoPraetorianDefBeta
   components:
@@ -393,7 +401,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoPraetorianDefAlfa
   id: MobXenoPraetorianDefGamma
   components:
@@ -403,7 +411,7 @@
 - type: entity
   name: Дрон
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoDrone
   id: MobXenoDroneDefAlfa
   components:
@@ -441,7 +449,7 @@
     lifetime: 600
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoDroneDefAlfa
   id: MobXenoDroneDefBeta
   components:
@@ -449,7 +457,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoDroneDefAlfa
   id: MobXenoDroneDefGamma
   components:
@@ -459,7 +467,7 @@
 - type: entity
   name: Королева
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoQueen
   id: MobXenoQueenDefAlfa
   components:
@@ -500,7 +508,7 @@
     bloodMaxVolume: 100
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoQueenDefAlfa
   id: MobXenoQueenDefBeta
   components:
@@ -508,7 +516,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoQueenDefAlfa
   id: MobXenoQueenDefGamma
   components:
@@ -518,7 +526,7 @@
 - type: entity
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoRavager
   id: MobXenoRavagerDefAlfa
   components:
@@ -565,7 +573,7 @@
 - type: entity
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Альтернативный
+  suffix: Оборона, Альфа, Альтернативный, Ксено
   parent: MobXenoRavager
   id: MobXenoRavagerDefAlfaAlter
   components:
@@ -618,7 +626,7 @@
     entity: MobXenoRavagerDefBetaAlter
 
 - type: entity
-  suffix: Оборона, Бета, Альтернативный
+  suffix: Оборона, Бета, Альтернативный, Ксено
   parent: MobXenoRavagerDefAlfaAlter
   id: MobXenoRavagerDefBetaAlter
   components:
@@ -642,7 +650,7 @@
     entity: MobXenoRavagerDefGammaAlter
     
 - type: entity
-  suffix: Оборона, Гамма, Альтернативный
+  suffix: Оборона, Гамма, Альтернативный, Ксено
   parent: MobXenoRavagerDefAlfaAlter
   id: MobXenoRavagerDefGammaAlter
   components:
@@ -656,7 +664,7 @@
 - type: entity
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoRunner
   id: MobXenoRunnerDefAlfa
   components:
@@ -699,7 +707,7 @@
 - type: entity
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Альтернативный
+  suffix: Оборона, Альфа, Альтернативный, Ксено
   parent: MobXenoRunner
   id: MobXenoRunnerDefAlfaAlter
   components:
@@ -742,7 +750,7 @@
     entity: MobXenoRunnerDefAlfa
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoRunnerDefAlfa
   id: MobXenoRunnerDefBeta
   components:
@@ -766,7 +774,7 @@
     entity: MobXenoRunnerDefBeta
         
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoRunnerDefAlfa
   id: MobXenoRunnerDefGamma
   components:
@@ -778,7 +786,7 @@
     entity: MobXenoRunnerDefGammaAlter
     
 - type: entity
-  suffix: Оборона, Гамма, Альтернативный
+  suffix: Оборона, Гамма, Альтернативный, Ксено
   parent: MobXenoRunnerDefAlfaAlter
   id: MobXenoRunnerDefGammaAlter
   components:
@@ -792,7 +800,7 @@
 - type: entity
   name: Руни
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoRouny
   id: MobXenoRounyDefAlfa
   components:
@@ -829,7 +837,7 @@
     lifetime: 600
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoRounyDefAlfa
   id: MobXenoRounyDefBeta
   components:
@@ -837,7 +845,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoRounyDefAlfa
   id: MobXenoRounyDefGamma
   components:
@@ -847,7 +855,7 @@
 - type: entity
   name: Плевальщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXenoSpitter
   id: MobXenoSpitterDefAlfa
   components:
@@ -882,7 +890,7 @@
     lifetime: 600
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoSpitterDefAlfa
   id: MobXenoSpitterDefBeta
   components:
@@ -890,7 +898,7 @@
     journeyGroup: Beta
 
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoSpitterDefAlfa
   id: MobXenoSpitterDefGamma
   components:
