@@ -3,7 +3,7 @@
   name: Тля
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoDefAlfa
+  parent: [MobXenoDefAlfa, MobXenoDefBase]
   id: MobXenoAphidDefAlfa
   components:
   - type: Sprite
@@ -17,18 +17,6 @@
     - XenoTunnellerOnly
   - type: Journey
     journeyGroup: Alpha
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -57,12 +45,10 @@
 #------------------------------------------мачеха------------------------------
 - type: entity
   name: Мачеха
+  parent: [MobXeno, MobXenoDefBase]
   suffix: Оборона, Альфа, Ксено
-  parent: MobXeno
   id: MobXenoStiefmutterAlpha
   components:
-  - type: GhostRole
-    prob: 0
   - type: Sprite
     drawdepth: Mobs
     sprite: Victoria/DefenseMode/Xenos/stiefmutter.rsi
@@ -107,32 +93,17 @@
     - Xeno
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: FoodMeatXeno
       amount: 4
-  - type: TimedDespawn
-    lifetime: 300
 #------------------------------------------сабля------------------------------
 - type: entity
   name: Сабельщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoRavager
+  parent: [MobXenoRavager, MobXenoDefBase]
   id: MobXenoSaberDefAlfa
   components:
   - type: GhostRole
@@ -146,18 +117,6 @@
       state: running
   - type: Journey
     journeyGroup: Alpha
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -179,7 +138,7 @@
   name: Губитель
   description: Угроза неминуемой и всеобщей гибели.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoRavager
+  parent: [MobXeno, MobXenoDefBase]
   id: MobXenoVerderberDefAlfa
   components:
   - type: GhostRole

@@ -325,8 +325,8 @@
   category: Ammo
   completetime: 8
   materials:
-    Steel: 110 
-    Plastic: 35 
+    Steel: 130
+    Plastic: 35
 #-------------------Батареи-------------    
 - type: latheRecipe
   id: DefMirtPowerCell 

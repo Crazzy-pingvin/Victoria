@@ -209,19 +209,78 @@
           task: IdleCompound
 #------------------------------------------Сами боты------------------------------
 - type: entity
-  name: Бурильщик
-  description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Ксено
-  parent: MobXeno
-  id: MobXenoDefAlfa
+  id: MobXenoDefBase
+  suffix: БАЗА
+  abstract: true
   components:
   - type: GhostRole
     prob: 0
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDef
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Bloodstream
+    bloodMaxVolume: 25 
+  - type: TimedDespawn
+    lifetime: 600
+  - type: DefenseEnemy
+
+- type: entity
+  description: Обычно они приходят ночью. Обычно.
+  suffix: БАЗА, дальний
+  abstract: true
+  parent: MobXenoDefBase
+  id: MobXenoDefRangedBase
+  components:
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDefRanged
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+
+- type: entity
+  name: Бурильщик
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Ксено
+  parent: MobXeno #Магия для респавна
+  id: MobXenoDefAlfa
+  components:
   - type: NpcFactionMember
     factions:
     - XenoTunnellerOnly
   - type: Journey
     journeyGroup: Alpha
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      130: Dead
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+        Caustic: 9
+        Structural: 40 
+  - type: RandomChangeTime
+    time: 30
+    prob: 1
+    entity: MobXenoDefAlfaAlter    
+  - type: GhostRole
+    prob: 0
   - type: HTN
     rootTask:
       task: XenoCompoundDef
@@ -234,49 +293,20 @@
         true
       NavSmash: !type:Bool
         true
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      130: Dead
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 6
-        Caustic: 9
-        Structural: 40 
   - type: Bloodstream
     bloodMaxVolume: 25 
   - type: TimedDespawn
     lifetime: 600
-  - type: RandomChangeTime
-    time: 30
-    prob: 1
-    entity: MobXenoDefAlfaAlter    
 
 - type: entity
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Не-Ест-Стены, Ксено
-  parent: MobXeno
+  parent: [MobXeno, MobXenoDefBase]
   id: MobXenoDefAlfaNoWalls
   components:
-  - type: GhostRole
-    prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -286,11 +316,7 @@
       types:
         Blunt: 6
         Caustic: 9
-        Structural: 40 
-  - type: Bloodstream
-    bloodMaxVolume: 25 
-  - type: TimedDespawn
-    lifetime: 600
+        Structural: 40
 
 - type: entity
   name: Бурильщик
@@ -302,7 +328,7 @@
   - type: RandomChangeTime
     time: 30
     prob: 1
-    entity: MobXenoDefAlfa 
+    entity: MobXenoDefAlfa
 
 - type: entity
   suffix: Оборона, Бета, Ксено
@@ -356,26 +382,13 @@
   name: Преторианец
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoPraetorian
+  parent: [MobXenoPraetorian, MobXenoDefBase]
   id: MobXenoPraetorianDefAlfa
   components:
   - type: GhostRole
     prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -389,8 +402,6 @@
         Poison: 5
   - type: Bloodstream
     bloodMaxVolume: 50
-  - type: TimedDespawn
-    lifetime: 600
 
 - type: entity
   suffix: Оборона, Бета, Ксено
@@ -412,26 +423,11 @@
   name: Дрон
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoDrone
+  parent: [MobXenoDrone, MobXenoDefBase]
   id: MobXenoDroneDefAlfa
   components:
-  - type: GhostRole
-    prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -445,8 +441,6 @@
         Poison: 1
   - type: Bloodstream
     bloodMaxVolume: 50
-  - type: TimedDespawn
-    lifetime: 600
 
 - type: entity
   suffix: Оборона, Бета, Ксено
@@ -468,11 +462,9 @@
   name: Королева
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoQueen
+  parent: [MobXenoQueen, MobXenoDefBase]
   id: MobXenoQueenDefAlfa
   components:
-  - type: GhostRole
-    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
@@ -480,18 +472,6 @@
     journeyGroup: Alpha
   - type: DefenseEnemy
     boss: true
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -527,29 +507,14 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoRavager
+  parent: [MobXenoRavager, MobXenoDefBase]
   id: MobXenoRavagerDefAlfa
   components:
-  - type: GhostRole
-    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -562,9 +527,7 @@
         Caustic: 5
         Structural: 70
   - type: Bloodstream
-    bloodMaxVolume: 50  
-  - type: TimedDespawn
-    lifetime: 600 
+    bloodMaxVolume: 50
   - type: RandomChangeTime
     time: 30
     prob: 1
@@ -574,47 +537,18 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: MobXenoRavager
+  parent: [MobXenoRavagerDefAlfa, MobXenoDefBase]
   id: MobXenoRavagerDefAlfaAlter
   components:
-  - type: GhostRole
-    prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      300: Dead
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 15
-        Piercing: 5
-        Caustic: 5
-        Structural: 70
-  - type: Bloodstream
-    bloodMaxVolume: 50  
-  - type: TimedDespawn
-    lifetime: 600
   - type: RandomChangeTime
     time: 30
     prob: 1
     entity: MobXenoRavagerDefAlfa    
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoRavagerDefAlfa
   id: MobXenoRavagerDefBeta
   components:
@@ -638,7 +572,7 @@
     entity: MobXenoRavagerDefBeta
         
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoRavagerDefAlfa
   id: MobXenoRavagerDefGamma
   components:
@@ -664,27 +598,12 @@
 - type: entity
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Ксено
-  parent: MobXenoRunner
+  suffix: Оборона, Альфа, Ксено, Ксено
+  parent: [MobXenoRunner, MobXenoDefBase]
   id: MobXenoRunnerDefAlfa
   components:
-  - type: GhostRole
-    prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -695,10 +614,6 @@
         Slash: 3
         Piercing: 2
         Poison: 10
-  - type: Bloodstream
-    bloodMaxVolume: 25
-  - type: TimedDespawn
-    lifetime: 600
   - type: RandomChangeTime
     time: 30
     prob: 1
@@ -708,28 +623,14 @@
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: MobXenoRunner
+  parent: [MobXenoRunner, MobXenoDefBase]
   id: MobXenoRunnerDefAlfaAlter
   components:
-  - type: GhostRole
-    prob: 0
   - type: NpcFactionMember
     factions:
     - XenoTunneller
   - type: Journey
     journeyGroup: Alpha
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -740,10 +641,6 @@
         Piercing: 5
         Caustic: 10
         Structural: 30 
-  - type: Bloodstream
-    bloodMaxVolume: 25
-  - type: TimedDespawn
-    lifetime: 600
   - type: RandomChangeTime
     time: 30
     prob: 1
@@ -762,7 +659,7 @@
     entity: MobXenoRunnerDefBetaAlter
     
 - type: entity
-  suffix: Оборона, Бета, Альтернативный
+  suffix: Оборона, Бета, Альтернативный, Ксено
   parent: MobXenoRunnerDefAlfaAlter
   id: MobXenoRunnerDefBetaAlter
   components:
@@ -801,26 +698,11 @@
   name: Руни
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoRouny
+  parent: [MobXenoRouny, MobXenoDefBase]
   id: MobXenoRounyDefAlfa
   components:
-  - type: GhostRole
-    prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDef
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -831,10 +713,6 @@
         Slash: 3
         Piercing: 2
         Poison: 10
-  - type: Bloodstream
-    bloodMaxVolume: 25
-  - type: TimedDespawn
-    lifetime: 600
 
 - type: entity
   suffix: Оборона, Бета, Ксено
@@ -856,26 +734,11 @@
   name: Плевальщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoSpitter
+  parent: [MobXenoSpitter, MobXenoDefRangedBase]
   id: MobXenoSpitterDefAlfa
   components:
-  - type: GhostRole
-    prob: 0
   - type: Journey
     journeyGroup: Alpha
-  - type: DefenseEnemy
-  - type: HTN
-    rootTask:
-      task: XenoCompoundDefRanged
-    blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -884,11 +747,6 @@
     proto: BulletAcidDef
     capacity: 3
     count: 3
-  - type: Bloodstream
-    bloodMaxVolume: 25
-  - type: TimedDespawn
-    lifetime: 600
-
 - type: entity
   suffix: Оборона, Бета, Ксено
   parent: MobXenoSpitterDefAlfa
@@ -904,7 +762,6 @@
   components:
   - type: Journey
     journeyGroup: Beaver
-#------------------------------------------Спавнеры ботов------------------------------
 #------------------------------------------Плевок плевальщика------------------------------
 - type: entity
   id: BulletAcidDef
