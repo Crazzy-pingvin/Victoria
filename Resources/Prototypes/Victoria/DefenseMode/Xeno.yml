@@ -256,7 +256,7 @@
 - type: entity
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: MobXeno #Магия для респавна
   id: MobXenoDefAlfa
   components:
@@ -301,9 +301,9 @@
 - type: entity
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Альтернативный
+  suffix: Оборона, Альфа, Не-Ест-Стены, Ксено
   parent: [MobXeno, MobXenoDefBase]
-  id: MobXenoDefAlfaAlter
+  id: MobXenoDefAlfaNoWalls
   components:
   - type: Journey
     journeyGroup: Alpha
@@ -316,7 +316,15 @@
       types:
         Blunt: 6
         Caustic: 9
-        Structural: 40 
+        Structural: 40
+
+- type: entity
+  name: Бурильщик
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Альтернативный, Ксено
+  parent: MobXenoDefAlfaNoWalls
+  id: MobXenoDefAlfaAlter
+  components:
   - type: RandomChangeTime
     time: 30
     prob: 1
@@ -373,7 +381,7 @@
 - type: entity
   name: Преторианец
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, ксено
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoPraetorian, MobXenoDefBase]
   id: MobXenoPraetorianDefAlfa
   components:
@@ -414,7 +422,7 @@
 - type: entity
   name: Дрон
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа
+  suffix: Оборона, Альфа, Ксено
   parent: [MobXenoDrone, MobXenoDefBase]
   id: MobXenoDroneDefAlfa
   components:
@@ -540,7 +548,7 @@
     entity: MobXenoRavagerDefAlfa    
 
 - type: entity
-  suffix: Оборона, Бета
+  suffix: Оборона, Бета, Ксено
   parent: MobXenoRavagerDefAlfa
   id: MobXenoRavagerDefBeta
   components:
@@ -564,7 +572,7 @@
     entity: MobXenoRavagerDefBeta
         
 - type: entity
-  suffix: Оборона, Гамма
+  suffix: Оборона, Гамма, Ксено
   parent: MobXenoRavagerDefAlfa
   id: MobXenoRavagerDefGamma
   components:
@@ -590,7 +598,7 @@
 - type: entity
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
-  suffix: Оборона, Альфа, Ксено
+  suffix: Оборона, Альфа, Ксено, Ксено
   parent: [MobXenoRunner, MobXenoDefBase]
   id: MobXenoRunnerDefAlfa
   components:
@@ -651,7 +659,7 @@
     entity: MobXenoRunnerDefBetaAlter
     
 - type: entity
-  suffix: Оборона, Бета, Альтернативный
+  suffix: Оборона, Бета, Альтернативный, Ксено
   parent: MobXenoRunnerDefAlfaAlter
   id: MobXenoRunnerDefBetaAlter
   components:

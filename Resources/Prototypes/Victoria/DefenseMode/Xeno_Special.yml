@@ -138,7 +138,7 @@
   name: Губитель
   description: Угроза неминуемой и всеобщей гибели.
   suffix: Оборона, Альфа, Ксено
-  parent: MobXenoRavager [MobXeno, MobXenoDefBase]
+  parent: [MobXeno, MobXenoDefBase]
   id: MobXenoVerderberDefAlfa
   components:
   - type: GhostRole
