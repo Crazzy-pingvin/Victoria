@@ -8,9 +8,15 @@
     OreGold: 0.25
     OreSilver: 0.25
     OrePlasma: 0.20
-    OreUranium: 0.20
+    OreUranium: 0.4
     OreArtifactFragment: 0.10
     OreBananium: 0.10
+    #Victroia-ores
+    OreCooper: 0.25
+    OreAluminium: 0.33
+    OreBSCrystall: 0.10
+    OreRSCrystall: 0.02
+    OreCosmCrystall: 0.20
 
 - type: oreDunGen
   id: OreIron
@@ -93,3 +99,43 @@
   maxGroupSize: 2
 
 
+#Victoria-Ore
+- type: oreDunGen
+  id: OreCooper
+  replacement: AsteroidRock
+  entity: WallRockCooper
+  count: 4
+  minGroupSize: 5
+  maxGroupSize: 7
+
+- type: oreDunGen
+  id: OreAluminium
+  replacement: AsteroidRock
+  entity: WallRockAluminium
+  count: 4
+  minGroupSize: 5
+  maxGroupSize: 7
+
+- type: oreDunGen
+  id: OreCosmCrystall
+  replacement: AsteroidRock
+  entity: WallRockCosm
+  count: 5
+  minGroupSize: 1
+  maxGroupSize: 2
+
+- type: oreDunGen
+  id: OreBSCrystall
+  replacement: AsteroidRock
+  entity: WallRockBS
+  count: 5
+  minGroupSize: 1
+  maxGroupSize: 2
+
+- type: oreDunGen
+  id: OreRSCrystall
+  replacement: AsteroidRock
+  entity: WallRockRS
+  count: 5
+  minGroupSize: 1
+  maxGroupSize: 2

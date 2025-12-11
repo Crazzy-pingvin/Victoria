@@ -92,12 +92,17 @@
     OreSteel: 10
     OreCoal: 10
     OreSpaceQuartz: 8
+    OreCooper: 3
+    OreAluminium: 3
     OreGold: 2
     OrePlasma: 4
     OreSilver: 1
     OreUranium: 1
     OreBananium: 0.5
     OreArtifactFragment: 0.5
+    OreBSCrystall: 0.15
+    OreRSCrystal: 0.15
+    OreCosmCrystall: 0.15
 
 - type: weightedRandomOre
   id: OreCrab
