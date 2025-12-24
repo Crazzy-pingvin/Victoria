@@ -1,0 +1,17 @@
+uniform highp float contrast = 0.9;
+uniform highp float minus = 0.5;
+uniform sampler2D SCREEN_TEXTURE;
+
+void fragment() {
+   highp vec2 coord = FRAGCOORD.xy * SCREEN_PIXEL_SIZE.xy;
+   highp vec3 rgb = texture(SCREEN_TEXTURE, UV).xyz;
+   highp vec4 Color = zTexture(UV);
+   
+   highp float blackmask = 1.0;
+   highp float rgb_mean = (rgb.r + rgb.g + rgb.b) / 3.0;
+   if (rgb_mean < (1/255)){
+    blackmask = rgb_mean;
+   }
+   rgb = ((rgb - minus) * contrast + minus) * blackmask;
+   COLOR = vec4(rgb,1);
+}
