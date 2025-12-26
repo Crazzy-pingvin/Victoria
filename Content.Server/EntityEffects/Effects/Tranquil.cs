@@ -7,29 +7,23 @@ namespace Content.Server.EntityEffects.Effects;
 public sealed partial class Tranquil : EntityEffect
 {
     /// <summary>
-    ///     BoozePower is how long each metabolism cycle will make the drunk effect last for.
+    ///     BoozePower is how long each metabolism cycle will make the tranquil effect last for.
     /// </summary>
     [DataField]
-    public float BoozePower = 3f;
-
-    /// <summary>
-    ///     Whether speech should be slurred.
-    /// </summary>
-    [DataField]
-    public bool SlurSpeech = true;
+    public float TranqPower = 3f;
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
-        => Loc.GetString("reagent-effect-guidebook-drunk", ("chance", Probability));
+        => Loc.GetString("reagent-effect-guidebook-tranquil", ("chance", Probability));
 
     public override void Effect(EntityEffectBaseArgs args)
     {
-        var boozePower = BoozePower;
+        var tranqPower = TranqPower;
 
         if (args is EntityEffectReagentArgs reagentArgs) {
-            boozePower *= reagentArgs.Scale.Float();
+            tranqPower *= reagentArgs.Scale.Float();
         }
 
-        var drunkSys = args.EntityManager.EntitySysManager.GetEntitySystem<SharedTranquilSystem>();
-        drunkSys.TryApplyDrunkenness(args.TargetEntity, boozePower, SlurSpeech);
+        var tranqSys = args.EntityManager.EntitySysManager.GetEntitySystem<SharedTranquilSystem>();
+        tranqSys.TryApplyTranquilness(args.TargetEntity, tranqPower);
     }
 }

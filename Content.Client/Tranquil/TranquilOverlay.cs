@@ -89,7 +89,7 @@ public sealed class TranquilOverlay : Overlay
     private float BoozePowerToVisual(float boozePower)
     {
         // Clamp booze power when it's low, to prevent really jittery effects
-        if (boozePower < 50f)
+        if (boozePower < 25f)
         {
             return 0;
         }

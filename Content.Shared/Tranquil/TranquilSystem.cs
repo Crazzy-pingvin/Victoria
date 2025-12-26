@@ -10,37 +10,28 @@ public abstract class SharedTranquilSystem : EntitySystem
     public const string DrunkKey = "Tranquil";
 
     [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
-    [Dependency] private readonly SharedSlurredSystem _slurredSystem = default!;
 
-    public void TryApplyDrunkenness(EntityUid uid, float boozePower, bool applySlur = true,
+    public void TryApplyTranquilness(EntityUid uid, float tranqPower,
         StatusEffectsComponent? status = null)
     {
         if (!Resolve(uid, ref status, false))
             return;
 
-        if (TryComp<LightweightDrunkComponent>(uid, out var trait))
-            boozePower *= trait.BoozeStrengthMultiplier;
-
-        if (applySlur)
-        {
-            _slurredSystem.DoSlur(uid, TimeSpan.FromSeconds(boozePower), status);
-        }
-
         if (!_statusEffectsSystem.HasStatusEffect(uid, DrunkKey, status))
         {
-            _statusEffectsSystem.TryAddStatusEffect<TranquilComponent>(uid, DrunkKey, TimeSpan.FromSeconds(boozePower), true, status);
+            _statusEffectsSystem.TryAddStatusEffect<TranquilComponent>(uid, DrunkKey, TimeSpan.FromSeconds(tranqPower), true, status);
         }
         else
         {
-            _statusEffectsSystem.TryAddTime(uid, DrunkKey, TimeSpan.FromSeconds(boozePower), status);
+            _statusEffectsSystem.TryAddTime(uid, DrunkKey, TimeSpan.FromSeconds(tranqPower), status);
         }
     }
 
-    public void TryRemoveDrunkenness(EntityUid uid)
+    public void TryRemoveTranquilness(EntityUid uid)
     {
         _statusEffectsSystem.TryRemoveStatusEffect(uid, DrunkKey);
     }
-    public void TryRemoveDrunkenessTime(EntityUid uid, double timeRemoved)
+    public void TryRemoveTranquilnessTime(EntityUid uid, double timeRemoved)
     {
         _statusEffectsSystem.TryRemoveTime(uid, DrunkKey, TimeSpan.FromSeconds(timeRemoved));
     }

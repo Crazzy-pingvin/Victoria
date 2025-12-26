@@ -205,11 +205,11 @@
         boozePower: 2
 
 - type: reagent
-  id: Tranquilizer
-  name: транквилизатор
+  id: Morphine
+  name: морфин
   parent: BaseAlcohol
   desc: бэбэбэб
-  slippery: true
+  slippery: false
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: alcohol
   color: "#b05b3c"
@@ -219,8 +219,11 @@
     Alcohol:
       effects:
       - !type:Tranquil
-        boozePower: 2
-
+        tranqPower: 5
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 90
 - type: reagent
   id: Gin
   name: reagent-name-gin
