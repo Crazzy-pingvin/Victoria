@@ -1,13 +1,16 @@
 using Content.Shared.Speech.EntitySystems;
 using Content.Shared.StatusEffect;
-using Content.Shared.Traits.Assorted;
+using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Prototypes;
+using Robust.Shared.Prototypes;
+
 
 namespace Content.Shared.Tranquil;
 
 public abstract class SharedTranquilSystem : EntitySystem
 {
     [ValidatePrototypeId<StatusEffectPrototype>]
-    public const string DrunkKey = "Tranquil";
+    public const string TranqKey = "Tranquil";
 
     [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
 
@@ -17,23 +20,23 @@ public abstract class SharedTranquilSystem : EntitySystem
         if (!Resolve(uid, ref status, false))
             return;
 
-        if (!_statusEffectsSystem.HasStatusEffect(uid, DrunkKey, status))
+        if (!_statusEffectsSystem.HasStatusEffect(uid, TranqKey, status))
         {
-            _statusEffectsSystem.TryAddStatusEffect<TranquilComponent>(uid, DrunkKey, TimeSpan.FromSeconds(tranqPower), true, status);
+            _statusEffectsSystem.TryAddStatusEffect<TranquilComponent>(uid, TranqKey, TimeSpan.FromSeconds(tranqPower), false, status);
         }
         else
         {
-            _statusEffectsSystem.TryAddTime(uid, DrunkKey, TimeSpan.FromSeconds(tranqPower), status);
+            _statusEffectsSystem.TryAddTime(uid, TranqKey, TimeSpan.FromSeconds(tranqPower), status);
         }
     }
 
     public void TryRemoveTranquilness(EntityUid uid)
     {
-        _statusEffectsSystem.TryRemoveStatusEffect(uid, DrunkKey);
+        _statusEffectsSystem.TryRemoveStatusEffect(uid, TranqKey);
     }
     public void TryRemoveTranquilnessTime(EntityUid uid, double timeRemoved)
     {
-        _statusEffectsSystem.TryRemoveTime(uid, DrunkKey, TimeSpan.FromSeconds(timeRemoved));
+        _statusEffectsSystem.TryRemoveTime(uid, TranqKey, TimeSpan.FromSeconds(timeRemoved));
     }
 
 }

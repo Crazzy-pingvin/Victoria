@@ -205,26 +205,6 @@
         boozePower: 2
 
 - type: reagent
-  id: Morphine
-  name: морфин
-  parent: BaseAlcohol
-  desc: бэбэбэб
-  slippery: false
-  physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: alcohol
-  color: "#b05b3c"
-  boilingPoint: 78.2
-  meltingPoint: -114.1
-  metabolisms:
-    Alcohol:
-      effects:
-      - !type:Tranquil
-        tranqPower: 5
-      - !type:GenericStatusEffect
-        key: Adrenaline
-        component: IgnoreSlowOnDamage
-        time: 90
-- type: reagent
   id: Gin
   name: reagent-name-gin
   parent: BaseAlcohol

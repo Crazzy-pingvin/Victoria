@@ -1,0 +1,32 @@
+- type: reagent
+  id: Morphine
+  name: морфин
+  parent: BaseAlcohol
+  desc: бэбэбэб
+  slippery: false
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: alcohol
+  color: "#b05b3c"
+  boilingPoint: 78.2
+  meltingPoint: -114.1
+  metabolisms:
+    Alcohol:
+      effects:
+      - !type:Tranquil
+        tranqPower: 4
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 4
+        refresh: false
+
+- type: damageModifierSet
+  id: Tranquil
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.7
+    Piercing: 0.7
+    Shock: 0.5
+    Cold: 0.8
+    Heat: 0.7
+    Caustic: 0.7

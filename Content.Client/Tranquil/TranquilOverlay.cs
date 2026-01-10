@@ -16,14 +16,14 @@ public sealed class TranquilOverlay : Overlay
     [Dependency] private readonly IEntitySystemManager _sysMan = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
-    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
     public override bool RequestScreenTexture => true;
     private readonly ShaderInstance _tranquilShader;
 
-    public float CurrentBoozePower = 0.0f;
+    public float CurrentTranqPower = 0.0f;
 
-    private const float VisualThreshold = 10.0f;
-    private const float PowerDivisor = 250.0f;
+    private const float VisualThreshold = 4.0f;
+    private const float PowerDivisor = 120.0f;
 
     private float _visualScale = 0;
 
@@ -46,14 +46,14 @@ public sealed class TranquilOverlay : Overlay
             return;
 
         var statusSys = _sysMan.GetEntitySystem<StatusEffectsSystem>();
-        if (!statusSys.TryGetTime(playerEntity.Value, SharedTranquilSystem.DrunkKey, out var time, status))
+        if (!statusSys.TryGetTime(playerEntity.Value, SharedTranquilSystem.TranqKey, out var time, status))
             return;
 
         var curTime = _timing.CurTime;
         var timeLeft = (float) (time.Value.Item2 - curTime).TotalSeconds;
 
 
-        CurrentBoozePower += 8f * (0.5f*timeLeft - CurrentBoozePower) * args.DeltaSeconds / (timeLeft+1);
+        CurrentTranqPower += 20f * (0.5f * timeLeft - CurrentTranqPower) * args.DeltaSeconds / (timeLeft + 1);
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
@@ -64,7 +64,7 @@ public sealed class TranquilOverlay : Overlay
         if (args.Viewport.Eye != eyeComp.Eye)
             return false;
 
-        _visualScale = BoozePowerToVisual(CurrentBoozePower);
+        _visualScale = TranqPowerToVisual(CurrentTranqPower);
         return _visualScale > 0;
     }
 
@@ -75,27 +75,27 @@ public sealed class TranquilOverlay : Overlay
 
         var handle = args.WorldHandle;
         _tranquilShader.SetParameter("SCREEN_TEXTURE", ScreenTexture);
-        //_tranquilShader.SetParameter("boozePower", _visualScale);
+        _tranquilShader.SetParameter("tranq_power", _visualScale);
         handle.UseShader(_tranquilShader);
         handle.DrawRect(args.WorldBounds, Color.White);
         handle.UseShader(null);
     }
 
     /// <summary>
-    ///     Converts the # of seconds the drunk effect lasts for (booze power) to a percentage
+    ///     Converts the # of seconds the drunk effect lasts for (tranq power) to a percentage
     ///     used by the actual shader.
     /// </summary>
-    /// <param name="boozePower"></param>
-    private float BoozePowerToVisual(float boozePower)
+    /// <param name="tranqPower"></param>
+    private float TranqPowerToVisual(float tranqPower)
     {
-        // Clamp booze power when it's low, to prevent really jittery effects
-        if (boozePower < 25f)
+        // Clamp tranq power when it's low, to prevent really jittery effects
+        if (tranqPower < 2f)
         {
             return 0;
         }
         else
         {
-            return Math.Clamp((boozePower - VisualThreshold) / PowerDivisor, 0.0f, 1.0f);
+            return Math.Clamp((tranqPower - VisualThreshold) / PowerDivisor, 0.0f, 1.0f);
         }
     }
 }

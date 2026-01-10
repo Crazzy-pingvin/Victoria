@@ -32,7 +32,7 @@ public sealed class TranquilSystem : SharedTranquilSystem
 
     private void OnPlayerDetached(EntityUid uid, TranquilComponent component, LocalPlayerDetachedEvent args)
     {
-        _overlay.CurrentBoozePower = 0;
+        _overlay.CurrentTranqPower = 0;
         _overlayMan.RemoveOverlay(_overlay);
     }
 
@@ -46,7 +46,7 @@ public sealed class TranquilSystem : SharedTranquilSystem
     {
         if (_player.LocalEntity == uid)
         {
-            _overlay.CurrentBoozePower = 0;
+            _overlay.CurrentTranqPower = 0;
             _overlayMan.RemoveOverlay(_overlay);
         }
     }
