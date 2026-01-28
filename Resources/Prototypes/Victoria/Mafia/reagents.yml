@@ -20,6 +20,8 @@
         component: IgnoreSlowOnDamage
         time: 4
         refresh: false
+      - !type:AddictionEffect
+        addiction: MorphiumAddiction
 
 - type: damageModifierSet
   id: Tranquil
@@ -83,3 +85,5 @@
         component: Energized
         time: 1.6
         type: Add
+      - !type:AddictionEffect
+        addiction: DashAddiction
