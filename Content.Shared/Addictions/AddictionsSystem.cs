@@ -1,6 +1,8 @@
 using System.Linq;
+using System.Diagnostics.CodeAnalysis;
 //using System.Runtime.CompilerServices;
 using Content.Shared.Addictions.Prototypes;
+using Content.Shared.Mobs;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
@@ -34,14 +36,31 @@ public sealed partial class AddictionSystem: EntitySystem
             }
         }
     }
-    public void AddAddiction(AddictionId id, EntityUid uid)
+    public void AddAddiction(EntityUid uid, AddictionPrototype addicProto, AddictionContainerComponent comp)
     {
-        if (!TryComp<AddictionContainerComponent>(uid,out var comp))
-            return;
-        AddictionPrototype addicProto = _prototypeManager.Index<AddictionPrototype>(id.Prototype);
+
         if (HasAddiction(uid,addicProto.Name,comp))
             return;
         comp.CurrentAddictions.Add(addicProto.Name, new AddictionData(addicProto));
+    }
+    public void SatiateAddiction(AddictionData addiction, float satiationRate)
+    {
+        addiction.Satiation += satiationRate;
+    }
+
+    public void HandleEffect(AddictionId id, EntityUid uid,bool addAddiction,float satiationEffect, float withdrawlEffect, float cureEffect)
+    {
+        if (!TryComp<AddictionContainerComponent>(uid,out var container))
+            return;
+        AddictionPrototype addicProto = _prototypeManager.Index<AddictionPrototype>(id.Prototype);
+        if (!TryGetAddiction(container,addicProto.Name, out var addiction)){
+            if (addAddiction)
+                AddAddiction(uid,addicProto, container);
+        }
+        else
+        {
+            SatiateAddiction(addiction, satiationEffect);
+        }
     }
     public bool HasAddiction(EntityUid uid, string key,
         AddictionContainerComponent? container = null)
@@ -51,6 +70,15 @@ public sealed partial class AddictionSystem: EntitySystem
         if (!container.CurrentAddictions.ContainsKey(key))
             return false;
 
+        return true;
+    }
+
+    public bool TryGetAddiction(AddictionContainerComponent container, string key, [NotNullWhen(true)] out AddictionData? addiction)
+    {
+        addiction = null;
+        if (!container.CurrentAddictions.TryGetValue(key,out var temp_addic))
+        return false;
+        addiction = temp_addic;
         return true;
     }
 }

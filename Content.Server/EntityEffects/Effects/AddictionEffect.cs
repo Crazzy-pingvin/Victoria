@@ -23,10 +23,22 @@ public sealed partial class AddictionEffect : EntityEffect
     [DataField(required: true)]
     public string Addiction;
 
+    [DataField]
+    public bool AddAddiction = true;
+
+    [DataField]
+    public float satiationEffect = 0.01f;
+    [DataField]
+    public float withdrawlEffect = -0.01f;
+    [DataField]
+    public float cureEffect = -0.1f;
+
     public override void Effect(EntityEffectBaseArgs args)
     {
         var addicSys = args.EntityManager.EntitySysManager.GetEntitySystem<AddictionSystem>();
-        addicSys.AddAddiction(new AddictionId(Addiction),args.TargetEntity);
+        addicSys.HandleEffect(new AddictionId(Addiction),args.TargetEntity,
+        AddAddiction, satiationEffect,
+        withdrawlEffect, cureEffect);
     }
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys) => Loc.GetString("123");

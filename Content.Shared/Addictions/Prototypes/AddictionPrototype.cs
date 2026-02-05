@@ -1,4 +1,7 @@
 using Content.Shared.Whitelist;
+using Content.Shared.EntityEffects;
+using System.Collections.Frozen;
+using System.Text.Json.Serialization;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 namespace Content.Shared.Addictions.Prototypes;
@@ -24,4 +27,15 @@ public sealed partial class AddictionPrototype : IPrototype
     public int WithdrawlGrowTime = 600;
     [DataField]
     public float WithdrawlDecayTime = 300;
+
+    [DataField(serverOnly: true)]
+    public FrozenSet<EntityEffect>? WithdrawlEffects;
 }
+
+/* [DataDefinition]
+public sealed partial class AddictionEffectsEntry
+{
+    [JsonPropertyName("effects")]
+    [DataField("effects", required: true)]
+    public EntityEffect[] Effects = default!;
+} */
