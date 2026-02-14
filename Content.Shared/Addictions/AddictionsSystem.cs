@@ -3,8 +3,12 @@ using System.Diagnostics.CodeAnalysis;
 //using System.Runtime.CompilerServices;
 using Content.Shared.Addictions.Prototypes;
 using Content.Shared.Mobs;
+using Content.Shared.Administration.Logs;
+using Content.Shared.Database;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.EntityEffects;
+using Content.Shared.FixedPoint;
 
 namespace Content.Shared.Addictions;
 
@@ -12,6 +16,7 @@ namespace Content.Shared.Addictions;
 public sealed partial class AddictionSystem: EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly ISharedAdminLogManager _adminLog = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     public override void Initialize()
     {
@@ -29,11 +34,28 @@ public sealed partial class AddictionSystem: EntitySystem
             if (_timing.CurTime < container.NextCheck)
                 continue;
             container.NextCheck = _timing.CurTime + TimeSpan.FromSeconds(1);
-
+            _adminLog.Add(LogType.Action, LogImpact.High, $"Тик, пытаемся");
             foreach (KeyValuePair<string, AddictionData> addiction in container.CurrentAddictions)
             {
                 addiction.Value.tick();
+                _adminLog.Add(LogType.Action, LogImpact.High, $"Тук");
+                if (addiction.Value.Satiation <= 0){
+
+                    tryDoWithdrawlEffects(addiction.Value, ent);
+                }
             }
+        }
+    }
+
+    private void tryDoWithdrawlEffects(AddictionData addiction, EntityUid uid)
+    {
+        _adminLog.Add(LogType.Action, LogImpact.High, $"Пытаемся навести эффект");
+        AddictionPrototype proto = _prototypeManager.Index<AddictionPrototype>(addiction.Addiction_ID.Prototype);
+        var args = new EntityEffectReagentArgs(uid, EntityManager, null, null, FixedPoint2.New(1), null, null, addiction.WithdrawlRate);
+        foreach(EntityEffect effect in proto.WithdrawlEffects)
+        {
+            _adminLog.Add(LogType.Action, LogImpact.High, $"Проходка эффектов");
+            effect.Effect(args);
         }
     }
     public void AddAddiction(EntityUid uid, AddictionPrototype addicProto, AddictionContainerComponent comp)

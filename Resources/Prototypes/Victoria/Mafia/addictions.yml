@@ -1,7 +1,16 @@
 - type: addiction
   name: мор
   id: MorphiumAddiction
-
+  withdrawlEffects:
+  - !type:HealthChange
+    damage:
+      types:
+        Poison: 4
 - type: addiction
   name: ГОУГОУГОУ
   id: DashAddiction
+  withdrawlEffects:
+  - !type:HealthChange
+    damage:
+      types:
+        Poison: 4

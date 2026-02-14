@@ -28,8 +28,9 @@ public sealed partial class AddictionPrototype : IPrototype
     [DataField]
     public float WithdrawlDecayTime = 300;
 
-    [DataField(serverOnly: true)]
-    public FrozenSet<EntityEffect>? WithdrawlEffects;
+    [DataField("withdrawlEffects", serverOnly: true,required: true)]
+    public List<EntityEffect> WithdrawlEffects = default!;
+
 }
 
 /* [DataDefinition]
