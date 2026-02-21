@@ -5,7 +5,6 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
-  - type: Chockable
   - type: HumanoidAppearance
     species: Vulpkanin
   - type: Hunger # on 1.5x more
@@ -83,6 +82,10 @@
       types:
         Asphyxiation: -2.0
   - type: Wagging
+# Victoria-start
+  - type: Chockable
+  - type: AddictionContainer
+#Victoria-end
 
 - type: entity
   save: false

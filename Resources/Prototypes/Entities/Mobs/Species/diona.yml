@@ -111,6 +111,9 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+# Victoria-start
+  - type: AddictionContainer
+#Victoria-end
 
 - type: entity
   parent: BaseSpeciesDummy

@@ -28,9 +28,11 @@ public sealed partial class AddictionData
     [DataField]
     public int SatiationDecayTime = 1800;
     [DataField]
-    public int WithdrawlGrowTime = 600;
+    public int WithdrawlGrowTime = 120;
     [DataField]
-    public float WithdrawlDecayTime = 300;
+    public float WithdrawlDecayTime = 180;
+    [DataField]
+    public float CureTime = 1800;
 
     public AddictionData(AddictionPrototype proto)
     {
@@ -39,17 +41,13 @@ public sealed partial class AddictionData
         SatiationDecayTime = proto.SatiationDecayTime;
         WithdrawlGrowTime = proto.WithdrawlGrowTime;
         WithdrawlDecayTime = proto.WithdrawlDecayTime;
+        CureTime = proto.CureTime;
     }
 
-    public void tick()
-    {
-        if (Satiation > 0.0f){
-            Satiation = Math.Clamp(Satiation - 1.0f / SatiationDecayTime,0.0f,1.0f) ;
-            WithdrawlRate = Math.Clamp(WithdrawlRate - 1.0f / WithdrawlDecayTime,0.0f,1.0f);
-        }
-        else
-            WithdrawlRate = Math.Clamp(WithdrawlRate + 1.0f / WithdrawlGrowTime,0.0f,1.0f);
-    }
+    //public void tick()
+    //{
+
+    //}
     public string ToString()
     {
         return $"{Satiation}, {Name}";

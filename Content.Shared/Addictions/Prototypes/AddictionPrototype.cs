@@ -21,12 +21,14 @@ public sealed partial class AddictionPrototype : IPrototype
 
     [DataField]
     public string Name = "BASE";
-    [DataField]
+    [DataField("satiationDecayTime")]
     public int SatiationDecayTime = 1800;
-    [DataField]
-    public int WithdrawlGrowTime = 600;
-    [DataField]
-    public float WithdrawlDecayTime = 300;
+    [DataField("withdrawlGrowTime")]
+    public int WithdrawlGrowTime = 240;
+    [DataField("withdrawlDecayTime")]
+    public float WithdrawlDecayTime = 120;
+    [DataField("cureTime")]
+    public float CureTime = 1200;
 
     [DataField("withdrawlEffects", serverOnly: true,required: true)]
     public List<EntityEffect> WithdrawlEffects = default!;

@@ -11,7 +11,8 @@
   boilingPoint: 78.2
   meltingPoint: -114.1
   metabolisms:
-    Alcohol:
+    Narcotic:
+      metabolismRate: 0.04
       effects:
       - !type:Tranquil
         tranqPower: 4
@@ -22,7 +23,7 @@
         refresh: false
       - !type:AddictionEffect
         addiction: MorphiumAddiction
-        satiationEffect: 0.002
+        satiationEffect: 0.008
 
 - type: damageModifierSet
   id: Tranquil
@@ -88,3 +89,4 @@
         type: Add
       - !type:AddictionEffect
         addiction: DashAddiction
+        satiationEffect: 0.016

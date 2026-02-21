@@ -15,7 +15,6 @@
   - type: Puller
     needsHands: false
   - type: Thirst
-  - type: Chockable
   - type: Icon
     sprite: Mobs/Species/Reptilian/parts.rsi
     state: full
@@ -95,6 +94,10 @@
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: shoes
     # Corvax-Displacements-End
+# Victoria-start
+  - type: Chockable
+  - type: AddictionContainer
+#Victoria-end
 
 - type: entity
   parent: BaseSpeciesDummy

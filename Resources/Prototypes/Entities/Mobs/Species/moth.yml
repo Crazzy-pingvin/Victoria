@@ -11,7 +11,6 @@
     - HeadTop
   - type: Hunger
   - type: Thirst
-  - type: Chockable
   - type: Icon
     sprite: Mobs/Species/Moth/parts.rsi
     state: full
@@ -123,7 +122,10 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-
+# Victoria-start
+  - type: Chockable
+  - type: AddictionContainer
+#Victoria-end
 
 - type: entity
   parent: BaseSpeciesDummy
