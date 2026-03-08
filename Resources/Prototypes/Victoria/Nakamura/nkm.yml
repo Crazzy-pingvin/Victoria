@@ -1,0 +1,974 @@
+#---------------------------униформа----------------------------------------------------------------------
+#------------------------------------инженер---------- 
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: NKMUniformEngineer
+  name: Форма инженера
+  suffix: Накамура
+  description: Родной до боли комбинезон массового пошива корпорации Накамура Инжениринг из плотного кожзама, в котором всё потеет, зато остаётся целым при ударах, столкновениях или прорыве чего-то горрячего или электричесокого. (Примечание - только для ручной стирки)
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_uniform_engineering.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_uniform_engineering.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Shock: 0.9 
+        Heat: 0.95
+#--------------------------------------------обувка---------------------------------------------
+#----------------------------------ботинки------------------------
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: NKMBoots
+  name: Корпоративные ботинки
+  suffix: Накамура
+  description: Это корпоративные лёгкие и удобные ботинки для настоящих профессионалов своего дела корпорации Накамура Инжениринг. Выдаются при достижении определённого ранга компании.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_boots_ofice.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_boots_ofice.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+#----------------------------------рабочие боты------------------------
+- type: entity
+  parent: ClothingShoesBootsMagBase
+  id: NKMBootsWork
+  name: Рабочие боты
+  suffix: Накамура
+  description: Рабочие боты, оснащёные магнитными держателями. Чтобы быть готовым работать на благо корпорации Накамура Инжениринг где угодно в любой ситуации.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_boots_work.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_boots_work.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.95
+#----------------------------------магнитные боты------------------------
+- type: entity
+  parent: ClothingShoesBootsMagBase
+  id: NKMMagBoots
+  name: Магнитные ботинки
+  suffix: Накамура
+  description: Прочные и защищающие магнитные ботинки для работы в космосе. Только лучшее для хороших инженеров корпорации Накамура Инжениринг.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_magboots.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_magboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.9
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Heat: 0.95
+#---------------------------------------------перчатки------------------------------    
+#------------------------------------перчатки инженерные--------- 
+- type: entity
+  parent: ClothingHandsGlovesColorYellow
+  id: NKMGlovesIsol
+  name: Инженерные перчатки
+  suffix: Накамура
+  description: Прочные защитные перчатки. Предотвращающие порезы. проколы. удары и изолирующие руки от тока. Стандарт кафества Накамура Инжениринг!
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_gloves_isol.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_gloves_isol.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-orange
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+#------------------------------------перчатки активные--------- 
+- type: entity
+  parent: ClothingHandsBase
+  id: NKMGlovesActive
+  name: Перчатки для активных сред
+  suffix: Накамура
+  description: Многослойные перчатки, поддерживающие комфортную температуру, а так же защищабщие от проникновения кислот, ядов и радиационного излучения. Стандарт кафества Накамура Инжениринг!
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_gloves_active.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_gloves_active.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-orange
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.85
+        Cold: 0.85
+        Caustic: 0.85
+        Poison: 0.85
+        Radiation: 0.85
+#---------------------------------------------------головняк--------------------------------------------       
+#------------------------------------беретка---------- 
+- type: entity
+  parent: ClothingHeadBase
+  id: NKMBeret
+  name: Берет инженера Накамуры
+  suffix: Накамура
+  description: Мягкий и комфорнтый берет, отличающий инженеров корпорации Накамура Инжениринг.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_beret.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+#---------------------------------------------------------Каска---------------------------------------------
+- type: entity
+  parent: ClothingHeadHatHardhatBase
+  id: NKMHardhat
+  name: Защитная каска
+  suffix: Накамура
+  description: Просто каска с фонариком для несложных, но тёмных работ от корпорации Накамура Инжениринг.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Armor/nkm_hardhat.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Armor/nkm_hardhat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.9
+        Piercing: 0.95
+#---------------------------------------------------------Шлем---------------------------------------------
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: NKMHelmet
+  name: Защитный шлем
+  suffix: Накамура
+  description: Шлем с интегрированными сворочными очками корпорации Накамура Инжениринг для работы в опасных условиях.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Armor/nkm_helmet.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Armor/nkm_helmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Caustic: 0.9
+        Radiation: 0.9
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
+#---------------------------------------------------------рюкзаки----------------------------------
+#------------------------------------стандартный рюкзак---------- 
+- type: entity
+  parent: ClothingBackpack
+  id: NKMBackpackStd
+  name: Рюкзак накамуры
+  suffix: Накамура
+  description: Удобный, практичный, вместительный, стильный. Отличное решение для работников корпорации Накамура Инжениринг!
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_back.rsi
+  - type: Storage
+    grid:
+    - 0,0,6,4
+#---------------------------------------------------------Баул---------------------------------------------
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: NKMDuffel
+  name: Баул Накамуры
+  suffix: Накамура
+  description: Большой баул для ношения всякой всячины. Инженеры корпорации накамура вечно таскают в нём свои материалы, снаряжение, инструменты и пиво.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_duffel.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,7,5
+#-------------------------------------джетпак---------------------------------------   
+- type: entity
+  id: NKMJetpack
+  parent: BaseJetpack
+  name: Реактивный ранец Накамура
+  description: Отличное подспорье для инженеров-строителей или ремонстников больших космических конструкций. Накамура знает тол в эффективности!
+  suffix: Накамура, Пустой
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_jetpack.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_jetpack.rsi
+    slots:
+      - Back
+  - type: Item
+    sprite: Victoria/Nakamura/Equipment/nkm_jetpack.rsi
+    size: Huge
+
+- type: entity
+  id: NKMJetpackFilled
+  parent: NKMJetpack
+  suffix: Накамура, Заполненый
+  components:
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 13 minutes of thrust
+      volume: 5
+      temperature: 293.15
+      moles:
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
+#---------------------------------------------------------Плащ---------------------------------------------
+- type: entity
+  parent: ClothingNeckBase
+  id:  NKMCloakOf
+  name: Плащ заслуженного Инженера
+  suffix: Накамура
+  description: Плащ, для самых загордившихся и зажравшихся инженеров корпорации накмура Инжениринг. Короче... для начальства!
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_cloak.rsi
+#------------------------------------------куртка---------------------------------
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: NKMCoat
+  name: Корпоративная куртка
+  suffix: Накамура
+  description: Корпоративная куртка с активной терморегуляцией, что предостерегает сотрудников, работающих в горячем и холодном климате от перегрева или переохлаждения.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_coat.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_coat.rsi
+  - type: ToggleableClothing
+    clothingPrototype: NKMCoatHood
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+  - type: Armor 
+    modifiers:
+      coefficients:
+        Cold: 0.8
+        Heat: 0.8
+#-----------------------------------------капюшон куртки-------------------------------
+- type: entity
+  parent: ClothingHeadHatHoodWinterDefault
+  id: NKMCoatHood
+  name: Капюшон корпоративной куртки
+  suffix: Накамура
+  description: Закрывает голову от холода, стужи и палящего солнца. Оснащён защитными очками.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_coat_hood.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_coat_hood.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Cold: 0.85
+        Heat: 0.85
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
+#------------------------------------скафандр----------      
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: NKMHardsuit
+  name: Скафандр Накамуры
+  suffix: Накамура
+  description: Стандартный простой скафандр для инженеров корпорации Накамура Инжениринг.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Armor/nkm_hardsuits.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Armor/nkm_hardsuits.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Radiation: 0.6
+        Caustic: 0.7
+        Cold: 0.85
+        Heat: 0.85
+        Shock: 0.85
+  - type: ClothingSpeedModifier
+    walkModifier: 0.80
+    sprintModifier: 0.80
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: NKMHelmetHardsuit
+#------------------------------------шлем скафандра----------  
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: NKMHelmetHardsuit
+  name: Шлем скафандра Накамуры
+  description: Стандартный простой шлем скафандра корпорации Накамура Инжениринг с усиленным фонарём.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Victoria/Nakamura/Armor/nkm_hardsuits_helmet.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Armor/nkm_hardsuits_helmet.rsi
+  - type: PointLight
+    radius: 6
+    color: "#ff5500"
+  - type: PressureProtection
+    highPressureMultiplier: 0.1
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.8
+        Caustic: 0.9
+        Radiation: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES
+#-----------------------------------------снаряга и пояса------------------------------------------
+#-------------------------------------печать-----------------    
+- type: entity
+  name: Печать Накамуры
+  suffix: Накамура
+  parent: RubberStampBaseAlt
+  id: NKMRubberStamp
+  components:
+  - type: Stamp
+    stampedName: Накамура Инжениринг
+    stampedColor: "#e64b00"
+    stampState: "paper_stamp-generic"
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_stamp.rsi
+    state: stamp
+#---------------------------------Стандартная форма---------------------
+- type: entity
+  id: NKMPaperForm
+  name: Документ Накамуры
+  suffix: Накамура
+  parent: Paper
+  components:
+  - type: Paper
+    content: |
+      [color=#e64b00]█░█░███░[/color][color=#1b191c]░░███░█░█[/color]
+      [color=#e64b00]█░█░░█░█[/color][color=#1b191c]░░░█░░█░█[/color]      [head=3]Бланк документа[/head]
+      [color=#e64b00]░█░░░█░░[/color][color=#1b191c]█░░█░░░█░[/color]               [head=3]NKME[/head]
+      [color=#e64b00]░█░░░█░░[/color][color=#1b191c]░█░█░░░█░[/color]
+      [color=#e64b00]░█░░███░[/color][color=#1b191c]░░███░░█░[/color]
+      =============================================
+                          НАИМЕНОВАНИЕ ДОКУМЕНТА
+      =============================================
+      Дата:
+      Составитель документа:
+      Должность составителя:
+      
+      Полное содержание документа со всей необходимой информацией и описанием
+      =============================================
+                                  [italic]Место для печатей[/italic]
+
+#-----------------------------------------------------пояса----------------------------------------------
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: NKMBelt
+  name: Пояс Накамуры
+  suffix: Накамура
+  description: Такие пояса используют инженеры, охрана и техники корпорации Накамура Инжениринг.
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_belt.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_belt.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,9,1
+  - type: Appearance
+  
+- type: entity
+  id: NKMBeltFilledEng
+  parent: NKMBelt
+  suffix: Заполненный, Инструменты, Накамура
+  components:    
+  - type: StorageFill
+    contents:
+      - id: PowerDrill
+      - id: JawsOfLife
+      - id: WelderExperimental
+      - id: Multitool
+      - id: HolofanProjector
+      - id: GasAnalyzer
+      - id: trayScanner
+      - id: NKMPaperForm
+      - id: NKMPaperForm
+#------------------------------------------КПК, карты, доступы и шлюзы----------------------------------------    
+#------------------------------------------доступы и шлюзы---------------------------------------- 
+#------------------------------------доступ----------  
+- type: accessLevel
+  id: NKMAccess
+  name: access-nkm
+#------------------------------------закрытый шлюз---------- 
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsNKMAccess
+  suffix: Накамура, Locked
+  components:
+  - type: AccessReader
+    access: [["NKMAccess"]]
+
+- type: entity
+  parent: Airlock
+  id: NKMAirlockLocked
+  suffix: Накамура, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNKMAccess ]
+  - type: Sprite
+    sprite: Victoria/Nakamura/nkm_airlock.rsi
+#------------------------------------свободный шлюз---------- 
+- type: entity
+  parent: Airlock
+  id: NKMAirlock
+  suffix: Накамура
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/nkm_airlock.rsi
+#------------------------------------закрытый стеклянный шлюз---------- 
+- type: entity
+  parent: AirlockGlass
+  id: NKMAirlockLockedGlass
+  suffix: Накамура, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNKMAccess ]
+  - type: Sprite
+    sprite: Victoria/Nakamura/nkm_airlock_glass.rsi
+  - type: PaintableAirlock
+    group: Glass     
+#------------------------------------свободный стеклянный шлюз----------
+- type: entity
+  parent: AirlockGlass
+  id: NKMAirlockGlass
+  suffix: Накамура
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/nkm_airlock_glass.rsi
+  - type: PaintableAirlock
+    group: Glass  
+#------------------------------------стыковочный---------- 
+- type: entity
+  parent: AirlockExternalShuttleLocked
+  name: Стыковочный шлюз
+  id: NKMAirlockShuttleEasyPryLocked
+  suffix: Накамура
+  description: Чтобы успешно прилепиться к космическим объектам.
+  components:
+  - type: PryUnpowered
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNKMAccess ]
+#-----------------------------------роль--------------------------------------
+- type: playTimeTracker
+  id: JobEventNKM
+#------------------------------------стандарт карты---------- 
+- type: entity
+  parent: Clothing
+  id: NKMIDCard
+  suffix: Накамура
+  name: Карта итендификации личности сотрудника Накамуры
+  description: Данная карта служит в роли электронного пропуска на объектах Накамуры
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_id_cards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: Victoria/Nakamura/Equipment/nkm_id_cards.rsi
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+  - type: StealTarget
+    stealGroup: IDCard    
+#------------------------------------карта инженера---------- 
+- type: entity
+  parent: NKMIDCard
+  id: NKMIDCardE
+  name: ID-карта инженера
+  suffix: Накамура
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: enge
+  - type: Access
+    tags:
+    - NKMAccess
+    - External
+  - type: PresetIdCard
+    name: инженер Накамуры
+#------------------------------------стандарт КПК---------- 
+- type: entity
+  abstract: true
+  parent: BasePDA
+  id: NKMPDA
+  name: КПК сотрудника Накамуры
+  description: Простенький крепкий КПК массового производства сотрудников корпорации Накамура Инжениринг.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: Victoria/Nakamura/Equipment/nkm_pda.rsi
+    state: pda
+#------------------------------------КПК инженер----------    
+- type: entity
+  parent: NKMPDA
+  id: NKMPDAE
+  suffix: Накамура, инженер
+  components:
+    - type: Pda
+      id: NKMIDCardE
+    - type: Appearance
+      appearanceDataInit:
+       enum.PdaVisuals.PdaType:
+         !type:String
+         pda
+#------------------------------------------связь----------------------------------------  
+#-----------------------------канал----------------------------------------  
+- type: radioChannel
+  id: NKMRadio
+  name: name-of-NKMRadio
+  keycode: 'не' 
+  frequency: 1311
+  color: "#e64b00"
+  longRange: true
+#-------------------------------------------------------------------ключи---------------------------------------------------------------------
+#-----------------------------стандарт ключа----------------------------------------   
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: NKMBaseEncryptionKey
+  name: encryption key
+  description: Небольшой чип для шифрования и дешифровки связи.
+  components:
+  - type: EncryptionKey
+    channels:
+    - NKMRadio
+    defaultChannel: NKMRadio
+  - type: Item
+    sprite: Victoria/Nakamura/Equipment/nkm_encryption_keys.rsi
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_encryption_keys.rsi
+  - type: StealTarget
+    stealGroup: EncryptionKey   
+#-----------------------------ключ шифрования----------------------------------------      
+- type: entity
+  parent: NKMBaseEncryptionKey
+  id: NKMEncryptionKey
+  suffix: Накамура
+  name: Ключ шифрования корпорации Накамура Инжениринг
+  description: Используется для шифрования и дешифровки общего канала связи сотрудников корпорации Накамура Инжениринг
+  components:
+  - type: EncryptionKey
+    channels:
+    - NKMRadio
+    defaultChannel: NKMRadio
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: label
+#-----------------------------гарнитура----------------------------------------  
+- type: entity
+  parent: ClothingHeadset
+  id: NKMHeadset
+  name: Гарнитура Накамуры
+  suffix: Накамура
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - NKMEncryptionKey
+  - type: Sprite
+    sprite: Victoria/Nakamura/Equipment/nkm_garniture.rsi
+  - type: Clothing
+    sprite: Victoria/Nakamura/Equipment/nkm_garniture.rsi
+#--------------------------------------------------------------------------Знамёна------------------------------------
+- type: entity
+  id: NKMBannerGerb
+  parent: BannerBase
+  name: Знамя корпорации Накмура Инжениринг
+  suffix: Накамура
+  description: Символ старания, инженерной выучки. промышленных достижений и жуткого бюрократического ада!
+  components:
+  - type: Sprite
+    sprite: Victoria/Nakamura/nkm_banner.rsi
+    state: banner_nkm 
+
+#---------------------------------------------------------------для спавнеров---------------------------    
+#--------------------------------------------сумки------------------------------------ 
+#------------------------------------рюкзаке-------
+- type: entity
+  parent: NKMBackpackStd
+  id: NKMBackpackStdFilled
+  suffix: Накамура, Заполненный
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskGas
+      - id: FoodTinMRE
+      - id: DrinkWaterBottleFull
+      - id: EmergencyNitrogenTankFilled
+      - id: EmergencyOxygenTankFilled
+      - id: CableApcStack
+      - id: CableMVStack
+      - id: CableHVStack
+#------------------------------------баул-------
+- type: entity
+  parent: NKMDuffel
+  id: NKMDuffelFilled
+  suffix: Накамура, Заполненный
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingMaskGas
+      - id: FoodTinMRE
+      - id: DrinkWaterBottleFull
+      - id: EmergencyNitrogenTankFilled
+      - id: EmergencyOxygenTankFilled
+      - id: SheetSteel
+      - id: SheetSteel
+      - id: SheetSteel
+      - id: MetalFoamGrenade
+        amount: 3
+#---------------------------------------------------------------Бумаги-------
+#-----------------------------------инженер-----------------------------
+- type: entity
+  id: NKMPaperE
+  name: Памятка инженера Накамуры
+  suffix: Накамура
+  parent: Paper
+  components:
+  - type: TimedDespawn
+    lifetime: 1200
+  - type: Paper
+    content: |
+      Вы инженер. Ваше дело - строить, собирать, ремонтировать. А ещё быть самым технически-умным челом в этой стороне космоса.
+      ------------------------------------------------------------------------
+      Ваши навыки: Базовые навыки, разборка сложных объектов, базовый атмос, постройка сложных объектов, постройка приборов, продвинутые генераторы
+      ------------------------------------------------------------------------
+      Руководство к отыгрышу: Вы ответственный. Вы много учились, зарабатывали себе репутацию. Вы отличный специалист и честный сотрудник. Однозначно самовлюблённый и осознающий свою крутость! Вы же не хер с голы! Вы Инженер Накамуры!
+      ------------------------------------------------------------------------
+      Краткий лор организации: Накамура Инжениринг - одна из пяти самых крупных корпораций в Галактике, занимающаяся промышленным производством, постройкой энергетического обьорудования, пром.установок и т.д. и т.п. Кроме тго именно в ней работают лучшие инженеры галактики. Помимо прочего славиться специфической системой управления, адсмкою бюрократией и попаток сотрудников делась всё без бумажек.
+#-----------------------------------------------гиры---------------------------------------
+#------------------------------------инженер-электрик---------- 
+- type: startingGear
+  id: NKMGearEngE
+  equipment:
+    jumpsuit: NKMUniformEngineer
+    back: NKMBackpackStdFilled
+    shoes: NKMBoots
+    head: NKMHardhat
+    id: NKMPDAE
+    ears: NKMHeadset
+    gloves: NKMGlovesIsol
+    outerClothing: NKMCoat
+    belt: NKMBeltFilledEng
+    pocket1: NKMPaperE
+    pocket2: NKMRubberStamp
+#------------------------------------инженер-строитель---------- 
+- type: startingGear
+  id: NKMGearEngB
+  equipment:
+    jumpsuit: NKMUniformEngineer
+    back: NKMDuffelFilled
+    shoes: NKMBootsWork
+    head: NKMHelmet
+    id: NKMPDAE
+    ears: NKMHeadset
+    gloves: NKMGlovesActive
+    outerClothing: NKMHardsuit
+    belt: NKMBeltFilledEng
+    eyes: ClothingEyesGlassesMeson
+    pocket1: NKMPaperE
+    pocket2: NKMRubberStamp
+#-------------------------------------------Имена-------------------------------------
+#---------------------------------звания пацанов----------
+- type: dataset
+  id: NKMName
+  values:
+  - Майкл
+  - Митчел
+  - Джеймс
+  - Кларк
+  - Вальтер
+  - Нильс
+  - Максвелл
+  - Джозеф
+  - Джонс
+  - Питер
+  - Томас
+  - Иоганн
+  - Хендрик
+  - Джордж
+  - Стенли
+  - Огастес
+  - Клод
+  - Мейджор
+  - Симеон
+  - Дэни
+  - Николай
+  - Борис
+  - Анатолий
+  - Оуэн
+  - Уилланс
+  - Пауль
+  - Уинфилд
+  - Ульрих
+  - Кристоф
+  - Алексей
+  - Валерий
+  - Андрей
+  - Леонид
+  - Дэвид
+  - Мартин
+  - Адлессандро
+  - Джузеппе
+  - Антонио
+  - Аснастасио
+  - Умберто
+  - Андрэ
+  - Георг
+  - Александр
+  - Владимир
+#---------------------------------фамилии----------
+- type: dataset
+  id: NKMNameTwo
+  values:
+  - Фарадей
+  - Максвелл
+  - Шокли
+  - Шоттки
+  - Бор
+  - Борн
+  - Томпсон
+  - Зееман
+  - Зеебек
+  - Лоренц
+  - Миллер
+  - Дэморган
+  - Шеннон
+  - Эрли
+  - Пуассон
+  - Мирошников
+  - Попов
+  - Ричардсон
+  - Хоровиц
+  - Хилл
+  - Титце
+  - Шенк
+  - Забродин
+  - Степаненко
+  - Баринов
+  - Афанасьев
+  - Гусев
+  - Харрис
+  - Джонс
+  - Уатт
+  - Вольтэ
+  - Ампер
+  - Ом
+  - Симонс
+  - Зорин
+  - Бодров
+  - Казначеев
+  - Емец
+#-------------------------------------хуй знает что это, но вот оно работает и ладно---------------------------
+#---------------------------------электрик----------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Vox
+  id: NKMEngER
+  randomizeName: false
+  components:
+    - type: GhostRole
+      name: Гост-роль электрика Накамуры
+      description: "Вы инженер-электрик корпорации Накамура Инжениринг. Будьте профессионалом и мастером своего дела. Шутите шутки. Считайте инженеров самыми классыни ребятами во всей галактике, порой хихикайте над гуманитариями."
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ NKMGearEngE ]
+    - type: RandomMetadata
+      nameSegments:
+      - NKMName
+      - NKMNameTwo
+    - type: NpcFactionMember
+      factions:
+      - NKM
+
+- type: randomHumanoidSettings
+  id: NKMEngEReady
+  parent: NKMEngER
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Ниженер-электрик Накамуры
+      description: "Вы инженер-электрик корпорации Накамура Инжениринг. Будьте профессионалом и мастером своего дела. Шутите шутки. Считайте инженеров самыми классыни ребятами во всей галактике, порой хихикайте над гуманитариями."
+    - type: GhostTakeoverAvailable
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 100
+    - type: Loadout
+      prototypes: [ NKMGearEngE ]
+    - type: NpcFactionMember
+      factions:
+      - NKM
+  
+- type: entity
+  name: Ниженер-электрик Накамуры Спавнер
+  id: NKMMobEngE
+  suffix: GOST, Накамура
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    state: engineer
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - NKMName
+    - NKMNameTwo
+  - type: RandomHumanoidSpawner
+    settings: NKMEngER
+  - type: NpcFactionMember
+    factions:
+    - NKM
+#---------------------------------строитель----------
+- type: randomHumanoidSettings
+  speciesBlacklist: 
+    - Vox
+  id: NKMEngBR
+  randomizeName: false
+  components:
+    - type: GhostRole
+      name: Гост-роль строителя Накамуры
+      description: "Вы инженер-строитель корпорации Накамура Инжениринг. Будьте профессионалом и мастером своего дела. Шутите шутки. Считайте инженеров самыми классыни ребятами во всей галактике, порой хихикайте над гуманитариями."
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ NKMGearEngB ]
+    - type: RandomMetadata
+      nameSegments:
+      - NKMName
+      - NKMNameTwo
+    - type: NpcFactionMember
+      factions:
+      - NKM
+
+- type: randomHumanoidSettings
+  id: NKMEngBReady
+  parent: NKMEngBR
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: Ниженер-строитель Накамуры
+      description: "Вы инженер-строитель корпорации Накамура Инжениринг. Будьте профессионалом и мастером своего дела. Шутите шутки. Считайте инженеров самыми классыни ребятами во всей галактике, порой хихикайте над гуманитариями."
+    - type: GhostTakeoverAvailable
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 100
+    - type: Loadout
+      prototypes: [ NKMGearEngB ]
+    - type: NpcFactionMember
+      factions:
+      - NKM
+  
+- type: entity
+  name: Ниженер-строитель Накамуры Спавнер
+  id: NKMMobEngB
+  suffix: GOST, Накамура
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    state: engineer
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+    nameSegments:
+    - NKMName
+    - NKMNameTwo
+  - type: RandomHumanoidSpawner
+    settings: NKMEngBR
+  - type: NpcFactionMember
+    factions:
+    - NKM
+#---------------------------------------------------------Ящик---------------------------------------------
+- type: entity
+  parent: CrateBaseSecure
+  id: NKMCrate
+  name: Пустой ящик Накамура
+  suffix: Накамура
+  components:
+  - type: AccessReader
+    access: [["NKMAccess"],["Engineering"]]
+  - type: Icon
+    sprite: Victoria/Nakamura/nkm_crates.rsi
+  - type: Sprite
+    sprite: Victoria/Nakamura/nkm_crates.rsi

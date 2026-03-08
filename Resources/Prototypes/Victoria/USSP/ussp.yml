@@ -3738,3 +3738,45 @@
       - id: USSPWeaponPartPrk
       - id: USSPWeaponPartPrk
       - id: USSPWeaponPartPrk
+#-----------------------------------------плакаты-------------------------------
+#---------------------------------1-----------------
+- type: entity
+  parent: BaseSign
+  id: USSPSignOne
+  name: Плакат "Фронт Зовёт"
+  description: Товарищ! Фронт Зовёт! Положим жизнь за благополучие нашего Отчества! Не стой в стороне, пока страна страдает!
+  suffix: СССП, Плакат
+  components:
+  - type: Sprite
+    sprite: Victoria/USSP/sign.rsi
+    state: ussp_1
+#---------------------------------2-----------------
+- type: entity
+  parent: USSPSignOne
+  id: USSPSignTwo
+  name: Плакат "Труд Партии"
+  description: Товарищ! Даже если ты не видишь труд Партии, Партия денно и нощно заботится о твоём благосостоянии! Не подведи Партию, трудись честно!
+  suffix: СССП, Плакат
+  components:
+  - type: Sprite
+    state: ussp_2
+#---------------------------------3-----------------
+- type: entity
+  parent: USSPSignOne
+  id: USSPSignThree
+  name: Плакат "В Тыл"
+  description: Товарищ! Если ты не можешь сражаться на передовой, то иди в тыл! Войнам-защитникам всегда нужны боеприпасы, медикаменты, снабжение и ремонт!
+  suffix: СССП, Плакат
+  components:
+  - type: Sprite
+    state: ussp_3
+#---------------------------------4-----------------
+- type: entity
+  parent: USSPSignOne
+  id: USSPSignFour
+  name: Плакат "Обликации в бой"
+  description: Товарищ! Помоги армии своим благосостоянием! Покупаей облигации военного займа, дабы твои средства могли обратиться в патроны и снабжение!
+  suffix: СССП, Плакат
+  components:
+  - type: Sprite
+    state: ussp_4

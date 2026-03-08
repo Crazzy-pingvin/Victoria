@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/11/2025 23:08:30
-  entityCount: 4506
+  time: 12/27/2025 20:55:27
+  entityCount: 4515
 maps:
 - 1
 grids:
@@ -80,13 +80,13 @@ entities:
       parallax: Water
   - uid: 2
     components:
-    - type: Parallax
-      parallax: Water
     - type: MetaData
       name: DesertPlatform
     - type: Transform
       pos: -0.5,-0.5625
       parent: 1
+    - type: Parallax
+      parallax: Water
     - type: BecomesStation
       id: VictoriaDesertPlatform
     - type: FTLDestination
@@ -10903,6 +10903,59 @@ entities:
     components:
     - type: Transform
       pos: 7.5,1.5
+      parent: 2
+- proto: SpawnSignFour
+  entities:
+  - uid: 4511
+    components:
+    - type: Transform
+      pos: 10.5,9.5
+      parent: 2
+  - uid: 4512
+    components:
+    - type: Transform
+      pos: 4.5,5.5
+      parent: 2
+- proto: SpawnSignOne
+  entities:
+  - uid: 4507
+    components:
+    - type: Transform
+      pos: 4.5,-4.5
+      parent: 2
+  - uid: 4508
+    components:
+    - type: Transform
+      pos: 10.5,-14.5
+      parent: 2
+- proto: SpawnSignThree
+  entities:
+  - uid: 4509
+    components:
+    - type: Transform
+      pos: 16.5,10.5
+      parent: 2
+  - uid: 4510
+    components:
+    - type: Transform
+      pos: 21.5,-1.5
+      parent: 2
+- proto: SpawnSignTwo
+  entities:
+  - uid: 4513
+    components:
+    - type: Transform
+      pos: 25.5,-1.5
+      parent: 2
+  - uid: 4514
+    components:
+    - type: Transform
+      pos: 36.5,5.5
+      parent: 2
+  - uid: 4515
+    components:
+    - type: Transform
+      pos: 56.5,5.5
       parent: 2
 - proto: SpawnTelecomServer
   entities:

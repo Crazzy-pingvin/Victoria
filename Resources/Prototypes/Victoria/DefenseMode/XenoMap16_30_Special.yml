@@ -1,0 +1,98 @@
+#------------------------------------------губитель------------------------------
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap2Ver1
+  suffix: Оборона, Альфа, Губитель1
+  components:
+  - type: RandomChangeTime
+    time: 2400
+    prob: 0.25
+    entity: MobXenoVerderberDefAlfaMap2Ver1
+    
+- type: entity
+  name: Ксеноспавнер Губителя
+  suffix: Оборона, Альфа
+  id: MobXenoVerderberDefAlfaMap2Ver1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Victoria/DefenseMode/Xenos/bastard.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoVerderberDefAlfa
+    chance: 1
+    intervalSeconds: 1800
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
+  - type: TimedDespawn
+    lifetime: 3190
+#------------------------------------------пронзатель------------------------------   
+- type: entity
+  parent: XenoEgg
+  id: XenoEggAlfaMap2Imp1
+  suffix: Оборона, Альфа, Пронзатель1
+  components:
+  - type: RandomChangeTime
+    time: 4260
+    prob: 1
+    entity: MobXenoImpalerDefAlfaMap2Imp1
+
+- type: entity
+  parent: XenoEggAlfaMap2Imp1
+  id: XenoEggAlfaMap2Imp2
+  suffix: Оборона, Бета, Пронзатель1
+  components:
+  - type: RandomChangeTime
+    entity: MobXenoImpalerDefBetaMap2Imp2
+
+- type: entity
+  parent: XenoEggAlfaMap2Imp1
+  id: XenoEggAlfaMap2Imp3
+  suffix: Оборона, Гамма, Пронзатель1
+  components:
+  - type: RandomChangeTime
+    entity: MobXenoImpalerDefGammaMap2Imp3
+    
+- type: entity
+  name: Ксеноспавнер Пронзателя
+  suffix: Оборона, Альфа
+  id: MobXenoImpalerDefAlfaMap2Imp1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Victoria/DefenseMode/Xenos/impaler.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoImpalerDefAlfa
+    chance: 1
+    intervalSeconds: 420
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 3
+  - type: TimedDespawn
+    lifetime: 3190
+    
+- type: entity
+  suffix: Оборона, Бета
+  id: MobXenoImpalerDefBetaMap2Imp2
+  parent: MobXenoImpalerDefAlfaMap2Imp1
+  components:
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoImpalerDefBeta
+
+- type: entity
+  suffix: Оборона, Гамма
+  id: MobXenoImpalerDefGammaMap2Imp3
+  parent: MobXenoImpalerDefAlfaMap2Imp1
+  components:
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoImpalerDefGamma

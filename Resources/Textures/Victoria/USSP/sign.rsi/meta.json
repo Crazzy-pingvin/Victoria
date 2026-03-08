@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Sprite created by Pulverizator",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "ussp_1"
+    },
+	{
+      "name": "ussp_2"
+    },
+	{
+      "name": "ussp_3"
+    },
+	{
+      "name": "ussp_4"
+    }
+  ]
+}

@@ -42,6 +42,22 @@
         - MobMask
         layer:
         - MobLayer
+        
+- type: entity
+  suffix: Оборона, Бета, Ксено
+  parent: MobXenoAphidDefAlfa
+  id: MobXenoAphidDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+    
+- type: entity
+  suffix: Оборона, Гамма, Ксено
+  parent: MobXenoAphidDefAlfa
+  id: MobXenoAphidDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
 #------------------------------------------мачеха------------------------------
 - type: entity
   name: Мачеха
@@ -98,6 +114,28 @@
     spawned:
     - id: FoodMeatXeno
       amount: 4
+      
+- type: entity
+  parent: MobXenoStiefmutterAlpha
+  suffix: Оборона, Бета, Ксено
+  id: MobXenoStiefmutterBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoAphidDefBeta
+    
+- type: entity
+  parent: MobXenoStiefmutterAlpha
+  suffix: Оборона, Гамма, Ксено
+  id: MobXenoStiefmutterGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoAphidDefGamma    
 #------------------------------------------сабля------------------------------
 - type: entity
   name: Сабельщик
@@ -133,16 +171,32 @@
     bloodMaxVolume: 50  
   - type: TimedDespawn
     lifetime: 600
+    
+- type: entity
+  suffix: Оборона, Бета, Ксено
+  parent: MobXenoSaberDefAlfa
+  id: MobXenoSaberDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+    
+- type: entity
+  suffix: Оборона, Гамма, Ксено
+  parent: MobXenoSaberDefAlfa
+  id: MobXenoSaberDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver       
 #------------------------------------------Губитель------------------------------
 - type: entity
-  name: Губитель
+  name: Альфа-Губитель
   description: Угроза неминуемой и всеобщей гибели.
-  suffix: Оборона, Альфа, Ксено
+  suffix: Ивентовый, Альфа, Ксено
   parent: [MobXeno, MobXenoDefBase]
-  id: MobXenoVerderberDefAlfa
+  id: MobXenoVerderberIventAlfa
   components:
   - type: GhostRole
-    prob: 0
+    prob: 1
   - type: Sprite
     drawdepth: Mobs
     sprite: Victoria/DefenseMode/Xenos/bastard.rsi
@@ -204,5 +258,129 @@
       collection: FootstepThud
   - type: SlowOnDamage
     speedModifierThresholds:
-      75: 0.95
-      90: 0.85
+      75: 0.85
+      90: 0.95
+      
+- type: entity
+  name: Губитель
+  description: Угроза неминуемой и всеобщей гибели.
+  suffix: Оборона, Альфа, Ксено
+  parent: MobXenoVerderberIventAlfa
+  id: MobXenoVerderberDefAlfa
+  components:
+  - type: GhostRole
+    prob: 0
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      7000: Dead
+  - type: MeleeWeapon
+    range: 4
+    damage:
+      types:
+        Slash: 40
+        Blunt: 40
+        Piercing: 40
+        Caustic: 40
+        Structural: 70
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      25: 0.5
+      50: 0.6
+      75: 0.7
+      90: 0.9
+#------------------------------------------пронзатель------------------------------   
+- type: hitscan
+  id: XenoSpike
+  damage:
+    types:
+      Piercing: 25
+      Caustic: 10
+      Poison: 20
+  muzzleFlash:
+    sprite: Victoria/DefenseMode/Xenos/projectiles.rsi
+    state: muzzle_beam_heavy
+  travelFlash:
+    sprite: Victoria/DefenseMode/Xenos/projectiles.rsi
+    state: beam_heavy
+  impactFlash:
+    sprite: Victoria/DefenseMode/Xenos/projectiles.rsi
+    state: impact_beam_heavy
+ 
+- type: entity
+  name: Пронзатель
+  description: Обычно они приходят ночью. Обычно.
+  suffix: Оборона, Альфа, Ксено
+  parent: [MobXeno, MobXenoDefOnlyRangedBase]
+  id: MobXenoImpalerDefAlfa
+  components:
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDefOnlyRanged
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Victoria/DefenseMode/Xenos/impaler.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: GhostRole
+    prob: 0
+  - type: Journey
+    journeyGroup: Alpha
+  - type: DefenseEnemy
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      25: 0.7
+  - type: Bloodstream
+    bloodMaxVolume: 25
+  - type: TimedDespawn
+    lifetime: 600
+  - type: HitscanBatteryAmmoProvider
+    proto: XenoSpike
+    fireCost: 100
+  - type: Battery
+    maxCharge: 200
+    startingCharge: 200
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 20
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.4
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+        
+- type: entity
+  suffix: Оборона, Бета, Ксено
+  parent: MobXenoImpalerDefAlfa
+  id: MobXenoImpalerDefBeta
+  components:
+  - type: Journey
+    journeyGroup: Beta
+
+- type: entity
+  suffix: Оборона, Гамма, Ксено
+  parent: MobXenoImpalerDefAlfa
+  id: MobXenoImpalerDefGamma
+  components:
+  - type: Journey
+    journeyGroup: Beaver

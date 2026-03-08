@@ -1,0 +1,375 @@
+#----------------------------------------------------------Лорные напитки----------------------
+#---------------------------------------------Умпорские-------------------------------------
+#----------------------------------Пехотное пиво-----------------------------------------
+#-------------------Вкус--------------------------------------------------------------
+- type: flavor
+  id: FlavorUmporInfantryBeer
+  flavorType: Complex
+  description: flavor-complex-umpor_infantry_beer
+#-------------------Реагент-----------------------------------------------------------
+- type: reagent
+  id: UmporInfantryBeer
+  name: Умпорское пехотное пиво
+  parent: BaseAlcohol
+  desc: Приятное на вкус, с воспоминаниями о доме...
+  physicalDesc: reagent-physical-desc-umpor_infantry_beer
+  flavor: FlavorUmporInfantryBeer
+  color: "#d7d7d7"
+  metamorphicSprite:
+    sprite: Victoria/Objects/Misc/Drinks/umpor_infantry_beer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 2
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.03
+#-------------------Рецепт------------------------------------------------------------      
+- type: reaction
+  id: UmporInfantryBeer
+  reactants:
+    Beer:
+      amount: 1
+    IceCream:
+      amount: 1
+  products:
+    UmporInfantryBeer: 2
+#-------------------Напиток-----------------------------------------------------------
+- type: entity
+  parent: DrinkGlass
+  id: DrinkUmporInfantryBeerGlass
+  suffix: Умпорское пехотное пиво
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: UmporInfantryBeer
+          Quantity: 30
+  - type: Icon
+    sprite: Victoria/Objects/Misc/Drinks/umpor_infantry_beer.rsi
+    state: icon
+#----------------------------------Честный труд-----------------------------------------
+#-------------------Вкус--------------------------------------------------------------
+- type: flavor
+  id: FlavorUmporHornestWork
+  flavorType: Complex
+  description: flavor-complex-umpor_honest_work
+#-------------------Реагент-----------------------------------------------------------
+- type: reagent
+  id: UmporHornestWork
+  name: Коктейль "Честный труд"
+  parent: BaseAlcohol
+  desc: Такое, что потом можно сдвинуть горы и дать свет людям!
+  physicalDesc: reagent-physical-desc-umpor_honest_work
+  flavor: FlavorUmporHornestWork
+  color: "#8b8880"
+  metamorphicSprite:
+    sprite: Victoria/Objects/Misc/Drinks/umpor_honest_work.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 2
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 1.0
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Theobromine
+        amount: 0.1
+#-------------------Рецепт------------------------------------------------------------
+- type: reaction
+  id: UmporHornestWork
+  reactants:
+    Iron:
+      amount: 1
+    JuiceLime:
+      amount: 2
+    SodaWater:
+      amount: 2 
+  products:
+    UmporHornestWork: 5
+#-------------------Напиток-----------------------------------------------------------
+- type: entity
+  parent: DrinkGlass
+  id: DrinkUmporHornestWorkGlass
+  suffix: Коктейль "Честный труд"
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: UmporHornestWork
+          Quantity: 30
+  - type: Icon
+    sprite: Victoria/Objects/Misc/Drinks/umpor_honest_work.rsi
+    state: icon
+#---------------------------------------------Ноократские-------------------------------------
+#----------------------------------Чистый разум-----------------------------------------
+#-------------------Вкус--------------------------------------------------------------
+- type: flavor
+  id: FlavorNoocClearMind
+  flavorType: Complex
+  description: flavor-complex-nooc_clear_mind
+#-------------------Реагент-----------------------------------------------------------
+- type: reagent
+  id: NoocClearMind
+  name: Коктейль "Разум" очищенный
+  parent: BaseAlcohol
+  desc: Заставляет в кои-то веки задуматься.
+  physicalDesc: reagent-physical-desc-nooc_clear_mind
+  flavor: FlavorNoocClearMind
+  color: "#5bfaff"
+  metamorphicSprite:
+    sprite: Victoria/Objects/Misc/Drinks/nooc_clear_mind.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 1.0
+        type: Remove
+#-------------------Рецепт------------------------------------------------------------
+- type: reaction
+  id: NoocClearMind
+  reactants:
+    Vermouth:
+      amount: 1
+    JuiceLime:
+      amount: 1
+    SodaWater:
+      amount: 1 
+    TonicWater:
+      amount: 1
+  products:
+    NoocClearMind: 4
+#-------------------Напиток-----------------------------------------------------------
+- type: entity
+  parent: DrinkGlass
+  id: DrinkNoocClearMindGlass
+  suffix: Коктейль "Разум" очищенный
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: NoocClearMind
+          Quantity: 30
+  - type: Icon
+    sprite: Victoria/Objects/Misc/Drinks/nooc_clear_mind.rsi
+    state: icon
+#---------------------------------------------Братство-------------------------------------
+#----------------------------------Преступный виски-----------------------------------------
+#-------------------Вкус--------------------------------------------------------------
+- type: flavor
+  id: FlavorBrotherhoodWhiskey
+  flavorType: Complex
+  description: flavor-complex-brotherhood_whiskey
+#-------------------Реагент-----------------------------------------------------------
+- type: reagent
+  id: BrotherhoodWhiskey
+  name: Преступный виски
+  parent: BaseAlcohol
+  desc: Этот заставит выложить деньги на стол!
+  physicalDesc: reagent-physical-desc-brotherhood_whiskey
+  flavor: FlavorBrotherhoodWhiskey
+  color: "#ee7732"
+  recognizable: true
+  metamorphicSprite:
+    sprite: Victoria/Objects/Misc/Drinks/brotherhood_whiskey.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 2
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.3
+#-------------------Рецепт------------------------------------------------------------
+- type: reaction
+  id: BrotherhoodWhiskey
+  reactants:
+    Whiskey:
+      amount: 1
+    Rum:
+      amount: 1 
+  products:
+    BrotherhoodWhiskey: 2
+#-------------------Напиток-----------------------------------------------------------
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBrotherhoodWhiskeyGlass
+  suffix: Преступный виски
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: BrotherhoodWhiskey
+          Quantity: 30
+  - type: Icon
+    sprite: Victoria/Objects/Misc/Drinks/brotherhood_whiskey.rsi
+    state: icon
+#----------------------------------Крайне преступный виски-----------------------------------------
+#-------------------Вкус--------------------------------------------------------------
+- type: flavor
+  id: FlavorBrotherhoodSuperWhiskey
+  flavorType: Complex
+  description: flavor-complex-brotherhood_super_whiskey
+#-------------------Реагент-----------------------------------------------------------
+- type: reagent
+  id: BrotherhoodSuperWhiskey
+  name: Крайне преступный виски
+  parent: BaseAlcohol
+  desc: Этот заставит поднять руки в горб и выложить деньги на стол!
+  physicalDesc: reagent-physical-desc-brotherhood_super_whiskey
+  flavor: FlavorBrotherhoodSuperWhiskey
+  color: "#ee7732"
+  recognizable: true
+  metamorphicSprite:
+    sprite: Victoria/Objects/Misc/Drinks/brotherhood_super_whiskey.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 2
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 4
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.4
+#-------------------Рецепт------------------------------------------------------------
+- type: reaction
+  id: BrotherhoodSuperWhiskey
+  reactants:
+    BrotherhoodWhiskey:
+      amount: 1
+    Vodka:
+      amount: 1 
+  products:
+    BrotherhoodSuperWhiskey: 2
+#-------------------Напиток-----------------------------------------------------------
+- type: entity
+  parent: DrinkGlass
+  id: DrinkBrotherhoodSuperWhiskeyGlass
+  suffix: Крайне преступный виски
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: BrotherhoodSuperWhiskey
+          Quantity: 30
+  - type: Icon
+    sprite: Victoria/Objects/Misc/Drinks/brotherhood_super_whiskey.rsi
+    state: icon
+#---------------------------------------------ОПЗ-------------------------------------
+#----------------------------------Херов космический лифт-----------------------------------------
+#-------------------Вкус--------------------------------------------------------------
+- type: flavor
+  id: FlavorOPZTheFuckingSpaceElevator
+  flavorType: Complex
+  description: flavor-complex-opz_the_fucking_space_elevator
+#-------------------Реагент-----------------------------------------------------------
+- type: reagent
+  id: OPZTheFuckingSpaceElevator
+  name: Коктейль "Херов космический лифт"
+  parent: BaseAlcohol
+  desc: Заставить взлететь в небо, а затем упать в лепёшку. Во всех смыслах.
+  physicalDesc: reagent-physical-desc-opz_the_fucking_space_elevator
+  flavor: FlavorOPZTheFuckingSpaceElevator
+  color: "#80bceb"
+  recognizable: true
+  metamorphicSprite:
+    sprite: Victoria/Objects/Misc/Drinks/opz_the_fucking_space_elevator.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 8
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 1
+#-------------------Рецепт------------------------------------------------------------
+- type: reaction
+  id: OPZTheFuckingSpaceElevator
+  reactants:
+    Rum:
+      amount: 1
+    Vodka:
+      amount: 1 
+    Tequila:
+      amount: 1
+    Vermouth:
+      amount: 1 
+    SodaWater:
+      amount: 1
+  products:
+    OPZTheFuckingSpaceElevator: 5
+#-------------------Напиток-----------------------------------------------------------
+- type: entity
+  parent: DrinkGlass
+  id: DrinkOPZTheFuckingSpaceElevatorGlass
+  suffix: Коктейль "Херов космический лифт"
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: OPZTheFuckingSpaceElevator
+          Quantity: 30
+  - type: Icon
+    sprite: Victoria/Objects/Misc/Drinks/opz_the_fucking_space_elevator.rsi
+    state: icon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
