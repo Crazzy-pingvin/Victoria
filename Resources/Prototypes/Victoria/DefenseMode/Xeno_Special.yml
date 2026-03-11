@@ -3,7 +3,7 @@
   name: Тля
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoDefAlfa, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoDefAlfa]
   id: MobXenoAphidDefAlfa
   components:
   - type: Sprite
@@ -61,7 +61,7 @@
 #------------------------------------------мачеха------------------------------
 - type: entity
   name: Мачеха
-  parent: [MobXeno, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXeno]
   suffix: Оборона, Альфа, Ксено
   id: MobXenoStiefmutterAlpha
   components:
@@ -141,7 +141,7 @@
   name: Сабельщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoRavager, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRavager]
   id: MobXenoSaberDefAlfa
   components:
   - type: GhostRole
@@ -192,7 +192,7 @@
   name: Альфа-Губитель
   description: Угроза неминуемой и всеобщей гибели.
   suffix: Ивентовый, Альфа, Ксено
-  parent: [MobXeno, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXeno]
   id: MobXenoVerderberIventAlfa
   components:
   - type: GhostRole
@@ -311,7 +311,7 @@
   name: Пронзатель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXeno, MobXenoDefOnlyRangedBase]
+  parent: [MobXenoDefOnlyRangedBase, MobXeno]
   id: MobXenoImpalerDefAlfa
   components:
   - type: HTN

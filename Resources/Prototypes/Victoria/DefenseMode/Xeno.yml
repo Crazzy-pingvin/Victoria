@@ -396,7 +396,7 @@
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Не-Ест-Стены, Ксено
-  parent: [MobXeno, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXeno]
   id: MobXenoDefAlfaNoWalls
   components:
   - type: Journey
@@ -476,7 +476,7 @@
   name: Преторианец
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoPraetorian, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoPraetorian]
   id: MobXenoPraetorianDefAlfa
   components:
   - type: GhostRole
@@ -517,7 +517,7 @@
   name: Дрон
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoDrone, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoDrone]
   id: MobXenoDroneDefAlfa
   components:
   - type: Journey
@@ -556,7 +556,7 @@
   name: Королева
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoQueen, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoQueen]
   id: MobXenoQueenDefAlfa
   components:
   - type: NpcFactionMember
@@ -601,7 +601,7 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoRavager, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRavager]
   id: MobXenoRavagerDefAlfa
   components:
   - type: NpcFactionMember
@@ -631,7 +631,7 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: [MobXenoRavagerDefAlfa, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRavagerDefAlfa]
   id: MobXenoRavagerDefAlfaAlter
   components:
   - type: Journey
@@ -693,7 +693,7 @@
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено, Ксено
-  parent: [MobXenoRunner, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRunner]
   id: MobXenoRunnerDefAlfa
   components:
   - type: Journey
@@ -717,7 +717,7 @@
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: [MobXenoRunner, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRunner]
   id: MobXenoRunnerDefAlfaAlter
   components:
   - type: NpcFactionMember
@@ -792,7 +792,7 @@
   name: Руни
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoRouny, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRouny]
   id: MobXenoRounyDefAlfa
   components:
   - type: Journey
@@ -828,7 +828,7 @@
   name: Плевальщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoSpitter, MobXenoDefRangedBase]
+  parent: [MobXenoDefRangedBase, MobXenoSpitter]
   id: MobXenoSpitterDefAlfa
   components:
   - type: Journey

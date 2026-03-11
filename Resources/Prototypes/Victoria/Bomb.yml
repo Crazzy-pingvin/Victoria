@@ -800,6 +800,10 @@
     walkSpeedModifier: 0.25
     sprintSpeedModifier: 0.25
   - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      9999: Dead
   - type: NpcFactionMember
     factions:
     - DefenseStructure
