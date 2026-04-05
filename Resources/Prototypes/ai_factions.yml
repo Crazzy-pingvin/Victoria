@@ -23,6 +23,7 @@
     - XenoTunneller
     - XenoTunnellerOnly
     - USSP
+    - NKM
 
 - type: npcFaction
   id: NanoTrasen
@@ -43,6 +44,7 @@
   - Vitz
   - KMLG
   - Hound
+  - NKM
 
 - type: npcFaction
   id: Mouse
@@ -85,6 +87,7 @@
   - CDC
   - DefenseStructureBase
   - USSP
+  - NKM
 
 - type: npcFaction
   id: SimpleNeutral
@@ -107,6 +110,7 @@
   - XenoTunneller
   - XenoTunnellerOnly
   - USSP
+  - NKM
 
 - type: npcFaction
   id: Xeno
@@ -131,6 +135,7 @@
   - CDC
   - DefenseStructureBase
   - USSP
+  - NKM
   friendly:
   - XenoTunneller
   - XenoTunnellerOnly
@@ -159,6 +164,7 @@
   - DefenseStructureBase
   - DefenseStructure
   - USSP
+  - NKM
   friendly:
   - Xeno
   - XenoTunnellerOnly
@@ -196,6 +202,7 @@
   - CDC
   - DefenseStructureBase
   - USSP
+  - NKM
 
 - type: npcFaction
   id: Revolutionary
@@ -219,3 +226,4 @@
   - Xeno
   - XenoTunnellerOnly
   - USSP
+  - NKM

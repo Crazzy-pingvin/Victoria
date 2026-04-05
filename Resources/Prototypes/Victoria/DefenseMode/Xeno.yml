@@ -207,6 +207,80 @@
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
+
+- type: htnCompound
+  id: GunCombatCompoundBotXeno
+  branches:
+    # Pick target, then move into range and shoot them.
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: NearbyGunTargets
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            shutdownState: PlanFinished
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            stopOnLineOfSight: true
+            rangeKey: MeleeRange
+        - !type:HTNPrimitiveTask
+          operator: !type:JukeOperator
+            jukeType: AdjacentTile
+        - !type:HTNPrimitiveTask
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+          operator: !type:GunOperator
+            targetKey: Target
+          services:
+            - !type:UtilityService
+              id: RangedService
+              proto: NearbyGunTargets
+              key: Target
+            
+- type: htnCompound
+  id: RangedCombatCompoundBotXeno
+  branches:
+    - preconditions:
+        - !type:GunAmmoPrecondition
+          minPercent: 0.001
+      tasks:
+        - !type:HTNCompoundTask
+          task: GunCombatCompoundBotXeno
+    -  preconditions:
+         - !type:ActiveHandComponentPrecondition
+           components:
+             - type: Gun
+           invert: true
+       tasks:
+         - !type:HTNCompoundTask
+           task: PickupGunCompound
+    - preconditions:
+        - !type:ActiveHandComponentPrecondition
+          components:
+            - type: Gun
+        - !type:GunAmmoPrecondition
+          maxPercent: 0.001
+      tasks:
+        - !type:HTNPrimitiveTask
+          preconditions:
+            - !type:ActiveHandEntityPrecondition
+          operator: !type:DropOperator
+         
+- type: htnCompound
+  id: XenoCompoundDefOnlyRanged
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: RangedCombatCompoundBotXeno
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FollowCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
 #------------------------------------------Сами боты------------------------------
 - type: entity
   id: MobXenoDefBase
@@ -243,6 +317,26 @@
   - type: HTN
     rootTask:
       task: XenoCompoundDefRanged
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+        
+- type: entity
+  description: Обычно они приходят ночью. Обычно.
+  suffix: БАЗА, дальний
+  abstract: true
+  parent: MobXenoDefBase
+  id: MobXenoDefOnlyRangedBase
+  components:
+  - type: HTN
+    rootTask:
+      task: XenoCompoundDefOnlyRanged
     blackboard:
       NavClimb: !type:Bool
         true
@@ -302,7 +396,7 @@
   name: Бурильщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Не-Ест-Стены, Ксено
-  parent: [MobXeno, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXeno]
   id: MobXenoDefAlfaNoWalls
   components:
   - type: Journey
@@ -382,7 +476,7 @@
   name: Преторианец
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoPraetorian, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoPraetorian]
   id: MobXenoPraetorianDefAlfa
   components:
   - type: GhostRole
@@ -423,7 +517,7 @@
   name: Дрон
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoDrone, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoDrone]
   id: MobXenoDroneDefAlfa
   components:
   - type: Journey
@@ -462,7 +556,7 @@
   name: Королева
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoQueen, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoQueen]
   id: MobXenoQueenDefAlfa
   components:
   - type: NpcFactionMember
@@ -507,7 +601,7 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoRavager, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRavager]
   id: MobXenoRavagerDefAlfa
   components:
   - type: NpcFactionMember
@@ -537,7 +631,7 @@
   name: Разрушитель
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: [MobXenoRavagerDefAlfa, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRavagerDefAlfa]
   id: MobXenoRavagerDefAlfaAlter
   components:
   - type: Journey
@@ -599,7 +693,7 @@
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено, Ксено
-  parent: [MobXenoRunner, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRunner]
   id: MobXenoRunnerDefAlfa
   components:
   - type: Journey
@@ -623,7 +717,7 @@
   name: Бегун
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Альтернативный, Ксено
-  parent: [MobXenoRunner, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRunner]
   id: MobXenoRunnerDefAlfaAlter
   components:
   - type: NpcFactionMember
@@ -698,7 +792,7 @@
   name: Руни
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoRouny, MobXenoDefBase]
+  parent: [MobXenoDefBase, MobXenoRouny]
   id: MobXenoRounyDefAlfa
   components:
   - type: Journey
@@ -734,7 +828,7 @@
   name: Плевальщик
   description: Обычно они приходят ночью. Обычно.
   suffix: Оборона, Альфа, Ксено
-  parent: [MobXenoSpitter, MobXenoDefRangedBase]
+  parent: [MobXenoDefRangedBase, MobXenoSpitter]
   id: MobXenoSpitterDefAlfa
   components:
   - type: Journey

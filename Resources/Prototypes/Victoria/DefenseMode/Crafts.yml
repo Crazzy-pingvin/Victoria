@@ -2117,7 +2117,7 @@
               amount: 5
             - tool: Welding
               doAfter: 5
-        - to: cp_ge_en_ar
+        - to: cp_ge_en
           completed:
             - !type:AdminLog
               message: "детали рассоединились"
@@ -3485,3 +3485,583 @@
               doAfter: 20
             - tool: Welding
               doAfter: 10
+#----------------------------------------------------------Витезтви--------------------------
+#----------------------------------------------------Детали-------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: Tag
+  id: VitzMechHogLeg
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: VitzMechHogLeg
+  name: Нога М-28 "Боров"
+  description: Бронированная нога боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi
+    state: leg
+  - type: Tag
+    tags:
+    - VitzMechHogLeg
+  - type: Stack
+    stackType: VitzMechHogLeg
+    count: 1
+  - type: Construction
+    graph: HogLeg
+    node: start
+    defaultTarget: leg_foot
+    
+- type: stack
+  id: VitzMechHogLeg
+  name: Нога М-28 "Боров"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: leg }
+  spawn: VitzMechHogLeg
+  maxCount: 1
+#------------------------------------------------Стопа---------------------------------
+- type: Tag
+  id: VitzMechHogArm
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: VitzMechHogFoot
+  name: Стопа М-28 "Боров"
+  description: Крепкая стопа боевой машины корпорации Витезтви тип 28 "Боров". Солдаты прозвали ту модельмеханизированной стопы - "лапонька".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi
+    state: foot
+  - type: Tag
+    tags:
+    - VitzMechHogFoot
+  - type: Stack
+    stackType: VitzMechHogFoot
+    count: 1
+    
+- type: stack
+  id: VitzMechHogFoot
+  name: Стопа М-28 "Боров"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: foot }
+  spawn: VitzMechHogFoot
+  maxCount: 1
+#----------------------------------------------------Рецепты------------------------------
+#------------------------------------------------Нога---------------------------------
+- type: latheRecipe
+  id: RecipeVitzMechHogLeg
+  materials:
+    Steel: 4500
+    PlumbumMaterial: 3000
+  result: VitzMechHogLeg
+#------------------------------------------------Стопа---------------------------------
+- type: latheRecipe
+  id: RecipeVitzMechHogFoot
+  materials:
+    Steel: 3000
+    PlumbumMaterial: 1500
+  result: VitzMechHogFoot
+#--------------------------------------------Орудие---------------------------------
+- type: latheRecipe
+  id: RecipeVitzMechGunCannon
+  materials:
+    Steel: 2500
+    PlumbumMaterial: 700
+    Plastic: 200
+    DefChipCraftMechWeapon: 2
+  result: VitzMechGunCannon
+#---------------------------------------------Пулемёт---------------------------------
+- type: latheRecipe
+  id: RecipeVitzMechGunAuto
+  materials:
+    Steel: 2000
+    PlumbumMaterial: 1000
+    DefChipCraftMechWeapon: 1
+  result: VitzMechGunAuto
+#----------------------------------------------Обойма---------------------------------
+- type: latheRecipe
+  id: RecipeVitzMagazineMechCannon
+  materials:
+    Steel: 200
+    PlumbumMaterial: 300
+    Plastic: 200
+  result: VitzMagazineMechCannon
+#---------------------------------------------Магазин---------------------------------
+- type: latheRecipe
+  id: RecipeVitzMagazineMechAuto
+  materials:
+    Steel: 300
+    PlumbumMaterial: 1000
+  result: VitzMagazineMechAuto
+#----------------------------------------------------Заводской техфаб---------------------
+- type: entity
+  id: DefVitzFactoryFab
+  parent: BaseLathe
+  name: Заводской фабрикатор
+  suffix: Vitz, Оборона
+  description: Мобильная промышленная машина, способная производить боеприпасы, оружие и детали для умпорских боевых машин.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/factoryfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: vitz
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: SecurityTechFabCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - RecipeVitzMechHogLeg
+      - RecipeVitzMechHogFoot
+      - RecipeVitzMechGunCannon
+      - RecipeVitzMechGunAuto
+      - RecipeVitzMagazineMechCannon
+      - RecipeVitzMagazineMechAuto
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Plastid
+        - DefChipCraftMechWeapon
+  - type: Anchorable
+    flags: Anchorable
+#----------------------------------------------------Конструкции--------------------------
+#---------------------------------------------Корпус----------------------------------
+- type: Tag
+  id: VitzMechHogCorpus
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: VitzMechHogCorpus
+  name: Корпус М-28 "Боров"
+  description: Бронированная кабина боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi
+    state: corpus
+  - type: Tag
+    tags:
+    - VitzMechHogCorpus
+  - type: Construction
+    graph: Hog
+    node: start
+    defaultTarget: hog
+  - type: Machine
+    board: VitzMechHogCorpusCircuitboard
+  - type: Anchorable
+    
+- type: entity
+  id: VitzMechHogCorpusCircuitboard
+  parent: BaseMachineCircuitboard
+  name: корпус М-28 "Боров" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: VitzMechHogCorpus
+      stackRequirements:
+        Steel: 60
+        Plumbum: 30
+        Cable: 30
+#---------------------------------------------Силовая установка-----------------------
+- type: Tag
+  id: VitzMechHogGenerator
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: VitzMechHogGenerator
+  name: Силовая установка М-28 "Боров"
+  description: Система агрегатов, поставляющая электроснабжение и сигналы управления в разные части боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi
+    state: generator
+  - type: Tag
+    tags:
+    - VitzMechHogGenerator
+  - type: Stack
+    stackType: VitzMechHogGenerator
+    count: 1
+  - type: Machine
+    board: VitzMechHogGeneratorCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: VitzMechHogGenerator
+  name: Силовая установка М-28 "Боров"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: generator }
+  spawn: VitzMechHogGenerator
+  maxCount: 1
+  
+- type: entity
+  id: VitzMechHogGeneratorCircuitboard
+  parent: BaseMachineCircuitboard
+  name: силовая установка М-28 "Боров" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: VitzMechHogGenerator
+      stackRequirements:
+        Steel: 30
+        Plumbum: 30
+        Cable: 60
+#---------------------------------------------Движок---------------------------------
+- type: Tag
+  id: VitzMechHogEngine
+
+- type: entity
+  parent: BaseRipleyPartItem
+  id: VitzMechHogEngine
+  name: Двигатель М-28 "Боров"
+  description: Система агрегатов приводящая в движение конечности и системы боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi
+    state: engine
+  - type: Tag
+    tags:
+    - VitzMechHogEngine
+  - type: Stack
+    stackType: VitzMechHogEngine
+    count: 1
+  - type: Machine
+    board: VitzMechHogEngineCircuitboard
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: Anchorable
+    
+- type: stack
+  id: VitzMechHogEngine
+  name: Двигатель М-28 "Боров"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: engine }
+  spawn: VitzMechHogEngine
+  maxCount: 1
+  
+- type: entity
+  id: VitzMechHogEngineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: двигатель М-28 "Боров" (машинная плата)
+  components:
+    - type: MachineBoard
+      prototype: VitzMechHogEngine
+      stackRequirements:
+        Steel: 60
+        Cable: 30
+#---------------------------------------------Промежуточные состояния---------------------------------
+- type: entity
+  parent: VitzMechHogCorpus
+  id: VitzMechHogLegFoot
+  name: полная нога М-28 "Боров"
+  description: Соединённые стопа и сочленени ноги боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    state: leg_foot
+  - type: Construction
+    graph: HogLeg
+    node: leg_foot
+    defaultTarget: leg_foot
+  - type: Stack
+    stackType: VitzMechHogLegFoot
+    count: 1
+    
+- type: stack
+  id: VitzMechHogLegFoot
+  name: полная нога М-28 "Боров"
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: leg_foot }
+  spawn: VitzMechHogLegFoot
+  maxCount: 1
+#------------------------
+- type: entity
+  parent: VitzMechHogCorpus
+  id: VitzMechHogCpEn
+  name: Корпус М-28 "Боров" c двигателем
+  description: Соединённые корпус и двигатель боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    state: cp_en
+  - type: Construction
+    graph: Hog
+    node: cp_en
+    defaultTarget: hog
+  - type: Stack
+    stackType: VitzMechHogEngine
+    count: 1
+    
+- type: stack
+  id: VitzMechHogCpEn
+  name: Корпус М-28 "Боров" c двигателем
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: cp_en }
+  spawn: VitzMechHogCpEn
+  maxCount: 1
+#------------------------
+- type: entity
+  parent: VitzMechHogCorpus
+  id: VitzMechHogCpGe
+  name: Корпус М-28 "Боров" c генератором
+  description: Соединённые корпус и генератор боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    state: cp_ge
+  - type: Construction
+    graph: Hog
+    node: cp_ge
+    defaultTarget: hog
+  - type: Stack
+    stackType: VitzMechHogCpGe
+    count: 1
+    
+- type: stack
+  id: VitzMechHogCpGe
+  name: Корпус М-28 "Боров" c генератором
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: cp_ge }
+  spawn: VitzMechHogCpGe
+  maxCount: 1
+#------------------------
+- type: entity
+  parent: VitzMechHogCorpus
+  id: VitzMechHogCpGeEn
+  name: Корпус М-28 "Боров" c полной начинкой
+  description: Соединённые корпус, генератор и двигатель боевой машины корпорации Витезтви тип 28 "Боров".
+  suffix: Vitz
+  components:
+  - type: Sprite
+    state: cp_ge_en
+  - type: Construction
+    graph: Hog
+    node: cp_ge_en
+    defaultTarget: hog
+  - type: Stack
+    stackType: VitzMechHogCpGeEn
+    count: 1
+    
+- type: stack
+  id: VitzMechHogCpGeEn
+  name: Корпус М-28 "Боров" c полной начинкой
+  icon: { sprite: /Textures/Victoria/DefenseMode/Mechs/Vitezstvi/mecha_parts.rsi, state: cp_ge_en }
+  spawn: VitzMechHogCpGeEn
+  maxCount: 1
+#----------------------------------------------------Графы---------------------------------
+- type: constructionGraph
+  id: HogLeg
+  start: start
+  graph:
+    - node: start
+      entity: VitzMechHogLeg
+      edges:
+        - to: leg_foot
+          steps:
+            - material: VitzMechHogFoot
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 5
+            - tool: Screwing
+              doAfter: 5
+    - node: leg_foot
+      entity: VitzMechHogLegFoot
+      edges:
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: VitzMechHogLeg
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: VitzMechHogFoot
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:DeleteEntity
+          steps:
+            - tool: Welding
+              doAfter: 5
+            - tool: Prying
+              doAfter: 5
+
+- type: constructionGraph
+  id: Hog
+  start: start
+  graph:
+    - node: start
+      entity: VitzMechHogCorpus
+      edges:
+        - to: cp_en
+          steps:
+            - material: VitzMechHogEngine
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: cp_ge
+          steps:
+            - material: VitzMechHogGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+              
+    - node: cp_en
+      entity: VitzMechHogCpEn
+      edges:
+        - to: cp_ge_en
+          steps:
+            - material: VitzMechHogGenerator
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 5
+            - tool: Welding
+              doAfter: 5
+            - material: Cable
+              amount: 15
+            - tool: Screwing
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: VitzMechHogEngine
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+          steps:
+            - tool: Cutting
+              doAfter: 5
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge
+      entity: VitzMechHogCpGe
+      edges:
+        - to: cp_ge_en
+          steps:
+            - material: VitzMechHogEngine
+              amount: 1
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: VitzMechHogGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 15
+            - tool: Welding
+              doAfter: 5
+              
+    - node: cp_ge_en
+      entity: VitzMechHogCpGeEn
+      edges:
+        - to: hog
+          steps:
+            - material: VitzMechHogLegFoot
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 10
+            - tool: Welding
+              doAfter: 5
+            - material: VitzMechHogLegFoot
+              amount: 1
+            - tool: Screwing
+              doAfter: 10
+            - material: Steel
+              amount: 10
+            - tool: Welding
+              doAfter: 5
+        - to: start
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: VitzMechHogGenerator
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: VitzMechHogEngine
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 20
+            - !type:SpawnPrototype
+              prototype: CableApcStack1
+              amount: 10
+          steps:
+            - tool: Cutting
+              doAfter: 25
+            - tool: Welding
+              doAfter: 20
+              
+    - node: hog
+      entity: VitzMechHog
+      edges:
+        - to: cp_ge_en
+          completed:
+            - !type:AdminLog
+              message: "детали рассоединились"
+            - !type:SpawnPrototype
+              prototype: VitzMechHogLegFoot
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: VitzMechHogLegFoot
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 20
+          steps:
+            - tool: Cutting
+              doAfter: 30
+            - tool: Welding
+              doAfter: 20

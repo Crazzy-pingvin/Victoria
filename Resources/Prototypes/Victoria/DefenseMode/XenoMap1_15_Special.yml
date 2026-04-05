@@ -2,7 +2,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Mut1
-  suffix: Оборона, Мачеха1
+  suffix: Оборона, Альфа, Мачеха1
   components:
   - type: RandomChangeTime
     time: 3420
@@ -30,6 +30,38 @@
     maximumEntitiesSpawned: 2
   - type: TimedDespawn
     lifetime: 4030
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggBetaMap1Mut1
+  suffix: Оборона, Бета, Мачеха1
+  components:
+  - type: RandomChangeTime
+    time: 3420
+    prob: 1
+    entity: MobXenoStiefmutterBetaMap1Mut1
+    
+- type: entity
+  name: Ксеноспавнер Мачехи
+  suffix: Оборона, Бета
+  id: MobXenoStiefmutterBetaMap1Mut1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Victoria/DefenseMode/Xenos/stiefmutter.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoStiefmutterBeta
+    chance: 1
+    intervalSeconds: 420
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 2
+  - type: TimedDespawn
+    lifetime: 4030
 #------------------------------------------сабля------------------------------
 - type: entity
   parent: XenoEgg
@@ -39,12 +71,12 @@
   - type: RandomChangeTime
     time: 4260
     prob: 1
-    entity: MobXenoStiefmutterAlphaMap1Sab1
+    entity: MobXenoSaberAlphaMap1Sab1
     
 - type: entity
   name: Ксеноспавнер Сабельщика
   suffix: Оборона, Альфа
-  id: MobXenoStiefmutterAlphaMap1Sab1
+  id: MobXenoSaberAlphaMap1Sab1
   parent: MarkerBase
   components:
   - type: Sprite
@@ -56,6 +88,38 @@
   - type: TimedSpawner
     prototypes:
     - MobXenoSaberDefAlfa
+    chance: 1
+    intervalSeconds: 420
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 2
+  - type: TimedDespawn
+    lifetime: 3190
+    
+- type: entity
+  parent: XenoEgg
+  id: XenoEggBetaMap1Sab1
+  suffix: Оборона, Бета, Сабля1
+  components:
+  - type: RandomChangeTime
+    time: 4260
+    prob: 1
+    entity: MobXenoSaberBetaMap1Sab1
+    
+- type: entity
+  name: Ксеноспавнер Сабельщика
+  suffix: Оборона, Бета
+  id: MobXenoSaberBetaMap1Sab1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Victoria/DefenseMode/Xenos/saber.rsi
+  - type: Timer
+  - type: TimedSpawner
+    prototypes:
+    - MobXenoSaberDefBeta
     chance: 1
     intervalSeconds: 420
     minimumEntitiesSpawned: 1

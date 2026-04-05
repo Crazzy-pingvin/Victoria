@@ -5,7 +5,7 @@
   minPlayers: 1
   maxPlayers: 30
   stations:
-    VictoriaFrozenTown:
+    AbandonedCity:
       stationProto: StandardDefenseMap
       components:
         - type: StationNameSetup
@@ -15,13 +15,13 @@
         - type: StationJobs
           availableJobs:
             DefComander: [ 1, 1 ]
-            DefOfficer: [ 1, 1 ]
+            DefOfficer: [ 2, 2 ]
             DefOfficerDop: [ 1, 1 ]
-            DefEngener: [ 2, 2 ]
-            DefMedic: [ 2, 2 ]
-            DefCargo: [ 2, 2 ]
-            DefSpecialist: [ 2, 2 ]
-            DefSpecialistDop: [ 1, 1 ]
+            DefEngener: [ 3, 3 ]
+            DefMedic: [ 3, 3 ]
+            DefCargo: [ 4, 4 ]
+            DefSpecialist: [ 4, 4 ]
+            DefSpecialistDop: [ 2, 2 ]
             DefSolder: [ -1, -1 ]
-            DefSolderDop: [ 2, 2 ]
-            DefPilot: [ 0, 0 ]
+            DefSolderDop: [ 3, 3 ]
+            DefPilot: [ 1, 1 ]

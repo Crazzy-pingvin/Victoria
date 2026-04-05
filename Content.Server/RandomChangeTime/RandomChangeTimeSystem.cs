@@ -10,8 +10,8 @@ public sealed class RandomChangeTimeSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<RandomChangeTimeComponent, TransformComponent>();
-        while (query.MoveNext(out var uid, out var comp, out var xform))
+        var query = EntityQueryEnumerator<RandomChangeTimeComponent>();
+        while (query.MoveNext(out var uid, out var comp))
         {
             comp.NextCheckTime += frameTime;
             if (comp.NextCheckTime <= comp.Time)
@@ -23,6 +23,8 @@ public sealed class RandomChangeTimeSystem : EntitySystem
                 RemComp<RandomChangeTimeComponent>(uid);
                 continue;
             }
+            if (!TryComp<TransformComponent>(uid, out var xform))
+                continue;
             Spawn(comp.Entity, xform.Coordinates);
             Del(uid);
         }

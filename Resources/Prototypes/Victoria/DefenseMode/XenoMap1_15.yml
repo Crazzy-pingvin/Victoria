@@ -553,7 +553,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1D1
-  suffix: Оборона, Д1, Карта 1-15
+  suffix: Оборона, Альфа, Д1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 1500
@@ -563,7 +563,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1B1
-  suffix: Оборона, Бу1, Карта 1-15
+  suffix: Оборона, Альфа, Бу1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 1500
@@ -573,7 +573,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggBetaMap1D2
-  suffix: Оборона, Д2, Карта 1-15
+  suffix: Оборона, Альфа, Д2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 2100
@@ -583,7 +583,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1B2
-  suffix: Оборона, Бу2, Карта 1-15
+  suffix: Оборона, Альфа, Бу2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 2700
@@ -593,7 +593,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Pl1
-  suffix: Оборона, Пл1, Карта 1-15
+  suffix: Оборона, Альфа, Пл1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 3000
@@ -603,7 +603,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Be1
-  suffix: Оборона, Бе1, Карта 1-15
+  suffix: Оборона, Альфа, Бе1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 3605
@@ -613,7 +613,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Ru1
-  suffix: Оборона, Ру1, Карта 1-15
+  suffix: Оборона, Альфа, Ру1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 4145
@@ -623,7 +623,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Rz1
-  suffix: Оборона, Рз1, Карта 1-15
+  suffix: Оборона, Альфа, Рз1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 4685
@@ -633,7 +633,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggBetaMap1Be2
-  suffix: Оборона, Бе2, Карта 1-15
+  suffix: Оборона, Альфа, Бе2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 5230
@@ -643,7 +643,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Pr1
-  suffix: Оборона, Пр1, Карта 1-15
+  suffix: Оборона, Альфа, Пр1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 5860
@@ -653,7 +653,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Pr2
-  suffix: Оборона, Пр2, Карта 1-15
+  suffix: Оборона, Альфа, Пр2, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 6490
@@ -663,7 +663,7 @@
 - type: entity
   parent: XenoEgg
   id: XenoEggAlfaMap1Cor1
-  suffix: Оборона, Кор1, Карта 1-15
+  suffix: Оборона, Альфа, Кор1, Карта 1-15
   components:
   - type: RandomChangeTime
     time: 7140
