@@ -1,14 +1,26 @@
 loadout-group-bartender-drinks = Бармен, напитки
 
+reagent-name-umpor_infantry_beer = Умпорское пехотное пиво
+reagent-desc-umpor_infantry_beer = Приятное на вкус, с воспоминаниями о доме...
 flavor-complex-umpor_infantry_beer = нежное и слабое, как то, что нужно защищать
 reagent-physical-desc-umpor_infantry_beer = белое и пенистое
+reagent-name-umpor_honest_work = Коктейль "Честный труд"
+reagent-desc-umpor_honest_work = Такое, что потом можно сдвинуть горы и дать свет людям!
 flavor-complex-umpor_honest_work = суровый, крепкий, УХХХХХХХХХХХ, мать вашу!
 reagent-physical-desc-umpor_honest_work = мутный и с газом
+reagent-name-nooc_clear_mind = Коктейль "Разум" очищенный
+reagent-desc-nooc_clear_mind = Заставляет в кои-то веки задуматься.
 flavor-complex-nooc_clear_mind = заставляет задуматься над своими ошибками
 reagent-physical-desc-nooc_clear_mind = воздушно и прозрачно
+reagent-name-brotherhood_whiske = Преступный виски
+reagent-desc-brotherhood_whiske = Этот заставит выложить деньги на стол!
 flavor-complex-brotherhood_whiskey = хочется положить деньги на стол
 reagent-physical-desc-brotherhood_whiskey = ща грабанёт
+reagent-name-brotherhood_super_whiskey = Крайне преступный виски
+reagent-desc-brotherhood_super_whiskey = Этот заставит поднять руки в горб и выложить деньги на стол!
 flavor-complex-brotherhood_super_whiskey = хочется поднять руки в горб, а деньги на стол
 reagent-physical-desc-brotherhood_super_whiskey = ща точно грабанёт
+reagent-name-opz_the_fucking_space_elevator = Коктейль "Херов космический лифт"
+reagent-desc-opz_the_fucking_space_elevator = Заставить взлететь в небо, а затем упать в лепёшку. Во всех смыслах.
 flavor-complex-opz_the_fucking_space_elevator = так, будто ты сделал то, во что никто не верит
 reagent-physical-desc-opz_the_fucking_space_elevator = неустойчиво и высоко

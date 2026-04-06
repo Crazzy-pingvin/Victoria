@@ -3520,7 +3520,7 @@
   maxCount: 1
 #------------------------------------------------Стопа---------------------------------
 - type: Tag
-  id: VitzMechHogArm
+  id: VitzMechHogFoot
 
 - type: entity
   parent: BaseRipleyPartItem

@@ -9,9 +9,9 @@
 #-------------------Реагент-----------------------------------------------------------
 - type: reagent
   id: UmporInfantryBeer
-  name: Умпорское пехотное пиво
+  name: reagent-name-umpor_infantry_beer
   parent: BaseAlcohol
-  desc: Приятное на вкус, с воспоминаниями о доме...
+  desc: reagent-desc-umpor_infantry_beer
   physicalDesc: reagent-physical-desc-umpor_infantry_beer
   flavor: FlavorUmporInfantryBeer
   color: "#d7d7d7"
@@ -64,9 +64,9 @@
 #-------------------Реагент-----------------------------------------------------------
 - type: reagent
   id: UmporHornestWork
-  name: Коктейль "Честный труд"
+  name: reagent-name-umpor_honest_work
   parent: BaseAlcohol
-  desc: Такое, что потом можно сдвинуть горы и дать свет людям!
+  desc: reagent-desc-umpor_honest_work
   physicalDesc: reagent-physical-desc-umpor_honest_work
   flavor: FlavorUmporHornestWork
   color: "#8b8880"
@@ -129,9 +129,9 @@
 #-------------------Реагент-----------------------------------------------------------
 - type: reagent
   id: NoocClearMind
-  name: Коктейль "Разум" очищенный
+  name: reagent-name-nooc_clear_mind
   parent: BaseAlcohol
-  desc: Заставляет в кои-то веки задуматься.
+  desc: reagent-desc-nooc_clear_mind
   physicalDesc: reagent-physical-desc-nooc_clear_mind
   flavor: FlavorNoocClearMind
   color: "#5bfaff"
@@ -190,9 +190,9 @@
 #-------------------Реагент-----------------------------------------------------------
 - type: reagent
   id: BrotherhoodWhiskey
-  name: Преступный виски
+  name: reagent-name-brotherhood_whiske
   parent: BaseAlcohol
-  desc: Этот заставит выложить деньги на стол!
+  desc: reagent-desc-brotherhood_whiske
   physicalDesc: reagent-physical-desc-brotherhood_whiskey
   flavor: FlavorBrotherhoodWhiskey
   color: "#ee7732"
@@ -246,9 +246,9 @@
 #-------------------Реагент-----------------------------------------------------------
 - type: reagent
   id: BrotherhoodSuperWhiskey
-  name: Крайне преступный виски
+  name: reagent-name-brotherhood_super_whiskey
   parent: BaseAlcohol
-  desc: Этот заставит поднять руки в горб и выложить деньги на стол!
+  desc: reagent-desc-brotherhood_super_whiskey
   physicalDesc: reagent-physical-desc-brotherhood_super_whiskey
   flavor: FlavorBrotherhoodSuperWhiskey
   color: "#ee7732"
@@ -303,9 +303,9 @@
 #-------------------Реагент-----------------------------------------------------------
 - type: reagent
   id: OPZTheFuckingSpaceElevator
-  name: Коктейль "Херов космический лифт"
+  name: reagent-name-opz_the_fucking_space_elevator
   parent: BaseAlcohol
-  desc: Заставить взлететь в небо, а затем упать в лепёшку. Во всех смыслах.
+  desc: reagent-desc-opz_the_fucking_space_elevator
   physicalDesc: reagent-physical-desc-opz_the_fucking_space_elevator
   flavor: FlavorOPZTheFuckingSpaceElevator
   color: "#80bceb"
@@ -313,7 +313,7 @@
   metamorphicSprite:
     sprite: Victoria/Objects/Misc/Drinks/opz_the_fucking_space_elevator.rsi
     state: icon_empty
-  metamorphicMaxFillLevels: 8
+  metamorphicMaxFillLevels: 6
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
