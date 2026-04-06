@@ -8454,7 +8454,7 @@ entities:
     - type: Transform
       pos: 39.34621,44.460354
       parent: 1
-- proto: APCBasic
+- proto: AdminAPC
   entities:
   - uid: 308
     components:
