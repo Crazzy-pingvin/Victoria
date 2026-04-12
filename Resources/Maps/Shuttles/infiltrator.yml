@@ -710,7 +710,7 @@ entities:
     - type: Transform
       pos: 2.5,-5.5
       parent: 1
-- proto: APCBasic
+- proto: AdminAPC
   entities:
   - uid: 18
     components:

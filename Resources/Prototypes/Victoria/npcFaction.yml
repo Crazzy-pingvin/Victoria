@@ -93,6 +93,7 @@
   - KMLG
   - Vitz
   - CDC
+  - NKM
   
 - type: npcFaction
   id: VitzBitMrHill
@@ -114,6 +115,7 @@
   - KMLG
   - Vitz
   - CDC
+  - NKM
 #-----------------------------------------------СНК----------------------------------
 - type: npcFaction
   id: SNKBot
@@ -130,6 +132,7 @@
   - Hound
   - XenoTunneller
   - XenoTunnellerOnly
+  - NKM
   friendly:
   - SNKBot
   - SNK
@@ -150,6 +153,7 @@
   - Hound
   - XenoTunneller
   - XenoTunnellerOnly
+  - NKM
   friendly:
   - SNKBot
   - SNK
@@ -177,6 +181,7 @@
   - CDC
   - XenoTunneller
   - XenoTunnellerOnly
+  - NKM
   friendly:
   - Revolutionary
   - Petr
@@ -199,6 +204,7 @@
   - NoocratyBot
   - Mirt
   - KMLG
+  - NKM
 #-----------------------------------------------Космологистика----------------------------------
 - type: npcFaction
   id: KMLG
@@ -221,6 +227,7 @@
   - PetsNT
   - Vitz
   - CDC
+  - NKM
   
 - type: npcFaction
   id: KMLGEnemy
@@ -245,6 +252,7 @@
   - SNKBot
   - SNK
   - VitzBitMrHill
+  - NKM
 #-----------------------------------------------Хаунд---------------------------------- 
 - type: npcFaction
   id: Hound
@@ -264,6 +272,7 @@
   - Vitz
   - KMLG
   - KMLGEnemy
+  - NKM
 #-----------------------------------------------Конгломерат---------------------------------- 
 - type: npcFaction
   id: CDC
@@ -323,3 +332,27 @@
   - KMLG
   - SNK
   - SNKBot
+  - NKM
+#-----------------------------------------------Накамура----------------------------------
+- type: npcFaction
+  id: NKM
+  hostile:
+  - SimpleHostile
+  - Xeno
+  - Zombie
+  - Syndicate
+  - Revolutionary
+  - Dragon
+  - Petr
+  - SNKBot
+  - SNK
+  - XenoTunneller
+  - XenoTunnellerOnly
+  friendly:
+  - Noocraty
+  - NoocratyBot
+  - NanoTrasen
+  - PetsNT
+  - Vitz
+  - CDC
+  - KMLG

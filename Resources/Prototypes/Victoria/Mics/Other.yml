@@ -102,6 +102,30 @@
   name: Petr_Chanson
   path:
     path: /Audio/Lore/Petr_Chanson.ogg
+    
+- type: jukebox
+  id: Period_One
+  name: Period_One
+  path:
+    path: /Audio/Victoria/Ivents/Period_One.ogg
+    
+- type: jukebox
+  id: Period_Two
+  name: Period_Two
+  path:
+    path: /Audio/Victoria/Ivents/Period_Two.ogg
+    
+- type: jukebox
+  id: Period_Three
+  name: Period_Three
+  path:
+    path: /Audio/Victoria/Ivents/Period_Three.ogg
+    
+- type: jukebox
+  id: Victory
+  name: Victory
+  path:
+    path: /Audio/Victoria/Ivents/Victory.ogg
 #-------------------------------------------Запросы в карго-----------------------------------
 - type: Tag
   id: FuseMine

@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/12/2025 11:08:05
-  entityCount: 2736
+  time: 12/27/2025 20:58:01
+  entityCount: 2749
 maps:
 - 1
 grids:
@@ -5803,6 +5803,79 @@ entities:
     components:
     - type: Transform
       pos: 7.5,1.5
+      parent: 2
+- proto: SpawnSignFour
+  entities:
+  - uid: 2744
+    components:
+    - type: Transform
+      pos: 9.5,7.5
+      parent: 2
+  - uid: 2745
+    components:
+    - type: Transform
+      pos: 10.5,3.5
+      parent: 2
+  - uid: 2746
+    components:
+    - type: Transform
+      pos: 4.5,-2.5
+      parent: 2
+- proto: SpawnSignOne
+  entities:
+  - uid: 2737
+    components:
+    - type: Transform
+      pos: 6.5,-11.5
+      parent: 2
+  - uid: 2738
+    components:
+    - type: Transform
+      pos: 1.5,-7.5
+      parent: 2
+  - uid: 2740
+    components:
+    - type: Transform
+      pos: 9.5,-6.5
+      parent: 2
+- proto: SpawnSignThree
+  entities:
+  - uid: 2739
+    components:
+    - type: Transform
+      pos: 0.5,-3.5
+      parent: 2
+  - uid: 2741
+    components:
+    - type: Transform
+      pos: -5.5,-0.5
+      parent: 2
+  - uid: 2742
+    components:
+    - type: Transform
+      pos: 0.5,4.5
+      parent: 2
+  - uid: 2743
+    components:
+    - type: Transform
+      pos: -3.5,8.5
+      parent: 2
+- proto: SpawnSignTwo
+  entities:
+  - uid: 2747
+    components:
+    - type: Transform
+      pos: 16.5,3.5
+      parent: 2
+  - uid: 2748
+    components:
+    - type: Transform
+      pos: 34.5,3.5
+      parent: 2
+  - uid: 2749
+    components:
+    - type: Transform
+      pos: 13.5,12.5
       parent: 2
 - proto: SpawnTelecomServer
   entities:

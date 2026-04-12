@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 10/11/2025 23:10:12
-  entityCount: 5722
+  time: 12/27/2025 20:56:50
+  entityCount: 5741
 maps:
 - 1
 grids:
@@ -31,9 +31,9 @@ entities:
     components:
     - type: MetaData
       name: FrozenTown
+    - type: Transform
     - type: Parallax
       parallax: IceWater
-    - type: Transform
     - type: Map
       mapPaused: True
     - type: GridTree
@@ -60,13 +60,13 @@ entities:
         - 0
   - uid: 2
     components:
-    - type: Parallax
-      parallax: IceWater
     - type: MetaData
       name: FrozenTown
     - type: Transform
       pos: -0.5,-0.5
       parent: 1
+    - type: Parallax
+      parallax: IceWater
     - type: BecomesStation
       id: VictoriaFrozenTown
     - type: FTLDestination
@@ -11891,6 +11891,109 @@ entities:
     components:
     - type: Transform
       pos: 8.5,1.5
+      parent: 2
+- proto: SpawnSignFour
+  entities:
+  - uid: 5731
+    components:
+    - type: Transform
+      pos: 11.5,-4.5
+      parent: 2
+  - uid: 5733
+    components:
+    - type: Transform
+      pos: 11.5,5.5
+      parent: 2
+  - uid: 5741
+    components:
+    - type: Transform
+      pos: 34.5,-16.5
+      parent: 2
+- proto: SpawnSignOne
+  entities:
+  - uid: 5723
+    components:
+    - type: Transform
+      pos: 9.5,-21.5
+      parent: 2
+  - uid: 5724
+    components:
+    - type: Transform
+      pos: 3.5,-21.5
+      parent: 2
+  - uid: 5725
+    components:
+    - type: Transform
+      pos: -4.5,-16.5
+      parent: 2
+  - uid: 5726
+    components:
+    - type: Transform
+      pos: -1.5,-8.5
+      parent: 2
+  - uid: 5740
+    components:
+    - type: Transform
+      pos: 32.5,10.5
+      parent: 2
+- proto: SpawnSignThree
+  entities:
+  - uid: 5727
+    components:
+    - type: Transform
+      pos: 1.5,-2.5
+      parent: 2
+  - uid: 5728
+    components:
+    - type: Transform
+      pos: 1.5,3.5
+      parent: 2
+  - uid: 5729
+    components:
+    - type: Transform
+      pos: 8.5,9.5
+      parent: 2
+  - uid: 5730
+    components:
+    - type: Transform
+      pos: 12.5,-14.5
+      parent: 2
+  - uid: 5732
+    components:
+    - type: Transform
+      pos: 8.5,-8.5
+      parent: 2
+  - uid: 5739
+    components:
+    - type: Transform
+      pos: 34.5,-5.5
+      parent: 2
+- proto: SpawnSignTwo
+  entities:
+  - uid: 5734
+    components:
+    - type: Transform
+      pos: 17.5,-2.5
+      parent: 2
+  - uid: 5735
+    components:
+    - type: Transform
+      pos: 17.5,3.5
+      parent: 2
+  - uid: 5736
+    components:
+    - type: Transform
+      pos: 31.5,-2.5
+      parent: 2
+  - uid: 5737
+    components:
+    - type: Transform
+      pos: 45.5,3.5
+      parent: 2
+  - uid: 5738
+    components:
+    - type: Transform
+      pos: 65.5,-5.5
       parent: 2
 - proto: SpawnTelecomServer
   entities:

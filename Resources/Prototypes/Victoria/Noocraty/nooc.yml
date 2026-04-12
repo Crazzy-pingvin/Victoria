@@ -4122,7 +4122,7 @@
 - type: entity
   id: BaseBorgChassisNooc
   parent: BaseBorgChassis
-  name: Базированный борг ноократии Эранта
+  name: Базированный борг Ноократии Эранта
   abstract: true
   components:
   - type: Sprite
@@ -4306,3 +4306,45 @@
     - item: NoocSnowdropSmoke
   - type: BorgModuleIcon
     icon: { sprite: Victoria/Noocraty/Borgs/nooc_modules.rsi, state: nooc-snowdrop }
+#-----------------------------------------плакаты-------------------------------
+#---------------------------------1-----------------
+- type: entity
+  parent: BaseSign
+  id: NoocSignOne
+  name: Плакат "Сила разума"
+  description: Гражданин! Помоги нести просвещение в соседнюю отсталую страну! Вступай в армию, распространяй идеи просвещения!
+  suffix: Ноократия, Плакат
+  components:
+  - type: Sprite
+    sprite: Victoria/Noocraty/sign.rsi
+    state: nooc_1
+#---------------------------------2-----------------
+- type: entity
+  parent: NoocSignOne
+  id: NoocSignTwo
+  name: Плакат "Учение - неученье"
+  description: Гражданин! Посмотри за границу! Тым худшее наше воплощение - неучи! Вступай в армию, помоги укрепить границу против незнания!
+  suffix: Ноократия, Плакат
+  components:
+  - type: Sprite
+    state: nooc_2
+#---------------------------------3-----------------
+- type: entity
+  parent: NoocSignOne
+  id: NoocSignThree
+  name: Пакат "В тыл за разум"
+  description: Гражданин! Вы желаете поднять класс? Вступайте в работники тыла! Новые навыки и знания помогут вам прийти к вашей мечте!
+  suffix: Ноократия, Плакат
+  components:
+  - type: Sprite
+    state: nooc_3
+#---------------------------------4-----------------
+- type: entity
+  parent: NoocSignOne
+  id: NoocSignFour
+  name: Плакат "Облигации"
+  description: Граждане высоких классов! За покупку облигаций военного займи предусмотрены льготы для возможности занять различные государственные посты.
+  suffix: Ноократия, Плакат
+  components:
+  - type: Sprite
+    state: nooc_4

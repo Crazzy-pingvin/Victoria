@@ -25,6 +25,7 @@
     - USSP
     - AllHostile
     - Wizard
+    - NKM
 
 - type: npcFaction
   id: NanoTrasen
@@ -48,6 +49,7 @@
   - Vitz
   - KMLG
   - Hound
+  - NKM
 
 - type: npcFaction
   id: Mouse
@@ -100,6 +102,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
+  - NKM
 
 - type: npcFaction
   id: SimpleNeutral
@@ -125,6 +128,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
+  - NKM
 
 - type: npcFaction
   id: Xeno
@@ -153,6 +157,7 @@
   - Wizard
   - Dragon
   - Xenoborg
+  - NKM
   friendly:
   - XenoTunneller
   - XenoTunnellerOnly
@@ -181,6 +186,7 @@
   - DefenseStructureBase
   - DefenseStructure
   - USSP
+  - NKM
   friendly:
   - Xeno
   - XenoTunnellerOnly
@@ -222,6 +228,7 @@
   - Wizard
   - Dragon
   - Xenoborg
+  - NKM
 
 - type: npcFaction
   id: Revolutionary
@@ -245,6 +252,7 @@
   - Xeno
   - XenoTunnellerOnly
   - USSP
+  - NKM
   - AllHostile
   - Wizard
   - Xenoborg

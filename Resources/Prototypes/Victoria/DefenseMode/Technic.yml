@@ -65,6 +65,9 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - UmporMechGun
   - type: MeleeWeapon
     hidden: true
     attackRate: 1
@@ -73,10 +76,10 @@
         Blunt: 15
         Piercing: 5
   - type: MovementSpeedModifier
-    baseWalkSpeed: 6
-    baseSprintSpeed: 6
+    baseWalkSpeed: 7
+    baseSprintSpeed: 7
   - type: Damageable
-    damageContainer: Inorganic
+    damageContainer: Box
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -207,12 +210,18 @@
     zeroVisible: false
   - type: Appearance
 #---------------------ствол--------------------
+- type: Tag
+  id: UmporMechGun
+
 - type: entity
   id: UmporMechGunRifle
   parent: BaseMechEquipment
   name: Винтовка ШБМ "Смелый"
   description: Крупнокалиберная винтовка для шагающей боевой машины "Храбрец". Либо делает во враге дырку размером с врага, либо снаряд разрывается на десяток опасных осколков.
   components:
+  - type: Tag
+    tags:
+      - UmporMechGun
   - type: Sprite
     sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_equipment.rsi
     state: valiant_rifle
@@ -312,6 +321,9 @@
   name: Пулемёт ШБМ "Стражник"
   description: Мелкокалиберный, но скорострельный пулемёт шагающей боевой машины "Храбрец". Подавляет живую силу противника и обладает высоким останавливающим действием.
   components:
+  - type: Tag
+    tags:
+      - UmporMechGun
   - type: Sprite
     sprite: Victoria/DefenseMode/Mechs/Umpor/mecha_equipment.rsi
     state: valiant_machinegun
@@ -400,7 +412,7 @@
     baseWalkSpeed: 3
     baseSprintSpeed: 4
   - type: Damageable
-    damageContainer: Inorganic
+    damageContainer: Box
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -663,7 +675,7 @@
     baseWalkSpeed: 4
     baseSprintSpeed: 4
   - type: Damageable
-    damageContainer: Inorganic
+    damageContainer: Box
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -961,7 +973,7 @@
     baseWalkSpeed: 2
     baseSprintSpeed: 2
   - type: Damageable
-    damageContainer: Inorganic
+    damageContainer: Box
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:
@@ -1227,3 +1239,265 @@
       item-container: !type:Container
   - type: UIFragment
     ui: !type:MechGunUi
+#--------------------------------------------------------------Корпоративный--------------------
+#----------------------------------------------Боров-------------------------
+- type: entity
+  id: VitzMechHog
+  parent: BaseMech
+  name: М-28 "Боров"
+  description: Машина Тип 28 "Боров". Бывалая ездовая лошадка корпорации Витезтви. Эта модель прошла множество боёв и полюбилась бойцам корпорации, как хорошая и манёвренная поддержка пехотных атак.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: hog
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.9,0.9,0.9,-0.9"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Mech
+    baseState: hog
+    openState: hog-open
+    brokenState: hog-broken
+    mechToPilotDamageMultiplier: 0.3
+    maxEquipmentAmount: 3
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 4
+  - type: Damageable
+    damageContainer: Box
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: start
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Repairable
+    fuelCost: 210
+    doAfterDelay: 40
+  - type: MobState
+  - type: NpcFactionMember
+    factions:
+    - Vitz
+  - type: DamageContacts
+    onMove: true
+    damage:
+      types:
+        Blunt: 15
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Construction
+    graph: Hog
+    node: hog
+    defaultTarget: hog
+#----------------------------------------------Пушки---------------------------
+#------------------------------Орудие "Большой Том"---------------------
+#---------------------Снаряд--------------------
+- type: entity
+  id: VitzBulletMechCannon
+  name: Орудийный снаряд техники
+  suffix: Vitz
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 400
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_projectaile.rsi
+    layers:
+      - state: bullet
+  - type: StaminaDamageOnCollide
+    damage: 50
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 60
+    canCreateVacuum: false
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: TriggerOnCollide
+    fixtureID: projectile  
+#---------------------картридж--------------------
+- type: Tag
+  id: VitzCartridgeMechCannon
+
+- type: entity
+  id: VitzCartridgeMechCannon
+  name: Орудийный снаряд техники
+  suffix: Vitz
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: VitzBulletMechCannon
+  - type: Tag
+    tags:
+      - VitzCartridgeMechCannon
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_projectaile.rsi
+    layers:
+      - state: bullet
+#---------------------магазин--------------------
+- type: Tag
+  id: VitzMagazineMechCannon
+
+- type: entity
+  id: VitzMagazineMechCannon
+  name: Бокс к орудию М-28 "Большой Том"
+  suffix: Vitz
+  parent: BaseMagazineLightRifle
+  components:
+  - type: Tag
+    tags:
+      - VitzMagazineMechCannon
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - VitzCartridgeMechCannon
+    proto: VitzCartridgeMechCannon
+    capacity: 5
+  - type: Item
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_magazines.rsi
+    layers:
+    - state: hog_cannon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: false
+  - type: Appearance
+#---------------------ствол--------------------
+- type: entity
+  id: VitzMechGunCannon
+  parent: BaseMechEquipment
+  name: Орудие М-28 "Большой Том"
+  description: Крупное противотанковое орудие "Большой Том" для М-28 "Боров". Всегда хорошо, когда над тобой возвышаетсяч пушка, способная уничтожить укреп.точки противника.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_equipment.rsi
+    state: hog_cannon
+  - type: MechGun
+    comps:
+    - type: Gun
+      fireRate: 0.25
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: VitzMagazineMechCannon
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - VitzMagazineMechCannon
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+#------------------------------Пулемёт "Дятел"--------------------
+#---------------------магазин--------------------
+- type: Tag
+  id: VitzMagazineMechAuto
+  
+- type: entity
+  id: VitzMagazineMechAuto
+  name: Магазин к пулемёту М-28 "Дятел"
+  suffix: Vitz
+  parent: BaseMagazineLightRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+    capacity: 300
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_magazines.rsi
+    layers:
+    - state: hog_machinegun
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Tag
+    tags:
+      - VitzMagazineMechAuto
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+#---------------------ствол--------------------
+- type: entity
+  id: VitzMechGunAuto
+  parent: BaseMechEquipment
+  name: Пулемёт М-28 "Дятел"
+  description: Пулемёт питающийся теми же патронами, что и автомат Лектер. Солдаты говорят. что он долбит позиции противника, как дятел долбит дерево. Долго, нудно, но с пользой.
+  components:
+  - type: Sprite
+    sprite: Victoria/DefenseMode/Mechs/Vitezstvi/mecha_equipment.rsi
+    state: hog_machinegun
+  - type: MechGun
+    comps:
+    - type: Gun
+      minAngle: 10
+      maxAngle: 40
+      angleIncrease: 2
+      angleDecay: 0.5
+      selectedMode: FullAuto
+      availableModes:
+      - FullAuto
+      fireRate: 6
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+        params:
+          volume: 2
+  - type: UIFragment
+    ui: !type:MechGunUi
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: VitzMagazineMechAuto
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - VitzMagazineMechAuto
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot

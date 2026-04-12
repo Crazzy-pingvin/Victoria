@@ -181,3 +181,68 @@
     cdc: DefCDCFactoryFab
     nt: DefMirtFactoryFab
     ussp: DefUSSPFactoryFab
+#----------------------------------------Плакаты---------------------
+#-----------------------------Вступай в армию-----------------
+- type: entity
+  name: Плакат с призывом мобилизироваться
+  id: SpawnSignOne
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/Umpor/sign.rsi
+    state: umpor_1
+  - type: StateChoiceSpawner
+    umpor: UmporSignOne
+    mirt: MirtSignSold
+    cdc: CDCSignOne
+    nt: MirtSignSold
+    ussp: USSPSignOne
+#-----------------------------Всякий------------------------
+- type: entity
+  name: Плакат государства
+  id: SpawnSignTwo
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/Mirt/sign.rsi
+    state: poster_mirt_ervin
+  - type: StateChoiceSpawner
+    umpor: UmporSignTwo
+    mirt: MirtSignErvin
+    cdc: CDCSignTwo
+    nt: MirtSignErvin
+    ussp: USSPSignTwo
+#-----------------------------Тыл----------------------------
+- type: entity
+  name: Плакат с призывом идти в тыл
+  id: SpawnSignThree
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/USSP/sign.rsi
+    state: ussp_3
+  - type: StateChoiceSpawner
+    umpor: UmporSignThree
+    mirt: MirtSign347
+    cdc: CDCSignThree
+    nt: MirtSign347
+    ussp: USSPSignThree
+#-----------------------------Облигации----------------------
+- type: entity
+  name: Плакат покупки облигаций
+  id: SpawnSignFour
+  parent: MarkerBase
+  suffix: Оборона
+  components:
+  - type: Sprite
+    sprite: Victoria/CDC/sign.rsi
+    state: cdc_4
+  - type: StateChoiceSpawner
+    umpor: UmporSignFour
+    mirt: MirtSignStd
+    cdc: CDCSignFour
+    nt: MirtSignStd
+    ussp: USSPSignFour

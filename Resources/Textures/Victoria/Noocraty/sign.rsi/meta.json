@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Sprite created by Pulverizator",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "nooc_1"
+    },
+	{
+      "name": "nooc_2"
+    },
+	{
+      "name": "nooc_3"
+    },
+	{
+      "name": "nooc_4"
+    }
+  ]
+}
