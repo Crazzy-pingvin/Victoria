@@ -471,8 +471,8 @@
       board: [ DoorElectronicsNKMAccess ]
   - type: Sprite
     sprite: Victoria/Nakamura/nkm_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------свободный стеклянный шлюз----------
 - type: entity
   parent: AirlockGlass
@@ -481,8 +481,8 @@
   components:
   - type: Sprite
     sprite: Victoria/Nakamura/nkm_airlock_glass.rsi
-  - type: PaintableAirlock
-    group: Glass
+  - type: Paintable
+    group: null
 #------------------------------------стыковочный----------
 - type: entity
   parent: AirlockExternalShuttleLocked
