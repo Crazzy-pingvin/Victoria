@@ -58,6 +58,16 @@
   path: "/Textures/Shaders/drunk.swsl"
 
 - type: shader
+  id: Tranquil
+  kind: source
+  path: "/Textures/Shaders/tranquil.swsl"
+
+- type: shader
+  id: Energized
+  kind: source
+  path: "/Textures/Shaders/energized.swsl"
+
+- type: shader
   id: Drowsiness
   kind: source
   path: "/Textures/Shaders/radial_blur.swsl"

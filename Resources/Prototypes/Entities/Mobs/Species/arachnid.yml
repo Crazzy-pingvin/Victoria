@@ -12,7 +12,6 @@
     species: Arachnid
   - type: Hunger
   - type: Thirst
-  - type: Chockable
   - type: Sericulture
     action: ActionSericulture
     productionLength: 2
@@ -116,6 +115,10 @@
         visible: false
   - type: Inventory
     templateId: arachnid
+# Victoria-start
+  - type: Chockable
+  - type: AddictionContainer
+#Victoria-end
 
 
 - type: entity

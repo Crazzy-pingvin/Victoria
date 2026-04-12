@@ -32,6 +32,13 @@
   id: Drunk
 
 - type: statusEffect
+  id: Tranquil
+
+- type: statusEffect
+  id: Energized
+  alwaysAllowed: true
+
+- type: statusEffect
   id: SlurredSpeech
 
 - type: statusEffect

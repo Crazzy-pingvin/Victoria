@@ -1,0 +1,92 @@
+- type: reagent
+  id: Morphine
+  name: морфин
+  group: Narcotics
+  parent: BaseAlcohol
+  desc: Мощное обезболивающее, дающее почти полную неуязвимость к боли.
+  slippery: false
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: alcohol
+  color: "#b05b3c"
+  boilingPoint: 78.2
+  meltingPoint: -114.1
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.04
+      effects:
+      - !type:Tranquil
+        tranqPower: 4
+      - !type:GenericStatusEffect
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 4
+        refresh: false
+      - !type:AddictionEffect
+        addiction: MorphiumAddiction
+        satiationEffect: 0.008
+
+- type: damageModifierSet
+  id: Tranquil
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.7
+    Piercing: 0.7
+    Shock: 0.5
+    Cold: 0.8
+    Heat: 0.7
+    Caustic: 0.7
+
+- type: reagent
+  id: DashCoctail
+  name: Коктейль "Бросок"
+  group: Narcotics
+  desc: Крайне мощный боевой стимулятор, дающий заряд бодрости на очень короткое время ценой следующей за ней усталости. Проявляйте крайнюю осторожность с дозировкой.
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: bitter
+  color: "#FAFAFA"
+  boilingPoint: 212.0
+  meltingPoint: 170.0
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.02
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.75
+        sprintSpeedModifier: 1.75
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+        damage:
+          types:
+            Bloodloss: 5
+      - !type:GenericStatusEffect
+        key: Stun
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        key: KnockedDown
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        key: StaminaModifier
+        component: StaminaModifier
+        time: 2
+        type: Add
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Stimulator
+          max: 0.04
+        key: Drowsiness
+        component: Drowsiness
+        time: 120
+        type: Add
+      - !type:GenericStatusEffect
+        key: Energized
+        component: Energized
+        time: 1.6
+        type: Add
+      - !type:AddictionEffect
+        addiction: DashAddiction
+        satiationEffect: 0.016

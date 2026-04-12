@@ -1,0 +1,19 @@
+uniform highp float contrast = 1.2;
+uniform highp float minus = 0.5;
+uniform highp float energ_power = 0.9;
+uniform sampler2D SCREEN_TEXTURE;
+
+highp float noise(highp vec2 uv){
+	highp float result = max(distance(uv, vec2(0.5))* sin(TIME*12.0),0);
+	return sqrt(result)/5.0;
+}
+
+void fragment() {
+   highp vec2 coord = FRAGCOORD.xy * SCREEN_PIXEL_SIZE.xy;
+   highp vec3 rgb = texture(SCREEN_TEXTURE, UV).xyz;
+   highp vec4 Color = texture(SCREEN_TEXTURE, UV);
+
+   rgb = ((rgb - minus) * contrast + minus);
+   Color = vec4(rgb,1.0);
+   COLOR = mix(COLOR,vec4(rgb,1.0),min(energ_power,1.0)) + noise(UV) * min(energ_power,1.0);
+}

@@ -124,6 +124,8 @@
     - SeeingRainbows
     - Electrocution
     - Drunk
+    - Tranquil
+    - Energized
     - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
@@ -343,3 +345,6 @@
     interfaces:
       enum.HumanoidMarkingModifierKey.Key: # sure, this can go here too
         type: HumanoidMarkingModifierBoundUserInterface
+# KvasAddictions-start
+  - type: AddictionContainer
+# KvasAddictions-end

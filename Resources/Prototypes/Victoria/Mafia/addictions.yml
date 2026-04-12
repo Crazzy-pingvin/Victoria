@@ -1,0 +1,79 @@
+#Шаблон зависимости, указаны базовые значения
+# - type: addiction - Объявление зависимости
+  # name: BASE - имя, отображаемое в компоненте
+  # id: [ID] -айди
+  # satiationDecayTime: 1800 -время до начала накопления ломки
+  # withdrawlGrowTime: 240 - время до полного эффекта ломки
+  # withdrawlDecayTime: 120 - время до затухания ломки после приёма дозы
+  # cureTime: 1200 - время ломки для лечения
+  # withdrawlEffects:
+# (эффекты как у реагентов)
+
+# Шаблон эффекта работы с зависимостями
+#      - !type:AddictionEffect- объявление эффекта
+#        addiction: DashAddiction- на какую зависимость нацелен
+#        addAddiction: true - добавляет ли аддикцию или нет.
+#        satiationEffect: 0.01 - Влияние на насыщение.
+#        withdrawlEffect: -0.01 - Влияние на уровень ломки. Можно сделать нечто вроде налоксона из баротравмы.
+#        cureEffect: -0.1 - Влияние на процесс восстановления. Положительное- лечит.
+
+- type: addiction
+  name: morphine
+  id: MorphiumAddiction
+  satiationDecayTime: 1500
+  withdrawlGrowTime: 60
+  withdrawlDecayTime: 120
+  cureTime: 1200
+  withdrawlEffects:
+  - !type:HealthChange
+    damage:
+      types:
+        Poison: 0.1
+  - !type:PopupMessage
+      type: Local
+      visualType: MediumCaution
+      messages:
+      - "generic-addiction-message"
+      - "morphine-message-1"
+      - "morphine-message-2"
+      - "morphine-message-3"
+      probability: 0.1
+  - !type:MovespeedModifier
+      walkSpeedModifier: 0.85
+      sprintSpeedModifier: 0.85
+  - !type:ChemVomit
+      probability: 0.04
+  - !type:Jitter
+  - !type:SatiateHunger
+      factor: -0.3
+
+- type: addiction
+  name: dash
+  id: DashAddiction
+  satiationDecayTime: 1500
+  withdrawlGrowTime: 30
+  withdrawlDecayTime: 120
+  cureTime: 1100
+  withdrawlEffects:
+  - !type:HealthChange
+    damage:
+      types:
+        Poison: 0.1
+  - !type:PopupMessage
+      type: Local
+      visualType: MediumCaution
+      messages:
+      - "generic-addiction-message"
+      - "dash-message-1"
+      - "dash-message-2"
+      - "dash-message-3"
+      probability: 0.05
+  - !type:MovespeedModifier
+      walkSpeedModifier: 0.7
+      sprintSpeedModifier: 0.5
+  - !type:GenericStatusEffect
+      key: Drowsiness
+      component: Drowsiness
+      time: 10
+      type: Add
+      refresh: true
