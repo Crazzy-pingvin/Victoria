@@ -50,6 +50,22 @@
           - id: WallRockArtifactFragment
             prob: 0.01
             orGroup: rock
+          # Victoria ores
+          - id: WallRockAluminium
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockCooper
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockBS
+            prob: 0.005
+            orGroup: rock
+          - id: WallRockRS
+            prob: 0.005
+            orGroup: rock
+          - id: WallRockCosm
+            prob: 0.005
+            orGroup: rock
     - type: IFF
       flags: HideLabel
       color: "#d67e27"

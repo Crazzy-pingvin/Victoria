@@ -200,6 +200,15 @@
       "name": "poster50_contraband"
     },
     {
+      "name": "poster52_contraband"
+    },
+    {
+      "name": "poster53_contraband"
+    },
+    {
+      "name": "poster54_contraband"
+    },
+    {
       "name": "poster55_contraband"
     },
     {
@@ -411,15 +420,6 @@
     },
     {
       "name": "random_anything"
-    },
-    {
-      "name": "poster52_contraband"
-    },
-    {
-      "name": "poster53_contraband"
-    },
-    {
-      "name": "poster54_contraband"
     },
     {
       "name": "bagelmap"

@@ -99,9 +99,13 @@
     factions:
     - Umpor
   - type: DamageContacts
+    onMove: true
     damage:
       types:
         Blunt: 15
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: Construction
     graph: Valiant
     node: valiant
@@ -371,7 +375,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.95,0.95,0.95,-0.95"
+          bounds: "-0.85,0.85,0.95,-0.95"
         density: 1000
         mask:
         - MobMask
@@ -419,9 +423,13 @@
     factions:
     - Mirt
   - type: DamageContacts
+    onMove: true
     damage:
       types:
         Blunt: 15
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: Construction
     graph: Nibble
     node: nibble
@@ -678,9 +686,13 @@
     factions:
     - CDC
   - type: DamageContacts
+    onMove: true
     damage:
       types:
         Piercing: 15
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: Construction
     graph: Scorpio
     node: scorpio
@@ -916,7 +928,7 @@
   id: USSPMechSK
   parent: BaseMech
   name: ШТ "СК-4"
-  description: Шагающий Танк "Слава Кммунизму" четвёртой модели. Неповоротливая, медленная, но очень прочная боевая машина, способная своим телом становиться остриём копья прорыва или надёжным щитом обороны.
+  description: Шагающий Танк "Слава Коммунизму" четвёртой модели. Неповоротливая, медленная, но очень прочная боевая машина, способная своим телом становиться остриём копья прорыва или надёжным щитом обороны.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -972,9 +984,13 @@
     factions:
     - USSP
   - type: DamageContacts
+    onMove: true
     damage:
       types:
         Blunt: 15
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
   - type: Construction
     graph: SK
     node: sk

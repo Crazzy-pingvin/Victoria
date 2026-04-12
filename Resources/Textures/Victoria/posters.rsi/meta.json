@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Drawn by Qventydas from Victoria server.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "poster_being_set",
+      "delays": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "addictions"
+    },
+    {
+      "name": "toxines"
+    },
+    {
+      "name": "contract"
+    },
+    {
+      "name": "partners"
+    },
+    {
+      "name": "petr-anti-ad"
+    }
+  ]
+}

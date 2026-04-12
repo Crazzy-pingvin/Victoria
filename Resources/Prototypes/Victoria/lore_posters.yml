@@ -1,0 +1,53 @@
+- type: entity
+  parent: PosterBase
+  id: PosterBaseLore
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Victoria/posters.rsi
+    state: poster54_legit
+#Легальные
+- type: entity
+  parent: PosterBaseLore
+  id: PosterLegitAddictions
+  name: "Зависимости"
+  description: "Постер, предупреждающий об опасности курения, алкоголизма и наркомании."
+  components:
+  - type: Sprite
+    state: addictions
+
+- type: entity
+  parent: PosterBaseLore
+  id: PosterLegitToxines
+  name: "Токсины"
+  description: "Постер, кратко объясняющий суть работы токсинов."
+  components:
+  - type: Sprite
+    state: toxines
+
+- type: entity
+  parent: PosterBaseLore
+  id: PosterLegitContract
+  name: "Реклама контракта"
+  description: "Постер, обещающий золотые горы вам, если вы станете добровольцем в рядах доблестной армии ОПЗ, сражающейся с СНК. Ну или вашей семье, если помрёте."
+  components:
+  - type: Sprite
+    state: contract
+
+- type: entity
+  parent: PosterBaseLore
+  id: PosterLegitPartners
+  name: "Партнёры"
+  description: "Информационный плакат, информирующий о сотрудничестве ДСО с The Hound, и о том, что они лишь помогают в контрразведке против недоброжелателей!"
+  components:
+  - type: Sprite
+    state: partners
+
+- type: entity
+  parent: PosterBaseLore
+  id: PosterLegitPetrAntiAd
+  name: "Берегитесь серпов!"
+  description: "Информационный плакат, предостерегающий читателя от взаимодействия с ультралевыми объединениями. Не слишком эффективно, если в вашем кошельке последняя муха повесилась."
+  components:
+  - type: Sprite
+    state: petr-anti-ad

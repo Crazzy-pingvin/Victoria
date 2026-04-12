@@ -257,6 +257,9 @@
   - type: EyeCursorOffset
     maxOffset: 3.5
     pvsIncrease: 0.35
+  - type: GunWieldBonus
+    minAngle: 0
+    maxAngle: 0
   - type: Construction
     graph: UmporRifleSniper
     node: UmporRifleSniper

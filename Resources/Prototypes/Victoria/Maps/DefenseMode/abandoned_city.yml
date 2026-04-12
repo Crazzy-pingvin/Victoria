@@ -1,0 +1,27 @@
+- type: gameMap
+  id: VictoriaAbandonedCity
+  mapName: 'AbandonedCity'
+  mapPath: /Maps/victoria_def_abandoned_city.yml
+  minPlayers: 1
+  maxPlayers: 30
+  stations:
+    VictoriaFrozenTown:
+      stationProto: StandardDefenseMap
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Покинутый город'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/shuttle_def_emergency.yml
+        - type: StationJobs
+          availableJobs:
+            DefComander: [ 1, 1 ]
+            DefOfficer: [ 1, 1 ]
+            DefOfficerDop: [ 1, 1 ]
+            DefEngener: [ 2, 2 ]
+            DefMedic: [ 2, 2 ]
+            DefCargo: [ 2, 2 ]
+            DefSpecialist: [ 2, 2 ]
+            DefSpecialistDop: [ 1, 1 ]
+            DefSolder: [ -1, -1 ]
+            DefSolderDop: [ 2, 2 ]
+            DefPilot: [ 0, 0 ]

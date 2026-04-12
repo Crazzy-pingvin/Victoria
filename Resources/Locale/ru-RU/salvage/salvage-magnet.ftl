@@ -18,6 +18,11 @@ salvage-magnet-resources =
         [OreUranium] Уран
         [OreArtifactFragment] Фрагменты артефактов
         [OreBananium] Бананиум
+        [OreCooper] Медь
+        [OreAluminium] Алюминий
+        [OreBSCrystall] БС-кристалл
+        [OreRSCrystall] РС-кристалл
+        [OreCosmCrystall] Космеций
        *[other] { $resource }
     }
 salvage-magnet-resources-count =
