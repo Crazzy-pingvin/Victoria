@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-NC-SA-3.0",
-    "copyright": "Sprite created by crazzy_pingvin",
+    "copyright": "Sprite created by crazzy_pingvin,analyzer-inhand-left and analyzer-inhand-right by qventydas",
     "states": [
         {
             "name": "analyzer",
@@ -25,6 +25,14 @@
                     0.5
                 ]
             ]
+        },
+        {
+            "name": "analyzer-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "analyzer-inhand-right",
+            "directions": 4
         },
         {
             "name": "icon"

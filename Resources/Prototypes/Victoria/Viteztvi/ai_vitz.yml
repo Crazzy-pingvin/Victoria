@@ -39,7 +39,7 @@
             speech: Ага, свалили!
 #--------------------------------------Сочетание правил ВИ-----------------------------------------
 #-----------------Без ходить-бродить----------
-#------обыч-----------          
+#------обыч-----------
 - type: htnCompound
   id: BotVitzStop
   branches:
@@ -61,7 +61,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-mrHill-cigarette"]
-  
+
 - type: autoEmote
   id: EmoteMrHillCigarette
   emote: EmoteMrHillCigarette
@@ -77,13 +77,13 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-mrHill-evaluates"]
-  
+
 - type: autoEmote
   id: EmoteMrHillEvaluates
   emote: EmoteMrHillEvaluates
   interval: 150.0
   chance: 0.8
-  withChat: true  
+  withChat: true
 #----------------------------------
 - type: emote
   id: EmoteMrHilllooks
@@ -93,26 +93,26 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-mrHill-looks"]
-  
+
 - type: autoEmote
   id: EmoteMrHilllooks
   emote: EmoteMrHilllooks
   interval: 300.0
   chance: 0.3
-  withChat: true 
+  withChat: true
 #----------------------------------
 - type: emote
   id: EmoteMrHilllistening
   name: chat-emote-name-mrHill-listening
   category: Hands
   chatMessages: ["chat-emote-name-mrHill-listening"]
-  
+
 - type: autoEmote
   id: EmoteMrHilllistening
   emote: EmoteMrHilllistening
   interval: 200.0
   chance: 0.5
-  withChat: true 
+  withChat: true
 #----------------------------------
 - type: emote
   id: EmoteMrHillwhiskey
@@ -122,20 +122,20 @@
   blacklist:
     components:
     - BorgChassis
-  
+
 - type: autoEmote
   id: EmoteMrHillwhiskey
   emote: EmoteMrHillwhiskey
   interval: 250.0
   chance: 0.5
-  withChat: true 
-#---------------------------------------Говорение------------------------------------  
+  withChat: true
+#---------------------------------------Говорение------------------------------------
 - type: localizedDataset
   id: SpeakingMobVitzMrHill
   values:
     prefix: advertisement-bot-mrhill-
-    count: 6 
-#---------------------------------------Магаз------------------------------------  
+    count: 6
+#---------------------------------------Магаз------------------------------------
 #-----------------категории в магазе------------
 - type: storeCategory
   id: VitzMrHillShopSolders
@@ -151,7 +151,7 @@
   id: VitzMrHillShopAmmo
   name: Боезапас
   priority: 2
-  
+
 - type: storeCategory
   id: VitzMrHillShopMisc
   name: Разное
@@ -167,7 +167,7 @@
     VitzChip_currency: 2
   categories:
   - VitzMrHillShopSolders
-  
+
 - type: listing
   id: ReinforcementRadioVitzStarshina
   name: Система призыва старшины Витезтви
@@ -187,7 +187,7 @@
     VitzChip_currency: 2
   categories:
   - VitzMrHillShopWeaponry
-  
+
 - type: listing
   id: VitzCrateWeaponsHelp
   name: Ящик вспомогательного пехотного оружия
@@ -196,7 +196,7 @@
   cost:
     VitzChip_currency: 4
   categories:
-  - VitzMrHillShopWeaponry 
+  - VitzMrHillShopWeaponry
 
 - type: listing
   id: VitzCrateWeaponsLight
@@ -206,7 +206,7 @@
   cost:
     VitzChip_currency: 3
   categories:
-  - VitzMrHillShopWeaponry 
+  - VitzMrHillShopWeaponry
 #------категория боезапас----------
 - type: listing
   id: VitzCrateAmmoBase
@@ -216,7 +216,7 @@
   cost:
     VitzChip_currency: 3
   categories:
-  - VitzMrHillShopAmmo 
+  - VitzMrHillShopAmmo
 
 - type: listing
   id: VitzCrateAmmoHelp
@@ -247,7 +247,7 @@
     VitzChip_currency: 2
   categories:
   - VitzMrHillShopMisc
-  
+
 - type: listing
   id: VitzIDCardEfreitor
   name: ID-карта Витезтви
@@ -272,28 +272,29 @@
     currencyWhitelist:
     - VitzChip_currency
     balance:
-      VitzChip_currency: 0  
+      VitzChip_currency: 0
 #---------------------------------------Сами боты----------------------------------------
 #-------------------------------Мистер Хилл----------------------
-#-------------Вооружён стоит---------------  
+#-------------Вооружён стоит---------------
 - type: entity
   name: Бот-шоп Мистер Хилл
   suffix: Бот, Витезтви, Шоп, друж, стоп
   parent: [BaseMobHuman, StorePresetVitzMrHillShop]
   id: MobVitzMrHill
   components:
-  - type: Advertise
-    pack: SpeakingMobVitzMrHill
-    minimumWait: 30
-    maximumWait: 60
-    prewarm: false
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobVitzMrHill
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Sneezes
     - Coughs
     - Whistles
@@ -305,7 +306,7 @@
   - type: RandomMetadata
     nameSegments:
     - VitzName-mr
-    - VitzNameTwoHill
+    nameFormat: random-metadata-name-format-default
   - type: NpcFactionMember
     factions:
       - VitzBitMrHill
@@ -343,7 +344,7 @@
     key: enum.StoreUiKey.Key
   - type: AccessReader
     access: [[ "Command" ]]
-#---------------------------------------Спавнеры ботов-------------------      
+#---------------------------------------Спавнеры ботов-------------------
 #-------------------------------Солдат----------------------
 #-------------Без оружия бегающий---------------
 - type: entity

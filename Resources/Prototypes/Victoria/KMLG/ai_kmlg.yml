@@ -118,7 +118,7 @@
         - !type:HTNPrimitiveTask
           operator: !type:SpeakOperator
             speech: Зарядов нет!
-#---------------------------------------Лечение-------------------------            
+#---------------------------------------Лечение-------------------------
 - type: htnCompound
   id: KMLGInjectNearbyCompound
   branches:
@@ -165,7 +165,7 @@
         - !type:HTNCompoundTask
           task: IdleCompoundBot
 #-----------------Без ходить-бродить----------
-#------Обыч-----------          
+#------Обыч-----------
 - type: htnCompound
   id: BotKMLGStop
   branches:
@@ -190,7 +190,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-coffe"]
-  
+
 - type: autoEmote
   id: Coffe
   emote: Coffe
@@ -209,13 +209,13 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-scratches"]
-  
+
 - type: autoEmote
   id: Scratches
   emote: Scratches
   interval: 150.0
   chance: 0.6
-  withChat: true  
+  withChat: true
 #----------------------------------
 - type: emote
   id: Cigarette
@@ -225,26 +225,26 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-cigarette"]
-  
+
 - type: autoEmote
   id: Cigarette
   emote: Cigarette
   interval: 300.0
   chance: 0.3
-  withChat: true 
+  withChat: true
 #----------------------------------
 - type: emote
   id: Watch
   name: chat-emote-name-watch
   category: Hands
   chatMessages: ["chat-emote-name-watch"]
-  
+
 - type: autoEmote
   id: Watch
   emote: Watch
   interval: 200.0
   chance: 0.5
-  withChat: true 
+  withChat: true
 #----------------------------------
 - type: emote
   id: Warming
@@ -254,13 +254,13 @@
   blacklist:
     components:
     - BorgChassis
-  
+
 - type: autoEmote
   id: Warming
   emote: Warming
   interval: 250.0
   chance: 0.5
-  withChat: true 
+  withChat: true
 #-------------------------Старший снабженец-----------------
 #----------------------------------
 - type: emote
@@ -271,7 +271,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-counts"]
-  
+
 - type: autoEmote
   id: Counts
   emote: Counts
@@ -287,7 +287,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-listening"]
-  
+
 - type: autoEmote
   id: Listening
   emote: Listening
@@ -303,7 +303,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-watching"]
-  
+
 - type: autoEmote
   id: Watching
   emote: Watching
@@ -319,7 +319,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-grumbles"]
-  
+
 - type: autoEmote
   id: Grumbles
   emote: Grumbles
@@ -335,7 +335,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-looks"]
-  
+
 - type: autoEmote
   id: Looks
   emote: Looks
@@ -354,7 +354,7 @@
   chatMessages: ["chat-emote-name-sniffs"]
   chatTriggers:
     - шмыгает
-  
+
 - type: autoEmote
   id: Sniffs
   emote: Sniffs
@@ -370,7 +370,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-wipes"]
-  
+
 - type: autoEmote
   id: Wipes
   emote: Wipes
@@ -386,7 +386,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-swearing"]
-  
+
 - type: autoEmote
   id: Swearing
   emote: Swearing
@@ -402,7 +402,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-twists"]
-  
+
 - type: autoEmote
   id: Twists
   emote: Twists
@@ -418,7 +418,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-checks"]
-  
+
 - type: autoEmote
   id: Checks
   emote: Checks
@@ -435,7 +435,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-bolt"]
-  
+
 - type: autoEmote
   id: Bolt
   emote: Bolt
@@ -451,7 +451,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-cartridges"]
-  
+
 - type: autoEmote
   id: Cartridges
   emote: Cartridges
@@ -467,7 +467,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-gear"]
-  
+
 - type: autoEmote
   id: Gear
   emote: Gear
@@ -484,7 +484,7 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-checked"]
-  
+
 - type: autoEmote
   id: Checked
   emote: Checked
@@ -500,44 +500,44 @@
     components:
     - BorgChassis
   chatMessages: ["chat-emote-name-measurement"]
-  
+
 - type: autoEmote
   id: Measurement
   emote: Measurement
   interval: 120.0
   chance: 0.8
   withChat: true
-#---------------------------------------Говорение------------------------------------  
+#---------------------------------------Говорение------------------------------------
 #------------------------------Грузчик---------------------------
 - type: localizedDataset
   id: SpeakingMobKMLGCt
   values:
     prefix: advertisement-bot-kmlg-ct-
-    count: 10  
+    count: 10
 #------------------------------Старший снабженец---------------------------
 - type: localizedDataset
   id: SpeakingMobKMLGCc
   values:
     prefix: advertisement-bot-kmlg-cc-
-    count: 10  
+    count: 10
 #------------------------------Ремонтник---------------------------
 - type: localizedDataset
   id: SpeakingMobKMLGRm
   values:
     prefix: advertisement-bot-kmlg-rm-
-    count: 10  
+    count: 10
 #------------------------------Охранник---------------------------
 - type: localizedDataset
   id: SpeakingMobKMLGS
   values:
     prefix: advertisement-bot-kmlg-s-
-    count: 10  
+    count: 10
 #------------------------------Инженер---------------------------
 - type: localizedDataset
   id: SpeakingMobKMLGE
   values:
     prefix: advertisement-bot-kmlg-e-
-    count: 10  
+    count: 10
 #---------------------------------------Сами боты----------------------------------------
 #--------------------------------------Стоящий грузчик---------------------------
 - type: entity
@@ -546,18 +546,20 @@
   parent: BaseMobHuman
   id: MobKMLGCt
   components:
-  - type: Advertise
-    pack: SpeakingMobKMLGCt
-    minimumWait: 30
-    maximumWait: 60
-    prewarm: false
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobKMLGCt
+
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -571,6 +573,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -591,18 +594,19 @@
   parent: BaseMobHuman
   id: MobKMLGCc
   components:
-  - type: Advertise
-    pack: SpeakingMobKMLGCc
-    minimumWait: 30
-    maximumWait: 60
-    prewarm: false
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobKMLGCc
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -616,6 +620,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -636,18 +641,19 @@
   parent: BaseMobHuman
   id: MobKMLGS
   components:
-  - type: Advertise
-    pack: SpeakingMobKMLGS
-    minimumWait: 30
-    maximumWait: 60
-    prewarm: false
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobKMLGS
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -661,6 +667,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLGEnemy
@@ -697,18 +704,19 @@
   parent: BaseMobHuman
   id: MobKMLGRm
   components:
-  - type: Advertise
-    pack: SpeakingMobKMLGRm
-    minimumWait: 30
-    maximumWait: 60
-    prewarm: false
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobKMLGRm
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -722,6 +730,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -742,18 +751,19 @@
   parent: BaseMobHuman
   id: MobKMLGE
   components:
-  - type: Advertise
-    pack: SpeakingMobKMLGE
-    minimumWait: 30
-    maximumWait: 60
-    prewarm: false
+  - type: Vocalizer
+    minVocalizeInterval: 1m
+    maxVocalizeInterval: 2m
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: SpeakingMobKMLGE
   - type: Speech
     speechSounds: Baritone
   - type: Vocal
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -767,6 +777,7 @@
     nameSegments:
     - KMLGName
     - KMLGNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - KMLG
@@ -781,7 +792,7 @@
   - type: NPCRetaliation
     attackMemoryLength: 100
 
-#---------------------------------------Спавнеры ботов-------------------      
+#---------------------------------------Спавнеры ботов-------------------
 #-------------------------------Грузчик----------------------
 - type: entity
   name: Спавнер грузчика Космологистики

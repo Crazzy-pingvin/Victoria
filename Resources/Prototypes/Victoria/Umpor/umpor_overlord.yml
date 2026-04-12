@@ -1,297 +1,298 @@
-- type: htnCompound
-  id: BotUmporOverD
-  branches:
-    - tasks:
-        - !type:HTNCompoundTask
-          task: RangedCombatCompoundBotUmpor
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompoundBotUmpor
-    - tasks:
-        - !type:HTNCompoundTask
-          task: FollowCompound
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompoundBot
+# - type: htnCompound
+  # id: BotUmporOverD
+  # branches:
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: RangedCombatCompoundBotUmpor
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: MeleeCombatCompoundBotUmpor
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: FollowCompound
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: IdleCompoundBot
 
-- type: entity
-  suffix: Бот, Умпорский, Овер(дракон)
-  parent: MobUmporLogWeapon
-  id: MobUmporWeaponOverD
-  components:
-    - type: HTN
-      rootTask:
-        task: BotUmporOverD
+# - type: entity
+  # suffix: Бот, Умпорский, Овер(дракон)
+  # parent: MobUmporLogWeapon
+  # id: MobUmporWeaponOverD
+  # components:
+    # - type: HTN
+      # rootTask:
+        # task: BotUmporOverD
 
-- type: entity
-  id: UmporRift
-  name: Умпорский перемещатель
-  description: A rift akin to the ones space carp use to travel long distances.
-  placement:
-    mode: SnapgridCenter
-  components:
-  - type: DragonRift
-    spawn: "MobUmporWeaponOverD"
-    spawnCooldown: 0.6
-    spawnAccumulator: 0.6
-  - type: TimedDespawn
-    lifetime: 2  
-  - type: Transform
-    anchored: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
-  - type: Fixtures
-  - type: Sprite
-    layers:
-    - sprite: Structures/Specific/carp_rift.rsi
-      state: icon
-      color: "#569fff"
-      shader: unshaded
-  - type: InteractionOutline
-  - type: Clickable
-    enabled: false
-  - type: Damageable
-    damageContainer: Inorganic
-    damageModifierSet: Metallic
+# - type: entity
+  # id: UmporRift
+  # name: Умпорский перемещатель
+  # description: A rift akin to the ones space carp use to travel long distances.
+  # placement:
+    # mode: SnapgridCenter
+  # components:
+  # - type: DragonRift
+    # spawn: "MobUmporWeaponOverD"
+    # spawnCooldown: 0.6
+    # spawnAccumulator: 0.6
+  # - type: TimedDespawn
+    # lifetime: 2
+  # - type: Transform
+    # anchored: true
+  # - type: Physics
+    # bodyType: Static
+    # canCollide: false
+  # - type: Fixtures
+  # - type: Sprite
+    # layers:
+    # - sprite: Structures/Specific/carp_rift.rsi
+      # state: icon
+      # color: "#569fff"
+      # shader: unshaded
+  # - type: InteractionOutline
+  # - type: Clickable
+    # enabled: false
+  # - type: Damageable
+    # damageContainer: Inorganic
+    # damageModifierSet: Metallic
 
-- type: entity
-  name: Офицер Умпорец
-  suffix: Умпорский, Оверлорд (дракон)
-  parent: MobUmporOfiStop
-  id: MobUmporOfiOverlordD
-  components:
-    - type: Dragon
-      riftPrototype: UmporRift
-#------------------------------------------------------------------------------------  
-- type: entity
-  id: ActionUmporOfiRaiseArmy
-  name: Призвать солдат
-  description: Призывает Умпорского солдата под ваше командование
-  components:
-  - type: InstantAction
-    useDelay: 4
-    icon:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: UmporArmySold
-    event: !type:RatKingRaiseArmyActionEvent
+# - type: entity
+  # name: Офицер Умпорец
+  # suffix: Умпорский, Оверлорд (дракон)
+  # parent: MobUmporOfiStop
+  # id: MobUmporOfiOverlordD
+  # components:
+    # - type: Dragon
+      # riftPrototype: UmporRift
+# #------------------------------------------------------------------------------------
+# - type: entity
+  # id: ActionUmporOfiRaiseArmy
+  # parent: BaseAction
+  # name: Призвать солдат
+  # description: Призывает Умпорского солдата под ваше командование
+  # components:
+  # - type: InstantAction
+    # useDelay: 4
+    # icon:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: UmporArmySold
+    # event: !type:RatKingRaiseArmyActionEvent
 
-- type: entity
-  id: ActionUmporOfiOrderStay
-  name: Стоять на месте
-  description: Прикажите вашим бойцам остановиться и ждать
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: stayOff
-    iconOn:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: stay
-    event:
-      !type:RatKingOrderActionEvent
-        type: Stay
-    priority: 5
+# - type: entity
+  # id: ActionUmporOfiOrderStay
+  # parent: BaseAction
+  # name: Стоять на месте
+  # description: Прикажите вашим бойцам остановиться и ждать
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: stayOff
+    # iconOn:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: stay
+    # event:
+      # !type:RatKingOrderActionEvent
+        # type: Stay
+    # priority: 5
 
-- type: entity
-  id: ActionUmporOfiOrderFollow
-  name: Следовать
-  description: Прикажите вашим бойцам идти за вами
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: followOff
-    iconOn:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: follow
-    event:
-      !type:RatKingOrderActionEvent
-      type: Follow
-    priority: 6
+# - type: entity
+  # id: ActionUmporOfiOrderFollow
+  # parent: BaseAction
+  # name: Следовать
+  # description: Прикажите вашим бойцам идти за вами
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: followOff
+    # iconOn:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: follow
+    # event:
+      # !type:RatKingOrderActionEvent
+      # type: Follow
+    # priority: 6
 
-- type: entity
-  id: ActionUmporOfiOrderCheeseEm
-  name: Атаковать
-  description: Прикажите вашим бойцам атаковать того, на кого вы укажите
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: attackOff
-    iconOn:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: attack
-    event:
-      !type:RatKingOrderActionEvent
-      type: CheeseEm
-    priority: 7
+# - type: entity
+  # id: ActionUmporOfiOrderCheeseEm
+  # parent: BaseAction
+  # name: Атаковать
+  # description: Прикажите вашим бойцам атаковать того, на кого вы укажите
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: attackOff
+    # iconOn:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: attack
+    # event:
+      # !type:RatKingOrderActionEvent
+      # type: CheeseEm
+    # priority: 7
 
-- type: entity
-  id: ActionUmporOfiOrderLoose
-  name: Вольно
-  description: Отдайте команду "Вольно", тогда ваши бойцы начнут обыскивать территорию
-  components:
-  - type: InstantAction
-    useDelay: 1
-    icon:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: looseOff
-    iconOn:
-      sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
-      state: loose
-    event:
-      !type:RatKingOrderActionEvent
-      type: Loose
-    priority: 8
+# - type: entity
+  # id: ActionUmporOfiOrderLoose
+  # parent: BaseAction
+  # name: Вольно
+  # description: Отдайте команду "Вольно", тогда ваши бойцы начнут обыскивать территорию
+  # components:
+  # - type: InstantAction
+    # useDelay: 1
+    # icon:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: looseOff
+    # iconOn:
+      # sprite: Victoria/Umpor/umpor_actions_ump_ofi.rsi
+      # state: loose
+    # event:
+      # !type:RatKingOrderActionEvent
+      # type: Loose
+    # priority: 8
 
-- type: dataset
-  id: UmporOfiCommandStay
-  values:
-    - "Затихли!"
-    - "Ждём!"
-    - "Стоп!"
-    - "Тссс!"
+# - type: localizedDataset
+  # id: UmporOfiCommandStay
+  # values:
+    # prefix: umpor-command-stay-
+    # count: 4
 
-- type: dataset
-  id: UmporOfiCommandFollow
-  values:
-    - "Взвод, ко мне!"
-    - "За мной!"
-    - "В ногу!"
+# - type: localizedDataset
+  # id: UmporOfiCommandFollow
+  # values:
+    # prefix: umpor-command-follow-
+    # count: 3
 
-- type: dataset
-  id: UmporOfiCommandCheeseEm
-  values:
-    - "В атаку!"
-    - "Снять!"
-    - "На тот свет!"
-    - "Свалить его!"
+# - type: localizedDataset
+  # id: UmporOfiCommandCheeseEm
+  # values:
+    # prefix: umpor-command-cheese-
+    # count: 4
 
-- type: dataset
-  id: UmporOfiCommandLoose
-  values:
-    - "Вольно!"
+# - type: localizedDataset
+  # id: UmporOfiCommandLoose
+  # values:
+    # prefix: umpor-command-loose-
+    # count: 1
 
-- type: htnCompound
-  id: WaitCompound
-  branches:
-    - tasks:
-        - !type:HTNPrimitiveTask
-          operator: !type:WaitOperator
-            key: IdleTime
-          preconditions:
-            - !type:KeyExistsPrecondition
-              key: IdleTime
+# - type: htnCompound
+  # id: WaitCompound
+  # branches:
+    # - tasks:
+        # - !type:HTNPrimitiveTask
+          # operator: !type:WaitOperator
+            # key: IdleTime
+          # preconditions:
+            # - !type:KeyExistsPrecondition
+              # key: IdleTime
 
-- type: htnCompound
-  id: UmporSimpleHostileCompound
-  branches:
-    - tasks:
-        - !type:HTNCompoundTask
-          task: RangedCombatCompoundBotUmpor
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompound
-    - tasks:
-        - !type:HTNCompoundTask
-          task: IdleCompound
+# - type: htnCompound
+  # id: UmporSimpleHostileCompound
+  # branches:
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: RangedCombatCompoundBotUmpor
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: MeleeCombatCompound
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: IdleCompound
 
-- type: htnCompound
-  id: UmporBattleCompound
-  branches:
-    - tasks:
-        - !type:HTNCompoundTask
-          task: RangedCombatCompoundBotUmpor
-    - tasks:
-        - !type:HTNCompoundTask
-          task: MeleeCombatCompound
-    
-- type: htnCompound
-  id: BotUmporOverR
-  branches:
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.Stay
-    tasks:
-      - !type:HTNCompoundTask
-        task: WaitCompound
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.Follow
-    tasks:
-      - !type:HTNCompoundTask
-        task: FollowCompound
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.CheeseEm
-    tasks:
-      - !type:HTNCompoundTask
-        task: UmporBattleCompound
-  - preconditions:
-      - !type:HasOrdersPrecondition
-        orders: enum.RatKingOrderType.Loose
-    tasks:
-      - !type:HTNCompoundTask
-        task: UmporSimpleHostileCompound
+# - type: htnCompound
+  # id: UmporBattleCompound
+  # branches:
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: RangedCombatCompoundBotUmpor
+    # - tasks:
+        # - !type:HTNCompoundTask
+          # task: MeleeCombatCompound
 
-- type: entity
-  suffix: Бот, Умпорский, Овер(крыса)
-  parent: MobUmporWeapon
-  id: MobUmporWeaponOverR
-  components:
-  - type: StatusEffects
-    allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
-    - Stutter
-    - Electrocution
-    - ForcedSleep
-    - TemporaryBlindness
-    - Pacified
-    - StaminaModifier
-    - Flashed
-    - RadiationProtection
-    - Drowsiness
-    - Adrenaline
-  - type: InputMover
-  - type: MobMover
-  - type: HTN
-    rootTask:
-      task: RatServantCompound
-    blackboard:
-      IdleRange: !type:Single
-        3.5
-      FollowCloseRange: !type:Single
-        2.0
-      FollowRange: !type:Single
-        3.0
-  - type: NpcFactionMember
-    factions:
-      - UmporBot
+# - type: htnCompound
+  # id: BotUmporOverR
+  # branches:
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.Stay
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: WaitCompound
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.Follow
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: FollowCompound
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.CheeseEm
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: UmporBattleCompound
+  # - preconditions:
+      # - !type:HasOrdersPrecondition
+        # orders: enum.RatKingOrderType.Loose
+    # tasks:
+      # - !type:HTNCompoundTask
+        # task: UmporSimpleHostileCompound
 
-- type: entity
-  name: Офицер Умпорец
-  suffix: Умпорский, Оверлорд (крыса)
-  parent: MobUmporOfiStop
-  id: MobUmporOfiOverlordR
-  components:
-    - type: RatKing
-      hungerPerArmyUse: 1
-      hungerPerDomainUse: 2
-      actionRaiseArmy: "ActionUmporOfiRaiseArmy"
-      armyMobSpawnId: MobUmporWeaponOverR
-      orderCallouts:
-        Stay: "UmporOfiCommandStay"
-        Follow: "UmporOfiCommandFollow"
-        CheeseEm: "UmporOfiCommandCheeseEm"
-        Loose: "UmporOfiCommandLoose"
-      actionOrderStay: "ActionUmporOfiOrderStay"
-      actionOrderFollow: "ActionUmporOfiOrderFollow"
-      actionOrderCheeseEm: "ActionUmporOfiOrderCheeseEm"
-      actionOrderLoose: "ActionUmporOfiOrderLoose"
-      molesAmmoniaPerDomain: 0
+# - type: entity
+  # suffix: Бот, Умпорский, Овер(крыса)
+  # parent: MobUmporWeapon
+  # id: MobUmporWeaponOverR
+  # components:
+  # - type: StatusEffects
+    # allowed:
+    # - Stun
+    # - KnockedDown
+    # - SlowedDown
+    # - Stutter
+    # - Electrocution
+    # - ForcedSleep
+    # - TemporaryBlindness
+    # - Pacified
+    # - StaminaModifier
+    # - Flashed
+    # - RadiationProtection
+    # - Drowsiness
+    # - Adrenaline
+  # - type: InputMover
+  # - type: MobMover
+  # - type: HTN
+    # rootTask:
+      # task: RatServantCompound
+    # blackboard:
+      # IdleRange: !type:Single
+        # 3.5
+      # FollowCloseRange: !type:Single
+        # 2.0
+      # FollowRange: !type:Single
+        # 3.0
+  # - type: NpcFactionMember
+    # factions:
+      # - UmporBot
+
+# - type: entity
+  # name: Офицер Умпорец
+  # suffix: Умпорский, Оверлорд (крыса)
+  # parent: MobUmporOfiStop
+  # id: MobUmporOfiOverlordR
+  # components:
+    # - type: RatKing
+      # hungerPerArmyUse: 1
+      # hungerPerDomainUse: 2
+      # actionRaiseArmy: "ActionUmporOfiRaiseArmy"
+      # armyMobSpawnId: MobUmporWeaponOverR
+      # orderCallouts:
+        # Stay: "UmporOfiCommandStay"
+        # Follow: "UmporOfiCommandFollow"
+        # CheeseEm: "UmporOfiCommandCheeseEm"
+        # Loose: "UmporOfiCommandLoose"
+      # actionOrderStay: "ActionUmporOfiOrderStay"
+      # actionOrderFollow: "ActionUmporOfiOrderFollow"
+      # actionOrderCheeseEm: "ActionUmporOfiOrderCheeseEm"
+      # actionOrderLoose: "ActionUmporOfiOrderLoose"
+      # molesAmmoniaPerDomain: 0

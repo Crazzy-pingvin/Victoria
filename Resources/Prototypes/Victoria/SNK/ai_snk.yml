@@ -160,7 +160,7 @@
         - !type:HTNPrimitiveTask
           operator: !type:SpeakOperator
             speech: Зарядов нет!
-#---------------------------------------Вкалывать медицину-------------------------            
+#---------------------------------------Вкалывать медицину-------------------------
 - type: htnCompound
   id: SNKInjectNearbyCompound
   branches:
@@ -223,7 +223,7 @@
         - !type:HTNCompoundTask
           task: IdleCompoundBot
 #-----------------Без ходить-бродить----------
-#------обыч-----------          
+#------обыч-----------
 - type: htnCompound
   id: BotSNKStop
   branches:
@@ -233,7 +233,7 @@
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompoundBotSNK
-#------медик--------          
+#------медик--------
 - type: htnCompound
   id: BotSNKMedStop
   branches:
@@ -246,7 +246,7 @@
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeCombatCompoundBotSNK
-#--------------------------------чихание-зевание-кашель и прочие эмоуты---------------------------          
+#--------------------------------чихание-зевание-кашель и прочие эмоуты---------------------------
 - type: autoEmote
   id: Yawns
   emote: Yawn
@@ -276,7 +276,7 @@
   withChat: true
 #---------------------------------------Сами боты----------------------------------------
 #-------------------------------Солдат----------------------
-#-------------Без оружия бегающий---------------  
+#-------------Без оружия бегающий---------------
 - type: entity
   name: Солдат СНК
   suffix: Бот, СНК, безОруж, бег
@@ -289,7 +289,7 @@
     sounds:
       Unsexed: MaleHuman
   - type: AutoEmote
-    emotes: 
+    emotes:
     - Yawns
     - Sneezes
     - Coughs
@@ -298,6 +298,7 @@
     nameSegments:
     - SNKName-sol
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - SNKBot
@@ -311,7 +312,7 @@
       task: BotSNK
   - type: NPCRetaliation
     attackMemoryLength: 100
-#-------------Без оружия ждущий---------------  
+#-------------Без оружия ждущий---------------
 - type: entity
   suffix: Бот, СНК, безОруж, стоп
   parent: MobSNK
@@ -320,7 +321,7 @@
   - type: HTN
     rootTask:
       task: BotSNKStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, бег
   parent: MobSNK
@@ -342,7 +343,7 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, стоп
   parent: MobSNKWeapon
@@ -362,7 +363,7 @@
   - type: Loadout
     prototypes:
       - SNKEngeGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Инженер СНК
   suffix: Бот, СНК, безОруж, стоп
@@ -372,7 +373,7 @@
   - type: Loadout
     prototypes:
       - SNKEngeGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, бег
   parent: MobSNKEng
@@ -393,7 +394,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, стоп
   parent: MobSNKEngWeapon
@@ -426,7 +427,7 @@
   - type: HTN
     rootTask:
       task: BotSNKMed
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Медик СНК
   suffix: Бот, СНК, безОруж, стоп
@@ -449,7 +450,7 @@
   - type: HTN
     rootTask:
       task: BotSNKMedStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, бег
   parent: MobSNKMed
@@ -471,7 +472,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, стоп
   parent: MobSNKMedWeapon
@@ -491,7 +492,7 @@
   - type: Loadout
     prototypes:
       - SNKRadioGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Радист СНК
   suffix: Бот, СНК, безОруж, стоп
@@ -501,7 +502,7 @@
   - type: Loadout
     prototypes:
       - SNKRadioGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, бег
   parent: MobSNKRad
@@ -523,7 +524,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Effects/Lightning/lightningshock.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, стоп
   parent: MobSNKRadWeapon
@@ -544,10 +545,11 @@
     nameSegments:
     - SNKName-ofi
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - SNKOffiGear
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   name: Офицер СНК
   suffix: Бот, СНК, безОруж, стоп
@@ -558,10 +560,11 @@
     nameSegments:
     - SNKName-ofi
     - SNKNameTwo
+    nameFormat: name-format-ert
   - type: Loadout
     prototypes:
       - SNKOffiGear
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, бег
   parent: MobSNKOfi
@@ -583,7 +586,7 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
-#-------------Вооружён ждущий--------------- 
+#-------------Вооружён ждущий---------------
 - type: entity
   suffix: Бот, СНК, Оруж, стоп
   parent: MobSNKOfiWeapon
@@ -592,7 +595,7 @@
   - type: HTN
     rootTask:
       task: BotSNKStop
-#---------------------------------------Спавнеры ботов-------------------      
+#---------------------------------------Спавнеры ботов-------------------
 #-------------------------------Солдат----------------------
 #-------------Без оружия бегающий---------------
 - type: entity
@@ -609,7 +612,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNK
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobSNK
   id: SpawnMobSNKStop
@@ -618,7 +621,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobSNK
   id: SpawnMobSNKWeapon
@@ -627,7 +630,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobSNK
   id: SpawnMobSNKWeaponStop
@@ -652,7 +655,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKEng
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobSNKEng
   id: SpawnMobSNKEngStop
@@ -661,7 +664,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKEngStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobSNKEng
   id: SpawnMobSNKEngWeapon
@@ -670,7 +673,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKEngWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobSNKEng
   id: SpawnMobSNKEngWeaponStop
@@ -695,7 +698,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKMed
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobSNKMed
   id: SpawnMobSNKMedStop
@@ -704,7 +707,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKMedStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobSNKMed
   id: SpawnMobSNKMedWeapon
@@ -713,7 +716,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKMedWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobSNKMed
   id: SpawnMobSNKMedWeaponStop
@@ -738,7 +741,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKRad
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobSNKRad
   id: SpawnMobSNKRadStop
@@ -747,7 +750,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKRadStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobSNKRad
   id: SpawnMobSNKRadWeapon
@@ -756,7 +759,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKRadWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobSNKRad
   id: SpawnMobSNKRadWeaponStop
@@ -781,7 +784,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKOfi
-#-------------Без оружия ждущий--------------- 
+#-------------Без оружия ждущий---------------
 - type: entity
   parent: SpawnMobSNKOfi
   id: SpawnMobSNKOfiStop
@@ -790,7 +793,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKOfiStop
-#-------------Вооружён бегающий---------------  
+#-------------Вооружён бегающий---------------
 - type: entity
   parent: SpawnMobSNKOfi
   id: SpawnMobSNKOfiWeapon
@@ -799,7 +802,7 @@
   - type: ConditionalSpawner
     prototypes:
     - MobSNKOfiWeapon
-#-------------Вооружён ждущий---------------  
+#-------------Вооружён ждущий---------------
 - type: entity
   parent: SpawnMobSNKOfi
   id: SpawnMobSNKOfiWeaponStop

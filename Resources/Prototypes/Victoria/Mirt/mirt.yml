@@ -703,7 +703,7 @@
     damageCoefficient: 0.65
 #------------------------------------шлем инквизиторского скафандра----------
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: MirtHelmetHardsuitInk
   name: Шлем инквизиторского скафандра
   suffix: Миртан
@@ -977,9 +977,10 @@
     damageContainers:
       - Biological
     damage:
-      Caustic: -10
-      Poison: -10
-      Heat: -5
+      types:
+        Caustic: -10
+        Poison: -10
+        Heat: -5
       groups:
         Brute: -15
 
@@ -989,7 +990,7 @@
   suffix: Миртан, Полный
   components:
   - type: Stack
-    lingering: true
+#    lingering: true
     count: 20
 #-------------------------------------знамёна-------------------------------
 #------------------------стандартное------------------
@@ -1260,9 +1261,11 @@
   components:
   - type: RepeatingTrigger
     delay: 0.6 # line of fire as well as if it hits something
+    keyOut: timer
   - type: ProjectileGrenade
     fillPrototype: MirtBulletLightFrag
     capacity: 20
+    triggerKey: timer
   - type: ContainerContainer
     containers:
       cluster-payload: !type:Container
@@ -1270,6 +1273,7 @@
     lifetime: 0.7
   - type: TriggerOnCollide
     fixtureID: projectile
+    keyOut: timer
   - type: Projectile
     damage:
       types:
@@ -3299,79 +3303,35 @@
 #---------------------------------------------------спавнеры------------------------------------------------
 #-------------------------------------------Имена-------------------------------------
 #---------------------------------имена----------
-- type: dataset
+- type: localizedDataset
   id: MirtName
   values:
-  - Юрий
-  - Марк
-  - Гай
-  - Октавий
-  - Виктор
-  - Габриэль
-  - Игноциус
-  - Артур
-  - Питер
-  - Чеслав
-  - Козимеж
-  - Августин
-  - Давид
-  - Марек
-  - Джаромил
-  - Гюстав
-  - Отто
-  - Альбрехт
-  - Освальд
-  - Тронд
-  - Харольд
-  - Кнуд
-  - Свен
-  - Кшиштоф
-  - Исмаил
-  - Константин
+    prefix: mirt-name-one-
+    count: 26
 #---------------------------------звания пацанов----------
-- type: dataset
+- type: localizedDataset
   id: MirtName-s
   values:
-  - Велит
-  - Гастат
+    prefix: mirt-name-s-
+    count: 2
 #---------------------------------звания тяжей----------
-- type: dataset
+- type: localizedDataset
   id: MirtName-t
   values:
-  - Принцип
-  - Триарий
+    prefix: mirt-name-t-
+    count: 2
 #---------------------------------звания младших офицеров----------
-- type: dataset
+- type: localizedDataset
   id: MirtName-o
   values:
-  - Турман
-  - Декур
+    prefix: mirt-name-o-
+    count: 2
 #---------------------------------фамилии----------
-- type: dataset
+- type: localizedDataset
   id: MirtNameTwo
   values:
-  - Зубин
-  - Щитов
-  - Стилли
-  - Стронг
-  - Лапин
-  - Пушкарёв
-  - Прорывин
-  - Бронин
-  - Сворд
-  - Сабери
-  - Сильнов
-  - Боговеров
-  - Спасский
-  - Штутц
-  - Пилгер
-  - Ретунг
-  - Рустинг
-  - Скольд
-  - Фестниг
-  - Грофт
-  - Сник
-  - Магевер
+    prefix: mirt-name-two-
+    count: 22
 #---------------------------------ополченец----------
 - type: randomHumanoidSettings
   speciesBlacklist:
@@ -3395,6 +3355,7 @@
       nameSegments:
       - MirtName
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtGrReady
@@ -3434,6 +3395,7 @@
     nameSegments:
     - MirtName
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtGrR
 #---------------------------------солдат----------
@@ -3459,6 +3421,7 @@
       nameSegments:
       - MirtName-s
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtSoldReady
@@ -3498,6 +3461,7 @@
     nameSegments:
     - MirtName-s
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtSoldR
 #---------------------------------тяж----------
@@ -3523,6 +3487,7 @@
       nameSegments:
       - MirtName-t
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtTgReady
@@ -3562,6 +3527,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtTgR
 #---------------------------------офицер----------
@@ -3587,6 +3553,7 @@
       nameSegments:
       - MirtName-o
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtOffiReady
@@ -3626,6 +3593,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtOffiR
 #---------------------------------инквизитор----------
@@ -3651,6 +3619,7 @@
       nameSegments:
       - MirtName-t
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtInkReady
@@ -3690,6 +3659,7 @@
     nameSegments:
     - MirtName-t
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtInkR
 #---------------------------------старший инквизитор----------
@@ -3715,6 +3685,7 @@
       nameSegments:
       - MirtName-o
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtOffiInkReady
@@ -3754,6 +3725,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtOffiInkR
 #---------------------------------скаут----------
@@ -3779,6 +3751,7 @@
       nameSegments:
       - MirtName-o
       - MirtNameTwo
+      nameFormat: name-format-ert
 
 - type: randomHumanoidSettings
   id: MirtRazReady
@@ -3818,6 +3791,7 @@
     nameSegments:
     - MirtName-o
     - MirtNameTwo
+    nameFormat: name-format-ert
   - type: RandomHumanoidSpawner
     settings: MirtRazR
 #---------------------------------------------------------------Ящики со снарягой------------------------------------------------------------

@@ -9,6 +9,7 @@ using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Udder;
 using Content.Shared.Verbs;
+using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Animals;
@@ -32,12 +33,22 @@ public sealed class UdderSystem : EntitySystem
         SubscribeLocalEvent<UdderComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<UdderComponent, GetVerbsEvent<AlternativeVerb>>(AddMilkVerb);
         SubscribeLocalEvent<UdderComponent, MilkingDoAfterEvent>(OnDoAfter);
-        SubscribeLocalEvent<UdderComponent, ExaminedEvent>(OnExamine);
+        SubscribeLocalEvent<UdderComponent, EntRemovedFromContainerMessage>(OnEntRemoved);
     }
 
     private void OnMapInit(EntityUid uid, UdderComponent component, MapInitEvent args)
     {
         component.NextGrowth = _timing.CurTime + component.GrowthDelay;
+    }
+
+    private void OnEntRemoved(Entity<UdderComponent> entity, ref EntRemovedFromContainerMessage args)
+    {
+        // Make sure the removed entity was our contained solution
+        if (entity.Comp.Solution == null || args.Entity != entity.Comp.Solution.Value.Owner)
+            return;
+
+        // Cleared our cached reference to the solution entity
+        entity.Comp.Solution = null;
     }
 
     public override void Update(float frameTime)
@@ -61,7 +72,7 @@ public sealed class UdderSystem : EntitySystem
                 continue;
 
             // Actually there is food digestion so no problem with instant reagent generation "OnFeed"
-            if (EntityManager.TryGetComponent(uid, out HungerComponent? hunger))
+            if (TryComp(uid, out HungerComponent? hunger))
             {
                 // Is there enough nutrition to produce reagent?
                 if (_hunger.GetHungerThreshold(hunger) < HungerThreshold.Okay)
@@ -126,7 +137,7 @@ public sealed class UdderSystem : EntitySystem
     {
         if (args.Using == null ||
              !args.CanInteract ||
-             !EntityManager.HasComponent<RefillableSolutionComponent>(args.Using.Value))
+             !HasComp<RefillableSolutionComponent>(args.Using.Value))
             return;
 
         var uid = entity.Owner;

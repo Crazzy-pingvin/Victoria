@@ -1,2 +1,3 @@
 @echo off
-dotnet run --project Content.Client/Content.Client.csproj --configuration Release
+dotnet run --project Content.Client
+pause

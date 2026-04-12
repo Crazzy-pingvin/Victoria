@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+using System.Numerics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -7,7 +7,7 @@ namespace Content.Shared.Chat.TypingIndicator;
 /// <summary>
 ///     Prototype to store chat typing indicator visuals.
 /// </summary>
-[Prototype("typingIndicator")]
+[Prototype]
 public sealed partial class TypingIndicatorPrototype : IPrototype
 {
     [IdDataField]

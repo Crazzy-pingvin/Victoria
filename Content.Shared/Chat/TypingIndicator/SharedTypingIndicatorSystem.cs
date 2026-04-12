@@ -2,6 +2,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Clothing;
 using Content.Shared.Inventory;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Chat.TypingIndicator;
@@ -18,8 +19,7 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
     /// <summary>
     ///     Default ID of <see cref="TypingIndicatorPrototype"/>
     /// </summary>
-    [ValidatePrototypeId<TypingIndicatorPrototype>]
-    public const string InitialIndicatorId = "default";
+    public static readonly ProtoId<TypingIndicatorPrototype> InitialIndicatorId = "default";
 
     public override void Initialize()
     {
@@ -88,6 +88,6 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
         // if (!Resolve(uid, ref appearance, false)) // Corvax-TypingIndicator
         //     return;
 
-        _appearance.SetData(uid, TypingIndicatorVisuals.State, state); // Corvax-TypingIndicator
+        _appearance.SetData(uid, TypingIndicatorVisuals.State, state, appearance);
     }
 }

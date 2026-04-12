@@ -1,0 +1,13 @@
+- type: latheRecipePack
+  id: VictoriaClothing
+  recipes:
+  - ClothingOuterCoatDetective
+  - ClothingOuterCoatDetectiveLoadoutGrey
+  - ClothingUniformJumpsuitTailor
+  - ClothingHeadHatBeaverHat
+  - ClothingOuterCoatJensen
+  - ClothingOuterCoatExpensive
+  - ClothingShoesBootsWork
+  - ClothingShoesBootsLaceup
+  - ClothingBackpack
+  - ClothingBackpackSatchel

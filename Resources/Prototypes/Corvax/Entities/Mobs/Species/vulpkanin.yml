@@ -2,12 +2,12 @@
   save: false
   name: Urist McVulp
   parent: BaseMobSpeciesOrganic
-  id: BaseMobVulpkanin
+  id: BaseMobCorvaxVulpkanin
   abstract: true
   components:
   - type: Chockable
   - type: HumanoidAppearance
-    species: Vulpkanin
+    species: CorvaxVulpkanin
   - type: Hunger # on 1.5x more
     thresholds:
       Overfed: 250
@@ -28,10 +28,10 @@
     sprite: Corvax/Mobs/Species/Vulpkanin/parts.rsi
     state: full
   - type: Body
-    prototype: Vulpkanin
+    prototype: CorvaxVulpkanin
     requiredLegs: 2
   - type: Inventory
-    speciesId: reptilian # whyyy
+    speciesId: corvaxvulpkanin
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -54,16 +54,22 @@
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: Corvax/Mobs/Species/displacement.rsi
+            state: outerclothing
+
   - type: ContentEye
-    targetZoom: "1.125, 1.125"
-    maxZoom: "1.125, 1.125"
+    targetZoom: "1.0, 1.0"
+    maxZoom: "1.0, 1.0"
   - type: Speech
     allowedEmotes: ['Howl', 'Growl']
   - type: Vocal
     sounds:
-      Male: MaleVulpkanin
-      Female: FemaleVulpkanin
-      Unsexed: MaleVulpkanin
+      Male: MaleCorvaxVulpkanin
+      Female: FemaleCorvaxVulpkanin
+      Unsexed: MaleCorvaxVulpkanin
   - type: GrowlingAccent
   - type: MeleeWeapon
     animation: WeaponArcClaw
@@ -74,7 +80,7 @@
         Slash: 5
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Vulpkanin
+    damageModifierSet: CorvaxVulpkanin
   - type: Respirator
     damage:
       types:
@@ -83,19 +89,32 @@
       types:
         Asphyxiation: -2.0
   - type: Wagging
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 199
+    damage:
+      types:
+        Poison: -0.15
+        Bloodloss: -0.15
+      groups:
+        Brute: -0.15
+        Burn: -0.15
+        Airloss: -0.15
 
 - type: entity
   save: false
   name: Urist McHands
   parent: MobHumanDummy
-  id: MobVulpkaninDummy
+  id: MobCorvaxVulpkaninDummy
   categories: [ HideSpawnMenu ]
   description: A dummy vulpkanin meant to be used in character setup.
   components:
   - type: HumanoidAppearance
-    species: Vulpkanin
+    species: CorvaxVulpkanin
   - type: Inventory
-    speciesId: reptilian
+    speciesId: corvaxvulpkanin
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -118,3 +137,8 @@
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: Corvax/Mobs/Species/displacement.rsi
+            state: outerclothing

@@ -15,9 +15,7 @@ entities:
       name: map 1919
     - type: Transform
     - type: Map
-    - type: PhysicsMap
     - type: GridTree
-    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
   - uid: 2

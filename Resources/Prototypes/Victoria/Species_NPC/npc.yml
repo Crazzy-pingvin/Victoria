@@ -1,6 +1,6 @@
 # Любой
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Diona
   id: SimpleHumanoidHostile
   components:
@@ -37,8 +37,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_first
-    - names_last
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -47,16 +48,16 @@
   - type: HTN
     rootTask:
       task: SimpleHumanoidHostileCompound
-      
+
 # Унатх
 # Траблы с наименованием :p
 - type: randomHumanoidSettings
-  speciesBlacklist: 
+  speciesBlacklist:
     - Vox
     - Arachnid
     - Diona
     - Dwarf
-    - Human 
+    - Human
     - Moth
     - SlimePerson
     - Vulpkanin
@@ -95,8 +96,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_moth_first_male
-    - names_last
+    - NamesMothFirstMale
+    - NamesLast
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -117,8 +119,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_arachnid_first
-    - names_arachnid_last
+    - NamesArachnidFirst
+    - NamesArachnidLast
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -127,7 +130,7 @@
   - type: HTN
     rootTask:
       task: SimpleHumanoidHostileCompound
-      
+
 # Слаймолюд
 - type: entity
   name: простой враждебный NPC
@@ -139,8 +142,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_first
-    - names_last
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -161,8 +165,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_first
-    - names_last
+    - NamesFirst
+    - NamesLast
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -183,8 +188,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - skeletonNamesFirst
-    - names_last
+    - NamesSkeletonFirst
+    - NamesLast
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -205,7 +211,8 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_vox
+    - NamesVox
+    nameFormat: random-metadata-name-format-default
   - type: NpcFactionMember
     factions:
       - Syndicate
@@ -226,8 +233,9 @@
     randomizeName: false
   - type: RandomMetadata
     nameSegments:
-    - names_vulp_first_male
-    - names_vulp_last
+    - names_vulpkanin_male
+    - names_vulpkanin_last
+    nameFormat: name-format-ert
   - type: NpcFactionMember
     factions:
       - Syndicate
