@@ -55,6 +55,15 @@
         layer:
         - MachineLayer
   - type: EntityStorage
+    whitelist: #Victoria-start
+      sizes:
+        - Tiny
+        - Small
+        - Normal
+        - Big
+        - Large
+        - Huge
+        - Ginormous #Victoria-end
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container
