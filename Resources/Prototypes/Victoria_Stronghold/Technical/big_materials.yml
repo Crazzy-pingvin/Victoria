@@ -10,8 +10,8 @@
     size: Colossal
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
-      walkModifier: 0.6
-      sprintModifier: 0.6
+    walkModifier: 0.6
+    sprintModifier: 0.6
   - type: HeldSpeedModifier
 #По идее, надо либо добавлять это как второй парент к прототипу предмета, либо парентить лишь от него и накидывать компоненты материала 
 - type: entity
