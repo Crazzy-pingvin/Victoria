@@ -1,0 +1,28 @@
+- type: reagent
+  id: Compost
+  name: компост
+  group: Botanical
+  desc: Используется для удобрения грядок. Не употреблять!
+  flavor: bitter
+  physicalDesc: reagent-physical-desc-opaque
+  color: "#66331a"
+  plantMetabolism:
+    - !type:PlantAdjustNutrition
+      amount: 3
+    - !type:PlantAdjustHealth
+      amount: 1
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 2.5
+      - !type:PopupMessage
+        conditions:
+        type: Local
+        visualType: Medium
+        messages: [ "generic-reagent-effect-nauseous" ]
+        probability: 0.2
+      - !type:ChemVomit
+        probability: 0.2
