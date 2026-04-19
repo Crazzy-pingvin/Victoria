@@ -1452,12 +1452,14 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: FloorDirt
+  baseTurf: Plating
   isSubfloor: true
   footstepSounds:
     collection: FootstepTile
   heatCapacity: 10000
   weather: true
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 
 - type: tile
   id: FloorGrass
@@ -1469,14 +1471,15 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: FloorDirt
+  baseTurf: Plating
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  itemDrop: FloorTileItemGrass
   heatCapacity: 10000
   weather: true
   canDig: true
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 
 - type: tile
   id: FloorGrassJungle
@@ -1488,14 +1491,15 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: FloorDirt
+  baseTurf: Plating
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  itemDrop: FloorTileItemGrassJungle
   heatCapacity: 10000
   weather: true
   canDig: true
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 
 - type: tile
   id: FloorGrassDark
@@ -1507,13 +1511,15 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: FloorDirt
+  baseTurf: Plating
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
   heatCapacity: 10000
   weather: true
   canDig: true
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 
 - type: tile
   id: FloorGrassLight
@@ -1525,13 +1531,15 @@
   - 1.0
   - 1.0
   - 1.0
-  baseTurf: FloorDirt
+  baseTurf: Plating
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
   heatCapacity: 10000
   weather: true
   canDig: true
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 
 - type: tile
   id: FloorDirt
@@ -1550,7 +1558,8 @@
   heatCapacity: 10000
   weather: true
   canDig: true
-
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 # Asteroid
 
 - type: tile

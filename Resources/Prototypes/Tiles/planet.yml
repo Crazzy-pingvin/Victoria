@@ -80,15 +80,16 @@
     East: /Textures/Tiles/Planet/Grass/double_edge.png
     North: /Textures/Tiles/Planet/Grass/double_edge.png
     West: /Textures/Tiles/Planet/Grass/double_edge.png
-  baseTurf: FloorPlanetDirt
+  baseTurf: Plating
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
-  itemDrop: FloorTileItemGrass
   heatCapacity: 10000
   weather: true
   indestructible: true
   canDig: true
+  deconstructTools: [ Prying ]
+  itemDrop: SoilMaterial1
 
 # Lava
 - type: tile
