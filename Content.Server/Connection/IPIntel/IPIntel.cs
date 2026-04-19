@@ -1,4 +1,4 @@
-﻿using System.Buffers.Binary;
+using System.Buffers.Binary;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -259,7 +259,7 @@ public sealed class IPIntel
         {
             _chatManager.SendAdminAlert(Loc.GetString("admin-alert-ipintel-warning",
                 ("player", username),
-                ("percent", Math.Round(score))));
+                ("percent", score)));
         }
 
         if (!decisionIsReject)
@@ -269,7 +269,7 @@ public sealed class IPIntel
         {
             _chatManager.SendAdminAlert(Loc.GetString("admin-alert-ipintel-blocked",
                 ("player", username),
-                ("percent", Math.Round(score))));
+                ("percent", score)));
         }
 
         return _rejectBad ? (true, Loc.GetString("ipintel-suspicious")) : (false, string.Empty);

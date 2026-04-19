@@ -170,8 +170,9 @@
   components:
   - type: RandomMetadata #this generates the random operation name cuz it's cool.
     nameSegments:
-    - operationPrefix
-    - operationSuffix
+    - NamesOperationPrefix
+    - NamesOperationSuffix
+    nameFormat: name-format-nuclear-operation
   - type: PetrRule
   - type: RuleGrids
   - type: AntagSelection
@@ -205,6 +206,7 @@
         nameSegments:
         - PetrName-com
         - PetrNameTwo
+        nameFormat: name-format-ert
       - type: NpcFactionMember
         factions:
         - Petr
@@ -221,6 +223,7 @@
         nameSegments:
         - PetrName-vet
         - PetrNameTwo
+        nameFormat: name-format-ert
       - type: NpcFactionMember
         factions:
         - Petr
@@ -237,6 +240,7 @@
         nameSegments:
         - PetrName-tov
         - PetrNameTwo
+        nameFormat: name-format-ert
       - type: NpcFactionMember
         factions:
         - Petr

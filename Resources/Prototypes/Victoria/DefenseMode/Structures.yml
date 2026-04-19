@@ -69,7 +69,7 @@
   - type: NpcFactionMember
     factions:
     - DefenseStructureBase
-#------------------------------------------------------------Ключевая подстанция------------------------------------------------------------------    
+#------------------------------------------------------------Ключевая подстанция------------------------------------------------------------------
 - type: entity
   parent: AdminSubstation
   id: SubstationObjective
@@ -120,7 +120,7 @@
   components:
   - type: JourneyTarget
     journeyGroup: Beta
-    
+
 - type: entity
   parent: SubstationObjective
   id: SubstationObjectiveGamma
@@ -173,7 +173,7 @@
   - type: JourneyTarget
     priority: -80
     maxRange: 45
-#------------------------------------------------------------Сервера связи------------------------------------------------------------------   
+#------------------------------------------------------------Сервера связи------------------------------------------------------------------
 #-----------------------------------------Умпорский-------------------------------
 - type: entity
   parent: TelecomServer
@@ -219,7 +219,7 @@
       - USSPEncryptionKey
       - PetrEncryptionKey
       - USSPEncryptionKeyBifaze
-#------------------------------------------------------------Портфабы------------------------------------------------------------------   
+#------------------------------------------------------------Портфабы------------------------------------------------------------------
 #-----------------------------------------Умпорский-------------------------------
 - type: entity
   parent: ClothLathe
@@ -227,13 +227,10 @@
   suffix: Оборона, Умпорский
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeUmporCoat      
+    staticPacks:
+      - PackCloth
+      - PackDefClothLatheUmpor
+
 #-----------------------------------------Миртан-------------------------------
 - type: entity
   parent: ClothLathe
@@ -241,13 +238,10 @@
   suffix: Оборона, Миртан
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeMirtCoat 
+    staticPacks:
+      - PackCloth
+      - PackDefClothLatheMirt
+
 #-----------------------------------------Конгломерат-------------------------------
 - type: entity
   parent: ClothLathe
@@ -255,13 +249,9 @@
   suffix: Оборона, Конгломерат
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeCDCCoat 
+    staticPacks:
+    - PackCloth
+    - PackDefClothLatheCDC
 #-----------------------------------------Корпорации-------------------------------
 
 #-----------------------------------------СССП-------------------------------
@@ -271,14 +261,10 @@
   suffix: Оборона, СССП
   components:
   - type: Lathe
-    staticRecipes:
-      - RecipeLinumCloth
-      - RecipeCottonCloth
-      - RecipeCottonPaperCloth
-      - RecipeNubuck
-      - RecipeVelour
-      - RecipeUSSPCoat 
-#------------------------------------------------------------Вечные кабели------------------------------------------------------------------   
+    staticPacks:
+      - PackCloth
+      - PackDefClothLatheUSSP
+#------------------------------------------------------------Вечные кабели------------------------------------------------------------------
 - type: entity
   parent: CableMV
   id: AdminCableMV
@@ -290,7 +276,7 @@
     time: 99999
     prob: 0
     entity: CableMV
-#------------------------------------------------------------Железная дорога------------------------------------------------------------------    
+#------------------------------------------------------------Железная дорога------------------------------------------------------------------
 - type: entity
   id: FloorRailwayEntity
   name: железная дорога
@@ -300,12 +286,12 @@
     snap:
     - Wall
   components:
-  - type: FloorOccluder   
+  - type: FloorOccluder
   - type: Sprite
     sprite: Victoria/DefenseMode/railway.rsi
     drawdepth: BelowFloor
     layers:
-      - state: railway  
+      - state: railway
   - type: Transform
     anchored: true
   - type: SyncSprite
@@ -342,7 +328,7 @@
   - type: IconSmooth
     key: walls
     base: reinf_over
-    
+
 - type: entity
   parent: BaseWall
   id: WallRockDef
@@ -388,7 +374,7 @@
   components:
   - type: TimedDespawn
     lifetime: 600
-    
+
 - type: entity
   parent: WallRockDef5Min
   id: WallRockDef40Min
@@ -398,7 +384,7 @@
   components:
   - type: TimedDespawn
     lifetime: 1800
-    
+
 - type: entity
   parent: WallRockDef5Min
   id: WallRockDef15MinReal

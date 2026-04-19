@@ -1,6 +1,7 @@
 using Content.Server.Antag;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Roles;
+using Content.Shared.Roles.Components;
 using Content.Shared.Humanoid;
 
 namespace Content.Server.GameTicking.Rules;
