@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseItem
+  id: SoilMaterial1
+  name: кусок дёрна
+  description: Кусочек дёрна. Ничего необычного.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Materials/Stacks/soil.rsi
+    layers:
+    - state: icon
+  - type: Item
+    size: Small
