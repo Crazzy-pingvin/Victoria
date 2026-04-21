@@ -1,14 +1,1 @@
-# Last match in file takes precedence.
-
-# Ping for all PRs
-* @Morb0 @JerryImMouse @DIMMoon1
-
-# Translations
-*.ftl @Morb0 @DIMMoon1 @ficcialfaint
-
-# Maps
-/Resources/Prototypes/Maps/** @Morb0 @DIMMoon1 @Ko4ergaPunk
-/Resources/Maps/** @Morb0 @DIMMoon1 @Ko4ergaPunk
-
-# Sprites
-/Resources/Textures/** @Morb0 @DIMMoon1 @SonicHDC
+* @Crazzy-pingvin
