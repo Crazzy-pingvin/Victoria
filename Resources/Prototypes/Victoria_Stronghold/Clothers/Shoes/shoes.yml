@@ -1,0 +1,87 @@
+#---------------------------------------------------------------------обувь--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+- type: entity
+  parent: ClothingShoesBase
+  id: StrongPulensLord
+  name: пулены лорда
+  suffix: Стронгхолд, Лорд
+  description: Кожанные ботинки, сшитые по ноге с длинным "носом", что для крепления к ноге шнуруются толстой бечёвкой или кожаными полосами. Кожа окрашена красными пигментами для обозначения принадлежности этой обувы высокопоставленному лицу.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shoes/pulens_lord.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shoes/pulens_lord.rsi
+#-------------------------------------------------------дворяне----------
+- type: entity
+  parent: ClothingShoesBase
+  id: StrongPulensNoble
+  name: пулены
+  suffix: Стронгхолд, Дворяне
+  description: Кожанные ботинки, сшитые по ноге с длинным "носом", что для крепления к ноге шнуруются толстой бечёвкой или кожаными полосами. Сделаны из галантирейной кожи, что не дёшева.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shoes/pulens_noble.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shoes/pulens_noble.rsi
+#-------------------------------------------------------духовенство----------
+- type: entity
+  parent: ClothingShoesBase
+  id: StrongOnuchs
+  name: онучи
+  suffix: Стронгхолд, Духовенство
+  description: Теже лапти, но с слоем ткани, перевязанным верёвкой или шнуром.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shoes/onuchs.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shoes/onuchs.rsi
+#-------------------------------------------------------войны----------
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: StrongBothforts
+  name: ботфорты
+  suffix: Стронгхолд, Войны
+  description: Высокие удобные кожанные сапоги с обширным раструбом, позволяющие ходить где угодно и обеспечивающие некоторую защиту для ног за счёт плотной кожи.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shoes/bothforts.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shoes/bothforts.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.9
+#-------------------------------------------------------мастеровые----------
+- type: entity
+  parent: ClothingShoesBase
+  id: StrongShoes
+  name: ботинки
+  suffix: Стронгхолд, Мастеровые
+  description: Кожанные ботинки неизвестного размера, что для подгонки по ноге шнуруются толстой бечёвкой или кожаными полосами.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shoes/shoes.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shoes/shoes.rsi
+#-------------------------------------------------------крестьяне----------
+- type: entity
+  parent: ClothingShoesBase
+  id: StrongBastShoes
+  name: лапти
+  suffix: Стронгхолд, Крестьяне
+  description: Какая-никакая обувка из коры да бересты, сплетёные или склеенные смолой. Лучше, чем босиком...
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shoes/bast_shoes.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shoes/bast_shoes.rsi
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+
+#-------------------------------------------------------враждебные----------
