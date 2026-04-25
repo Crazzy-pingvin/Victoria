@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseItem
+  id: TestFuelConsumer
+  name: горящая земля
+  description: Бурмалда
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Materials/Stacks/soil.rsi
+    layers:
+    - state: icon
+  - type: FuelConsumer
+  - type: Appearance
+  - type: PointLight
+    radius: 15
+    energy: 1.6
+    color: "#c94242"
