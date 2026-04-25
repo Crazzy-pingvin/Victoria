@@ -1,0 +1,88 @@
+#---------------------------------------------------------------------обувь--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: StrongArmorHelmetTophelmLord
+  name: топхельм лорда
+  suffix: Стронгхолд, Броня, Голова
+  description: Это вам не ведро. Это качественно сделанный прочный шлем с узкими прорезями для глаз и отверстиями для жыхания. Имеет украшения, приличествующие статусу.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm_lord.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm_lord.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+#-------------------------------------------------------дворяне----------
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: StrongArmorHelmetTophelmNoble
+  name: топхельм дворянина
+  suffix: Стронгхолд, Броня, Голова
+  description: Это вам не ведро. Это прочный шлем с узкими прорезями для глаз и отверстиями для жыхания. Имеет элементы декора.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm_noble.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm_noble.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.65
+#-------------------------------------------------------духовенство----------
+
+#-------------------------------------------------------войны----------
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: StrongArmorHelmetTophelm
+  name: топхельм
+  suffix: Стронгхолд, Броня, Голова
+  description: Это вам не ведро. Это прочный шлем с узкими прорезями для глаз и отверстиями для жыхания.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+#-------------------------------------------------------мастеровые----------
+
+#-------------------------------------------------------крестьяне----------
+
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+#------------------------------------------странствующий рыцарь----------
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: StrongArmorHelmetTophelmNeutral
+  name: топхельм
+  suffix: Стронгхолд, Броня, Голова
+  description: Это вам не ведро. Это прочный шлем с узкими прорезями для глаз и отверстиями для жыхания. Имеет элементы декора.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm_neutral.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Helmets/tophelm_neutral.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.65
+        Piercing: 0.7
+#-------------------------------------------------------враждебные----------

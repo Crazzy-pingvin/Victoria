@@ -1,0 +1,85 @@
+#---------------------------------------------------------------------обувь--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+
+#-------------------------------------------------------дворяне----------
+
+#-------------------------------------------------------духовенство----------
+
+#-------------------------------------------------------войны----------
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: StrongArmorBodyChainMail
+  name: кольчуга
+  suffix: Стронгхолд, Броня, Тело
+  description: Панцырь из скреплённых вместе стальных колец, что неплохо распределяет силу удара по телу.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Body/chain_mail.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Body/chain_mail.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: ToggleableClothing
+    clothingPrototype: StrongArmorBodyChainMailHood
+    slot: head
+    
+- type: entity
+  parent: ClothingHeadHatHoodWinterDefault
+  id: StrongArmorBodyChainMailHood
+  name: капюшон кольчуги
+  suffix: Стронгхолд, Броня, Голова
+  description: Закрывает голову от мечей и топоров.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Body/chain_mail_hood.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Body/chain_mail_hood.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1 
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95 
+        
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: StrongArmorBodyLatsMilan
+  name: миланские латы
+  suffix: Стронгхолд, Броня, Тело
+  description: НАгрудник, сегментные плечи, стальная юбка и металлические наручи. Обеспечивают значительную защиту для тела.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Armor/Body/lats_milan.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Armor/Body/lats_milan.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+#-------------------------------------------------------мастеровые----------
+
+#-------------------------------------------------------крестьяне----------
+
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+
+#-------------------------------------------------------враждебные----------

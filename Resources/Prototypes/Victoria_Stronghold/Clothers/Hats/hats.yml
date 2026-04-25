@@ -1,0 +1,95 @@
+#---------------------------------------------------------------------обувь--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+- type: entity
+  parent: ClothingHeadBase
+  id: StrongHatHanterLord
+  name: охотничья шляпа лорда
+  suffix: Стронгхолд, Лорд
+  description: Лёгкий из плотной ткани и выкрашеный в правящие цвета головной убор, что прикрывает глаза от солнца, но не мешает обзору. Украшен пером!
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_hanter_lord.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_hanter_lord.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+#-------------------------------------------------------дворяне----------
+- type: entity
+  parent: ClothingHeadBase
+  id: StrongHatHanterNoble
+  name: охотничья шляпа
+  suffix: Стронгхолд, Дворяне
+  description: Лёгкий из плотной ткани и выкрашеный в насыщенный зелёный цвет головной убор, что прикрывает глаза от солнца, но не мешает обзору. Достоин дворян!
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_hanter_noble.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_hanter_noble.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+#-------------------------------------------------------духовенство----------
+
+#-------------------------------------------------------войны----------
+
+#-------------------------------------------------------мастеровые----------
+- type: entity
+  parent: ClothingHeadBase
+  id: StrongHatSkinEarsSkin
+  name: кожанка с ушами
+  suffix: Стронгхолд, Мастеровые, Кожа
+  description: Головной убор из кожи, что прикрывает голову от солнца, а уши от ветра. Не окрашен.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_skin_ears_skin.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_skin_ears_skin.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    
+- type: entity
+  parent: ClothingHeadBase
+  id: StrongHatSkinEarsSea
+  name: кожанка с ушами
+  suffix: Стронгхолд, Мастеровые, Синий
+  description: Головной убор из кожи, что прикрывает голову от солнца, а уши от ветра. Окрашен в синий цвет.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_skin_ears_sea.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_skin_ears_sea.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+#-------------------------------------------------------крестьяне----------
+- type: entity
+  parent: ClothingHeadBase
+  id: StrongHatPeasantSkin
+  name: кожная шапка на меху
+  suffix: Стронгхолд, Крестьяне
+  description: Тёплая шапка из тонкой кожи, подбитой мехом, что неплохо помогат и прохладной осенью и стылой зимой.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_peasant_skin.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Hats/hat_peasant_skin.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+
+#-------------------------------------------------------враждебные----------
