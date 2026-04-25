@@ -1,6 +1,6 @@
 using Content.Shared.Fuel;
 
-namespace Content.Server.Fuel
+namespace Content.Client.Fuel
 {
     /// <summary>
     ///     Component that represents a handheld expendable light which can be activated and eventually dies over time.

@@ -1,4 +1,5 @@
 using Content.Client.Light.Components;
+using Content.Client.Fuel;
 using Content.Shared.Fuel;
 using Content.Shared.Light.Components;
 using Robust.Client.GameObjects;
@@ -8,7 +9,7 @@ namespace Content.Client.Light.EntitySystems;
 
 public sealed class FuelSystem : VisualizerSystem<FuelConsumerComponent>
 {
-    [Dependency] private readonly PointLightSystem _pointLightSystem = default!;
+    [Dependency] private readonly SharedPointLightSystem _pointLightSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly LightBehaviorSystem _lightBehavior = default!;
     public override void Initialize()
@@ -45,18 +46,18 @@ public sealed class FuelSystem : VisualizerSystem<FuelConsumerComponent>
 
         if (!AppearanceSystem.TryGetData<ConsumerStates>(uid, FuelVisuals.State, out var state, args.Component))
             return;
+        if (!AppearanceSystem.TryGetData<float>(uid, FuelVisuals.Percent, out var percent, args.Component))
+            return;
+        //if(TryComp<PointLightComponent>(uid,out PointLightComponent? light))
+        //{
+           // if (state == ConsumerStates.Empty)
+                //_pointLightSystem.SetEnabled(uid, false, light);
+            //else
+            //{
+                //_pointLightSystem.SetEnergy(uid, 100 * percent);
+            //}
 
-        if(TryComp<PointLightComponent>(uid,out PointLightComponent? light))
-        {
-            if (state == ConsumerStates.Empty)
-                _pointLightSystem.SetEnabled(uid, false, light);
-            else
-            {
-                float fuel_percent = comp.CurrentFuel / comp.MaxFuel;
-                _pointLightSystem.SetEnergy(uid, 100 * fuel_percent);
-            }
-
-        }
+        //}
 /*         switch (state)
         {
             case ExpendableLightState.Lit:

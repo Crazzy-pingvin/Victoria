@@ -8,10 +8,10 @@ namespace Content.Shared.Fuel;
 /// <summary>
 /// blyaaa
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class FuelConsumerComponent : Component
+[NetworkedComponent]
+public abstract partial class SharedFuelConsumerComponent : Component
 {
-    [DataField("currentFuel"), AutoNetworkedField]
+    [DataField("currentFuel")]
     public float CurrentFuel = 100;
 
     [DataField("maxFuel")]
@@ -23,7 +23,7 @@ public sealed partial class FuelConsumerComponent : Component
     [DataField("nextSecond", customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextCheck = TimeSpan.Zero;
 
-    [DataField, AutoNetworkedField]
+    [DataField]
     public ConsumerStates CurrentState = ConsumerStates.Burns;
 }
 
