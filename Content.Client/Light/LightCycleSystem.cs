@@ -17,8 +17,6 @@ public sealed class LightCycleSystem : SharedLightCycleSystem
         if (!_timing.IsFirstTimePredicted)
             return;
 
-        // Log.Debug($"CurTime: {_timing.CurTime}, RoundStart: {_ticker.RoundStartTimeSpan}");
-
         var mapQuery = AllEntityQuery<LightCycleComponent, MapLightComponent>();
         while (mapQuery.MoveNext(out var uid, out var cycle, out var map))
         {
@@ -27,10 +25,7 @@ public sealed class LightCycleSystem : SharedLightCycleSystem
 
             var time = GetTimeAbsolute((uid, cycle));
 
-            // var color = GetColor((uid, cycle), cycle.OriginalColor, time);
             var color = CalculateColor(cycle, time);
-            // Log.Debug(color.ToString());
-            // Log.Debug($"B: {0.2126 * color.R + 0.7152 * color.G + 0.0722 * color.B}");
             map.AmbientLightColor = color;
         }
     }
