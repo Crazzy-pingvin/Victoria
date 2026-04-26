@@ -1,0 +1,130 @@
+#---------------------------------------------------------------------одежда--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: StrongShirtLord
+  name: платья лорда
+  suffix: Стронгхолд, Лорд
+  description: Рубаха с короткими рукавами, плотные штаны и красная туника, что своими насыщенными цветами, качеством выделки и карсотой вышивки показывают свою принадлежность особе знатной и высокопоставленной.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_lord.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_lord.rsi
+#-------------------------------------------------------дворяне----------
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: StrongShirtNoble
+  name: платья дворянина
+  suffix: Стронгхолд, Дворянин
+  description: Рубаха с короткими рукавами, плотные штаны и фиолетовая туника, что своими насыщенными цветами и качеством выделки показывают свою принадлежность особе знатной, но не самой главной.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_noble.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_noble.rsi
+#-------------------------------------------------------духовенство----------
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: StrongCassockMonk
+  name: сутана монаха
+  suffix: Стронгхолд, Духовенство
+  description: Длинные тёмные и аскетично строгие одежды из грубой плотной ткани, что вырожают отречение от мерского и стремление к высшему!
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/cassock_monk.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/cassock_monk.rsi
+  - type: ToggleableClothing
+    clothingPrototype: StrongCassockMonkHood
+    slot: head
+    
+- type: entity
+  parent: ClothingHeadHatHoodWinterDefault
+  id: StrongCassockMonkHood
+  name: капюшон монашеской сутаны
+  suffix: Стронгхолд, Духовенство
+  description: Закрывает голову от холода и стужи.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/cassock_monk_hood.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/cassock_monk_hood.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1
+#-------------------------------------------------------войны----------
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: StrongGambesonBlue
+  name: гамбезон война
+  suffix: Стронгхолд, Войн
+  description: Стёганая куртка набитая мягким материалом, что может хоть как-то ослабить летящий в тело удар.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/gambeson_blue.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/gambeson_blue.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Cold: 0.95
+        Slash: 0.9
+#-------------------------------------------------------мастеровые----------
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: StrongShirtCraftsman
+  name: одежда мастерового
+  suffix: Стронгхолд, Мастеровой
+  description: Рубаха с короткими рукавами, жилет и штаны из тонкой кожи. Уберегает от мелких порезов, ссадин или ожогов, что встречаются в мастерских.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_noble.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_noble.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Heat: 0.95
+        Slash: 0.95
+#-------------------------------------------------------крестьяне----------
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: StrongShirtPeasant
+  name: одёжа мастерового
+  suffix: Стронгхолд, Крестьяне
+  description: Домотканные штаны и рубаха из грубой матери с совсем блёклыми цветами. Имеет странный запах и не слишком удобна.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_peasant.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/shirt_peasant.rsi
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+- type: entity
+  parent: StrongGambesonBlue
+  id: StrongGambesonRed
+  name: гамбезон война
+  suffix: Стронгхолд, Королевский, Войн
+  description: Стёганая куртка набитая мягким материалом, что может хоть как-то ослабить летящий в тело удар.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Shirts/gambeson_red.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Shirts/gambeson_red.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Cold: 0.9
+        Slash: 0.8
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+
+#-------------------------------------------------------враждебные----------

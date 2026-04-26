@@ -39,6 +39,15 @@
         layer:
         - MachineLayer
   - type: EntityStorage
+    whitelist: #Victoria-start
+      sizes:
+        - Tiny
+        - Small
+        - Normal
+        - Big
+        - Large
+        - Huge
+        - Ginormous #Victoria-end
   - type: PlaceableSurface
     isPlaceable: false # defaults to closed.
   - type: Damageable

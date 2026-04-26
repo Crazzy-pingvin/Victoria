@@ -1,0 +1,22 @@
+- type: entity
+  id: CompostBin
+  parent: BaseMachine
+  name: Бочка с удобрениями
+  description: Превращает бесполезный мусор в полезный.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      output:
+        maxVol: 500
+  - type: DrainableSolution
+    solution: output
+  - type: ExaminableSolution
+    solution: output
+  - type: CompostBin
+  - type: ReagentTank
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Storage/tanks.rsi
+    layers:
+      - state: fueltank
+

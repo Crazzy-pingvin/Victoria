@@ -1,0 +1,34 @@
+- type: entity
+  parent: MaterialBase
+  id: BaseBigMaterial
+  name: базовый большой материал
+  categories: [ HideSpawnMenu ]
+  suffix: Большой
+  components:
+  - type: Item
+    heldPrefix: wood
+    size: Colossal
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: HeldSpeedModifier
+#По идее, надо либо добавлять это как второй парент к прототипу предмета, либо парентить лишь от него и накидывать компоненты материала 
+- type: entity
+  id: CrateBig
+  categories: [ HideSpawnMenu ]
+  parent: CrateGeneric
+  name: мегаящик
+  description: Сюда можно сунуть что угодно. Акции на 140 штук не будет.
+  components:
+  - type: EntityStorage
+    whitelist:
+      sizes:
+        - Tiny
+        - Small
+        - Normal
+        - Big
+        - Large
+        - Huge
+        - Ginormous
+        - Colossal

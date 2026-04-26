@@ -1,0 +1,99 @@
+#---------------------------------------------------------------------обувь--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+
+#-------------------------------------------------------дворяне----------
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: StrongBeltSkinNoble
+  name: кожаный пояс с мошной
+  suffix: Стронгхолд, Дворяне
+  description: Кожаный пояс из толстого чепрака, крепящейся завязыванием через кольцо с небольшим мешочком для мелочей или денег на боку.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_skin_noble.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_skin_noble.rsi
+  - type: Storage
+    grid:
+    - 0,0,5,1
+    - 0,3,2,5
+    maxItemSize: Normal
+  - type: Appearance
+#-------------------------------------------------------духовенство----------
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: StrongBeltMonk
+  name: монашеская вервь
+  suffix: Стронгхолд, Духовенство
+  description: Толстая грубая верёвка с завязанными узелками, которые свидетельствуют о количестве принесённых монахом обетов.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_monk.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_monk.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,1
+    maxItemSize: Small
+  - type: Appearance
+#-------------------------------------------------------войны----------
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: StrongBeltSkin
+  name: кожаный пояс
+  suffix: Стронгхолд, Войны
+  description: Кожаный пояс из толстого чепрака, крепящейся завязыванием через кольцо с пришитой полосой для удержания крупного предмета, вроде оружия или инструмента.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_skin.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_skin.rsi
+  - type: Storage
+    grid:
+    - 0,0,5,1
+    maxItemSize: Normal
+  - type: Appearance
+#-------------------------------------------------------мастеровые----------
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: StrongBeltSkinCraftsman
+  name: широкий кожаный пояс
+  suffix: Стронгхолд, Мастеровые
+  description: Кожаный пояс из толстого чепрака, крепящейся металической пряжкой с пришитыми полосами для удержания крупных предметов, вроде оружия или инструмента.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_skin_craftsman.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_skin_craftsman.rsi
+  - type: Storage
+    grid:
+    - 0,0,8,1
+    maxItemSize: Normal
+  - type: Appearance
+#-------------------------------------------------------крестьяне----------
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: StrongBeltPeasantYellow
+  name: тканевый пояс
+  suffix: Стронгхолд, Крестьяне
+  description: Полоса грязной ткани, которую пытались хоть как-то окрасить, что служит поясом для рубахи.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_peasant_yel.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Belts/belt_peasant_yel.rsi
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    maxItemSize: Small
+  - type: Appearance
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+
+#-------------------------------------------------------враждебные----------

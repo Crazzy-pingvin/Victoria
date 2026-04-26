@@ -1,0 +1,98 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "By qventydas",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "bandit"
+        },
+        {
+            "name": "bishop_diag"
+        },
+        {
+            "name": "bishop_vert"
+        },
+        {
+            "name": "healer"
+        },
+        {
+            "name": "inquisitor"
+        },
+        {
+            "name": "kastel"
+        },
+        {
+            "name": "king_bishop"
+        },
+        {
+            "name": "king_knight"
+        },
+        {
+            "name": "knight"
+        },
+        {
+            "name": "knight2"
+        },
+        {
+            "name": "knight_fat"
+        },
+        {
+            "name": "lord"
+        },
+        {
+            "name": "messenger"
+        },
+        {
+            "name": "monk"
+        },
+        {
+            "name": "novitius_orig"
+        },
+        {
+            "name": "novitius_uni"
+        },
+        {
+            "name": "Outcast"
+        },
+        {
+            "name": "peasant"
+        },
+        {
+            "name": "priest"
+        },
+        {
+            "name": "sergeant"
+        },
+        {
+            "name": "sheriff"
+        },
+        {
+            "name": "siege_engineer"
+        },
+        {
+            "name": "squire_orig"
+        },
+        {
+            "name": "squire_uni"
+        },
+        {
+            "name": "wardering_knight"
+        },
+        {
+            "name": "wardering_trader"
+        },
+        {
+            "name": "warrior"
+        },
+        {
+            "name": "witch"
+        },
+        {
+            "name": "worker"
+        }
+    ]
+}

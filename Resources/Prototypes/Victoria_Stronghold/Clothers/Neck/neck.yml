@@ -1,0 +1,77 @@
+#---------------------------------------------------------------------обувь--------------------------------------
+#------------------------------------------------------------замковые----------
+#-------------------------------------------------------лорд----------
+- type: entity
+  parent: ClothingNeckBase
+  id: StrongNeckLord
+  name: меховой плащ лорда
+  suffix: Стронгхолд, Лорд
+  description: Выкрашеный в красный цвет дорожный плащ лорда, подбитый мехом. Выражает статус и богаство своего хозяина.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Neck/cloak_fur_red.rsi
+#-------------------------------------------------------дворяне----------
+- type: entity
+  parent: ClothingNeckBase
+  id: StrongNeckNoble
+  name: меховой плащ дворянина
+  suffix: Стронгхолд, Дворяне
+  description: Выкрашеный в фиолетовый цвет дорожный плащ знатной особы, подбитый мехом. Выражает статус своего хозяина.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Neck/cloak_noble.rsi
+#-------------------------------------------------------духовенство----------
+
+#-------------------------------------------------------войны----------
+
+#-------------------------------------------------------мастеровые----------
+
+#-------------------------------------------------------крестьяне----------
+- type: entity
+  parent: ClothingNeckBase
+  id: StrongShaperonSkin
+  name: кожаный шаперон
+  suffix: Стронгхолд, Крестьяне
+  description: Популярный, но более крепкий головной убор прикрывающий и плечи. Может обеспечить некоторую защиту от веток и кустов.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Neck/shaperon_off_skin.rsi
+  - type: ToggleableClothing
+    clothingPrototype: StrongShaperonSkinHood
+    slot: head
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+    
+- type: entity
+  parent: ClothingHeadHatHoodWinterDefault
+  id: StrongShaperonSkinHood
+  name: капюшон кожаного шаперона
+  suffix: Стронгхолд, Крестьяне
+  description: Закрывает голову от холода и стужи.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Clothers/Neck/shaperon_on_skin.rsi
+  - type: Clothing
+    sprite: Victoria_Stronghold/Clothers/Neck/shaperon_on_skin.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1 
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95 
+
+#------------------------------------------------------------королевские----------
+#-------------------------------------------------------рыцари----------
+
+#------------------------------------------------------------внешние----------
+#-------------------------------------------------------дружественные----------
+
+#-------------------------------------------------------нейтральные----------
+
+#-------------------------------------------------------враждебные----------
