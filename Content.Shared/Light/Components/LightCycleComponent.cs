@@ -3,9 +3,7 @@ using Robust.Shared.Map.Components;
 
 namespace Content.Shared.Light.Components;
 
-/// <summary>
-/// Cycles through colors AKA "Day / Night cycle" on <see cref="MapLightComponent"/>
-/// </summary>
+// Тёёёмная нооочь, только пули свистят по степи...
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class LightCycleComponent : Component
 {
@@ -16,7 +14,7 @@ public sealed partial class LightCycleComponent : Component
     /// How long an entire cycle lasts
     /// </summary>
     [DataField, AutoNetworkedField]
-    public TimeSpan Duration = TimeSpan.FromMinutes(30);
+    public TimeSpan Duration = TimeSpan.FromMinutes(60);
 
     [DataField, AutoNetworkedField]
     public TimeSpan Offset;
@@ -30,21 +28,6 @@ public sealed partial class LightCycleComponent : Component
     [DataField, AutoNetworkedField]
     public bool InitialOffset = true;
 
-    /// <summary>
-    /// Trench of the oscillation.
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public float MinLightLevel = 0f;
-
-    /// <summary>
-    /// Peak of the oscillation
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public float MaxLightLevel = 3f;
-
-    [DataField, AutoNetworkedField]
-    public float ClipLight = 1.25f;
-
     [DataField, AutoNetworkedField]
     public Color ClipLevel = new Color(1f, 1f, 1.25f);
 
@@ -52,5 +35,14 @@ public sealed partial class LightCycleComponent : Component
     public Color MinLevel = new Color(0.1f, 0.15f, 0.50f);
 
     [DataField, AutoNetworkedField]
-    public Color MaxLevel = new Color(2f, 2f, 5f);
+    public TimeSpan SunriseStartTime = TimeSpan.FromMinutes(0);
+
+    [DataField, AutoNetworkedField]
+    public TimeSpan SunriseEndTime = TimeSpan.FromMinutes(5);
+
+    [DataField, AutoNetworkedField]
+    public TimeSpan SunsetStartTime = TimeSpan.FromMinutes(45);
+
+    [DataField, AutoNetworkedField]
+    public TimeSpan SunsetEndTime = TimeSpan.FromMinutes(50);
 }
