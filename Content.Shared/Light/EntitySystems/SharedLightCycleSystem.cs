@@ -1,10 +1,18 @@
+using Content.Shared.GameTicking;
 using Content.Shared.Light.Components;
 using Robust.Shared.Map.Components;
+using Robust.Shared.Timing;
 
 namespace Content.Shared.Light.EntitySystems;
 
+using DayTimeSpan = (TimeSpan current, TimeSpan dayDuration);
 public abstract class SharedLightCycleSystem : EntitySystem
 {
+    [Dependency] private readonly SharedGameTicker _ticker = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] protected readonly MetaDataSystem Metadata = default!;
+
+
     public override void Initialize()
     {
         base.Initialize();
@@ -29,7 +37,23 @@ public abstract class SharedLightCycleSystem : EntitySystem
             Dirty(ent.Owner, mapLight);
         }
     }
+    public float GetTimeAbsolute(Entity<LightCycleComponent> cycle)
+    {
+        var pausedTime = Metadata.GetPauseTime(cycle.Owner);
 
+        return (float)_timing.CurTime
+            .Add(cycle.Comp.Offset)
+            .Subtract(_ticker.RoundStartTimeSpan)
+            .Subtract(pausedTime)
+            .TotalSeconds;
+    }
+
+    public DayTimeSpan GetDayTimeSpan(Entity<LightCycleComponent> cycle)
+    {
+        var time = GetTimeAbsolute(cycle);
+        var duration = cycle.Comp.Duration;
+        return (TimeSpan.FromSeconds(time % (float)duration.TotalSeconds), duration);
+    }
     public void SetOffset(Entity<LightCycleComponent> entity, TimeSpan offset)
     {
         entity.Comp.Offset = offset;
@@ -38,90 +62,67 @@ public abstract class SharedLightCycleSystem : EntitySystem
         RaiseLocalEvent(entity, ref ev);
         Dirty(entity);
     }
-
-    public static Color GetColor(Entity<LightCycleComponent> cycle, Color color, float time)
+    public void SkipTime(Entity<LightCycleComponent> ent, TimeSpan time)
     {
-        if (cycle.Comp.Enabled)
-        {
-            var lightLevel = CalculateLightLevel(cycle.Comp, time);
-            var colorLevel = CalculateColorLevel(cycle.Comp, time);
-            return new Color(
-                (byte)Math.Min(255, color.RByte * colorLevel.R * lightLevel),
-                (byte)Math.Min(255, color.GByte * colorLevel.G * lightLevel),
-                (byte)Math.Min(255, color.BByte * colorLevel.B * lightLevel)
-            );
-        }
-
-        return color;
+        SetOffset(ent, ent.Comp.Offset.Add(time));
     }
 
-    /// <summary>
-    /// Calculates light intensity as a function of time.
-    /// </summary>
-    public static double CalculateLightLevel(LightCycleComponent comp, float time)
+    private static float SmootherStep(
+            float x,
+            float waveLength,
+            float minLightLevel,
+            float maxLightLevel,
+            float exponent,
+            float sunriseStart,
+            float sunriseEnd,
+            float sunsetStart,
+            float sunsetEnd)
     {
-        var waveLength = MathF.Max(1, (float) comp.Duration.TotalSeconds);
-        var crest = MathF.Max(0f, comp.MaxLightLevel);
-        var shift = MathF.Max(0f, comp.MinLightLevel);
-        return Math.Min(comp.ClipLight, CalculateCurve(time, waveLength, crest, shift, 6));
+        var t = (x % waveLength) / waveLength;
+        var riseCoeff = LinearInterpolation(sunriseStart, sunriseEnd, t);
+        var setCoeff = 1.0f - LinearInterpolation(sunsetStart, sunsetEnd, t);
+        var factor = MathF.Min(riseCoeff, setCoeff);
+        var curve = MathF.Pow(factor, exponent);
+        return minLightLevel + (maxLightLevel - minLightLevel) * curve;
     }
 
-    /// <summary>
-    /// It is important to note that each color must have a different exponent, to modify how early or late one color should stand out in relation to another.
-    /// This "simulates" what the atmosphere does and is what generates the effect of dawn and dusk.
-    /// The blue component must be a cosine function with half period, so that its minimum is at dawn and dusk, generating the "warm" color corresponding to these periods.
-    /// As you can see in the values, the maximums of the function serve more to define the curve behavior,
-    /// they must be "clipped" so as not to distort the original color of the lighting. In practice, the maximum values, in fact, are the clip thresholds.
-    /// </summary>
-    public static Color CalculateColorLevel(LightCycleComponent comp, float time)
+    private static float LinearInterpolation(float start, float end, float value)
     {
-        var waveLength = MathF.Max(1f, (float) comp.Duration.TotalSeconds);
-
-        var red = MathF.Min(comp.ClipLevel.R,
-            CalculateCurve(time,
-                waveLength,
-                MathF.Max(0f, comp.MaxLevel.R),
-                MathF.Max(0f, comp.MinLevel.R),
-                4f));
-
-        var green = MathF.Min(comp.ClipLevel.G,
-            CalculateCurve(time,
-                waveLength,
-                MathF.Max(0f, comp.MaxLevel.G),
-                MathF.Max(0f, comp.MinLevel.G),
-                10f));
-
-        var blue = MathF.Min(comp.ClipLevel.B,
-            CalculateCurve(time,
-                waveLength / 2f,
-                MathF.Max(0f, comp.MaxLevel.B),
-                MathF.Max(0f, comp.MinLevel.B),
-                2,
-                waveLength / 4f));
-
-        return new Color(red, green, blue);
+        return Math.Clamp((value - start) / (end - start), 0f, 1f);
     }
 
-    /// <summary>
-    /// Generates a sinusoidal curve as a function of x (time). The other parameters serve to adjust the behavior of the curve.
-    /// </summary>
-    /// <param name="x"> It corresponds to the independent variable of the function, which in the context of this algorithm is the current time. </param>
-    /// <param name="waveLength"> It's the wavelength of the function, it can be said to be the total duration of the light cycle. </param>
-    /// <param name="crest"> It's the maximum point of the function, where it will have its greatest value. </param>
-    /// <param name="shift"> It's the vertical displacement of the function, in practice it corresponds to the minimum value of the function. </param>
-    /// <param name="exponent"> It is the exponent of the sine, serves to "flatten" the function close to its minimum points and make it "steeper" close to its maximum. </param>
-    /// <param name="phase"> It changes the phase of the wave, like a "horizontal shift". It is important to transform the sinusoidal function into cosine, when necessary. </param>
-    /// <returns> The result of the function. </returns>
-    public static float CalculateCurve(float x,
-        float waveLength,
-        float crest,
-        float shift,
-        float exponent,
-        float phase = 0)
+    public static Color CalculateColor(LightCycleComponent comp, float time)
     {
-        var sen = MathF.Pow(MathF.Sin((MathF.PI * (phase + x)) / waveLength), exponent);
-        return (crest - shift) * sen + shift;
+        float GetCoeff(TimeSpan t) => GetTimeCoeff(t, comp.Duration);
+
+        var waveLength = MathF.Max(1f, (float)comp.Duration.TotalSeconds);
+        var riseSCoeff = GetCoeff(comp.SunriseStartTime);
+        var riseECoeff = GetCoeff(comp.SunriseEndTime);
+        var setSCoeff = GetCoeff(comp.SunsetStartTime);
+        var setECoeff = GetCoeff(comp.SunsetEndTime);
+
+        float GetChannel(float minChannel, float maxChannel, float exponent) => SmootherStep(time, waveLength, minChannel, maxChannel, exponent, riseSCoeff, riseECoeff, setSCoeff, setECoeff);
+
+        var r = GetChannel(comp.MinLevel.R, comp.OriginalColor.R, 4f);
+        var g = GetChannel(comp.MinLevel.G, comp.OriginalColor.G, 10f);
+        var b = GetChannel(comp.MinLevel.B, comp.OriginalColor.B, 2f);
+
+        return new Color(r, g, b);
     }
+
+    private static float GetTimeCoeff(TimeSpan time, TimeSpan duration)
+    {
+        return (float)(time.TotalSeconds / duration.TotalSeconds);
+    }
+}
+
+// TODO: Сделать команду, которая пропускает время к определённой стадии дня
+public enum TimeOfDay
+{
+    Morning,
+    Noon,
+    Night,
+    Midnight,
 }
 
 /// <summary>
