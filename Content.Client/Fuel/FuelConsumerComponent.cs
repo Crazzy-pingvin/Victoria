@@ -3,25 +3,27 @@ using Content.Shared.Fuel;
 namespace Content.Client.Fuel
 {
     /// <summary>
-    ///     Component that represents a handheld expendable light which can be activated and eventually dies over time.
+    ///     Клиентская часть компонента херовин кушающих топливо
     /// </summary>
     [RegisterComponent]
     public sealed partial class FuelConsumerComponent : SharedFuelConsumerComponent
     {
         /// <summary>
-        /// The icon state used by expendable lights when the they have been completely expended.
-        /// </summary>
+        /// Пока не используется
         [DataField("emptyState")]
         public string? EmptyState;
 
         /// <summary>
-        /// The icon state used by expendable lights while they are lit.
+        /// Пока не используется
         /// </summary>
         [DataField("burningState")]
         public string? BurningState;
     }
 }
 
+    /// <summary>
+    ///     Слои спрайта компонета
+    /// </summary>
 public enum ConsumerVisualLayers : byte
 {
     Base = 0,

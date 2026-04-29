@@ -9,9 +9,7 @@ namespace Content.Client.Light.EntitySystems;
 
 public sealed class FuelSystem : VisualizerSystem<FuelConsumerComponent>
 {
-    [Dependency] private readonly SharedPointLightSystem _pointLightSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly LightBehaviorSystem _lightBehavior = default!;
     public override void Initialize()
     {
         base.Initialize();

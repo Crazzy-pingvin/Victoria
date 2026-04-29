@@ -21,3 +21,43 @@
     radius: 15
     energy: 1.6
     color: "#c94242"
+
+- type: entity
+  parent: BaseItem
+  id: TestFuelPiece
+  name: Тестовое полено
+  description: ТЕстовое полено на 10 топлива
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/materials.rsi
+    state: wood
+  - type: Fuel
+    fuelPrice: 10
+
+- type: entity
+  parent: MaterialBase
+  id: TestFuelStack
+  name: Тестовые поленья
+  description: Тестовые поленья. 10 топлива каждая.
+  components:
+  - type: Sprite
+    state: wood
+    layers:
+    - state: wood
+      map: ["base"]
+  - type: Fuel
+    fuelPrice: 10
+  - type: Stack
+    stackType: TestFuel
+    baseLayer: base
+    layerStates:
+    - wood
+    - wood_2
+    - wood_3
+
+- type: stack
+  id: TestFuel
+  name: stack-wood-plank
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: wood }
+  spawn: MaterialWoodPlank1
+  maxCount: 30
