@@ -20,6 +20,9 @@ public abstract partial class SharedFuelConsumerComponent : Component
     [DataField("fuelConsumption")]
     public float FuelConsumption = 1;
 
+    [DataField("maxEnergy")]
+    public float MaxEnergy = 10;
+
     [DataField("nextSecond", customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextCheck = TimeSpan.Zero;
 

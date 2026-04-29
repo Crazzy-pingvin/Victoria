@@ -1,7 +1,7 @@
 namespace Content.Shared.Fuel;
 
 /// <summary>
-/// This component is for mobs that have DNA.
+/// Компонент куска топлива
 /// </summary>
 [RegisterComponent]
 public sealed partial class FuelComponent : Component

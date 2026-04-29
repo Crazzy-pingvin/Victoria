@@ -46,57 +46,17 @@ public sealed class FuelSystem : VisualizerSystem<FuelConsumerComponent>
 
         if (!AppearanceSystem.TryGetData<ConsumerStates>(uid, FuelVisuals.State, out var state, args.Component))
             return;
-        if (!AppearanceSystem.TryGetData<float>(uid, FuelVisuals.Percent, out var percent, args.Component))
-            return;
-        //if(TryComp<PointLightComponent>(uid,out PointLightComponent? light))
-        //{
-           // if (state == ConsumerStates.Empty)
-                //_pointLightSystem.SetEnabled(uid, false, light);
-            //else
-            //{
-                //_pointLightSystem.SetEnergy(uid, 100 * percent);
-            //}
 
-        //}
-/*         switch (state)
+        switch (state)
         {
-            case ExpendableLightState.Lit:
-                _audioSystem.Stop(comp.PlayingStream);
-                comp.PlayingStream = _audioSystem.PlayPvs(
-                    comp.LoopedSound, uid)?.Entity;
-
-                if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), ExpendableLightVisualLayers.Overlay, out var layerIdx, true))
-                {
-                    if (!string.IsNullOrWhiteSpace(comp.IconStateLit))
-                        SpriteSystem.LayerSetRsiState((uid, args.Sprite), layerIdx, comp.IconStateLit);
-                    if (!string.IsNullOrWhiteSpace(comp.SpriteShaderLit))
-                        args.Sprite.LayerSetShader(layerIdx, comp.SpriteShaderLit);
-                    else
-                        args.Sprite.LayerSetShader(layerIdx, null, null);
-                    if (comp.GlowColorLit.HasValue)
-                        SpriteSystem.LayerSetColor((uid, args.Sprite), layerIdx, comp.GlowColorLit.Value);
-                    SpriteSystem.LayerSetVisible((uid, args.Sprite), layerIdx, true);
-                }
-
-                if (comp.GlowColorLit.HasValue)
-                    SpriteSystem.LayerSetColor((uid, args.Sprite), ExpendableLightVisualLayers.Glow, comp.GlowColorLit.Value);
-                SpriteSystem.LayerSetVisible((uid, args.Sprite), ExpendableLightVisualLayers.Glow, true);
-
+            case ConsumerStates.Empty:
+                if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), ConsumerVisualLayers.Fire, out var layerIdx, true))
+                    SpriteSystem.LayerSetVisible((uid,args.Sprite), layerIdx, false);
                 break;
-            case ExpendableLightState.Dead:
-                comp.PlayingStream = _audioSystem.Stop(comp.PlayingStream);
-                if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), ExpendableLightVisualLayers.Overlay, out layerIdx, true))
-                {
-                    if (!string.IsNullOrWhiteSpace(comp.IconStateSpent))
-                        SpriteSystem.LayerSetRsiState((uid, args.Sprite), layerIdx, comp.IconStateSpent);
-                    if (!string.IsNullOrWhiteSpace(comp.SpriteShaderSpent))
-                        args.Sprite.LayerSetShader(layerIdx, comp.SpriteShaderSpent);
-                    else
-                        args.Sprite.LayerSetShader(layerIdx, null, null);
-                }
-
-                SpriteSystem.LayerSetVisible((uid, args.Sprite), ExpendableLightVisualLayers.Glow, false);
+            case ConsumerStates.Burns:
+                if (SpriteSystem.LayerMapTryGet((uid, args.Sprite), ConsumerVisualLayers.Fire, out var layerIdx1, true))
+                    SpriteSystem.LayerSetVisible((uid,args.Sprite), layerIdx1, true);
                 break;
-        } */
+        }
     }
 }

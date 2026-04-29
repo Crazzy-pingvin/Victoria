@@ -39,7 +39,7 @@ public sealed partial class FuelSystem : EntitySystem
             comp.NextCheck = _timing.CurTime + TimeSpan.FromSeconds(5);
             if (comp.CurrentState == ConsumerStates.Burns)
             {
-                ChangeFuelLevel(uid,comp, -comp.FuelConsumption);
+                ChangeFuelLevel(uid, comp, -comp.FuelConsumption);
             }
         }
     }
@@ -48,9 +48,8 @@ public sealed partial class FuelSystem : EntitySystem
     {
         consumer.CurrentFuel = Math.Clamp(consumer.CurrentFuel + change_amount,0, consumer.MaxFuel);
         UpdateConsumerState(uid, consumer);
-        //Dirty(uid, consumer);
-        UpdateVisualizer((uid,consumer));
-        UpdateLight((uid,consumer));
+        UpdateVisualizer((uid, consumer));
+        UpdateLight((uid, consumer));
     }
 
 
@@ -59,7 +58,6 @@ public sealed partial class FuelSystem : EntitySystem
         if (consumer.CurrentFuel <= 0)
             consumer.CurrentState = ConsumerStates.Empty;
         else consumer.CurrentState = ConsumerStates.Burns;
-        //Dirty(uid, consumer);
     }
 
     private void UpdateVisualizer(Entity<FuelConsumerComponent> ent, AppearanceComponent? appearance = null)
@@ -67,16 +65,14 @@ public sealed partial class FuelSystem : EntitySystem
         var component = ent.Comp;
         if (!Resolve(ent, ref appearance, false))
             return;
-        //float percent = component.CurrentFuel / component.MaxFuel;
         _appearance.SetData(ent, FuelVisuals.State, component.CurrentState, appearance);
-        //_appearance.SetData(ent, FuelVisuals.Percent, percent, appearance);
     }
 
     private void UpdateLight(Entity<FuelConsumerComponent> ent)
     {
         FuelConsumerComponent component = ent.Comp;
         float percent = component.CurrentFuel / component.MaxFuel;
-        _pointLightSystem.SetEnergy(ent,100 * percent);
+        _pointLightSystem.SetEnergy(ent, component.MaxEnergy * Math.Max(0.1f, percent));
     }
     private void OnRefuelAttempt(Entity<FuelComponent> ent, ref AfterInteractEvent args)
     {
@@ -84,14 +80,15 @@ public sealed partial class FuelSystem : EntitySystem
             return;
         if (!TryComp<FuelConsumerComponent>(args.Target, out FuelConsumerComponent? consumer))
             return;
-        EntityUid Target2 = args.Target.Value;
-        ChangeFuelLevel(Target2, consumer, ent.Comp.FuelPrice);
+        ChangeFuelLevel(args.Target.Value, consumer, ent.Comp.FuelPrice);
     }
 
     private void OnExamine(EntityUid uid, FuelConsumerComponent comp, ExaminedEvent args)
     {
         float fuel_percent = comp.CurrentFuel / comp.MaxFuel * 100;
+        if (fuel_percent != 0.0)
         args.PushMarkup(fuel_percent.ToString() + "% топлива");
+        else args.PushMarkup("Топливо закончилось");
     }
 
     //public bool IsBurns(EntityUid uid)

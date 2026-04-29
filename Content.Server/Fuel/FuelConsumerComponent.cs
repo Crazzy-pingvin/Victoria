@@ -7,5 +7,7 @@ namespace Content.Server.Fuel
     /// </summary>
     [RegisterComponent]
     public sealed partial class FuelConsumerComponent : SharedFuelConsumerComponent
-    {}
+    {
+
+    }
 }

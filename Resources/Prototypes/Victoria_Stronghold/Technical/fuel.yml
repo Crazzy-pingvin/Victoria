@@ -7,8 +7,15 @@
   - type: Sprite
     sprite: Victoria_Stronghold/Materials/Stacks/soil.rsi
     layers:
-    - state: icon
+      - map: [ enum.ConsumerVisualLayers.Base ]
+        state: icon
+      - map: [ enum.ConsumerVisualLayers.Fire ]
+        state: icon-burn
+        color: "#FFFFFF"
+        #shader: unshaded
   - type: FuelConsumer
+    emptyState: null
+    burningState: icon-burn
   - type: Appearance
   - type: PointLight
     radius: 15
