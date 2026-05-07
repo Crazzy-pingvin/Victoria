@@ -14,7 +14,7 @@
             "name": "bishop_diag"
         },
         {
-            "name": "bishop_vert"
+            "name": "bishop"
         },
         {
             "name": "healer"
@@ -26,10 +26,10 @@
             "name": "kastel"
         },
         {
-            "name": "king_bishop"
+            "name": "high_bishop"
         },
         {
-            "name": "king_knight"
+            "name": "high_knight"
         },
         {
             "name": "knight"
@@ -50,7 +50,7 @@
             "name": "monk"
         },
         {
-            "name": "novitius_orig"
+            "name": "novitius"
         },
         {
             "name": "novitius_uni"
@@ -74,7 +74,7 @@
             "name": "siege_engineer"
         },
         {
-            "name": "squire_orig"
+            "name": "squire"
         },
         {
             "name": "squire_uni"
@@ -92,7 +92,7 @@
             "name": "witch"
         },
         {
-            "name": "worker"
+            "name": "workman"
         }
     ]
 }

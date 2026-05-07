@@ -1,0 +1,28 @@
+- type: job
+  id: Monk
+  name: job-name-monk
+  description: job-description-monk
+  playTimeTracker: JobMonk
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Clerical
+      time: 18000 #5 hrs # Corvax-RoleTime
+  startingGear: MonkGear
+  icon: "JobIconMonk"
+  supervisors: job-supervisors-bishop
+  # access:
+  # - Research
+  # - Maintenance
+  # special:
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: PetrTarget
+
+
+- type: startingGear
+  id: MonkGear
+  equipment:
+    ears: ClothingHeadsetScience
+  #storage:
+    #back:
+    #- Stuff

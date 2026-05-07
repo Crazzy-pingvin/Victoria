@@ -1,0 +1,47 @@
+- type: job
+  id: Squire
+  name: job-name-squire
+  description: job-description-squire
+  playTimeTracker: JobSquire
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000 #10 hrs # Corvax-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Warriors
+      time: 72000 #20 hrs # Corvax-RoleTime
+      inverted: true # stop playing intern if you're good at security!
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  startingGear: SquireGear
+  icon: "JobIconSquire"
+  supervisors: job-supervisors-warriors
+  canBeAntag: false
+  # access:
+  # - Security
+  # - Brig
+  # - Maintenance
+  # - Service
+  # - External
+  # - Cryogenics
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: PetrTarget
+
+- type: startingGear
+  id: SquireGear
+  equipment:
+    shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
+    outerClothing: ClothingOuterArmorBasic
+    id: SecurityCadetPDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    pocket2: BookSpaceLaw # Corvax-HyperLink
+  storage:
+    back:
+    - Flash
+    - MagazinePistol

@@ -1,0 +1,157 @@
+# Мастеровые
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCargoWorkman
+  icon:
+    sprite: &icon-rsi /Textures/Victoria_Stronghold/Interface/job_icons.rsi
+    state: workman
+  jobName: job-name-workman
+
+# Дворяне
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLord
+  icon:
+    sprite: *icon-rsi
+    state: lord
+  jobName: job-name-captain
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSheriff
+  icon:
+    sprite: *icon-rsi
+    state: sheriff
+  jobName: job-name-sheriff
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconKnight
+  icon:
+    sprite: *icon-rsi
+    state: knight
+  jobName: job-name-knight
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBishop
+  icon:
+    sprite: *icon-rsi
+    state: bishop
+  jobName: job-name-bishop
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconKastel
+  icon:
+    sprite: *icon-rsi
+    state: kastel
+  jobName: job-name-kastel
+
+# Духовенство
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNovitius
+  icon:
+    sprite: *icon-rsi
+    state: novitius
+  jobName: job-name-novitius
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMonk
+  icon:
+    sprite: *icon-rsi
+    state: monk
+  jobName: job-name-monk
+
+# Воины
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSquire
+  icon:
+    sprite: *icon-rsi
+    state: squire
+  jobName: job-name-squire
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconWarrior
+  icon:
+    sprite: *icon-rsi
+    state: warrior
+  jobName: job-name-warror
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSergeant
+  icon:
+    sprite: *icon-rsi
+    state: sergeant
+  jobName: job-name-sergeant
+
+# Крестьяне
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPeasant
+  icon:
+    sprite: *icon-rsi
+    state: peasant
+  jobName: job-name-peasant
+
+# Плохие чуваки
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconWitch # АААААА ЖЕНЩИНА
+  icon:
+    sprite: *icon-rsi
+    state: witch
+  jobName: job-name-witch
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBandit # Чики брики и в дамки
+  icon:
+    sprite: *icon-rsi
+    state: bandit
+  jobName: job-name-bandit
+
+# Высшие дворяне
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconHighKnight
+  icon:
+    sprite: *icon-rsi
+    state: high_knight
+  jobName: job-name-high-knight
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconHighBishop
+  icon:
+    sprite: *icon-rsi
+    state: high_bishop
+  jobName: job-name-high-bishop
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMessenger
+  icon:
+    sprite: *icon-rsi
+    state: messenger
+  jobName: job-name-messenger
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconHealer
+  icon:
+    sprite: *icon-rsi
+    state: healer
+  jobName: job-name-healer

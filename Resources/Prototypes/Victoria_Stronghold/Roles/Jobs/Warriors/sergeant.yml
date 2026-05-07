@@ -1,0 +1,44 @@
+- type: job
+  id: Sergeant
+  name: job-name-sergeant
+  description: job-description-sergeant
+  playTimeTracker: JobSergeant
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Warriors
+      time: 108000 #50 hrs # Corvax-RoleTime
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 5
+  startingGear: SergeantGear
+  icon: "JobIconSergeant"
+  supervisors: job-supervisors-knight
+  canBeAntag: false
+  # access:
+  # - Security
+  # - Brig
+  # - Armory
+  # - Maintenance
+  # - Service
+  # - External
+  # - Detective
+  # - Cryogenics
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: PetrTarget
+
+- type: startingGear
+  id: SergeantGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    id: WardenPDA
+    ears: ClothingHeadsetSecurity
+  storage:
+    back:
+    - Flash
+    - MagazinePistol

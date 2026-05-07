@@ -1,0 +1,43 @@
+- type: job
+  id: Bishop
+  name: job-name-bishop
+  description: job-description-bishop
+  playTimeTracker: JobBishop
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 54000 #15 hrs # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: BishopGear
+  icon: "JobIconBishop"
+  supervisors: job-supervisors-lord
+  canBeAntag: false
+  # access:
+  # - Research
+  # - Command
+  # - Maintenance
+  # - Bishop
+  # - Brig
+  # - Cryogenics
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: CommandStaff
+      # - type: PetrTarget
+
+- type: startingGear
+  id: BishopGear
+  equipment:
+    id: RnDPDA
+    ears: ClothingHeadsetRD
+  storage:
+    back:
+    - Flash

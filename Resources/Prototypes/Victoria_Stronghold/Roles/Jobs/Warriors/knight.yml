@@ -1,0 +1,56 @@
+- type: job
+  id: Knight
+  name: job-name-knight
+  description: job-description-knight
+  playTimeTracker: JobKnight
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSergeant
+      time: 36000 #10 hrs # Corvax-RoleTime
+#    - !type:RoleTimeRequirement
+#      role: JobSecurityOfficer
+#      time: 36000 #10 hrs
+    - !type:DepartmentTimeRequirement
+      department: Warriors
+      time: 108000 #50 hrs # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: KnightGear
+  icon: "JobIconKnight"
+  supervisors: job-supervisors-lord
+  canBeAntag: false
+  # access:
+  # - HeadOfSecurity
+  # - Command
+  # - Brig
+  # - Security
+  # - Armory
+  # - Maintenance
+  # - Service
+  # - External
+  # - Detective
+  # - Cryogenics
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: CommandStaff
+      # - type: PetrTarget
+
+- type: startingGear
+  id: KnightGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    id: HoSPDA
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
+  storage:
+    back:
+    - Flash
+    - MagazinePistol

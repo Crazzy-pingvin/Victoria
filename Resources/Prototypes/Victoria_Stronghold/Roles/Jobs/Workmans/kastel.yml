@@ -1,0 +1,50 @@
+- type: job
+  id: Kastel
+  name: job-name-kastel
+  description: job-description-kastel
+  playTimeTracker: JobKastel
+  requirements:
+#    - !type:RoleTimeRequirement
+#      role: JobWorkman
+#      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Workmans
+      time: 36000 #10 hours
+    - !type:OverallPlaytimeRequirement
+      time: 144000 #40 hrs
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 10
+  startingGear: KastelGear
+  icon: "JobIconKastel"
+  supervisors: job-supervisors-lord
+  canBeAntag: false
+  # access:
+  # - Cargo
+  # - Salvage
+  # - Quartermaster
+  # - Maintenance
+  # - External
+  # - Command
+  # - Brig
+  # - Cryogenics
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: CommandStaff
+      # - type: PetrTarget
+
+- type: startingGear
+  id: KastelGear
+  # equipment:
+    # id: QuartermasterPDA
+    # ears: ClothingHeadsetQM
+    # belt: BoxFolderClipboardThreePapers
+    # pocket1: AppraisalTool
+  # storage:
+    # back:
+    # - Flash

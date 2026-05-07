@@ -1,0 +1,79 @@
+- type: job
+  id: Sheriff
+  name: job-name-sheriff
+  description: job-description-sheriff
+  playTimeTracker: JobSheriff
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Workmans
+      time: 18000 #5 hrs # Corvax-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Peasants
+      time: 18000 #5 hrs # Corvax-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Clerical
+      time: 9000 # 2.5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Warrors
+      time: 18000 #5 hrs # Corvax-RoleTime
+#    - !type:DepartmentTimeRequirement
+#      department: Command
+#      time: 72000 # 20 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 180000 #50 hrs # Corvax-RoleTime
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 20
+  startingGear: SheriffGear
+  icon: "JobIconSheriff"
+  supervisors: job-supervisors-lord
+  canBeAntag: false
+  # access:
+  # - Command
+  # - Sheriff
+  # - Bar
+  # - Service
+  # - Maintenance
+  # - Janitor
+  # - Theatre
+  # - Kitchen
+  # - Chapel
+  # - Hydroponics
+  # - External
+  # - Cryogenics
+  # I mean they'll give themselves the rest of the access levels *anyways*.
+  # As of 15/03/23 they can't do that so here's MOST of the rest of the access levels.
+  # Head level access that isn't their own was deliberately left out, get AA from the captain instead.
+  # - Chemistry
+  # - Engineering
+  # - Research
+  # - Detective
+  # - Salvage
+  # - Security
+  # - Brig
+  # - Lawyer
+  # - Cargo
+  # - Atmospherics
+  # - Medical
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: CommandStaff
+      # - type: PetrTarget
+
+- type: startingGear
+  id: SheriffGear
+  equipment:
+    shoes: ClothingShoesColorBrown
+    id: HoPPDA
+    gloves: ClothingHandsGlovesHop
+    ears: ClothingHeadsetAltCommand
+    belt: BoxFolderClipboardThreePapers
+    eyes: ClothingEyesHudCommand
+  storage:
+    back:
+    - Flash

@@ -1,0 +1,23 @@
+- type: job
+  id: Workman
+  name: job-name-workman
+  description: job-description-workman
+  playTimeTracker: JobWorkman
+  startingGear: WorkmanGear
+  icon: "JobIconCargoTechnician"
+  supervisors: job-supervisors-kastel
+  # access:
+  # - Cargo
+  # - Maintenance
+  # extendedAccess:
+  # - Salvage
+  # special:
+
+- type: startingGear
+  id: WorkmanGear
+  equipment:
+    ears: ClothingHeadsetCargo
+    pocket1: AppraisalTool
+  #storage:
+    #back:
+    #- Stuff

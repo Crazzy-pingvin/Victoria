@@ -1,0 +1,28 @@
+- type: job
+  id: Priest
+  name: job-name-priest
+  description: job-description-priest
+  playTimeTracker: JobPriest
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Clerical
+      time: 90000 #25 hrs # Corvax-RoleTime
+  startingGear: PriestGear
+  icon: "JobIconPriest"
+  supervisors: job-supervisors-bishop
+  # access:
+  # - Research
+  # - Maintenance
+  # special:
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: PetrTarget
+
+
+- type: startingGear
+  id: PriestGear
+  equipment:
+    ears: ClothingHeadsetScience
+  #storage:
+    #back:
+    #- Stuff

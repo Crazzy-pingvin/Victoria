@@ -1,0 +1,31 @@
+- type: job
+  id: Novitius
+  name: job-name-novitius
+  description: job-description-novitius
+  playTimeTracker: JobNovitius
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Clerical
+      time: 36000 #10 hrs # Corvax-RoleTime
+      inverted: true # stop playing intern if you're good at science!
+  startingGear: NovitiusGear
+  icon: "JobIconNovitius"
+  supervisors: job-supervisors-clerical
+  canBeAntag: false
+  # access:
+  # - Research
+  # - Maintenance
+  # special:
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: PetrTarget
+- type: startingGear
+  id: NovitiusGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: ResearchAssistantPDA
+    ears: ClothingHeadsetScience
+    pocket2: BookScientistsGuidebook
+  #storage:
+    #back:
+    #- Stuff

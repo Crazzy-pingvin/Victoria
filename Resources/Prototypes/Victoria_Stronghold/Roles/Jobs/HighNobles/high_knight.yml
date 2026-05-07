@@ -1,0 +1,68 @@
+# Leader
+- type: job
+  id: HighKnight
+  name: job-name-high-knight
+  description: job-description-high-knight
+  playTimeTracker: JobHighKnight
+  setPreference: false
+  startingGear: HighKnightGearEVA
+  icon: "JobIconHighKnight"
+  supervisors: job-supervisors-high-nobles
+  canBeAntag: false
+  # accessGroups:
+  # - AllAccess
+  # access:
+  # - CentralCommand
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+
+- type: startingGear
+  id: HighKnightGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    back: ClothingBackpackERTLeader
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHelmetERTLeader
+    eyes: ClothingEyesGlassesSecurity
+    neck: ClothingNeckMantleERTLeader # Corvax-Clothing
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorBasicSlim
+    id: ERTLeaderPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityFilled
+    pocket1: WeaponPistolN1984
+    pocket2: FlashlightSeclite
+  storage:
+    back:
+    - WeaponDisabler
+    - MedicatedSuture
+    - RegenerativeMesh
+    - BoxZiptie
+    - CrowbarRed
+    - MagazineMagnum
+
+- type: startingGear
+  id: HighKnightEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    back: ClothingBackpackERTLeader
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesSecurity
+    neck: ClothingNeckMantleERTLeader # Corvax-Clothing
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTLeader
+    id: ERTLeaderPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityFilled
+    pocket1: WeaponPistolN1984
+    pocket2: FlashlightSeclite
+  storage:
+    back:
+    - WeaponDisabler
+    - MedicatedSuture
+    - RegenerativeMesh
+    - BoxZiptie
+    - CrowbarRed
+    - MagazineMagnum

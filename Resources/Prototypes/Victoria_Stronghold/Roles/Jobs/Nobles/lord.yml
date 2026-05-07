@@ -1,0 +1,52 @@
+- type: job
+  id: Lord
+  name: job-name-lord
+  description: job-description-lord
+  playTimeTracker: JobLord
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 72000 #20 hrs # Corvax-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Clerical
+      time: 14400 # 4 hours
+    - !type:DepartmentTimeRequirement
+      department: Warriors
+      time: 72000 #20 hrs # Corvax-RoleTime
+#    - !type:DepartmentTimeRequirement
+#      department: Nobles
+#      time: 54000 # 15 hours
+    - !type:OverallPlaytimeRequirement
+      time: 504000 #140 hrs # Corvax-RoleTime
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
+  weight: 20
+  startingGear: CaptainGear
+  icon: "JobIconCaptain"
+  joinNotifyCrew: true
+  supervisors: job-supervisors-high-nobles
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: PetrTarget
+
+- type: startingGear
+  id: LordGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesCaptain
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+  storage:
+    back:
+    - Flash
+    # - StationCharter

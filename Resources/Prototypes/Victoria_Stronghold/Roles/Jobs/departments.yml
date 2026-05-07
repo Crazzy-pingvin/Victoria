@@ -1,0 +1,82 @@
+- type: department
+  id: Workmans
+  name: department-Workmans
+  description: department-Workmans-description
+  color: "#A46106"
+  roles:
+  - Workman
+  - Kastel
+
+- type: department
+  id: Peasants
+  name: department-Civilian
+  description: department-Civilian-description
+  color: "#9FED58"
+  weight: -10
+  roles:
+  - Peasant
+  - Sheriff
+
+- type: department
+  id: HighNobles
+  name: department-CentralCommand
+  description: department-CentralCommand-description
+  color: "#0c344d"
+  roles:
+  - Messenger
+  - KingKnight
+  - KingBishop
+  - Healer
+  editorHidden: true
+  weight: 120
+
+- type: department
+  id: Nobles
+  name: department-Nobles
+  description: department-Nobles-description
+  color: "#334E6D"
+  roles:
+  - Lord
+  - Kastel
+  - Bishop
+  - Knight
+  - Sheriff
+  primary: false
+  weight: 100
+
+- type: department
+  id: Warriors
+  name: department-Warriors
+  description: department-Warriors-description
+  color: "#DE3A3A"
+  weight: 20
+  roles:
+  - Warrior
+  - Squire
+  - Sergeant
+  - SiegeEngineer
+  - Knight
+
+- type: department
+  id: Clerical
+  name: department-Clerical
+  description: department-Science-description
+  color: "#D381C9"
+  roles:
+  - Monk
+  - Novitius
+  - Priest
+  - Bishop
+
+- type: department
+  id: Outer
+  name: department-Outer
+  description: department-Outer-description
+  color: "#9FED58"
+  weight: 10
+  roles:
+  - Bandit
+  - Witch
+  - WarderingTrader
+  - WarderingKnight
+  - Outcast

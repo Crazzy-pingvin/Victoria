@@ -1,0 +1,32 @@
+- type: job
+  id: Messenger
+  name: job-name-messenger
+  description: job-description-messenger
+  playTimeTracker: JobMessenger
+  setPreference: false
+  startingGear: MessengerGear
+  icon: "JobIconMessenger"
+  supervisors: job-supervisors-high-nobles # Corvax-JobSupervisors
+  canBeAntag: false
+  # accessGroups:
+  # - AllAccess
+  # access:
+  # - CentralCommand
+  # special:
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+
+- type: startingGear
+  id: MessengerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatCentcom
+    eyes: ClothingEyesGlassesCommand
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingOuterArmorCentcommCarapace
+    id: CentcomPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: WeaponPistolN1984
+    pocket1: BoxFolderCentComClipboardThreePapers
+    pocket2: PenCentcom
