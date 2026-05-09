@@ -54,3 +54,6 @@
     back:
     - Flash
     - MagazinePistol
+
+- type: playTimeTracker
+  id: JobKnight

@@ -2,7 +2,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconCargoWorkman
+  id: JobIconWorkman
   icon:
     sprite: &icon-rsi /Textures/Victoria_Stronghold/Interface/job_icons.rsi
     state: workman
@@ -68,6 +68,13 @@
     state: monk
   jobName: job-name-monk
 
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPriest
+  icon:
+    sprite: *icon-rsi
+    state: priest
+  jobName: job-name-priest
 # Воины
 
 - type: jobIcon
@@ -85,6 +92,14 @@
     sprite: *icon-rsi
     state: warrior
   jobName: job-name-warror
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSiegeEngineer
+  icon:
+    sprite: *icon-rsi
+    state: siege_engineer
+  jobName: job-name-siege-engineer
 
 - type: jobIcon
   parent: JobIcon
@@ -155,3 +170,29 @@
     sprite: *icon-rsi
     state: healer
   jobName: job-name-healer
+
+#Странники
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconWarderingKnight
+  icon:
+    sprite: *icon-rsi
+    state: wardering_knight
+  jobName: job-name-wardering-knight
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconWarderingTrader
+  icon:
+    sprite: *icon-rsi
+    state: wardering_trader
+  jobName: job-name-wardering-trader
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconOutcast
+  icon:
+    sprite: *icon-rsi
+    state: outcast
+  jobName: job-name-outcast

@@ -17,3 +17,6 @@
   #storage:
     #back:
     #- Stuff
+
+- type: playTimeTracker
+  id: JobPeasant

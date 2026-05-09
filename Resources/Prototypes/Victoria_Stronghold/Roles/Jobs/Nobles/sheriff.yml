@@ -14,7 +14,7 @@
       department: Clerical
       time: 9000 # 2.5 hrs
     - !type:DepartmentTimeRequirement
-      department: Warrors
+      department: Warriors
       time: 18000 #5 hrs # Corvax-RoleTime
 #    - !type:DepartmentTimeRequirement
 #      department: Command
@@ -77,3 +77,6 @@
   storage:
     back:
     - Flash
+
+- type: playTimeTracker
+  id: JobSheriff

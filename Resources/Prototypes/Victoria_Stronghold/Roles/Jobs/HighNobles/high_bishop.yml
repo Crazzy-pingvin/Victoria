@@ -45,3 +45,6 @@
     - FreedomImplanter
   inhand:
   - WeaponPulseRifle
+
+- type: playTimeTracker
+  id: JobHighBishop

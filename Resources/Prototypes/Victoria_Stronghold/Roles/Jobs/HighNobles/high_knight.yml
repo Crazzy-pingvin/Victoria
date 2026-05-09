@@ -66,3 +66,6 @@
     - BoxZiptie
     - CrowbarRed
     - MagazineMagnum
+
+- type: playTimeTracker
+  id: JobHighKnight

@@ -5,7 +5,7 @@
   playTimeTracker: JobBishop
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Science
+      department: Clerical
       time: 54000 #15 hrs # Corvax-RoleTime
 #    - !type:OverallPlaytimeRequirement
 #      time: 144000 #40 hrs
@@ -41,3 +41,6 @@
   storage:
     back:
     - Flash
+
+- type: playTimeTracker
+  id: JobBishop

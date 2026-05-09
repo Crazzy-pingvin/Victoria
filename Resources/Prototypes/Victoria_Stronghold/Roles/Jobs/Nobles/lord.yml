@@ -24,7 +24,7 @@
       - Muted
   weight: 20
   startingGear: CaptainGear
-  icon: "JobIconCaptain"
+  icon: "JobIconLord"
   joinNotifyCrew: true
   supervisors: job-supervisors-high-nobles
   canBeAntag: false
@@ -50,3 +50,6 @@
     back:
     - Flash
     # - StationCharter
+
+- type: playTimeTracker
+  id: JobLord

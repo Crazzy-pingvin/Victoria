@@ -1,29 +1,26 @@
 - type: job
-  id: Sergeant
-  name: job-name-sergeant
-  description: job-description-sergeant
-  playTimeTracker: JobSergeant
+  id: Bandit
+  name: job-name-bandit
+  description: job-description-bandit
+  playTimeTracker: JobBandit
   requirements:
     - !type:DepartmentTimeRequirement
       department: Warriors
-      time: 108000 #50 hrs # Corvax-RoleTime
+      time: 1200 #2 hrs
     - !type:TraitsRequirement #Corvax-TraitsRequirement
       inverted: true
       traits:
       - Muted
-  weight: 5
-  startingGear: SergeantGear
-  icon: "JobIconSergeant"
-  supervisors: job-supervisors-knight
+  startingGear: BanditGear
+  icon: "JobIconBandit"
+  supervisors: job-supervisors-no-one
   canBeAntag: false
   # access:
   # - Security
   # - Brig
-  # - Armory
   # - Maintenance
   # - Service
   # - External
-  # - Detective
   # - Cryogenics
   # special:
   # - !type:AddImplantSpecial
@@ -33,10 +30,9 @@
       # - type: PetrTarget
 
 - type: startingGear
-  id: SergeantGear
+  id: BanditGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
-    id: WardenPDA
     ears: ClothingHeadsetSecurity
   storage:
     back:
@@ -44,4 +40,4 @@
     - MagazinePistol
 
 - type: playTimeTracker
-  id: JobSergeant
+  id: JobBandit

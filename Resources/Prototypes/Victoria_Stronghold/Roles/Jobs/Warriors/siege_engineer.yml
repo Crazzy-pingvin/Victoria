@@ -1,29 +1,26 @@
 - type: job
-  id: Sergeant
-  name: job-name-sergeant
-  description: job-description-sergeant
-  playTimeTracker: JobSergeant
+  id: SiegeEngineer
+  name: job-name-warrior-siege-engineer
+  description: job-description-siege-engineer
+  playTimeTracker: JobSiegeEngineer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Warriors
-      time: 108000 #50 hrs # Corvax-RoleTime
+      time: 36000 #10 hrs # Corvax-RoleTime
     - !type:TraitsRequirement #Corvax-TraitsRequirement
       inverted: true
       traits:
       - Muted
-  weight: 5
-  startingGear: SergeantGear
-  icon: "JobIconSergeant"
+  startingGear: SiegeEngineerGear
+  icon: "JobIconSiegeEngineer"
   supervisors: job-supervisors-knight
   canBeAntag: false
   # access:
   # - Security
   # - Brig
-  # - Armory
   # - Maintenance
   # - Service
   # - External
-  # - Detective
   # - Cryogenics
   # special:
   # - !type:AddImplantSpecial
@@ -33,10 +30,9 @@
       # - type: PetrTarget
 
 - type: startingGear
-  id: SergeantGear
+  id: SiegeEngineerGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
-    id: WardenPDA
     ears: ClothingHeadsetSecurity
   storage:
     back:
@@ -44,4 +40,4 @@
     - MagazinePistol
 
 - type: playTimeTracker
-  id: JobSergeant
+  id: JobSiegeEngineer

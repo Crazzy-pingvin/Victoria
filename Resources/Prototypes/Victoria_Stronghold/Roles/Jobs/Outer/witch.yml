@@ -1,19 +1,11 @@
 - type: job
-  id: Warrior
-  name: job-name-warrior
-  description: job-description-warrior
-  playTimeTracker: JobWarrior
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Warriors
-      time: 36000 #10 hrs # Corvax-RoleTime
-    - !type:TraitsRequirement #Corvax-TraitsRequirement
-      inverted: true
-      traits:
-      - Muted
-  startingGear: WarriorGear
-  icon: "JobIconWarrior"
-  supervisors: job-supervisors-knight
+  id: Witch
+  name: job-name-witch
+  description: job-description-witch
+  playTimeTracker: JobWitch
+  startingGear: WitchGear
+  icon: "JobIconWitch"
+  supervisors: job-supervisors-no-one
   canBeAntag: false
   # access:
   # - Security
@@ -30,7 +22,7 @@
       # - type: PetrTarget
 
 - type: startingGear
-  id: WarriorGear
+  id: WitchGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
@@ -40,4 +32,4 @@
     - MagazinePistol
 
 - type: playTimeTracker
-  id: JobWarrior
+  id: JobWitch

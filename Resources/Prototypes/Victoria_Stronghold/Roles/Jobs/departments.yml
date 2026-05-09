@@ -9,7 +9,7 @@
 
 - type: department
   id: Peasants
-  name: department-Civilian
+  name: department-Peasants
   description: department-Civilian-description
   color: "#9FED58"
   weight: -10

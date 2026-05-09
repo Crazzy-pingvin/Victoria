@@ -1,24 +1,28 @@
 - type: job
-  id: Sergeant
-  name: job-name-sergeant
-  description: job-description-sergeant
-  playTimeTracker: JobSergeant
+  id: WarderingKnight
+  name: job-name-wardering-knight
+  description: job-description-wardering-knight
+  playTimeTracker: JobWarderingKnight
   requirements:
     - !type:DepartmentTimeRequirement
       department: Warriors
-      time: 108000 #50 hrs # Corvax-RoleTime
+      time: 36000 #10 hrs # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
     - !type:TraitsRequirement #Corvax-TraitsRequirement
       inverted: true
       traits:
       - Muted
-  weight: 5
-  startingGear: SergeantGear
-  icon: "JobIconSergeant"
-  supervisors: job-supervisors-knight
+  weight: 10
+  startingGear: WarderingKnightGear
+  icon: "JobIconWarderingKnight"
+  supervisors: job-supervisors-no-one
   canBeAntag: false
   # access:
-  # - Security
+  # - HeadOfSecurity
+  # - Command
   # - Brig
+  # - Security
   # - Armory
   # - Maintenance
   # - Service
@@ -30,18 +34,20 @@
     # implants: [ MindShieldImplant ]
   # - !type:AddComponentSpecial
     # components:
+      # - type: CommandStaff
       # - type: PetrTarget
 
 - type: startingGear
-  id: SergeantGear
+  id: WarderingKnightGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
-    id: WardenPDA
-    ears: ClothingHeadsetSecurity
+    id: HoSPDA
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
   storage:
     back:
     - Flash
     - MagazinePistol
 
 - type: playTimeTracker
-  id: JobSergeant
+  id: JobWarderingKnight

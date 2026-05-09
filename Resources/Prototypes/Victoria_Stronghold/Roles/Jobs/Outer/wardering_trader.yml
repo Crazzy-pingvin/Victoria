@@ -1,25 +1,19 @@
 - type: job
-  id: Kastel
-  name: job-name-kastel
-  description: job-description-kastel
-  playTimeTracker: JobKastel
+  id: WarderingTrader
+  name: job-name-wardering-trader
+  description: job-description-wardering-trader
+  playTimeTracker: JobWarderingTrader
   requirements:
-#    - !type:RoleTimeRequirement
-#      role: JobWorkman
-#      time: 21600 #6 hrs
-    - !type:DepartmentTimeRequirement
-      department: Workmans
-      time: 36000 #10 hours
     - !type:OverallPlaytimeRequirement
-      time: 144000 #40 hrs
+      time: 36000 #10 hrs
     - !type:TraitsRequirement #Corvax-TraitsRequirement
       inverted: true
       traits:
       - Muted
   weight: 10
-  startingGear: KastelGear
-  icon: "JobIconKastel"
-  supervisors: job-supervisors-lord
+  startingGear: WarderingTraderGear
+  icon: "JobIconWarderingTrader"
+  supervisors: job-supervisors-no-one
   canBeAntag: false
   # access:
   # - Cargo
@@ -39,7 +33,7 @@
       # - type: PetrTarget
 
 - type: startingGear
-  id: KastelGear
+  id: WarderingTraderGear
   # equipment:
     # id: QuartermasterPDA
     # ears: ClothingHeadsetQM
@@ -50,4 +44,4 @@
     # - Flash
 
 - type: playTimeTracker
-  id: JobKastel
+  id: JobWarderingTrader

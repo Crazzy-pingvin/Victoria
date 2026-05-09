@@ -38,3 +38,6 @@
     - GrenadeFlashBang
     - PillAmbuzolPlus
     - PillAmbuzol
+
+- type: playTimeTracker
+  id: JobHealer

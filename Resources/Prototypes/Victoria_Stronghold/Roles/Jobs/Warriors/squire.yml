@@ -45,3 +45,6 @@
     back:
     - Flash
     - MagazinePistol
+
+- type: playTimeTracker
+  id: JobSquire

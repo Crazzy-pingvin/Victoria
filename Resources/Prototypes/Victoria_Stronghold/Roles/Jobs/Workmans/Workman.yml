@@ -4,7 +4,7 @@
   description: job-description-workman
   playTimeTracker: JobWorkman
   startingGear: WorkmanGear
-  icon: "JobIconCargoTechnician"
+  icon: "JobIconWorkman"
   supervisors: job-supervisors-kastel
   # access:
   # - Cargo
@@ -21,3 +21,6 @@
   #storage:
     #back:
     #- Stuff
+
+- type: playTimeTracker
+  id: JobWorkman
