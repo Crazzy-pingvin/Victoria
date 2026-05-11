@@ -16,7 +16,7 @@
   icon:
     sprite: *icon-rsi
     state: lord
-  jobName: job-name-captain
+  jobName: job-name-lord
 
 - type: jobIcon
   parent: JobIcon

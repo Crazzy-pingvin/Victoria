@@ -1,6 +1,6 @@
 - type: job
   id: SiegeEngineer
-  name: job-name-warrior-siege-engineer
+  name: job-name-siege-engineer
   description: job-description-siege-engineer
   playTimeTracker: JobSiegeEngineer
   requirements:

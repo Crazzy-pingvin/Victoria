@@ -19,9 +19,9 @@
 
 - type: department
   id: HighNobles
-  name: department-CentralCommand
-  description: department-CentralCommand-description
-  color: "#0c344d"
+  name: department-High-Nobles
+  description: department--High-Nobles-description
+  color: "#c41616"
   roles:
   - Messenger
   - KingKnight
@@ -34,7 +34,7 @@
   id: Nobles
   name: department-Nobles
   description: department-Nobles-description
-  color: "#334E6D"
+  color: "#c41616"
   roles:
   - Lord
   - Kastel
@@ -48,7 +48,7 @@
   id: Warriors
   name: department-Warriors
   description: department-Warriors-description
-  color: "#DE3A3A"
+  color: "#4457d4"
   weight: 20
   roles:
   - Warrior
@@ -61,7 +61,7 @@
   id: Clerical
   name: department-Clerical
   description: department-Science-description
-  color: "#D381C9"
+  color: "#a3a3a3"
   roles:
   - Monk
   - Novitius
@@ -72,7 +72,7 @@
   id: Outer
   name: department-Outer
   description: department-Outer-description
-  color: "#9FED58"
+  color: "#383838"
   weight: 10
   roles:
   - Bandit
