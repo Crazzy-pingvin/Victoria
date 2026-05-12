@@ -32,7 +32,7 @@
     damage:
       types:
         Blunt: 15
-        Piersing: 5
+        Piercing: 5
   - type: Item
     sprite: Victoria_Stronghold/Weapon/Melee/Crusting/guttentag.rsi
   - type: DamageOtherOnHit
