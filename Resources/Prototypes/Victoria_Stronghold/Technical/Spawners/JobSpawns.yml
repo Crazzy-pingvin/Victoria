@@ -1,0 +1,238 @@
+#Крестьянин
+- type: entity
+  id: SpawnPointPeasant
+  parent: SpawnPointJobBase
+  name: Крестьянин
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Peasant
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Шериф
+- type: entity
+  id: SpawnPointSheriff
+  parent: SpawnPointJobBase
+  name: Шериф
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Sheriff
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Сквайр
+- type: entity
+  id: SpawnPointSquire
+  parent: SpawnPointJobBase
+  name: Оруженосец
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Squire
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Воин
+- type: entity
+  id: SpawnPointWarrior
+  parent: SpawnPointJobBase
+  name: Воин
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Warrior
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Осадный инженер
+- type: entity
+  id: SpawnPointSiegeEngineer
+  parent: SpawnPointJobBase
+  name: Осадный инженер
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: SiegeEngineer
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Сержант
+- type: entity
+  id: SpawnPointSergeant
+  parent: SpawnPointJobBase
+  name: Сержант
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Sergeant
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Рыцарь
+- type: entity
+  id: SpawnPointKnight
+  parent: SpawnPointJobBase
+  name: Рыцарь
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Knight
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Новитий
+- type: entity
+  id: SpawnPointNovitius
+  parent: SpawnPointJobBase
+  name: Новитий
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Novitius
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Монах
+- type: entity
+  id: SpawnPointMonk
+  parent: SpawnPointJobBase
+  name: Монах
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Monk
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Священник
+- type: entity
+  id: SpawnPointPriest
+  parent: SpawnPointJobBase
+  name: Священник
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Priest
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Епископ
+- type: entity
+  id: SpawnPointBishop
+  parent: SpawnPointJobBase
+  name: Епископ
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Bishop
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Мастеровой
+- type: entity
+  id: SpawnPointWorkman
+  parent: SpawnPointJobBase
+  name: Мастеровой
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Workman
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Кастелян
+- type: entity
+  id: SpawnPointKastel
+  parent: SpawnPointJobBase
+  name: Кастелян
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Kastel
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Лорд
+- type: entity
+  id: SpawnPointLord
+  parent: SpawnPointJobBase
+  name: Лорд
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Lord
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Бандит
+- type: entity
+  id: SpawnPointBandit
+  parent: SpawnPointJobBase
+  name: Бандит
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Bandit
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# Ведьма
+- type: entity
+  id: SpawnPointWitch
+  parent: SpawnPointJobBase
+  name: Ведьма
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Witch
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
+# изГОЙ
+- type: entity
+  id: SpawnPointOutcast
+  parent: SpawnPointJobBase
+  name: Изгой
+  suffix: Job Spawn, Стронгхолд
+  components:
+  - type: SpawnPoint
+    job_id: Outcast
+  - type: Sprite
+    sprite: Victoria/DefenseMode/jobs.rsi
+    layers:
+      - state: green
+      - state: com
