@@ -13,7 +13,7 @@
       - Muted
   startingGear: SiegeEngineerGear
   icon: "JobIconSiegeEngineer"
-  supervisors: job-supervisors-knight
+  supervisors: job-supervisors-sergeant
   canBeAntag: false
   # access:
   # - Security

@@ -6,7 +6,7 @@
   setPreference: false
   startingGear: MessengerGear
   icon: "JobIconMessenger"
-  supervisors: job-supervisors-high-nobles # Corvax-JobSupervisors
+  supervisors: job-supervisors-high-nobles
   canBeAntag: false
   # accessGroups:
   # - AllAccess
