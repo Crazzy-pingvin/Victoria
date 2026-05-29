@@ -1,0 +1,105 @@
+- type: entity
+  name: Молоток
+  parent: BaseItem
+  id: HammerBasic
+  description: Молоток с каменным навершием и простой деревянной ручкой. Не забудь про занозы!
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Tools/Basic/hammer.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria_Stronghold/Tools/Basic/hammer.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 12
+  - type: StaminaDamageOnHit
+    damage: 12 #have you ever been hit with a plastic bat? that shit hurts
+  - type: Tool
+    qualities:
+    - Hammering
+
+- type: entity
+  name: Швейный набор
+  parent: BaseItem
+  id: SewingKitBasic
+  description: Мешочек с иголками, нитками и другими вещами для шитья. Не нашей себе петлю!
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Tools/Basic/sewing_kit.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria_Stronghold/Tools/Basic/sewing_kit.rsi
+  - type: Tool
+    qualities:
+    - Sewing
+
+- type: entity
+  name: Стамеска
+  parent: BaseItem
+  id: ChiselBasic
+  description: Простенький деревянный инструмент для тонкой обработки дерева. Если постараться, ей можно пробить голову...
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Tools/Basic/chisel.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria_Stronghold/Tools/Basic/chisel.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 12
+  - type: Tool
+    qualities:
+    - Chiseling
+
+- type: entity
+  name: щипцы
+  parent: BaseItem
+  id: ForcepsBasic
+  description: Грубые металлические щипцы. Не гарантирует безопасности ваших пальцев.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Tools/Basic/forceps.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria_Stronghold/Tools/Basic/forceps.rsi
+  - type: Tool
+    qualities:
+    - Forming
+
+- type: entity
+  name: поварёшка
+  parent: BaseItem
+  id: LaddleBasic
+  description: Большая ложка с большой ручкой для больших кастрюль.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Tools/Basic/laddle.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria_Stronghold/Tools/Basic/laddle.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: StaminaDamageOnHit
+    damage: 20 #have you ever been hit with a plastic bat? that shit hurts
+  - type: Tool
+    qualities:
+    - Stirring
+
+- type: entity
+  name: ступка
+  parent: BaseItem
+  id: MortarBasic
+  description: Деревянная тарелка и деревянная палка для размешивания всякой всячины- растений, химикатов или детей(если вы ведьма).
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Tools/Basic/mortar.rsi
+    state: icon
+  - type: Item
+    sprite: Victoria_Stronghold/Tools/Basic/mortar.rsi
+  - type: Tool
+    qualities:
+    - Grinding

@@ -1,0 +1,41 @@
+- type: tool
+  id: Hammering
+  name: tool-quality-hammering-name
+  toolName: tool-quality-hammering-tool-name
+  spawn: HammerBasic
+  icon: { sprite: Victoria_Stronghold/Tools/Basic/hammer.rsi, state: icon }
+
+- type: tool
+  id: Chiseling
+  name: tool-quality-chiseling-name
+  toolName: tool-quality-chiseling-tool-name
+  spawn: ChiselBasic
+  icon: { sprite: Victoria_Stronghold/Tools/Basic/chisel.rsi, state: icon }
+
+- type: tool
+  id: Sewing
+  name: tool-quality-sewing-name
+  toolName: tool-quality-sewing-tool-name
+  spawn: SewingKitBasic
+  icon: { sprite: Victoria_Stronghold/Tools/Basic/sewing_kit.rsi, state: icon }
+
+- type: tool
+  id: Forming
+  name: tool-quality-forming-name
+  toolName: tool-quality-forming-tool-name
+  spawn: ForcepsBasic
+  icon: { sprite: Victoria_Stronghold/Tools/Basic/forceps.rsi, state: icon }
+
+- type: tool
+  id: Stirring
+  name: tool-quality-stirring-name
+  toolName: tool-quality-stirring-tool-name
+  spawn: LaddleBasic
+  icon: { sprite: Victoria_Stronghold/Tools/Basic/laddle.rsi, state: icon }
+
+- type: tool
+  id: Grinding
+  name: tool-quality-grinding-name
+  toolName: tool-quality-grinding-tool-name
+  spawn: MortarBasic
+  icon: { sprite: Victoria_Stronghold/Tools/Basic/mortar.rsi, state: icon }
