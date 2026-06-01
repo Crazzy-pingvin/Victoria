@@ -13,6 +13,7 @@ namespace Content.Shared.Armor;
 public abstract class SharedArmorSystem : EntitySystem
 {
     [Dependency] private readonly ExamineSystemShared _examine = default!;
+    private const string ArmorIgnoreKey = "ArmorIgnore";
 
     /// <inheritdoc />
     public override void Initialize()
@@ -40,6 +41,14 @@ public abstract class SharedArmorSystem : EntitySystem
 
     private void OnDamageModify(EntityUid uid, ArmorComponent component, InventoryRelayedEvent<DamageModifyEvent> args)
     {
+        if (args.Args.Damage.DamageDict.ContainsKey(ArmorIgnoreKey))
+        {
+            DamageSpecifier guarantee_dmg = args.Args.Damage * args.Args.Damage.DamageDict[ArmorIgnoreKey]/100;
+            args.Args.Damage -= guarantee_dmg;
+            args.Args.Damage = DamageSpecifier.ApplyModifierSet(args.Args.Damage, component.Modifiers);
+            args.Args.Damage += guarantee_dmg;
+            return;
+        }
         args.Args.Damage = DamageSpecifier.ApplyModifierSet(args.Args.Damage, component.Modifiers);
     }
 
