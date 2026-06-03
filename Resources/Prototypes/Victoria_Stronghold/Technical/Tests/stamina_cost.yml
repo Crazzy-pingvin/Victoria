@@ -1,0 +1,10 @@
+- type: entity
+  name: бигстик
+  suffix: Стронгхолд, Оружие, тест
+  parent: StrongCrustingOtherStick
+  id: StrongStaminaCostTest
+  description: Большая-пребольшая, тяжеленная-претяжеленная палка.
+  components:
+  - type: StaminaHitCost # Компонент потери стамины
+    cost: 10 # цена за удар в стамине
+   

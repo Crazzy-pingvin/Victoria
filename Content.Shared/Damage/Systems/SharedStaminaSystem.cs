@@ -58,6 +58,7 @@ public abstract partial class SharedStaminaSystem : EntitySystem
 
         InitializeModifier();
         InitializeResistance();
+        InitializeCost(); //Victoria-strong!
 
         SubscribeLocalEvent<StaminaComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<StaminaComponent, ComponentShutdown>(OnShutdown);
