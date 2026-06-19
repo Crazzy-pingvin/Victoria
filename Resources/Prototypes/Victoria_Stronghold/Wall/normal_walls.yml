@@ -1,0 +1,49 @@
+- type: entity
+  parent: BaseWall
+  id: WallLog
+  name: бревенчатая стена
+  description: Мощная стена из брёвен.
+  components:
+  - type: Sprite
+    sprite: Victoria_Stronghold/Walls/log_wall.rsi
+  - type: Icon
+    sprite: Victoria_Stronghold/Walls/log_wall.rsi
+  # - type: Construction Пингвин, сделай крафт
+    # graph: Barricade
+    # node: woodWall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+      - !type:ChangeConstructionNodeBehavior
+        node: Barricade
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: logs
+    base: log
+  - type: RadiationBlocker
+    resistance: 0.2
+  # - type: MobState
+  # - type: MobThresholds
+    # thresholds:
+      # 0: Alive
+      # 1000: Critical
+      # 2000: Dead
+  # - type: NpcFactionMember
+    # factions:
+    # - DefenseStructure
